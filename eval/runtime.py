@@ -32,6 +32,8 @@ def _sync(device: torch.device) -> None:
 def _sample(logits: torch.Tensor, greedy: bool, temperature: float, top_p: float,
             generator: Optional[torch.Generator]) -> torch.Tensor:
     """从 [batch, vocab] logits 采样下一个 token, 返回 [batch] 的 LongTensor。"""
+    if not bool(torch.isfinite(logits).all()):
+        raise RuntimeError("Non-finite model logits: check model dtype before reporting benchmark scores")
     if greedy:
         return torch.argmax(logits, dim=-1)#永远找概率最大的返回
     logits = logits.float() / max(1e-6, temperature)
@@ -73,7 +75,9 @@ def generate_with_compression(model, tokenizer, input_ids: torch.Tensor,
                               compressor: KVCompressor, *, max_new_tokens: int = 64,
                               greedy: bool = True, temperature: float = 1.0,
                               top_p: float = 1.0, stop_on_eos: bool = True,
-                              measure_memory: bool = True, seed: int = 1234) -> dict:
+                              measure_memory: bool = True, seed: int = 1234,
+                              trace_compression: bool = False,
+                              eos_token_ids=None) -> dict:
     """带 KV 压缩的自回归生成, 返回生成结果与各项指标。"""
     device = next(model.parameters()).device
     input_ids = input_ids.to(device)
@@ -82,10 +86,14 @@ def generate_with_compression(model, tokenizer, input_ids: torch.Tensor,
         input_ids = input_ids.unsqueeze(0)
     prompt_len = input_ids.shape[1]
     out_attn = compressor.requires_attention
-    eos_id = tokenizer.eos_token_id if stop_on_eos else None
+    eos_ids = set(eos_token_ids if eos_token_ids is not None else [tokenizer.eos_token_id]) if stop_on_eos else set()
     generator = torch.Generator(device=device).manual_seed(seed) if not greedy else None
 
     compressor.reset(model.config)
+    trace = None
+    if trace_compression:
+        from .compression_trace import CompressionTrace, cache_state
+        trace = CompressionTrace(compressor.name, compressor.describe())
     if measure_memory:
         metrics.reset_peak_gpu_memory(device)
 
@@ -101,10 +109,13 @@ def generate_with_compression(model, tokenizer, input_ids: torch.Tensor,
     ttft = time.perf_counter() - t0
 
     cache = out.past_key_values
+    before = cache_state(cache) if trace else None
     #压缩promote cache
     cache = compressor.on_prefill(
         cache, attentions=(out.attentions if out_attn else None),
         prompt_len=prompt_len, model_config=model.config)
+    if trace:
+        trace.observe("prefill", 0, before, cache_state(cache))
 
     next_token = _sample(out.logits[:, -1, :], greedy, temperature, top_p, generator)
     generated = [int(next_token.item())]
@@ -114,12 +125,13 @@ def generate_with_compression(model, tokenizer, input_ids: torch.Tensor,
     true_pos = prompt_len
 
     for step in range(max_new_tokens - 1):
-        if eos_id is not None and next_token.item() == eos_id:
+        if next_token.item() in eos_ids:
             break
         # 真实位置驱动 RoPE; 物理 cache_position 驱动缓存写入与因果掩码 (二者解耦)。
         position_ids = torch.tensor([[true_pos]], device=device, dtype=torch.long)
         phys = _physical_len(cache)
         cache_position = torch.tensor([phys], device=device, dtype=torch.long)
+        before = cache_state(cache) if trace else None
         _sync(device)
         t1 = time.perf_counter()
         out = model(input_ids=next_token.view(1, 1), past_key_values=cache,
@@ -132,6 +144,8 @@ def generate_with_compression(model, tokenizer, input_ids: torch.Tensor,
         cache = compressor.on_decode_step(
             cache, attentions=(out.attentions if out_attn else None),
             step=step, model_config=model.config)
+        if trace:
+            trace.observe("decode", step + 1, before, cache_state(cache), appended_tokens=1)
 
         next_token = _sample(out.logits[:, -1, :], greedy, temperature, top_p, generator)
         generated.append(int(next_token.item()))
@@ -151,6 +165,7 @@ def generate_with_compression(model, tokenizer, input_ids: torch.Tensor,
         "peak_gpu_bytes": peak,
         "prompt_len": prompt_len,
         "compressor": compressor.describe(),
+        **({"compression_trace": trace.export()} if trace else {}),
     }
 
 

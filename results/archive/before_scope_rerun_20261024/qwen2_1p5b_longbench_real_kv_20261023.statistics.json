@@ -1,0 +1,48 @@
+{
+  "resamples": 10000,
+  "seed": 20261023,
+  "method": "paired bootstrap within each task, equal task weighting",
+  "note": "Describes uncertainty in these first-32 samples; not a randomized full-LongBench evaluation",
+  "comparisons": [
+    {
+      "method": "kivi",
+      "qa_f1_delta_vs_full": 0.04828670748903026,
+      "paired_bootstrap_95pct_ci": [
+        -1.6546570153849884,
+        1.954246240233113
+      ]
+    },
+    {
+      "method": "snapkv",
+      "qa_f1_delta_vs_full": 0.20761025393139007,
+      "paired_bootstrap_95pct_ci": [
+        -1.5937121593969477,
+        2.188592224796647
+      ]
+    },
+    {
+      "method": "scope",
+      "qa_f1_delta_vs_full": 0.0,
+      "paired_bootstrap_95pct_ci": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "method": "pyramidkv",
+      "qa_f1_delta_vs_full": 0.24116079532640952,
+      "paired_bootstrap_95pct_ci": [
+        -1.5904844539508394,
+        2.266555411551054
+      ]
+    },
+    {
+      "method": "phasekv",
+      "qa_f1_delta_vs_full": -0.672225873859347,
+      "paired_bootstrap_95pct_ci": [
+        -3.2364770941108243,
+        2.0263870962206814
+      ]
+    }
+  ]
+}

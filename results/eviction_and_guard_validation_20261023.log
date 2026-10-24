@@ -1,0 +1,9 @@
+test_old_fake_quantization_entry_points_fail_closed (tests.test_real_kv_protocol.TestEvictionProtocol.test_old_fake_quantization_entry_points_fail_closed) ... ok
+test_pyramid_budgets_decrease_and_preserve_mean (tests.test_real_kv_protocol.TestEvictionProtocol.test_pyramid_budgets_decrease_and_preserve_mean) ... ok
+test_scope_really_evicts_generated_tokens_but_preserves_prompt (tests.test_real_kv_protocol.TestEvictionProtocol.test_scope_really_evicts_generated_tokens_but_preserves_prompt) ... ok
+test_snapkv_keeps_top_votes_and_recent_tokens_per_head (tests.test_real_kv_protocol.TestEvictionProtocol.test_snapkv_keeps_top_votes_and_recent_tokens_per_head) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.013s
+
+OK

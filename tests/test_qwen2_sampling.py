@@ -3,7 +3,7 @@ import unittest
 
 import torch
 
-from qwen2 import sample_token
+from qwen2.qwen2 import sample_token
 
 
 class TestQwen2Sampling(unittest.TestCase):

@@ -2,3 +2,7 @@
 __pycache__/
 *.pyc
 .env
+.cache/
+
+# Independently cloned upstream repository; pin recorded in SCOPE/README.md
+SCOPE/official/

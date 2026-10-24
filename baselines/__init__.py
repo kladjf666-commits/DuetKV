@@ -9,7 +9,7 @@ eval/ 由 CH-3 维护、不改动; 让 eval 感知这些基线的方式是运行
 已接入:
   - snapkv    : SnapKV (NeurIPS'24) prefill 观察窗口投票 + per-head 聚类 pooling
   - kivi      : KIVI (ICML'24) K per-channel / V per-token 量化 + 最近 FP16 残差
-  - scope     : SCOPE (ACL'25) prefill 保留 + decode 滑动窗口 + heavy-hitter
+  - scope     : SCOPE ALLKV + Slide 的 GQA 适配（当前 query 评分）
   - pyramidkv : PyramidKV (2024) 层间金字塔预算 + 层内 SnapKV 选择 (逐层异长)
 """
 from eval.compressors import register

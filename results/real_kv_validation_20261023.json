@@ -1,0 +1,33 @@
+{
+  "purpose": "Real packed KV benchmark implementation and validation provenance",
+  "fake_quantization": "Disabled with fail-closed RuntimeError in the formal benchmark",
+  "kivi_source": "https://github.com/jy-yuan/KIVI/blob/main/models/llama_kivi.py",
+  "kivi_schedule": "K flushes complete residual_length blocks; V quantizes expired tokens individually; both only after their attention contribution is consumed",
+  "kivi_attention": "Local Triton GQA adaptation; no dense dequantization in inference",
+  "phasekv_attention": "Existing PhaseKVCache and fused_phasekv_decode",
+  "eviction_implementations": "Existing local GQA adaptations; SnapKV/PyramidKV pool votes per KV head; PyramidKV preserves the mean budget with rounded linear allocation rather than official integer-step rounding",
+  "scope_limit": "256 generated-token budget exceeds the 127 maximum decode cache appends here; this configuration does not evict",
+  "gpu_numerical_validation": "7 tests passed; KIVI max absolute error vs independently reconstructed dense attention = 0.000244140625",
+  "eviction_and_fake_quant_guard_validation": "4 tests passed",
+  "precision": "BF16 model; BF16 full/eviction cache; FP16 metadata/residuals and query tiles in packed cache kernels",
+  "code_sha256": {
+    "baselines/kivi_packed.py": "4538b51598561c087812f48152896fbacc145142e6171ae59f01bc66decc6c0e",
+    "baselines/kivi_packed_kernel.py": "6a3e6377b077fd8c864f454acb41a5cbacb80e6f07c3fae9d555a64a0a60e037",
+    "baselines/packed_runtime.py": "6dad06da072e60acdbe5f230feb07bb0e548c78affaacdb5bac830998ffb8033",
+    "scripts/compare_longbench_kv.py": "129ab349ccab3be14be0ed013631f3ac2849d913824638478c932ab560b592f5",
+    "eval/runtime.py": "ba3215bf41ddcb1d61d43bd5cc9c7c865d472cd4f667a089e82bfcc5acff58d0",
+    "baselines/snapkv.py": "6c8d71d7551f71bbf53e63a342ca09fbdb17cbf068ec5366cafe08e10ea93bd8",
+    "baselines/scope.py": "44f142394208dd2cc1cdb9924953e26200bc17474e83a915a2802a7e3f074dd0",
+    "baselines/pyramidkv.py": "d66cd188e51c6b756cd044bdce0f5a232508e88584c81a9042717d6d209506cf",
+    "src/phasekv/kernels/packing.py": "f22f6ffb6d9f1e094130392fd16ca334cc30d09ce8632b291a883e72c437eb73",
+    "src/phasekv/phasekv_cache.py": "4f5816cee2f61e871caf71eddb4a6cd9cb8d44bd7a2a11eb4c853dba3e2651d1",
+    "qwen2/qwen2_attention.py": "d7836392e62a40ef5d611ab1431062078cb0ba178b1548d7a5349802fe61cb86"
+  },
+  "official_source_snapshot_sha256": {
+    "llama_kivi_official.py": "67ca858604a460fcafae018d97c5e420841b1ea7dcce522daf554e2df3af68f1",
+    "snapkv_official.py": "d7eddeaf361d9d38be991be734752c831b09f9c95a6e777ac17e7262ca2b4cf5",
+    "pyramidkv_official.py": "a8a1e8139a8c24a03df87ba0b8362296a613a7b7a38dd4a026087d7ac2b37ce4"
+  },
+  "persistent_dataset_dir": "/home/kladjf/桌面/kvcomp-astra/.cache/longbench",
+  "invalid_run": "Earlier FP16 run was stopped after degenerate repeated token-0 outputs; INVALID_FP16_* files are excluded. Finiteness checks were added before the BF16 rerun."
+}

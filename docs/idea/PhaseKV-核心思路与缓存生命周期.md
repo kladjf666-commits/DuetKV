@@ -384,7 +384,7 @@ cache_position = [500]   # 当前集成中的物理位置
 
 ## 11. 参数与当前应用配置
 
-下表来自撰写时的 `qwen2.py` 活跃配置。它已采用前面讨论的长回答起始配置；不是已测得的最优配置。
+下表来自撰写时的 `qwen2/qwen2.py` 活跃配置。它已采用前面讨论的长回答起始配置；不是已测得的最优配置。
 
 | 参数 | 当前值 | 作用 |
 | --- | ---: | --- |
@@ -431,8 +431,8 @@ cache_position = [500]   # 当前集成中的物理位置
 - [hetero_cache.py](/home/kladjf/桌面/kvcomp-astra/src/phasekv/hetero_cache.py)：观察窗口投票、GQA 聚合与 pooling。
 - [packing.py](/home/kladjf/桌面/kvcomp-astra/src/phasekv/kernels/packing.py)：K/V 分组量化与真实低比特打包。
 - [attention_triton.py](/home/kladjf/桌面/kvcomp-astra/src/phasekv/kernels/attention_triton.py)：读取 packed KV、计算和合并注意力。
-- [qwen2_attention.py](/home/kladjf/桌面/kvcomp-astra/src/phasekv/qwen2_attention.py)：模型层内的阶段判断与因果写入顺序。
-- [qwen2.py](/home/kladjf/桌面/kvcomp-astra/qwen2.py)：对话入口、采样、真实位置管理与跨轮缓存复用。
+- [qwen2_attention.py](/home/kladjf/桌面/kvcomp-astra/qwen2/qwen2_attention.py)：模型层内的阶段判断与因果写入顺序。
+- [qwen2.py](/home/kladjf/桌面/kvcomp-astra/qwen2/qwen2.py)：对话入口、采样、真实位置管理与跨轮缓存复用。
 - [planner.py](/home/kladjf/桌面/kvcomp-astra/src/phasekv/planner.py)：预算与读取成本分析。
 - [使用指南](/home/kladjf/桌面/kvcomp-astra/docs/delivery/USAGE.md)：调用示例与启动命令。
 - [技术原理与系统设计](/home/kladjf/桌面/kvcomp-astra/docs/idea/PhaseKV-技术原理与系统设计.md)：更完整的设计依据、研究对比与实验结果。

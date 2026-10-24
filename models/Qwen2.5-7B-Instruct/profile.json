@@ -1,0 +1,25 @@
+{
+  "name": "Qwen2.5-7B-Instruct",
+  "model_id": "Qwen/Qwen2.5-7B-Instruct",
+  "family": "qwen2",
+  "revision": "main",
+  "architecture_file": "architecture.json",
+  "methods_file": "compression.json",
+  "dtype": "bfloat16",
+  "attention": "eager",
+  "batch_size": 1,
+  "architecture_source": "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct/raw/main/config.json",
+  "verified_transformers": "4.46.3",
+  "quality_test": {
+    "tasks": [
+      "narrativeqa",
+      "multifieldqa_en",
+      "hotpotqa",
+      "2wikimqa",
+      "qasper"
+    ],
+    "samples_per_task": 32,
+    "max_length_before_chat_template": 1536
+  },
+  "status": "code_integrated_pretrained_7b_run_pending"
+}

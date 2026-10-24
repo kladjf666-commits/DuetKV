@@ -4,13 +4,13 @@ import unittest
 from contextlib import redirect_stdout
 from unittest.mock import patch
 
-from qwen2 import assistant_end_tokens, chat_loop, new_user_prompt_tokens
+from qwen2.qwen2 import assistant_end_tokens, chat_loop, new_user_prompt_tokens
 
 
 class TestQwen2Chat(unittest.TestCase):
     def test_incremental_user_tokens_match_full_chat_template(self):
         from transformers import AutoTokenizer
-        from qwen2 import MODEL_ID
+        from qwen2.qwen2 import MODEL_ID
 
         try:
             tokenizer = AutoTokenizer.from_pretrained(MODEL_ID, local_files_only=True)
@@ -44,7 +44,7 @@ class TestQwen2Chat(unittest.TestCase):
             return f"答复{len(seen)}", 128
 
         with patch("builtins.input", side_effect=["你好", "继续", "/clear", "新问题", "/exit"]):
-            with patch("qwen2.generate_reply", side_effect=reply):
+            with patch("qwen2.qwen2.generate_reply", side_effect=reply):
                 with redirect_stdout(io.StringIO()):
                     chat_loop(None, None, max_new_tokens=12)
 

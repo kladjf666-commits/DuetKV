@@ -1,0 +1,39 @@
+test_full_and_prefill_eviction_transitions (tests.test_compression_trace.TestCompressionTrace.test_full_and_prefill_eviction_transitions) ... ok
+test_kivi_independent_flushes_are_observed (tests.test_compression_trace.TestCompressionTrace.test_kivi_independent_flushes_are_observed) ... ok
+test_phasekv_prompt_and_cooling_eviction_are_separate (tests.test_compression_trace.TestCompressionTrace.test_phasekv_prompt_and_cooling_eviction_are_separate) ... ok
+test_scope_boundary_and_current_query_not_lifetime_score (tests.test_compression_trace.TestCompressionTrace.test_scope_boundary_and_current_query_not_lifetime_score) ... ok
+test_scope_rejects_unimplemented_or_ambiguous_parameters (tests.test_compression_trace.TestCompressionTrace.test_scope_rejects_unimplemented_or_ambiguous_parameters) ... ok
+test_scope_slide_matches_official_allkv_selected_sets (tests.test_compression_trace.TestCompressionTrace.test_scope_slide_matches_official_allkv_selected_sets) ... ok
+test_old_fake_quantization_entry_points_fail_closed (tests.test_real_kv_protocol.TestEvictionProtocol.test_old_fake_quantization_entry_points_fail_closed) ... ok
+test_pyramid_budgets_decrease_and_preserve_mean (tests.test_real_kv_protocol.TestEvictionProtocol.test_pyramid_budgets_decrease_and_preserve_mean) ... ok
+test_scope_really_evicts_generated_tokens_but_preserves_prompt (tests.test_real_kv_protocol.TestEvictionProtocol.test_scope_really_evicts_generated_tokens_but_preserves_prompt) ... ok
+test_snapkv_keeps_top_votes_and_recent_tokens_per_head (tests.test_real_kv_protocol.TestEvictionProtocol.test_snapkv_keeps_top_votes_and_recent_tokens_per_head) ... ok
+test_cuda_kernel_against_independent_dense_attention (tests.test_kivi_packed.TestPackedKIVI.test_cuda_kernel_against_independent_dense_attention) ... skipped 'Requires a real CUDA GPU'
+test_flush_boundaries_preserve_prefix_and_lengths (tests.test_kivi_packed.TestPackedKIVI.test_flush_boundaries_preserve_prefix_and_lengths) ... ok
+test_independent_residuals_and_actual_storage (tests.test_kivi_packed.TestPackedKIVI.test_independent_residuals_and_actual_storage) ... ok
+test_phasekv_mixed_tiers_against_dense_reference (tests.test_kivi_packed.TestPackedKIVI.test_phasekv_mixed_tiers_against_dense_reference) ... skipped 'Requires a real CUDA GPU'
+test_qwen_bf16_adapter_matches_dense_quantized_reference (tests.test_kivi_packed.TestPackedKIVI.test_qwen_bf16_adapter_matches_dense_quantized_reference) ... skipped 'Requires a real CUDA GPU'
+test_history_is_kept_and_can_be_cleared (tests.test_qwen2_chat.TestQwen2Chat.test_history_is_kept_and_can_be_cleared) ... ok
+test_incremental_user_tokens_match_full_chat_template (tests.test_qwen2_chat.TestQwen2Chat.test_incremental_user_tokens_match_full_chat_template) ... ok
+test_rejects_nonfinite_logits_before_multinomial (tests.test_qwen2_sampling.TestQwen2Sampling.test_rejects_nonfinite_logits_before_multinomial) ... ok
+test_repetition_penalty_uses_previous_tokens (tests.test_qwen2_sampling.TestQwen2Sampling.test_repetition_penalty_uses_previous_tokens) ... ok
+test_samples_finite_logits (tests.test_qwen2_sampling.TestQwen2Sampling.test_samples_finite_logits) ... ok
+test_bf16_prefill_is_packed_for_fp16_decode (tests.test_phasekv_cache.TestPhaseKVCache.test_bf16_prefill_is_packed_for_fp16_decode) ... ok
+test_cooling_threshold_selection_and_hot_tail (tests.test_phasekv_cache.TestPhaseKVCache.test_cooling_threshold_selection_and_hot_tail) ... ok
+test_decode_cools_batches_without_repacking_old_segments (tests.test_phasekv_cache.TestPhaseKVCache.test_decode_cools_batches_without_repacking_old_segments) ... ok
+test_dense_update_is_rejected (tests.test_phasekv_cache.TestPhaseKVCache.test_dense_update_is_rejected) ... ok
+test_invalid_config_and_fractional_indices_fail_before_packing (tests.test_phasekv_cache.TestPhaseKVCache.test_invalid_config_and_fractional_indices_fail_before_packing) ... ok
+test_invalid_layer_and_failed_writes_do_not_advance_state (tests.test_phasekv_cache.TestPhaseKVCache.test_invalid_layer_and_failed_writes_do_not_advance_state) ... ok
+test_new_prompt_is_packed_without_rebuilding_old_cache (tests.test_phasekv_cache.TestPhaseKVCache.test_new_prompt_is_packed_without_rebuilding_old_cache) ... ok
+test_prefill_is_packed_with_key_and_value_on_different_axes (tests.test_phasekv_cache.TestPhaseKVCache.test_prefill_is_packed_with_key_and_value_on_different_axes) ... ok
+test_prompt_chunk_state_errors_and_decode_after_finish (tests.test_phasekv_cache.TestPhaseKVCache.test_prompt_chunk_state_errors_and_decode_after_finish) ... ok
+test_prompt_chunks_preserve_decode_window_and_cooling_schedule (tests.test_phasekv_cache.TestPhaseKVCache.test_prompt_chunks_preserve_decode_window_and_cooling_schedule) ... ok
+test_reorder_keeps_all_tiers_and_rejects_invalid_indices (tests.test_phasekv_cache.TestPhaseKVCache.test_reorder_keeps_all_tiers_and_rejects_invalid_indices) ... ok
+test_jsonl_prompt_is_converted_to_chat (tests.test_bench_qwen2_phasekv.TestQwen2Benchmark.test_jsonl_prompt_is_converted_to_chat) ... ok
+test_repetition_and_numeric_answer_boundary (tests.test_bench_qwen2_phasekv.TestQwen2Benchmark.test_repetition_and_numeric_answer_boundary) ... ok
+test_short_prefix_is_not_full_token_agreement (tests.test_bench_qwen2_phasekv.TestQwen2Benchmark.test_short_prefix_is_not_full_token_agreement) ... ok
+
+----------------------------------------------------------------------
+Ran 34 tests in 0.353s
+
+OK (skipped=3)

@@ -196,7 +196,7 @@ PhaseKV 关键超参：`prompt_bits`（prompt 只读层位宽）、`cold_bits`�
 
 ## 6. 真实 PhaseKVCache 从 prefill 到 decode 的调用链
 
-本节对应 `src/phasekv/phasekv_cache.py`、`src/phasekv/qwen2_attention.py` 和 `qwen2.py` 的真实打包路径。第 5.3 节的 `PhaseKVCompressor` 是 fake-quant 评估入口；这里直接构造 `PhaseKVCache`，不调用 `prompt_tier.select_and_pack()` 或 `decode_tier.maintain()`。
+本节对应 `src/phasekv/phasekv_cache.py`、`qwen2/qwen2_attention.py` 和 `qwen2/qwen2.py` 的真实打包路径。第 5.3 节的 `PhaseKVCompressor` 是 fake-quant 评估入口；这里直接构造 `PhaseKVCache`，不调用 `prompt_tier.select_and_pack()` 或 `decode_tier.maintain()`。
 
 ### 6.1 各层缓存与三种长度
 
@@ -288,8 +288,8 @@ build_phasekv_cache(prefill, model, prompt_len, ...)
 ```python
 import torch
 from transformers.cache_utils import DynamicCache
-from src.phasekv import install_qwen2_phasekv_attention
-from qwen2 import build_phasekv_cache
+from qwen2.qwen2_attention import install_qwen2_phasekv_attention
+from qwen2.qwen2 import build_phasekv_cache
 
 @torch.inference_mode()
 def generate_with_phasekv(model, input_ids, max_new_tokens=16):
@@ -377,8 +377,8 @@ qwen2.append_prompt_chunk(model, cache, new_token_ids)
 在项目根目录使用项目虚拟环境运行：
 
 ```bash
-.venv/bin/python qwen2.py --check-cuda
-.venv/bin/python qwen2.py --local-files-only --max-new-tokens 512
+.venv/bin/python -m qwen2 --check-cuda
+.venv/bin/python -m qwen2 --local-files-only --max-new-tokens 512
 ```
 
 `--check-cuda` 会尝试执行 GPU 张量操作并检查 BF16 支持，通过后输出 GPU、PyTorch 和 CUDA runtime 信息。`--local-files-only` 使用本地缓存中的 `Qwen/Qwen2-1.5B-Instruct`，不访问网络；也可通过 `--model /path/to/model` 指定本地模型目录。

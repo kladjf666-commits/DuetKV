@@ -8,14 +8,20 @@ from __future__ import annotations
 
 import argparse
 from dataclasses import dataclass, field
+from pathlib import Path
 import sys
+
+# Support both `python -m qwen2` and direct execution from any working directory.
+if __package__ in (None, ""):
+    sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, TextStreamer
 from transformers.cache_utils import DynamicCache
 
-from src.phasekv import PhaseKVCache, install_qwen2_phasekv_attention
-from src.phasekv.prompt_tier import select_prompt_indices
+from PhaseKV import PhaseKVCache
+from PhaseKV.prompt_tier import select_prompt_indices
+from models.Qwen2.qwen2_attention import install_qwen2_phasekv_attention
 
 
 MODEL_ID = "Qwen/Qwen2-1.5B-Instruct"

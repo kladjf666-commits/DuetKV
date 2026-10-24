@@ -13,7 +13,7 @@ from transformers.models.qwen2.modeling_qwen2 import (
     apply_rotary_pos_emb,
 )
 
-from .phasekv_cache import PhaseKVCache
+from PhaseKV.phasekv_cache import PhaseKVCache
 
 
 class PhaseKVQwen2Attention(nn.Module):
@@ -93,7 +93,7 @@ class PhaseKVQwen2Attention(nn.Module):
         # packed kernel 与热层当前使用 FP16；QK 点积在 kernel 内以 FP32 累加。
         q, k, v = q.to(torch.float16), k.to(torch.float16), v.to(torch.float16)
 
-        from .kernels.attention_triton import fused_phasekv_decode
+        from PhaseKV.kernels.attention_triton import fused_phasekv_decode
 
         # 当前 kernel 是单 query 接口：写一个、算一个，不能提前写入未来 token。
         # 无 padding 的因果可见性由该顺序保证，不依赖模型生成的稠密 causal mask。
