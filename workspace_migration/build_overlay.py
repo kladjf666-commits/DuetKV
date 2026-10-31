@@ -141,6 +141,12 @@ def build():
             raise RuntimeError('Archive integrity check failed')
     tmp.replace(out)
     out.with_suffix('.zip.sha256').write_text(sha(out)+'  '+out.name+'\n', encoding='ascii')
+    patch = DELIVERY/'PhaseKV_CPU_first_tools.zip'
+    with zipfile.ZipFile(patch, 'w', compression=zipfile.ZIP_DEFLATED) as z:
+        for name in ('install.py', 'parallel.py', 'README.txt'):
+            z.write(HERE/name, 'migration/'+name)
+    with zipfile.ZipFile(patch) as z:
+        if z.testzip() is not None: raise RuntimeError('CPU tools patch integrity check failed')
     print(out, out.stat().st_size, sha(out))
 
 

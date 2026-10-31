@@ -1,52 +1,40 @@
 PhaseKV 新工作空间：四组 Llama 注意力消融的离线迁移包
 
-选择同一台机器上的独占同型号 GPU。建议先用一个 48 GB 或以上设备做正确性检查，
-正式跑全套优先 2 个相同设备；4 个是时间更紧时的选择。计费以平台实际报价为准。
-标准 A16 一块物理板含 4 个独立的 16 GB GPU；租 8 个可见设备并不会让一个
-模型获得 128 GB 显存。本入口不拆模型，16 GB A16 不推荐用于本轮完整比较。
+先在 CPU 实例准备，再给同一工作空间挂两张 A800 80 GB。切换前确认平台可保留
+或重新挂载数据卷，并确认实际挂载位置。以下示例使用 /data。GPU 阶段仍需 Linux
+x86_64、glibc >= 2.35、CPython 3.10、PyTorch 2.5.1 CUDA 12.1 ABI=False、
+gcc 和 Python.h。CPU 阶段需要同架构、同 glibc 要求的 Python 3.10 与 pip。
+数据盘建议至少留 50 GB 可用空间。若平台只能新建实例，挂回同一数据卷和路径即可。
 
-前提：Linux x86_64、Ubuntu 22.04 或兼容 glibc >= 2.35、CPython 3.10、gcc、
-Python.h、可工作的 NVIDIA 驱动、预装 PyTorch 2.5.1 CUDA 12.1 且 CXX11 ABI=False。
-可先用 nvidia-smi -L 和 nvidia-smi --query-gpu=index,name,memory.total,uuid --format=csv
-核对平台的“一张”实际对应一个 16 GB 设备还是含四个设备的物理板。
-
-包中有三份校验过的项目压缩包（原生代码、冻结数据/评分器、四组消融）、已实测过的
-FlashAttention 2.7.4.post1 Linux wheel、Triton 3.1.0、Transformers 4.46.3 等二进制依赖。
-不含模型权重、系统驱动、torch/CUDA 基础镜像，不支持旧实验的 KIVI 扩展。
-不从旧机器拷贝 Triton 缓存；运行时按实际 GPU 首次 JIT。解包后不需要联网或 nvcc
-编译 FlashAttention。请使用新目录，安装器不会覆盖旧工作区或安装到镜像原环境。
-
-1. 选择上面的基础镜像。上传本 zip 和同名 .zip.sha256 到 /data，运行：
+CPU 阶段
+1. 将原离线包、校验文件、CPU 分阶段工具补丁上传到持久盘 /data。先解压原包，再解压
+   补丁。补丁只更新安装器、并行启动器和本文。
    cd /data
    sha256sum -c PhaseKV_new_workspace_cp310_cu121.zip.sha256
    unzip PhaseKV_new_workspace_cp310_cu121.zip
-   python /data/migration/install.py --workspace /data/phasekv-ws
-   （python 必须是镜像中能 import CUDA torch 的 Python 3.10。）
+   unzip -o PhaseKV_CPU_first_tools.zip
+2. 上传或挂载本机 weights/Llama-3.1-8B-Instruct/snapshots/master 到
+   /data/Llama-3.1-8B-Instruct/snapshots/master。需要四个 safetensors 分片和该目录的
+   config/tokenizer/index 等 JSON，无需上传 original/ 权重副本。
+3. 用 CPU 镜像的 Python 3.10 在本地数据盘准备项目和离线依赖，并检查模型：
+   python3.10 /data/migration/install.py --prepare-cpu --workspace /data/phasekv-ws --model /data/Llama-3.1-8B-Instruct/snapshots/master
+   末尾显示 CPU preparation complete 即可切换。这个阶段不探测显卡。若权重仍在上传，
+   可先省略 --model 执行环境准备，上传完成后追加 --model 重跑，只补做检查。
+   模型检查覆盖分片索引、文件大小和 tokenizer/config 哈希。
 
-2. 挂载/上传与旧实验完全相同的权重目录到：
-   /data/Llama-3.1-8B-Instruct/snapshots/master
-   所需文件：四个 model-*-of-00004.safetensors、index JSON、config/tokenizer 相关
-   JSON。老数据盘可复用；另需上传时用本机 weights/Llama-3.1-8B-Instruct/snapshots/master。
-   不需要 nested original/ 权重副本。路径不同时给运行命令追加 --model 实际路径。
-   建议数据盘预留至少 50 GB 可用空间（含权重与运行缓存），两 GPU 配置宜有 64 GB
-   以上主机内存；这两项是部署建议，不是实测硬下限。
-
-3. 建议先短租单个设备：先跑正确性门禁，再测四组各一个冻结的 8K/16K/32K + 256
-   样本，查看 capacity.json 的 12 项 OK/OOM 与峰值。此试验不产生正式速度数据，
-   也不保证更长输出一定装得下。若只需要数值门禁可换成 --gate-only。
+GPU 阶段
+4. 挂回 /data，选带 GPU 版 PyTorch 的匹配镜像，执行：
+   python3.10 /data/migration/install.py --check-gpu --expected-gpus 2 --workspace /data/phasekv-ws
+   此步把已准备的依赖接入 GPU 镜像，并逐卡运行 FA2 测试。CPU/GPU 实例可以是
+   不同机器，无需搬运绑定 CPU 系统路径的虚拟环境。
+5. 两张 A800 并行开始正式测试：
    cd /data/phasekv-ws/official_llama
-   /data/phasekv-ws/venv/bin/python workspace_parallel.py --gpus 1 --capacity-only --out /data/phasekv-results/hw_single_pilot
-
-4. 两个同型号 CUDA 设备的正式测试（新输出目录，不混旧结果）：
-   cd /data/phasekv-ws/official_llama
-   nohup /data/phasekv-ws/venv/bin/python -u workspace_parallel.py --gpus 2 --out /data/phasekv-results/hw_pair_2 > /data/hw_pair_2.log 2>&1 &
-   tail -f /data/hw_pair_2.log
-   已分配的 GPU 由调度器设定时，保留 CUDA_VISIBLE_DEVICES；不擅自使用其他租户的设备。
-   每个设备先跑门禁。性能全套独占第一个设备，其他设备在此期间空闲；避免计时受到
-   并发负载干扰。之后质量样本在各卡并行，同一输入的四种方法固定在同一 GPU。
-   这是数据并行（每卡一份模型），不是显存池化或张量并行。
-   如果由 2 改 4，需使用不同 --out；本协议将 GPU UUID、型号、显存、驱动、分片方案
-   和代码哈希纳入清单。每个设备有独立门禁、日志、JIT 缓存、诊断与结果目录。
+   nohup ../venv/bin/python -u workspace_parallel.py --gpus 2 --parallel-performance --out /data/phasekv-results/a800_2_parallel > /data/a800_2_parallel.log 2>&1 &
+   tail -f /data/a800_2_parallel.log
+   每卡先做完整正确性检查。性能与质量阶段按输入分片，每张卡一次只跑一个任务，
+   同一输入四种方法和三次速度测量固定在同一设备上。速度阶段结束后即可看
+   performance_first/ablation_pairs.json。多卡同时计时可能受主机负载和功耗影响，
+   运行清单会记录该模式，应与独占整机的计时分开解释。
 
 结果：总目录 summary.csv、ablation_pairs.json、records.jsonl；设备日志在 lanes/<编号>/。
 重复相同正式命令可续跑；已有成功记录跳过，OOM 保留，--retry-failed 可重试失败。

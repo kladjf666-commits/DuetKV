@@ -1,4 +1,4 @@
-"""Single host: exclusive per-device gates, serial timing, parallel quality shards.
+"""Single host: per-device gates, matched timing trials and parallel quality shards.
 
 Installed alongside attention_ablation.py as workspace_parallel.py. No tensor
 parallelism or CPU offload. Each worker still loads a complete FP16 model.
@@ -39,15 +39,20 @@ def inventory():
     return result
 
 
-def plan(rows, count):
+def plan(rows, count, parallel_performance=False):
     # Keep all four methods and repeats of a prompt together. Round-robin
     # within each task/budget to avoid concentrating all long prompts on one GPU.
     offsets = {}
     result = {}
+    perf_index = 0
     for s in sorted(rows, key=lambda s: s['id']):
+        if s['suite'] == 'performance':
+            result[s['id']] = perf_index % count if parallel_performance else 0
+            perf_index += 1
+            continue
         key = (s['suite'], s['task'], s.get('length_budget'))
         pos = offsets.get(key, 0)
-        result[s['id']] = 0 if s['suite']=='performance' else pos % count
+        result[s['id']] = pos % count
         offsets[key] = pos + 1
     return result
 
@@ -127,6 +132,8 @@ def main():
     mode.add_argument('--gate-only', action='store_true')
     mode.add_argument('--capacity-only', action='store_true', help='1 GPU, gates + 12 real long-input probes; no formal timings')
     ap.add_argument('--retry-failed', action='store_true')
+    ap.add_argument('--parallel-performance', action='store_true',
+                    help='Shard fixed-length prompts over identical GPUs; each GPU runs one worker at a time.')
     args = ap.parse_args()
     out = args.out.resolve()
     if not 1 <= args.gpus <= 8:
@@ -191,10 +198,12 @@ def main():
             subprocess.run([sys.executable,HERE/'attention_ablation.py','--model',args.model,'--out',tmp,'--prepare-only'],check=True)
             manifest = json.loads((Path(tmp)/'run_manifest.json').read_text())
         rows, _ = b.samples()
-        assignment = plan(rows, args.gpus)
+        assignment = plan(rows, args.gpus, args.parallel_performance)
         protocol = manifest['protocol']
         protocol['code'][Path(__file__).name] = b.digest(Path(__file__).read_bytes())
-        protocol['parallel'] = dict(devices=devices, performance='exclusive lane 0; three matched repeats',
+        timing_policy = ('concurrent GPUs; all arms and repeats of each prompt on one device'
+                         if args.parallel_performance else 'exclusive lane 0; three matched repeats')
+        protocol['parallel'] = dict(devices=devices, performance=timing_policy,
                                     assignment_sha256=b.digest(json.dumps(assignment,sort_keys=True).encode()))
         h = b.digest(json.dumps(protocol,sort_keys=True).encode())
         manifest['protocol_hash'] = h
@@ -239,15 +248,25 @@ def main():
                     print(f'GPU {i}: {suite}/{method} -> {log}',flush=True)
                     launch([sys.executable,__file__,'worker',job],env(i),log)
         ordinary_path = b.result_path
+        def summarize_shards(destination, samples, suites):
+            b.result_path = lambda _,m,s,r: ordinary_path(lane(assignment[s['id']]),m,s,r)
+            try:
+                return b.summarize(destination,samples,suites,b.METHODS)
+            finally:
+                b.result_path = ordinary_path
         try:
-            measure(0,['performance'])  # Other GPUs idle; timing is never concurrent with quality jobs.
+            if args.parallel_performance:
+                concurrently(lambda i: measure(i,['performance']),range(args.gpus))
+            else:
+                measure(0,['performance'])
+            # Publish speed comparisons as soon as all timed workers finish.
+            perf_rows = [s for s in rows if s['suite']=='performance']
+            summarize_shards(out/'performance_first',perf_rows,['performance'])
+            print(f"Performance results ready: {out/'performance_first/ablation_pairs.json'}",flush=True)
             concurrently(lambda i: measure(i,['longbench','ruler','longgenbench']),range(args.gpus))
         finally:
             stop_all()
-            # Route the unchanged scorer to the sole owner of each prompt.
-            b.result_path = lambda _,m,s,r: ordinary_path(lane(assignment[s['id']]),m,s,r)
-            try: status = b.summarize(out,rows,b.SUITES,b.METHODS)
-            finally: b.result_path = ordinary_path
+            status = summarize_shards(out,rows,b.SUITES)
         print('Parallel campaign: '+json.dumps(dict(status)),flush=True)
         return 2 if status['pending'] or status['error'] or status['oom'] else 0
 
