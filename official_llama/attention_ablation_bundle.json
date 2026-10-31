@@ -2,19 +2,20 @@
   "experiment": "attention-cache-2x2-v1",
   "baseline_commit": "e0179c3baf6c6ea5eb047d3a3e209b84afc3ffb9",
   "files": {
-    "attention_ablation.py": "e38b83954d4f4be2b2845a663b53005381e306f34acb4b32046a9626b034fbee",
+    ".gitattributes": "04c85a1b20ceb973298b9cc4843ebf5331f721c44629f8785f728402832385ad",
+    "attention_ablation.py": "fc17a2e137796cf1ee928dc13bd91858dd436a691f179890c90f0fb701e8b735",
     "ablation_runtime.py": "128b00e0df50a168b2f5716440c737f0eaa14ff8262590e95602b5c16a9286a0",
     "ablation_attention.py": "f3c3b3181d568a6d6c57ac8a65e432523d986d51cb56c81433019b9ae8a91319",
-    "ablation_kernels.py": "076dd173e91aaf34825b4128cbcd5ba066f8ddead53546ec5437a9877a0e9269",
-    "ablation_generate.py": "b1540ce166f7249e8fcb59d4670eb08dcf87d7cf6ef4aaaeca1b9203a2514e30",
+    "ablation_kernels.py": "b9ca40043399c2cd0f479faf0481b94f51b2dc44ed6e75296f65dd33487f0fc8",
+    "ablation_generate.py": "ff5110c1771be0032e0dfa3a6e892d07ac186ef1fbb1f70aac75ac2f23f3aea6",
     "ablation_validate.py": "dbde236836f3fcb348678d18f5c769ae261705ba4f5a381dfb6503a543193689",
     "ablation_analysis.py": "f8eb9a04f5b2f28d46b71c193407879b9dd0e274fbe619cb9034164f2ee29949",
     "start_attention_ablation.sh": "e8a5ccdb88809de1c78f7f7ce3c5b236fbb52fcca1b6247bdbcf4546c8bcec11",
     "ATTENTION_ABLATION.md": "d6e80d989a9d063120a5a449fab2ed90bc6441fb42ca6a1195aea4bbd021b28d",
     "verify_attention_ablation_bundle.py": "eb81f0bbe8e0340d9ff2e794056b0c0809a701308b819fa91dbf13f70b332bb1",
-    "build_attention_ablation_bundle.py": "4af673e66dc84bc33dca042b90cb31aeb43afcc2d641747d7247f514de7adb42",
+    "build_attention_ablation_bundle.py": "871bed97dfeb9168df6321e9b975b0381ace37349ce91798940c67207211c400",
     "tests/test_attention_ablation.py": "58f6cf7e1ad74baf7372e4937e91e4760ef8c65163dc17faaecdaee6b2f070d7",
-    "validation/attention_ablation_local.json": "e21a91d1fa909f8702389972b6bb1eb2330d7a7fef8f1e4a50ffa4e6e378b618"
+    "validation/attention_ablation_local.json": "4603e2babcbc75ec7374e841af383b2e65874648cdfe2de0a506185220e812bb"
   },
   "base_files": {
     "benchmark.py": "09545fffaf6b73857160ee4ee25bd62644138b4bb81526c186b92b98aa2052d9",

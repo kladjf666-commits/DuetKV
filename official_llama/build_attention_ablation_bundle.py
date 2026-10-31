@@ -5,7 +5,7 @@ from pathlib import Path
 import zipfile
 
 ROOT = Path(__file__).resolve().parent
-NAMES = ['attention_ablation.py', 'ablation_runtime.py', 'ablation_attention.py',
+NAMES = ['.gitattributes', 'attention_ablation.py', 'ablation_runtime.py', 'ablation_attention.py',
          'ablation_kernels.py', 'ablation_generate.py', 'ablation_validate.py',
          'ablation_analysis.py', 'start_attention_ablation.sh', 'ATTENTION_ABLATION.md',
          'verify_attention_ablation_bundle.py', 'build_attention_ablation_bundle.py',
@@ -27,7 +27,7 @@ def main():
                 'base_files': {name: sha(ROOT/name) for name in BASE},
                 'local_checks': 'passed', 'gpu_checks': 'pending_on_server'}
     mp = ROOT/'attention_ablation_bundle.json'
-    mp.write_text(json.dumps(manifest, indent=2)+'\n', encoding='utf-8')
+    mp.write_text(json.dumps(manifest, indent=2)+'\n', encoding='utf-8', newline='\n')
     target = ROOT/'delivery/PhaseKV_attention_ablation_20261031.zip'
     target.parent.mkdir(exist_ok=True)
     with zipfile.ZipFile(target, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=6) as z:
@@ -38,7 +38,7 @@ def main():
         for name, expected in manifest['files'].items():
             assert hashlib.sha256(z.read('official_llama/'+name)).hexdigest() == expected
     digest = sha(target)
-    target.with_suffix('.zip.sha256').write_text(digest+'  '+target.name+'\n',encoding='ascii')
+    target.with_suffix('.zip.sha256').write_text(digest+'  '+target.name+'\n',encoding='ascii',newline='\n')
     print(json.dumps({'file': str(target), 'bytes': target.stat().st_size, 'sha256': digest}, indent=2))
 
 

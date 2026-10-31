@@ -1,0 +1,12 @@
+# Keep the additive Linux ablation bundle reproducible after Windows checkout.
+/ablation_*.py text eol=lf
+/attention_ablation.py text eol=lf
+/attention_ablation_bundle.json text eol=lf
+/build_attention_ablation_bundle.py text eol=lf
+/verify_attention_ablation_bundle.py text eol=lf
+/start_attention_ablation.sh text eol=lf
+/ATTENTION_ABLATION.md text eol=lf
+/tests/test_attention_ablation.py text eol=lf
+/validation/attention_ablation_local.json text eol=lf
+/delivery/PhaseKV_attention_ablation_20261031.zip.sha256 text eol=lf
+/.gitattributes text eol=lf
