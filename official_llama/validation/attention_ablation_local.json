@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "date": "2026-10-31",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "gpu_tests_executed": false,
+  "gpu_validation": "pending on original 4090 D server",
+  "local_torch": "2.5.1+cpu",
+  "new_cpu_tests": 9,
+  "existing_benchmark_tests": 4,
+  "existing_native_contract_tests": 7,
+  "python_syntax_files": 10,
+  "shell_syntax": "passed with bundled Git sh -n",
+  "checks": [
+    "frozen runtime fingerprints unchanged",
+    "all previously tracked official_llama files unchanged",
+    "4612 planned records: 4288 quality + 324 fixed-output performance",
+    "compatible resume accepted; changed protocol rejected",
+    "summarize-only preserves all 4612 pending records",
+    "GPU gate rejects CPU and records failed status",
+    "worker rejects failed/stale gates and changed sources",
+    "three-repeat matched-input performance pairs; explicit exclusion of incomplete/OOM pairs",
+    "shared packed-kernel arithmetic and merge unchanged"
+  ],
+  "source_sha256": {
+    "ablation_analysis.py": "f8eb9a04f5b2f28d46b71c193407879b9dd0e274fbe619cb9034164f2ee29949",
+    "ablation_attention.py": "f3c3b3181d568a6d6c57ac8a65e432523d986d51cb56c81433019b9ae8a91319",
+    "ablation_generate.py": "b1540ce166f7249e8fcb59d4670eb08dcf87d7cf6ef4aaaeca1b9203a2514e30",
+    "ablation_kernels.py": "076dd173e91aaf34825b4128cbcd5ba066f8ddead53546ec5437a9877a0e9269",
+    "ablation_runtime.py": "128b00e0df50a168b2f5716440c737f0eaa14ff8262590e95602b5c16a9286a0",
+    "ablation_validate.py": "dbde236836f3fcb348678d18f5c769ae261705ba4f5a381dfb6503a543193689",
+    "attention_ablation.py": "e38b83954d4f4be2b2845a663b53005381e306f34acb4b32046a9626b034fbee",
+    "build_attention_ablation_bundle.py": "4af673e66dc84bc33dca042b90cb31aeb43afcc2d641747d7247f514de7adb42",
+    "tests/test_attention_ablation.py": "58f6cf7e1ad74baf7372e4937e91e4760ef8c65163dc17faaecdaee6b2f070d7",
+    "verify_attention_ablation_bundle.py": "eb81f0bbe8e0340d9ff2e794056b0c0809a701308b819fa91dbf13f70b332bb1"
+  },
+  "baseline_commit": "e0179c3baf6c6ea5eb047d3a3e209b84afc3ffb9",
+  "branch": "codex/attention-ablation",
+  "rollback_tag": "pre-attention-ablation-20261031"
+}

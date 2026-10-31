@@ -1,0 +1,35 @@
+{
+  "experiment": "attention-cache-2x2-v1",
+  "baseline_commit": "e0179c3baf6c6ea5eb047d3a3e209b84afc3ffb9",
+  "files": {
+    "attention_ablation.py": "e38b83954d4f4be2b2845a663b53005381e306f34acb4b32046a9626b034fbee",
+    "ablation_runtime.py": "128b00e0df50a168b2f5716440c737f0eaa14ff8262590e95602b5c16a9286a0",
+    "ablation_attention.py": "f3c3b3181d568a6d6c57ac8a65e432523d986d51cb56c81433019b9ae8a91319",
+    "ablation_kernels.py": "076dd173e91aaf34825b4128cbcd5ba066f8ddead53546ec5437a9877a0e9269",
+    "ablation_generate.py": "b1540ce166f7249e8fcb59d4670eb08dcf87d7cf6ef4aaaeca1b9203a2514e30",
+    "ablation_validate.py": "dbde236836f3fcb348678d18f5c769ae261705ba4f5a381dfb6503a543193689",
+    "ablation_analysis.py": "f8eb9a04f5b2f28d46b71c193407879b9dd0e274fbe619cb9034164f2ee29949",
+    "start_attention_ablation.sh": "e8a5ccdb88809de1c78f7f7ce3c5b236fbb52fcca1b6247bdbcf4546c8bcec11",
+    "ATTENTION_ABLATION.md": "d6e80d989a9d063120a5a449fab2ed90bc6441fb42ca6a1195aea4bbd021b28d",
+    "verify_attention_ablation_bundle.py": "eb81f0bbe8e0340d9ff2e794056b0c0809a701308b819fa91dbf13f70b332bb1",
+    "build_attention_ablation_bundle.py": "4af673e66dc84bc33dca042b90cb31aeb43afcc2d641747d7247f514de7adb42",
+    "tests/test_attention_ablation.py": "58f6cf7e1ad74baf7372e4937e91e4760ef8c65163dc17faaecdaee6b2f070d7",
+    "validation/attention_ablation_local.json": "e21a91d1fa909f8702389972b6bb1eb2330d7a7fef8f1e4a50ffa4e6e378b618"
+  },
+  "base_files": {
+    "benchmark.py": "09545fffaf6b73857160ee4ee25bd62644138b4bb81526c186b92b98aa2052d9",
+    "benchmark_generate.py": "10883058c449215e317942b4131cbecb3dbd239104f3324febc9dc4124409890",
+    "benchmark_metrics.py": "2b2f9d0f17e47645b9b629956c085debc5bbb6b3309441049e26a9868f4888c4",
+    "native_runtime.py": "4b323c6666a422bfa658df4ce1d837eaccb28ea214c58da7b37bcecb04e442af",
+    "prepare.py": "f75951fbea9b9dccdc3145d5a4ae747251d1b450ca1161a7d7ab387db3cfe23c",
+    "config.json": "49e69c0c72d7b960737901d8235bbe74fbab8ce0c0525ab9f0c0a439a71e7fbc",
+    "sources.json": "044fbc21eed66453205ee91687ba81a2f240b22ccc57a3e749110c3df3d86a13",
+    "bench_assets/frozen/manifest.json": "938a8d97b4b1589a9af41a154307671154478376f779ff63a6dee6dcc830d55f",
+    "bench_assets/frozen/samples.jsonl.gz": "88e85ac0a6d1ca0a437543c1187731c81b4933d699246639a7429c6d8a6cfcde",
+    "bench_sources/RULER/scripts/eval/synthetic/constants.py": "14007f0463e65e58daf7a57a7b2c5b1f67649606d1834657f395cbe6e75acdf0",
+    "vendor/SnapKV/experiments/LongBench/metrics.py": "e22e2a2662e0f7e683137fa3541f64edb6a801e9138d16d2f3459a6ab9941323",
+    "vendor/SCOPE/eval_longgenbench.py": "663e718f1bd3f73c2ee828ce9699fcca7d3e6ddbf5e61b8c6b7dbd1e70a7440c"
+  },
+  "local_checks": "passed",
+  "gpu_checks": "pending_on_server"
+}
