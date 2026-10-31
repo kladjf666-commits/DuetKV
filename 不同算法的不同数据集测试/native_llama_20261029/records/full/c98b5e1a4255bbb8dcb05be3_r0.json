@@ -1,0 +1,89 @@
+{
+  "id": "longbench/2wikimqa/155/16384",
+  "suite": "longbench",
+  "task": "2wikimqa",
+  "document_id": "155/16384",
+  "cluster_id": "2wikimqa/d38b5b49d131526358afd566d894c5fdc985e728e898b3be5acf50803bf7c892",
+  "length_budget": 16384,
+  "input_sha256": "d8fc4be46c19257d76e9f41c274a0ad830e2d47bb585071431cd08a37115aadc",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": "heldout",
+  "heldout_from_available_history": true,
+  "method": "full",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 7202,
+  "output_tokens": 7,
+  "output_ids": [
+    37,
+    978,
+    15401,
+    2009,
+    566,
+    3035,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 0.9209633292630315,
+  "prefill_and_compress_s": 0.9209633292630315,
+  "decode_s": 0.15488355699926615,
+  "decode_tokens_per_s": 38.73877974037249,
+  "generation_wall_s_including_instrumentation": 1.0762547100894153,
+  "prefill_storage": {
+    "physical_bytes": 943980544,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 943980544,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 944766976,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 944766976,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 7202,
+    "stored_heads": 8
+  },
+  "final_trace": {
+    "physical_tokens": 7208,
+    "stored_heads": 8
+  },
+  "peak_allocated_bytes": 17975034368,
+  "peak_reserved_bytes": 18421383168,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 6,
+      "seconds": 0.15488355699926615,
+      "tokens": 6
+    }
+  ],
+  "effective_options": {},
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 100.0,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "Félix Leclerc",
+  "gpu_before": {
+    "time": 1793313642.1750536,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15894 MiB, 0 %, 51, 329.98 W, 2670 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793313643.3231168,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 17996 MiB, 100 %, 65, 277.33 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793313643.3231215
+}

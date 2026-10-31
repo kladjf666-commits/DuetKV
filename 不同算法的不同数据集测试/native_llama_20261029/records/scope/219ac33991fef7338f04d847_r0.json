@@ -1,0 +1,135 @@
+{
+  "id": "ruler/cwe/9/4096",
+  "suite": "ruler",
+  "task": "cwe",
+  "document_id": "9/4096",
+  "cluster_id": "cwe/9",
+  "length_budget": 4096,
+  "input_sha256": "7c9aaf8c18b193f6df1050970398c03e59b2df61900a6e3d6b0db1d9d5846cef",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": null,
+  "heldout_from_available_history": null,
+  "method": "scope",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 3839,
+  "output_tokens": 44,
+  "output_ids": [
+    220,
+    16,
+    13,
+    18638,
+    220,
+    17,
+    13,
+    49748,
+    220,
+    18,
+    13,
+    84758,
+    220,
+    19,
+    13,
+    50685,
+    220,
+    20,
+    13,
+    24653,
+    220,
+    21,
+    13,
+    48770,
+    220,
+    22,
+    13,
+    95512,
+    220,
+    23,
+    13,
+    18718,
+    648,
+    220,
+    24,
+    13,
+    30870,
+    43343,
+    220,
+    605,
+    13,
+    87450,
+    268,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 0.8844013861380517,
+  "prefill_and_compress_s": 0.8844013861380517,
+  "decode_s": 1.461596874985844,
+  "decode_tokens_per_s": 29.419876804550825,
+  "generation_wall_s_including_instrumentation": 2.346415048930794,
+  "prefill_storage": {
+    "physical_bytes": 1073741824,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1073741824,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 1096286208,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1096286208,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 2048,
+    "stored_heads": 32
+  },
+  "final_trace": {
+    "physical_tokens": 2091,
+    "stored_heads": 32
+  },
+  "peak_allocated_bytes": 21076359168,
+  "peak_reserved_bytes": 22103982080,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 43,
+      "seconds": 1.461596874985844,
+      "tokens": 43
+    }
+  ],
+  "effective_options": {
+    "max_capacity_prompt": 2048,
+    "window_size": 8,
+    "kernel_size": 7,
+    "pooling": "maxpool",
+    "decoding_window_size": 512,
+    "decoding_recent_size": 256,
+    "decoding_metric": "None",
+    "delta": 1
+  },
+  "scope_mode": "prefill_only_short_output_boundary",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 100.0,
+  "metric": "official_string_match_all",
+  "status": "ok",
+  "prediction": " 1. hip 2. survivor 3. haunt 4. freezer 5. compass 6. juvenile 7. sled 8. pinkie 9. boulevard 10. spleen",
+  "gpu_before": {
+    "time": 1793317532.25998,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15896 MiB, 66 %, 50, 207.56 W, 2655 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793317534.6784482,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 21510 MiB, 66 %, 54, 214.64 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793317534.6784523
+}

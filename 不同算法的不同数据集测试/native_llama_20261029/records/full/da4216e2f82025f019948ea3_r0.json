@@ -1,0 +1,123 @@
+{
+  "id": "ruler/cwe/21/8192",
+  "suite": "ruler",
+  "task": "cwe",
+  "document_id": "21/8192",
+  "cluster_id": "cwe/21",
+  "length_budget": 8192,
+  "input_sha256": "a84fc416c4de09a24bd2a56e7865f98aa94a8605300fd7a390bfb21f92ad7216",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": null,
+  "heldout_from_available_history": null,
+  "method": "full",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 7963,
+  "output_tokens": 41,
+  "output_ids": [
+    220,
+    16,
+    13,
+    23641,
+    220,
+    17,
+    13,
+    4367,
+    220,
+    18,
+    13,
+    22743,
+    220,
+    19,
+    13,
+    10017,
+    220,
+    20,
+    13,
+    29407,
+    220,
+    21,
+    13,
+    18488,
+    220,
+    22,
+    13,
+    61519,
+    220,
+    23,
+    13,
+    25977,
+    220,
+    24,
+    13,
+    78652,
+    220,
+    605,
+    13,
+    29407,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 1.0481329509057105,
+  "prefill_and_compress_s": 1.0481329509057105,
+  "decode_s": 1.0363891310989857,
+  "decode_tokens_per_s": 38.595541770670685,
+  "generation_wall_s_including_instrumentation": 2.0849600066430867,
+  "prefill_storage": {
+    "physical_bytes": 1043726336,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1043726336,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 1048969216,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1048969216,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 7963,
+    "stored_heads": 8
+  },
+  "final_trace": {
+    "physical_tokens": 8003,
+    "stored_heads": 8
+  },
+  "peak_allocated_bytes": 18175767040,
+  "peak_reserved_bytes": 18645778432,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 40,
+      "seconds": 1.0363891310989857,
+      "tokens": 40
+    }
+  ],
+  "effective_options": {},
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 90.0,
+  "metric": "official_string_match_all",
+  "status": "ok",
+  "prediction": " 1. banking 2. quality 3. panic 4. conference 5. proceedings 6. formation 7. wagon 8. purple 9. enactment 10. proceedings",
+  "gpu_before": {
+    "time": 1793319689.023022,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15894 MiB, 84 %, 52, 214.34 W, 2670 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793319691.168764,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 18210 MiB, 85 %, 58, 291.17 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793319691.168769
+}

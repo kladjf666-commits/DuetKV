@@ -1,0 +1,87 @@
+{
+  "id": "longbench/hotpotqa/148/8192",
+  "suite": "longbench",
+  "task": "hotpotqa",
+  "document_id": "148/8192",
+  "cluster_id": "hotpotqa/60c6ecafe2661ef2fbbad445d9da6f43a31f0a0ae1c8a83868d0807cf79032b0",
+  "length_budget": 8192,
+  "input_sha256": "3d02d2edd28ca7ea74b9082e5222d68f4b62bdbec5b854afe3c3a0afb16d8f46",
+  "truncated_input": true,
+  "capacity_extension": null,
+  "evaluation_split": "heldout",
+  "heldout_from_available_history": true,
+  "method": "full",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 8183,
+  "output_tokens": 5,
+  "output_ids": [
+    791,
+    15155,
+    94000,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 1.0694352211430669,
+  "prefill_and_compress_s": 1.0694352211430669,
+  "decode_s": 0.10452335188165307,
+  "decode_tokens_per_s": 38.26896026573099,
+  "generation_wall_s_including_instrumentation": 1.174367468804121,
+  "prefill_storage": {
+    "physical_bytes": 1072562176,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1072562176,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 1073086464,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1073086464,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 8183,
+    "stored_heads": 8
+  },
+  "final_trace": {
+    "physical_tokens": 8187,
+    "stored_heads": 8
+  },
+  "peak_allocated_bytes": 18234115072,
+  "peak_reserved_bytes": 18702401536,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 4,
+      "seconds": 0.10452335188165307,
+      "tokens": 4
+    }
+  ],
+  "effective_options": {},
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 0,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "The Italian Alps.",
+  "gpu_before": {
+    "time": 1793313507.518086,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15894 MiB, 100 %, 53, 288.89 W, 2655 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793313508.7819252,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 18264 MiB, 100 %, 67, 337.25 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793313508.7819293
+}

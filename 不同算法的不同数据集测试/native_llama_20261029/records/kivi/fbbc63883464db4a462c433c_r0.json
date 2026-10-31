@@ -1,0 +1,137 @@
+{
+  "id": "ruler/cwe/15/4096",
+  "suite": "ruler",
+  "task": "cwe",
+  "document_id": "15/4096",
+  "cluster_id": "cwe/15",
+  "length_budget": 4096,
+  "input_sha256": "67634f6540ff4ff6343dd5b3fb01f9e0ab971445cd5ab435126839a896b2ce9f",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": null,
+  "heldout_from_available_history": null,
+  "method": "kivi",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 3854,
+  "output_tokens": 45,
+  "output_ids": [
+    220,
+    16,
+    13,
+    781,
+    74083,
+    220,
+    17,
+    13,
+    81012,
+    220,
+    18,
+    13,
+    15798,
+    220,
+    19,
+    13,
+    3369,
+    1279,
+    220,
+    20,
+    13,
+    49071,
+    220,
+    21,
+    13,
+    44721,
+    220,
+    22,
+    13,
+    20750,
+    301,
+    220,
+    23,
+    13,
+    40134,
+    220,
+    24,
+    13,
+    12155,
+    88,
+    220,
+    605,
+    13,
+    78462,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 0.8222020021639764,
+  "prefill_and_compress_s": 0.8222020021639764,
+  "decode_s": 2.2000874211080372,
+  "decode_tokens_per_s": 19.999205294233324,
+  "generation_wall_s_including_instrumentation": 3.0234391554258764,
+  "prefill_storage": {
+    "physical_bytes": 164257792,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 164257792,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 168042496,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 168042496,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "prefill_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 3854
+  },
+  "final_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 3898
+  },
+  "peak_allocated_bytes": 16703074304,
+  "peak_reserved_bytes": 16972251136,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 44,
+      "seconds": 2.2000874211080372,
+      "tokens": 44
+    }
+  ],
+  "effective_options": {
+    "k_bits": 4,
+    "v_bits": 4,
+    "group_size": 32,
+    "residual_length": 128,
+    "use_flash": true
+  },
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 100.0,
+  "metric": "official_string_match_all",
+  "status": "ok",
+  "prediction": " 1. loquat 2. slang 3. velocity 4. effector 5. safeguard 6. throne 7. hazel 8. illustration 9. nosy 10. graceful",
+  "gpu_before": {
+    "time": 1793320802.260044,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15936 MiB, 46 %, 47, 154.33 W, 2670 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793320805.375602,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 16614 MiB, 43 %, 51, 166.20 W, 2670 MHz",
+    "error": ""
+  },
+  "finished_at": 1793320805.375607
+}

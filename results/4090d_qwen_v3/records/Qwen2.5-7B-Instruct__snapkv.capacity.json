@@ -1,0 +1,6 @@
+{
+  "max_completed_input": 32640,
+  "target_safe_input": 32640,
+  "upper_boundary_input": null,
+  "reason": "checkpoint_or_requested_limit"
+}

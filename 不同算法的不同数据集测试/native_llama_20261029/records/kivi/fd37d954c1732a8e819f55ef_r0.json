@@ -1,0 +1,100 @@
+{
+  "id": "longbench/hotpotqa/159/16384",
+  "suite": "longbench",
+  "task": "hotpotqa",
+  "document_id": "159/16384",
+  "cluster_id": "hotpotqa/ef90980426c179636cebddb8868004850d7b2aa1bf96e6c26bad8b411c4b8d93",
+  "length_budget": 16384,
+  "input_sha256": "c1d211119f17e7c5bfe3c07ffd202350efd86b457e9b2706ca1e4c615012e391",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": "heldout",
+  "heldout_from_available_history": true,
+  "method": "kivi",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 9043,
+  "output_tokens": 8,
+  "output_ids": [
+    53,
+    1216,
+    321,
+    320,
+    1049,
+    21,
+    8,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 1.5518203522078693,
+  "prefill_and_compress_s": 1.5518203522078693,
+  "decode_s": 0.3582962639629841,
+  "decode_tokens_per_s": 19.53690480211978,
+  "generation_wall_s_including_instrumentation": 1.9115979671478271,
+  "prefill_storage": {
+    "physical_bytes": 379908096,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 379908096,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 380510208,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 380510208,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "prefill_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 9043
+  },
+  "final_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 9050
+  },
+  "peak_allocated_bytes": 17530078720,
+  "peak_reserved_bytes": 18467520512,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 7,
+      "seconds": 0.3582962639629841,
+      "tokens": 7
+    }
+  ],
+  "effective_options": {
+    "k_bits": 4,
+    "v_bits": 4,
+    "group_size": 32,
+    "residual_length": 128,
+    "use_flash": true
+  },
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 0,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "Veyil (2006)",
+  "gpu_before": {
+    "time": 1793297793.3689303,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 16002 MiB, 46 %, 56, 353.70 W, 2655 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793297795.3339753,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 18040 MiB, 100 %, 65, 374.50 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793297795.3339796
+}

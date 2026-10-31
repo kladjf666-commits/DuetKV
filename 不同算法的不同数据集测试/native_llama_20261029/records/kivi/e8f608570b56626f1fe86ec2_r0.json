@@ -1,0 +1,134 @@
+{
+  "id": "ruler/cwe/21/16384",
+  "suite": "ruler",
+  "task": "cwe",
+  "document_id": "21/16384",
+  "cluster_id": "cwe/21",
+  "length_budget": 16384,
+  "input_sha256": "1a080c272360cb40ce5a807a57ce370c86e38882c86dada30cb2c972e96a0286",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": null,
+  "heldout_from_available_history": null,
+  "method": "kivi",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 15984,
+  "output_tokens": 42,
+  "output_ids": [
+    220,
+    16,
+    13,
+    5274,
+    220,
+    17,
+    13,
+    21971,
+    220,
+    18,
+    13,
+    7782,
+    220,
+    19,
+    13,
+    34185,
+    220,
+    20,
+    13,
+    38836,
+    220,
+    21,
+    13,
+    1554,
+    12160,
+    220,
+    22,
+    13,
+    41580,
+    220,
+    23,
+    13,
+    80001,
+    220,
+    24,
+    13,
+    3834,
+    220,
+    605,
+    13,
+    34185,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 2.4897286579944193,
+  "prefill_and_compress_s": 2.4897286579944193,
+  "decode_s": 2.0479241218417883,
+  "decode_tokens_per_s": 20.020272998750997,
+  "generation_wall_s_including_instrumentation": 4.539855810813606,
+  "prefill_storage": {
+    "physical_bytes": 665518080,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 665518080,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 663277568,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 663277568,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "prefill_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 15984
+  },
+  "final_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 16025
+  },
+  "peak_allocated_bytes": 18637916160,
+  "peak_reserved_bytes": 19870515200,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 41,
+      "seconds": 2.0479241218417883,
+      "tokens": 41
+    }
+  ],
+  "effective_options": {
+    "k_bits": 4,
+    "v_bits": 4,
+    "group_size": 32,
+    "residual_length": 128,
+    "use_flash": true
+  },
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 90.0,
+  "metric": "official_string_match_all",
+  "status": "ok",
+  "prediction": " 1. office 2. lane 3. purchase 4. adaptation 5. zombie 6. smelly 7. yeast 8. leash 9. interface 10. adaptation",
+  "gpu_before": {
+    "time": 1793321083.320932,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15936 MiB, 52 %, 51, 178.62 W, 2670 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793321087.952113,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 19378 MiB, 53 %, 55, 195.60 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793321087.9521182
+}

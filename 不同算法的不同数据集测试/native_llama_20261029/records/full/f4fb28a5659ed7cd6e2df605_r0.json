@@ -1,0 +1,97 @@
+{
+  "id": "longbench/narrativeqa/169/8192",
+  "suite": "longbench",
+  "task": "narrativeqa",
+  "document_id": "169/8192",
+  "cluster_id": "narrativeqa/7707dd9dee3fcf3046d2bdb43abb1d516fb1b9a2533ee5f23d4096822406047a",
+  "length_budget": 8192,
+  "input_sha256": "07a01ca76e54d0ab9ef44e4663635dee421c7831e8b311abe8d7d1853edf68c7",
+  "truncated_input": true,
+  "capacity_extension": null,
+  "evaluation_split": "historical_retest",
+  "heldout_from_available_history": false,
+  "method": "full",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 8184,
+  "output_tokens": 15,
+  "output_ids": [
+    791,
+    3446,
+    1587,
+    539,
+    6420,
+    54007,
+    434,
+    7011,
+    56261,
+    2133,
+    1139,
+    42227,
+    9511,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 1.0703485431149602,
+  "prefill_and_compress_s": 1.0703485431149602,
+  "decode_s": 0.36997565859928727,
+  "decode_tokens_per_s": 37.84032726099719,
+  "generation_wall_s_including_instrumentation": 1.4407454920001328,
+  "prefill_storage": {
+    "physical_bytes": 1072693248,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1072693248,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 1074528256,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1074528256,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 8184,
+    "stored_heads": 8
+  },
+  "final_trace": {
+    "physical_tokens": 8198,
+    "stored_heads": 8
+  },
+  "peak_allocated_bytes": 18234122240,
+  "peak_reserved_bytes": 18702401536,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 14,
+      "seconds": 0.36997565859928727,
+      "tokens": 14
+    }
+  ],
+  "effective_options": {},
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 0,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "The story does not mention Baroness Matilda going into premature labor.",
+  "gpu_before": {
+    "time": 1793313164.8405333,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15894 MiB, 100 %, 60, 380.75 W, 2655 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793313166.3696694,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 18264 MiB, 100 %, 66, 352.21 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793313166.3696737
+}

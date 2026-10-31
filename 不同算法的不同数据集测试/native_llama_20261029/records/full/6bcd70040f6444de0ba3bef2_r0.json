@@ -1,0 +1,93 @@
+{
+  "id": "longbench/hotpotqa/40/8192",
+  "suite": "longbench",
+  "task": "hotpotqa",
+  "document_id": "40/8192",
+  "cluster_id": "hotpotqa/77705e32c70ff9c3d6d172bbd628b845b676b6d78800f6e05ac47c40283e9c93",
+  "length_budget": 8192,
+  "input_sha256": "0ffe6c1fcffeaa127dd5e6513b48b64a8ef9f61d4b80e5b7f0ff29d64ee774c5",
+  "truncated_input": true,
+  "capacity_extension": null,
+  "evaluation_split": "heldout",
+  "heldout_from_available_history": true,
+  "method": "full",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 8167,
+  "output_tokens": 11,
+  "output_ids": [
+    791,
+    48078,
+    32293,
+    304,
+    28415,
+    304,
+    220,
+    6393,
+    19,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 1.0689280009828508,
+  "prefill_and_compress_s": 1.0689280009828508,
+  "decode_s": 0.2658978831022978,
+  "decode_tokens_per_s": 37.60842276488806,
+  "generation_wall_s_including_instrumentation": 1.3353807353414595,
+  "prefill_storage": {
+    "physical_bytes": 1070465024,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1070465024,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 1071775744,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1071775744,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 8167,
+    "stored_heads": 8
+  },
+  "final_trace": {
+    "physical_tokens": 8177,
+    "stored_heads": 8
+  },
+  "peak_allocated_bytes": 18234296320,
+  "peak_reserved_bytes": 18702401536,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 10,
+      "seconds": 0.2658978831022978,
+      "tokens": 10
+    }
+  ],
+  "effective_options": {},
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 50.0,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "The Nobel Prize in Physics in 1944.",
+  "gpu_before": {
+    "time": 1793313511.2043495,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15894 MiB, 0 %, 55, 337.05 W, 2655 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793313512.592777,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 18264 MiB, 100 %, 60, 369.65 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793313512.5927813
+}

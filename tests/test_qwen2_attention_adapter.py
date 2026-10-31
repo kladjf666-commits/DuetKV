@@ -5,10 +5,10 @@ import torch
 from transformers import Qwen2Config, Qwen2ForCausalLM
 from transformers.cache_utils import DynamicCache
 
-from qwen2 import append_prompt_chunk, decode_token
+from qwen2.qwen2 import append_prompt_chunk, decode_token
 from src.phasekv.phasekv_cache import PhaseKVCache
 
-from src.phasekv.qwen2_attention import (
+from qwen2.qwen2_attention import (
     PhaseKVQwen2Attention,
     install_qwen2_phasekv_attention,
 )

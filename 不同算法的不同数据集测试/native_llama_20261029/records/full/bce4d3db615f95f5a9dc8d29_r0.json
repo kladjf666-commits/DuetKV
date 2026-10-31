@@ -1,0 +1,88 @@
+{
+  "id": "longbench/hotpotqa/108/8192",
+  "suite": "longbench",
+  "task": "hotpotqa",
+  "document_id": "108/8192",
+  "cluster_id": "hotpotqa/2c601338a2d3f289abdf0a67539706062b9bad5b0651e0014e363b575e23de04",
+  "length_budget": 8192,
+  "input_sha256": "dde0d94f05f8affe79dbcae4620c157d54191a97bfc7c7f6de242cade5209437",
+  "truncated_input": true,
+  "capacity_extension": null,
+  "evaluation_split": "heldout",
+  "heldout_from_available_history": true,
+  "method": "full",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 8184,
+  "output_tokens": 6,
+  "output_ids": [
+    27814,
+    377,
+    612,
+    3623,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 1.0695025762543082,
+  "prefill_and_compress_s": 1.0695025762543082,
+  "decode_s": 0.12971518374979496,
+  "decode_tokens_per_s": 38.54598864574251,
+  "generation_wall_s_including_instrumentation": 1.1996502219699323,
+  "prefill_storage": {
+    "physical_bytes": 1072693248,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1072693248,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 1073348608,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1073348608,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 8184,
+    "stored_heads": 8
+  },
+  "final_trace": {
+    "physical_tokens": 8189,
+    "stored_heads": 8
+  },
+  "peak_allocated_bytes": 18234119680,
+  "peak_reserved_bytes": 18702401536,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 5,
+      "seconds": 0.12971518374979496,
+      "tokens": 5
+    }
+  ],
+  "effective_options": {},
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 0,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "Merck & Co.",
+  "gpu_before": {
+    "time": 1793313503.0057032,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15894 MiB, 27 %, 53, 275.18 W, 2655 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793313504.2976725,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 18264 MiB, 100 %, 67, 340.29 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793313504.2976766
+}

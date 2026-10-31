@@ -1,0 +1,124 @@
+{
+  "id": "ruler/cwe/5/8192",
+  "suite": "ruler",
+  "task": "cwe",
+  "document_id": "5/8192",
+  "cluster_id": "cwe/5",
+  "length_budget": 8192,
+  "input_sha256": "4692a323ce89c4239d39ef1853f6b60509567cbc3a610ca39c5e2d179545c015",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": null,
+  "heldout_from_available_history": null,
+  "method": "full",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 7827,
+  "output_tokens": 42,
+  "output_ids": [
+    220,
+    16,
+    13,
+    2804,
+    220,
+    17,
+    13,
+    28310,
+    220,
+    18,
+    13,
+    57905,
+    220,
+    19,
+    13,
+    1515,
+    55901,
+    220,
+    20,
+    13,
+    10879,
+    220,
+    21,
+    13,
+    15631,
+    220,
+    22,
+    13,
+    3477,
+    220,
+    23,
+    13,
+    13310,
+    220,
+    24,
+    13,
+    7066,
+    220,
+    605,
+    13,
+    4376,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 1.0382642368786037,
+  "prefill_and_compress_s": 1.0382642368786037,
+  "decode_s": 1.0577727127820253,
+  "decode_tokens_per_s": 38.760689800899456,
+  "generation_wall_s_including_instrumentation": 2.0964532122015953,
+  "prefill_storage": {
+    "physical_bytes": 1025900544,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1025900544,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 1031274496,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1031274496,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 7827,
+    "stored_heads": 8
+  },
+  "final_trace": {
+    "physical_tokens": 7868,
+    "stored_heads": 8
+  },
+  "peak_allocated_bytes": 18140827136,
+  "peak_reserved_bytes": 18616418304,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 41,
+      "seconds": 1.0577727127820253,
+      "tokens": 41
+    }
+  ],
+  "effective_options": {},
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 100.0,
+  "metric": "official_string_match_all",
+  "status": "ok",
+  "prediction": " 1. perform 2. absent 3. handgun 4. loggia 5. cluster 6. bow 7. review 8. hint 9. destroy 10. half",
+  "gpu_before": {
+    "time": 1793319648.3346448,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15894 MiB, 83 %, 57, 260.25 W, 2655 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793319650.5038097,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 18182 MiB, 76 %, 57, 268.11 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793319650.5038145
+}

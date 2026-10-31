@@ -1,0 +1,108 @@
+{
+  "id": "longbench/qasper/112/8192",
+  "suite": "longbench",
+  "task": "qasper",
+  "document_id": "112/8192",
+  "cluster_id": "qasper/a1b11d6e5ae7345ca77cd55f7cb019809d553708775f1f4adf8c2fe8394a222b",
+  "length_budget": 8192,
+  "input_sha256": "b8776f2ae61c75ea653e08366522bbff5f09994b673923fccd39afe5a8a7f46d",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": "heldout",
+  "heldout_from_available_history": true,
+  "method": "kivi",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 7890,
+  "output_tokens": 16,
+  "output_ids": [
+    32,
+    17251,
+    11,
+    69311,
+    11,
+    323,
+    23222,
+    13340,
+    315,
+    264,
+    743,
+    315,
+    3492,
+    23728,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 1.3889935789629817,
+  "prefill_and_compress_s": 1.3889935789629817,
+  "decode_s": 0.7673970051109791,
+  "decode_tokens_per_s": 19.546597002721867,
+  "generation_wall_s_including_instrumentation": 2.1579332100227475,
+  "prefill_storage": {
+    "physical_bytes": 332636160,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 332636160,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 333926400,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 333926400,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "prefill_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 7890
+  },
+  "final_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 7905
+  },
+  "peak_allocated_bytes": 17350000640,
+  "peak_reserved_bytes": 17750294528,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 15,
+      "seconds": 0.7673970051109791,
+      "tokens": 15
+    }
+  ],
+  "effective_options": {
+    "k_bits": 4,
+    "v_bits": 4,
+    "group_size": 32,
+    "residual_length": 128,
+    "use_flash": true
+  },
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 30.0,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "A compact, scalable, and meaningful representation of a set of word vectors.",
+  "gpu_before": {
+    "time": 1793297358.4951947,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 16002 MiB, 43 %, 48, 145.12 W, 2670 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793297360.7435372,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 17356 MiB, 100 %, 53, 291.33 W, 2670 MHz",
+    "error": ""
+  },
+  "finished_at": 1793297360.743542
+}

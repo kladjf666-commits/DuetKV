@@ -1,0 +1,95 @@
+{
+  "id": "longbench/hotpotqa/41/16384",
+  "suite": "longbench",
+  "task": "hotpotqa",
+  "document_id": "41/16384",
+  "cluster_id": "hotpotqa/7c9670f512e2affb2b57bc3e82ef801ea4c6aa69b2d5a310ae2ebd4384952e27",
+  "length_budget": 16384,
+  "input_sha256": "71dc5fcfd3fa27a012963596c32148c0adee044a35a3d194db437d3cdc09d869",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": "heldout",
+  "heldout_from_available_history": true,
+  "method": "full",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 16234,
+  "output_tokens": 13,
+  "output_ids": [
+    35960,
+    278,
+    12707,
+    60874,
+    11,
+    6118,
+    2884,
+    304,
+    3009,
+    11633,
+    10571,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 2.3445958490483463,
+  "prefill_and_compress_s": 2.3445958490483463,
+  "decode_s": 0.31462640035897493,
+  "decode_tokens_per_s": 38.14047386458519,
+  "generation_wall_s_including_instrumentation": 2.6596712032333016,
+  "prefill_storage": {
+    "physical_bytes": 2127822848,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 2127822848,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 2129395712,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 2129395712,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 16234,
+    "stored_heads": 8
+  },
+  "final_trace": {
+    "physical_tokens": 16246,
+    "stored_heads": 8
+  },
+  "peak_allocated_bytes": 20360932352,
+  "peak_reserved_bytes": 21187526656,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 12,
+      "seconds": 0.31462640035897493,
+      "tokens": 12
+    }
+  ],
+  "effective_options": {},
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 73.68421052631578,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "Seasonal television specials, usually done in stop motion animation.",
+  "gpu_before": {
+    "time": 1793313475.0539525,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15894 MiB, 12 %, 52, 289.94 W, 2670 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793313477.8063524,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 20634 MiB, 100 %, 67, 389.34 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793313477.8063567
+}

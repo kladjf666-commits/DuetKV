@@ -1,0 +1,110 @@
+{
+  "id": "longbench/qasper/168/8192",
+  "suite": "longbench",
+  "task": "qasper",
+  "document_id": "168/8192",
+  "cluster_id": "qasper/40b556039ee3ae3da7c8d0161b04470c0db7771c6e1f325973b23de09b766df2",
+  "length_budget": 8192,
+  "input_sha256": "fc28a35e41f25d0559a288c5edcf4fa8821dd49341fe799ede309c9800f98d57",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": "heldout",
+  "heldout_from_available_history": true,
+  "method": "full",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 4290,
+  "output_tokens": 28,
+  "output_ids": [
+    32,
+    1633,
+    4382,
+    72810,
+    31649,
+    34465,
+    449,
+    1670,
+    5137,
+    11,
+    1405,
+    584,
+    4097,
+    279,
+    1988,
+    13422,
+    449,
+    264,
+    3254,
+    4668,
+    25,
+    279,
+    3160,
+    315,
+    279,
+    11914,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 0.5396582731045783,
+  "prefill_and_compress_s": 0.5396582731045783,
+  "decode_s": 0.7006127750501037,
+  "decode_tokens_per_s": 38.53769294753314,
+  "generation_wall_s_including_instrumentation": 1.2406970672309399,
+  "prefill_storage": {
+    "physical_bytes": 562298880,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 562298880,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 565837824,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 565837824,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 4290,
+    "stored_heads": 8
+  },
+  "final_trace": {
+    "physical_tokens": 4317,
+    "stored_heads": 8
+  },
+  "peak_allocated_bytes": 17212878848,
+  "peak_reserved_bytes": 17530093568,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 27,
+      "seconds": 0.7006127750501037,
+      "tokens": 27
+    }
+  ],
+  "effective_options": {},
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 39.130434782608695,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "A very simple logistic regression classifier with default parameters, where we represent the input instances with a single feature: the length of the sentence.",
+  "gpu_before": {
+    "time": 1793313307.5941448,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15894 MiB, 100 %, 52, 324.73 W, 2670 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793313308.9261177,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 17146 MiB, 99 %, 56, 259.27 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793313308.9261224
+}

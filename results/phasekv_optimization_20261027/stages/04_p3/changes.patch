@@ -1,0 +1,302 @@
+--- a/PhaseKV/kernels/launch_config.py
++++ b/PhaseKV/kernels/launch_config.py
+@@ -62,3 +62,14 @@
+     # Do not launch empty trailing splits (also covers uneven manual splits).
+     splits = _ceildiv(seq_len, split_len)
+     return DecodeLaunchConfig(splits, split_len, block_n, num_warps)
++
++
++def plan_phasekv_cold_group(cold_count, requested=1):
++    """Explicit experiment sizes; short cold lists keep the general schedule.
++
++    GPU occupancy measurements are required before adopting an automatic policy.
++    This function deliberately does not change the shared KIVI planner.
++    """
++    if requested not in (1, 4, 8, 16) or cold_count < 0:
++        raise ValueError("Invalid PhaseKV cold scheduling parameters")
++    return requested if cold_count >= requested else 1
+--- a/PhaseKV/kernels/segmented_attention.py
++++ b/PhaseKV/kernels/segmented_attention.py
+@@ -18,7 +18,9 @@
+                          NPACKED, NPARTIAL, HOT,
+                          QH, QD, KHH, KHS, KHD, VHH, VHS, VHD,
+                          HD: tl.constexpr, GROUP: tl.constexpr,
+-                         BN: tl.constexpr, DW: tl.constexpr, CAPACITY: tl.constexpr = 0):
++                         BN: tl.constexpr, DW: tl.constexpr, CAPACITY: tl.constexpr = 0,
++                         PREFIX: tl.constexpr = 0, COLD_GROUP: tl.constexpr = 1,
++                         NROWS: tl.constexpr = 0):
+     stride = CAPACITY if CAPACITY else NPARTIAL
+     head = tl.program_id(0)
+     part = tl.program_id(1)
+@@ -29,50 +31,54 @@
+     denominator = tl.full((), 0., tl.float32)
+     acc = tl.full((HD,), 0., tl.float32)
+     if part < NPACKED:
+-        row = DESC + part * DW
+-        kp = tl.load(row + 0).to(tl.pointer_type(tl.uint8))
+-        ks = tl.load(row + 1).to(tl.pointer_type(tl.float16))
+-        km = tl.load(row + 2).to(tl.pointer_type(tl.float16))
+-        vp = tl.load(row + 3).to(tl.pointer_type(tl.uint8))
+-        vs = tl.load(row + 4).to(tl.pointer_type(tl.float16))
+-        vm = tl.load(row + 5).to(tl.pointer_type(tl.float16))
+-        start = tl.load(row + 6).to(tl.int32)
+-        end = tl.load(row + 7).to(tl.int32)
+-        kb = tl.load(row + 8).to(tl.int32)
+-        vb = tl.load(row + 9).to(tl.int32)
+-        kgs = tl.load(row + 10).to(tl.int32)
+-        vgs = tl.load(row + 11).to(tl.int32)
+-        kph, kpd, kpb = tl.load(row + 12), tl.load(row + 13), tl.load(row + 14)
+-        ksh, ksd, ksg = tl.load(row + 15), tl.load(row + 16), tl.load(row + 17)
+-        vph, vps, vpb = tl.load(row + 18), tl.load(row + 19), tl.load(row + 20)
+-        vsh, vss, vsg = tl.load(row + 21), tl.load(row + 22), tl.load(row + 23)
+-        kvpb = 8 // kb
+-        vvpb = 8 // vb
+-        for offset in range(start, end, BN):
+-            n = offset + tl.arange(0, BN)
+-            valid = n < end
+-            codes = tl.load(kp + kvhead * kph + d[None, :] * kpd
+-                            + (n[:, None] // kvpb) * kpb,
+-                            mask=valid[:, None], other=0).to(tl.int32)
+-            codes = (codes >> ((n[:, None] % kvpb) * kb)) & ((1 << kb) - 1)
+-            ki = kvhead * ksh + d[None, :] * ksd + (n[:, None] // kgs) * ksg
+-            key = (codes.to(tl.float32) * tl.load(ks + ki, mask=valid[:, None], other=0).to(tl.float32)
+-                   + tl.load(km + ki, mask=valid[:, None], other=0).to(tl.float32))
+-            scores = tl.sum(key * query[None, :], axis=1) * (HD ** -0.5)
+-            scores = tl.where(valid, scores, -float("inf"))
+-            new_max = tl.maximum(maximum, tl.max(scores, axis=0))
+-            correction = tl.exp(maximum - new_max)
+-            probs = tl.exp(scores - new_max)
+-            codes_v = tl.load(vp + kvhead * vph + n[:, None] * vps
+-                              + (d[None, :] // vvpb) * vpb,
+-                              mask=valid[:, None], other=0).to(tl.int32)
+-            codes_v = (codes_v >> ((d[None, :] % vvpb) * vb)) & ((1 << vb) - 1)
+-            vi = kvhead * vsh + n[:, None] * vss + (d[None, :] // vgs) * vsg
+-            value = (codes_v.to(tl.float32) * tl.load(vs + vi, mask=valid[:, None], other=0).to(tl.float32)
+-                     + tl.load(vm + vi, mask=valid[:, None], other=0).to(tl.float32))
+-            acc = acc * correction + tl.sum(probs[:, None] * value, axis=0)
+-            denominator = denominator * correction + tl.sum(probs, axis=0)
+-            maximum = new_max
++        first_row = tl.where(part < PREFIX, part, PREFIX + (part - PREFIX) * COLD_GROUP)
++        last_row = tl.minimum(first_row + tl.where(part < PREFIX, 1, COLD_GROUP),
++                              NROWS if NROWS else NPACKED)
++        for row_index in range(first_row, last_row):
++            row = DESC + row_index * DW
++            kp = tl.load(row + 0).to(tl.pointer_type(tl.uint8))
++            ks = tl.load(row + 1).to(tl.pointer_type(tl.float16))
++            km = tl.load(row + 2).to(tl.pointer_type(tl.float16))
++            vp = tl.load(row + 3).to(tl.pointer_type(tl.uint8))
++            vs = tl.load(row + 4).to(tl.pointer_type(tl.float16))
++            vm = tl.load(row + 5).to(tl.pointer_type(tl.float16))
++            start = tl.load(row + 6).to(tl.int32)
++            end = tl.load(row + 7).to(tl.int32)
++            kb = tl.load(row + 8).to(tl.int32)
++            vb = tl.load(row + 9).to(tl.int32)
++            kgs = tl.load(row + 10).to(tl.int32)
++            vgs = tl.load(row + 11).to(tl.int32)
++            kph, kpd, kpb = tl.load(row + 12), tl.load(row + 13), tl.load(row + 14)
++            ksh, ksd, ksg = tl.load(row + 15), tl.load(row + 16), tl.load(row + 17)
++            vph, vps, vpb = tl.load(row + 18), tl.load(row + 19), tl.load(row + 20)
++            vsh, vss, vsg = tl.load(row + 21), tl.load(row + 22), tl.load(row + 23)
++            kvpb = 8 // kb
++            vvpb = 8 // vb
++            for offset in range(start, end, BN):
++                n = offset + tl.arange(0, BN)
++                valid = n < end
++                codes = tl.load(kp + kvhead * kph + d[None, :] * kpd
++                                + (n[:, None] // kvpb) * kpb,
++                                mask=valid[:, None], other=0).to(tl.int32)
++                codes = (codes >> ((n[:, None] % kvpb) * kb)) & ((1 << kb) - 1)
++                ki = kvhead * ksh + d[None, :] * ksd + (n[:, None] // kgs) * ksg
++                key = (codes.to(tl.float32) * tl.load(ks + ki, mask=valid[:, None], other=0).to(tl.float32)
++                       + tl.load(km + ki, mask=valid[:, None], other=0).to(tl.float32))
++                scores = tl.sum(key * query[None, :], axis=1) * (HD ** -0.5)
++                scores = tl.where(valid, scores, -float("inf"))
++                new_max = tl.maximum(maximum, tl.max(scores, axis=0))
++                correction = tl.exp(maximum - new_max)
++                probs = tl.exp(scores - new_max)
++                codes_v = tl.load(vp + kvhead * vph + n[:, None] * vps
++                                  + (d[None, :] // vvpb) * vpb,
++                                  mask=valid[:, None], other=0).to(tl.int32)
++                codes_v = (codes_v >> ((d[None, :] % vvpb) * vb)) & ((1 << vb) - 1)
++                vi = kvhead * vsh + n[:, None] * vss + (d[None, :] // vgs) * vsg
++                value = (codes_v.to(tl.float32) * tl.load(vs + vi, mask=valid[:, None], other=0).to(tl.float32)
++                         + tl.load(vm + vi, mask=valid[:, None], other=0).to(tl.float32))
++                acc = acc * correction + tl.sum(probs[:, None] * value, axis=0)
++                denominator = denominator * correction + tl.sum(probs, axis=0)
++                maximum = new_max
+     else:
+         for offset in range(0, HOT, BN):
+             n = offset + tl.arange(0, BN)
+@@ -143,7 +149,7 @@
+     # Stream identity prevents concurrent callers from sharing scratch. Caller
+     # still owns normal PyTorch synchronization for KV produced on other streams.
+     stream = torch.cuda.current_stream(q.device).cuda_stream
+-    key = (heads, hd, q.device, stream, num_splits, block_n, num_warps)
++    key = (heads, hd, q.device, stream, num_splits, block_n, num_warps, tiers.optimizations)
+     workspace = ensure_workspace(tiers, heads, hd, q.device, sms, key,
+                                  num_splits, config.block_n, config.num_warps)
+     count = workspace.partial_count
+@@ -153,6 +159,7 @@
+         workspace.accumulators, count - 1, count, tiers.hot_len,
+         *q.stride(), *hk.stride()[1:], *hv.stride()[1:],
+         HD=hd, GROUP=heads // hk.shape[1], BN=config.block_n, DW=DESCRIPTOR_WIDTH, CAPACITY=workspace.capacity,
++        PREFIX=workspace.prefix_count, COLD_GROUP=workspace.cold_group, NROWS=workspace.valid_count,
+         num_warps=config.num_warps, enable_fp_fusion=False)
+     _merge_segments[(heads,)](
+         workspace.maxima, workspace.denominators, workspace.accumulators, out, count,
+--- a/PhaseKV/kernels/segmented_plan.py
++++ b/PhaseKV/kernels/segmented_plan.py
+@@ -10,6 +10,7 @@
+ import torch
+ 
+ from .launch_config import plan_kivi_decode
++from .launch_config import plan_phasekv_cold_group
+ 
+ 
+ DESCRIPTOR_WIDTH = 24
+@@ -59,10 +60,13 @@
+     valid_count: int
+     cold_count: int
+     extension_count: int
++    prefix_count: int = 0
++    cold_group: int = 1
+ 
+     @property
+     def partial_count(self):
+-        return self.valid_count + 1
++        cold_rows = self.valid_count - self.prefix_count
++        return self.prefix_count + (cold_rows + self.cold_group - 1) // self.cold_group + 1
+ 
+     @property
+     def capacity(self):
+@@ -83,13 +87,21 @@
+     owners = (tiers.prompt, *tiers.prompt_extensions, *tiers.cold)
+     rows = []
+     hkv = tiers.hot_k.shape[1]
+-    for segment in owners:
++    prefix_count = 0
++    group = plan_phasekv_cold_group(len(tiers.cold), tiers.optimizations.cold_group)
++    for index, segment in enumerate(owners):
+         if segment.key.orig_shape[1] != hkv:
+             raise ValueError("All tiers must have the same KV head count")
++        is_prompt = index <= len(tiers.prompt_extensions)
++        splits = num_splits if is_prompt or group == 1 else 1
+         rows.extend(segment_rows(segment, heads, head_dim, device, sm_count,
+-                                 num_splits, block_n, num_warps))
+-    capacity = _capacity(len(rows) + 1, tiers.optimizations.reuse_workspace)
+-    descriptors = torch.empty((capacity - 1, DESCRIPTOR_WIDTH), dtype=torch.int64, device=device)
++                                 splits, block_n, num_warps))
++        if is_prompt:
++            prefix_count = len(rows)
++    descriptor_capacity = _capacity(len(rows) + 1, tiers.optimizations.reuse_workspace) - 1
++    partials = prefix_count + (len(rows) - prefix_count + group - 1) // group + 1
++    capacity = _capacity(partials, tiers.optimizations.reuse_workspace)
++    descriptors = torch.empty((descriptor_capacity, DESCRIPTOR_WIDTH), dtype=torch.int64, device=device)
+     if rows:
+         descriptors[:len(rows)].copy_(torch.tensor(rows, dtype=torch.int64, device=device))
+     return DecodeWorkspace(
+@@ -98,6 +110,7 @@
+         torch.empty((heads, capacity), dtype=torch.float32, device=device),
+         torch.empty((heads, capacity, head_dim), dtype=torch.float32, device=device),
+         len(rows), len(tiers.cold), len(tiers.prompt_extensions),
++        prefix_count, group,
+     )
+ 
+ 
+@@ -109,7 +122,9 @@
+     segment contents are immutable by contract. No synchronization is added.
+     """
+     workspace = tiers._decode_workspace
++    group = plan_phasekv_cold_group(len(tiers.cold), tiers.optimizations.cold_group)
+     if (workspace is None or workspace.key != key
++            or workspace.cold_group != group
+             or workspace.owners[0] is not tiers.prompt
+             or workspace.extension_count != len(tiers.prompt_extensions)
+             or workspace.cold_count > len(tiers.cold)):
+@@ -126,13 +141,16 @@
+                 if segment.key.orig_shape[1] != tiers.hot_k.shape[1]:
+                     raise ValueError("All tiers must have the same KV head count")
+                 rows.extend(segment_rows(segment, heads, head_dim, device, sm_count,
+-                                         num_splits, block_n, num_warps))
++                                         num_splits if group == 1 else 1, block_n, num_warps))
+             count = workspace.valid_count + len(rows)
+-            if count + 1 > workspace.capacity:
++            if count > workspace.descriptors.shape[0]:
+                 capacity = _capacity(count + 1, True)
+                 descriptors = torch.empty((capacity - 1, DESCRIPTOR_WIDTH), dtype=torch.int64, device=device)
+                 descriptors[:workspace.valid_count].copy_(workspace.descriptors[:workspace.valid_count])
+                 workspace.descriptors = descriptors
++            partials = workspace.prefix_count + (count - workspace.prefix_count + group - 1) // group + 1
++            if partials > workspace.capacity:
++                capacity = _capacity(partials, True)
+                 workspace.maxima = torch.empty((heads, capacity), device=device, dtype=torch.float32)
+                 workspace.denominators = torch.empty_like(workspace.maxima)
+                 workspace.accumulators = torch.empty((heads, capacity, head_dim), device=device, dtype=torch.float32)
+--- a/tests/test_phasekv_paged_storage.py
++++ b/tests/test_phasekv_paged_storage.py
+@@ -15,6 +15,21 @@
+ 
+ 
+ class TestWorkspaceCapacity(unittest.TestCase):
++    def test_grouped_schedule_covers_all_descriptors(self):
++        for count in (0, 1, 7, 16, 64, 128, 247, 512):
++            for requested in (1, 4, 8, 16):
++                tiers = LayerTiers(make_segment(33), cold=[make_segment(16) for _ in range(count)],
++                    hot_k=torch.empty(1, 2, 144, 32), hot_v=torch.empty(1, 2, 144, 32),
++                    optimizations=OptimizationConfig(reuse_workspace=True, cold_group=requested))
++                w = ensure_workspace(tiers, 4, 32, torch.device("cpu"), 46, (), 1, 8, 4)
++                visited = []
++                for part in range(w.partial_count - 1):
++                    start = part if part < w.prefix_count else w.prefix_count + (part - w.prefix_count) * w.cold_group
++                    end = min(start + (1 if part < w.prefix_count else w.cold_group), w.valid_count)
++                    visited.extend(range(start, end))
++                self.assertEqual(visited, list(range(w.valid_count)))
++                self.assertLessEqual(w.partial_count, w.valid_count + 1)
++
+     def test_incremental_growth_preserves_pointers_and_rows(self):
+         tiers = LayerTiers(make_segment(17), hot_k=torch.empty(1, 2, 144, 32),
+                            hot_v=torch.empty(1, 2, 144, 32),
+--- a/tests/test_phasekv_segmented_decode.py
++++ b/tests/test_phasekv_segmented_decode.py
+@@ -10,6 +10,7 @@
+ from pathlib import Path
+ import sys
+ import unittest
++from dataclasses import replace
+ 
+ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+ if "eval" not in sys.modules and importlib.util.find_spec("eval") is None:
+@@ -22,6 +23,7 @@
+ from PhaseKV.phasekv_cache import PhaseKVCache, LayerTiers, PackedKVSegment
+ from PhaseKV.kernels.packing import quantize_pack, unpack_low_bits
+ from PhaseKV.kernels.segmented_plan import build_workspace, segment_rows, DESCRIPTOR_WIDTH
++from PhaseKV.optimizations import OptimizationConfig
+ 
+ 
+ def make_segment(length, device="cpu", bits=(2, 4), hd=32, hkv=2, gs=32):
+@@ -101,6 +103,25 @@
+ @unittest.skipUnless(HAS_TRITON and (torch.cuda.is_available() or INTERPRET),
+                      "requires CUDA + Triton or TRITON_INTERPRET=1")
+ class TestSegmentedKernels(unittest.TestCase):
++    @unittest.skipIf(INTERPRET, "actual CUDA optimization dispatch required")
++    @torch.inference_mode()
++    def test_grouped_and_specialized_match_dense(self):
++        from PhaseKV.kernels.attention_triton import fused_phasekv_decode
++        for heads, kvheads in ((28, 4), (32, 32)):
++            for count in (0, 1, 7, 16, 64, 128, 247, 512):
++                tiers = LayerTiers(make_segment(717, "cuda", (4, 4), 128, kvheads),
++                    cold=[make_segment(16, "cuda", (4, 4), 128, kvheads) for _ in range(count)],
++                    hot_k=torch.randn(1, kvheads, 144, 128, device="cuda", dtype=torch.float16),
++                    hot_v=torch.randn(1, kvheads, 144, 128, device="cuda", dtype=torch.float16), hot_len=127)
++                q = torch.randn(heads, 128, device="cuda", dtype=torch.float16)
++                expected = reference(q, tiers)
++                for group in (1, 4, 8, 16):
++                    for specialized, reuse in ((False, False), (True, False), (True, True)):
++                        tiers.optimizations = OptimizationConfig(reuse_workspace=True, cold_group=group,
++                            specialized_4bit=specialized, gqa_reuse=reuse)
++                        actual = fused_phasekv_decode(q, tiers, heads)
++                        torch.testing.assert_close(actual.float(), expected, atol=.002, rtol=.01)
++
+     def execute(self, q, tiers, options):
+         from PhaseKV.kernels.segmented_attention import _segmented_attention, _merge_segments
+         from PhaseKV.kernels.launch_config import plan_kivi_decode

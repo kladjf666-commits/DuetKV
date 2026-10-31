@@ -1,0 +1,136 @@
+{
+  "id": "ruler/cwe/1/4096",
+  "suite": "ruler",
+  "task": "cwe",
+  "document_id": "1/4096",
+  "cluster_id": "cwe/1",
+  "length_budget": 4096,
+  "input_sha256": "5494c487dfe75930b66d4be322c2bbebb5f65967463aa17c1a9d17781cf61571",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": null,
+  "heldout_from_available_history": null,
+  "method": "scope",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 3915,
+  "output_tokens": 45,
+  "output_ids": [
+    220,
+    16,
+    13,
+    4950,
+    220,
+    17,
+    13,
+    8106,
+    220,
+    18,
+    13,
+    28930,
+    220,
+    19,
+    13,
+    35092,
+    220,
+    20,
+    13,
+    33779,
+    220,
+    21,
+    13,
+    1608,
+    10470,
+    220,
+    22,
+    13,
+    1376,
+    220,
+    23,
+    13,
+    34479,
+    220,
+    24,
+    13,
+    4851,
+    7716,
+    23576,
+    220,
+    605,
+    13,
+    4371,
+    9186,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 0.9256853787228465,
+  "prefill_and_compress_s": 0.9256853787228465,
+  "decode_s": 1.484161226078868,
+  "decode_tokens_per_s": 29.64637481889171,
+  "generation_wall_s_including_instrumentation": 2.410341773647815,
+  "prefill_storage": {
+    "physical_bytes": 1073741824,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1073741824,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 1096810496,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1096810496,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 2048,
+    "stored_heads": 32
+  },
+  "final_trace": {
+    "physical_tokens": 2092,
+    "stored_heads": 32
+  },
+  "peak_allocated_bytes": 21230980096,
+  "peak_reserved_bytes": 22340960256,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 44,
+      "seconds": 1.484161226078868,
+      "tokens": 44
+    }
+  ],
+  "effective_options": {
+    "max_capacity_prompt": 2048,
+    "window_size": 8,
+    "kernel_size": 7,
+    "pooling": "maxpool",
+    "decoding_window_size": 512,
+    "decoding_recent_size": 256,
+    "decoding_metric": "None",
+    "delta": 1
+  },
+  "scope_mode": "prefill_only_short_output_boundary",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 100.0,
+  "metric": "official_string_match_all",
+  "status": "ok",
+  "prediction": " 1. bed 2. domain 3. caution 4. fir 5. citizenship 6. eddy 7. form 8. dairy 9. heart-throb 10. saloon",
+  "gpu_before": {
+    "time": 1793317510.104882,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15896 MiB, 66 %, 48, 213.47 W, 2655 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793317512.6090348,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 21736 MiB, 67 %, 52, 216.25 W, 2670 MHz",
+    "error": ""
+  },
+  "finished_at": 1793317512.609038
+}

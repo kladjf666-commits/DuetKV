@@ -1,0 +1,137 @@
+{
+  "id": "ruler/cwe/23/16384",
+  "suite": "ruler",
+  "task": "cwe",
+  "document_id": "23/16384",
+  "cluster_id": "cwe/23",
+  "length_budget": 16384,
+  "input_sha256": "d443ed6224e18e93ca8e63dabe989db620929ef3598e7cfb82ba2e88b0cbc0d9",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": null,
+  "heldout_from_available_history": null,
+  "method": "kivi",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 16201,
+  "output_tokens": 45,
+  "output_ids": [
+    220,
+    16,
+    13,
+    65505,
+    220,
+    17,
+    13,
+    47094,
+    220,
+    18,
+    13,
+    7524,
+    220,
+    19,
+    13,
+    781,
+    2910,
+    70652,
+    220,
+    20,
+    13,
+    45304,
+    220,
+    21,
+    13,
+    7891,
+    220,
+    22,
+    13,
+    24020,
+    220,
+    23,
+    13,
+    2773,
+    87139,
+    220,
+    24,
+    13,
+    7970,
+    11029,
+    220,
+    605,
+    13,
+    28875,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 2.374865199904889,
+  "prefill_and_compress_s": 2.374865199904889,
+  "decode_s": 2.2046536612324417,
+  "decode_tokens_per_s": 19.957783289826665,
+  "generation_wall_s_including_instrumentation": 4.580944092944264,
+  "prefill_storage": {
+    "physical_bytes": 672649216,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 672649216,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 676433920,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 676433920,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "prefill_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 16201
+  },
+  "final_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 16245
+  },
+  "peak_allocated_bytes": 18667707392,
+  "peak_reserved_bytes": 19862126592,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 44,
+      "seconds": 2.2046536612324417,
+      "tokens": 44
+    }
+  ],
+  "effective_options": {
+    "k_bits": 4,
+    "v_bits": 4,
+    "group_size": 32,
+    "residual_length": 128,
+    "use_flash": true
+  },
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 100.0,
+  "metric": "official_string_match_all",
+  "status": "ok",
+  "prediction": " 1. creek 2. motive 3. effective 4. loincloth 5. liquor 6. symbol 7. terrorism 8. promenade 9. bonfire 10. breed",
+  "gpu_before": {
+    "time": 1793321094.2359736,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15936 MiB, 51 %, 51, 169.57 W, 2655 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793321098.8920817,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 19370 MiB, 52 %, 55, 195.41 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793321098.8920867
+}

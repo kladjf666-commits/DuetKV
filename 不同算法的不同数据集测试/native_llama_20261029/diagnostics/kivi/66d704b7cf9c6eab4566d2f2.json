@@ -1,0 +1,103 @@
+{
+  "id": "performance/16384+256/0",
+  "suite": "performance",
+  "task": "16384+256",
+  "document_id": "0",
+  "cluster_id": "performance/16384+256/0",
+  "length_budget": 16384,
+  "input_sha256": "e825f0ec06cc9ec14153176522b4087978e6acdbe3d0d90cd4edf489025ab1e2",
+  "truncated_input": null,
+  "capacity_extension": false,
+  "evaluation_split": null,
+  "heldout_from_available_history": null,
+  "method": "kivi",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 16384,
+  "output_tokens": 256,
+  "stopped_on_eos": false,
+  "hit_output_limit": true,
+  "ttft_s": 2.7686360962688923,
+  "prefill_and_compress_s": 2.7686360962688923,
+  "decode_s": 12.531348656862974,
+  "decode_tokens_per_s": 20.348966977336918,
+  "generation_wall_s_including_instrumentation": 15.301212725229561,
+  "prefill_storage": {
+    "physical_bytes": 676855808,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 676855808,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 693022720,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 693022720,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "prefill_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 16384
+  },
+  "final_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 16639
+  },
+  "peak_allocated_bytes": 18694299648,
+  "peak_reserved_bytes": 19872612352,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 128,
+      "seconds": 6.305768030695617,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 128,
+      "to_decode_step": 255,
+      "seconds": 6.225580626167357,
+      "tokens": 127
+    }
+  ],
+  "effective_options": {
+    "k_bits": 4,
+    "v_bits": 4,
+    "group_size": 32,
+    "residual_length": 128,
+    "use_flash": true
+  },
+  "scope_mode": "native",
+  "storage_checkpoints": [
+    {
+      "generated_cached": 0,
+      "physical_bytes": 676855808,
+      "auxiliary_bytes": 0,
+      "total_owned_bytes": 676855808,
+      "tensor_dtypes": [
+        "torch.float16",
+        "torch.int32"
+      ]
+    },
+    {
+      "generated_cached": 255,
+      "physical_bytes": 693022720,
+      "auxiliary_bytes": 0,
+      "total_owned_bytes": 693022720,
+      "tensor_dtypes": [
+        "torch.float16",
+        "torch.int32"
+      ]
+    }
+  ],
+  "persistent_kv_peak_bytes_diagnostic": 693022720,
+  "diagnostic_pass": true,
+  "timing_excluded": true
+}

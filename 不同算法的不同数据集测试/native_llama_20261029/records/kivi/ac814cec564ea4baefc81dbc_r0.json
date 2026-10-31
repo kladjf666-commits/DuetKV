@@ -1,0 +1,99 @@
+{
+  "id": "longbench/narrativeqa/139/16384",
+  "suite": "longbench",
+  "task": "narrativeqa",
+  "document_id": "139/16384",
+  "cluster_id": "narrativeqa/b4cec348685b1cf49d1e8fbf483f10ef19a4a4f3ec80a17d877080558c25ec21",
+  "length_budget": 16384,
+  "input_sha256": "d4580dc4303fdebb1dfc779651b8a4e4228bbc628ecc01d789ea84acfa0c4f61",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": "historical_retest",
+  "heldout_from_available_history": false,
+  "method": "kivi",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 11335,
+  "output_tokens": 7,
+  "output_ids": [
+    2127,
+    23838,
+    323,
+    26454,
+    3838,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 1.7101051746867597,
+  "prefill_and_compress_s": 1.7101051746867597,
+  "decode_s": 0.3154483437538147,
+  "decode_tokens_per_s": 19.02054684643575,
+  "generation_wall_s_including_instrumentation": 2.027074109762907,
+  "prefill_storage": {
+    "physical_bytes": 473247744,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 473247744,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 473763840,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 473763840,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "prefill_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 11335
+  },
+  "final_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 11341
+  },
+  "peak_allocated_bytes": 17891403264,
+  "peak_reserved_bytes": 18790481920,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 6,
+      "seconds": 0.3154483437538147,
+      "tokens": 6
+    }
+  ],
+  "effective_options": {
+    "k_bits": 4,
+    "v_bits": 4,
+    "group_size": 32,
+    "residual_length": 128,
+    "use_flash": true
+  },
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 25.0,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "An abandoned and mysterious house.",
+  "gpu_before": {
+    "time": 1793297219.512322,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 16002 MiB, 88 %, 48, 256.67 W, 2670 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793297221.6360781,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 18348 MiB, 100 %, 53, 359.02 W, 2670 MHz",
+    "error": ""
+  },
+  "finished_at": 1793297221.6360846
+}

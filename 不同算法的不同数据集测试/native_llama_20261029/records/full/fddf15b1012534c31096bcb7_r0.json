@@ -1,0 +1,128 @@
+{
+  "id": "ruler/cwe/25/8192",
+  "suite": "ruler",
+  "task": "cwe",
+  "document_id": "25/8192",
+  "cluster_id": "cwe/25",
+  "length_budget": 8192,
+  "input_sha256": "89b342939db4d7ea77a13a1efa15d0f33dec590248919c342eb2d538a87777cd",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": null,
+  "heldout_from_available_history": null,
+  "method": "full",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 8044,
+  "output_tokens": 46,
+  "output_ids": [
+    220,
+    16,
+    13,
+    16038,
+    220,
+    17,
+    13,
+    6920,
+    220,
+    18,
+    13,
+    4272,
+    2239,
+    220,
+    19,
+    13,
+    27501,
+    220,
+    20,
+    13,
+    17808,
+    220,
+    21,
+    13,
+    5425,
+    35172,
+    27935,
+    220,
+    22,
+    13,
+    2503,
+    277,
+    220,
+    23,
+    13,
+    26276,
+    13412,
+    220,
+    24,
+    13,
+    42200,
+    220,
+    605,
+    13,
+    33586,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 1.0518412902019918,
+  "prefill_and_compress_s": 1.0518412902019918,
+  "decode_s": 1.1596202780492604,
+  "decode_tokens_per_s": 38.80580639353774,
+  "generation_wall_s_including_instrumentation": 2.211918020155281,
+  "prefill_storage": {
+    "physical_bytes": 1054343168,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1054343168,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 1060241408,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1060241408,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 8044,
+    "stored_heads": 8
+  },
+  "final_trace": {
+    "physical_tokens": 8089,
+    "stored_heads": 8
+  },
+  "peak_allocated_bytes": 18196749312,
+  "peak_reserved_bytes": 18662555648,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 45,
+      "seconds": 1.1596202780492604,
+      "tokens": 45
+    }
+  ],
+  "effective_options": {},
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 100.0,
+  "metric": "official_string_match_all",
+  "status": "ok",
+  "prediction": " 1. aside 2. carry 3. netbook 4. exploration 5. organic 6. cross-contamination 7. sitar 8. wholesaler 9. digging 10. chase",
+  "gpu_before": {
+    "time": 1793319699.2039804,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15894 MiB, 85 %, 52, 241.21 W, 2670 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793319701.4502301,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 18226 MiB, 84 %, 58, 311.20 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793319701.450234
+}

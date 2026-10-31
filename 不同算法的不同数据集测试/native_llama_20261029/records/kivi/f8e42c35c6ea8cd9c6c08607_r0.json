@@ -1,0 +1,109 @@
+{
+  "id": "longbench/multifieldqa_en/65/8192",
+  "suite": "longbench",
+  "task": "multifieldqa_en",
+  "document_id": "65/8192",
+  "cluster_id": "multifieldqa_en/e51c7462966cc44b82c84655f6dcf9d28b5bb0f11d42df0246095f1e615148df",
+  "length_budget": 8192,
+  "input_sha256": "3e81a9f62eee6c4fd94779d8018b3a80ebb152cfb44b2b19006ce89955e59ee8",
+  "truncated_input": true,
+  "capacity_extension": null,
+  "evaluation_split": "heldout",
+  "heldout_from_available_history": true,
+  "method": "kivi",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 8184,
+  "output_tokens": 17,
+  "output_ids": [
+    791,
+    4379,
+    2019,
+    814,
+    7784,
+    1431,
+    7318,
+    3403,
+    311,
+    29262,
+    279,
+    7016,
+    304,
+    279,
+    14708,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 1.083166225347668,
+  "prefill_and_compress_s": 1.083166225347668,
+  "decode_s": 0.8016477953642607,
+  "decode_tokens_per_s": 19.958889792405355,
+  "generation_wall_s_including_instrumentation": 1.8860429702326655,
+  "prefill_storage": {
+    "physical_bytes": 346390528,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 346390528,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 341999616,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 341999616,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "prefill_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 8184
+  },
+  "final_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 8200
+  },
+  "peak_allocated_bytes": 17392459776,
+  "peak_reserved_bytes": 18062770176,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 16,
+      "seconds": 0.8016477953642607,
+      "tokens": 16
+    }
+  ],
+  "effective_options": {
+    "k_bits": 4,
+    "v_bits": 4,
+    "group_size": 32,
+    "residual_length": 128,
+    "use_flash": true
+  },
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 74.07407407407406,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "The police say they aren’t paid enough to enforce the laws in the streets.",
+  "gpu_before": {
+    "time": 1793297559.639864,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 16002 MiB, 48 %, 50, 170.49 W, 2655 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793297561.5591152,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 17654 MiB, 69 %, 54, 275.05 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793297561.5591207
+}

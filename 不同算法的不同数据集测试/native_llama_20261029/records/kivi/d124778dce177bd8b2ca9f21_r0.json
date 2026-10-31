@@ -1,0 +1,106 @@
+{
+  "id": "longbench/qasper/136/8192",
+  "suite": "longbench",
+  "task": "qasper",
+  "document_id": "136/8192",
+  "cluster_id": "qasper/2ea2e50d721680e315e68067bdf811430ff5dbad089f75a20ec5572c36abd87c",
+  "length_budget": 8192,
+  "input_sha256": "031b812f6315bcab5032f147b362ce3679d29583a3f5f464661f4b0db5ee2150",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": "heldout",
+  "heldout_from_available_history": true,
+  "method": "kivi",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 6325,
+  "output_tokens": 14,
+  "output_ids": [
+    791,
+    1005,
+    315,
+    264,
+    480,
+    835,
+    12970,
+    6666,
+    17383,
+    304,
+    4216,
+    21896,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 1.1628474039025605,
+  "prefill_and_compress_s": 1.1628474039025605,
+  "decode_s": 0.6479598619043827,
+  "decode_tokens_per_s": 20.062971125699708,
+  "generation_wall_s_including_instrumentation": 1.8119912566617131,
+  "prefill_storage": {
+    "physical_bytes": 267227136,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 267227136,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 268345344,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 268345344,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "prefill_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 6325
+  },
+  "final_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 6338
+  },
+  "peak_allocated_bytes": 17121725952,
+  "peak_reserved_bytes": 17475567616,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 13,
+      "seconds": 0.6479598619043827,
+      "tokens": 13
+    }
+  ],
+  "effective_options": {
+    "k_bits": 4,
+    "v_bits": 4,
+    "group_size": 32,
+    "residual_length": 128,
+    "use_flash": true
+  },
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 6.451612903225806,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "The use of a GAT-like attention mechanism in early experiments.",
+  "gpu_before": {
+    "time": 1793297345.3197818,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 16002 MiB, 46 %, 53, 177.43 W, 2655 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793297347.2296934,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 17094 MiB, 47 %, 54, 305.41 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793297347.2296965
+}

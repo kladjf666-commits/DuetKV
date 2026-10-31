@@ -1,0 +1,112 @@
+{
+  "id": "longbench/multifieldqa_en/61/16384",
+  "suite": "longbench",
+  "task": "multifieldqa_en",
+  "document_id": "61/16384",
+  "cluster_id": "multifieldqa_en/61cb600cdc89cf2b34e93c3143cba3ff5c267d030f814049123c50f16bc2b807",
+  "length_budget": 16384,
+  "input_sha256": "ec460440d0c1e4003dd75081ba2011b439a119b7a695719d9871f0ee674210c1",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": "heldout",
+  "heldout_from_available_history": true,
+  "method": "snapkv",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 11570,
+  "output_tokens": 25,
+  "output_ids": [
+    31833,
+    220,
+    16,
+    25,
+    1398,
+    68,
+    456,
+    950,
+    11,
+    28673,
+    220,
+    17,
+    25,
+    578,
+    5848,
+    11,
+    28673,
+    220,
+    18,
+    25,
+    13525,
+    21268,
+    950,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 1.6093686893582344,
+  "prefill_and_compress_s": 1.6093686893582344,
+  "decode_s": 0.6678983522579074,
+  "decode_tokens_per_s": 35.93361163246658,
+  "generation_wall_s_including_instrumentation": 2.277745835017413,
+  "prefill_storage": {
+    "physical_bytes": 1073741824,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1073741824,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 1086324736,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1086324736,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 2048,
+    "stored_heads": 32
+  },
+  "final_trace": {
+    "physical_tokens": 2072,
+    "stored_heads": 32
+  },
+  "peak_allocated_bytes": 18523240960,
+  "peak_reserved_bytes": 19199426560,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 24,
+      "seconds": 0.6678983522579074,
+      "tokens": 24
+    }
+  ],
+  "effective_options": {
+    "max_capacity_prompt": 2048,
+    "window_size": 32,
+    "kernel_size": 7,
+    "pooling": "maxpool"
+  },
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 37.5,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "Phase 1: Exegetical, Phase 2: Theological, Phase 3: Homiletical.",
+  "gpu_before": {
+    "time": 1793303306.981031,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15896 MiB, 79 %, 52, 237.54 W, 2670 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793303309.357131,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 18740 MiB, 79 %, 57, 302.97 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793303309.3571355
+}

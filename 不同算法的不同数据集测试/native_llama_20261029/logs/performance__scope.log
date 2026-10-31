@@ -1,0 +1,1095 @@
+Loading ONE model for scope/performance; 81 records pending
+You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:41<02:03, 41.08s/it]
+Loading checkpoint shards:  50%|█████     | 2/4 [03:37<04:01, 120.75s/it]
+Loading checkpoint shards:  75%|███████▌  | 3/4 [04:28<01:28, 88.64s/it] 
+Loading checkpoint shards: 100%|██████████| 4/4 [04:31<00:00, 55.17s/it]
+Loading checkpoint shards: 100%|██████████| 4/4 [04:31<00:00, 67.97s/it]
+CASE 1/81 scope performance/4096+256/0 repeat=0
+[scope/performance/4096+256/0] 129/256 tokens
+[scope/performance/4096+256/0] 256/256 tokens
+[scope/performance/4096+256/0] 129/256 tokens
+[scope/performance/4096+256/0] 256/256 tokens
+RESULT ok: performance/4096+256/0 score=None decode=30.522332767016433 token/s
+CASE 2/81 scope performance/4096+256/0 repeat=1
+[scope/performance/4096+256/0] 129/256 tokens
+[scope/performance/4096+256/0] 256/256 tokens
+RESULT ok: performance/4096+256/0 score=None decode=30.575494473912716 token/s
+CASE 3/81 scope performance/4096+256/0 repeat=2
+[scope/performance/4096+256/0] 129/256 tokens
+[scope/performance/4096+256/0] 256/256 tokens
+RESULT ok: performance/4096+256/0 score=None decode=30.67445167971044 token/s
+CASE 4/81 scope performance/4096+256/1 repeat=0
+[scope/performance/4096+256/1] 129/256 tokens
+[scope/performance/4096+256/1] 256/256 tokens
+[scope/performance/4096+256/1] 129/256 tokens
+[scope/performance/4096+256/1] 256/256 tokens
+RESULT ok: performance/4096+256/1 score=None decode=30.295284319822965 token/s
+CASE 5/81 scope performance/4096+256/1 repeat=1
+[scope/performance/4096+256/1] 129/256 tokens
+[scope/performance/4096+256/1] 256/256 tokens
+RESULT ok: performance/4096+256/1 score=None decode=30.594078943130977 token/s
+CASE 6/81 scope performance/4096+256/1 repeat=2
+[scope/performance/4096+256/1] 129/256 tokens
+[scope/performance/4096+256/1] 256/256 tokens
+RESULT ok: performance/4096+256/1 score=None decode=28.672489864466062 token/s
+CASE 7/81 scope performance/4096+256/2 repeat=0
+[scope/performance/4096+256/2] 129/256 tokens
+[scope/performance/4096+256/2] 256/256 tokens
+[scope/performance/4096+256/2] 129/256 tokens
+[scope/performance/4096+256/2] 256/256 tokens
+RESULT ok: performance/4096+256/2 score=None decode=30.74510156932442 token/s
+CASE 8/81 scope performance/4096+256/2 repeat=1
+[scope/performance/4096+256/2] 129/256 tokens
+[scope/performance/4096+256/2] 256/256 tokens
+RESULT ok: performance/4096+256/2 score=None decode=30.606038801715215 token/s
+CASE 9/81 scope performance/4096+256/2 repeat=2
+[scope/performance/4096+256/2] 129/256 tokens
+[scope/performance/4096+256/2] 256/256 tokens
+RESULT ok: performance/4096+256/2 score=None decode=30.520311279151606 token/s
+CASE 10/81 scope performance/8192+256/0 repeat=0
+RESULT oom: performance/8192+256/0 score=None decode=None token/s
+CASE 11/81 scope performance/8192+256/0 repeat=1
+RESULT oom: performance/8192+256/0 score=None decode=None token/s
+CASE 12/81 scope performance/8192+256/0 repeat=2
+RESULT oom: performance/8192+256/0 score=None decode=None token/s
+CASE 13/81 scope performance/8192+256/1 repeat=0
+RESULT oom: performance/8192+256/1 score=None decode=None token/s
+CASE 14/81 scope performance/8192+256/1 repeat=1
+RESULT oom: performance/8192+256/1 score=None decode=None token/s
+CASE 15/81 scope performance/8192+256/1 repeat=2
+RESULT oom: performance/8192+256/1 score=None decode=None token/s
+CASE 16/81 scope performance/8192+256/2 repeat=0
+RESULT oom: performance/8192+256/2 score=None decode=None token/s
+CASE 17/81 scope performance/8192+256/2 repeat=1
+RESULT oom: performance/8192+256/2 score=None decode=None token/s
+CASE 18/81 scope performance/8192+256/2 repeat=2
+RESULT oom: performance/8192+256/2 score=None decode=None token/s
+CASE 19/81 scope performance/16384+256/0 repeat=0
+RESULT oom: performance/16384+256/0 score=None decode=None token/s
+CASE 20/81 scope performance/16384+256/0 repeat=1
+RESULT oom: performance/16384+256/0 score=None decode=None token/s
+CASE 21/81 scope performance/16384+256/0 repeat=2
+RESULT oom: performance/16384+256/0 score=None decode=None token/s
+CASE 22/81 scope performance/16384+256/1 repeat=0
+RESULT oom: performance/16384+256/1 score=None decode=None token/s
+CASE 23/81 scope performance/16384+256/1 repeat=1
+RESULT oom: performance/16384+256/1 score=None decode=None token/s
+CASE 24/81 scope performance/16384+256/1 repeat=2
+RESULT oom: performance/16384+256/1 score=None decode=None token/s
+CASE 25/81 scope performance/16384+256/2 repeat=0
+RESULT oom: performance/16384+256/2 score=None decode=None token/s
+CASE 26/81 scope performance/16384+256/2 repeat=1
+RESULT oom: performance/16384+256/2 score=None decode=None token/s
+CASE 27/81 scope performance/16384+256/2 repeat=2
+RESULT oom: performance/16384+256/2 score=None decode=None token/s
+CASE 28/81 scope performance/1024+1024/0 repeat=0
+[scope/performance/1024+1024/0] 129/1024 tokens
+[scope/performance/1024+1024/0] 257/1024 tokens
+[scope/performance/1024+1024/0] 385/1024 tokens
+[scope/performance/1024+1024/0] 512/1024 tokens
+[scope/performance/1024+1024/0] 513/1024 tokens
+[scope/performance/1024+1024/0] 641/1024 tokens
+[scope/performance/1024+1024/0] 769/1024 tokens
+[scope/performance/1024+1024/0] 897/1024 tokens
+[scope/performance/1024+1024/0] 1024/1024 tokens
+[scope/performance/1024+1024/0] 129/1024 tokens
+[scope/performance/1024+1024/0] 257/1024 tokens
+[scope/performance/1024+1024/0] 385/1024 tokens
+[scope/performance/1024+1024/0] 512/1024 tokens
+[scope/performance/1024+1024/0] 513/1024 tokens
+[scope/performance/1024+1024/0] 641/1024 tokens
+[scope/performance/1024+1024/0] 769/1024 tokens
+[scope/performance/1024+1024/0] 897/1024 tokens
+[scope/performance/1024+1024/0] 1024/1024 tokens
+RESULT ok: performance/1024+1024/0 score=None decode=30.419353121545125 token/s
+CASE 29/81 scope performance/1024+1024/0 repeat=1
+[scope/performance/1024+1024/0] 129/1024 tokens
+[scope/performance/1024+1024/0] 257/1024 tokens
+[scope/performance/1024+1024/0] 385/1024 tokens
+[scope/performance/1024+1024/0] 512/1024 tokens
+[scope/performance/1024+1024/0] 513/1024 tokens
+[scope/performance/1024+1024/0] 641/1024 tokens
+[scope/performance/1024+1024/0] 769/1024 tokens
+[scope/performance/1024+1024/0] 897/1024 tokens
+[scope/performance/1024+1024/0] 1024/1024 tokens
+RESULT ok: performance/1024+1024/0 score=None decode=29.46986634842312 token/s
+CASE 30/81 scope performance/1024+1024/0 repeat=2
+[scope/performance/1024+1024/0] 129/1024 tokens
+[scope/performance/1024+1024/0] 257/1024 tokens
+[scope/performance/1024+1024/0] 385/1024 tokens
+[scope/performance/1024+1024/0] 512/1024 tokens
+[scope/performance/1024+1024/0] 513/1024 tokens
+[scope/performance/1024+1024/0] 641/1024 tokens
+[scope/performance/1024+1024/0] 769/1024 tokens
+[scope/performance/1024+1024/0] 897/1024 tokens
+[scope/performance/1024+1024/0] 1024/1024 tokens
+RESULT ok: performance/1024+1024/0 score=None decode=30.26446499290704 token/s
+CASE 31/81 scope performance/1024+1024/1 repeat=0
+[scope/performance/1024+1024/1] 129/1024 tokens
+[scope/performance/1024+1024/1] 257/1024 tokens
+[scope/performance/1024+1024/1] 385/1024 tokens
+[scope/performance/1024+1024/1] 512/1024 tokens
+[scope/performance/1024+1024/1] 513/1024 tokens
+[scope/performance/1024+1024/1] 641/1024 tokens
+[scope/performance/1024+1024/1] 769/1024 tokens
+[scope/performance/1024+1024/1] 897/1024 tokens
+[scope/performance/1024+1024/1] 1024/1024 tokens
+[scope/performance/1024+1024/1] 129/1024 tokens
+[scope/performance/1024+1024/1] 257/1024 tokens
+[scope/performance/1024+1024/1] 385/1024 tokens
+[scope/performance/1024+1024/1] 512/1024 tokens
+[scope/performance/1024+1024/1] 513/1024 tokens
+[scope/performance/1024+1024/1] 641/1024 tokens
+[scope/performance/1024+1024/1] 769/1024 tokens
+[scope/performance/1024+1024/1] 897/1024 tokens
+[scope/performance/1024+1024/1] 1024/1024 tokens
+RESULT ok: performance/1024+1024/1 score=None decode=29.408273670154443 token/s
+CASE 32/81 scope performance/1024+1024/1 repeat=1
+[scope/performance/1024+1024/1] 129/1024 tokens
+[scope/performance/1024+1024/1] 257/1024 tokens
+[scope/performance/1024+1024/1] 385/1024 tokens
+[scope/performance/1024+1024/1] 512/1024 tokens
+[scope/performance/1024+1024/1] 513/1024 tokens
+[scope/performance/1024+1024/1] 641/1024 tokens
+[scope/performance/1024+1024/1] 769/1024 tokens
+[scope/performance/1024+1024/1] 897/1024 tokens
+[scope/performance/1024+1024/1] 1024/1024 tokens
+RESULT ok: performance/1024+1024/1 score=None decode=30.382193279578964 token/s
+CASE 33/81 scope performance/1024+1024/1 repeat=2
+[scope/performance/1024+1024/1] 129/1024 tokens
+[scope/performance/1024+1024/1] 257/1024 tokens
+[scope/performance/1024+1024/1] 385/1024 tokens
+[scope/performance/1024+1024/1] 512/1024 tokens
+[scope/performance/1024+1024/1] 513/1024 tokens
+[scope/performance/1024+1024/1] 641/1024 tokens
+[scope/performance/1024+1024/1] 769/1024 tokens
+[scope/performance/1024+1024/1] 897/1024 tokens
+[scope/performance/1024+1024/1] 1024/1024 tokens
+RESULT ok: performance/1024+1024/1 score=None decode=30.5337604328413 token/s
+CASE 34/81 scope performance/1024+1024/2 repeat=0
+[scope/performance/1024+1024/2] 129/1024 tokens
+[scope/performance/1024+1024/2] 257/1024 tokens
+[scope/performance/1024+1024/2] 385/1024 tokens
+[scope/performance/1024+1024/2] 512/1024 tokens
+[scope/performance/1024+1024/2] 513/1024 tokens
+[scope/performance/1024+1024/2] 641/1024 tokens
+[scope/performance/1024+1024/2] 769/1024 tokens
+[scope/performance/1024+1024/2] 897/1024 tokens
+[scope/performance/1024+1024/2] 1024/1024 tokens
+[scope/performance/1024+1024/2] 129/1024 tokens
+[scope/performance/1024+1024/2] 257/1024 tokens
+[scope/performance/1024+1024/2] 385/1024 tokens
+[scope/performance/1024+1024/2] 512/1024 tokens
+[scope/performance/1024+1024/2] 513/1024 tokens
+[scope/performance/1024+1024/2] 641/1024 tokens
+[scope/performance/1024+1024/2] 769/1024 tokens
+[scope/performance/1024+1024/2] 897/1024 tokens
+[scope/performance/1024+1024/2] 1024/1024 tokens
+RESULT ok: performance/1024+1024/2 score=None decode=29.343595847366103 token/s
+CASE 35/81 scope performance/1024+1024/2 repeat=1
+[scope/performance/1024+1024/2] 129/1024 tokens
+[scope/performance/1024+1024/2] 257/1024 tokens
+[scope/performance/1024+1024/2] 385/1024 tokens
+[scope/performance/1024+1024/2] 512/1024 tokens
+[scope/performance/1024+1024/2] 513/1024 tokens
+[scope/performance/1024+1024/2] 641/1024 tokens
+[scope/performance/1024+1024/2] 769/1024 tokens
+[scope/performance/1024+1024/2] 897/1024 tokens
+[scope/performance/1024+1024/2] 1024/1024 tokens
+RESULT ok: performance/1024+1024/2 score=None decode=30.48023227483121 token/s
+CASE 36/81 scope performance/1024+1024/2 repeat=2
+[scope/performance/1024+1024/2] 129/1024 tokens
+[scope/performance/1024+1024/2] 257/1024 tokens
+[scope/performance/1024+1024/2] 385/1024 tokens
+[scope/performance/1024+1024/2] 512/1024 tokens
+[scope/performance/1024+1024/2] 513/1024 tokens
+[scope/performance/1024+1024/2] 641/1024 tokens
+[scope/performance/1024+1024/2] 769/1024 tokens
+[scope/performance/1024+1024/2] 897/1024 tokens
+[scope/performance/1024+1024/2] 1024/1024 tokens
+RESULT ok: performance/1024+1024/2 score=None decode=30.478719337938017 token/s
+CASE 37/81 scope performance/1024+4096/0 repeat=0
+[scope/performance/1024+4096/0] 129/4096 tokens
+[scope/performance/1024+4096/0] 257/4096 tokens
+[scope/performance/1024+4096/0] 385/4096 tokens
+[scope/performance/1024+4096/0] 512/4096 tokens
+[scope/performance/1024+4096/0] 513/4096 tokens
+[scope/performance/1024+4096/0] 641/4096 tokens
+[scope/performance/1024+4096/0] 769/4096 tokens
+[scope/performance/1024+4096/0] 897/4096 tokens
+[scope/performance/1024+4096/0] 1025/4096 tokens
+[scope/performance/1024+4096/0] 1153/4096 tokens
+[scope/performance/1024+4096/0] 1281/4096 tokens
+[scope/performance/1024+4096/0] 1409/4096 tokens
+[scope/performance/1024+4096/0] 1537/4096 tokens
+[scope/performance/1024+4096/0] 1665/4096 tokens
+[scope/performance/1024+4096/0] 1793/4096 tokens
+[scope/performance/1024+4096/0] 1921/4096 tokens
+[scope/performance/1024+4096/0] 2048/4096 tokens
+[scope/performance/1024+4096/0] 2049/4096 tokens
+[scope/performance/1024+4096/0] 2177/4096 tokens
+[scope/performance/1024+4096/0] 2305/4096 tokens
+[scope/performance/1024+4096/0] 2433/4096 tokens
+[scope/performance/1024+4096/0] 2561/4096 tokens
+[scope/performance/1024+4096/0] 2689/4096 tokens
+[scope/performance/1024+4096/0] 2817/4096 tokens
+[scope/performance/1024+4096/0] 2945/4096 tokens
+[scope/performance/1024+4096/0] 3073/4096 tokens
+[scope/performance/1024+4096/0] 3201/4096 tokens
+[scope/performance/1024+4096/0] 3329/4096 tokens
+[scope/performance/1024+4096/0] 3457/4096 tokens
+[scope/performance/1024+4096/0] 3585/4096 tokens
+RESULT oom: performance/1024+4096/0 score=None decode=None token/s
+CASE 38/81 scope performance/1024+4096/0 repeat=1
+[scope/performance/1024+4096/0] 129/4096 tokens
+[scope/performance/1024+4096/0] 257/4096 tokens
+[scope/performance/1024+4096/0] 385/4096 tokens
+[scope/performance/1024+4096/0] 512/4096 tokens
+[scope/performance/1024+4096/0] 513/4096 tokens
+[scope/performance/1024+4096/0] 641/4096 tokens
+[scope/performance/1024+4096/0] 769/4096 tokens
+[scope/performance/1024+4096/0] 897/4096 tokens
+[scope/performance/1024+4096/0] 1025/4096 tokens
+[scope/performance/1024+4096/0] 1153/4096 tokens
+[scope/performance/1024+4096/0] 1281/4096 tokens
+[scope/performance/1024+4096/0] 1409/4096 tokens
+[scope/performance/1024+4096/0] 1537/4096 tokens
+[scope/performance/1024+4096/0] 1665/4096 tokens
+[scope/performance/1024+4096/0] 1793/4096 tokens
+[scope/performance/1024+4096/0] 1921/4096 tokens
+[scope/performance/1024+4096/0] 2048/4096 tokens
+[scope/performance/1024+4096/0] 2049/4096 tokens
+[scope/performance/1024+4096/0] 2177/4096 tokens
+[scope/performance/1024+4096/0] 2305/4096 tokens
+[scope/performance/1024+4096/0] 2433/4096 tokens
+[scope/performance/1024+4096/0] 2561/4096 tokens
+[scope/performance/1024+4096/0] 2689/4096 tokens
+[scope/performance/1024+4096/0] 2817/4096 tokens
+[scope/performance/1024+4096/0] 2945/4096 tokens
+[scope/performance/1024+4096/0] 3073/4096 tokens
+[scope/performance/1024+4096/0] 3201/4096 tokens
+[scope/performance/1024+4096/0] 3329/4096 tokens
+[scope/performance/1024+4096/0] 3457/4096 tokens
+[scope/performance/1024+4096/0] 3585/4096 tokens
+RESULT oom: performance/1024+4096/0 score=None decode=None token/s
+CASE 39/81 scope performance/1024+4096/0 repeat=2
+[scope/performance/1024+4096/0] 129/4096 tokens
+[scope/performance/1024+4096/0] 257/4096 tokens
+[scope/performance/1024+4096/0] 385/4096 tokens
+[scope/performance/1024+4096/0] 512/4096 tokens
+[scope/performance/1024+4096/0] 513/4096 tokens
+[scope/performance/1024+4096/0] 641/4096 tokens
+[scope/performance/1024+4096/0] 769/4096 tokens
+[scope/performance/1024+4096/0] 897/4096 tokens
+[scope/performance/1024+4096/0] 1025/4096 tokens
+[scope/performance/1024+4096/0] 1153/4096 tokens
+[scope/performance/1024+4096/0] 1281/4096 tokens
+[scope/performance/1024+4096/0] 1409/4096 tokens
+[scope/performance/1024+4096/0] 1537/4096 tokens
+[scope/performance/1024+4096/0] 1665/4096 tokens
+[scope/performance/1024+4096/0] 1793/4096 tokens
+[scope/performance/1024+4096/0] 1921/4096 tokens
+[scope/performance/1024+4096/0] 2048/4096 tokens
+[scope/performance/1024+4096/0] 2049/4096 tokens
+[scope/performance/1024+4096/0] 2177/4096 tokens
+[scope/performance/1024+4096/0] 2305/4096 tokens
+[scope/performance/1024+4096/0] 2433/4096 tokens
+[scope/performance/1024+4096/0] 2561/4096 tokens
+[scope/performance/1024+4096/0] 2689/4096 tokens
+[scope/performance/1024+4096/0] 2817/4096 tokens
+[scope/performance/1024+4096/0] 2945/4096 tokens
+[scope/performance/1024+4096/0] 3073/4096 tokens
+[scope/performance/1024+4096/0] 3201/4096 tokens
+[scope/performance/1024+4096/0] 3329/4096 tokens
+[scope/performance/1024+4096/0] 3457/4096 tokens
+[scope/performance/1024+4096/0] 3585/4096 tokens
+RESULT oom: performance/1024+4096/0 score=None decode=None token/s
+CASE 40/81 scope performance/1024+4096/1 repeat=0
+[scope/performance/1024+4096/1] 129/4096 tokens
+[scope/performance/1024+4096/1] 257/4096 tokens
+[scope/performance/1024+4096/1] 385/4096 tokens
+[scope/performance/1024+4096/1] 512/4096 tokens
+[scope/performance/1024+4096/1] 513/4096 tokens
+[scope/performance/1024+4096/1] 641/4096 tokens
+[scope/performance/1024+4096/1] 769/4096 tokens
+[scope/performance/1024+4096/1] 897/4096 tokens
+[scope/performance/1024+4096/1] 1025/4096 tokens
+[scope/performance/1024+4096/1] 1153/4096 tokens
+[scope/performance/1024+4096/1] 1281/4096 tokens
+[scope/performance/1024+4096/1] 1409/4096 tokens
+[scope/performance/1024+4096/1] 1537/4096 tokens
+[scope/performance/1024+4096/1] 1665/4096 tokens
+[scope/performance/1024+4096/1] 1793/4096 tokens
+[scope/performance/1024+4096/1] 1921/4096 tokens
+[scope/performance/1024+4096/1] 2048/4096 tokens
+[scope/performance/1024+4096/1] 2049/4096 tokens
+[scope/performance/1024+4096/1] 2177/4096 tokens
+[scope/performance/1024+4096/1] 2305/4096 tokens
+[scope/performance/1024+4096/1] 2433/4096 tokens
+[scope/performance/1024+4096/1] 2561/4096 tokens
+[scope/performance/1024+4096/1] 2689/4096 tokens
+[scope/performance/1024+4096/1] 2817/4096 tokens
+[scope/performance/1024+4096/1] 2945/4096 tokens
+[scope/performance/1024+4096/1] 3073/4096 tokens
+[scope/performance/1024+4096/1] 3201/4096 tokens
+[scope/performance/1024+4096/1] 3329/4096 tokens
+[scope/performance/1024+4096/1] 3457/4096 tokens
+[scope/performance/1024+4096/1] 3585/4096 tokens
+RESULT oom: performance/1024+4096/1 score=None decode=None token/s
+CASE 41/81 scope performance/1024+4096/1 repeat=1
+[scope/performance/1024+4096/1] 129/4096 tokens
+[scope/performance/1024+4096/1] 257/4096 tokens
+[scope/performance/1024+4096/1] 385/4096 tokens
+[scope/performance/1024+4096/1] 512/4096 tokens
+[scope/performance/1024+4096/1] 513/4096 tokens
+[scope/performance/1024+4096/1] 641/4096 tokens
+[scope/performance/1024+4096/1] 769/4096 tokens
+[scope/performance/1024+4096/1] 897/4096 tokens
+[scope/performance/1024+4096/1] 1025/4096 tokens
+[scope/performance/1024+4096/1] 1153/4096 tokens
+[scope/performance/1024+4096/1] 1281/4096 tokens
+[scope/performance/1024+4096/1] 1409/4096 tokens
+[scope/performance/1024+4096/1] 1537/4096 tokens
+[scope/performance/1024+4096/1] 1665/4096 tokens
+[scope/performance/1024+4096/1] 1793/4096 tokens
+[scope/performance/1024+4096/1] 1921/4096 tokens
+[scope/performance/1024+4096/1] 2048/4096 tokens
+[scope/performance/1024+4096/1] 2049/4096 tokens
+[scope/performance/1024+4096/1] 2177/4096 tokens
+[scope/performance/1024+4096/1] 2305/4096 tokens
+[scope/performance/1024+4096/1] 2433/4096 tokens
+[scope/performance/1024+4096/1] 2561/4096 tokens
+[scope/performance/1024+4096/1] 2689/4096 tokens
+[scope/performance/1024+4096/1] 2817/4096 tokens
+[scope/performance/1024+4096/1] 2945/4096 tokens
+[scope/performance/1024+4096/1] 3073/4096 tokens
+[scope/performance/1024+4096/1] 3201/4096 tokens
+[scope/performance/1024+4096/1] 3329/4096 tokens
+[scope/performance/1024+4096/1] 3457/4096 tokens
+[scope/performance/1024+4096/1] 3585/4096 tokens
+RESULT oom: performance/1024+4096/1 score=None decode=None token/s
+CASE 42/81 scope performance/1024+4096/1 repeat=2
+[scope/performance/1024+4096/1] 129/4096 tokens
+[scope/performance/1024+4096/1] 257/4096 tokens
+[scope/performance/1024+4096/1] 385/4096 tokens
+[scope/performance/1024+4096/1] 512/4096 tokens
+[scope/performance/1024+4096/1] 513/4096 tokens
+[scope/performance/1024+4096/1] 641/4096 tokens
+[scope/performance/1024+4096/1] 769/4096 tokens
+[scope/performance/1024+4096/1] 897/4096 tokens
+[scope/performance/1024+4096/1] 1025/4096 tokens
+[scope/performance/1024+4096/1] 1153/4096 tokens
+[scope/performance/1024+4096/1] 1281/4096 tokens
+[scope/performance/1024+4096/1] 1409/4096 tokens
+[scope/performance/1024+4096/1] 1537/4096 tokens
+[scope/performance/1024+4096/1] 1665/4096 tokens
+[scope/performance/1024+4096/1] 1793/4096 tokens
+[scope/performance/1024+4096/1] 1921/4096 tokens
+[scope/performance/1024+4096/1] 2048/4096 tokens
+[scope/performance/1024+4096/1] 2049/4096 tokens
+[scope/performance/1024+4096/1] 2177/4096 tokens
+[scope/performance/1024+4096/1] 2305/4096 tokens
+[scope/performance/1024+4096/1] 2433/4096 tokens
+[scope/performance/1024+4096/1] 2561/4096 tokens
+[scope/performance/1024+4096/1] 2689/4096 tokens
+[scope/performance/1024+4096/1] 2817/4096 tokens
+[scope/performance/1024+4096/1] 2945/4096 tokens
+[scope/performance/1024+4096/1] 3073/4096 tokens
+[scope/performance/1024+4096/1] 3201/4096 tokens
+[scope/performance/1024+4096/1] 3329/4096 tokens
+[scope/performance/1024+4096/1] 3457/4096 tokens
+[scope/performance/1024+4096/1] 3585/4096 tokens
+RESULT oom: performance/1024+4096/1 score=None decode=None token/s
+CASE 43/81 scope performance/1024+4096/2 repeat=0
+[scope/performance/1024+4096/2] 129/4096 tokens
+[scope/performance/1024+4096/2] 257/4096 tokens
+[scope/performance/1024+4096/2] 385/4096 tokens
+[scope/performance/1024+4096/2] 512/4096 tokens
+[scope/performance/1024+4096/2] 513/4096 tokens
+[scope/performance/1024+4096/2] 641/4096 tokens
+[scope/performance/1024+4096/2] 769/4096 tokens
+[scope/performance/1024+4096/2] 897/4096 tokens
+[scope/performance/1024+4096/2] 1025/4096 tokens
+[scope/performance/1024+4096/2] 1153/4096 tokens
+[scope/performance/1024+4096/2] 1281/4096 tokens
+[scope/performance/1024+4096/2] 1409/4096 tokens
+[scope/performance/1024+4096/2] 1537/4096 tokens
+[scope/performance/1024+4096/2] 1665/4096 tokens
+[scope/performance/1024+4096/2] 1793/4096 tokens
+[scope/performance/1024+4096/2] 1921/4096 tokens
+[scope/performance/1024+4096/2] 2048/4096 tokens
+[scope/performance/1024+4096/2] 2049/4096 tokens
+[scope/performance/1024+4096/2] 2177/4096 tokens
+[scope/performance/1024+4096/2] 2305/4096 tokens
+[scope/performance/1024+4096/2] 2433/4096 tokens
+[scope/performance/1024+4096/2] 2561/4096 tokens
+[scope/performance/1024+4096/2] 2689/4096 tokens
+[scope/performance/1024+4096/2] 2817/4096 tokens
+[scope/performance/1024+4096/2] 2945/4096 tokens
+[scope/performance/1024+4096/2] 3073/4096 tokens
+[scope/performance/1024+4096/2] 3201/4096 tokens
+[scope/performance/1024+4096/2] 3329/4096 tokens
+[scope/performance/1024+4096/2] 3457/4096 tokens
+[scope/performance/1024+4096/2] 3585/4096 tokens
+RESULT oom: performance/1024+4096/2 score=None decode=None token/s
+CASE 44/81 scope performance/1024+4096/2 repeat=1
+[scope/performance/1024+4096/2] 129/4096 tokens
+[scope/performance/1024+4096/2] 257/4096 tokens
+[scope/performance/1024+4096/2] 385/4096 tokens
+[scope/performance/1024+4096/2] 512/4096 tokens
+[scope/performance/1024+4096/2] 513/4096 tokens
+[scope/performance/1024+4096/2] 641/4096 tokens
+[scope/performance/1024+4096/2] 769/4096 tokens
+[scope/performance/1024+4096/2] 897/4096 tokens
+[scope/performance/1024+4096/2] 1025/4096 tokens
+[scope/performance/1024+4096/2] 1153/4096 tokens
+[scope/performance/1024+4096/2] 1281/4096 tokens
+[scope/performance/1024+4096/2] 1409/4096 tokens
+[scope/performance/1024+4096/2] 1537/4096 tokens
+[scope/performance/1024+4096/2] 1665/4096 tokens
+[scope/performance/1024+4096/2] 1793/4096 tokens
+[scope/performance/1024+4096/2] 1921/4096 tokens
+[scope/performance/1024+4096/2] 2048/4096 tokens
+[scope/performance/1024+4096/2] 2049/4096 tokens
+[scope/performance/1024+4096/2] 2177/4096 tokens
+[scope/performance/1024+4096/2] 2305/4096 tokens
+[scope/performance/1024+4096/2] 2433/4096 tokens
+[scope/performance/1024+4096/2] 2561/4096 tokens
+[scope/performance/1024+4096/2] 2689/4096 tokens
+[scope/performance/1024+4096/2] 2817/4096 tokens
+[scope/performance/1024+4096/2] 2945/4096 tokens
+[scope/performance/1024+4096/2] 3073/4096 tokens
+[scope/performance/1024+4096/2] 3201/4096 tokens
+[scope/performance/1024+4096/2] 3329/4096 tokens
+[scope/performance/1024+4096/2] 3457/4096 tokens
+[scope/performance/1024+4096/2] 3585/4096 tokens
+RESULT oom: performance/1024+4096/2 score=None decode=None token/s
+CASE 45/81 scope performance/1024+4096/2 repeat=2
+[scope/performance/1024+4096/2] 129/4096 tokens
+[scope/performance/1024+4096/2] 257/4096 tokens
+[scope/performance/1024+4096/2] 385/4096 tokens
+[scope/performance/1024+4096/2] 512/4096 tokens
+[scope/performance/1024+4096/2] 513/4096 tokens
+[scope/performance/1024+4096/2] 641/4096 tokens
+[scope/performance/1024+4096/2] 769/4096 tokens
+[scope/performance/1024+4096/2] 897/4096 tokens
+[scope/performance/1024+4096/2] 1025/4096 tokens
+[scope/performance/1024+4096/2] 1153/4096 tokens
+[scope/performance/1024+4096/2] 1281/4096 tokens
+[scope/performance/1024+4096/2] 1409/4096 tokens
+[scope/performance/1024+4096/2] 1537/4096 tokens
+[scope/performance/1024+4096/2] 1665/4096 tokens
+[scope/performance/1024+4096/2] 1793/4096 tokens
+[scope/performance/1024+4096/2] 1921/4096 tokens
+[scope/performance/1024+4096/2] 2048/4096 tokens
+[scope/performance/1024+4096/2] 2049/4096 tokens
+[scope/performance/1024+4096/2] 2177/4096 tokens
+[scope/performance/1024+4096/2] 2305/4096 tokens
+[scope/performance/1024+4096/2] 2433/4096 tokens
+[scope/performance/1024+4096/2] 2561/4096 tokens
+[scope/performance/1024+4096/2] 2689/4096 tokens
+[scope/performance/1024+4096/2] 2817/4096 tokens
+[scope/performance/1024+4096/2] 2945/4096 tokens
+[scope/performance/1024+4096/2] 3073/4096 tokens
+[scope/performance/1024+4096/2] 3201/4096 tokens
+[scope/performance/1024+4096/2] 3329/4096 tokens
+[scope/performance/1024+4096/2] 3457/4096 tokens
+[scope/performance/1024+4096/2] 3585/4096 tokens
+RESULT oom: performance/1024+4096/2 score=None decode=None token/s
+CASE 46/81 scope performance/1024+8192/0 repeat=0
+[scope/performance/1024+8192/0] 129/8192 tokens
+[scope/performance/1024+8192/0] 257/8192 tokens
+[scope/performance/1024+8192/0] 385/8192 tokens
+[scope/performance/1024+8192/0] 512/8192 tokens
+[scope/performance/1024+8192/0] 513/8192 tokens
+[scope/performance/1024+8192/0] 641/8192 tokens
+[scope/performance/1024+8192/0] 769/8192 tokens
+[scope/performance/1024+8192/0] 897/8192 tokens
+[scope/performance/1024+8192/0] 1025/8192 tokens
+[scope/performance/1024+8192/0] 1153/8192 tokens
+[scope/performance/1024+8192/0] 1281/8192 tokens
+[scope/performance/1024+8192/0] 1409/8192 tokens
+[scope/performance/1024+8192/0] 1537/8192 tokens
+[scope/performance/1024+8192/0] 1665/8192 tokens
+[scope/performance/1024+8192/0] 1793/8192 tokens
+[scope/performance/1024+8192/0] 1921/8192 tokens
+[scope/performance/1024+8192/0] 2048/8192 tokens
+[scope/performance/1024+8192/0] 2049/8192 tokens
+[scope/performance/1024+8192/0] 2177/8192 tokens
+[scope/performance/1024+8192/0] 2305/8192 tokens
+[scope/performance/1024+8192/0] 2433/8192 tokens
+[scope/performance/1024+8192/0] 2561/8192 tokens
+[scope/performance/1024+8192/0] 2689/8192 tokens
+[scope/performance/1024+8192/0] 2817/8192 tokens
+[scope/performance/1024+8192/0] 2945/8192 tokens
+[scope/performance/1024+8192/0] 3073/8192 tokens
+[scope/performance/1024+8192/0] 3201/8192 tokens
+[scope/performance/1024+8192/0] 3329/8192 tokens
+[scope/performance/1024+8192/0] 3457/8192 tokens
+[scope/performance/1024+8192/0] 3585/8192 tokens
+[scope/performance/1024+8192/0] 3713/8192 tokens
+[scope/performance/1024+8192/0] 3841/8192 tokens
+[scope/performance/1024+8192/0] 3969/8192 tokens
+[scope/performance/1024+8192/0] 4096/8192 tokens
+[scope/performance/1024+8192/0] 4097/8192 tokens
+[scope/performance/1024+8192/0] 4225/8192 tokens
+[scope/performance/1024+8192/0] 4353/8192 tokens
+[scope/performance/1024+8192/0] 4481/8192 tokens
+[scope/performance/1024+8192/0] 4609/8192 tokens
+[scope/performance/1024+8192/0] 4737/8192 tokens
+[scope/performance/1024+8192/0] 4865/8192 tokens
+[scope/performance/1024+8192/0] 4993/8192 tokens
+[scope/performance/1024+8192/0] 5121/8192 tokens
+[scope/performance/1024+8192/0] 5249/8192 tokens
+[scope/performance/1024+8192/0] 5377/8192 tokens
+[scope/performance/1024+8192/0] 5505/8192 tokens
+[scope/performance/1024+8192/0] 5633/8192 tokens
+[scope/performance/1024+8192/0] 5761/8192 tokens
+[scope/performance/1024+8192/0] 5889/8192 tokens
+[scope/performance/1024+8192/0] 6017/8192 tokens
+[scope/performance/1024+8192/0] 6145/8192 tokens
+[scope/performance/1024+8192/0] 6273/8192 tokens
+[scope/performance/1024+8192/0] 6401/8192 tokens
+[scope/performance/1024+8192/0] 6529/8192 tokens
+[scope/performance/1024+8192/0] 6657/8192 tokens
+[scope/performance/1024+8192/0] 6785/8192 tokens
+[scope/performance/1024+8192/0] 6913/8192 tokens
+[scope/performance/1024+8192/0] 7041/8192 tokens
+RESULT oom: performance/1024+8192/0 score=None decode=None token/s
+CASE 47/81 scope performance/1024+8192/0 repeat=1
+[scope/performance/1024+8192/0] 129/8192 tokens
+[scope/performance/1024+8192/0] 257/8192 tokens
+[scope/performance/1024+8192/0] 385/8192 tokens
+[scope/performance/1024+8192/0] 512/8192 tokens
+[scope/performance/1024+8192/0] 513/8192 tokens
+[scope/performance/1024+8192/0] 641/8192 tokens
+[scope/performance/1024+8192/0] 769/8192 tokens
+[scope/performance/1024+8192/0] 897/8192 tokens
+[scope/performance/1024+8192/0] 1025/8192 tokens
+[scope/performance/1024+8192/0] 1153/8192 tokens
+[scope/performance/1024+8192/0] 1281/8192 tokens
+[scope/performance/1024+8192/0] 1409/8192 tokens
+[scope/performance/1024+8192/0] 1537/8192 tokens
+[scope/performance/1024+8192/0] 1665/8192 tokens
+[scope/performance/1024+8192/0] 1793/8192 tokens
+[scope/performance/1024+8192/0] 1921/8192 tokens
+[scope/performance/1024+8192/0] 2048/8192 tokens
+[scope/performance/1024+8192/0] 2049/8192 tokens
+[scope/performance/1024+8192/0] 2177/8192 tokens
+[scope/performance/1024+8192/0] 2305/8192 tokens
+[scope/performance/1024+8192/0] 2433/8192 tokens
+[scope/performance/1024+8192/0] 2561/8192 tokens
+[scope/performance/1024+8192/0] 2689/8192 tokens
+[scope/performance/1024+8192/0] 2817/8192 tokens
+[scope/performance/1024+8192/0] 2945/8192 tokens
+[scope/performance/1024+8192/0] 3073/8192 tokens
+[scope/performance/1024+8192/0] 3201/8192 tokens
+[scope/performance/1024+8192/0] 3329/8192 tokens
+[scope/performance/1024+8192/0] 3457/8192 tokens
+[scope/performance/1024+8192/0] 3585/8192 tokens
+[scope/performance/1024+8192/0] 3713/8192 tokens
+[scope/performance/1024+8192/0] 3841/8192 tokens
+[scope/performance/1024+8192/0] 3969/8192 tokens
+[scope/performance/1024+8192/0] 4096/8192 tokens
+[scope/performance/1024+8192/0] 4097/8192 tokens
+[scope/performance/1024+8192/0] 4225/8192 tokens
+[scope/performance/1024+8192/0] 4353/8192 tokens
+[scope/performance/1024+8192/0] 4481/8192 tokens
+[scope/performance/1024+8192/0] 4609/8192 tokens
+[scope/performance/1024+8192/0] 4737/8192 tokens
+[scope/performance/1024+8192/0] 4865/8192 tokens
+[scope/performance/1024+8192/0] 4993/8192 tokens
+[scope/performance/1024+8192/0] 5121/8192 tokens
+[scope/performance/1024+8192/0] 5249/8192 tokens
+[scope/performance/1024+8192/0] 5377/8192 tokens
+[scope/performance/1024+8192/0] 5505/8192 tokens
+[scope/performance/1024+8192/0] 5633/8192 tokens
+[scope/performance/1024+8192/0] 5761/8192 tokens
+[scope/performance/1024+8192/0] 5889/8192 tokens
+[scope/performance/1024+8192/0] 6017/8192 tokens
+[scope/performance/1024+8192/0] 6145/8192 tokens
+[scope/performance/1024+8192/0] 6273/8192 tokens
+[scope/performance/1024+8192/0] 6401/8192 tokens
+[scope/performance/1024+8192/0] 6529/8192 tokens
+[scope/performance/1024+8192/0] 6657/8192 tokens
+[scope/performance/1024+8192/0] 6785/8192 tokens
+[scope/performance/1024+8192/0] 6913/8192 tokens
+[scope/performance/1024+8192/0] 7041/8192 tokens
+RESULT oom: performance/1024+8192/0 score=None decode=None token/s
+CASE 48/81 scope performance/1024+8192/0 repeat=2
+[scope/performance/1024+8192/0] 129/8192 tokens
+[scope/performance/1024+8192/0] 257/8192 tokens
+[scope/performance/1024+8192/0] 385/8192 tokens
+[scope/performance/1024+8192/0] 512/8192 tokens
+[scope/performance/1024+8192/0] 513/8192 tokens
+[scope/performance/1024+8192/0] 641/8192 tokens
+[scope/performance/1024+8192/0] 769/8192 tokens
+[scope/performance/1024+8192/0] 897/8192 tokens
+[scope/performance/1024+8192/0] 1025/8192 tokens
+[scope/performance/1024+8192/0] 1153/8192 tokens
+[scope/performance/1024+8192/0] 1281/8192 tokens
+[scope/performance/1024+8192/0] 1409/8192 tokens
+[scope/performance/1024+8192/0] 1537/8192 tokens
+[scope/performance/1024+8192/0] 1665/8192 tokens
+[scope/performance/1024+8192/0] 1793/8192 tokens
+[scope/performance/1024+8192/0] 1921/8192 tokens
+[scope/performance/1024+8192/0] 2048/8192 tokens
+[scope/performance/1024+8192/0] 2049/8192 tokens
+[scope/performance/1024+8192/0] 2177/8192 tokens
+[scope/performance/1024+8192/0] 2305/8192 tokens
+[scope/performance/1024+8192/0] 2433/8192 tokens
+[scope/performance/1024+8192/0] 2561/8192 tokens
+[scope/performance/1024+8192/0] 2689/8192 tokens
+[scope/performance/1024+8192/0] 2817/8192 tokens
+[scope/performance/1024+8192/0] 2945/8192 tokens
+[scope/performance/1024+8192/0] 3073/8192 tokens
+[scope/performance/1024+8192/0] 3201/8192 tokens
+[scope/performance/1024+8192/0] 3329/8192 tokens
+[scope/performance/1024+8192/0] 3457/8192 tokens
+[scope/performance/1024+8192/0] 3585/8192 tokens
+[scope/performance/1024+8192/0] 3713/8192 tokens
+[scope/performance/1024+8192/0] 3841/8192 tokens
+[scope/performance/1024+8192/0] 3969/8192 tokens
+[scope/performance/1024+8192/0] 4096/8192 tokens
+[scope/performance/1024+8192/0] 4097/8192 tokens
+[scope/performance/1024+8192/0] 4225/8192 tokens
+[scope/performance/1024+8192/0] 4353/8192 tokens
+[scope/performance/1024+8192/0] 4481/8192 tokens
+[scope/performance/1024+8192/0] 4609/8192 tokens
+[scope/performance/1024+8192/0] 4737/8192 tokens
+[scope/performance/1024+8192/0] 4865/8192 tokens
+[scope/performance/1024+8192/0] 4993/8192 tokens
+[scope/performance/1024+8192/0] 5121/8192 tokens
+[scope/performance/1024+8192/0] 5249/8192 tokens
+[scope/performance/1024+8192/0] 5377/8192 tokens
+[scope/performance/1024+8192/0] 5505/8192 tokens
+[scope/performance/1024+8192/0] 5633/8192 tokens
+[scope/performance/1024+8192/0] 5761/8192 tokens
+[scope/performance/1024+8192/0] 5889/8192 tokens
+[scope/performance/1024+8192/0] 6017/8192 tokens
+[scope/performance/1024+8192/0] 6145/8192 tokens
+[scope/performance/1024+8192/0] 6273/8192 tokens
+[scope/performance/1024+8192/0] 6401/8192 tokens
+[scope/performance/1024+8192/0] 6529/8192 tokens
+[scope/performance/1024+8192/0] 6657/8192 tokens
+[scope/performance/1024+8192/0] 6785/8192 tokens
+[scope/performance/1024+8192/0] 6913/8192 tokens
+[scope/performance/1024+8192/0] 7041/8192 tokens
+RESULT oom: performance/1024+8192/0 score=None decode=None token/s
+CASE 49/81 scope performance/1024+8192/1 repeat=0
+[scope/performance/1024+8192/1] 129/8192 tokens
+[scope/performance/1024+8192/1] 257/8192 tokens
+[scope/performance/1024+8192/1] 385/8192 tokens
+[scope/performance/1024+8192/1] 512/8192 tokens
+[scope/performance/1024+8192/1] 513/8192 tokens
+[scope/performance/1024+8192/1] 641/8192 tokens
+[scope/performance/1024+8192/1] 769/8192 tokens
+[scope/performance/1024+8192/1] 897/8192 tokens
+[scope/performance/1024+8192/1] 1025/8192 tokens
+[scope/performance/1024+8192/1] 1153/8192 tokens
+[scope/performance/1024+8192/1] 1281/8192 tokens
+[scope/performance/1024+8192/1] 1409/8192 tokens
+[scope/performance/1024+8192/1] 1537/8192 tokens
+[scope/performance/1024+8192/1] 1665/8192 tokens
+[scope/performance/1024+8192/1] 1793/8192 tokens
+[scope/performance/1024+8192/1] 1921/8192 tokens
+[scope/performance/1024+8192/1] 2048/8192 tokens
+[scope/performance/1024+8192/1] 2049/8192 tokens
+[scope/performance/1024+8192/1] 2177/8192 tokens
+[scope/performance/1024+8192/1] 2305/8192 tokens
+[scope/performance/1024+8192/1] 2433/8192 tokens
+[scope/performance/1024+8192/1] 2561/8192 tokens
+[scope/performance/1024+8192/1] 2689/8192 tokens
+[scope/performance/1024+8192/1] 2817/8192 tokens
+[scope/performance/1024+8192/1] 2945/8192 tokens
+[scope/performance/1024+8192/1] 3073/8192 tokens
+[scope/performance/1024+8192/1] 3201/8192 tokens
+[scope/performance/1024+8192/1] 3329/8192 tokens
+[scope/performance/1024+8192/1] 3457/8192 tokens
+[scope/performance/1024+8192/1] 3585/8192 tokens
+[scope/performance/1024+8192/1] 3713/8192 tokens
+[scope/performance/1024+8192/1] 3841/8192 tokens
+[scope/performance/1024+8192/1] 3969/8192 tokens
+[scope/performance/1024+8192/1] 4096/8192 tokens
+[scope/performance/1024+8192/1] 4097/8192 tokens
+[scope/performance/1024+8192/1] 4225/8192 tokens
+[scope/performance/1024+8192/1] 4353/8192 tokens
+[scope/performance/1024+8192/1] 4481/8192 tokens
+[scope/performance/1024+8192/1] 4609/8192 tokens
+[scope/performance/1024+8192/1] 4737/8192 tokens
+[scope/performance/1024+8192/1] 4865/8192 tokens
+[scope/performance/1024+8192/1] 4993/8192 tokens
+[scope/performance/1024+8192/1] 5121/8192 tokens
+[scope/performance/1024+8192/1] 5249/8192 tokens
+[scope/performance/1024+8192/1] 5377/8192 tokens
+[scope/performance/1024+8192/1] 5505/8192 tokens
+[scope/performance/1024+8192/1] 5633/8192 tokens
+[scope/performance/1024+8192/1] 5761/8192 tokens
+[scope/performance/1024+8192/1] 5889/8192 tokens
+[scope/performance/1024+8192/1] 6017/8192 tokens
+[scope/performance/1024+8192/1] 6145/8192 tokens
+[scope/performance/1024+8192/1] 6273/8192 tokens
+[scope/performance/1024+8192/1] 6401/8192 tokens
+[scope/performance/1024+8192/1] 6529/8192 tokens
+[scope/performance/1024+8192/1] 6657/8192 tokens
+[scope/performance/1024+8192/1] 6785/8192 tokens
+[scope/performance/1024+8192/1] 6913/8192 tokens
+[scope/performance/1024+8192/1] 7041/8192 tokens
+RESULT oom: performance/1024+8192/1 score=None decode=None token/s
+CASE 50/81 scope performance/1024+8192/1 repeat=1
+[scope/performance/1024+8192/1] 129/8192 tokens
+[scope/performance/1024+8192/1] 257/8192 tokens
+[scope/performance/1024+8192/1] 385/8192 tokens
+[scope/performance/1024+8192/1] 512/8192 tokens
+[scope/performance/1024+8192/1] 513/8192 tokens
+[scope/performance/1024+8192/1] 641/8192 tokens
+[scope/performance/1024+8192/1] 769/8192 tokens
+[scope/performance/1024+8192/1] 897/8192 tokens
+[scope/performance/1024+8192/1] 1025/8192 tokens
+[scope/performance/1024+8192/1] 1153/8192 tokens
+[scope/performance/1024+8192/1] 1281/8192 tokens
+[scope/performance/1024+8192/1] 1409/8192 tokens
+[scope/performance/1024+8192/1] 1537/8192 tokens
+[scope/performance/1024+8192/1] 1665/8192 tokens
+[scope/performance/1024+8192/1] 1793/8192 tokens
+[scope/performance/1024+8192/1] 1921/8192 tokens
+[scope/performance/1024+8192/1] 2048/8192 tokens
+[scope/performance/1024+8192/1] 2049/8192 tokens
+[scope/performance/1024+8192/1] 2177/8192 tokens
+[scope/performance/1024+8192/1] 2305/8192 tokens
+[scope/performance/1024+8192/1] 2433/8192 tokens
+[scope/performance/1024+8192/1] 2561/8192 tokens
+[scope/performance/1024+8192/1] 2689/8192 tokens
+[scope/performance/1024+8192/1] 2817/8192 tokens
+[scope/performance/1024+8192/1] 2945/8192 tokens
+[scope/performance/1024+8192/1] 3073/8192 tokens
+[scope/performance/1024+8192/1] 3201/8192 tokens
+[scope/performance/1024+8192/1] 3329/8192 tokens
+[scope/performance/1024+8192/1] 3457/8192 tokens
+[scope/performance/1024+8192/1] 3585/8192 tokens
+[scope/performance/1024+8192/1] 3713/8192 tokens
+[scope/performance/1024+8192/1] 3841/8192 tokens
+[scope/performance/1024+8192/1] 3969/8192 tokens
+[scope/performance/1024+8192/1] 4096/8192 tokens
+[scope/performance/1024+8192/1] 4097/8192 tokens
+[scope/performance/1024+8192/1] 4225/8192 tokens
+[scope/performance/1024+8192/1] 4353/8192 tokens
+[scope/performance/1024+8192/1] 4481/8192 tokens
+[scope/performance/1024+8192/1] 4609/8192 tokens
+[scope/performance/1024+8192/1] 4737/8192 tokens
+[scope/performance/1024+8192/1] 4865/8192 tokens
+[scope/performance/1024+8192/1] 4993/8192 tokens
+[scope/performance/1024+8192/1] 5121/8192 tokens
+[scope/performance/1024+8192/1] 5249/8192 tokens
+[scope/performance/1024+8192/1] 5377/8192 tokens
+[scope/performance/1024+8192/1] 5505/8192 tokens
+[scope/performance/1024+8192/1] 5633/8192 tokens
+[scope/performance/1024+8192/1] 5761/8192 tokens
+[scope/performance/1024+8192/1] 5889/8192 tokens
+[scope/performance/1024+8192/1] 6017/8192 tokens
+[scope/performance/1024+8192/1] 6145/8192 tokens
+[scope/performance/1024+8192/1] 6273/8192 tokens
+[scope/performance/1024+8192/1] 6401/8192 tokens
+[scope/performance/1024+8192/1] 6529/8192 tokens
+[scope/performance/1024+8192/1] 6657/8192 tokens
+[scope/performance/1024+8192/1] 6785/8192 tokens
+[scope/performance/1024+8192/1] 6913/8192 tokens
+[scope/performance/1024+8192/1] 7041/8192 tokens
+RESULT oom: performance/1024+8192/1 score=None decode=None token/s
+CASE 51/81 scope performance/1024+8192/1 repeat=2
+[scope/performance/1024+8192/1] 129/8192 tokens
+[scope/performance/1024+8192/1] 257/8192 tokens
+[scope/performance/1024+8192/1] 385/8192 tokens
+[scope/performance/1024+8192/1] 512/8192 tokens
+[scope/performance/1024+8192/1] 513/8192 tokens
+[scope/performance/1024+8192/1] 641/8192 tokens
+[scope/performance/1024+8192/1] 769/8192 tokens
+[scope/performance/1024+8192/1] 897/8192 tokens
+[scope/performance/1024+8192/1] 1025/8192 tokens
+[scope/performance/1024+8192/1] 1153/8192 tokens
+[scope/performance/1024+8192/1] 1281/8192 tokens
+[scope/performance/1024+8192/1] 1409/8192 tokens
+[scope/performance/1024+8192/1] 1537/8192 tokens
+[scope/performance/1024+8192/1] 1665/8192 tokens
+[scope/performance/1024+8192/1] 1793/8192 tokens
+[scope/performance/1024+8192/1] 1921/8192 tokens
+[scope/performance/1024+8192/1] 2048/8192 tokens
+[scope/performance/1024+8192/1] 2049/8192 tokens
+[scope/performance/1024+8192/1] 2177/8192 tokens
+[scope/performance/1024+8192/1] 2305/8192 tokens
+[scope/performance/1024+8192/1] 2433/8192 tokens
+[scope/performance/1024+8192/1] 2561/8192 tokens
+[scope/performance/1024+8192/1] 2689/8192 tokens
+[scope/performance/1024+8192/1] 2817/8192 tokens
+[scope/performance/1024+8192/1] 2945/8192 tokens
+[scope/performance/1024+8192/1] 3073/8192 tokens
+[scope/performance/1024+8192/1] 3201/8192 tokens
+[scope/performance/1024+8192/1] 3329/8192 tokens
+[scope/performance/1024+8192/1] 3457/8192 tokens
+[scope/performance/1024+8192/1] 3585/8192 tokens
+[scope/performance/1024+8192/1] 3713/8192 tokens
+[scope/performance/1024+8192/1] 3841/8192 tokens
+[scope/performance/1024+8192/1] 3969/8192 tokens
+[scope/performance/1024+8192/1] 4096/8192 tokens
+[scope/performance/1024+8192/1] 4097/8192 tokens
+[scope/performance/1024+8192/1] 4225/8192 tokens
+[scope/performance/1024+8192/1] 4353/8192 tokens
+[scope/performance/1024+8192/1] 4481/8192 tokens
+[scope/performance/1024+8192/1] 4609/8192 tokens
+[scope/performance/1024+8192/1] 4737/8192 tokens
+[scope/performance/1024+8192/1] 4865/8192 tokens
+[scope/performance/1024+8192/1] 4993/8192 tokens
+[scope/performance/1024+8192/1] 5121/8192 tokens
+[scope/performance/1024+8192/1] 5249/8192 tokens
+[scope/performance/1024+8192/1] 5377/8192 tokens
+[scope/performance/1024+8192/1] 5505/8192 tokens
+[scope/performance/1024+8192/1] 5633/8192 tokens
+[scope/performance/1024+8192/1] 5761/8192 tokens
+[scope/performance/1024+8192/1] 5889/8192 tokens
+[scope/performance/1024+8192/1] 6017/8192 tokens
+[scope/performance/1024+8192/1] 6145/8192 tokens
+[scope/performance/1024+8192/1] 6273/8192 tokens
+[scope/performance/1024+8192/1] 6401/8192 tokens
+[scope/performance/1024+8192/1] 6529/8192 tokens
+[scope/performance/1024+8192/1] 6657/8192 tokens
+[scope/performance/1024+8192/1] 6785/8192 tokens
+[scope/performance/1024+8192/1] 6913/8192 tokens
+[scope/performance/1024+8192/1] 7041/8192 tokens
+RESULT oom: performance/1024+8192/1 score=None decode=None token/s
+CASE 52/81 scope performance/1024+8192/2 repeat=0
+[scope/performance/1024+8192/2] 129/8192 tokens
+[scope/performance/1024+8192/2] 257/8192 tokens
+[scope/performance/1024+8192/2] 385/8192 tokens
+[scope/performance/1024+8192/2] 512/8192 tokens
+[scope/performance/1024+8192/2] 513/8192 tokens
+[scope/performance/1024+8192/2] 641/8192 tokens
+[scope/performance/1024+8192/2] 769/8192 tokens
+[scope/performance/1024+8192/2] 897/8192 tokens
+[scope/performance/1024+8192/2] 1025/8192 tokens
+[scope/performance/1024+8192/2] 1153/8192 tokens
+[scope/performance/1024+8192/2] 1281/8192 tokens
+[scope/performance/1024+8192/2] 1409/8192 tokens
+[scope/performance/1024+8192/2] 1537/8192 tokens
+[scope/performance/1024+8192/2] 1665/8192 tokens
+[scope/performance/1024+8192/2] 1793/8192 tokens
+[scope/performance/1024+8192/2] 1921/8192 tokens
+[scope/performance/1024+8192/2] 2048/8192 tokens
+[scope/performance/1024+8192/2] 2049/8192 tokens
+[scope/performance/1024+8192/2] 2177/8192 tokens
+[scope/performance/1024+8192/2] 2305/8192 tokens
+[scope/performance/1024+8192/2] 2433/8192 tokens
+[scope/performance/1024+8192/2] 2561/8192 tokens
+[scope/performance/1024+8192/2] 2689/8192 tokens
+[scope/performance/1024+8192/2] 2817/8192 tokens
+[scope/performance/1024+8192/2] 2945/8192 tokens
+[scope/performance/1024+8192/2] 3073/8192 tokens
+[scope/performance/1024+8192/2] 3201/8192 tokens
+[scope/performance/1024+8192/2] 3329/8192 tokens
+[scope/performance/1024+8192/2] 3457/8192 tokens
+[scope/performance/1024+8192/2] 3585/8192 tokens
+[scope/performance/1024+8192/2] 3713/8192 tokens
+[scope/performance/1024+8192/2] 3841/8192 tokens
+[scope/performance/1024+8192/2] 3969/8192 tokens
+[scope/performance/1024+8192/2] 4096/8192 tokens
+[scope/performance/1024+8192/2] 4097/8192 tokens
+[scope/performance/1024+8192/2] 4225/8192 tokens
+[scope/performance/1024+8192/2] 4353/8192 tokens
+[scope/performance/1024+8192/2] 4481/8192 tokens
+[scope/performance/1024+8192/2] 4609/8192 tokens
+[scope/performance/1024+8192/2] 4737/8192 tokens
+[scope/performance/1024+8192/2] 4865/8192 tokens
+[scope/performance/1024+8192/2] 4993/8192 tokens
+[scope/performance/1024+8192/2] 5121/8192 tokens
+[scope/performance/1024+8192/2] 5249/8192 tokens
+[scope/performance/1024+8192/2] 5377/8192 tokens
+[scope/performance/1024+8192/2] 5505/8192 tokens
+[scope/performance/1024+8192/2] 5633/8192 tokens
+[scope/performance/1024+8192/2] 5761/8192 tokens
+[scope/performance/1024+8192/2] 5889/8192 tokens
+[scope/performance/1024+8192/2] 6017/8192 tokens
+[scope/performance/1024+8192/2] 6145/8192 tokens
+[scope/performance/1024+8192/2] 6273/8192 tokens
+[scope/performance/1024+8192/2] 6401/8192 tokens
+[scope/performance/1024+8192/2] 6529/8192 tokens
+[scope/performance/1024+8192/2] 6657/8192 tokens
+[scope/performance/1024+8192/2] 6785/8192 tokens
+[scope/performance/1024+8192/2] 6913/8192 tokens
+[scope/performance/1024+8192/2] 7041/8192 tokens
+RESULT oom: performance/1024+8192/2 score=None decode=None token/s
+CASE 53/81 scope performance/1024+8192/2 repeat=1
+[scope/performance/1024+8192/2] 129/8192 tokens
+[scope/performance/1024+8192/2] 257/8192 tokens
+[scope/performance/1024+8192/2] 385/8192 tokens
+[scope/performance/1024+8192/2] 512/8192 tokens
+[scope/performance/1024+8192/2] 513/8192 tokens
+[scope/performance/1024+8192/2] 641/8192 tokens
+[scope/performance/1024+8192/2] 769/8192 tokens
+[scope/performance/1024+8192/2] 897/8192 tokens
+[scope/performance/1024+8192/2] 1025/8192 tokens
+[scope/performance/1024+8192/2] 1153/8192 tokens
+[scope/performance/1024+8192/2] 1281/8192 tokens
+[scope/performance/1024+8192/2] 1409/8192 tokens
+[scope/performance/1024+8192/2] 1537/8192 tokens
+[scope/performance/1024+8192/2] 1665/8192 tokens
+[scope/performance/1024+8192/2] 1793/8192 tokens
+[scope/performance/1024+8192/2] 1921/8192 tokens
+[scope/performance/1024+8192/2] 2048/8192 tokens
+[scope/performance/1024+8192/2] 2049/8192 tokens
+[scope/performance/1024+8192/2] 2177/8192 tokens
+[scope/performance/1024+8192/2] 2305/8192 tokens
+[scope/performance/1024+8192/2] 2433/8192 tokens
+[scope/performance/1024+8192/2] 2561/8192 tokens
+[scope/performance/1024+8192/2] 2689/8192 tokens
+[scope/performance/1024+8192/2] 2817/8192 tokens
+[scope/performance/1024+8192/2] 2945/8192 tokens
+[scope/performance/1024+8192/2] 3073/8192 tokens
+[scope/performance/1024+8192/2] 3201/8192 tokens
+[scope/performance/1024+8192/2] 3329/8192 tokens
+[scope/performance/1024+8192/2] 3457/8192 tokens
+[scope/performance/1024+8192/2] 3585/8192 tokens
+[scope/performance/1024+8192/2] 3713/8192 tokens
+[scope/performance/1024+8192/2] 3841/8192 tokens
+[scope/performance/1024+8192/2] 3969/8192 tokens
+[scope/performance/1024+8192/2] 4096/8192 tokens
+[scope/performance/1024+8192/2] 4097/8192 tokens
+[scope/performance/1024+8192/2] 4225/8192 tokens
+[scope/performance/1024+8192/2] 4353/8192 tokens
+[scope/performance/1024+8192/2] 4481/8192 tokens
+[scope/performance/1024+8192/2] 4609/8192 tokens
+[scope/performance/1024+8192/2] 4737/8192 tokens
+[scope/performance/1024+8192/2] 4865/8192 tokens
+[scope/performance/1024+8192/2] 4993/8192 tokens
+[scope/performance/1024+8192/2] 5121/8192 tokens
+[scope/performance/1024+8192/2] 5249/8192 tokens
+[scope/performance/1024+8192/2] 5377/8192 tokens
+[scope/performance/1024+8192/2] 5505/8192 tokens
+[scope/performance/1024+8192/2] 5633/8192 tokens
+[scope/performance/1024+8192/2] 5761/8192 tokens
+[scope/performance/1024+8192/2] 5889/8192 tokens
+[scope/performance/1024+8192/2] 6017/8192 tokens
+[scope/performance/1024+8192/2] 6145/8192 tokens
+[scope/performance/1024+8192/2] 6273/8192 tokens
+[scope/performance/1024+8192/2] 6401/8192 tokens
+[scope/performance/1024+8192/2] 6529/8192 tokens
+[scope/performance/1024+8192/2] 6657/8192 tokens
+[scope/performance/1024+8192/2] 6785/8192 tokens
+[scope/performance/1024+8192/2] 6913/8192 tokens
+[scope/performance/1024+8192/2] 7041/8192 tokens
+RESULT oom: performance/1024+8192/2 score=None decode=None token/s
+CASE 54/81 scope performance/1024+8192/2 repeat=2
+[scope/performance/1024+8192/2] 129/8192 tokens
+[scope/performance/1024+8192/2] 257/8192 tokens
+[scope/performance/1024+8192/2] 385/8192 tokens
+[scope/performance/1024+8192/2] 512/8192 tokens
+[scope/performance/1024+8192/2] 513/8192 tokens
+[scope/performance/1024+8192/2] 641/8192 tokens
+[scope/performance/1024+8192/2] 769/8192 tokens
+[scope/performance/1024+8192/2] 897/8192 tokens
+[scope/performance/1024+8192/2] 1025/8192 tokens
+[scope/performance/1024+8192/2] 1153/8192 tokens
+[scope/performance/1024+8192/2] 1281/8192 tokens
+[scope/performance/1024+8192/2] 1409/8192 tokens
+[scope/performance/1024+8192/2] 1537/8192 tokens
+[scope/performance/1024+8192/2] 1665/8192 tokens
+[scope/performance/1024+8192/2] 1793/8192 tokens
+[scope/performance/1024+8192/2] 1921/8192 tokens
+[scope/performance/1024+8192/2] 2048/8192 tokens
+[scope/performance/1024+8192/2] 2049/8192 tokens
+[scope/performance/1024+8192/2] 2177/8192 tokens
+[scope/performance/1024+8192/2] 2305/8192 tokens
+[scope/performance/1024+8192/2] 2433/8192 tokens
+[scope/performance/1024+8192/2] 2561/8192 tokens
+[scope/performance/1024+8192/2] 2689/8192 tokens
+[scope/performance/1024+8192/2] 2817/8192 tokens
+[scope/performance/1024+8192/2] 2945/8192 tokens
+[scope/performance/1024+8192/2] 3073/8192 tokens
+[scope/performance/1024+8192/2] 3201/8192 tokens
+[scope/performance/1024+8192/2] 3329/8192 tokens
+[scope/performance/1024+8192/2] 3457/8192 tokens
+[scope/performance/1024+8192/2] 3585/8192 tokens
+[scope/performance/1024+8192/2] 3713/8192 tokens
+[scope/performance/1024+8192/2] 3841/8192 tokens
+[scope/performance/1024+8192/2] 3969/8192 tokens
+[scope/performance/1024+8192/2] 4096/8192 tokens
+[scope/performance/1024+8192/2] 4097/8192 tokens
+[scope/performance/1024+8192/2] 4225/8192 tokens
+[scope/performance/1024+8192/2] 4353/8192 tokens
+[scope/performance/1024+8192/2] 4481/8192 tokens
+[scope/performance/1024+8192/2] 4609/8192 tokens
+[scope/performance/1024+8192/2] 4737/8192 tokens
+[scope/performance/1024+8192/2] 4865/8192 tokens
+[scope/performance/1024+8192/2] 4993/8192 tokens
+[scope/performance/1024+8192/2] 5121/8192 tokens
+[scope/performance/1024+8192/2] 5249/8192 tokens
+[scope/performance/1024+8192/2] 5377/8192 tokens
+[scope/performance/1024+8192/2] 5505/8192 tokens
+[scope/performance/1024+8192/2] 5633/8192 tokens
+[scope/performance/1024+8192/2] 5761/8192 tokens
+[scope/performance/1024+8192/2] 5889/8192 tokens
+[scope/performance/1024+8192/2] 6017/8192 tokens
+[scope/performance/1024+8192/2] 6145/8192 tokens
+[scope/performance/1024+8192/2] 6273/8192 tokens
+[scope/performance/1024+8192/2] 6401/8192 tokens
+[scope/performance/1024+8192/2] 6529/8192 tokens
+[scope/performance/1024+8192/2] 6657/8192 tokens
+[scope/performance/1024+8192/2] 6785/8192 tokens
+[scope/performance/1024+8192/2] 6913/8192 tokens
+[scope/performance/1024+8192/2] 7041/8192 tokens
+RESULT oom: performance/1024+8192/2 score=None decode=None token/s
+CASE 55/81 scope performance/8192+2048/0 repeat=0
+RESULT oom: performance/8192+2048/0 score=None decode=None token/s
+CASE 56/81 scope performance/8192+2048/0 repeat=1
+RESULT oom: performance/8192+2048/0 score=None decode=None token/s
+CASE 57/81 scope performance/8192+2048/0 repeat=2
+RESULT oom: performance/8192+2048/0 score=None decode=None token/s
+CASE 58/81 scope performance/8192+2048/1 repeat=0
+RESULT oom: performance/8192+2048/1 score=None decode=None token/s
+CASE 59/81 scope performance/8192+2048/1 repeat=1
+RESULT oom: performance/8192+2048/1 score=None decode=None token/s
+CASE 60/81 scope performance/8192+2048/1 repeat=2
+RESULT oom: performance/8192+2048/1 score=None decode=None token/s
+CASE 61/81 scope performance/8192+2048/2 repeat=0
+RESULT oom: performance/8192+2048/2 score=None decode=None token/s
+CASE 62/81 scope performance/8192+2048/2 repeat=1
+RESULT oom: performance/8192+2048/2 score=None decode=None token/s
+CASE 63/81 scope performance/8192+2048/2 repeat=2
+RESULT oom: performance/8192+2048/2 score=None decode=None token/s
+CASE 64/81 scope performance/16384+4096/0 repeat=0
+RESULT oom: performance/16384+4096/0 score=None decode=None token/s
+CASE 65/81 scope performance/16384+4096/0 repeat=1
+RESULT oom: performance/16384+4096/0 score=None decode=None token/s
+CASE 66/81 scope performance/16384+4096/0 repeat=2
+RESULT oom: performance/16384+4096/0 score=None decode=None token/s
+CASE 67/81 scope performance/16384+4096/1 repeat=0
+RESULT oom: performance/16384+4096/1 score=None decode=None token/s
+CASE 68/81 scope performance/16384+4096/1 repeat=1
+RESULT oom: performance/16384+4096/1 score=None decode=None token/s
+CASE 69/81 scope performance/16384+4096/1 repeat=2
+RESULT oom: performance/16384+4096/1 score=None decode=None token/s
+CASE 70/81 scope performance/16384+4096/2 repeat=0
+RESULT oom: performance/16384+4096/2 score=None decode=None token/s
+CASE 71/81 scope performance/16384+4096/2 repeat=1
+RESULT oom: performance/16384+4096/2 score=None decode=None token/s
+CASE 72/81 scope performance/16384+4096/2 repeat=2
+RESULT oom: performance/16384+4096/2 score=None decode=None token/s
+CASE 73/81 scope performance/32000+256/0 repeat=0
+RESULT oom: performance/32000+256/0 score=None decode=None token/s
+CASE 74/81 scope performance/32000+256/0 repeat=1
+RESULT oom: performance/32000+256/0 score=None decode=None token/s
+CASE 75/81 scope performance/32000+256/0 repeat=2
+RESULT oom: performance/32000+256/0 score=None decode=None token/s
+CASE 76/81 scope performance/32000+256/1 repeat=0
+RESULT oom: performance/32000+256/1 score=None decode=None token/s
+CASE 77/81 scope performance/32000+256/1 repeat=1
+RESULT oom: performance/32000+256/1 score=None decode=None token/s
+CASE 78/81 scope performance/32000+256/1 repeat=2
+RESULT oom: performance/32000+256/1 score=None decode=None token/s
+CASE 79/81 scope performance/32000+256/2 repeat=0
+RESULT oom: performance/32000+256/2 score=None decode=None token/s
+CASE 80/81 scope performance/32000+256/2 repeat=1
+RESULT oom: performance/32000+256/2 score=None decode=None token/s
+CASE 81/81 scope performance/32000+256/2 repeat=2
+RESULT oom: performance/32000+256/2 score=None decode=None token/s

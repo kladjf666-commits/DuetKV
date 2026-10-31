@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-28",
+  "scope": "static audit and protocol only; no benchmark execution",
+  "plan": "docs/experiments/next_round_plan_20261028.txt",
+  "plan_sha256": "9a7ed3c7a28baef2d07f325651cb3ce86edbbdd1c779f04a4c3b6528911e93a9",
+  "official_commits": {
+    "jy-yuan/KIVI": "876b4d2d08e3b1d5f70d0969c299d8c7c42ddfb6",
+    "FasterDecoding/SnapKV": "e216ddc84c5bd210378cbdbbba12ba02102aa640",
+    "Linking-ai/SCOPE": "8cbae48042e34da630c7a044f535de7a991c2999"
+  },
+  "first_model_quality_generations": 5456,
+  "first_model_core_timing_repeats": 360,
+  "first_model_core_warmups": 120,
+  "gpu_verified": false,
+  "dataset_revisions_frozen": false
+}

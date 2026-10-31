@@ -1,0 +1,95 @@
+{
+  "id": "longbench/narrativeqa/135/16384",
+  "suite": "longbench",
+  "task": "narrativeqa",
+  "document_id": "135/16384",
+  "cluster_id": "narrativeqa/b67ea623e6fdd6b588b856279ab74b941d871a92377811ba4fbdfc10a15dc4f9",
+  "length_budget": 16384,
+  "input_sha256": "a51565aba02b07999f028a9ac5797e59a6a6fb4570f268bcd4c4918b51c36b38",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": "historical_retest",
+  "heldout_from_available_history": false,
+  "method": "full",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 12083,
+  "output_tokens": 13,
+  "output_ids": [
+    3947,
+    374,
+    912,
+    3752,
+    7086,
+    423,
+    23361,
+    261,
+    304,
+    279,
+    3446,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 1.680331061128527,
+  "prefill_and_compress_s": 1.680331061128527,
+  "decode_s": 0.31063188100233674,
+  "decode_tokens_per_s": 38.63093498735157,
+  "generation_wall_s_including_instrumentation": 1.9915593839250505,
+  "prefill_storage": {
+    "physical_bytes": 1583742976,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1583742976,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 1585315840,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1585315840,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 12083,
+    "stored_heads": 8
+  },
+  "final_trace": {
+    "physical_tokens": 12095,
+    "stored_heads": 8
+  },
+  "peak_allocated_bytes": 19262624256,
+  "peak_reserved_bytes": 19925041152,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 12,
+      "seconds": 0.31063188100233674,
+      "tokens": 12
+    }
+  ],
+  "effective_options": {},
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 0,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "There is no character named Dwyer in the story.",
+  "gpu_before": {
+    "time": 1793313197.6780555,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15894 MiB, 100 %, 54, 335.49 W, 2655 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793313199.7613368,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 19430 MiB, 100 %, 63, 385.18 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793313199.761341
+}

@@ -1,0 +1,109 @@
+{
+  "id": "longbench/qasper/157/16384",
+  "suite": "longbench",
+  "task": "qasper",
+  "document_id": "157/16384",
+  "cluster_id": "qasper/af26c34ca92de03f497de3ef5387c88b63188192cac14d595f1d1b39cf056e03",
+  "length_budget": 16384,
+  "input_sha256": "63e014c3ba62ca7cd2a4a624a81de24d5116b3e60086b0cb42876e885218db32",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": "heldout",
+  "heldout_from_available_history": true,
+  "method": "kivi",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 5766,
+  "output_tokens": 17,
+  "output_ids": [
+    45,
+    42764,
+    21356,
+    704,
+    716,
+    10008,
+    5370,
+    3122,
+    11243,
+    449,
+    264,
+    37849,
+    4689,
+    2065,
+    5845,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 0.7621045922860503,
+  "prefill_and_compress_s": 0.7621045922860503,
+  "decode_s": 0.7909004590474069,
+  "decode_tokens_per_s": 20.230105845773636,
+  "generation_wall_s_including_instrumentation": 1.5541888629086316,
+  "prefill_storage": {
+    "physical_bytes": 242212864,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 242212864,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 243589120,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 243589120,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "prefill_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 5766
+  },
+  "final_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 5782
+  },
+  "peak_allocated_bytes": 16998736896,
+  "peak_reserved_bytes": 17460887552,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 16,
+      "seconds": 0.7909004590474069,
+      "tokens": 16
+    }
+  ],
+  "effective_options": {
+    "k_bits": 4,
+    "v_bits": 4,
+    "group_size": 32,
+    "residual_length": 128,
+    "use_flash": true
+  },
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 100.0,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "NCEL consistently outperforms various baselines with a favorable generalization ability.",
+  "gpu_before": {
+    "time": 1793297437.277018,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 16002 MiB, 46 %, 52, 237.08 W, 2670 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793297438.9235728,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 17080 MiB, 46 %, 50, 228.09 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793297438.9235775
+}

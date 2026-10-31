@@ -1,0 +1,126 @@
+{
+  "id": "ruler/cwe/27/16384",
+  "suite": "ruler",
+  "task": "cwe",
+  "document_id": "27/16384",
+  "cluster_id": "cwe/27",
+  "length_budget": 16384,
+  "input_sha256": "be5039452504cea3bef1a6d0369cda832b4ecbf57d310e568e8697a9ff5c2fd1",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": null,
+  "heldout_from_available_history": null,
+  "method": "full",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 16222,
+  "output_tokens": 44,
+  "output_ids": [
+    220,
+    16,
+    13,
+    24748,
+    220,
+    17,
+    13,
+    281,
+    3903,
+    220,
+    18,
+    13,
+    39406,
+    220,
+    19,
+    13,
+    23542,
+    283,
+    220,
+    20,
+    13,
+    19114,
+    220,
+    21,
+    13,
+    30305,
+    220,
+    22,
+    13,
+    27541,
+    220,
+    23,
+    13,
+    60131,
+    220,
+    24,
+    13,
+    281,
+    6592,
+    220,
+    605,
+    13,
+    24748,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 2.342721113935113,
+  "prefill_and_compress_s": 2.342721113935113,
+  "decode_s": 1.1140451841056347,
+  "decode_tokens_per_s": 38.598075386431276,
+  "generation_wall_s_including_instrumentation": 3.457187289837748,
+  "prefill_storage": {
+    "physical_bytes": 2126249984,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 2126249984,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 2131886080,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 2131886080,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 16222,
+    "stored_heads": 8
+  },
+  "final_trace": {
+    "physical_tokens": 16265,
+    "stored_heads": 8
+  },
+  "peak_allocated_bytes": 20360698880,
+  "peak_reserved_bytes": 21187526656,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 43,
+      "seconds": 1.1140451841056347,
+      "tokens": 43
+    }
+  ],
+  "effective_options": {},
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 90.0,
+  "metric": "official_string_match_all",
+  "status": "ok",
+  "prediction": " 1. hello 2. pelt 3. lamb 4. bayou 5. speaker 6. freak 7. sensitivity 8. spur 9. pimple 10. hello",
+  "gpu_before": {
+    "time": 1793319822.471683,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15894 MiB, 98 %, 62, 333.32 W, 2655 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793319825.9998534,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 20634 MiB, 98 %, 61, 313.89 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793319825.999858
+}

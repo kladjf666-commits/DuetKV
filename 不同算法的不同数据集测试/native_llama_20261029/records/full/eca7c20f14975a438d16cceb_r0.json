@@ -1,0 +1,132 @@
+{
+  "id": "longbench/multifieldqa_en/60/8192",
+  "suite": "longbench",
+  "task": "multifieldqa_en",
+  "document_id": "60/8192",
+  "cluster_id": "multifieldqa_en/11850133158569d36704996d2da2e40e02b3951918f6d55afaf9d19ebbcd6c25",
+  "length_budget": 8192,
+  "input_sha256": "7c9dc954a73947e27afbfb3cebf85c830d73b4a29b55b1fb10cff99d7e0da5f0",
+  "truncated_input": true,
+  "capacity_extension": null,
+  "evaluation_split": "heldout",
+  "heldout_from_available_history": true,
+  "method": "full",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 8184,
+  "output_tokens": 50,
+  "output_ids": [
+    791,
+    10528,
+    44,
+    449,
+    1654,
+    5582,
+    27772,
+    2731,
+    1109,
+    279,
+    10528,
+    44,
+    449,
+    400,
+    75,
+    62,
+    17,
+    3,
+    88394,
+    323,
+    264,
+    3152,
+    19677,
+    15105,
+    11,
+    5423,
+    369,
+    4827,
+    2819,
+    315,
+    400,
+    44,
+    55976,
+    323,
+    374,
+    3025,
+    311,
+    9539,
+    24499,
+    279,
+    4009,
+    315,
+    16628,
+    1524,
+    994,
+    400,
+    44,
+    53095,
+    13244,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 1.069481779821217,
+  "prefill_and_compress_s": 1.069481779821217,
+  "decode_s": 1.267198575194925,
+  "decode_tokens_per_s": 38.66797277014192,
+  "generation_wall_s_including_instrumentation": 2.3371178172528744,
+  "prefill_storage": {
+    "physical_bytes": 1072693248,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1072693248,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 1079115776,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1079115776,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 8184,
+    "stored_heads": 8
+  },
+  "final_trace": {
+    "physical_tokens": 8233,
+    "stored_heads": 8
+  },
+  "peak_allocated_bytes": 18234122240,
+  "peak_reserved_bytes": 18702401536,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 49,
+      "seconds": 1.267198575194925,
+      "tokens": 49
+    }
+  ],
+  "effective_options": {},
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 32.6530612244898,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "The PLM with decimation performs better than the PLM with $l_2$ regularization and a mean-field technique, especially for lower values of $M$, and is able to clearly infer the network of interaction even when $M=N$.",
+  "gpu_before": {
+    "time": 1793313421.8015711,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15894 MiB, 80 %, 54, 251.64 W, 2655 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793313424.2378213,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 18264 MiB, 85 %, 56, 277.02 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793313424.2378266
+}

@@ -1,0 +1,190 @@
+{
+  "id": "performance/8192+2048/0",
+  "suite": "performance",
+  "task": "8192+2048",
+  "document_id": "0",
+  "cluster_id": "performance/8192+2048/0",
+  "length_budget": 8192,
+  "input_sha256": "91d7a9999c6c84ae4ea01ffde7954083f05e1043e63a755d9cfda6183a5e0046",
+  "truncated_input": null,
+  "capacity_extension": false,
+  "evaluation_split": null,
+  "heldout_from_available_history": null,
+  "method": "full",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 8192,
+  "output_tokens": 2048,
+  "stopped_on_eos": false,
+  "hit_output_limit": true,
+  "ttft_s": 1.070393392816186,
+  "prefill_and_compress_s": 1.070393392816186,
+  "decode_s": 51.98836296843365,
+  "decode_tokens_per_s": 39.37419613006279,
+  "generation_wall_s_including_instrumentation": 53.059590401127934,
+  "prefill_storage": {
+    "physical_bytes": 1073741824,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1073741824,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 1342046208,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1342046208,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 8192,
+    "stored_heads": 8
+  },
+  "final_trace": {
+    "physical_tokens": 10239,
+    "stored_heads": 8
+  },
+  "peak_allocated_bytes": 23954732032,
+  "peak_reserved_bytes": 24796725248,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 128,
+      "seconds": 3.2349451649934053,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 128,
+      "to_decode_step": 256,
+      "seconds": 3.1951980516314507,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 256,
+      "to_decode_step": 384,
+      "seconds": 3.199664414860308,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 384,
+      "to_decode_step": 511,
+      "seconds": 3.211961248423904,
+      "tokens": 127
+    },
+    {
+      "from_decode_step": 511,
+      "to_decode_step": 512,
+      "seconds": 0.025814272928982973,
+      "tokens": 1
+    },
+    {
+      "from_decode_step": 512,
+      "to_decode_step": 640,
+      "seconds": 3.2338612070307136,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 640,
+      "to_decode_step": 768,
+      "seconds": 3.340396211016923,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 768,
+      "to_decode_step": 896,
+      "seconds": 3.274571823887527,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 896,
+      "to_decode_step": 1024,
+      "seconds": 3.224499483127147,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 1024,
+      "to_decode_step": 1152,
+      "seconds": 3.4058674587868154,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 1152,
+      "to_decode_step": 1280,
+      "seconds": 3.225391923915595,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 1280,
+      "to_decode_step": 1408,
+      "seconds": 3.337721025105566,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 1408,
+      "to_decode_step": 1536,
+      "seconds": 3.3087108870968223,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 1536,
+      "to_decode_step": 1664,
+      "seconds": 3.1836883719079196,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 1664,
+      "to_decode_step": 1792,
+      "seconds": 3.204828967805952,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 1792,
+      "to_decode_step": 1920,
+      "seconds": 3.205490788910538,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 1920,
+      "to_decode_step": 2047,
+      "seconds": 3.1757516670040786,
+      "tokens": 127
+    }
+  ],
+  "effective_options": {},
+  "scope_mode": "native",
+  "storage_checkpoints": [
+    {
+      "generated_cached": 0,
+      "physical_bytes": 1073741824,
+      "auxiliary_bytes": 0,
+      "total_owned_bytes": 1073741824,
+      "tensor_dtypes": [
+        "torch.float16"
+      ]
+    },
+    {
+      "generated_cached": 511,
+      "physical_bytes": 1140719616,
+      "auxiliary_bytes": 0,
+      "total_owned_bytes": 1140719616,
+      "tensor_dtypes": [
+        "torch.float16"
+      ]
+    },
+    {
+      "generated_cached": 2047,
+      "physical_bytes": 1342046208,
+      "auxiliary_bytes": 0,
+      "total_owned_bytes": 1342046208,
+      "tensor_dtypes": [
+        "torch.float16"
+      ]
+    }
+  ],
+  "persistent_kv_peak_bytes_diagnostic": 1342046208,
+  "diagnostic_pass": true,
+  "timing_excluded": true
+}

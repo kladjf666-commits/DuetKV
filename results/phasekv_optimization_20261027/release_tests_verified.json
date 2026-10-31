@@ -1,0 +1,153 @@
+{
+  "tests_run": 47,
+  "failures": [],
+  "errors": [],
+  "skips": [
+    [
+      "test_cached_workspace_survives_steps_and_refreshes_on_cooling (test_phasekv_segmented_decode.TestSegmentedKernels.test_cached_workspace_survives_steps_and_refreshes_on_cooling)",
+      "requires CUDA + Triton or TRITON_INTERPRET=1"
+    ],
+    [
+      "test_grouped_and_specialized_match_dense (test_phasekv_segmented_decode.TestSegmentedKernels.test_grouped_and_specialized_match_dense)",
+      "requires CUDA + Triton or TRITON_INTERPRET=1"
+    ],
+    [
+      "test_mixed_bits_tails_hot_and_many_segments_match_dense (test_phasekv_segmented_decode.TestSegmentedKernels.test_mixed_bits_tails_hot_and_many_segments_match_dense)",
+      "requires CUDA + Triton or TRITON_INTERPRET=1"
+    ],
+    [
+      "test_strided_packed_views_stream_switch_and_unused_capacity (test_phasekv_segmented_decode.TestSegmentedKernels.test_strided_packed_views_stream_switch_and_unused_capacity)",
+      "requires CUDA + Triton or TRITON_INTERPRET=1"
+    ],
+    [
+      "test_auto_and_manual_match_dense_quantized_reference (test_phasekv_launch_config.TestPackedAutoLaunch.test_auto_and_manual_match_dense_quantized_reference)",
+      "requires CUDA"
+    ],
+    [
+      "test_cuda_kernel_against_independent_dense_attention (test_kivi_packed.TestPackedKIVI.test_cuda_kernel_against_independent_dense_attention)",
+      "Requires a real CUDA GPU"
+    ],
+    [
+      "test_phasekv_mixed_tiers_against_dense_reference (test_kivi_packed.TestPackedKIVI.test_phasekv_mixed_tiers_against_dense_reference)",
+      "Requires a real CUDA GPU"
+    ],
+    [
+      "test_qwen_bf16_adapter_matches_dense_quantized_reference (test_kivi_packed.TestPackedKIVI.test_qwen_bf16_adapter_matches_dense_quantized_reference)",
+      "Requires a real CUDA GPU"
+    ],
+    [
+      "test_prompt_block_matches_causal_token_forwards_and_preserves_hot (test_qwen2_attention_adapter.TestQwen2Adapter.test_prompt_block_matches_causal_token_forwards_and_preserves_hot)",
+      "\u771f\u5b9e packed attention \u9700\u8981 CUDA"
+    ],
+    [
+      "test_large_target_prompt (test_phasekv_fused_quantize.TestQuantizeCUDA.test_large_target_prompt)",
+      "requires actual CUDA + Triton"
+    ],
+    [
+      "test_raw_byte_equivalence (test_phasekv_fused_quantize.TestQuantizeCUDA.test_raw_byte_equivalence)",
+      "requires actual CUDA + Triton"
+    ],
+    [
+      "test_ring_batch_and_strided_outputs (test_phasekv_fused_quantize.TestQuantizeCUDA.test_ring_batch_and_strided_outputs)",
+      "requires actual CUDA + Triton"
+    ],
+    [
+      "test_cuda_ring_attention_and_quantize (test_phasekv_hot_ring.TestHotRingCUDA.test_cuda_ring_attention_and_quantize)",
+      "requires actual CUDA + Triton"
+    ]
+  ],
+  "successful": true,
+  "torch": "2.5.1+cpu",
+  "cuda_available": false,
+  "patterns": [
+    "test_phasekv_cache.py",
+    "test_phasekv_segmented_decode.py",
+    "test_phasekv_launch_config.py",
+    "test_kivi_packed.py",
+    "test_qwen2_attention_adapter.py",
+    "test_llama_opt_adapters.py",
+    "test_phasekv_fused_quantize.py",
+    "test_phasekv_paged_storage.py",
+    "test_phasekv_hot_ring.py",
+    "test_phasekv_optimization_protocol.py"
+  ],
+  "passed": [
+    "test_bf16_prefill_is_packed_for_fp16_decode (test_phasekv_cache.TestPhaseKVCache.test_bf16_prefill_is_packed_for_fp16_decode)",
+    "test_cooling_threshold_selection_and_hot_tail (test_phasekv_cache.TestPhaseKVCache.test_cooling_threshold_selection_and_hot_tail)",
+    "test_decode_cools_batches_without_repacking_old_segments (test_phasekv_cache.TestPhaseKVCache.test_decode_cools_batches_without_repacking_old_segments)",
+    "test_dense_update_is_rejected (test_phasekv_cache.TestPhaseKVCache.test_dense_update_is_rejected)",
+    "test_invalid_config_and_fractional_indices_fail_before_packing (test_phasekv_cache.TestPhaseKVCache.test_invalid_config_and_fractional_indices_fail_before_packing)",
+    "test_invalid_layer_and_failed_writes_do_not_advance_state (test_phasekv_cache.TestPhaseKVCache.test_invalid_layer_and_failed_writes_do_not_advance_state)",
+    "test_new_prompt_is_packed_without_rebuilding_old_cache (test_phasekv_cache.TestPhaseKVCache.test_new_prompt_is_packed_without_rebuilding_old_cache)",
+    "test_prefill_is_packed_with_key_and_value_on_different_axes (test_phasekv_cache.TestPhaseKVCache.test_prefill_is_packed_with_key_and_value_on_different_axes)",
+    "test_prompt_chunk_state_errors_and_decode_after_finish (test_phasekv_cache.TestPhaseKVCache.test_prompt_chunk_state_errors_and_decode_after_finish)",
+    "test_prompt_chunks_preserve_decode_window_and_cooling_schedule (test_phasekv_cache.TestPhaseKVCache.test_prompt_chunks_preserve_decode_window_and_cooling_schedule)",
+    "test_reorder_keeps_all_tiers_and_rejects_invalid_indices (test_phasekv_cache.TestPhaseKVCache.test_reorder_keeps_all_tiers_and_rejects_invalid_indices)",
+    "test_splits_cover_each_segment_once_and_preserve_bytes (test_phasekv_segmented_decode.TestSegmentDescriptors.test_splits_cover_each_segment_once_and_preserve_bytes)",
+    "test_workspace_invalidated_only_when_frozen_segments_change (test_phasekv_segmented_decode.TestSegmentDescriptors.test_workspace_invalidated_only_when_frozen_segments_change)",
+    "test_boundaries_cover_segment_without_empty_splits (test_phasekv_launch_config.TestLaunchPlanning.test_boundaries_cover_segment_without_empty_splits)",
+    "test_invalid_parameters (test_phasekv_launch_config.TestLaunchPlanning.test_invalid_parameters)",
+    "test_length_and_hardware_change_parallelism (test_phasekv_launch_config.TestLaunchPlanning.test_length_and_hardware_change_parallelism)",
+    "test_overrides_and_uneven_splits (test_phasekv_launch_config.TestLaunchPlanning.test_overrides_and_uneven_splits)",
+    "test_flush_boundaries_preserve_prefix_and_lengths (test_kivi_packed.TestPackedKIVI.test_flush_boundaries_preserve_prefix_and_lengths)",
+    "test_independent_residuals_and_actual_storage (test_kivi_packed.TestPackedKIVI.test_independent_residuals_and_actual_storage)",
+    "test_install_preserves_uncompressed_prefill (test_qwen2_attention_adapter.TestQwen2Adapter.test_install_preserves_uncompressed_prefill)",
+    "test_llama_dense_forward_and_prompt_packing (test_llama_opt_adapters.TestModelAdapters.test_llama_dense_forward_and_prompt_packing)",
+    "test_opt_legacy_cache_and_prompt_packing (test_llama_opt_adapters.TestModelAdapters.test_opt_legacy_cache_and_prompt_packing)",
+    "test_other_bits_and_odd_groups (test_phasekv_fused_quantize.TestQuantizeCPU.test_other_bits_and_odd_groups)",
+    "test_reference_fallback (test_phasekv_fused_quantize.TestQuantizeCPU.test_reference_fallback)",
+    "test_pages_keep_old_bytes_and_count_unused_capacity_once (test_phasekv_paged_storage.TestPagedCold.test_pages_keep_old_bytes_and_count_unused_capacity_once)",
+    "test_grouped_schedule_covers_all_descriptors (test_phasekv_paged_storage.TestWorkspaceCapacity.test_grouped_schedule_covers_all_descriptors)",
+    "test_incremental_growth_preserves_pointers_and_rows (test_phasekv_paged_storage.TestWorkspaceCapacity.test_incremental_growth_preserves_pointers_and_rows)",
+    "test_real_cooling_keeps_workspace_and_appends_visible_rows (test_phasekv_paged_storage.TestWorkspaceCapacity.test_real_cooling_keeps_workspace_and_appends_visible_rows)",
+    "test_specialization_rejects_incompatible_bits_and_groups (test_phasekv_paged_storage.TestWorkspaceCapacity.test_specialization_rejects_incompatible_bits_and_groups)",
+    "test_wrap_prompt_growth_reorder_and_selection (test_phasekv_hot_ring.TestHotRingCPU.test_wrap_prompt_growth_reorder_and_selection)",
+    "test_default_and_invalid_switches (test_phasekv_optimization_protocol.TestOptimizationProtocol.test_default_and_invalid_switches)",
+    "test_e2e_plan_preserves_other_algorithms_and_full_matrix (test_phasekv_optimization_protocol.TestOptimizationProtocol.test_e2e_plan_preserves_other_algorithms_and_full_matrix)",
+    "test_every_stage_matches_saved_storage (test_phasekv_optimization_protocol.TestOptimizationProtocol.test_every_stage_matches_saved_storage)",
+    "test_individual_switches_can_be_disabled (test_phasekv_optimization_protocol.TestOptimizationProtocol.test_individual_switches_can_be_disabled)"
+  ],
+  "source_hashes": {
+    "models/packed_runtime.py": "5265a0ffcc7958391afb574fc343cae0b116571bd4b4aaf1d5c91341be70bcba",
+    "PhaseKV/__init__.py": "6f23174be5b522f0e4a92ee90d47c512d0174a7d1157326a500915c20fccddc6",
+    "PhaseKV/compressor.py": "3ff381cc991c6abc4fa3cbedfd593da7d029361c048994e4240969c1d9b3168e",
+    "PhaseKV/decode_tier.py": "e64b7a58664f9eeb71a9d053b7b76074ba7f47b4a5ab3e350f1081c8cf21bfab",
+    "PhaseKV/hetero_cache.py": "b650b5edabefc5df9bd04cdb2129d728625f855353da4b432e4bfe5d1e594c6a",
+    "PhaseKV/kernels/__init__.py": "e17266e028cefed7b0e811f87a13ea6e815c3d75ac6e363d5dd17ed0645d8d0a",
+    "PhaseKV/kernels/attention_triton.py": "06a3fa7b54d7247b62e128cc5724e270d37f06cdd5d9099dddc06d5823b16ae7",
+    "PhaseKV/kernels/launch_config.py": "aa9c797cc46bf27ea817b51f9149fa8c54146a0519f0c87a36aad1322f05bc18",
+    "PhaseKV/kernels/packing.py": "130e3c710e2c8462bd36295d853c77f1d00b97004cb31a9cb210e9e9b964e93d",
+    "PhaseKV/kernels/quantize_triton.py": "02fbb9f9f61ffed60655d304987705fedfe726218b96f7d3e6fd8ef1d77076d9",
+    "PhaseKV/kernels/reference.py": "7ea076b5929ee91592fca27b512db2400c79d59508078ff763c944b16d9bdb69",
+    "PhaseKV/kernels/segmented_attention.py": "9bd36cf461c9ecdaece9dbd7095e4799403ef6a3ce1f22d3a619fb27105bfb66",
+    "PhaseKV/kernels/segmented_baseline.py": "908737ac9a5ca5253ef536ceff120146babc1b588815f4c7c3de7113ba323f56",
+    "PhaseKV/kernels/segmented_plan.py": "0406ed4814f6da35f9fbd8d13ed741275742b89c6f6fb251ffa306d69b4102a7",
+    "PhaseKV/llama/__init__.py": "1f2e5f8ea87b92970d5be4904a837dc36c10bb3a2dfed7328ba5fc3bc185ac7d",
+    "PhaseKV/llama/__main__.py": "572816a2125bcad0a1bb68775feb1725c6609906fe057f411f8ef93d02e4e1b7",
+    "PhaseKV/llama/llama.py": "1dcd67ea0134ce7b37b23c78db729d29d4aa9014c13aeaa061e4ce62c46a6555",
+    "PhaseKV/llama/llama_attention.py": "392d0e6cadff3df46a637afad2546f87573c4e5ee781aca8678b1c63fbb81f97",
+    "PhaseKV/model_runner.py": "1e63f3f657d1c2ab71dcf771f086fdb12d2d62b45b5377ec5b5161a3cfca7ab8",
+    "PhaseKV/opt/__init__.py": "43b2fd0fd321675275fa895d88c33a0dba9c2c66902dc3b33e3728b1306224a6",
+    "PhaseKV/opt/__main__.py": "466836dd676be56f028704fc8c483e3a4495ebec040a3f2d6a39feb5b9a67bd7",
+    "PhaseKV/opt/opt.py": "06f527d2b4ea2aff9ecfd730c75dd540d343c8f0f589a2e53a276ce8eb7b7416",
+    "PhaseKV/opt/opt_attention.py": "f6695feba8117ffb857d56dde1eb2033fff3e9c4736f268882299707ac513a15",
+    "PhaseKV/optimizations.py": "b5138a202eaa3a6ba3c013f91576ed6c3aabf6b92aa144b2451ca641720d4eca",
+    "PhaseKV/packed_storage.py": "ef2de6d4c63fff5951267d7976eb3474df496c5ddbcab7bd53d34e1e8d6ae01b",
+    "PhaseKV/phasekv_cache.py": "5a23a6a9b08b048ee4dcd2a4893df6992988900a27784b9558c9fda07ce9e179",
+    "PhaseKV/planner.py": "3d8559e9c49372fb26033e41ca4eba4728eeb0d24c7f8ff241162408a4f8987a",
+    "PhaseKV/prompt_tier.py": "123d6d6b93e7b47d0170ce1d995ff76507c94e4e5527ca428f5d0aa79e068453",
+    "PhaseKV/quant.py": "d976ec4fbe2f486691fe5025b0c33fded2cc304cd5abcb7599a72fb68247c882",
+    "PhaseKV/qwen2/__init__.py": "b6b4689d28d04474562325c78d693d5a8668cb1e7c59c5a17fb380e7ef534723",
+    "PhaseKV/qwen2/__main__.py": "aa260e9e701715450022195c6f5bfa3aa75093661e8263387c83d3daaeb66b36",
+    "PhaseKV/qwen2/qwen2.py": "a6f3516e11c62902ab97cec7ef64bf926c603998ce1f98ea7f3d285841439012",
+    "PhaseKV/qwen2/qwen2_attention.py": "a249441775bf5f31cba6c61d8f0abd39791b6828d3b3992964324b8c23375705",
+    "scripts/analyze_phasekv_optimizations.py": "61e9a22caacb0bca94f070ba2c887bf7193c6e9c4b4810452b8f72f0ba9c3a7d",
+    "scripts/bench_phasekv_optimizations.py": "f1dd29aa804259a248b0df8d98e3732a6a6f7aa870b286eceecbb5173ec16c37",
+    "scripts/build_phasekv_optimization_bundle.py": "6aeb344b82e8eef7190c360bfc875d0c3f6ffd19dd33cb617e4e91041d1f4d72",
+    "scripts/compare_phasekv_optimizations.py": "632c23221416673f7916ab67b46edd3aaf4410d54f2dd80aede421ca763865fc",
+    "scripts/phasekv_optimization_support.py": "c20ed9601c7346187f4455812cbb9f5b2d2bef05afeb9d8774580d2253f0ccff",
+    "scripts/save_phasekv_optimization_stage.py": "d27be72114fca21a0284ddb890bfaa358952b3155bb8c45293d04f559662809c",
+    "scripts/test_phasekv_optimizations.py": "e43c388be1598500edc878f5d4964315a1d211e29f7fc431725a7cc7bea50088",
+    "scripts/trace_phasekv_optimizations.py": "cb554a224a3ebf3b90e977b3f3831ea86a9e501aa33979f00257297c2e4bb72b"
+  }
+}

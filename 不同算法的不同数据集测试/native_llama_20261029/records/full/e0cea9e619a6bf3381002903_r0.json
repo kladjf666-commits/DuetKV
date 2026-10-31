@@ -1,0 +1,92 @@
+{
+  "id": "longbench/2wikimqa/194/16384",
+  "suite": "longbench",
+  "task": "2wikimqa",
+  "document_id": "194/16384",
+  "cluster_id": "2wikimqa/5b4346114cfadf4b2ae88a7dbf3c9061b08da1c4fbba17be4a7a123b56362732",
+  "length_budget": 16384,
+  "input_sha256": "0e9f208cc6c577dc341ccb362d839ce3e943898f9373814f531269983f4345af",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": "heldout",
+  "heldout_from_available_history": true,
+  "method": "full",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 6182,
+  "output_tokens": 10,
+  "output_ids": [
+    42493,
+    409,
+    33108,
+    11,
+    220,
+    20,
+    339,
+    54007,
+    33108,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 0.796632437966764,
+  "prefill_and_compress_s": 0.796632437966764,
+  "decode_s": 0.23289819480851293,
+  "decode_tokens_per_s": 38.64349402707792,
+  "generation_wall_s_including_instrumentation": 1.0299438070505857,
+  "prefill_storage": {
+    "physical_bytes": 810287104,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 810287104,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 811466752,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 811466752,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 6182,
+    "stored_heads": 8
+  },
+  "final_trace": {
+    "physical_tokens": 6191,
+    "stored_heads": 8
+  },
+  "peak_allocated_bytes": 17710110720,
+  "peak_reserved_bytes": 18111004672,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 9,
+      "seconds": 0.23289819480851293,
+      "tokens": 9
+    }
+  ],
+  "effective_options": {},
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 0,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "Thomas de Berkeley, 5th Baron Berkeley",
+  "gpu_before": {
+    "time": 1793313655.6069398,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15894 MiB, 100 %, 50, 300.50 W, 2670 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793313656.7272537,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 17700 MiB, 100 %, 59, 289.99 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793313656.727259
+}

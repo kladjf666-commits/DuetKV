@@ -1,0 +1,299 @@
+[
+  {
+    "old": "src/phasekv/model_runner.py",
+    "new": "PhaseKV/model_runner.py",
+    "source_sha256": "1e63f3f657d1c2ab71dcf771f086fdb12d2d62b45b5377ec5b5161a3cfca7ab8",
+    "relocated_sha256": "1e63f3f657d1c2ab71dcf771f086fdb12d2d62b45b5377ec5b5161a3cfca7ab8",
+    "compatibility_entry": true,
+    "final_sha256": "1e63f3f657d1c2ab71dcf771f086fdb12d2d62b45b5377ec5b5161a3cfca7ab8"
+  },
+  {
+    "old": "src/phasekv/decode_tier.py",
+    "new": "PhaseKV/decode_tier.py",
+    "source_sha256": "e64b7a58664f9eeb71a9d053b7b76074ba7f47b4a5ab3e350f1081c8cf21bfab",
+    "relocated_sha256": "e64b7a58664f9eeb71a9d053b7b76074ba7f47b4a5ab3e350f1081c8cf21bfab",
+    "compatibility_entry": true,
+    "final_sha256": "e64b7a58664f9eeb71a9d053b7b76074ba7f47b4a5ab3e350f1081c8cf21bfab"
+  },
+  {
+    "old": "src/phasekv/__init__.py",
+    "new": "PhaseKV/__init__.py",
+    "source_sha256": "1bf2bffcb530effefdea423328d33b1bb68e47c5cb9ff270f883bec3dc6f9c16",
+    "relocated_sha256": "6b030ae6b5d414796353db6417823a96dcd326fd7fe849f74f6c153256d2050e",
+    "compatibility_entry": true,
+    "final_sha256": "6f23174be5b522f0e4a92ee90d47c512d0174a7d1157326a500915c20fccddc6"
+  },
+  {
+    "old": "src/phasekv/quant.py",
+    "new": "PhaseKV/quant.py",
+    "source_sha256": "d976ec4fbe2f486691fe5025b0c33fded2cc304cd5abcb7599a72fb68247c882",
+    "relocated_sha256": "d976ec4fbe2f486691fe5025b0c33fded2cc304cd5abcb7599a72fb68247c882",
+    "compatibility_entry": true,
+    "final_sha256": "d976ec4fbe2f486691fe5025b0c33fded2cc304cd5abcb7599a72fb68247c882"
+  },
+  {
+    "old": "src/phasekv/planner.py",
+    "new": "PhaseKV/planner.py",
+    "source_sha256": "3d8559e9c49372fb26033e41ca4eba4728eeb0d24c7f8ff241162408a4f8987a",
+    "relocated_sha256": "3d8559e9c49372fb26033e41ca4eba4728eeb0d24c7f8ff241162408a4f8987a",
+    "compatibility_entry": true,
+    "final_sha256": "3d8559e9c49372fb26033e41ca4eba4728eeb0d24c7f8ff241162408a4f8987a"
+  },
+  {
+    "old": "src/phasekv/compressor.py",
+    "new": "PhaseKV/compressor.py",
+    "source_sha256": "3ff381cc991c6abc4fa3cbedfd593da7d029361c048994e4240969c1d9b3168e",
+    "relocated_sha256": "3ff381cc991c6abc4fa3cbedfd593da7d029361c048994e4240969c1d9b3168e",
+    "compatibility_entry": true,
+    "final_sha256": "3ff381cc991c6abc4fa3cbedfd593da7d029361c048994e4240969c1d9b3168e"
+  },
+  {
+    "old": "src/phasekv/hetero_cache.py",
+    "new": "PhaseKV/hetero_cache.py",
+    "source_sha256": "b650b5edabefc5df9bd04cdb2129d728625f855353da4b432e4bfe5d1e594c6a",
+    "relocated_sha256": "b650b5edabefc5df9bd04cdb2129d728625f855353da4b432e4bfe5d1e594c6a",
+    "compatibility_entry": true,
+    "final_sha256": "b650b5edabefc5df9bd04cdb2129d728625f855353da4b432e4bfe5d1e594c6a"
+  },
+  {
+    "old": "src/phasekv/phasekv_cache.py",
+    "new": "PhaseKV/phasekv_cache.py",
+    "source_sha256": "4f5816cee2f61e871caf71eddb4a6cd9cb8d44bd7a2a11eb4c853dba3e2651d1",
+    "relocated_sha256": "4f5816cee2f61e871caf71eddb4a6cd9cb8d44bd7a2a11eb4c853dba3e2651d1",
+    "compatibility_entry": true,
+    "final_sha256": "4f5816cee2f61e871caf71eddb4a6cd9cb8d44bd7a2a11eb4c853dba3e2651d1"
+  },
+  {
+    "old": "src/phasekv/prompt_tier.py",
+    "new": "PhaseKV/prompt_tier.py",
+    "source_sha256": "123d6d6b93e7b47d0170ce1d995ff76507c94e4e5527ca428f5d0aa79e068453",
+    "relocated_sha256": "123d6d6b93e7b47d0170ce1d995ff76507c94e4e5527ca428f5d0aa79e068453",
+    "compatibility_entry": true,
+    "final_sha256": "123d6d6b93e7b47d0170ce1d995ff76507c94e4e5527ca428f5d0aa79e068453"
+  },
+  {
+    "old": "src/phasekv/kernels/attention_triton.py",
+    "new": "PhaseKV/kernels/attention_triton.py",
+    "source_sha256": "0b9de3442a7628b38a39bbd34d34e27d833b5c4ca3f05c0a22c2d55ce806af7c",
+    "relocated_sha256": "0b9de3442a7628b38a39bbd34d34e27d833b5c4ca3f05c0a22c2d55ce806af7c",
+    "compatibility_entry": true,
+    "final_sha256": "0b9de3442a7628b38a39bbd34d34e27d833b5c4ca3f05c0a22c2d55ce806af7c"
+  },
+  {
+    "old": "src/phasekv/kernels/__init__.py",
+    "new": "PhaseKV/kernels/__init__.py",
+    "source_sha256": "e17266e028cefed7b0e811f87a13ea6e815c3d75ac6e363d5dd17ed0645d8d0a",
+    "relocated_sha256": "e17266e028cefed7b0e811f87a13ea6e815c3d75ac6e363d5dd17ed0645d8d0a",
+    "compatibility_entry": true,
+    "final_sha256": "e17266e028cefed7b0e811f87a13ea6e815c3d75ac6e363d5dd17ed0645d8d0a"
+  },
+  {
+    "old": "src/phasekv/kernels/reference.py",
+    "new": "PhaseKV/kernels/reference.py",
+    "source_sha256": "7ea076b5929ee91592fca27b512db2400c79d59508078ff763c944b16d9bdb69",
+    "relocated_sha256": "7ea076b5929ee91592fca27b512db2400c79d59508078ff763c944b16d9bdb69",
+    "compatibility_entry": true,
+    "final_sha256": "7ea076b5929ee91592fca27b512db2400c79d59508078ff763c944b16d9bdb69"
+  },
+  {
+    "old": "src/phasekv/kernels/packing.py",
+    "new": "PhaseKV/kernels/packing.py",
+    "source_sha256": "f22f6ffb6d9f1e094130392fd16ca334cc30d09ce8632b291a883e72c437eb73",
+    "relocated_sha256": "f22f6ffb6d9f1e094130392fd16ca334cc30d09ce8632b291a883e72c437eb73",
+    "compatibility_entry": true,
+    "final_sha256": "f22f6ffb6d9f1e094130392fd16ca334cc30d09ce8632b291a883e72c437eb73"
+  },
+  {
+    "old": "src/phasekv/kernels/launch_config.py",
+    "new": "PhaseKV/kernels/launch_config.py",
+    "source_sha256": "4ac747750f12e01067c4a0faf6d11809905f4e7dc9e2cfe9cdfbd15008ffa340",
+    "relocated_sha256": "4ac747750f12e01067c4a0faf6d11809905f4e7dc9e2cfe9cdfbd15008ffa340",
+    "compatibility_entry": true,
+    "final_sha256": "4ac747750f12e01067c4a0faf6d11809905f4e7dc9e2cfe9cdfbd15008ffa340"
+  },
+  {
+    "old": "qwen2/__init__.py",
+    "new": "PhaseKV/qwen2/__init__.py",
+    "source_sha256": "a980f090013f1835fb79dff12921e0a0f2a4298f73e6d7131c2a258ccd382f24",
+    "relocated_sha256": "a980f090013f1835fb79dff12921e0a0f2a4298f73e6d7131c2a258ccd382f24",
+    "compatibility_entry": true,
+    "final_sha256": "a980f090013f1835fb79dff12921e0a0f2a4298f73e6d7131c2a258ccd382f24"
+  },
+  {
+    "old": "qwen2/README.md",
+    "new": "PhaseKV/qwen2/README.md",
+    "source_sha256": "e338914590d7e7040023687bf15d82b5bdb852c45c23c016488bfcb70af0573f",
+    "relocated_sha256": "e7a9b39551959ea41946df9f9a47ad3bb8df3680aa97f0de3568c979ce8f5031",
+    "compatibility_entry": true,
+    "final_sha256": "e7a9b39551959ea41946df9f9a47ad3bb8df3680aa97f0de3568c979ce8f5031"
+  },
+  {
+    "old": "qwen2/qwen2_attention.py",
+    "new": "PhaseKV/qwen2/qwen2_attention.py",
+    "source_sha256": "d7836392e62a40ef5d611ab1431062078cb0ba178b1548d7a5349802fe61cb86",
+    "relocated_sha256": "ba6eab236c3c581cf996e79e489d79302320c4cc800d097c8b9d8cce4f823c37",
+    "compatibility_entry": true,
+    "final_sha256": "ba6eab236c3c581cf996e79e489d79302320c4cc800d097c8b9d8cce4f823c37"
+  },
+  {
+    "old": "qwen2/qwen2.py",
+    "new": "PhaseKV/qwen2/qwen2.py",
+    "source_sha256": "8ce5994f50c0e5e2716c7f98a0c78e9b2ac24f4f3f74cb5d145349833a04271e",
+    "relocated_sha256": "78aed59e01ea20ab2843b3df63e4deed646ed5594e292fc586e55c05ef4f6e0f",
+    "compatibility_entry": true,
+    "final_sha256": "78aed59e01ea20ab2843b3df63e4deed646ed5594e292fc586e55c05ef4f6e0f"
+  },
+  {
+    "old": "qwen2/__main__.py",
+    "new": "PhaseKV/qwen2/__main__.py",
+    "source_sha256": "4062c82d9c26c573fd73fc3e7679a741847365310be2ecd6e7c5fe793335b6f0",
+    "relocated_sha256": "4062c82d9c26c573fd73fc3e7679a741847365310be2ecd6e7c5fe793335b6f0",
+    "compatibility_entry": true,
+    "final_sha256": "4062c82d9c26c573fd73fc3e7679a741847365310be2ecd6e7c5fe793335b6f0"
+  },
+  {
+    "old": "llama/__init__.py",
+    "new": "PhaseKV/llama/__init__.py",
+    "source_sha256": "bac9663e2b9b8db5eb74db9388245f43f6904b26d867fcfce144d4cf5a9847e0",
+    "relocated_sha256": "bac9663e2b9b8db5eb74db9388245f43f6904b26d867fcfce144d4cf5a9847e0",
+    "compatibility_entry": true,
+    "final_sha256": "bac9663e2b9b8db5eb74db9388245f43f6904b26d867fcfce144d4cf5a9847e0"
+  },
+  {
+    "old": "llama/README.md",
+    "new": "PhaseKV/llama/README.md",
+    "source_sha256": "6af1211a8c1e37bffab1c56ef2d135291370c322d036fddda3736c82d515b819",
+    "relocated_sha256": "6af1211a8c1e37bffab1c56ef2d135291370c322d036fddda3736c82d515b819",
+    "compatibility_entry": true,
+    "final_sha256": "6af1211a8c1e37bffab1c56ef2d135291370c322d036fddda3736c82d515b819"
+  },
+  {
+    "old": "llama/llama.py",
+    "new": "PhaseKV/llama/llama.py",
+    "source_sha256": "9d73a62270050e783da9dae4d25a51d84a787510ad1ed28554612058abcd5a51",
+    "relocated_sha256": "1c240c69641f161f452772dd413f3560ecb5d85130bc251614acb98b27d66568",
+    "compatibility_entry": true,
+    "final_sha256": "1c240c69641f161f452772dd413f3560ecb5d85130bc251614acb98b27d66568"
+  },
+  {
+    "old": "llama/llama_attention.py",
+    "new": "PhaseKV/llama/llama_attention.py",
+    "source_sha256": "827d833aadaf2f8b51923ec1484cf6b36f384c5a230ce368bef28e6d871db592",
+    "relocated_sha256": "b9ce9e9748500da905d17926649ef327da55a0d4a5072ff7dcebeffee3600936",
+    "compatibility_entry": true,
+    "final_sha256": "b9ce9e9748500da905d17926649ef327da55a0d4a5072ff7dcebeffee3600936"
+  },
+  {
+    "old": "llama/__main__.py",
+    "new": "PhaseKV/llama/__main__.py",
+    "source_sha256": "d47283190d98f697bf8d550d5640c81f261065cc8b479617b4fb881aa000be27",
+    "relocated_sha256": "d47283190d98f697bf8d550d5640c81f261065cc8b479617b4fb881aa000be27",
+    "compatibility_entry": true,
+    "final_sha256": "d47283190d98f697bf8d550d5640c81f261065cc8b479617b4fb881aa000be27"
+  },
+  {
+    "old": "opt/opt.py",
+    "new": "PhaseKV/opt/opt.py",
+    "source_sha256": "9d398bf7e68f83184d75cb62f1a0839c73573ff663c836e2b63a84e083d0a9db",
+    "relocated_sha256": "2f8401a18de9d60eba658f476d98270085d2304694aa0398ef1cdff5251d04a9",
+    "compatibility_entry": true,
+    "final_sha256": "2f8401a18de9d60eba658f476d98270085d2304694aa0398ef1cdff5251d04a9"
+  },
+  {
+    "old": "opt/__init__.py",
+    "new": "PhaseKV/opt/__init__.py",
+    "source_sha256": "838a39a7b7780f4d751d0abb94333a18c680bb01aa50c26440d69cc26fdd626f",
+    "relocated_sha256": "838a39a7b7780f4d751d0abb94333a18c680bb01aa50c26440d69cc26fdd626f",
+    "compatibility_entry": true,
+    "final_sha256": "838a39a7b7780f4d751d0abb94333a18c680bb01aa50c26440d69cc26fdd626f"
+  },
+  {
+    "old": "opt/README.md",
+    "new": "PhaseKV/opt/README.md",
+    "source_sha256": "4e5e9f05c1bda58d4126de7630d7f0482f04a36de6925448e021fa3664684a34",
+    "relocated_sha256": "4e5e9f05c1bda58d4126de7630d7f0482f04a36de6925448e021fa3664684a34",
+    "compatibility_entry": true,
+    "final_sha256": "4e5e9f05c1bda58d4126de7630d7f0482f04a36de6925448e021fa3664684a34"
+  },
+  {
+    "old": "opt/opt_attention.py",
+    "new": "PhaseKV/opt/opt_attention.py",
+    "source_sha256": "eabb642737dd35e6c12d9772af5e74293040174ebbae321b1e062b2a8fe1fc44",
+    "relocated_sha256": "ac4373dcf86e353ff382ecdd96e2e6a51a7b633d4026fbc635a9bbd5ce457788",
+    "compatibility_entry": true,
+    "final_sha256": "ac4373dcf86e353ff382ecdd96e2e6a51a7b633d4026fbc635a9bbd5ce457788"
+  },
+  {
+    "old": "opt/__main__.py",
+    "new": "PhaseKV/opt/__main__.py",
+    "source_sha256": "212298cc3e5f99e946ad66a87bb498be9e9df0eb04abefd957aaafd7eabdd787",
+    "relocated_sha256": "212298cc3e5f99e946ad66a87bb498be9e9df0eb04abefd957aaafd7eabdd787",
+    "compatibility_entry": true,
+    "final_sha256": "212298cc3e5f99e946ad66a87bb498be9e9df0eb04abefd957aaafd7eabdd787"
+  },
+  {
+    "old": "baselines/scope.py",
+    "new": "SCOPE/compressor.py",
+    "source_sha256": "76d38fbca7a9ef38b01c727a19e0dd99b687ee52fbb1ce73bf18bd7667e2ab9d",
+    "relocated_sha256": "90708dead2dc6667184890fbd9e364cd74e383069d4022cc4edc4255f3ace7b0",
+    "compatibility_entry": true,
+    "final_sha256": "90708dead2dc6667184890fbd9e364cd74e383069d4022cc4edc4255f3ace7b0"
+  },
+  {
+    "old": "baselines/snapkv.py",
+    "new": "SnapKV/compressor.py",
+    "source_sha256": "6c8d71d7551f71bbf53e63a342ca09fbdb17cbf068ec5366cafe08e10ea93bd8",
+    "relocated_sha256": "041a2383214486520c9f29dc0bb4f1c4987c12ba8837be741cfff1702fd57d7b",
+    "compatibility_entry": true,
+    "final_sha256": "041a2383214486520c9f29dc0bb4f1c4987c12ba8837be741cfff1702fd57d7b"
+  },
+  {
+    "old": "baselines/pyramidkv.py",
+    "new": "PyramidKV/compressor.py",
+    "source_sha256": "d66cd188e51c6b756cd044bdce0f5a232508e88584c81a9042717d6d209506cf",
+    "relocated_sha256": "b5a5e5ae02204085b46256d8087fbf0fc4022c9dd1fc78f339f0d229cc86fcdc",
+    "compatibility_entry": true,
+    "final_sha256": "b5a5e5ae02204085b46256d8087fbf0fc4022c9dd1fc78f339f0d229cc86fcdc"
+  },
+  {
+    "old": "baselines/kivi.py",
+    "new": "KIVI/legacy_fake_quant.py",
+    "source_sha256": "e4aa79dc492307bef1a987ebc5ac8764b2523b456d91cfa078507a1bc6195d73",
+    "relocated_sha256": "b55f5f1c35a9cff735c3a9b7bc2c00b29c985739bb4cc5ba3311ab5358838025",
+    "compatibility_entry": true,
+    "final_sha256": "b55f5f1c35a9cff735c3a9b7bc2c00b29c985739bb4cc5ba3311ab5358838025"
+  },
+  {
+    "old": "baselines/kivi_packed.py",
+    "new": "KIVI/packed_cache.py",
+    "source_sha256": "4538b51598561c087812f48152896fbacc145142e6171ae59f01bc66decc6c0e",
+    "relocated_sha256": "f43a0fbfda8f6912eceaf7ac88cdbff3ccb8bad69ca2bb4c0cc4e21bfbf265e7",
+    "compatibility_entry": true,
+    "final_sha256": "f43a0fbfda8f6912eceaf7ac88cdbff3ccb8bad69ca2bb4c0cc4e21bfbf265e7"
+  },
+  {
+    "old": "baselines/kivi_packed_kernel.py",
+    "new": "KIVI/kernels.py",
+    "source_sha256": "6a3e6377b077fd8c864f454acb41a5cbacb80e6f07c3fae9d555a64a0a60e037",
+    "relocated_sha256": "b06b8e4c9263bbaf80d482dd7826a6fa6ac3a454f2ea2ca34284c4b7769bc226",
+    "compatibility_entry": true,
+    "final_sha256": "b06b8e4c9263bbaf80d482dd7826a6fa6ac3a454f2ea2ca34284c4b7769bc226"
+  },
+  {
+    "old": "baselines/packed_runtime.py",
+    "new": "eval/packed_runtime.py",
+    "source_sha256": "3e8279cbecb5701f9e649d349589f707ea9e6e38d58913d2f7e1b3203c34ad9c",
+    "relocated_sha256": "698a09e0fab652720fd27f710dbad5cb9e0b9c702c842446978368d4f5bacd59",
+    "compatibility_entry": true,
+    "final_sha256": "d3228a1afbc9ede300bef3b37d65c6090d38217901267d1ffe36923975d96318",
+    "extracted_adapter": "KIVI/qwen2_attention.py"
+  },
+  {
+    "old": "baselines/_common.py",
+    "new": "eval/compressors/head_ops.py",
+    "source_sha256": "5bca1e02d73ee31b3887daae9f3f10da9440ab9d4b993c94386f16087f17ddc9",
+    "relocated_sha256": "5bca1e02d73ee31b3887daae9f3f10da9440ab9d4b993c94386f16087f17ddc9",
+    "compatibility_entry": true,
+    "final_sha256": "5bca1e02d73ee31b3887daae9f3f10da9440ab9d4b993c94386f16087f17ddc9"
+  }
+]

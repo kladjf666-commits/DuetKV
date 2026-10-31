@@ -1,0 +1,136 @@
+{
+  "id": "longbench/qasper/89/16384",
+  "suite": "longbench",
+  "task": "qasper",
+  "document_id": "89/16384",
+  "cluster_id": "qasper/aabe69dda92df079be41d104d814b4427ef788f48dcf402769aa051a3734af25",
+  "length_budget": 16384,
+  "input_sha256": "59bc517d2b4eb50a8aaab4560289b7cbe5131a50a288823341c112a06c1c00e7",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": "heldout",
+  "heldout_from_available_history": true,
+  "method": "snapkv",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 2255,
+  "output_tokens": 49,
+  "output_ids": [
+    7009,
+    1005,
+    33260,
+    16155,
+    11,
+    31788,
+    9708,
+    45,
+    12852,
+    11,
+    6405,
+    45,
+    12852,
+    11,
+    328,
+    23202,
+    53957,
+    11,
+    350,
+    56587,
+    53957,
+    11,
+    426,
+    3336,
+    6124,
+    1114,
+    11,
+    426,
+    3336,
+    6124,
+    972,
+    11,
+    356,
+    540,
+    13864,
+    11500,
+    12852,
+    11,
+    31493,
+    57815,
+    11,
+    323,
+    31788,
+    452,
+    12852,
+    452,
+    643,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 0.27678551711142063,
+  "prefill_and_compress_s": 0.27678551711142063,
+  "decode_s": 1.373846243135631,
+  "decode_tokens_per_s": 34.938407583694406,
+  "generation_wall_s_including_instrumentation": 1.6510834214277565,
+  "prefill_storage": {
+    "physical_bytes": 1073741824,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1073741824,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 1098907648,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1098907648,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 2048,
+    "stored_heads": 32
+  },
+  "final_trace": {
+    "physical_tokens": 2096,
+    "stored_heads": 32
+  },
+  "peak_allocated_bytes": 18235665408,
+  "peak_reserved_bytes": 18914213888,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 48,
+      "seconds": 1.373846243135631,
+      "tokens": 48
+    }
+  ],
+  "effective_options": {
+    "max_capacity_prompt": 2048,
+    "window_size": 32,
+    "kernel_size": 7,
+    "pooling": "maxpool"
+  },
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 55.172413793103445,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "They use NLTK, Stanford CoreNLP, TwitterNLP, SentiStrength, TensiStrength, BIBREF17, BIBREF18, CogComp-NLP, spaCy, and Stanford NLP NER.",
+  "gpu_before": {
+    "time": 1793303175.0425887,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15896 MiB, 78 %, 51, 237.36 W, 2655 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793303176.7499683,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 18468 MiB, 78 %, 55, 271.06 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793303176.7499807
+}

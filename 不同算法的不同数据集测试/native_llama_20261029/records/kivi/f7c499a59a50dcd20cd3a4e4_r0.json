@@ -1,0 +1,99 @@
+{
+  "id": "ruler/niah_multikey_1/29/8192",
+  "suite": "ruler",
+  "task": "niah_multikey_1",
+  "document_id": "29/8192",
+  "cluster_id": "niah_multikey_1/29",
+  "length_budget": 8192,
+  "input_sha256": "86e859c6cf85a9027995f8d304af2b28711a9179f710b32596d2f7d174d78a17",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": null,
+  "heldout_from_available_history": null,
+  "method": "kivi",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 8062,
+  "output_tokens": 7,
+  "output_ids": [
+    25,
+    220,
+    19319,
+    19498,
+    22,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 1.066271067596972,
+  "prefill_and_compress_s": 1.066271067596972,
+  "decode_s": 0.31354888482019305,
+  "decode_tokens_per_s": 19.13577209321202,
+  "generation_wall_s_including_instrumentation": 1.3810674636624753,
+  "prefill_storage": {
+    "physical_bytes": 341663744,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 341663744,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 336412672,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 336412672,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "prefill_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 8062
+  },
+  "final_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 8068
+  },
+  "peak_allocated_bytes": 17373617152,
+  "peak_reserved_bytes": 18056478720,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 6,
+      "seconds": 0.31354888482019305,
+      "tokens": 6
+    }
+  ],
+  "effective_options": {
+    "k_bits": 4,
+    "v_bits": 4,
+    "group_size": 32,
+    "residual_length": 128,
+    "use_flash": true
+  },
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 100.0,
+  "metric": "official_string_match_all",
+  "status": "ok",
+  "prediction": ": 9013957.",
+  "gpu_before": {
+    "time": 1793320108.1237319,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15936 MiB, 50 %, 51, 239.48 W, 2670 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793320109.5626495,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 17648 MiB, 48 %, 56, 317.10 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793320109.562654
+}

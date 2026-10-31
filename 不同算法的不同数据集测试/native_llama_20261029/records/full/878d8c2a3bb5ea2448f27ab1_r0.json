@@ -1,0 +1,91 @@
+{
+  "id": "longbench/narrativeqa/111/8192",
+  "suite": "longbench",
+  "task": "narrativeqa",
+  "document_id": "111/8192",
+  "cluster_id": "narrativeqa/994ea4ff500e7668190487704e3296a83410b5a247e46785aa350e36f0be7ad6",
+  "length_budget": 8192,
+  "input_sha256": "2a19d5643c166491209e6711a50ed3b75b9af197d1fd07f64ffb9fad5a866b4a",
+  "truncated_input": true,
+  "capacity_extension": null,
+  "evaluation_split": "historical_retest",
+  "heldout_from_available_history": false,
+  "method": "full",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 8184,
+  "output_tokens": 9,
+  "output_ids": [
+    791,
+    328,
+    1354,
+    826,
+    6,
+    3805,
+    5383,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 1.0706790932454169,
+  "prefill_and_compress_s": 1.0706790932454169,
+  "decode_s": 0.20971515215933323,
+  "decode_tokens_per_s": 38.14698135841858,
+  "generation_wall_s_including_instrumentation": 1.280843981076032,
+  "prefill_storage": {
+    "physical_bytes": 1072693248,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1072693248,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 1073741824,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1073741824,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 8184,
+    "stored_heads": 8
+  },
+  "final_trace": {
+    "physical_tokens": 8192,
+    "stored_heads": 8
+  },
+  "peak_allocated_bytes": 18234122240,
+  "peak_reserved_bytes": 18702401536,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 8,
+      "seconds": 0.20971515215933323,
+      "tokens": 8
+    }
+  ],
+  "effective_options": {},
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 0,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "The Sinsings' airship.",
+  "gpu_before": {
+    "time": 1793313174.1614945,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15894 MiB, 0 %, 53, 347.51 W, 2655 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793313175.5296504,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 18264 MiB, 100 %, 59, 371.63 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793313175.529655
+}

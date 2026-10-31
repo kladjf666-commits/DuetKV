@@ -1,0 +1,105 @@
+{
+  "id": "longbench/narrativeqa/179/8192",
+  "suite": "longbench",
+  "task": "narrativeqa",
+  "document_id": "179/8192",
+  "cluster_id": "narrativeqa/f8f813bd0360c2386a518b688eefbaa05a8205ad7781076d18629822634f9d29",
+  "length_budget": 8192,
+  "input_sha256": "e8e364fde1f48b58162ecb619f50ee89d3840920e0de5b4483481a654284cd34",
+  "truncated_input": true,
+  "capacity_extension": null,
+  "evaluation_split": "historical_retest",
+  "heldout_from_available_history": false,
+  "method": "full",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 8184,
+  "output_tokens": 23,
+  "output_ids": [
+    2181,
+    17888,
+    288,
+    279,
+    6372,
+    315,
+    279,
+    445,
+    21473,
+    11,
+    10923,
+    279,
+    1217,
+    311,
+    74809,
+    311,
+    264,
+    5190,
+    11277,
+    315,
+    14209,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 1.069403220899403,
+  "prefill_and_compress_s": 1.069403220899403,
+  "decode_s": 0.569981224834919,
+  "decode_tokens_per_s": 38.597762595376295,
+  "generation_wall_s_including_instrumentation": 1.6398111269809306,
+  "prefill_storage": {
+    "physical_bytes": 1072693248,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1072693248,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 1075576832,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1075576832,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 8184,
+    "stored_heads": 8
+  },
+  "final_trace": {
+    "physical_tokens": 8206,
+    "stored_heads": 8
+  },
+  "peak_allocated_bytes": 18234122240,
+  "peak_reserved_bytes": 18702401536,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 22,
+      "seconds": 0.569981224834919,
+      "tokens": 22
+    }
+  ],
+  "effective_options": {},
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 10.0,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "It reverses the effects of the Ladder, allowing the user to transcend to a higher plane of existence.",
+  "gpu_before": {
+    "time": 1793313117.2729936,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15894 MiB, 84 %, 48, 319.44 W, 2670 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793313119.00949,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 18264 MiB, 85 %, 51, 316.79 W, 2670 MHz",
+    "error": ""
+  },
+  "finished_at": 1793313119.0094945
+}

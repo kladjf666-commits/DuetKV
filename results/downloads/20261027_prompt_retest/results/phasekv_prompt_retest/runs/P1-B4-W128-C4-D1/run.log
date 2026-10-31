@@ -1,0 +1,2225 @@
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:00<00:02,  1.30it/s]
+Loading checkpoint shards:  50%|█████     | 2/4 [00:01<00:01,  1.58it/s]
+Loading checkpoint shards:  75%|███████▌  | 3/4 [00:01<00:00,  1.65it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.80it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:02<00:00,  1.70it/s]
+Qwen2Model is using Qwen2SdpaAttention, but `torch.nn.functional.scaled_dot_product_attention` does not support `output_attentions=True`. Falling back to the manual attention implementation, but specifying the manual implementation will be required from Transformers version v5.0.0 onwards. This warning can be removed using the argument `attn_implementation="eager"` when loading the model.
+The attention layers in this model are transitioning from computing the RoPE embeddings internally through `position_ids` (2D tensor with the indexes of the tokens), to using externally computed `position_embeddings` (Tuple of tensors, containing cos and sin). In v4.46 `position_ids` will be removed and `position_embeddings` will be mandatory.
+[start] Qwen2.5-7B-Instruct/phasekv capacity/1024
+[Qwen2.5-7B-Instruct/phasekv] capacity/1024: ok | peak=14.39 GiB | 128 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv capacity/2048
+[Qwen2.5-7B-Instruct/phasekv] capacity/2048: ok | peak=14.53 GiB | 128 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv capacity/4096
+[Qwen2.5-7B-Instruct/phasekv] capacity/4096: ok | peak=14.78 GiB | 128 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv capacity/8192
+[Qwen2.5-7B-Instruct/phasekv] capacity/8192: ok | peak=15.32 GiB | 128 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv capacity/16384
+[Qwen2.5-7B-Instruct/phasekv] capacity/16384: ok | peak=16.38 GiB | 128 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv capacity/32640
+[Qwen2.5-7B-Instruct/phasekv] capacity/32640: ok | peak=18.51 GiB | 128 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/1024/0.1/0
+[Qwen2.5-7B-Instruct/phasekv] needle/1024/0.1/0: ok | peak=14.39 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/1024/0.1/1
+[Qwen2.5-7B-Instruct/phasekv] needle/1024/0.1/1: ok | peak=14.39 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/1024/0.1/2
+[Qwen2.5-7B-Instruct/phasekv] needle/1024/0.1/2: ok | peak=14.39 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/1024/0.5/0
+[Qwen2.5-7B-Instruct/phasekv] needle/1024/0.5/0: ok | peak=14.39 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/1024/0.5/1
+[Qwen2.5-7B-Instruct/phasekv] needle/1024/0.5/1: ok | peak=14.39 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/1024/0.5/2
+[Qwen2.5-7B-Instruct/phasekv] needle/1024/0.5/2: ok | peak=14.39 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/1024/0.9/0
+[Qwen2.5-7B-Instruct/phasekv] needle/1024/0.9/0: ok | peak=14.39 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/1024/0.9/1
+[Qwen2.5-7B-Instruct/phasekv] needle/1024/0.9/1: ok | peak=14.39 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/1024/0.9/2
+[Qwen2.5-7B-Instruct/phasekv] needle/1024/0.9/2: ok | peak=14.39 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/8192/0.1/0
+[Qwen2.5-7B-Instruct/phasekv] needle/8192/0.1/0: ok | peak=15.32 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/8192/0.1/1
+[Qwen2.5-7B-Instruct/phasekv] needle/8192/0.1/1: ok | peak=15.32 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/8192/0.1/2
+[Qwen2.5-7B-Instruct/phasekv] needle/8192/0.1/2: ok | peak=15.32 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/8192/0.5/0
+[Qwen2.5-7B-Instruct/phasekv] needle/8192/0.5/0: ok | peak=15.32 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/8192/0.5/1
+[Qwen2.5-7B-Instruct/phasekv] needle/8192/0.5/1: ok | peak=15.32 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/8192/0.5/2
+[Qwen2.5-7B-Instruct/phasekv] needle/8192/0.5/2: ok | peak=15.32 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/8192/0.9/0
+[Qwen2.5-7B-Instruct/phasekv] needle/8192/0.9/0: ok | peak=15.32 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/8192/0.9/1
+[Qwen2.5-7B-Instruct/phasekv] needle/8192/0.9/1: ok | peak=15.32 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/8192/0.9/2
+[Qwen2.5-7B-Instruct/phasekv] needle/8192/0.9/2: ok | peak=15.32 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/16384/0.1/0
+[Qwen2.5-7B-Instruct/phasekv] needle/16384/0.1/0: ok | peak=16.38 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/16384/0.1/1
+[Qwen2.5-7B-Instruct/phasekv] needle/16384/0.1/1: ok | peak=16.38 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/16384/0.1/2
+[Qwen2.5-7B-Instruct/phasekv] needle/16384/0.1/2: ok | peak=16.38 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/16384/0.5/0
+[Qwen2.5-7B-Instruct/phasekv] needle/16384/0.5/0: ok | peak=16.38 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/16384/0.5/1
+[Qwen2.5-7B-Instruct/phasekv] needle/16384/0.5/1: ok | peak=16.38 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/16384/0.5/2
+[Qwen2.5-7B-Instruct/phasekv] needle/16384/0.5/2: ok | peak=16.38 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/16384/0.9/0
+[Qwen2.5-7B-Instruct/phasekv] needle/16384/0.9/0: ok | peak=16.38 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/16384/0.9/1
+[Qwen2.5-7B-Instruct/phasekv] needle/16384/0.9/1: ok | peak=16.38 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/16384/0.9/2
+[Qwen2.5-7B-Instruct/phasekv] needle/16384/0.9/2: ok | peak=16.38 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/24576/0.1/0
+[Qwen2.5-7B-Instruct/phasekv] needle/24576/0.1/0: ok | peak=17.45 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/24576/0.1/1
+[Qwen2.5-7B-Instruct/phasekv] needle/24576/0.1/1: ok | peak=17.45 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/24576/0.1/2
+[Qwen2.5-7B-Instruct/phasekv] needle/24576/0.1/2: ok | peak=17.45 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/24576/0.5/0
+[Qwen2.5-7B-Instruct/phasekv] needle/24576/0.5/0: ok | peak=17.45 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/24576/0.5/1
+[Qwen2.5-7B-Instruct/phasekv] needle/24576/0.5/1: ok | peak=17.45 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/24576/0.5/2
+[Qwen2.5-7B-Instruct/phasekv] needle/24576/0.5/2: ok | peak=17.45 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/24576/0.9/0
+[Qwen2.5-7B-Instruct/phasekv] needle/24576/0.9/0: ok | peak=17.45 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/24576/0.9/1
+[Qwen2.5-7B-Instruct/phasekv] needle/24576/0.9/1: ok | peak=17.45 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/24576/0.9/2
+[Qwen2.5-7B-Instruct/phasekv] needle/24576/0.9/2: ok | peak=17.45 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/32000/0.1/0
+[Qwen2.5-7B-Instruct/phasekv] needle/32000/0.1/0: ok | peak=18.43 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/32000/0.1/1
+[Qwen2.5-7B-Instruct/phasekv] needle/32000/0.1/1: ok | peak=18.43 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/32000/0.1/2
+[Qwen2.5-7B-Instruct/phasekv] needle/32000/0.1/2: ok | peak=18.43 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/32000/0.5/0
+[Qwen2.5-7B-Instruct/phasekv] needle/32000/0.5/0: ok | peak=18.43 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/32000/0.5/1
+[Qwen2.5-7B-Instruct/phasekv] needle/32000/0.5/1: ok | peak=18.43 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/32000/0.5/2
+[Qwen2.5-7B-Instruct/phasekv] needle/32000/0.5/2: ok | peak=18.43 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/32000/0.9/0
+[Qwen2.5-7B-Instruct/phasekv] needle/32000/0.9/0: ok | peak=18.43 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/32000/0.9/1
+[Qwen2.5-7B-Instruct/phasekv] needle/32000/0.9/1: ok | peak=18.43 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/32000/0.9/2
+[Qwen2.5-7B-Instruct/phasekv] needle/32000/0.9/2: ok | peak=18.43 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/32640/0.1/0
+[Qwen2.5-7B-Instruct/phasekv] needle/32640/0.1/0: ok | peak=18.51 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/32640/0.1/1
+[Qwen2.5-7B-Instruct/phasekv] needle/32640/0.1/1: ok | peak=18.51 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/32640/0.1/2
+[Qwen2.5-7B-Instruct/phasekv] needle/32640/0.1/2: ok | peak=18.51 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/32640/0.5/0
+[Qwen2.5-7B-Instruct/phasekv] needle/32640/0.5/0: ok | peak=18.51 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/32640/0.5/1
+[Qwen2.5-7B-Instruct/phasekv] needle/32640/0.5/1: ok | peak=18.51 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/32640/0.5/2
+[Qwen2.5-7B-Instruct/phasekv] needle/32640/0.5/2: ok | peak=18.51 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/32640/0.9/0
+[Qwen2.5-7B-Instruct/phasekv] needle/32640/0.9/0: ok | peak=18.51 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/32640/0.9/1
+[Qwen2.5-7B-Instruct/phasekv] needle/32640/0.9/1: ok | peak=18.51 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv needle/32640/0.9/2
+[Qwen2.5-7B-Instruct/phasekv] needle/32640/0.9/2: ok | peak=18.51 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv performance/short/1024/1024/0
+[Qwen2.5-7B-Instruct/phasekv] performance/short/1024/1024/0: ok | peak=14.39 GiB | 1024 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv performance/short/1024/1024/1
+[Qwen2.5-7B-Instruct/phasekv] performance/short/1024/1024/1: ok | peak=14.39 GiB | 1024 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv performance/short/1024/1024/2
+[Qwen2.5-7B-Instruct/phasekv] performance/short/1024/1024/2: ok | peak=14.39 GiB | 1024 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv performance/short/1024/1024/3
+[Qwen2.5-7B-Instruct/phasekv] performance/short/1024/1024/3: ok | peak=14.39 GiB | 1024 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv performance/long_output/1024/4096/0
+[Qwen2.5-7B-Instruct/phasekv] performance/long_output/1024/4096/0: ok | peak=14.54 GiB | 4096 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv performance/long_output/1024/4096/1
+[Qwen2.5-7B-Instruct/phasekv] performance/long_output/1024/4096/1: ok | peak=14.54 GiB | 4096 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv performance/long_output/1024/4096/2
+[Qwen2.5-7B-Instruct/phasekv] performance/long_output/1024/4096/2: ok | peak=14.54 GiB | 4096 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv performance/long_output/1024/4096/3
+[Qwen2.5-7B-Instruct/phasekv] performance/long_output/1024/4096/3: ok | peak=14.54 GiB | 4096 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv performance/long_input/16384/256/0
+[Qwen2.5-7B-Instruct/phasekv] performance/long_input/16384/256/0: ok | peak=16.38 GiB | 256 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv performance/long_input/16384/256/1
+[Qwen2.5-7B-Instruct/phasekv] performance/long_input/16384/256/1: ok | peak=16.38 GiB | 256 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv performance/long_input/16384/256/2
+[Qwen2.5-7B-Instruct/phasekv] performance/long_input/16384/256/2: ok | peak=16.38 GiB | 256 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv performance/long_input/16384/256/3
+[Qwen2.5-7B-Instruct/phasekv] performance/long_input/16384/256/3: ok | peak=16.38 GiB | 256 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv performance/joint/16384/2048/0
+[Qwen2.5-7B-Instruct/phasekv] performance/joint/16384/2048/0: ok | peak=16.38 GiB | 2048 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv performance/joint/16384/2048/1
+[Qwen2.5-7B-Instruct/phasekv] performance/joint/16384/2048/1: ok | peak=16.38 GiB | 2048 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv performance/joint/16384/2048/2
+[Qwen2.5-7B-Instruct/phasekv] performance/joint/16384/2048/2: ok | peak=16.38 GiB | 2048 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv performance/joint/16384/2048/3
+[Qwen2.5-7B-Instruct/phasekv] performance/joint/16384/2048/3: ok | peak=16.38 GiB | 2048 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv performance/joint/24576/4096/0
+[Qwen2.5-7B-Instruct/phasekv] performance/joint/24576/4096/0: ok | peak=17.45 GiB | 4096 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv performance/joint/24576/4096/1
+[Qwen2.5-7B-Instruct/phasekv] performance/joint/24576/4096/1: ok | peak=17.45 GiB | 4096 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv performance/joint/24576/4096/2
+[Qwen2.5-7B-Instruct/phasekv] performance/joint/24576/4096/2: ok | peak=17.45 GiB | 4096 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv performance/joint/24576/4096/3
+[Qwen2.5-7B-Instruct/phasekv] performance/joint/24576/4096/3: ok | peak=17.45 GiB | 4096 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv performance/long_input/32000/256/0
+[Qwen2.5-7B-Instruct/phasekv] performance/long_input/32000/256/0: ok | peak=18.43 GiB | 256 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv performance/long_input/32000/256/1
+[Qwen2.5-7B-Instruct/phasekv] performance/long_input/32000/256/1: ok | peak=18.43 GiB | 256 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv performance/long_input/32000/256/2
+[Qwen2.5-7B-Instruct/phasekv] performance/long_input/32000/256/2: ok | peak=18.43 GiB | 256 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv performance/long_input/32000/256/3
+[Qwen2.5-7B-Instruct/phasekv] performance/long_input/32000/256/3: ok | peak=18.43 GiB | 256 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/1536/9
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/1536/9: ok | peak=14.45 GiB | 13 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/1536/15
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/1536/15: ok | peak=14.45 GiB | 8 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/1536/16
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/1536/16: ok | peak=14.45 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/1536/18
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/1536/18: ok | peak=14.45 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/1536/20
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/1536/20: ok | peak=14.45 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/1536/23
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/1536/23: ok | peak=14.45 GiB | 6 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/1536/54
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/1536/54: ok | peak=14.45 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/1536/57
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/1536/57: ok | peak=14.45 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/1536/66
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/1536/66: ok | peak=14.45 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/1536/67
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/1536/67: ok | peak=14.45 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/1536/73
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/1536/73: ok | peak=14.45 GiB | 6 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/1536/99
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/1536/99: ok | peak=14.45 GiB | 12 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/1536/106
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/1536/106: ok | peak=14.45 GiB | 6 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/1536/108
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/1536/108: ok | peak=14.45 GiB | 6 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/1536/112
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/1536/112: ok | peak=14.45 GiB | 13 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/1536/114
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/1536/114: ok | peak=14.45 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/1536/121
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/1536/121: ok | peak=14.45 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/1536/122
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/1536/122: ok | peak=14.45 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/1536/124
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/1536/124: ok | peak=14.45 GiB | 8 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/1536/125
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/1536/125: ok | peak=14.45 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/1536/138
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/1536/138: ok | peak=14.45 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/1536/140
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/1536/140: ok | peak=14.45 GiB | 14 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/1536/142
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/1536/142: ok | peak=14.45 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/1536/154
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/1536/154: ok | peak=14.45 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/1536/159
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/1536/159: ok | peak=14.45 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/1536/160
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/1536/160: ok | peak=14.45 GiB | 11 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/1536/163
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/1536/163: ok | peak=14.45 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/1536/172
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/1536/172: ok | peak=14.45 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/1536/181
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/1536/181: ok | peak=14.45 GiB | 8 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/1536/184
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/1536/184: ok | peak=14.45 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/1536/190
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/1536/190: ok | peak=14.45 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/1536/191
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/1536/191: ok | peak=14.45 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/3072/9
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/3072/9: ok | peak=14.66 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/3072/15
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/3072/15: ok | peak=14.66 GiB | 12 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/3072/16
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/3072/16: ok | peak=14.66 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/3072/18
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/3072/18: ok | peak=14.66 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/3072/20
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/3072/20: ok | peak=14.66 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/3072/23
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/3072/23: ok | peak=14.66 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/3072/54
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/3072/54: ok | peak=14.66 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/3072/57
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/3072/57: ok | peak=14.66 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/3072/66
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/3072/66: ok | peak=14.66 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/3072/67
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/3072/67: ok | peak=14.66 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/3072/73
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/3072/73: ok | peak=14.66 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/3072/99
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/3072/99: ok | peak=14.66 GiB | 17 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/3072/106
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/3072/106: ok | peak=14.66 GiB | 6 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/3072/108
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/3072/108: ok | peak=14.66 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/3072/112
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/3072/112: ok | peak=14.66 GiB | 12 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/3072/114
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/3072/114: ok | peak=14.66 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/3072/121
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/3072/121: ok | peak=14.66 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/3072/122
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/3072/122: ok | peak=14.66 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/3072/124
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/3072/124: ok | peak=14.66 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/3072/125
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/3072/125: ok | peak=14.66 GiB | 12 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/3072/138
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/3072/138: ok | peak=14.66 GiB | 10 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/3072/140
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/3072/140: ok | peak=14.66 GiB | 10 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/3072/142
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/3072/142: ok | peak=14.66 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/3072/154
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/3072/154: ok | peak=14.66 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/3072/159
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/3072/159: ok | peak=14.66 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/3072/160
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/3072/160: ok | peak=14.66 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/3072/163
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/3072/163: ok | peak=14.66 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/3072/172
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/3072/172: ok | peak=14.66 GiB | 6 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/3072/181
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/3072/181: ok | peak=14.66 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/3072/184
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/3072/184: ok | peak=14.66 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/3072/190
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/3072/190: ok | peak=14.66 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/3072/191
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/3072/191: ok | peak=14.66 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/8192/9
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/8192/9: ok | peak=15.34 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/8192/15
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/8192/15: ok | peak=15.34 GiB | 8 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/8192/16
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/8192/16: ok | peak=15.34 GiB | 13 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/8192/18
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/8192/18: ok | peak=15.34 GiB | 8 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/8192/20
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/8192/20: ok | peak=15.34 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/8192/23
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/8192/23: ok | peak=15.34 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/8192/54
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/8192/54: ok | peak=15.34 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/8192/57
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/8192/57: ok | peak=15.34 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/8192/66
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/8192/66: ok | peak=15.34 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/8192/67
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/8192/67: ok | peak=15.34 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/8192/73
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/8192/73: ok | peak=15.34 GiB | 10 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/8192/99
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/8192/99: ok | peak=15.34 GiB | 18 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/8192/106
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/8192/106: ok | peak=15.34 GiB | 6 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/8192/108
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/8192/108: ok | peak=15.34 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/8192/112
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/8192/112: ok | peak=15.34 GiB | 15 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/8192/114
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/8192/114: ok | peak=15.34 GiB | 8 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/8192/121
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/8192/121: ok | peak=15.34 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/8192/122
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/8192/122: ok | peak=15.34 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/8192/124
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/8192/124: ok | peak=15.34 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/8192/125
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/8192/125: ok | peak=15.34 GiB | 12 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/8192/138
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/8192/138: ok | peak=15.34 GiB | 11 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/8192/140
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/8192/140: ok | peak=15.34 GiB | 16 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/8192/142
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/8192/142: ok | peak=15.34 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/8192/154
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/8192/154: ok | peak=15.34 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/8192/159
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/8192/159: ok | peak=15.34 GiB | 27 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/8192/160
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/8192/160: ok | peak=15.34 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/8192/163
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/8192/163: ok | peak=15.34 GiB | 6 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/8192/172
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/8192/172: ok | peak=15.34 GiB | 6 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/8192/181
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/8192/181: ok | peak=15.34 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/8192/184
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/8192/184: ok | peak=15.34 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/8192/190
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/8192/190: ok | peak=15.34 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/8192/191
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/8192/191: ok | peak=15.34 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/16384/9
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/16384/9: ok | peak=15.37 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/16384/15
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/16384/15: ok | peak=16.42 GiB | 11 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/16384/16
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/16384/16: ok | peak=16.42 GiB | 14 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/16384/18
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/16384/18: ok | peak=16.42 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/16384/20
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/16384/20: ok | peak=16.04 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/16384/23
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/16384/23: ok | peak=15.45 GiB | 14 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/16384/54
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/16384/54: ok | peak=16.42 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/16384/57
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/16384/57: ok | peak=16.42 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/16384/66
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/16384/66: ok | peak=15.86 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/16384/67
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/16384/67: ok | peak=16.42 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/16384/73
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/16384/73: ok | peak=15.46 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/16384/99
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/16384/99: ok | peak=16.42 GiB | 18 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/16384/106
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/16384/106: ok | peak=16.42 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/16384/108
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/16384/108: ok | peak=16.05 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/16384/112
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/16384/112: ok | peak=16.42 GiB | 12 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/16384/114
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/16384/114: ok | peak=16.42 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/16384/121
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/16384/121: ok | peak=16.42 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/16384/122
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/16384/122: ok | peak=16.42 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/16384/124
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/16384/124: ok | peak=16.42 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/16384/125
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/16384/125: ok | peak=15.46 GiB | 12 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/16384/138
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/16384/138: ok | peak=16.42 GiB | 11 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/16384/140
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/16384/140: ok | peak=16.42 GiB | 8 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/16384/142
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/16384/142: ok | peak=16.42 GiB | 20 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/16384/154
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/16384/154: ok | peak=16.42 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/16384/159
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/16384/159: ok | peak=16.42 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/16384/160
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/16384/160: ok | peak=15.77 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/16384/163
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/16384/163: ok | peak=16.42 GiB | 10 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/16384/172
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/16384/172: ok | peak=16.42 GiB | 10 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/16384/181
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/16384/181: ok | peak=16.42 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/16384/184
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/16384/184: ok | peak=15.37 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/16384/190
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/16384/190: ok | peak=16.42 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/narrativeqa/16384/191
+[Qwen2.5-7B-Instruct/phasekv] quality/narrativeqa/16384/191: ok | peak=16.42 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/1536/9
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/1536/9: ok | peak=14.45 GiB | 26 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/1536/16
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/1536/16: ok | peak=14.45 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/1536/26
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/1536/26: ok | peak=14.45 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/1536/42
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/1536/42: ok | peak=14.45 GiB | 26 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/1536/47
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/1536/47: ok | peak=14.45 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/1536/48
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/1536/48: ok | peak=14.45 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/1536/57
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/1536/57: ok | peak=14.45 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/1536/58
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/1536/58: ok | peak=14.45 GiB | 8 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/1536/66
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/1536/66: ok | peak=14.45 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/1536/75
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/1536/75: ok | peak=14.45 GiB | 16 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/1536/80
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/1536/80: ok | peak=14.45 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/1536/81
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/1536/81: ok | peak=14.45 GiB | 8 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/1536/82
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/1536/82: ok | peak=14.45 GiB | 37 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/1536/86
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/1536/86: ok | peak=14.45 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/1536/91
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/1536/91: ok | peak=14.45 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/1536/92
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/1536/92: ok | peak=14.45 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/1536/108
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/1536/108: ok | peak=14.45 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/1536/113
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/1536/113: ok | peak=14.45 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/1536/116
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/1536/116: ok | peak=14.45 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/1536/117
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/1536/117: ok | peak=14.45 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/1536/120
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/1536/120: ok | peak=14.45 GiB | 23 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/1536/124
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/1536/124: ok | peak=14.45 GiB | 12 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/1536/126
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/1536/126: ok | peak=14.45 GiB | 8 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/1536/135
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/1536/135: ok | peak=14.45 GiB | 15 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/1536/137
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/1536/137: ok | peak=14.45 GiB | 10 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/1536/142
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/1536/142: ok | peak=14.45 GiB | 24 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/1536/147
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/1536/147: ok | peak=14.45 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/1536/163
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/1536/163: ok | peak=14.45 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/1536/181
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/1536/181: ok | peak=14.45 GiB | 18 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/1536/189
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/1536/189: ok | peak=14.45 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/1536/197
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/1536/197: ok | peak=14.45 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/1536/199
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/1536/199: ok | peak=14.45 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/3072/9
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/3072/9: ok | peak=14.66 GiB | 17 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/3072/16
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/3072/16: ok | peak=14.66 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/3072/26
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/3072/26: ok | peak=14.66 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/3072/42
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/3072/42: ok | peak=14.62 GiB | 23 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/3072/47
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/3072/47: ok | peak=14.66 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/3072/48
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/3072/48: ok | peak=14.66 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/3072/57
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/3072/57: ok | peak=14.66 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/3072/58
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/3072/58: ok | peak=14.66 GiB | 32 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/3072/66
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/3072/66: ok | peak=14.66 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/3072/75
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/3072/75: ok | peak=14.66 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/3072/80
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/3072/80: ok | peak=14.66 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/3072/81
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/3072/81: ok | peak=14.66 GiB | 8 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/3072/82
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/3072/82: ok | peak=14.66 GiB | 65 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/3072/86
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/3072/86: ok | peak=14.61 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/3072/91
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/3072/91: ok | peak=14.66 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/3072/92
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/3072/92: ok | peak=14.60 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/3072/108
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/3072/108: ok | peak=14.66 GiB | 15 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/3072/113
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/3072/113: ok | peak=14.66 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/3072/116
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/3072/116: ok | peak=14.66 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/3072/117
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/3072/117: ok | peak=14.66 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/3072/120
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/3072/120: ok | peak=14.66 GiB | 25 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/3072/124
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/3072/124: ok | peak=14.66 GiB | 13 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/3072/126
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/3072/126: ok | peak=14.66 GiB | 16 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/3072/135
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/3072/135: ok | peak=14.66 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/3072/137
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/3072/137: ok | peak=14.63 GiB | 10 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/3072/142
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/3072/142: ok | peak=14.66 GiB | 38 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/3072/147
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/3072/147: ok | peak=14.66 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/3072/163
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/3072/163: ok | peak=14.64 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/3072/181
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/3072/181: ok | peak=14.66 GiB | 26 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/3072/189
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/3072/189: ok | peak=14.66 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/3072/197
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/3072/197: ok | peak=14.66 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/3072/199
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/3072/199: ok | peak=14.66 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/8192/9
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/8192/9: ok | peak=14.97 GiB | 42 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/8192/16
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/8192/16: ok | peak=15.34 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/8192/26
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/8192/26: ok | peak=14.69 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/8192/42
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/8192/42: ok | peak=14.62 GiB | 23 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/8192/47
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/8192/47: ok | peak=14.86 GiB | 26 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/8192/48
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/8192/48: ok | peak=14.72 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/8192/57
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/8192/57: ok | peak=15.34 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/8192/58
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/8192/58: ok | peak=15.16 GiB | 25 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/8192/66
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/8192/66: ok | peak=14.96 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/8192/75
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/8192/75: ok | peak=14.68 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/8192/80
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/8192/80: ok | peak=15.03 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/8192/81
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/8192/81: ok | peak=14.86 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/8192/82
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/8192/82: ok | peak=14.72 GiB | 45 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/8192/86
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/8192/86: ok | peak=14.61 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/8192/91
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/8192/91: ok | peak=15.10 GiB | 36 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/8192/92
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/8192/92: ok | peak=14.60 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/8192/108
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/8192/108: ok | peak=14.87 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/8192/113
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/8192/113: ok | peak=15.34 GiB | 19 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/8192/116
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/8192/116: ok | peak=14.75 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/8192/117
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/8192/117: ok | peak=14.68 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/8192/120
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/8192/120: ok | peak=14.87 GiB | 34 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/8192/124
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/8192/124: ok | peak=15.02 GiB | 15 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/8192/126
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/8192/126: ok | peak=14.70 GiB | 16 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/8192/135
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/8192/135: ok | peak=14.92 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/8192/137
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/8192/137: ok | peak=14.63 GiB | 10 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/8192/142
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/8192/142: ok | peak=15.03 GiB | 30 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/8192/147
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/8192/147: ok | peak=14.72 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/8192/163
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/8192/163: ok | peak=14.64 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/8192/181
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/8192/181: ok | peak=15.09 GiB | 26 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/8192/189
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/8192/189: ok | peak=14.95 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/8192/197
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/8192/197: ok | peak=15.04 GiB | 15 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/8192/199
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/8192/199: ok | peak=15.18 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/16384/9
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/16384/9: ok | peak=14.97 GiB | 42 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/16384/16
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/16384/16: ok | peak=16.37 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/16384/26
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/16384/26: ok | peak=14.69 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/16384/42
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/16384/42: ok | peak=14.62 GiB | 23 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/16384/47
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/16384/47: ok | peak=14.86 GiB | 26 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/16384/48
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/16384/48: ok | peak=14.72 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/16384/57
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/16384/57: ok | peak=16.42 GiB | 32 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/16384/58
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/16384/58: ok | peak=15.16 GiB | 25 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/16384/66
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/16384/66: ok | peak=14.96 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/16384/75
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/16384/75: ok | peak=14.68 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/16384/80
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/16384/80: ok | peak=15.03 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/16384/81
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/16384/81: ok | peak=14.86 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/16384/82
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/16384/82: ok | peak=14.72 GiB | 45 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/16384/86
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/16384/86: ok | peak=14.61 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/16384/91
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/16384/91: ok | peak=15.10 GiB | 36 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/16384/92
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/16384/92: ok | peak=14.60 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/16384/108
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/16384/108: ok | peak=14.87 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/16384/113
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/16384/113: ok | peak=15.63 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/16384/116
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/16384/116: ok | peak=14.75 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/16384/117
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/16384/117: ok | peak=14.68 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/16384/120
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/16384/120: ok | peak=14.87 GiB | 34 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/16384/124
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/16384/124: ok | peak=15.02 GiB | 15 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/16384/126
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/16384/126: ok | peak=14.70 GiB | 16 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/16384/135
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/16384/135: ok | peak=14.92 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/16384/137
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/16384/137: ok | peak=14.63 GiB | 10 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/16384/142
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/16384/142: ok | peak=15.03 GiB | 30 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/16384/147
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/16384/147: ok | peak=14.72 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/16384/163
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/16384/163: ok | peak=14.64 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/16384/181
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/16384/181: ok | peak=15.09 GiB | 26 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/16384/189
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/16384/189: ok | peak=14.95 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/16384/197
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/16384/197: ok | peak=15.04 GiB | 15 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qasper/16384/199
+[Qwen2.5-7B-Instruct/phasekv] quality/qasper/16384/199: ok | peak=15.18 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/1536/4
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/1536/4: ok | peak=14.45 GiB | 22 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/1536/6
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/1536/6: ok | peak=14.45 GiB | 20 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/1536/13
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/1536/13: ok | peak=14.45 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/1536/14
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/1536/14: ok | peak=14.45 GiB | 45 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/1536/15
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/1536/15: ok | peak=14.45 GiB | 6 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/1536/21
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/1536/21: ok | peak=14.45 GiB | 11 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/1536/29
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/1536/29: ok | peak=14.45 GiB | 21 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/1536/37
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/1536/37: ok | peak=14.45 GiB | 64 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/1536/38
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/1536/38: ok | peak=14.45 GiB | 22 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/1536/39
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/1536/39: ok | peak=14.45 GiB | 25 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/1536/45
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/1536/45: ok | peak=14.45 GiB | 64 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/1536/50
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/1536/50: ok | peak=14.45 GiB | 10 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/1536/52
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/1536/52: ok | peak=14.45 GiB | 36 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/1536/57
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/1536/57: ok | peak=14.45 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/1536/58
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/1536/58: ok | peak=14.44 GiB | 37 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/1536/71
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/1536/71: ok | peak=14.45 GiB | 28 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/1536/77
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/1536/77: ok | peak=14.45 GiB | 16 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/1536/79
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/1536/79: ok | peak=14.45 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/1536/82
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/1536/82: ok | peak=14.45 GiB | 24 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/1536/86
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/1536/86: ok | peak=14.45 GiB | 10 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/1536/87
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/1536/87: ok | peak=14.45 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/1536/90
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/1536/90: ok | peak=14.45 GiB | 25 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/1536/93
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/1536/93: ok | peak=14.45 GiB | 10 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/1536/102
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/1536/102: ok | peak=14.45 GiB | 26 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/1536/106
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/1536/106: ok | peak=14.45 GiB | 16 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/1536/109
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/1536/109: ok | peak=14.45 GiB | 35 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/1536/110
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/1536/110: ok | peak=14.45 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/1536/124
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/1536/124: ok | peak=14.45 GiB | 49 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/1536/125
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/1536/125: ok | peak=14.45 GiB | 17 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/1536/133
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/1536/133: ok | peak=14.45 GiB | 60 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/1536/134
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/1536/134: ok | peak=14.45 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/1536/146
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/1536/146: ok | peak=14.45 GiB | 8 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/3072/4
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/3072/4: ok | peak=14.66 GiB | 20 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/3072/6
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/3072/6: ok | peak=14.66 GiB | 23 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/3072/13
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/3072/13: ok | peak=14.66 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/3072/14
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/3072/14: ok | peak=14.66 GiB | 15 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/3072/15
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/3072/15: ok | peak=14.63 GiB | 6 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/3072/21
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/3072/21: ok | peak=14.66 GiB | 6 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/3072/29
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/3072/29: ok | peak=14.66 GiB | 20 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/3072/37
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/3072/37: ok | peak=14.66 GiB | 64 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/3072/38
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/3072/38: ok | peak=14.66 GiB | 10 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/3072/39
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/3072/39: ok | peak=14.66 GiB | 25 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/3072/45
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/3072/45: ok | peak=14.66 GiB | 54 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/3072/50
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/3072/50: ok | peak=14.64 GiB | 10 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/3072/52
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/3072/52: ok | peak=14.66 GiB | 43 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/3072/57
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/3072/57: ok | peak=14.64 GiB | 10 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/3072/58
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/3072/58: ok | peak=14.44 GiB | 37 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/3072/71
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/3072/71: ok | peak=14.49 GiB | 28 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/3072/77
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/3072/77: ok | peak=14.66 GiB | 18 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/3072/79
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/3072/79: ok | peak=14.66 GiB | 64 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/3072/82
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/3072/82: ok | peak=14.66 GiB | 25 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/3072/86
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/3072/86: ok | peak=14.49 GiB | 8 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/3072/87
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/3072/87: ok | peak=14.60 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/3072/90
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/3072/90: ok | peak=14.66 GiB | 25 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/3072/93
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/3072/93: ok | peak=14.66 GiB | 57 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/3072/102
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/3072/102: ok | peak=14.66 GiB | 23 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/3072/106
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/3072/106: ok | peak=14.66 GiB | 25 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/3072/109
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/3072/109: ok | peak=14.66 GiB | 35 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/3072/110
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/3072/110: ok | peak=14.66 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/3072/124
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/3072/124: ok | peak=14.66 GiB | 35 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/3072/125
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/3072/125: ok | peak=14.66 GiB | 36 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/3072/133
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/3072/133: ok | peak=14.66 GiB | 56 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/3072/134
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/3072/134: ok | peak=14.66 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/3072/146
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/3072/146: ok | peak=14.60 GiB | 8 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/8192/4
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/8192/4: ok | peak=15.27 GiB | 35 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/8192/6
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/8192/6: ok | peak=15.34 GiB | 31 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/8192/13
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/8192/13: ok | peak=15.34 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/8192/14
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/8192/14: ok | peak=15.34 GiB | 48 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/8192/15
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/8192/15: ok | peak=14.63 GiB | 6 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/8192/21
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/8192/21: ok | peak=15.25 GiB | 11 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/8192/29
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/8192/29: ok | peak=15.34 GiB | 21 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/8192/37
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/8192/37: ok | peak=15.34 GiB | 64 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/8192/38
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/8192/38: ok | peak=15.05 GiB | 10 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/8192/39
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/8192/39: ok | peak=14.77 GiB | 10 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/8192/45
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/8192/45: ok | peak=15.34 GiB | 64 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/8192/50
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/8192/50: ok | peak=14.64 GiB | 10 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/8192/52
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/8192/52: ok | peak=15.34 GiB | 43 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/8192/57
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/8192/57: ok | peak=14.64 GiB | 10 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/8192/58
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/8192/58: ok | peak=14.44 GiB | 37 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/8192/71
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/8192/71: ok | peak=14.49 GiB | 28 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/8192/77
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/8192/77: ok | peak=15.08 GiB | 18 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/8192/79
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/8192/79: ok | peak=15.26 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/8192/82
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/8192/82: ok | peak=14.96 GiB | 11 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/8192/86
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/8192/86: ok | peak=14.49 GiB | 8 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/8192/87
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/8192/87: ok | peak=14.60 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/8192/90
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/8192/90: ok | peak=15.34 GiB | 33 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/8192/93
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/8192/93: ok | peak=14.69 GiB | 14 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/8192/102
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/8192/102: ok | peak=15.34 GiB | 26 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/8192/106
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/8192/106: ok | peak=15.34 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/8192/109
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/8192/109: ok | peak=15.34 GiB | 37 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/8192/110
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/8192/110: ok | peak=15.34 GiB | 6 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/8192/124
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/8192/124: ok | peak=15.19 GiB | 47 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/8192/125
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/8192/125: ok | peak=15.34 GiB | 40 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/8192/133
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/8192/133: ok | peak=15.34 GiB | 64 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/8192/134
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/8192/134: ok | peak=15.34 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/8192/146
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/8192/146: ok | peak=14.60 GiB | 8 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/16384/4
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/16384/4: ok | peak=15.27 GiB | 35 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/16384/6
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/16384/6: ok | peak=15.34 GiB | 31 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/16384/13
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/16384/13: ok | peak=15.34 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/16384/14
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/16384/14: ok | peak=15.54 GiB | 48 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/16384/15
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/16384/15: ok | peak=14.63 GiB | 6 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/16384/21
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/16384/21: ok | peak=15.25 GiB | 11 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/16384/29
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/16384/29: ok | peak=15.40 GiB | 20 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/16384/37
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/16384/37: ok | peak=15.48 GiB | 64 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/16384/38
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/16384/38: ok | peak=15.05 GiB | 10 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/16384/39
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/16384/39: ok | peak=14.77 GiB | 10 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/16384/45
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/16384/45: ok | peak=15.54 GiB | 48 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/16384/50
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/16384/50: ok | peak=14.64 GiB | 10 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/16384/52
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/16384/52: ok | peak=15.40 GiB | 36 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/16384/57
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/16384/57: ok | peak=14.64 GiB | 10 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/16384/58
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/16384/58: ok | peak=14.44 GiB | 37 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/16384/71
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/16384/71: ok | peak=14.49 GiB | 28 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/16384/77
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/16384/77: ok | peak=15.08 GiB | 18 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/16384/79
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/16384/79: ok | peak=15.26 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/16384/82
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/16384/82: ok | peak=14.96 GiB | 11 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/16384/86
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/16384/86: ok | peak=14.49 GiB | 8 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/16384/87
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/16384/87: ok | peak=14.60 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/16384/90
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/16384/90: ok | peak=16.23 GiB | 33 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/16384/93
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/16384/93: ok | peak=14.69 GiB | 14 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/16384/102
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/16384/102: ok | peak=15.49 GiB | 26 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/16384/106
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/16384/106: ok | peak=15.42 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/16384/109
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/16384/109: ok | peak=15.51 GiB | 29 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/16384/110
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/16384/110: ok | peak=15.38 GiB | 15 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/16384/124
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/16384/124: ok | peak=15.19 GiB | 47 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/16384/125
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/16384/125: ok | peak=15.52 GiB | 26 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/16384/133
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/16384/133: ok | peak=15.74 GiB | 30 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/16384/134
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/16384/134: ok | peak=15.93 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multifieldqa_en/16384/146
+[Qwen2.5-7B-Instruct/phasekv] quality/multifieldqa_en/16384/146: ok | peak=14.60 GiB | 8 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/1536/0
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/1536/0: ok | peak=14.45 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/1536/2
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/1536/2: ok | peak=14.45 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/1536/24
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/1536/24: ok | peak=14.45 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/1536/36
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/1536/36: ok | peak=14.45 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/1536/37
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/1536/37: ok | peak=14.45 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/1536/43
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/1536/43: ok | peak=14.45 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/1536/51
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/1536/51: ok | peak=14.45 GiB | 6 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/1536/52
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/1536/52: ok | peak=14.45 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/1536/56
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/1536/56: ok | peak=14.45 GiB | 32 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/1536/59
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/1536/59: ok | peak=14.45 GiB | 32 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/1536/63
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/1536/63: ok | peak=14.45 GiB | 20 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/1536/69
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/1536/69: ok | peak=14.45 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/1536/72
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/1536/72: ok | peak=14.45 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/1536/78
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/1536/78: ok | peak=14.45 GiB | 20 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/1536/80
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/1536/80: ok | peak=14.45 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/1536/83
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/1536/83: ok | peak=14.45 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/1536/85
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/1536/85: ok | peak=14.45 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/1536/92
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/1536/92: ok | peak=14.45 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/1536/93
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/1536/93: ok | peak=14.45 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/1536/111
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/1536/111: ok | peak=14.45 GiB | 6 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/1536/113
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/1536/113: ok | peak=14.45 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/1536/116
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/1536/116: ok | peak=14.45 GiB | 32 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/1536/120
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/1536/120: ok | peak=14.45 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/1536/123
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/1536/123: ok | peak=14.45 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/1536/128
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/1536/128: ok | peak=14.45 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/1536/133
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/1536/133: ok | peak=14.45 GiB | 6 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/1536/137
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/1536/137: ok | peak=14.45 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/1536/151
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/1536/151: ok | peak=14.45 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/1536/155
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/1536/155: ok | peak=14.45 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/1536/168
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/1536/168: ok | peak=14.45 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/1536/177
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/1536/177: ok | peak=14.45 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/1536/181
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/1536/181: ok | peak=14.45 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/3072/0
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/3072/0: ok | peak=14.66 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/3072/2
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/3072/2: ok | peak=14.66 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/3072/24
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/3072/24: ok | peak=14.66 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/3072/36
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/3072/36: ok | peak=14.66 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/3072/37
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/3072/37: ok | peak=14.66 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/3072/43
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/3072/43: ok | peak=14.66 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/3072/51
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/3072/51: ok | peak=14.66 GiB | 6 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/3072/52
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/3072/52: ok | peak=14.66 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/3072/56
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/3072/56: ok | peak=14.66 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/3072/59
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/3072/59: ok | peak=14.66 GiB | 32 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/3072/63
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/3072/63: ok | peak=14.66 GiB | 27 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/3072/69
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/3072/69: ok | peak=14.66 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/3072/72
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/3072/72: ok | peak=14.66 GiB | 6 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/3072/78
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/3072/78: ok | peak=14.66 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/3072/80
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/3072/80: ok | peak=14.66 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/3072/83
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/3072/83: ok | peak=14.66 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/3072/85
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/3072/85: ok | peak=14.66 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/3072/92
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/3072/92: ok | peak=14.66 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/3072/93
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/3072/93: ok | peak=14.66 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/3072/111
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/3072/111: ok | peak=14.66 GiB | 6 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/3072/113
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/3072/113: ok | peak=14.66 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/3072/116
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/3072/116: ok | peak=14.66 GiB | 32 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/3072/120
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/3072/120: ok | peak=14.66 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/3072/123
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/3072/123: ok | peak=14.66 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/3072/128
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/3072/128: ok | peak=14.66 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/3072/133
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/3072/133: ok | peak=14.66 GiB | 6 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/3072/137
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/3072/137: ok | peak=14.66 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/3072/151
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/3072/151: ok | peak=14.66 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/3072/155
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/3072/155: ok | peak=14.66 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/3072/168
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/3072/168: ok | peak=14.67 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/3072/177
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/3072/177: ok | peak=14.66 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/3072/181
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/3072/181: ok | peak=14.66 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/8192/0
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/8192/0: ok | peak=15.34 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/8192/2
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/8192/2: ok | peak=15.34 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/8192/24
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/8192/24: ok | peak=15.34 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/8192/36
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/8192/36: ok | peak=15.34 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/8192/37
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/8192/37: ok | peak=15.34 GiB | 6 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/8192/43
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/8192/43: ok | peak=15.34 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/8192/51
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/8192/51: ok | peak=15.34 GiB | 6 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/8192/52
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/8192/52: ok | peak=15.34 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/8192/56
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/8192/56: ok | peak=15.34 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/8192/59
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/8192/59: ok | peak=15.34 GiB | 32 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/8192/63
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/8192/63: ok | peak=15.34 GiB | 32 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/8192/69
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/8192/69: ok | peak=15.34 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/8192/72
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/8192/72: ok | peak=15.34 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/8192/78
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/8192/78: ok | peak=14.99 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/8192/80
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/8192/80: ok | peak=15.34 GiB | 6 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/8192/83
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/8192/83: ok | peak=15.34 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/8192/85
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/8192/85: ok | peak=15.03 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/8192/92
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/8192/92: ok | peak=15.34 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/8192/93
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/8192/93: ok | peak=15.34 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/8192/111
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/8192/111: ok | peak=15.34 GiB | 6 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/8192/113
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/8192/113: ok | peak=15.34 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/8192/116
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/8192/116: ok | peak=15.34 GiB | 32 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/8192/120
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/8192/120: ok | peak=14.74 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/8192/123
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/8192/123: ok | peak=15.34 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/8192/128
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/8192/128: ok | peak=15.34 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/8192/133
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/8192/133: ok | peak=15.34 GiB | 6 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/8192/137
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/8192/137: ok | peak=15.34 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/8192/151
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/8192/151: ok | peak=15.34 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/8192/155
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/8192/155: ok | peak=15.10 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/8192/168
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/8192/168: ok | peak=15.34 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/8192/177
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/8192/177: ok | peak=15.34 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/8192/181
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/8192/181: ok | peak=15.24 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/16384/0
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/16384/0: ok | peak=15.81 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/16384/2
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/16384/2: ok | peak=16.42 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/16384/24
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/16384/24: ok | peak=16.20 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/16384/36
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/16384/36: ok | peak=16.41 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/16384/37
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/16384/37: ok | peak=16.10 GiB | 6 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/16384/43
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/16384/43: ok | peak=16.42 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/16384/51
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/16384/51: ok | peak=16.42 GiB | 6 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/16384/52
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/16384/52: ok | peak=16.28 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/16384/56
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/16384/56: ok | peak=16.23 GiB | 32 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/16384/59
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/16384/59: ok | peak=15.85 GiB | 32 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/16384/63
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/16384/63: ok | peak=16.14 GiB | 32 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/16384/69
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/16384/69: ok | peak=16.42 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/16384/72
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/16384/72: ok | peak=15.47 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/16384/78
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/16384/78: ok | peak=14.99 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/16384/80
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/16384/80: ok | peak=15.59 GiB | 6 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/16384/83
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/16384/83: ok | peak=15.51 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/16384/85
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/16384/85: ok | peak=15.03 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/16384/92
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/16384/92: ok | peak=16.42 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/16384/93
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/16384/93: ok | peak=16.42 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/16384/111
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/16384/111: ok | peak=16.42 GiB | 6 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/16384/113
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/16384/113: ok | peak=16.19 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/16384/116
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/16384/116: ok | peak=16.19 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/16384/120
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/16384/120: ok | peak=14.74 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/16384/123
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/16384/123: ok | peak=16.30 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/16384/128
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/16384/128: ok | peak=16.42 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/16384/133
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/16384/133: ok | peak=15.48 GiB | 6 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/16384/137
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/16384/137: ok | peak=16.42 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/16384/151
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/16384/151: ok | peak=16.42 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/16384/155
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/16384/155: ok | peak=15.10 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/16384/168
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/16384/168: ok | peak=16.42 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/16384/177
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/16384/177: ok | peak=16.08 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/hotpotqa/16384/181
+[Qwen2.5-7B-Instruct/phasekv] quality/hotpotqa/16384/181: ok | peak=15.24 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/1536/9
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/1536/9: ok | peak=14.45 GiB | 32 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/1536/12
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/1536/12: ok | peak=14.45 GiB | 8 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/1536/20
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/1536/20: ok | peak=14.45 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/1536/22
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/1536/22: ok | peak=14.45 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/1536/32
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/1536/32: ok | peak=14.45 GiB | 32 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/1536/42
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/1536/42: ok | peak=14.45 GiB | 32 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/1536/45
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/1536/45: ok | peak=14.45 GiB | 8 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/1536/50
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/1536/50: ok | peak=14.45 GiB | 32 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/1536/51
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/1536/51: ok | peak=14.45 GiB | 21 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/1536/52
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/1536/52: ok | peak=14.45 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/1536/56
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/1536/56: ok | peak=14.45 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/1536/57
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/1536/57: ok | peak=14.45 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/1536/62
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/1536/62: ok | peak=14.45 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/1536/64
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/1536/64: ok | peak=14.45 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/1536/74
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/1536/74: ok | peak=14.45 GiB | 8 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/1536/75
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/1536/75: ok | peak=14.45 GiB | 10 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/1536/79
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/1536/79: ok | peak=14.45 GiB | 6 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/1536/81
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/1536/81: ok | peak=14.45 GiB | 8 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/1536/96
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/1536/96: ok | peak=14.45 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/1536/104
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/1536/104: ok | peak=14.45 GiB | 32 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/1536/108
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/1536/108: ok | peak=14.45 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/1536/121
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/1536/121: ok | peak=14.45 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/1536/127
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/1536/127: ok | peak=14.45 GiB | 25 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/1536/131
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/1536/131: ok | peak=14.45 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/1536/133
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/1536/133: ok | peak=14.45 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/1536/153
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/1536/153: ok | peak=14.45 GiB | 10 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/1536/158
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/1536/158: ok | peak=14.45 GiB | 17 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/1536/174
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/1536/174: ok | peak=14.45 GiB | 32 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/1536/182
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/1536/182: ok | peak=14.45 GiB | 20 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/1536/183
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/1536/183: ok | peak=14.45 GiB | 32 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/1536/184
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/1536/184: ok | peak=14.45 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/1536/192
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/1536/192: ok | peak=14.45 GiB | 32 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/3072/9
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/3072/9: ok | peak=14.66 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/3072/12
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/3072/12: ok | peak=14.58 GiB | 11 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/3072/20
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/3072/20: ok | peak=14.66 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/3072/22
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/3072/22: ok | peak=14.66 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/3072/32
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/3072/32: ok | peak=14.66 GiB | 32 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/3072/42
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/3072/42: ok | peak=14.66 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/3072/45
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/3072/45: ok | peak=14.66 GiB | 6 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/3072/50
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/3072/50: ok | peak=14.66 GiB | 32 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/3072/51
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/3072/51: ok | peak=14.67 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/3072/52
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/3072/52: ok | peak=14.66 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/3072/56
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/3072/56: ok | peak=14.66 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/3072/57
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/3072/57: ok | peak=14.66 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/3072/62
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/3072/62: ok | peak=14.66 GiB | 32 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/3072/64
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/3072/64: ok | peak=14.57 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/3072/74
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/3072/74: ok | peak=14.67 GiB | 8 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/3072/75
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/3072/75: ok | peak=14.66 GiB | 10 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/3072/79
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/3072/79: ok | peak=14.66 GiB | 11 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/3072/81
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/3072/81: ok | peak=14.66 GiB | 8 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/3072/96
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/3072/96: ok | peak=14.66 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/3072/104
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/3072/104: ok | peak=14.66 GiB | 32 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/3072/108
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/3072/108: ok | peak=14.66 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/3072/121
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/3072/121: ok | peak=14.66 GiB | 6 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/3072/127
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/3072/127: ok | peak=14.66 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/3072/131
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/3072/131: ok | peak=14.66 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/3072/133
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/3072/133: ok | peak=14.66 GiB | 6 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/3072/153
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/3072/153: ok | peak=14.66 GiB | 10 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/3072/158
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/3072/158: ok | peak=14.66 GiB | 9 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/3072/174
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/3072/174: ok | peak=14.66 GiB | 32 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/3072/182
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/3072/182: ok | peak=14.66 GiB | 20 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/3072/183
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/3072/183: ok | peak=14.66 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/3072/184
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/3072/184: ok | peak=14.66 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/3072/192
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/3072/192: ok | peak=14.66 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/8192/9
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/8192/9: ok | peak=15.31 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/8192/12
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/8192/12: ok | peak=14.58 GiB | 11 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/8192/20
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/8192/20: ok | peak=14.84 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/8192/22
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/8192/22: ok | peak=15.34 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/8192/32
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/8192/32: ok | peak=15.34 GiB | 28 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/8192/42
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/8192/42: ok | peak=15.34 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/8192/45
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/8192/45: ok | peak=15.34 GiB | 14 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/8192/50
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/8192/50: ok | peak=15.34 GiB | 6 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/8192/51
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/8192/51: ok | peak=15.34 GiB | 8 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/8192/52
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/8192/52: ok | peak=15.00 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/8192/56
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/8192/56: ok | peak=15.10 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/8192/57
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/8192/57: ok | peak=15.34 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/8192/62
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/8192/62: ok | peak=14.71 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/8192/64
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/8192/64: ok | peak=14.57 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/8192/74
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/8192/74: ok | peak=15.02 GiB | 32 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/8192/75
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/8192/75: ok | peak=14.90 GiB | 10 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/8192/79
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/8192/79: ok | peak=14.99 GiB | 32 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/8192/81
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/8192/81: ok | peak=15.16 GiB | 32 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/8192/96
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/8192/96: ok | peak=15.34 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/8192/104
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/8192/104: ok | peak=15.34 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/8192/108
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/8192/108: ok | peak=15.02 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/8192/121
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/8192/121: ok | peak=15.04 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/8192/127
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/8192/127: ok | peak=14.85 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/8192/131
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/8192/131: ok | peak=15.00 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/8192/133
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/8192/133: ok | peak=14.92 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/8192/153
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/8192/153: ok | peak=15.34 GiB | 10 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/8192/158
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/8192/158: ok | peak=15.03 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/8192/174
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/8192/174: ok | peak=15.34 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/8192/182
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/8192/182: ok | peak=14.94 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/8192/183
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/8192/183: ok | peak=15.10 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/8192/184
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/8192/184: ok | peak=15.34 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/8192/192
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/8192/192: ok | peak=15.34 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/16384/9
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/16384/9: ok | peak=15.31 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/16384/12
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/16384/12: ok | peak=14.58 GiB | 11 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/16384/20
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/16384/20: ok | peak=14.84 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/16384/22
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/16384/22: ok | peak=16.01 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/16384/32
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/16384/32: ok | peak=16.42 GiB | 6 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/16384/42
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/16384/42: ok | peak=15.90 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/16384/45
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/16384/45: ok | peak=15.60 GiB | 6 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/16384/50
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/16384/50: ok | peak=16.27 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/16384/51
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/16384/51: ok | peak=15.34 GiB | 8 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/16384/52
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/16384/52: ok | peak=15.00 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/16384/56
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/16384/56: ok | peak=15.10 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/16384/57
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/16384/57: ok | peak=15.65 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/16384/62
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/16384/62: ok | peak=14.71 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/16384/64
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/16384/64: ok | peak=14.57 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/16384/74
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/16384/74: ok | peak=15.02 GiB | 32 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/16384/75
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/16384/75: ok | peak=14.90 GiB | 10 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/16384/79
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/16384/79: ok | peak=14.99 GiB | 32 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/16384/81
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/16384/81: ok | peak=15.16 GiB | 32 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/16384/96
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/16384/96: ok | peak=15.89 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/16384/104
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/16384/104: ok | peak=16.20 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/16384/108
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/16384/108: ok | peak=15.02 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/16384/121
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/16384/121: ok | peak=15.04 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/16384/127
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/16384/127: ok | peak=14.85 GiB | 7 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/16384/131
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/16384/131: ok | peak=15.00 GiB | 3 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/16384/133
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/16384/133: ok | peak=14.92 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/16384/153
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/16384/153: ok | peak=16.05 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/16384/158
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/16384/158: ok | peak=15.03 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/16384/174
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/16384/174: ok | peak=16.01 GiB | 5 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/16384/182
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/16384/182: ok | peak=14.94 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/16384/183
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/16384/183: ok | peak=15.10 GiB | 4 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/16384/184
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/16384/184: ok | peak=15.35 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/2wikimqa/16384/192
+[Qwen2.5-7B-Instruct/phasekv] quality/2wikimqa/16384/192: ok | peak=16.42 GiB | 2 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/1536/6
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/1536/6: ok | peak=14.45 GiB | 386 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/1536/21
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/1536/21: ok | peak=14.45 GiB | 399 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/1536/22
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/1536/22: ok | peak=14.45 GiB | 382 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/1536/27
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/1536/27: ok | peak=14.45 GiB | 428 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/1536/39
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/1536/39: ok | peak=14.45 GiB | 395 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/1536/50
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/1536/50: ok | peak=14.45 GiB | 305 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/1536/62
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/1536/62: ok | peak=14.45 GiB | 390 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/1536/64
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/1536/64: ok | peak=14.45 GiB | 356 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/1536/74
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/1536/74: ok | peak=14.45 GiB | 416 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/1536/79
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/1536/79: ok | peak=14.45 GiB | 372 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/1536/99
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/1536/99: ok | peak=14.45 GiB | 446 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/1536/108
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/1536/108: ok | peak=14.45 GiB | 381 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/1536/116
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/1536/116: ok | peak=14.45 GiB | 385 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/1536/117
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/1536/117: ok | peak=14.45 GiB | 453 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/1536/130
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/1536/130: ok | peak=14.45 GiB | 375 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/1536/133
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/1536/133: ok | peak=14.45 GiB | 471 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/1536/140
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/1536/140: ok | peak=14.45 GiB | 308 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/1536/144
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/1536/144: ok | peak=14.45 GiB | 508 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/1536/145
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/1536/145: ok | peak=14.45 GiB | 325 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/1536/147
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/1536/147: ok | peak=14.45 GiB | 472 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/1536/150
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/1536/150: ok | peak=14.45 GiB | 375 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/1536/151
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/1536/151: ok | peak=14.45 GiB | 230 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/1536/158
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/1536/158: ok | peak=14.45 GiB | 361 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/1536/162
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/1536/162: ok | peak=14.45 GiB | 412 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/1536/169
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/1536/169: ok | peak=14.45 GiB | 357 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/1536/172
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/1536/172: ok | peak=14.45 GiB | 313 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/1536/179
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/1536/179: ok | peak=14.45 GiB | 353 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/1536/180
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/1536/180: ok | peak=14.45 GiB | 238 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/1536/182
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/1536/182: ok | peak=14.45 GiB | 296 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/1536/184
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/1536/184: ok | peak=14.45 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/1536/194
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/1536/194: ok | peak=14.45 GiB | 395 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/1536/198
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/1536/198: ok | peak=14.45 GiB | 500 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/3072/6
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/3072/6: ok | peak=14.66 GiB | 256 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/3072/21
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/3072/21: ok | peak=14.66 GiB | 365 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/3072/22
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/3072/22: ok | peak=14.66 GiB | 432 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/3072/27
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/3072/27: ok | peak=14.66 GiB | 270 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/3072/39
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/3072/39: ok | peak=14.66 GiB | 469 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/3072/50
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/3072/50: ok | peak=14.66 GiB | 236 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/3072/62
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/3072/62: ok | peak=14.66 GiB | 401 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/3072/64
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/3072/64: ok | peak=14.66 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/3072/74
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/3072/74: ok | peak=14.66 GiB | 381 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/3072/79
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/3072/79: ok | peak=14.66 GiB | 386 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/3072/99
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/3072/99: ok | peak=14.66 GiB | 445 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/3072/108
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/3072/108: ok | peak=14.66 GiB | 441 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/3072/116
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/3072/116: ok | peak=14.66 GiB | 369 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/3072/117
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/3072/117: ok | peak=14.66 GiB | 459 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/3072/130
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/3072/130: ok | peak=14.66 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/3072/133
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/3072/133: ok | peak=14.67 GiB | 407 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/3072/140
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/3072/140: ok | peak=14.66 GiB | 455 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/3072/144
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/3072/144: ok | peak=14.66 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/3072/145
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/3072/145: ok | peak=14.66 GiB | 387 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/3072/147
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/3072/147: ok | peak=14.66 GiB | 403 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/3072/150
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/3072/150: ok | peak=14.66 GiB | 345 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/3072/151
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/3072/151: ok | peak=14.66 GiB | 354 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/3072/158
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/3072/158: ok | peak=14.66 GiB | 376 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/3072/162
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/3072/162: ok | peak=14.66 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/3072/169
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/3072/169: ok | peak=14.66 GiB | 269 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/3072/172
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/3072/172: ok | peak=14.66 GiB | 373 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/3072/179
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/3072/179: ok | peak=14.66 GiB | 354 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/3072/180
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/3072/180: ok | peak=14.66 GiB | 462 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/3072/182
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/3072/182: ok | peak=14.66 GiB | 385 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/3072/184
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/3072/184: ok | peak=14.66 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/3072/194
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/3072/194: ok | peak=14.66 GiB | 472 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/3072/198
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/3072/198: ok | peak=14.66 GiB | 443 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/8192/6
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/8192/6: ok | peak=14.84 GiB | 434 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/8192/21
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/8192/21: ok | peak=15.34 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/8192/22
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/8192/22: ok | peak=15.34 GiB | 485 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/8192/27
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/8192/27: ok | peak=15.34 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/8192/39
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/8192/39: ok | peak=15.34 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/8192/50
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/8192/50: ok | peak=15.34 GiB | 426 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/8192/62
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/8192/62: ok | peak=15.34 GiB | 389 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/8192/64
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/8192/64: ok | peak=15.34 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/8192/74
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/8192/74: ok | peak=14.84 GiB | 458 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/8192/79
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/8192/79: ok | peak=15.34 GiB | 370 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/8192/99
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/8192/99: ok | peak=14.89 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/8192/108
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/8192/108: ok | peak=15.13 GiB | 445 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/8192/116
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/8192/116: ok | peak=15.34 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/8192/117
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/8192/117: ok | peak=15.33 GiB | 495 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/8192/130
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/8192/130: ok | peak=14.90 GiB | 470 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/8192/133
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/8192/133: ok | peak=15.34 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/8192/140
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/8192/140: ok | peak=15.04 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/8192/144
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/8192/144: ok | peak=15.31 GiB | 508 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/8192/145
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/8192/145: ok | peak=14.68 GiB | 386 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/8192/147
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/8192/147: ok | peak=15.34 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/8192/150
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/8192/150: ok | peak=15.03 GiB | 355 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/8192/151
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/8192/151: ok | peak=15.34 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/8192/158
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/8192/158: ok | peak=15.34 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/8192/162
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/8192/162: ok | peak=14.72 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/8192/169
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/8192/169: ok | peak=15.34 GiB | 444 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/8192/172
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/8192/172: ok | peak=15.34 GiB | 437 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/8192/179
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/8192/179: ok | peak=15.30 GiB | 337 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/8192/180
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/8192/180: ok | peak=14.91 GiB | 478 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/8192/182
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/8192/182: ok | peak=15.10 GiB | 493 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/8192/184
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/8192/184: ok | peak=14.74 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/8192/194
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/8192/194: ok | peak=14.86 GiB | 508 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/8192/198
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/8192/198: ok | peak=15.34 GiB | 405 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/16384/6
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/16384/6: ok | peak=14.84 GiB | 434 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/16384/21
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/16384/21: ok | peak=16.32 GiB | 363 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/16384/22
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/16384/22: ok | peak=15.79 GiB | 396 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/16384/27
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/16384/27: ok | peak=15.84 GiB | 472 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/16384/39
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/16384/39: ok | peak=16.42 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/16384/50
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/16384/50: ok | peak=15.49 GiB | 399 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/16384/62
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/16384/62: ok | peak=15.43 GiB | 358 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/16384/64
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/16384/64: ok | peak=15.45 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/16384/74
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/16384/74: ok | peak=14.84 GiB | 458 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/16384/79
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/16384/79: ok | peak=15.90 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/16384/99
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/16384/99: ok | peak=14.89 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/16384/108
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/16384/108: ok | peak=15.13 GiB | 445 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/16384/116
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/16384/116: ok | peak=16.10 GiB | 506 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/16384/117
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/16384/117: ok | peak=15.33 GiB | 495 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/16384/130
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/16384/130: ok | peak=14.90 GiB | 470 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/16384/133
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/16384/133: ok | peak=15.60 GiB | 495 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/16384/140
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/16384/140: ok | peak=15.04 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/16384/144
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/16384/144: ok | peak=15.31 GiB | 508 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/16384/145
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/16384/145: ok | peak=14.68 GiB | 386 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/16384/147
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/16384/147: ok | peak=15.53 GiB | 396 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/16384/150
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/16384/150: ok | peak=15.03 GiB | 355 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/16384/151
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/16384/151: ok | peak=16.42 GiB | 406 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/16384/158
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/16384/158: ok | peak=15.39 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/16384/162
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/16384/162: ok | peak=14.72 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/16384/169
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/16384/169: ok | peak=15.66 GiB | 365 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/16384/172
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/16384/172: ok | peak=16.42 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/16384/179
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/16384/179: ok | peak=15.30 GiB | 337 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/16384/180
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/16384/180: ok | peak=14.91 GiB | 478 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/16384/182
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/16384/182: ok | peak=15.10 GiB | 493 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/16384/184
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/16384/184: ok | peak=14.74 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/16384/194
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/16384/194: ok | peak=14.86 GiB | 508 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/gov_report/16384/198
+[Qwen2.5-7B-Instruct/phasekv] quality/gov_report/16384/198: ok | peak=15.92 GiB | 357 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/1536/10
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/1536/10: ok | peak=14.45 GiB | 50 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/1536/17
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/1536/17: ok | peak=14.45 GiB | 55 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/1536/24
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/1536/24: ok | peak=14.45 GiB | 43 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/1536/27
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/1536/27: ok | peak=14.45 GiB | 57 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/1536/34
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/1536/34: ok | peak=14.45 GiB | 79 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/1536/35
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/1536/35: ok | peak=14.45 GiB | 50 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/1536/36
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/1536/36: ok | peak=14.45 GiB | 52 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/1536/39
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/1536/39: ok | peak=14.45 GiB | 76 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/1536/43
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/1536/43: ok | peak=14.45 GiB | 93 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/1536/56
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/1536/56: ok | peak=14.45 GiB | 80 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/1536/62
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/1536/62: ok | peak=14.45 GiB | 129 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/1536/65
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/1536/65: ok | peak=14.45 GiB | 74 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/1536/72
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/1536/72: ok | peak=14.45 GiB | 49 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/1536/78
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/1536/78: ok | peak=14.45 GiB | 67 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/1536/83
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/1536/83: ok | peak=14.45 GiB | 67 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/1536/87
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/1536/87: ok | peak=14.45 GiB | 50 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/1536/107
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/1536/107: ok | peak=14.45 GiB | 33 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/1536/114
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/1536/114: ok | peak=14.45 GiB | 110 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/1536/115
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/1536/115: ok | peak=14.45 GiB | 58 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/1536/120
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/1536/120: ok | peak=14.45 GiB | 111 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/1536/126
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/1536/126: ok | peak=14.45 GiB | 32 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/1536/128
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/1536/128: ok | peak=14.45 GiB | 75 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/1536/132
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/1536/132: ok | peak=14.45 GiB | 48 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/1536/138
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/1536/138: ok | peak=14.45 GiB | 42 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/1536/151
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/1536/151: ok | peak=14.45 GiB | 68 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/1536/153
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/1536/153: ok | peak=14.45 GiB | 63 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/1536/163
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/1536/163: ok | peak=14.45 GiB | 84 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/1536/164
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/1536/164: ok | peak=14.45 GiB | 128 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/1536/165
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/1536/165: ok | peak=14.45 GiB | 42 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/1536/176
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/1536/176: ok | peak=14.45 GiB | 32 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/1536/191
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/1536/191: ok | peak=14.45 GiB | 101 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/1536/197
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/1536/197: ok | peak=14.45 GiB | 85 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/3072/10
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/3072/10: ok | peak=14.66 GiB | 111 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/3072/17
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/3072/17: ok | peak=14.66 GiB | 32 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/3072/24
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/3072/24: ok | peak=14.66 GiB | 70 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/3072/27
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/3072/27: ok | peak=14.66 GiB | 49 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/3072/34
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/3072/34: ok | peak=14.66 GiB | 105 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/3072/35
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/3072/35: ok | peak=14.66 GiB | 49 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/3072/36
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/3072/36: ok | peak=14.66 GiB | 29 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/3072/39
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/3072/39: ok | peak=14.66 GiB | 76 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/3072/43
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/3072/43: ok | peak=14.66 GiB | 121 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/3072/56
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/3072/56: ok | peak=14.66 GiB | 54 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/3072/62
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/3072/62: ok | peak=14.66 GiB | 150 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/3072/65
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/3072/65: ok | peak=14.66 GiB | 87 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/3072/72
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/3072/72: ok | peak=14.66 GiB | 56 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/3072/78
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/3072/78: ok | peak=14.66 GiB | 57 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/3072/83
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/3072/83: ok | peak=14.66 GiB | 57 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/3072/87
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/3072/87: ok | peak=14.66 GiB | 43 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/3072/107
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/3072/107: ok | peak=14.66 GiB | 37 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/3072/114
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/3072/114: ok | peak=14.66 GiB | 102 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/3072/115
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/3072/115: ok | peak=14.66 GiB | 93 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/3072/120
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/3072/120: ok | peak=14.66 GiB | 96 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/3072/126
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/3072/126: ok | peak=14.66 GiB | 37 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/3072/128
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/3072/128: ok | peak=14.66 GiB | 83 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/3072/132
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/3072/132: ok | peak=14.66 GiB | 42 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/3072/138
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/3072/138: ok | peak=14.66 GiB | 29 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/3072/151
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/3072/151: ok | peak=14.66 GiB | 60 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/3072/153
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/3072/153: ok | peak=14.66 GiB | 58 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/3072/163
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/3072/163: ok | peak=14.66 GiB | 91 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/3072/164
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/3072/164: ok | peak=14.66 GiB | 108 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/3072/165
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/3072/165: ok | peak=14.66 GiB | 61 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/3072/176
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/3072/176: ok | peak=14.66 GiB | 25 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/3072/191
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/3072/191: ok | peak=14.66 GiB | 97 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/3072/197
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/3072/197: ok | peak=14.66 GiB | 95 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/8192/10
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/8192/10: ok | peak=15.34 GiB | 67 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/8192/17
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/8192/17: ok | peak=15.34 GiB | 56 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/8192/24
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/8192/24: ok | peak=15.34 GiB | 64 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/8192/27
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/8192/27: ok | peak=15.34 GiB | 52 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/8192/34
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/8192/34: ok | peak=15.34 GiB | 85 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/8192/35
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/8192/35: ok | peak=15.34 GiB | 71 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/8192/36
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/8192/36: ok | peak=15.34 GiB | 77 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/8192/39
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/8192/39: ok | peak=15.34 GiB | 101 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/8192/43
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/8192/43: ok | peak=15.34 GiB | 107 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/8192/56
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/8192/56: ok | peak=14.96 GiB | 87 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/8192/62
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/8192/62: ok | peak=15.34 GiB | 104 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/8192/65
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/8192/65: ok | peak=15.33 GiB | 80 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/8192/72
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/8192/72: ok | peak=15.34 GiB | 63 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/8192/78
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/8192/78: ok | peak=15.34 GiB | 77 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/8192/83
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/8192/83: ok | peak=15.34 GiB | 65 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/8192/87
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/8192/87: ok | peak=15.34 GiB | 51 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/8192/107
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/8192/107: ok | peak=15.34 GiB | 62 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/8192/114
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/8192/114: ok | peak=15.34 GiB | 126 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/8192/115
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/8192/115: ok | peak=15.34 GiB | 62 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/8192/120
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/8192/120: ok | peak=15.34 GiB | 109 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/8192/126
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/8192/126: ok | peak=15.04 GiB | 46 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/8192/128
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/8192/128: ok | peak=15.34 GiB | 74 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/8192/132
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/8192/132: ok | peak=15.16 GiB | 61 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/8192/138
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/8192/138: ok | peak=15.34 GiB | 71 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/8192/151
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/8192/151: ok | peak=15.34 GiB | 52 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/8192/153
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/8192/153: ok | peak=15.16 GiB | 74 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/8192/163
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/8192/163: ok | peak=15.15 GiB | 77 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/8192/164
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/8192/164: ok | peak=14.96 GiB | 143 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/8192/165
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/8192/165: ok | peak=15.14 GiB | 82 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/8192/176
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/8192/176: ok | peak=15.34 GiB | 30 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/8192/191
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/8192/191: ok | peak=15.34 GiB | 87 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/8192/197
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/8192/197: ok | peak=15.34 GiB | 118 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/16384/10
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/16384/10: ok | peak=16.33 GiB | 74 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/16384/17
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/16384/17: ok | peak=16.42 GiB | 63 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/16384/24
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/16384/24: ok | peak=15.99 GiB | 81 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/16384/27
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/16384/27: ok | peak=16.42 GiB | 45 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/16384/34
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/16384/34: ok | peak=16.41 GiB | 99 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/16384/35
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/16384/35: ok | peak=15.61 GiB | 87 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/16384/36
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/16384/36: ok | peak=15.70 GiB | 44 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/16384/39
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/16384/39: ok | peak=16.42 GiB | 87 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/16384/43
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/16384/43: ok | peak=16.33 GiB | 101 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/16384/56
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/16384/56: ok | peak=14.96 GiB | 87 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/16384/62
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/16384/62: ok | peak=16.42 GiB | 123 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/16384/65
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/16384/65: ok | peak=15.33 GiB | 80 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/16384/72
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/16384/72: ok | peak=16.03 GiB | 67 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/16384/78
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/16384/78: ok | peak=15.99 GiB | 105 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/16384/83
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/16384/83: ok | peak=15.49 GiB | 94 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/16384/87
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/16384/87: ok | peak=16.42 GiB | 82 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/16384/107
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/16384/107: ok | peak=16.42 GiB | 114 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/16384/114
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/16384/114: ok | peak=15.60 GiB | 109 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/16384/115
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/16384/115: ok | peak=16.33 GiB | 78 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/16384/120
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/16384/120: ok | peak=15.34 GiB | 90 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/16384/126
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/16384/126: ok | peak=15.04 GiB | 46 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/16384/128
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/16384/128: ok | peak=15.35 GiB | 80 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/16384/132
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/16384/132: ok | peak=15.16 GiB | 61 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/16384/138
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/16384/138: ok | peak=16.29 GiB | 59 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/16384/151
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/16384/151: ok | peak=16.34 GiB | 45 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/16384/153
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/16384/153: ok | peak=15.16 GiB | 74 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/16384/163
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/16384/163: ok | peak=15.15 GiB | 77 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/16384/164
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/16384/164: ok | peak=14.96 GiB | 143 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/16384/165
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/16384/165: ok | peak=15.14 GiB | 82 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/16384/176
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/16384/176: ok | peak=15.99 GiB | 36 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/16384/191
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/16384/191: ok | peak=15.49 GiB | 117 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/qmsum/16384/197
+[Qwen2.5-7B-Instruct/phasekv] quality/qmsum/16384/197: ok | peak=15.49 GiB | 112 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/1536/4
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/1536/4: ok | peak=14.34 GiB | 320 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/1536/5
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/1536/5: ok | peak=14.44 GiB | 400 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/1536/7
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/1536/7: ok | peak=14.34 GiB | 335 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/1536/16
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/1536/16: ok | peak=14.45 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/1536/18
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/1536/18: ok | peak=14.45 GiB | 357 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/1536/19
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/1536/19: ok | peak=14.45 GiB | 393 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/1536/33
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/1536/33: ok | peak=14.45 GiB | 423 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/1536/36
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/1536/36: ok | peak=14.45 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/1536/38
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/1536/38: ok | peak=14.45 GiB | 464 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/1536/42
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/1536/42: ok | peak=14.45 GiB | 334 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/1536/62
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/1536/62: ok | peak=14.45 GiB | 406 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/1536/66
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/1536/66: ok | peak=14.45 GiB | 416 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/1536/68
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/1536/68: ok | peak=14.45 GiB | 393 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/1536/73
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/1536/73: ok | peak=14.45 GiB | 467 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/1536/77
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/1536/77: ok | peak=14.45 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/1536/78
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/1536/78: ok | peak=14.42 GiB | 399 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/1536/101
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/1536/101: ok | peak=14.45 GiB | 440 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/1536/114
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/1536/114: ok | peak=14.33 GiB | 332 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/1536/124
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/1536/124: ok | peak=14.45 GiB | 431 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/1536/130
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/1536/130: ok | peak=14.45 GiB | 457 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/1536/131
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/1536/131: ok | peak=14.45 GiB | 484 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/1536/135
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/1536/135: ok | peak=14.45 GiB | 437 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/1536/144
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/1536/144: ok | peak=14.45 GiB | 497 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/1536/148
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/1536/148: ok | peak=14.45 GiB | 380 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/1536/159
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/1536/159: ok | peak=14.45 GiB | 428 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/1536/162
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/1536/162: ok | peak=14.45 GiB | 465 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/1536/167
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/1536/167: ok | peak=14.43 GiB | 291 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/1536/170
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/1536/170: ok | peak=14.45 GiB | 469 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/1536/179
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/1536/179: ok | peak=14.44 GiB | 349 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/1536/181
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/1536/181: ok | peak=14.45 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/1536/186
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/1536/186: ok | peak=14.44 GiB | 473 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/1536/193
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/1536/193: ok | peak=14.34 GiB | 358 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/3072/4
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/3072/4: ok | peak=14.34 GiB | 320 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/3072/5
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/3072/5: ok | peak=14.44 GiB | 400 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/3072/7
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/3072/7: ok | peak=14.34 GiB | 335 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/3072/16
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/3072/16: ok | peak=14.64 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/3072/18
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/3072/18: ok | peak=14.48 GiB | 391 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/3072/19
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/3072/19: ok | peak=14.66 GiB | 470 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/3072/33
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/3072/33: ok | peak=14.45 GiB | 423 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/3072/36
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/3072/36: ok | peak=14.47 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/3072/38
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/3072/38: ok | peak=14.66 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/3072/42
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/3072/42: ok | peak=14.66 GiB | 374 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/3072/62
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/3072/62: ok | peak=14.55 GiB | 412 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/3072/66
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/3072/66: ok | peak=14.66 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/3072/68
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/3072/68: ok | peak=14.47 GiB | 458 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/3072/73
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/3072/73: ok | peak=14.66 GiB | 356 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/3072/77
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/3072/77: ok | peak=14.66 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/3072/78
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/3072/78: ok | peak=14.42 GiB | 399 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/3072/101
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/3072/101: ok | peak=14.59 GiB | 413 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/3072/114
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/3072/114: ok | peak=14.33 GiB | 332 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/3072/124
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/3072/124: ok | peak=14.66 GiB | 494 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/3072/130
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/3072/130: ok | peak=14.66 GiB | 353 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/3072/131
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/3072/131: ok | peak=14.57 GiB | 493 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/3072/135
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/3072/135: ok | peak=14.66 GiB | 428 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/3072/144
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/3072/144: ok | peak=14.66 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/3072/148
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/3072/148: ok | peak=14.54 GiB | 477 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/3072/159
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/3072/159: ok | peak=14.62 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/3072/162
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/3072/162: ok | peak=14.57 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/3072/167
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/3072/167: ok | peak=14.43 GiB | 291 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/3072/170
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/3072/170: ok | peak=14.47 GiB | 483 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/3072/179
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/3072/179: ok | peak=14.44 GiB | 349 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/3072/181
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/3072/181: ok | peak=14.49 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/3072/186
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/3072/186: ok | peak=14.44 GiB | 473 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/3072/193
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/3072/193: ok | peak=14.34 GiB | 358 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/8192/4
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/8192/4: ok | peak=14.34 GiB | 320 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/8192/5
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/8192/5: ok | peak=14.44 GiB | 400 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/8192/7
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/8192/7: ok | peak=14.34 GiB | 335 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/8192/16
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/8192/16: ok | peak=14.64 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/8192/18
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/8192/18: ok | peak=14.48 GiB | 391 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/8192/19
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/8192/19: ok | peak=15.06 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/8192/33
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/8192/33: ok | peak=14.45 GiB | 423 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/8192/36
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/8192/36: ok | peak=14.47 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/8192/38
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/8192/38: ok | peak=14.83 GiB | 464 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/8192/42
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/8192/42: ok | peak=15.27 GiB | 479 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/8192/62
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/8192/62: ok | peak=14.55 GiB | 412 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/8192/66
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/8192/66: ok | peak=14.78 GiB | 437 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/8192/68
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/8192/68: ok | peak=14.47 GiB | 458 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/8192/73
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/8192/73: ok | peak=15.34 GiB | 452 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/8192/77
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/8192/77: ok | peak=14.67 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/8192/78
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/8192/78: ok | peak=14.42 GiB | 399 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/8192/101
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/8192/101: ok | peak=14.59 GiB | 413 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/8192/114
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/8192/114: ok | peak=14.33 GiB | 332 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/8192/124
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/8192/124: ok | peak=14.75 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/8192/130
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/8192/130: ok | peak=14.67 GiB | 329 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/8192/131
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/8192/131: ok | peak=14.57 GiB | 493 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/8192/135
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/8192/135: ok | peak=14.70 GiB | 451 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/8192/144
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/8192/144: ok | peak=14.97 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/8192/148
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/8192/148: ok | peak=14.54 GiB | 477 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/8192/159
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/8192/159: ok | peak=14.62 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/8192/162
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/8192/162: ok | peak=14.57 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/8192/167
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/8192/167: ok | peak=14.43 GiB | 291 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/8192/170
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/8192/170: ok | peak=14.47 GiB | 483 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/8192/179
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/8192/179: ok | peak=14.44 GiB | 349 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/8192/181
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/8192/181: ok | peak=14.49 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/8192/186
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/8192/186: ok | peak=14.44 GiB | 473 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/8192/193
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/8192/193: ok | peak=14.34 GiB | 358 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/16384/4
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/16384/4: ok | peak=14.34 GiB | 320 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/16384/5
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/16384/5: ok | peak=14.44 GiB | 400 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/16384/7
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/16384/7: ok | peak=14.34 GiB | 335 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/16384/16
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/16384/16: ok | peak=14.64 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/16384/18
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/16384/18: ok | peak=14.48 GiB | 391 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/16384/19
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/16384/19: ok | peak=15.06 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/16384/33
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/16384/33: ok | peak=14.45 GiB | 423 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/16384/36
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/16384/36: ok | peak=14.47 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/16384/38
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/16384/38: ok | peak=14.83 GiB | 464 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/16384/42
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/16384/42: ok | peak=15.27 GiB | 479 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/16384/62
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/16384/62: ok | peak=14.55 GiB | 412 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/16384/66
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/16384/66: ok | peak=14.78 GiB | 437 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/16384/68
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/16384/68: ok | peak=14.47 GiB | 458 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/16384/73
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/16384/73: ok | peak=16.16 GiB | 380 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/16384/77
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/16384/77: ok | peak=14.67 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/16384/78
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/16384/78: ok | peak=14.42 GiB | 399 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/16384/101
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/16384/101: ok | peak=14.59 GiB | 413 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/16384/114
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/16384/114: ok | peak=14.33 GiB | 332 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/16384/124
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/16384/124: ok | peak=14.75 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/16384/130
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/16384/130: ok | peak=14.67 GiB | 329 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/16384/131
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/16384/131: ok | peak=14.57 GiB | 493 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/16384/135
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/16384/135: ok | peak=14.70 GiB | 451 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/16384/144
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/16384/144: ok | peak=14.97 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/16384/148
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/16384/148: ok | peak=14.54 GiB | 477 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/16384/159
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/16384/159: ok | peak=14.62 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/16384/162
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/16384/162: ok | peak=14.57 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/16384/167
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/16384/167: ok | peak=14.43 GiB | 291 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/16384/170
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/16384/170: ok | peak=14.47 GiB | 483 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/16384/179
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/16384/179: ok | peak=14.44 GiB | 349 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/16384/181
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/16384/181: ok | peak=14.49 GiB | 512 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/16384/186
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/16384/186: ok | peak=14.44 GiB | 473 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv quality/multi_news/16384/193
+[Qwen2.5-7B-Instruct/phasekv] quality/multi_news/16384/193: ok | peak=14.34 GiB | 358 output tokens

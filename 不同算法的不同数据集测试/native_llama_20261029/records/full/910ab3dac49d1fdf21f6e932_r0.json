@@ -1,0 +1,107 @@
+{
+  "id": "longbench/narrativeqa/143/8192",
+  "suite": "longbench",
+  "task": "narrativeqa",
+  "document_id": "143/8192",
+  "cluster_id": "narrativeqa/62b7c3681d3a6c0444e63e5c404350be0dad1e341356e17353c6df34f0854359",
+  "length_budget": 8192,
+  "input_sha256": "76e82670bfddf6cc2f5c5de50f8bf80acb75ad88b635f0a5e7a52eeed8e57498",
+  "truncated_input": true,
+  "capacity_extension": null,
+  "evaluation_split": "historical_retest",
+  "heldout_from_available_history": false,
+  "method": "full",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 8184,
+  "output_tokens": 25,
+  "output_ids": [
+    49,
+    88,
+    9832,
+    285,
+    836,
+    374,
+    539,
+    21650,
+    9932,
+    304,
+    279,
+    3984,
+    1495,
+    11,
+    4869,
+    11,
+    279,
+    1023,
+    32639,
+    374,
+    1666,
+    587,
+    14406,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 1.0708235767669976,
+  "prefill_and_compress_s": 1.0708235767669976,
+  "decode_s": 0.6194455083459616,
+  "decode_tokens_per_s": 38.744328075095105,
+  "generation_wall_s_including_instrumentation": 1.6906842947937548,
+  "prefill_storage": {
+    "physical_bytes": 1072693248,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1072693248,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 1075838976,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1075838976,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 8184,
+    "stored_heads": 8
+  },
+  "final_trace": {
+    "physical_tokens": 8208,
+    "stored_heads": 8
+  },
+  "peak_allocated_bytes": 18234122240,
+  "peak_reserved_bytes": 18702401536,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 24,
+      "seconds": 0.6194455083459616,
+      "tokens": 24
+    }
+  ],
+  "effective_options": {},
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 0,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "Ryujis name is not explicitly mentioned in the provided text, however, the other teenager is Asakawa.",
+  "gpu_before": {
+    "time": 1793313186.3499384,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15894 MiB, 92 %, 60, 380.94 W, 2655 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793313188.0729752,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 18264 MiB, 85 %, 58, 341.08 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793313188.0729802
+}

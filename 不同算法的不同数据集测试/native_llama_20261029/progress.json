@@ -1,0 +1,9 @@
+{
+  "method": "snapkv",
+  "suite": "longgenbench",
+  "sample": "longgenbench/csqa/4",
+  "repeat": 0,
+  "worker_done": 47,
+  "worker_total": 48,
+  "time": 1793368580.5784538
+}

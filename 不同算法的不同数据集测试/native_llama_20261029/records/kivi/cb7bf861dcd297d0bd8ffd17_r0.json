@@ -1,0 +1,109 @@
+{
+  "id": "longbench/qasper/38/16384",
+  "suite": "longbench",
+  "task": "qasper",
+  "document_id": "38/16384",
+  "cluster_id": "qasper/df748158dc995568c1f3ae46a3f5d041140346ee8b195cde83dceda049f126bd",
+  "length_budget": 16384,
+  "input_sha256": "52366036b04fcd6a7d097d0985515f55cdba61979661de5020e529fa834d071b",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": "heldout",
+  "heldout_from_available_history": true,
+  "method": "kivi",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 5653,
+  "output_tokens": 17,
+  "output_ids": [
+    444,
+    44322,
+    432,
+    9944,
+    82,
+    11,
+    14435,
+    45770,
+    86571,
+    4009,
+    11,
+    323,
+    26682,
+    86571,
+    1646,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 0.7558835339732468,
+  "prefill_and_compress_s": 0.7558835339732468,
+  "decode_s": 0.7916303179226816,
+  "decode_tokens_per_s": 20.21145430860408,
+  "generation_wall_s_including_instrumentation": 1.5487152077257633,
+  "prefill_storage": {
+    "physical_bytes": 238260224,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 238260224,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 239636480,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 239636480,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "prefill_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 5653
+  },
+  "final_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 5669
+  },
+  "peak_allocated_bytes": 16980132352,
+  "peak_reserved_bytes": 17515413504,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 16,
+      "seconds": 0.7916303179226816,
+      "tokens": 16
+    }
+  ],
+  "effective_options": {
+    "k_bits": 4,
+    "v_bits": 4,
+    "group_size": 32,
+    "residual_length": 128,
+    "use_flash": true
+  },
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 20.0,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "conventional RNNs, bidirectional LSTM network, and shallow LSTM model.",
+  "gpu_before": {
+    "time": 1793297397.5220294,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 16002 MiB, 46 %, 48, 172.63 W, 2670 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793297399.1635273,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 17132 MiB, 46 %, 52, 264.71 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793297399.1635318
+}

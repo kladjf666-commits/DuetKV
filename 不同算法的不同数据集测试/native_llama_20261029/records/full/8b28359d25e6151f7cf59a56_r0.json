@@ -1,0 +1,127 @@
+{
+  "id": "ruler/cwe/14/4096",
+  "suite": "ruler",
+  "task": "cwe",
+  "document_id": "14/4096",
+  "cluster_id": "cwe/14",
+  "length_budget": 4096,
+  "input_sha256": "717656b280a30388bf0f3d80c2b76c83c7a8ecde47e706a5fc61ce8eba7cf518",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": null,
+  "heldout_from_available_history": null,
+  "method": "full",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 3795,
+  "output_tokens": 45,
+  "output_ids": [
+    220,
+    16,
+    13,
+    19831,
+    220,
+    17,
+    13,
+    17055,
+    7063,
+    65,
+    220,
+    18,
+    13,
+    28975,
+    220,
+    19,
+    13,
+    42840,
+    220,
+    20,
+    13,
+    3453,
+    220,
+    21,
+    13,
+    17850,
+    220,
+    22,
+    13,
+    25032,
+    220,
+    23,
+    13,
+    8961,
+    220,
+    24,
+    13,
+    6409,
+    15112,
+    367,
+    220,
+    605,
+    13,
+    28975,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 0.47455425187945366,
+  "prefill_and_compress_s": 0.47455425187945366,
+  "decode_s": 1.1340530500747263,
+  "decode_tokens_per_s": 38.798890402085426,
+  "generation_wall_s_including_instrumentation": 1.6089985580183566,
+  "prefill_storage": {
+    "physical_bytes": 497418240,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 497418240,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 503185408,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 503185408,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 3795,
+    "stored_heads": 8
+  },
+  "final_trace": {
+    "physical_tokens": 3839,
+    "stored_heads": 8
+  },
+  "peak_allocated_bytes": 17077352448,
+  "peak_reserved_bytes": 17374904320,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 44,
+      "seconds": 1.1340530500747263,
+      "tokens": 44
+    }
+  ],
+  "effective_options": {},
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 90.0,
+  "metric": "official_string_match_all",
+  "status": "ok",
+  "prediction": " 1. lawsuit 2. hydrocarb 3. analytics 4. assemble 5. den 6. thesis 7. transit 8. farm 9. hyphenation 10. analytics",
+  "gpu_before": {
+    "time": 1793319599.5449061,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15894 MiB, 19 %, 50, 204.06 W, 2670 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793319601.2441022,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 16998 MiB, 78 %, 56, 270.96 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793319601.244108
+}

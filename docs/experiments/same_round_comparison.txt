@@ -1,0 +1,102 @@
+PhaseKV 70%/4-bit 与 Full、KIVI、SnapKV、SCOPE 同轮测试
+====================================================
+
+模型：Qwen2.5-7B-Instruct，原始BF16权重；Linux、单张4090D、单请求。
+使用服务器已有的算法目录、依赖、模型和LongBench缓存；不需要重新setup。
+本包不含模型或依赖。沿用原benchmark、sweep和prompt retest辅助文件。
+
+只需上传 PhaseKV_same_round.zip，执行：
+cd /root/KV/PhaseKV
+unzip -o PhaseKV_same_round.zip
+bash run_phasekv_same_round.sh --dry-run
+nohup bash run_phasekv_same_round.sh --out results/phasekv_same_round > phasekv_same_round.log 2>&1 &
+tail -f phasekv_same_round.log
+
+tail界面按Ctrl+C仅退出日志查看；后台测试继续。不要同时运行其他GPU任务。
+查看当前组：grep '^=== ' phasekv_same_round.log | tail -n 1
+
+固定六组（五种方法，Full包含两个对照）：
+1. Full-native：原生SDPA prefill、dense KV，作为原生系统参考。
+2. Full-matched：与四种压缩方法相同的prefill、dense KV，作为主要配对对照。
+3. KIVI：2-bit，group_size32，残差窗口64。
+4. SnapKV：prefill保留30%，obs_window32，dense KV。
+5. SCOPE：ALLKV+Slide的GQA适配，生成token预算32，recent_window16。
+6. PhaseKV：prefill保留70%、4-bit；输出热区128、冷区4-bit、输出保留100%；
+   obs_window32、lazy_g16、group_size32、sink_tokens0。
+
+SCOPE保留完整prompt，仅管理生成KV；这里未实现其他SCOPE变体。
+各方法沿用之前明确的配置。这是同数据、同测量条件对比，并非等KV预算、
+等准确率或全部算法最优参数对比。报告会明确列出各自配置和实际占用。
+不包括PyramidKV，也不加入旧版PhaseKV。
+
+为什么需要两个Full：
+之前发现prefill是否返回attention分数，可能在压缩前就造成首token不同。
+本轮四种压缩方法全部与Full-matched统一prefill末块attention计算路径，
+逐样本核对输入哈希、完整末位logits字节哈希和首token；不一致即停止。
+Full-native保留用于实际原生系统对比。各方法decode使用各自必需的实现，
+例如SCOPE需要attention分数，KIVI/PhaseKV使用本项目packed Triton内核。
+prefill匹配不是把输出硬改一致；会真实重算，并运行小模型GPU数值验证。
+
+默认完整规模：
+- 8任务：narrativeqa、qasper、multifieldqa_en、hotpotqa、2wikimqa、
+  gov_report、qmsum、multi_news。
+- 每任务32文档，输入预算1536/3072/8192/16384；1024质量记录/组。
+- 固定长度性能：1024+256、4096+256、8192+256、16384+256、32000+256；
+  1024+1024、1024+4096、16384+2048、24576+4096。
+  每形状预热1次、正式3次；36性能记录/组。
+- 另有多长度、多插入位置needle和容量探测；常见1120记录/组、6720记录总计。
+  容量探测遇到边界时记录数可能变化。完整测试可能持续较长时间。
+
+默认seed1234、sample-offset72、samples32，从每任务固定打乱顺序中选
+第72—103位置（从0计数），排除之前两轮用过的0—71位置。
+六组严格使用相同文档。不要把新文档上的绝对分数与上轮直接相减。
+
+可选的小规模流程验证，仍测试全部方法、不筛选淘汰：
+bash run_phasekv_same_round.sh --quick --samples 8 --repeats 1 --out results/phasekv_same_round_quick
+quick每组4任务×8文档×2输入预算=64质量记录，保留9种性能形状，
+各预热1次和正式1次，取消needle/容量；不是几分钟的极简冒烟测试。
+如先用quick做了参数调整，正式测试指定--sample-offset 80来避开这8篇文档。
+正式运行应另起目录，不能把quick目录恢复为不同规模。
+
+可选路径：--model-path /path/to/Qwen2.5-7B-Instruct
+          --data-dir /path/to/longbench
+数据目录含data/*.jsonl和dataset2prompt.json。
+HF_HOME默认项目.cache/huggingface，沿用之前下载；模型离线缓存完整时可设置
+HF_HUB_OFFLINE=1。缺少LongBench文件时仍会尝试下载，建议先核对缓存。
+
+中断后使用相同参数，增加--resume：
+nohup bash run_phasekv_same_round.sh --out results/phasekv_same_round --resume > phasekv_same_round_resume.log 2>&1 &
+已完成样本保存，未完成的单条重新计算；完成组校验后跳过。代码、模型、
+数据或参数变化会拒绝恢复，请使用新目录。若强杀留下RUNNING.lock，先确认
+对应PID及工作进程均已停止，再删除该锁，避免同时运行两份。
+
+结果文件：
+results/phasekv_same_round/report.html：两套Full对照、逐形状性能、质量和KV。
+comparison.json：逐任务/输入长度/性能形状、文档配对bootstrap区间、压缩触发、
+prefill一致性审计，以及PhaseKV相对KIVI/SnapKV/SCOPE的直接配对结果。
+runs/组名/records.jsonl：逐条原始记录；同目录含job、日志、验证及完成哈希。
+manifest.json：代码、配置、数据、模型指纹和预期测试集合。
+complete.json：全部组已执行完，不意味着所有记录成功；仍须查看报告失败项。
+只重新生成报告：bash run_phasekv_same_round.sh --out results/phasekv_same_round --report-only
+
+测量与解释：
+- QA用F1、摘要用ROUGE-L，分别按任务等权汇总；自然遇EOS停止。
+- 性能强制相同输出token数，不因EOS提前停止。decode吞吐不含prefill，
+  包含解码循环、缓存维护；同时报告prefill+压缩时间和总时间。
+- 实际KV按底层张量存储计数：打包代码、量化scale/min及高精度残差；
+  dense KV存储去重。不含权重、attention工作区或一般辅助状态。
+  另列整进程allocated峰值和原始reserved峰值，不能拿KV直接当总显存。
+- 哈希在计时结束后计算；保留末位logits视图计入显存，各组方式一致。
+- 固定长度性能的KV比较最直接；质量任务实际输出不同，最终KV受长度影响。
+- 4096-token长输出只测速，不评价长文语义；摘要质量生成最多512token。
+- 速度与KV汇总比为形状等权几何平均；短输入可能比Full慢，要看逐形状结果。
+- 失败/OOM的必要质量或性能样本使完整比较无效，不默默删掉再算有利均值。
+  容量探测的OOM是探测边界，不视为质量/性能成功；native上下文上限可能
+  早于显存上限，因而不保证占满24GB。
+- 均值下降不超过1分仅为预设检查，不等于每个任务达标或已证明统计等效。
+- 本地CPU检查不代替远程4090D验证；启动后每组先验证再跑正式测量。
+
+运行结束后打包下载：
+cd /root/KV/PhaseKV
+tar -czf phasekv_same_round_results.tar.gz results/phasekv_same_round phasekv_same_round.log
+再在Jupyter文件列表下载phasekv_same_round_results.tar.gz。

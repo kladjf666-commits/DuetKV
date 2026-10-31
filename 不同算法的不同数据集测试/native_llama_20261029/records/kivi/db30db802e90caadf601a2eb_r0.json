@@ -1,0 +1,142 @@
+{
+  "id": "longbench/multifieldqa_en/85/16384",
+  "suite": "longbench",
+  "task": "multifieldqa_en",
+  "document_id": "85/16384",
+  "cluster_id": "multifieldqa_en/109764bff991e265f099a202addbeab2c7db974513e621b2af3a7af92262a940",
+  "length_budget": 16384,
+  "input_sha256": "9bf1cb8e4b554b9fb5d72897e43b54f46b1aac06bf63ff05c8349d253ce00fb4",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": "heldout",
+  "heldout_from_available_history": true,
+  "method": "kivi",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 11793,
+  "output_tokens": 50,
+  "output_ids": [
+    791,
+    20413,
+    4817,
+    27983,
+    264,
+    4365,
+    315,
+    2262,
+    369,
+    279,
+    5613,
+    555,
+    27393,
+    9322,
+    2262,
+    3673,
+    311,
+    264,
+    1646,
+    8066,
+    369,
+    279,
+    1217,
+    555,
+    279,
+    1646,
+    9659,
+    4817,
+    11,
+    20413,
+    1124,
+    11,
+    323,
+    1243,
+    24038,
+    279,
+    4365,
+    315,
+    2262,
+    3196,
+    389,
+    279,
+    12483,
+    369,
+    1855,
+    9322,
+    2262,
+    1537,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 1.9901345600374043,
+  "prefill_and_compress_s": 1.9901345600374043,
+  "decode_s": 2.440963224042207,
+  "decode_tokens_per_s": 20.07404270468957,
+  "generation_wall_s_including_instrumentation": 4.432446877006441,
+  "prefill_storage": {
+    "physical_bytes": 489574400,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 489574400,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 493789184,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 493789184,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "prefill_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 11793
+  },
+  "final_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 11842
+  },
+  "peak_allocated_bytes": 17961269248,
+  "peak_reserved_bytes": 18897436672,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 49,
+      "seconds": 2.440963224042207,
+      "tokens": 49
+    }
+  ],
+  "effective_options": {
+    "k_bits": 4,
+    "v_bits": 4,
+    "group_size": 32,
+    "residual_length": 128,
+    "use_flash": true
+  },
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 41.66666666666667,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "The scoring engine generates a stream of content for the channel by comparing candidate content items to a model generated for the user by the model generation engine, scoring them, and then generating the stream of content based on the scores for each candidate content item.",
+  "gpu_before": {
+    "time": 1793297505.419352,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 16002 MiB, 48 %, 49, 149.89 W, 2670 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793297509.9473734,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 18450 MiB, 50 %, 54, 183.23 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793297509.947378
+}

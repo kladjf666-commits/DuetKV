@@ -1,0 +1,155 @@
+{
+  "id": "performance/4096+256/2",
+  "suite": "performance",
+  "task": "4096+256",
+  "document_id": "2",
+  "cluster_id": "performance/4096+256/2",
+  "length_budget": 4096,
+  "input_sha256": "683a437035a962faeaa8ddea5a7f59eff7ae2fea1db320fec82cc081786e4fbd",
+  "truncated_input": null,
+  "capacity_extension": false,
+  "evaluation_split": null,
+  "heldout_from_available_history": null,
+  "method": "phasekv",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 4096,
+  "output_tokens": 256,
+  "stopped_on_eos": false,
+  "hit_output_limit": true,
+  "ttft_s": 0.5584499160759151,
+  "prefill_and_compress_s": 0.5584499160759151,
+  "decode_s": 7.601252518594265,
+  "decode_tokens_per_s": 33.547102846039685,
+  "generation_wall_s_including_instrumentation": 8.160871130879968,
+  "prefill_storage": {
+    "code_bytes": 93962240,
+    "metadata_bytes": 23539712,
+    "fp16_residual_capacity_bytes": 18874368,
+    "physical_bytes": 136376320,
+    "code_payload_bytes": 93962240,
+    "metadata_payload_bytes": 23539712,
+    "hot_payload_bytes": 0,
+    "effective_payload_bytes": 117501952,
+    "page_free_bytes": 0,
+    "hot_free_bytes": 18874368,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 136376320,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.uint8"
+    ]
+  },
+  "final_storage": {
+    "code_bytes": 110739456,
+    "metadata_bytes": 29831168,
+    "fp16_residual_capacity_bytes": 18874368,
+    "physical_bytes": 159444992,
+    "code_payload_bytes": 97632256,
+    "metadata_payload_bytes": 24915968,
+    "hot_payload_bytes": 18743296,
+    "effective_payload_bytes": 141291520,
+    "page_free_bytes": 18022400,
+    "hot_free_bytes": 131072,
+    "auxiliary_bytes": 34465792,
+    "total_owned_bytes": 193910784,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.uint8"
+    ]
+  },
+  "prefill_trace": {
+    "prompt_tokens": 2867,
+    "hot_tokens": 0,
+    "cold_segments": 0,
+    "physical_tokens": 2867
+  },
+  "final_trace": {
+    "prompt_tokens": 2867,
+    "hot_tokens": 143,
+    "cold_segments": 7,
+    "physical_tokens": 3122
+  },
+  "peak_allocated_bytes": 17094484480,
+  "peak_reserved_bytes": 17561550848,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 128,
+      "seconds": 3.662940767593682,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 128,
+      "to_decode_step": 255,
+      "seconds": 3.938311751000583,
+      "tokens": 127
+    }
+  ],
+  "effective_options": {
+    "prefill_keep_ratio": 0.7,
+    "obs_window": 32,
+    "sink_tokens": 0,
+    "prompt_bits": 4,
+    "cold_bits": 4,
+    "group_size": 32,
+    "recent_window": 128,
+    "lazy_g": 16,
+    "decode_keep_ratio": 1.0,
+    "optimizations": {
+      "fused_quantize": true,
+      "reuse_workspace": true,
+      "paged_cold": true,
+      "page_slots": 32,
+      "cold_group": 8,
+      "specialized_4bit": true,
+      "gqa_reuse": false,
+      "hot_ring": true
+    }
+  },
+  "scope_mode": "native",
+  "storage_checkpoints": [
+    {
+      "generated_cached": 0,
+      "code_bytes": 93962240,
+      "metadata_bytes": 23539712,
+      "fp16_residual_capacity_bytes": 18874368,
+      "physical_bytes": 136376320,
+      "code_payload_bytes": 93962240,
+      "metadata_payload_bytes": 23539712,
+      "hot_payload_bytes": 0,
+      "effective_payload_bytes": 117501952,
+      "page_free_bytes": 0,
+      "hot_free_bytes": 18874368,
+      "auxiliary_bytes": 0,
+      "total_owned_bytes": 136376320,
+      "tensor_dtypes": [
+        "torch.float16",
+        "torch.uint8"
+      ]
+    },
+    {
+      "generated_cached": 255,
+      "code_bytes": 110739456,
+      "metadata_bytes": 29831168,
+      "fp16_residual_capacity_bytes": 18874368,
+      "physical_bytes": 159444992,
+      "code_payload_bytes": 97632256,
+      "metadata_payload_bytes": 24915968,
+      "hot_payload_bytes": 18743296,
+      "effective_payload_bytes": 141291520,
+      "page_free_bytes": 18022400,
+      "hot_free_bytes": 131072,
+      "auxiliary_bytes": 34465792,
+      "total_owned_bytes": 193910784,
+      "tensor_dtypes": [
+        "torch.float16",
+        "torch.uint8"
+      ]
+    }
+  ],
+  "persistent_kv_peak_bytes_diagnostic": 159444992,
+  "diagnostic_pass": true,
+  "timing_excluded": true
+}

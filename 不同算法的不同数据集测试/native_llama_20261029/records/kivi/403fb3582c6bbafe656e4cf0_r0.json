@@ -1,0 +1,134 @@
+{
+  "id": "ruler/cwe/12/16384",
+  "suite": "ruler",
+  "task": "cwe",
+  "document_id": "12/16384",
+  "cluster_id": "cwe/12",
+  "length_budget": 16384,
+  "input_sha256": "16b9eab560a2c7a3aee719076ddb4793170c0007886ce24f0454fae728eeb8b8",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": null,
+  "heldout_from_available_history": null,
+  "method": "kivi",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 16205,
+  "output_tokens": 42,
+  "output_ids": [
+    220,
+    16,
+    13,
+    20155,
+    220,
+    17,
+    13,
+    32194,
+    220,
+    18,
+    13,
+    30695,
+    220,
+    19,
+    13,
+    294,
+    2538,
+    220,
+    20,
+    13,
+    39526,
+    220,
+    21,
+    13,
+    75716,
+    220,
+    22,
+    13,
+    38836,
+    220,
+    23,
+    13,
+    50169,
+    220,
+    24,
+    13,
+    93504,
+    220,
+    605,
+    13,
+    75716,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 2.4862984232604504,
+  "prefill_and_compress_s": 2.4862984232604504,
+  "decode_s": 2.0289399311877787,
+  "decode_tokens_per_s": 20.20759677000287,
+  "generation_wall_s_including_instrumentation": 4.516486180014908,
+  "prefill_storage": {
+    "physical_bytes": 672993280,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 672993280,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 676519936,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 676519936,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "prefill_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 16205
+  },
+  "final_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 16246
+  },
+  "peak_allocated_bytes": 18671344640,
+  "peak_reserved_bytes": 19864223744,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 41,
+      "seconds": 2.0289399311877787,
+      "tokens": 41
+    }
+  ],
+  "effective_options": {
+    "k_bits": 4,
+    "v_bits": 4,
+    "group_size": 32,
+    "residual_length": 128,
+    "use_flash": true
+  },
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 80.0,
+  "metric": "official_string_match_all",
+  "status": "ok",
+  "prediction": " 1. bulk 2. conclude 3. jar 4. diction 5. goodness 6. vitality 7. zombie 8. penny 9. miscellaneous 10. vitality",
+  "gpu_before": {
+    "time": 1793321036.5184243,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15936 MiB, 52 %, 55, 194.25 W, 2655 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793321041.116177,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 19372 MiB, 53 %, 53, 196.98 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793321041.1161816
+}

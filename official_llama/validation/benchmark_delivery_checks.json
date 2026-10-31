@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-29",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "new_python_syntax_files": 9,
+  "shell_syntax": "passed with bundled Git sh -n",
+  "cpu_regression_tests": {
+    "status": "passed",
+    "count": 4,
+    "log": "benchmark_tests.txt"
+  },
+  "frozen_input_audit": {
+    "status": "passed",
+    "counts": {
+      "longbench": 640,
+      "longgenbench": 48,
+      "ruler": 384,
+      "performance": 27
+    },
+    "quality_generations": 5456,
+    "performance_measured": 405,
+    "frozen_sha256": "88e85ac0a6d1ca0a437543c1187731c81b4933d699246639a7429c6d8a6cfcde",
+    "ruler_prefix_roundtrip": "all 384 exact",
+    "model_context_bounds": "all passed",
+    "longgenbench_question_overlap": "none within selected task",
+    "longbench_splits": {
+      "narrativeqa": {
+        "heldout_documents": 0,
+        "historical_or_shared_context_retest": 32
+      },
+      "qasper": {
+        "heldout_documents": 32,
+        "historical_or_shared_context_retest": 0
+      },
+      "multifieldqa_en": {
+        "heldout_documents": 32,
+        "historical_or_shared_context_retest": 0
+      },
+      "hotpotqa": {
+        "heldout_documents": 32,
+        "historical_or_shared_context_retest": 0
+      },
+      "2wikimqa": {
+        "heldout_documents": 32,
+        "historical_or_shared_context_retest": 0
+      },
+      "gov_report": {
+        "heldout_documents": 32,
+        "historical_or_shared_context_retest": 0
+      },
+      "qmsum": {
+        "heldout_documents": 5,
+        "historical_or_shared_context_retest": 27
+      },
+      "multi_news": {
+        "heldout_documents": 32,
+        "historical_or_shared_context_retest": 0
+      },
+      "lcc": {
+        "heldout_documents": 32,
+        "historical_or_shared_context_retest": 0
+      },
+      "repobench-p": {
+        "heldout_documents": 32,
+        "historical_or_shared_context_retest": 0
+      }
+    },
+    "gpu_execution": "not run by this check"
+  },
+  "original_runtime_source_verification": {
+    "status": "passed",
+    "files": 941
+  },
+  "formal_preflight": {
+    "status": "passed",
+    "stdout": "FORMAL BENCHMARK: 5861 measured records; resumable output=C:\\Users\\kladjf\\Desktop\\PhaseKV\\official_llama\\validation\\benchmark_preflight_final\nFrozen inputs and model identity verified; no GPU test executed.\n"
+  },
+  "gpu_formal_benchmark": "not_run_locally; no remote shell attached",
+  "remote_deployment_status": "user reported smoke success at results/validation_20261029_103248; raw remote artifacts not downloaded",
+  "new_code_sha256": {
+    "benchmark.py": "09545fffaf6b73857160ee4ee25bd62644138b4bb81526c186b92b98aa2052d9",
+    "benchmark_generate.py": "10883058c449215e317942b4131cbecb3dbd239104f3324febc9dc4124409890",
+    "benchmark_metrics.py": "2b2f9d0f17e47645b9b629956c085debc5bbb6b3309441049e26a9868f4888c4",
+    "prepare_benchmark.py": "6bd16f0e993543579b61ba50a16e6714984f22abbf97a80a6d59f15a01f49a0a",
+    "fetch_ruler_essays.py": "dbfb5ecf1a7dfb780bf5b516f491c9e3e17cdea800aad463e22dd90242f250c9",
+    "verify_benchmark_bundle.py": "13c07969020b779f754544cf803a31cee9f443cc111d7f28db46e5055be92a08",
+    "build_benchmark_bundle.py": "1e8dfce8753cf81732e63a9b5ec410fa88fda47cc9cd891fcaefea2233b234e2",
+    "tests/test_benchmark.py": "25b2888b185ec31792ca0b586a52e1588be45dcade51da2f49a908cde804b7c9",
+    "tests/check_frozen_benchmark.py": "22994bc398e5cb7ec7e85048b4a334e02097d860e45b6b597dd6ceeb44089028"
+  }
+}

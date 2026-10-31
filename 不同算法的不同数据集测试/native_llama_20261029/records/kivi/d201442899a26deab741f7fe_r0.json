@@ -1,0 +1,97 @@
+{
+  "id": "longbench/hotpotqa/100/16384",
+  "suite": "longbench",
+  "task": "hotpotqa",
+  "document_id": "100/16384",
+  "cluster_id": "hotpotqa/dd59b59afeb1a6c6b8e443d057b8c0125c89be3ab29889b91fcef95d4c90f899",
+  "length_budget": 16384,
+  "input_sha256": "f3d1d22f15f9f01312506f0b106dd3b8df47e14c0413901bf1f612cb418e6c5a",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": "heldout",
+  "heldout_from_available_history": true,
+  "method": "kivi",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 15501,
+  "output_tokens": 5,
+  "output_ids": [
+    15000,
+    74,
+    6406,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 2.5720088090747595,
+  "prefill_and_compress_s": 2.5720088090747595,
+  "decode_s": 0.21068629529327154,
+  "decode_tokens_per_s": 18.985572813039745,
+  "generation_wall_s_including_instrumentation": 2.7840871019288898,
+  "prefill_storage": {
+    "physical_bytes": 641273856,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 641273856,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 641617920,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 641617920,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "prefill_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 15501
+  },
+  "final_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 15505
+  },
+  "peak_allocated_bytes": 18556676096,
+  "peak_reserved_bytes": 19623051264,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 4,
+      "seconds": 0.21068629529327154,
+      "tokens": 4
+    }
+  ],
+  "effective_options": {
+    "k_bits": 4,
+    "v_bits": 4,
+    "group_size": 32,
+    "residual_length": 128,
+    "use_flash": true
+  },
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 100.0,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "Polk County.",
+  "gpu_before": {
+    "time": 1793297701.6713471,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 16002 MiB, 100 %, 53, 318.42 W, 2655 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793297704.5469923,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 19142 MiB, 100 %, 57, 369.89 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793297704.5469968
+}

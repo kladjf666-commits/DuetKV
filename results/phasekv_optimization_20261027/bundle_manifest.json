@@ -1,0 +1,1108 @@
+{
+  "purpose": "Incremental overlay onto the matching PhaseKV baseline; not a standalone model bundle",
+  "files": [
+    {
+      "path": "models/packed_runtime.py",
+      "category": "modified",
+      "bytes": 6956,
+      "sha256": "5265a0ffcc7958391afb574fc343cae0b116571bd4b4aaf1d5c91341be70bcba"
+    },
+    {
+      "path": "PhaseKV/kernels/launch_config.py",
+      "category": "modified",
+      "bytes": 3361,
+      "sha256": "aa9c797cc46bf27ea817b51f9149fa8c54146a0519f0c87a36aad1322f05bc18"
+    },
+    {
+      "path": "PhaseKV/kernels/packing.py",
+      "category": "modified",
+      "bytes": 14570,
+      "sha256": "130e3c710e2c8462bd36295d853c77f1d00b97004cb31a9cb210e9e9b964e93d"
+    },
+    {
+      "path": "PhaseKV/kernels/quantize_triton.py",
+      "category": "new",
+      "bytes": 3292,
+      "sha256": "02fbb9f9f61ffed60655d304987705fedfe726218b96f7d3e6fd8ef1d77076d9"
+    },
+    {
+      "path": "PhaseKV/kernels/segmented_attention.py",
+      "category": "modified",
+      "bytes": 11203,
+      "sha256": "9bd36cf461c9ecdaece9dbd7095e4799403ef6a3ce1f22d3a619fb27105bfb66"
+    },
+    {
+      "path": "PhaseKV/kernels/segmented_baseline.py",
+      "category": "new",
+      "bytes": 8638,
+      "sha256": "908737ac9a5ca5253ef536ceff120146babc1b588815f4c7c3de7113ba323f56"
+    },
+    {
+      "path": "PhaseKV/kernels/segmented_plan.py",
+      "category": "modified",
+      "bytes": 8480,
+      "sha256": "0406ed4814f6da35f9fbd8d13ed741275742b89c6f6fb251ffa306d69b4102a7"
+    },
+    {
+      "path": "PhaseKV/optimizations.py",
+      "category": "new",
+      "bytes": 2138,
+      "sha256": "b5138a202eaa3a6ba3c013f91576ed6c3aabf6b92aa144b2451ca641720d4eca"
+    },
+    {
+      "path": "PhaseKV/packed_storage.py",
+      "category": "new",
+      "bytes": 2791,
+      "sha256": "ef2de6d4c63fff5951267d7976eb3474df496c5ddbcab7bd53d34e1e8d6ae01b"
+    },
+    {
+      "path": "PhaseKV/phasekv_cache.py",
+      "category": "modified",
+      "bytes": 31967,
+      "sha256": "5a23a6a9b08b048ee4dcd2a4893df6992988900a27784b9558c9fda07ce9e179"
+    },
+    {
+      "path": "PHASEKV_OPTIMIZATION_DELIVERY.txt",
+      "category": "delivery",
+      "bytes": 12633,
+      "sha256": "d8d4f001a69876ed86576fcb4435c3f8498b073d4a146d3008b8544f23725958"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/cpu_audit.json",
+      "category": "current_task_evidence",
+      "bytes": 51687,
+      "sha256": "c7407608f7bb6811fb4745343f7fceddb58ac42313c7e0e29569137e88f77f0e"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/e2e_plan.json",
+      "category": "current_task_evidence",
+      "bytes": 8011,
+      "sha256": "7906bd34c0fd084d1b6a14e3b6271f0e705819f59b30f646cce061d257be5b8a"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/final_storage_audit.json",
+      "category": "current_task_evidence",
+      "bytes": 52336,
+      "sha256": "726ff4603e095bbb7a36dfe9b15a70e5c1cba375e172d16a58c7f0480174f907"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/final_tests.json",
+      "category": "current_task_evidence",
+      "bytes": 12314,
+      "sha256": "2892c2af413aeb652ecf4ed9602014e059390dc181d73e70f6731be722ce227d"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/gpu_measurement_status.txt",
+      "category": "current_task_evidence",
+      "bytes": 273,
+      "sha256": "d412458ca43e3a2bfae6198ca7f86ea07b722469f14b40cb6862645a83804d05"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/gpu_status.json",
+      "category": "current_task_evidence",
+      "bytes": 19725,
+      "sha256": "6720371ffa442c879d13d140c6e244f82636bff18253b2be9a799e7c060d909d"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/integrated_tests.json",
+      "category": "current_task_evidence",
+      "bytes": 2783,
+      "sha256": "d199d7ca3812993cc794c7933eec7040d68cc1a968b5a31217f3e549a1b820ae"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/p1_tests.json",
+      "category": "current_task_evidence",
+      "bytes": 2130,
+      "sha256": "e94a2e8bd11465ceb99496d5b75a9b66f08b527db38b7db5093d128779faca9c"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/p1_tests_retry.json",
+      "category": "current_task_evidence",
+      "bytes": 1269,
+      "sha256": "10e17713e6b216f9262542cff3f1d0211ba52ced67c51a2aac8fe9ce82e9fd63"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/p2a_tests.json",
+      "category": "current_task_evidence",
+      "bytes": 1376,
+      "sha256": "89354d52cddbe3edc14bb246b859d2a4cb635e1c7cea002ad95736102edc9a4e"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/p2b_tests.json",
+      "category": "current_task_evidence",
+      "bytes": 814,
+      "sha256": "03e5567dcb2bd8291e2bceecd13548316cff2b13727b4897a39343fa20ddfa2a"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/p3_tests.json",
+      "category": "current_task_evidence",
+      "bytes": 1182,
+      "sha256": "663d191311cd0278b44b9982be0057f25f2729c150885569c21256c2bfcb51f9"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/p4_tests.json",
+      "category": "current_task_evidence",
+      "bytes": 944,
+      "sha256": "0788c6d672ede2cbeba4e5323e6d8e9baf5f924e7909c289f7b2910ff34a0c1c"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/p5_tests.json",
+      "category": "current_task_evidence",
+      "bytes": 2783,
+      "sha256": "6a1abf96504a3bced40afb9236993d63436f7f3a86ad0daaffb6594107242dee"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/release_e2e_plan.json",
+      "category": "current_task_evidence",
+      "bytes": 8011,
+      "sha256": "7906bd34c0fd084d1b6a14e3b6271f0e705819f59b30f646cce061d257be5b8a"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/release_test_log.txt",
+      "category": "current_task_evidence",
+      "bytes": 7592,
+      "sha256": "95097a4ca69e9f859ee163730ab83f5e00d7d80851605744047b34452bad84dd"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/release_tests.json",
+      "category": "current_task_evidence",
+      "bytes": 12548,
+      "sha256": "5dee92ed1cf7e93806c36c601388c65c87b2837294f6690331356f6df45806ac"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/release_tests_verified.json",
+      "category": "current_task_evidence",
+      "bytes": 12548,
+      "sha256": "cd22eb64d5c02eeb39175b966b93d9576aa38523d1491354792422cfc4d9e17b"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/sha256.json",
+      "category": "stage_patch_or_hashes",
+      "bytes": 11575,
+      "sha256": "e3ab683415fbb8878df4f09d6cc43d2a8285e382d998e8f4ef8df140358a968b"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/KIVI/__init__.py",
+      "category": "recoverable_baseline",
+      "bytes": 77,
+      "sha256": "c2eb213d3a40c2bd1d085de87f1d4d0de5700625ecd865b0e1faaf78cf6f6c08"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/KIVI/kernels.py",
+      "category": "recoverable_baseline",
+      "bytes": 5159,
+      "sha256": "b06b8e4c9263bbaf80d482dd7826a6fa6ac3a454f2ea2ca34284c4b7769bc226"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/KIVI/legacy_fake_quant.py",
+      "category": "recoverable_baseline",
+      "bytes": 3544,
+      "sha256": "b55f5f1c35a9cff735c3a9b7bc2c00b29c985739bb4cc5ba3311ab5358838025"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/KIVI/packed_cache.py",
+      "category": "recoverable_baseline",
+      "bytes": 5877,
+      "sha256": "f43a0fbfda8f6912eceaf7ac88cdbff3ccb8bad69ca2bb4c0cc4e21bfbf265e7"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/KIVI/qwen2_attention.py",
+      "category": "recoverable_baseline",
+      "bytes": 424,
+      "sha256": "f043139d2785267ab6ed3d77fc5e61f2c7a97842edcd3b0afb9c68c6e08fc481"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/models/__init__.py",
+      "category": "recoverable_baseline",
+      "bytes": 60,
+      "sha256": "903aab5c230bfd7c9b6bfa57bc8492bd17eaaf495a7c2f6c231abe010940b2c5"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/models/generation.py",
+      "category": "recoverable_baseline",
+      "bytes": 461,
+      "sha256": "f06b4d6cc1f902d56b0fda5b84e352e5bd1bd4a4640399a6d02b82ceca6b4ae7"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/models/Llama/__init__.py",
+      "category": "recoverable_baseline",
+      "bytes": 67,
+      "sha256": "bac9663e2b9b8db5eb74db9388245f43f6904b26d867fcfce144d4cf5a9847e0"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/models/Llama/__main__.py",
+      "category": "recoverable_baseline",
+      "bytes": 64,
+      "sha256": "d47283190d98f697bf8d550d5640c81f261065cc8b479617b4fb881aa000be27"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/models/Llama/integration.py",
+      "category": "recoverable_baseline",
+      "bytes": 2862,
+      "sha256": "295db1aced74f52afcfd9aee1deac34ee11eefd8c617d9cb33689b6993d705ab"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/models/Llama/kivi_attention.py",
+      "category": "recoverable_baseline",
+      "bytes": 2889,
+      "sha256": "e5fdd1b9858606471e719d25d0202a7425286dae15bd98209fed0ddcdd71b34f"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/models/Llama/llama.py",
+      "category": "recoverable_baseline",
+      "bytes": 2165,
+      "sha256": "3e66ceaa36a978f4171cd15144bdebf3c81b7508b9adc33d66632bf32c65790f"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/models/Llama/llama_attention.py",
+      "category": "recoverable_baseline",
+      "bytes": 4671,
+      "sha256": "b9ce9e9748500da905d17926649ef327da55a0d4a5072ff7dcebeffee3600936"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/models/Llama/packed_runtime.py",
+      "category": "recoverable_baseline",
+      "bytes": 1330,
+      "sha256": "5701b171d194f06e195501e9bd4ee6789ce654903ca229692d96767a252854ec"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/models/Llama-2-7b-chat-hf/run.py",
+      "category": "recoverable_baseline",
+      "bytes": 311,
+      "sha256": "d7ba342f85202823f871a3061a1d4ac269fa1a638d799c8ea1c7c77cc1880512"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/models/Llama-3.1-8B-Instruct/run.py",
+      "category": "recoverable_baseline",
+      "bytes": 311,
+      "sha256": "d7ba342f85202823f871a3061a1d4ac269fa1a638d799c8ea1c7c77cc1880512"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/models/OPT/__init__.py",
+      "category": "recoverable_baseline",
+      "bytes": 65,
+      "sha256": "838a39a7b7780f4d751d0abb94333a18c680bb01aa50c26440d69cc26fdd626f"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/models/OPT/__main__.py",
+      "category": "recoverable_baseline",
+      "bytes": 62,
+      "sha256": "212298cc3e5f99e946ad66a87bb498be9e9df0eb04abefd957aaafd7eabdd787"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/models/OPT/opt.py",
+      "category": "recoverable_baseline",
+      "bytes": 1774,
+      "sha256": "b766a4ce733acbef2857e841bcce6fb898fd02dd06a9567d4f196573f6c4ad7f"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/models/OPT/opt_attention.py",
+      "category": "recoverable_baseline",
+      "bytes": 7159,
+      "sha256": "ac4373dcf86e353ff382ecdd96e2e6a51a7b633d4026fbc635a9bbd5ce457788"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/models/packed_runtime.py",
+      "category": "recoverable_baseline",
+      "bytes": 6427,
+      "sha256": "f9fc87749bdad8a56e3a9d206c9fb8c2fca3a7558d51d2d6bff91e65423fec74"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/models/Qwen2/__init__.py",
+      "category": "recoverable_baseline",
+      "bytes": 540,
+      "sha256": "a980f090013f1835fb79dff12921e0a0f2a4298f73e6d7131c2a258ccd382f24"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/models/Qwen2/__main__.py",
+      "category": "recoverable_baseline",
+      "bytes": 114,
+      "sha256": "4062c82d9c26c573fd73fc3e7679a741847365310be2ecd6e7c5fe793335b6f0"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/models/Qwen2/ablate_cold.py",
+      "category": "recoverable_baseline",
+      "bytes": 13181,
+      "sha256": "1e12740ca7c8c8c3503a23c9e7cf560f7aaf6a03107dac2861491516cbda06c7"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/models/Qwen2/ablate_prompt.py",
+      "category": "recoverable_baseline",
+      "bytes": 6598,
+      "sha256": "da39db3437306eeec46fbcc7e003d56e6a8be2f5efc41dbfbf6c8c3cb2064325"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/models/Qwen2/bench_phasekv.py",
+      "category": "recoverable_baseline",
+      "bytes": 18041,
+      "sha256": "eca13345da557cd2a43a94c3f79eb4cae0b02d9dc1bcf20b5cb60b628754feca"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/models/Qwen2/integration.py",
+      "category": "recoverable_baseline",
+      "bytes": 1836,
+      "sha256": "7985a961e47a2eb185c9d287b240dce9dc7c5d0b726563812a8b027ce98bb97d"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/models/Qwen2/kivi_attention.py",
+      "category": "recoverable_baseline",
+      "bytes": 2317,
+      "sha256": "2e5fce3cdaacb1095c471a938c81d0e46e7dc086191e54c8bbf42ed6df279554"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/models/Qwen2/packed_runtime.py",
+      "category": "recoverable_baseline",
+      "bytes": 1224,
+      "sha256": "92a4d4b91e87c4dc203ce7efa1336a9307c7fd63c2ecc902e0e554034a9925e4"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/models/Qwen2/qwen2.py",
+      "category": "recoverable_baseline",
+      "bytes": 14928,
+      "sha256": "13f22f290abfd077149c0652c35d8d83d33b25434c434a216bf4ac90411b56d7"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/models/Qwen2/qwen2_attention.py",
+      "category": "recoverable_baseline",
+      "bytes": 5489,
+      "sha256": "ba6eab236c3c581cf996e79e489d79302320c4cc800d097c8b9d8cce4f823c37"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/models/Qwen2-1.5B-Instruct/run.py",
+      "category": "recoverable_baseline",
+      "bytes": 311,
+      "sha256": "d7ba342f85202823f871a3061a1d4ac269fa1a638d799c8ea1c7c77cc1880512"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/models/Qwen2-7B-Instruct/run.py",
+      "category": "recoverable_baseline",
+      "bytes": 311,
+      "sha256": "d7ba342f85202823f871a3061a1d4ac269fa1a638d799c8ea1c7c77cc1880512"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/models/Qwen2.5-7B-Instruct/run.py",
+      "category": "recoverable_baseline",
+      "bytes": 311,
+      "sha256": "d7ba342f85202823f871a3061a1d4ac269fa1a638d799c8ea1c7c77cc1880512"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/models/registry.py",
+      "category": "recoverable_baseline",
+      "bytes": 6504,
+      "sha256": "da83e5c7b12d840bca5311264b69219d77535a0e88115507ddf517f71a4cea46"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/PhaseKV/__init__.py",
+      "category": "recoverable_baseline",
+      "bytes": 1038,
+      "sha256": "6f23174be5b522f0e4a92ee90d47c512d0174a7d1157326a500915c20fccddc6"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/PhaseKV/compressor.py",
+      "category": "recoverable_baseline",
+      "bytes": 8321,
+      "sha256": "3ff381cc991c6abc4fa3cbedfd593da7d029361c048994e4240969c1d9b3168e"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/PhaseKV/decode_tier.py",
+      "category": "recoverable_baseline",
+      "bytes": 4471,
+      "sha256": "e64b7a58664f9eeb71a9d053b7b76074ba7f47b4a5ab3e350f1081c8cf21bfab"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/PhaseKV/hetero_cache.py",
+      "category": "recoverable_baseline",
+      "bytes": 10129,
+      "sha256": "b650b5edabefc5df9bd04cdb2129d728625f855353da4b432e4bfe5d1e594c6a"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/PhaseKV/kernels/__init__.py",
+      "category": "recoverable_baseline",
+      "bytes": 1038,
+      "sha256": "e17266e028cefed7b0e811f87a13ea6e815c3d75ac6e363d5dd17ed0645d8d0a"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/PhaseKV/kernels/attention_triton.py",
+      "category": "recoverable_baseline",
+      "bytes": 33251,
+      "sha256": "06a3fa7b54d7247b62e128cc5724e270d37f06cdd5d9099dddc06d5823b16ae7"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/PhaseKV/kernels/launch_config.py",
+      "category": "recoverable_baseline",
+      "bytes": 2882,
+      "sha256": "4ac747750f12e01067c4a0faf6d11809905f4e7dc9e2cfe9cdfbd15008ffa340"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/PhaseKV/kernels/packing.py",
+      "category": "recoverable_baseline",
+      "bytes": 9980,
+      "sha256": "f22f6ffb6d9f1e094130392fd16ca334cc30d09ce8632b291a883e72c437eb73"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/PhaseKV/kernels/reference.py",
+      "category": "recoverable_baseline",
+      "bytes": 4594,
+      "sha256": "7ea076b5929ee91592fca27b512db2400c79d59508078ff763c944b16d9bdb69"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/PhaseKV/kernels/segmented_attention.py",
+      "category": "recoverable_baseline",
+      "bytes": 8638,
+      "sha256": "908737ac9a5ca5253ef536ceff120146babc1b588815f4c7c3de7113ba323f56"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/PhaseKV/kernels/segmented_plan.py",
+      "category": "recoverable_baseline",
+      "bytes": 3624,
+      "sha256": "8aac00f7242b6b0c531d95b15ec86dceae81668eee991e243bff178beca645d0"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/PhaseKV/llama/__init__.py",
+      "category": "recoverable_baseline",
+      "bytes": 234,
+      "sha256": "1f2e5f8ea87b92970d5be4904a837dc36c10bb3a2dfed7328ba5fc3bc185ac7d"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/PhaseKV/llama/__main__.py",
+      "category": "recoverable_baseline",
+      "bytes": 406,
+      "sha256": "572816a2125bcad0a1bb68775feb1725c6609906fe057f411f8ef93d02e4e1b7"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/PhaseKV/llama/llama.py",
+      "category": "recoverable_baseline",
+      "bytes": 397,
+      "sha256": "1dcd67ea0134ce7b37b23c78db729d29d4aa9014c13aeaa061e4ce62c46a6555"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/PhaseKV/llama/llama_attention.py",
+      "category": "recoverable_baseline",
+      "bytes": 427,
+      "sha256": "392d0e6cadff3df46a637afad2546f87573c4e5ee781aca8678b1c63fbb81f97"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/PhaseKV/model_runner.py",
+      "category": "recoverable_baseline",
+      "bytes": 5621,
+      "sha256": "1e63f3f657d1c2ab71dcf771f086fdb12d2d62b45b5377ec5b5161a3cfca7ab8"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/PhaseKV/opt/__init__.py",
+      "category": "recoverable_baseline",
+      "bytes": 230,
+      "sha256": "43b2fd0fd321675275fa895d88c33a0dba9c2c66902dc3b33e3728b1306224a6"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/PhaseKV/opt/__main__.py",
+      "category": "recoverable_baseline",
+      "bytes": 400,
+      "sha256": "466836dd676be56f028704fc8c483e3a4495ebec040a3f2d6a39feb5b9a67bd7"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/PhaseKV/opt/opt.py",
+      "category": "recoverable_baseline",
+      "bytes": 385,
+      "sha256": "06f527d2b4ea2aff9ecfd730c75dd540d343c8f0f589a2e53a276ce8eb7b7416"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/PhaseKV/opt/opt_attention.py",
+      "category": "recoverable_baseline",
+      "bytes": 415,
+      "sha256": "f6695feba8117ffb857d56dde1eb2033fff3e9c4736f268882299707ac513a15"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/PhaseKV/phasekv_cache.py",
+      "category": "recoverable_baseline",
+      "bytes": 26884,
+      "sha256": "ab5ce6ea037f32f53518243a9e450066e08eed71bc4f9b428a6f64a42e69c2aa"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/PhaseKV/planner.py",
+      "category": "recoverable_baseline",
+      "bytes": 12735,
+      "sha256": "3d8559e9c49372fb26033e41ca4eba4728eeb0d24c7f8ff241162408a4f8987a"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/PhaseKV/prompt_tier.py",
+      "category": "recoverable_baseline",
+      "bytes": 5189,
+      "sha256": "123d6d6b93e7b47d0170ce1d995ff76507c94e4e5527ca428f5d0aa79e068453"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/PhaseKV/quant.py",
+      "category": "recoverable_baseline",
+      "bytes": 6651,
+      "sha256": "d976ec4fbe2f486691fe5025b0c33fded2cc304cd5abcb7599a72fb68247c882"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/PhaseKV/qwen2/__init__.py",
+      "category": "recoverable_baseline",
+      "bytes": 234,
+      "sha256": "b6b4689d28d04474562325c78d693d5a8668cb1e7c59c5a17fb380e7ef534723"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/PhaseKV/qwen2/__main__.py",
+      "category": "recoverable_baseline",
+      "bytes": 406,
+      "sha256": "aa260e9e701715450022195c6f5bfa3aa75093661e8263387c83d3daaeb66b36"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/PhaseKV/qwen2/qwen2.py",
+      "category": "recoverable_baseline",
+      "bytes": 397,
+      "sha256": "a6f3516e11c62902ab97cec7ef64bf926c603998ce1f98ea7f3d285841439012"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/PhaseKV/qwen2/qwen2_attention.py",
+      "category": "recoverable_baseline",
+      "bytes": 427,
+      "sha256": "a249441775bf5f31cba6c61d8f0abd39791b6828d3b3992964324b8c23375705"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/scripts/ablate_qwen2_cold.py",
+      "category": "recoverable_baseline",
+      "bytes": 415,
+      "sha256": "b258c8f5c029796654c17bcb46ea2e80971c6396c13e8f1286f3cb7cf93a4a26"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/scripts/ablate_qwen2_prompt.py",
+      "category": "recoverable_baseline",
+      "bytes": 421,
+      "sha256": "247c28a91fd6c1a5d01790cee162eba10c0b5b7881517042c7c0249e437ee804"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/scripts/analyze_phasekv_prompt_retest.py",
+      "category": "recoverable_baseline",
+      "bytes": 17027,
+      "sha256": "6cc2160d200be374937a867ff68e7b8f6e960c576f1c5e18c859b5b5dd354ef8"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/scripts/analyze_phasekv_sweep_results.py",
+      "category": "recoverable_baseline",
+      "bytes": 18497,
+      "sha256": "ba6bc1bfb19bbf5a4466a4a581dc2614c070cc0218706ca0ea9925623200f78e"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/scripts/audit_kv_storage.py",
+      "category": "recoverable_baseline",
+      "bytes": 5421,
+      "sha256": "d90a3bf49229b96ac2858e0cad1ffe5ca72873af3ed08f827bbac43fba69a399"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/scripts/bench_decode_kernel.py",
+      "category": "recoverable_baseline",
+      "bytes": 7922,
+      "sha256": "1d0bf469c5e2c0d1a46c86913a72a33af6c67557e2ffdbb3bb19bbc890901862"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/scripts/bench_phasekv_launch.py",
+      "category": "recoverable_baseline",
+      "bytes": 3291,
+      "sha256": "4cd05db15508a6df9f2c7b3b925c3be3df93fdfea2f5b6659d9c2a2e683226dc"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/scripts/bench_phasekv_segments.py",
+      "category": "recoverable_baseline",
+      "bytes": 4785,
+      "sha256": "5ec3f6ab0c8f6bbd7f9976b177219c4d9b97319554d102fddc7d962292930226"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/scripts/bench_qwen2_phasekv.py",
+      "category": "recoverable_baseline",
+      "bytes": 421,
+      "sha256": "e405840bf88554304c429eba0ff432e515e5b0c7c7d253283236d52ae93bcbd2"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/scripts/benchmark_4090d.py",
+      "category": "recoverable_baseline",
+      "bytes": 74844,
+      "sha256": "6a907dc0ca479bf1c3e96633256e8b130ad60907b1e7a0e26cc5d72550b12827"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/scripts/check_compression_triggers.py",
+      "category": "recoverable_baseline",
+      "bytes": 4953,
+      "sha256": "3813acce556bd345df656e0e29062a2f0853770e48b213d0b5a944849fb47388"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/scripts/compare_longbench_kv.py",
+      "category": "recoverable_baseline",
+      "bytes": 15600,
+      "sha256": "d594437623464e40a9dece6ddb13a27fd4eabfdb2e64badf9a633255b2e34450"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/scripts/compare_phasekv_same_round.py",
+      "category": "recoverable_baseline",
+      "bytes": 15301,
+      "sha256": "4abb00252989c60fd2515db91e8ec394f0efadc1b569a50b00080910e0977161"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/scripts/download_data.py",
+      "category": "recoverable_baseline",
+      "bytes": 4621,
+      "sha256": "dc761f96450fe1132f479b436bc478fd051b08f5923f531495183fac14637602"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/scripts/download_models.py",
+      "category": "recoverable_baseline",
+      "bytes": 7150,
+      "sha256": "15d86e7c664d0b0d531332cc008b85e152c629ee16434694fca43849581d430e"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/scripts/make_paper_figures.py",
+      "category": "recoverable_baseline",
+      "bytes": 14775,
+      "sha256": "ce7a5d4737b9019fe87cbd7d25e4aeb21f86bbf51c4498a6666e134ec37cf41d"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/scripts/qa_significance.py",
+      "category": "recoverable_baseline",
+      "bytes": 18723,
+      "sha256": "e402a4487aec55637d967f62f543485611fe3014bd625a424ca9ef4f092e64c0"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/scripts/rerun_scope_longbench.py",
+      "category": "recoverable_baseline",
+      "bytes": 6901,
+      "sha256": "e0eb4d13386aa5709b24aeafab753c55e546251f4486689efb4b6ebf1582e644"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/scripts/retest_phasekv_prompt.py",
+      "category": "recoverable_baseline",
+      "bytes": 16583,
+      "sha256": "438699f86463508b8dade45c616f781cad1991cd9b4732cb676fee9eb058c5bc"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/scripts/roofline_measure.py",
+      "category": "recoverable_baseline",
+      "bytes": 27765,
+      "sha256": "613133c9f6d9411f40d2748a9ecbef748fac521d3bf805593923bd478c0c4039"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/scripts/run_eval.py",
+      "category": "recoverable_baseline",
+      "bytes": 1614,
+      "sha256": "36aacf6a667b49d9b18cffad747c80bb545ba3876c46d5a9fdefeb95cc04cd5d"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/scripts/run_longbench.py",
+      "category": "recoverable_baseline",
+      "bytes": 17869,
+      "sha256": "96a8b8ea261850b9090f060c237f0dde6d2512c89e10bf2eddbfe7b7d5bd409a"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/scripts/save_phasekv_optimization_stage.py",
+      "category": "recoverable_baseline",
+      "bytes": 2098,
+      "sha256": "d27be72114fca21a0284ddb890bfaa358952b3155bb8c45293d04f559662809c"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/scripts/summarize_downloaded_4090d.py",
+      "category": "recoverable_baseline",
+      "bytes": 25690,
+      "sha256": "544acd4729413a8093e44898ac396a0dba1fd3912c3139b218e61aefdb4b6ad5"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/scripts/sweep_phasekv.py",
+      "category": "recoverable_baseline",
+      "bytes": 23025,
+      "sha256": "94b78cd4de1cd3b9f7b75a483e75295b5ee121af5156d328e1f90ac68ddcbbe3"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/scripts/update_scope_report.py",
+      "category": "recoverable_baseline",
+      "bytes": 11219,
+      "sha256": "69ad9e0390b6e0ef2235436b24485cc5256940f9cd793ac5ce88d9890c45208c"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/tests/conftest.py",
+      "category": "recoverable_baseline",
+      "bytes": 1262,
+      "sha256": "ec5b2e742ffc8fbbbe96ac8d6ba29540a863bcbcba005d7d12aa55dde5821a62"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/tests/test_bench_qwen2_phasekv.py",
+      "category": "recoverable_baseline",
+      "bytes": 1285,
+      "sha256": "ad5bc2422ff89d5da12fe94a47e041a364e90387b75a86d53e532fe3c7c0f032"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/tests/test_benchmark_4090d_standalone.py",
+      "category": "recoverable_baseline",
+      "bytes": 14759,
+      "sha256": "101b3e1060ebfd871b0cf7e2d37aac2441df1d94120e057e46353ce99ec8767d"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/tests/test_compression_trace.py",
+      "category": "recoverable_baseline",
+      "bytes": 8875,
+      "sha256": "8a6409b96aab865351b384d2a9656459e61cd1676de5badece7d15fa763314a1"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/tests/test_compressors.py",
+      "category": "recoverable_baseline",
+      "bytes": 4594,
+      "sha256": "247cd30356382eb266aea907dee9f874d002974257bcd6e2a471ed5f375fbec6"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/tests/test_deepseek_v4_flash_deploy.py",
+      "category": "recoverable_baseline",
+      "bytes": 1671,
+      "sha256": "1469ef0c52a2b45ff51290b724c984200b487d76ca62929d014102c0a43739cc"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/tests/test_interface.py",
+      "category": "recoverable_baseline",
+      "bytes": 2511,
+      "sha256": "67ba967c9ec2115009661134eb1aac77a5b5195251b225351ff5fc42f2c8df11"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/tests/test_kivi_packed.py",
+      "category": "recoverable_baseline",
+      "bytes": 8417,
+      "sha256": "241c2385ca8a731eb37da36b3d4a9db13ea1043abb5920c8aff890173d24ae7b"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/tests/test_llama_deployment.py",
+      "category": "recoverable_baseline",
+      "bytes": 10946,
+      "sha256": "3501478900e4c7b81d634c4933c25f47505631da85a96e2b27b40bf92d7d3e3d"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/tests/test_llama_opt_adapters.py",
+      "category": "recoverable_baseline",
+      "bytes": 3199,
+      "sha256": "3a93210578f1d26c9d3d98222b26f669c0ab49937197c2bdcfc3248b28eb1be0"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/tests/test_metrics.py",
+      "category": "recoverable_baseline",
+      "bytes": 2421,
+      "sha256": "e2bc96b3b9c57964bd2ed62c012de5c8fb21708b99055db784017039c8ab2bbf"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/tests/test_model_deployment.py",
+      "category": "recoverable_baseline",
+      "bytes": 8692,
+      "sha256": "2f9a37094630bfcafbf9a0d59b733ba7275fcfb8fad5624188faa63b59c369af"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/tests/test_phasekv_cache.py",
+      "category": "recoverable_baseline",
+      "bytes": 17303,
+      "sha256": "630abfbaf7b10fa0f815baf77587c107ee8f513092ccae2264b30a29e5461154"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/tests/test_phasekv_launch_config.py",
+      "category": "recoverable_baseline",
+      "bytes": 4548,
+      "sha256": "caf347231714b9684d4d7003bd7821025b67f3be1c73c428c2d1808bab3d2319"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/tests/test_phasekv_prompt_indices.py",
+      "category": "recoverable_baseline",
+      "bytes": 1068,
+      "sha256": "8003884b17cf464865888a00c0c23f94e7b2695b828eaf6d2c33ee5e1b349be3"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/tests/test_phasekv_prompt_retest.py",
+      "category": "recoverable_baseline",
+      "bytes": 7269,
+      "sha256": "652a91ee7fa9da63669fab9d37cc30b368a3a8f06b7da77f8870d868f0d3374e"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/tests/test_phasekv_same_round.py",
+      "category": "recoverable_baseline",
+      "bytes": 5974,
+      "sha256": "4921f8ed9a4b3b1956b07a23765c368ad93fecf95711bb9fbb7aae73b8bb8f26"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/tests/test_phasekv_segmented_decode.py",
+      "category": "recoverable_baseline",
+      "bytes": 9611,
+      "sha256": "781446239bc6cfedf1bec81e2fa33e8796ae55b001faba91c67a6a7740004007"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/tests/test_phasekv_sweep.py",
+      "category": "recoverable_baseline",
+      "bytes": 8939,
+      "sha256": "bd4823903046d23264035020dbd38049ee94ff1dc045ed5438d34f4ce177b0c3"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/tests/test_qwen2_attention_adapter.py",
+      "category": "recoverable_baseline",
+      "bytes": 4754,
+      "sha256": "1e40ee3023b01502f649c364ff2318410bff797df928356fde53512fd5962243"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/tests/test_qwen2_chat.py",
+      "category": "recoverable_baseline",
+      "bytes": 2607,
+      "sha256": "38bca0cb8ab6089cbe431a6e81c31969cfd6b2de0dd284c0099e275b202e2bcc"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/tests/test_qwen2_sampling.py",
+      "category": "recoverable_baseline",
+      "bytes": 846,
+      "sha256": "467132b5ba4a223cf9764c9233114d857230ad6ac54ccfab583e849401ce780f"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/tests/test_real_kv_protocol.py",
+      "category": "recoverable_baseline",
+      "bytes": 4357,
+      "sha256": "7db17ef17a16ee301cc9aab7b160447f833747f5c9b325d52ce0d42dfd264530"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/tests/test_segment_ablation.py",
+      "category": "recoverable_baseline",
+      "bytes": 4718,
+      "sha256": "43e3f2691932cb3fda4acf4874db78d9228293fab52f9168f81eb26bb0ed8056"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/00_baseline/source/tests/test_smoke_e2e.py",
+      "category": "recoverable_baseline",
+      "bytes": 2984,
+      "sha256": "a9b635e55767cde85bfc096483fe4c00f6e906da69e90475acc1f75fbcec9be6"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/01_p1/changes.patch",
+      "category": "stage_patch_or_hashes",
+      "bytes": 20100,
+      "sha256": "a8cb9cadaf16062f77b09735d68e8c73fae554e86db76cd3fe82325d7c8b526f"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/01_p1/sha256.json",
+      "category": "stage_patch_or_hashes",
+      "bytes": 12002,
+      "sha256": "d863643a1fdc02b9ba79047af6c1459fedd6b4ba9488e7b56c7b248c1228ecff"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/02_p2a/changes.patch",
+      "category": "stage_patch_or_hashes",
+      "bytes": 12161,
+      "sha256": "df9f4e9216203c6660e913a8e3593cc7205ea67e4d326fb6ddcf49a7ba56e7a0"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/02_p2a/sha256.json",
+      "category": "stage_patch_or_hashes",
+      "bytes": 12111,
+      "sha256": "d4c1ca489af6d7b357e4436896ad27c9cf475ad5fb894fe88ad7b4904a59afce"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/03_p2b/changes.patch",
+      "category": "stage_patch_or_hashes",
+      "bytes": 14365,
+      "sha256": "338f8855d88fe0da2c47b049f6b3dcbb09f55684bac50f011fb7fa7a512b69eb"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/03_p2b/sha256.json",
+      "category": "stage_patch_or_hashes",
+      "bytes": 12210,
+      "sha256": "eb978e365184f8a45a2dc6e1a500ef1a2d3cb0cee045d267c4d686bdec62533d"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/04_p3/changes.patch",
+      "category": "stage_patch_or_hashes",
+      "bytes": 17150,
+      "sha256": "414358032d47843f03f5fcdd87746279b0700f4dccdfe7908d6f23e383a10a39"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/04_p3/sha256.json",
+      "category": "stage_patch_or_hashes",
+      "bytes": 12210,
+      "sha256": "f4e8e6da4b1004589b1c7c3881a88b428bf4dca7f047636222c3ee556c3dd9f8"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/05_p4/changes.patch",
+      "category": "stage_patch_or_hashes",
+      "bytes": 10932,
+      "sha256": "618187a5cae14db8220401316d8d56a9d1134ef689f0b26019fb3450bbf066d4"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/05_p4/sha256.json",
+      "category": "stage_patch_or_hashes",
+      "bytes": 12210,
+      "sha256": "98ebfa6dbd12967b21388dad4b801c86a7c267cd14900dab0e7cab5fe67ee5f3"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/06_p5/changes.patch",
+      "category": "stage_patch_or_hashes",
+      "bytes": 18669,
+      "sha256": "7d3bfb722796554749f17e5f9370d2a682368846e75a9cef62b3dae6d65a1393"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/06_p5/sha256.json",
+      "category": "stage_patch_or_hashes",
+      "bytes": 12314,
+      "sha256": "85342fe3a381b0600e6c860430ad496c1d94b4d5001479a8e2021bd997d62f64"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/07_integration/changes.patch",
+      "category": "stage_patch_or_hashes",
+      "bytes": 72618,
+      "sha256": "3316a1a1e6de31820ac7a96a2effb882936b2190a34ade5553b2beb61243e96d"
+    },
+    {
+      "path": "results/phasekv_optimization_20261027/stages/07_integration/sha256.json",
+      "category": "stage_patch_or_hashes",
+      "bytes": 13225,
+      "sha256": "3b6226fb2cea64d035a5c5f10177fbb5b895a46acb79dc6b4ed5c2e329373449"
+    },
+    {
+      "path": "run_phasekv_optimizations.sh",
+      "category": "delivery",
+      "bytes": 1213,
+      "sha256": "f9f582982db6ef1c5188d2faebd395718162f35efa4725be5db1cf7baa6b18b4"
+    },
+    {
+      "path": "run_phasekv_same_round.sh",
+      "category": "unchanged_dependency",
+      "bytes": 433,
+      "sha256": "a4d406a445ec72295504827c9c73b80ee19cd9d9b343245b1a3bcc6f3208fdf3"
+    },
+    {
+      "path": "scripts/analyze_phasekv_optimizations.py",
+      "category": "new",
+      "bytes": 1917,
+      "sha256": "61e9a22caacb0bca94f070ba2c887bf7193c6e9c4b4810452b8f72f0ba9c3a7d"
+    },
+    {
+      "path": "scripts/audit_kv_storage.py",
+      "category": "modified",
+      "bytes": 6249,
+      "sha256": "419a828f5d1f50ec2f3fd99c5d00a25ab83965c02c265f7ae416e7341d02e14a"
+    },
+    {
+      "path": "scripts/bench_phasekv_optimizations.py",
+      "category": "new",
+      "bytes": 19786,
+      "sha256": "f1dd29aa804259a248b0df8d98e3732a6a6f7aa870b286eceecbb5173ec16c37"
+    },
+    {
+      "path": "scripts/benchmark_4090d.py",
+      "category": "unchanged_dependency",
+      "bytes": 74844,
+      "sha256": "6a907dc0ca479bf1c3e96633256e8b130ad60907b1e7a0e26cc5d72550b12827"
+    },
+    {
+      "path": "scripts/build_phasekv_optimization_bundle.py",
+      "category": "new",
+      "bytes": 4471,
+      "sha256": "6aeb344b82e8eef7190c360bfc875d0c3f6ffd19dd33cb617e4e91041d1f4d72"
+    },
+    {
+      "path": "scripts/compare_phasekv_optimizations.py",
+      "category": "new",
+      "bytes": 6457,
+      "sha256": "632c23221416673f7916ab67b46edd3aaf4410d54f2dd80aede421ca763865fc"
+    },
+    {
+      "path": "scripts/compare_phasekv_same_round.py",
+      "category": "unchanged_dependency",
+      "bytes": 15301,
+      "sha256": "4abb00252989c60fd2515db91e8ec394f0efadc1b569a50b00080910e0977161"
+    },
+    {
+      "path": "scripts/phasekv_optimization_support.py",
+      "category": "new",
+      "bytes": 3009,
+      "sha256": "c20ed9601c7346187f4455812cbb9f5b2d2bef05afeb9d8774580d2253f0ccff"
+    },
+    {
+      "path": "scripts/retest_phasekv_prompt.py",
+      "category": "unchanged_dependency",
+      "bytes": 16583,
+      "sha256": "438699f86463508b8dade45c616f781cad1991cd9b4732cb676fee9eb058c5bc"
+    },
+    {
+      "path": "scripts/save_phasekv_optimization_stage.py",
+      "category": "unchanged_dependency",
+      "bytes": 2098,
+      "sha256": "d27be72114fca21a0284ddb890bfaa358952b3155bb8c45293d04f559662809c"
+    },
+    {
+      "path": "scripts/sweep_phasekv.py",
+      "category": "unchanged_dependency",
+      "bytes": 23025,
+      "sha256": "94b78cd4de1cd3b9f7b75a483e75295b5ee121af5156d328e1f90ac68ddcbbe3"
+    },
+    {
+      "path": "scripts/test_phasekv_optimizations.py",
+      "category": "new",
+      "bytes": 3217,
+      "sha256": "e43c388be1598500edc878f5d4964315a1d211e29f7fc431725a7cc7bea50088"
+    },
+    {
+      "path": "scripts/trace_phasekv_optimizations.py",
+      "category": "new",
+      "bytes": 4325,
+      "sha256": "cb554a224a3ebf3b90e977b3f3831ea86a9e501aa33979f00257297c2e4bb72b"
+    },
+    {
+      "path": "tests/test_kivi_packed.py",
+      "category": "unchanged_dependency",
+      "bytes": 8417,
+      "sha256": "241c2385ca8a731eb37da36b3d4a9db13ea1043abb5920c8aff890173d24ae7b"
+    },
+    {
+      "path": "tests/test_llama_opt_adapters.py",
+      "category": "unchanged_dependency",
+      "bytes": 3199,
+      "sha256": "3a93210578f1d26c9d3d98222b26f669c0ab49937197c2bdcfc3248b28eb1be0"
+    },
+    {
+      "path": "tests/test_phasekv_cache.py",
+      "category": "unchanged_dependency",
+      "bytes": 17303,
+      "sha256": "630abfbaf7b10fa0f815baf77587c107ee8f513092ccae2264b30a29e5461154"
+    },
+    {
+      "path": "tests/test_phasekv_fused_quantize.py",
+      "category": "new",
+      "bytes": 4097,
+      "sha256": "1ddeb6303d5516bf72a3efab1bb8e1fb1a1cffed59c0d4d85760d01c242a955f"
+    },
+    {
+      "path": "tests/test_phasekv_hot_ring.py",
+      "category": "new",
+      "bytes": 4259,
+      "sha256": "39b7cb63ca5cefe8734847ef79ba8622b70062e16fcc8f9d3b00a361f991393c"
+    },
+    {
+      "path": "tests/test_phasekv_launch_config.py",
+      "category": "unchanged_dependency",
+      "bytes": 4548,
+      "sha256": "caf347231714b9684d4d7003bd7821025b67f3be1c73c428c2d1808bab3d2319"
+    },
+    {
+      "path": "tests/test_phasekv_optimization_protocol.py",
+      "category": "new",
+      "bytes": 2917,
+      "sha256": "0a8a0950c8e6fb01ad081e6fb87e2c58dc476fd0b9fd7d0ec2a529731ea421a3"
+    },
+    {
+      "path": "tests/test_phasekv_paged_storage.py",
+      "category": "new",
+      "bytes": 7059,
+      "sha256": "77ae3b50f12e3640b5e9048d251a61820996a4736cb9023b8d889b088f23dbe1"
+    },
+    {
+      "path": "tests/test_phasekv_segmented_decode.py",
+      "category": "modified",
+      "bytes": 13480,
+      "sha256": "02de461951de4b6d2445e03f81ae60fe77d9528625a37f74eec3d004a561531b"
+    },
+    {
+      "path": "tests/test_qwen2_attention_adapter.py",
+      "category": "unchanged_dependency",
+      "bytes": 4754,
+      "sha256": "1e40ee3023b01502f649c364ff2318410bff797df928356fde53512fd5962243"
+    }
+  ],
+  "excludes": [
+    "weights",
+    "model/download caches",
+    "historical benchmark results"
+  ]
+}

@@ -1,0 +1,304 @@
+PhaseKV 优化任务表：优先级 1—5
+日期：2026-10-27
+用途：交给新 agent 实施；本文件只制定任务，不代表已实现或已测得收益。
+仓库：C:/Users/kladjf/Desktop/PhaseKV
+远程运行目录：/root/KV/PhaseKV（Linux，RTX 4090 D，约24GB显存）
+
+0. 开始前必须确定的边界
+========================
+目标：在不改变当前压缩策略的前提下，减少压缩、缓存维护和attention的开销，
+重点改善短输入＋长输出吞吐，同时保留长输入场景的优势。
+
+固定正式对照配置：
+  Qwen2.5-7B-Instruct，原始BF16模型权重；当前packed attention热区仍用FP16。
+  prefill_keep_ratio=0.7，prompt_bits=4，recent_window=128，cold_bits=4，
+  decode_keep_ratio=1.0，lazy_g=16，group_size=32，obs_window=32，sink_tokens=0。
+不要顺便更换模型、attention数值精度、RoPE、prompt选择策略或保留率。
+
+重要语义：
+  K沿token轴分组，V沿head_dim轴分组；scale/min以FP16存储。
+  quantize_pack内部用FP32计算码值，再把scale/min转换为FP16存储。
+  当前16-token冷块的K实际group_size=min(32,16)=16，不能合并成32-token
+  量化组后声称结果不变。计算调度合并与量化分组改变是两件事。
+  冻结prompt和旧cold不得重新量化；热区保留及冷却触发时刻必须不变。
+  新生成token先参与attention，再在finish_decode_step里执行冷却。
+
+代码现状：
+  PhaseKV/kernels/packing.py：PyTorch参考量化和真实bit packing，多操作实现。
+  PhaseKV/kernels/segmented_attention.py：已在attention内融合解包/反量化。
+  当前每层attention为两次kernel启动；冷块增加主要增加计算分区、中间结果、
+  归并与描述表维护，不能再把它描述成“每个冷块单独启动一次kernel”。
+  PhaseKV/phasekv_cache.py：冷块为列表；冷却后工作区失效，热区clone/copy搬移。
+  src/phasekv/...是兼容转发入口。先核实对应文件，不要复制一份新算法到src。
+  KIVI也导入PhaseKV/kernels/packing.py等公共工具；优化不能无意改变KIVI基线。
+
+实施顺序：准备基准 → P1 → P2 → P3 → P4 → P5 → 完整同轮评测。
+各项分别提交/保存补丁和测量结果，保留开关，既能累积比较也能单独关闭。
+不要把五项一次性改完后只给一个总加速数。
+不需要新建或联系其他agent；执行者负责本任务内实现和交付。
+
+任务总表
+========
+编号 | 功能 | 主修改文件 | 新增文件（建议名） | 前置条件
+P1 | 融合量化＋打包 | packing.py接口、phasekv_cache.py/_pack_kv | kernels/quantize_triton.py | 原始参考快照
+P2 | 预分配页式冷区、增量描述表、复用工作区 | phasekv_cache.py、segmented_plan.py、segmented_attention.py、models/packed_runtime.py | packed_storage.py | P1支持写入指定输出
+P3 | 多冷块合并调度attention | segmented_plan.py、segmented_attention.py、launch_config.py | 对应分组调度测试 | P2描述表与容量接口
+P4 | 4-bit专用解包及GQA复用实验 | segmented_attention.py、segmented_plan.py、launch_config.py | 可选attention_4bit.py | P3稳定的通用对照
+P5 | 环形热区缓冲 | phasekv_cache.py、segmented_attention.py、attention_triton.py参考路径 | 环形缓冲测试 | P1支持带stride/环绕输入，P2—P4稳定
+注：表内未写目录的主文件在PhaseKV/或PhaseKV/kernels/；以下列出完整相对路径。
+
+准备任务：保存基线与建立测量工具
+==============================
+1. 读取仓库适用的AGENTS/说明，检查git状态；保留用户已有修改。
+   在改动之前记录当前相关文件的SHA256并保存可恢复基线。当前“已有两次启动
+   的segmented实现”才是此次优化前基线，不是更早的逐段reference实现。
+2. 新增 scripts/bench_phasekv_optimizations.py（建议），负责A/B与逐项消融。
+   复用 scripts/bench_phasekv_segments.py 的计时结构，但原脚本使用307-token、
+   2-bit prompt和47-token热区，不符合本次70%/4-bit、W128，需要新增目标形状。
+   原脚本的old是更早reference，不可直接用它作为本次优化前成绩。
+3. 记录prefill打包、普通decode、冷却decode、描述表增长、attention分段计算、
+   merge的耗时；同时提供GPU事件计时与同步wall time。
+   PyTorch profiler/NVTX等详细跟踪单独运行，不能把profiler开销混入正式速度。
+4. JIT预热后再计时；A/B交替顺序、至少3轮，保存各轮值和中位数。
+   固定输入张量、query、seed，避免不同生成内容污染内核归因。
+5. 显式记录全部优化开关、版本、源文件哈希、GPU/软件环境。续跑时开关也必须
+   纳入协议指纹；不能只用未记录的环境变量切换实现。
+6. 为每个阶段提供原始参考与优化实现的选择方式。默认基线可复现，CPU不强制
+   导入Triton；CUDA不支持的形状可以显式走原packed实现，绝不能静默解包整份KV。
+
+P1：融合量化与打包
+=================
+目的：把多次PyTorch操作/临时张量写回，改成少量GPU kernel完成。
+
+修改/新增：
+  新增 PhaseKV/kernels/quantize_triton.py。
+  修改 PhaseKV/phasekv_cache.py：_pack_kv()及必要的选择接口。
+  PhaseKV/kernels/packing.py：保留quantize_pack作为独立参考；只增加必要接口，
+    如quantize_pack_fast/quantize_pack_into，不要直接替换所有调用者。
+  新增 tests/test_phasekv_fused_quantize.py。
+  新增或扩展 scripts/bench_phasekv_optimizations.py。
+
+怎么改：
+  1. 分别设计K轴2、V轴3的融合内核：加载原张量 → FP32组内min/max →
+     clamp(max-min, min=1e-8)/qmax → 量化取整与截断 → bit packing →
+     写uint8码及FP16 scale/min。允许K/V各一次启动，不强求跨轴强行融合。
+  2. 支持直接读取原stride，尽量免去x.float().movedim(...).contiguous()的
+     全量中间缓冲。每个输出字节由唯一writer写，防止低bit并发写冲突。
+  3. 保持原round规则、除法/运算次序、padding行为及有效group_size；不能
+     为提速擅自用近似倒数或先把scale转FP16再量化。常量组、极小range、
+     取整边界和FP16 scale下溢等情况都要与参考一致。
+  4. 输出保持PackedTensor兼容；设计可传入预分配packed/scale/min输出视图
+     的接口，供P2写入页内，不要求每次创建底层GPU存储。
+  5. 首先优化4-bit目标路径，2/8-bit保留原参考路径。是否继续扩展另用测量决定。
+     PhaseKV显式选择fast路径，避免KIVI因共享quantize_pack而被一起改动。
+
+验收：
+  packed码、scale/min的原始存储字节应与原实现相同，形状、轴、分组与尾部一致。
+  测FP16输入以及原接口支持的其他dtype；实际PhaseKV从BF16模型进入缓存的
+  转换规则必须保留。长度1/7/15/16/17/31/32/33及大prompt、非连续输入都覆盖。
+  CPU参考测试与CUDA真实内核测试分开；不能用解释器速度代替4090D结果。
+  比较冷块16和长prompt打包延迟、临时峰值、完整cooling-step耗时。
+  如果无法达到码值一致，不扩大容差绕过；维持参考默认并说明具体差异。
+
+P2：预分配冷区、增量描述表与工作区
+================================
+目的：消除每次增加冷块时的全量元数据重建，减少小张量分配和数据拼接。
+
+修改/新增：
+  新增 PhaseKV/packed_storage.py：页式存储及所有权管理（建议独立模块）。
+  修改 PhaseKV/phasekv_cache.py：LayerTiers、_cool_aged_tokens()、
+    physical_nbytes()、reorder_cache()，以及多轮prompt生命周期。
+  修改 PhaseKV/kernels/segmented_plan.py：DecodeWorkspace、segment_rows()、
+    build_workspace()；可新增ensure_capacity()/append_descriptors()。
+  修改 PhaseKV/kernels/segmented_attention.py：workspace缓存/有效长度/容量stride。
+  修改 models/packed_runtime.py：storage_evidence()，按底层存储去重。
+  扩展 scripts/audit_kv_storage.py、tests/test_phasekv_segmented_decode.py；
+    新增 tests/test_phasekv_paged_storage.py。
+
+怎么改，建议拆成P2a/P2b两个可测补丁：
+  P2a：先实现描述表和scratch容量复用。描述表预留行，只写新增行，capacity
+    与valid_count分开。scratch的行stride采用容量，kernel遍历采用有效数，
+    不能直接用旧的NPARTIAL同时表示两者。容量增长时才重分配。
+    缓存记录已消费段数/版本，不再每次cooling直接置None后全量重建。
+  P2b：cold码和元数据放进固定尺寸页，逻辑PackedKVSegment可以是页内视图。
+    P1直接量化写入新slot；旧页不移动、不重新量化。页满后追加新页，避免
+    每次torch.cat全部历史缓存。页大小先作为存储参数单独测试，不改变16-token
+    量化边界。保留混合bits、不同group_size、短尾块的布局信息。
+  workspace仍须按device、CUDA stream、heads、head_dim、kernel调度配置识别。
+  保存owner引用，避免描述表中的GPU指针悬空；扩容/重排/多轮prompt/stream切换
+  必须有明确更新或失效规则。沿用现有同步责任，不凭空承诺并发写安全。
+
+显存统计必须同步修复：
+  当前storage_evidence按各PackedTensor的untyped_storage().nbytes()求和，
+  若多个segment共享页会重复计数；而PackedTensor.nbytes按有效元素计数，
+  又会遗漏页的未用容量。两种统计都不能直接用于新“实际KV占用”。
+  增加cache持有存储枚举接口，按(device,底层storage身份)去重，实际KV包含
+  整页和热区已分配容量；另报有效payload、元数据、空闲容量、工作区字节。
+  同一底层存储同时包含码/元数据时，只计一次，可单列mixed-page容量。
+  描述表/attention工作区不伪装成KV节省，但必须计入总峰值及单独辅助字节。
+  models/packed_runtime.py是共享代码，KIVI原有统计必须通过回归验证。
+
+验收：
+  追加冷块后旧码、scale/min、逻辑顺序不变；页未满时旧指针及scratch稳定。
+  测容量刚好用完/扩容/空cold/数百cold/重排/多轮输入，及有效行之外不被读取。
+  以所有者实际底层存储独立求和，与physical_nbytes/storage_evidence一致。
+  更新旧测试的“每次冷却必须workspace=None”断言为新容量复用契约，保留
+  数据更新可见性和结果正确性的断言；不能只删除原生命周期测试。
+  报告冷却步尾延迟、描述表更新成本、页内浪费；不要只报常规decode平均值。
+
+P3：多个冷块一起调度attention
+===========================
+目的：降低大量小冷块造成的分区数量、partial写回和merge开销。
+
+修改/新增：
+  PhaseKV/kernels/segmented_plan.py：构造工作单元到多个逻辑段的映射。
+  PhaseKV/kernels/segmented_attention.py：_segmented_attention()、
+    _merge_segments()、segmented_phasekv_decode()。
+  PhaseKV/kernels/launch_config.py：新增PhaseKV专用规划器，避免直接改变
+    KIVI共享plan_kivi_decode而污染基线。
+  tests/test_phasekv_segmented_decode.py、scripts/bench_phasekv_optimizations.py。
+
+怎么改：
+  保留prompt的长段split能力；对cold小段尝试每工作单元处理4/8/16段。
+  每段仍读取自身min/scale和原量化组。计算单元内用稳定online softmax跨段
+  累积，最后只写一个(max,denominator,accumulator) partial。
+  可以借助P2连续页减少指针处理，但不能把旧16-token量化组合并重新量化。
+  分组大小按cold规模、head数、GPU占用率选择；短cold保留原通用路径。
+  保证每个有效token恰好处理一次、空段不产生NaN、prompt/cold/hot不漏不重。
+  不盲目追求分区越少越好；减少partial可能同时降低并行度、增加寄存器压力。
+
+验收：
+  与优化前两启动实现、独立dense数学oracle比较，保留现有数值阈值作为起点。
+  softmax归约次序可能改变，要求记录误差分布，不宣称所有logits逐bit相同。
+  混合2/4/8bit、不同group_size、尾段、GQA/MHA、空hot、多轮prompt继续通过。
+  记录partial数/工作区bytes、attention与merge分别耗时以及端到端耗时。
+  重点测cold段数0/1/7/16/64/128/247/512；不允许只挑最多段的有利结果。
+
+P4：4-bit专用解包与读取优化
+=========================
+目的：在现有融合解包attention内进一步降低通用寻址和重复反量化开销。
+
+修改/新增：
+  PhaseKV/kernels/segmented_attention.py：专用kernel/分派；必要时独立为
+    PhaseKV/kernels/attention_4bit.py，避免通用kernel过度复杂。
+  PhaseKV/kernels/segmented_plan.py：专用路径能力检查、兼容段分类。
+  PhaseKV/kernels/launch_config.py：PhaseKV专用tile/warp配置与选择。
+  tests/test_phasekv_segmented_decode.py、scripts/bench_phasekv_optimizations.py。
+
+怎么改：
+  1. 让bits=4及兼容group size等成为编译期常量；使用固定shift/mask，
+     优化字节读取和两个4-bit值的复用。当前通用kernel从描述表读bits/group。
+  2. 不把prompt K组32与cold K组16误当同组大小；V轴/stride也与K不同。
+     只有确实兼容的描述表进入专用路径，混合bits和异常形状明确走通用路径。
+  3. 探索同一KV head对应多个Q head时，共享一次KV加载/反量化结果。
+     Qwen目标为Q-heads28/KV-heads4/head_dim128；其他GQA/MHA仍应可用。
+     多Q复用可能增加寄存器并降低occupancy，作为独立开关实测后决定是否启用。
+  4. 不把缓存完整解包到HBM；不直接改变FP32累加、exp、FMA开关来混淆收益。
+     调整数值计算路径应另设实验，单独检查准确率，不能当无损布局优化交付。
+
+验收：
+  专用解包出的码完全一致；反量化与attention按既有语义核对。
+  对奇数长度、尾部packed字节、非连续视图和通用回退路径验证。
+  与P3通用kernel比较时使用完全相同调度/存储，分别报告专用解包和GQA复用收益。
+  在真实GPU检查寄存器/占用率/吞吐；不靠理论bit运算数量推算提速比例。
+
+P5：环形热区缓冲
+================
+目的：移除每次冷却后hot区clone/copy，把热区顺序变成索引管理。
+
+修改/新增：
+  PhaseKV/phasekv_cache.py：LayerTiers新增hot_start；hot_views()、_append_token()、
+    _cool_aged_tokens()、begin_prompt_chunk()、append_prompt_token()、
+    finish_prompt_chunk()、_empty_hot()、reorder_cache()。
+  PhaseKV/kernels/segmented_attention.py：hot分支按环形物理索引读取。
+  PhaseKV/kernels/segmented_plan.py：如描述表缓存了hot相关布局，补版本规则。
+  PhaseKV/kernels/quantize_triton.py：读取环绕的最旧冷却批。
+  PhaseKV/kernels/attention_triton.py：reference/兼容路径正确读取逻辑hot顺序。
+  scripts/benchmark_4090d.py：materialized验证用到hot_views，必要时仅调整
+    oracle取数接口，不改变评分、计时和容差；修改后使用新协议/新输出目录。
+  tests/test_phasekv_cache.py、tests/test_phasekv_segmented_decode.py；
+    新增 tests/test_phasekv_hot_ring.py。
+  搜索并检查所有hot_views/hot_k/hot_v使用者；models/Qwen2/qwen2_attention.py、
+    models/Llama/llama_attention.py原则上保持公共cache调用，确有直接连续假设才改。
+
+怎么改：
+  容量保持recent_window+lazy_g；写入位置=(hot_start+hot_len)%capacity。
+  attention按逻辑顺序读，物理下标=(hot_start+logical_idx)%capacity。
+  冷却最旧aged token；P1内核直接读取环绕批，完成后前移hot_start并减少hot_len，
+  不搬移仍在热区的token。更新时机仍在当前decode attention完成之后。
+  保留debug/oracle用的有序materialize helper；实际decode不能每步调用它来
+  拼出连续hot，否则只是把copy换了位置。
+  hot_views()在环绕后无法保证单个连续view：明确新接口契约，或只在参考/验证
+  路径返回有序拷贝；GPU快路径使用底层缓冲+start+len，避免隐式复制。
+  多轮prompt需单独处理扩容及冻结：允许扩容时一次性按逻辑顺序整理并重置start，
+  但不得改变多轮prompt/生成hot归属和冷却时间。重排同步处理start/len和所有权。
+
+验收：
+  测首圈/连续多次环绕、恰好满/恰好触发冷却、环绕批、decode_keep_ratio<1
+  的兼容选择路径、多轮prompt穿插、扩容和reorder。
+  对同一逐token输入，与原连续hot实现比较每步逻辑K/V、冷区码、长度、位置。
+  RoPE绝对位置、true_seq_length、cache_position不能取环形物理位置代替。
+  分别报告减少的copy时间和新增环形寻址成本；收益不足时保留原路径默认。
+
+统一验收与实验矩阵
+==================
+A. 功能测试
+  必跑现有：
+    tests/test_phasekv_cache.py
+    tests/test_phasekv_segmented_decode.py
+    tests/test_phasekv_launch_config.py
+    tests/test_kivi_packed.py（公共工具回归）
+    tests/test_qwen2_attention_adapter.py
+    tests/test_llama_opt_adapters.py（如触及共享cache/adapter接口）
+  加上P1/P2/P5新增测试；修订失效的内部实现断言时保留其外部正确性要求。
+  Linux运行示例：python -m unittest discover -s tests -p test_phasekv_segmented_decode.py -v
+  依赖缺失或CUDA测试skip必须明确记录；CPU通过不代表GPU验证通过。
+
+B. 微基准
+  单层目标Q=28/KV=4/HD=128，补Q=32/KV=32用于MHA兼容。
+  冷块数0/1/7/16/64/128/247/512，hot长度覆盖0/1/127/128/143及环绕。
+  prompt输入1024/4096/8192/16384/24576/32000；按真实70%保留后的长度生成
+  resident KV，同时纳入观测窗口规则；不能把原始输入长度当压缩后长度。
+  冷却批固定16；变更批大小只能作为另一个改变数值策略的实验。
+  除常规attention，必须测真实逐tokenappend→attention→cooling的生命周期，
+  否则测不到P1/P2/P5的主要收益。
+
+C. Qwen7B端到端
+  性能形状至少覆盖：
+    1024+256、1024+1024、1024+4096；
+    4096+256、8192+256、16384+256、16384+2048；
+    24576+4096、32000+256。
+  同轮Full-native、Full-matched、优化前PhaseKV、逐项优化后的PhaseKV。
+  最终版本再进入已有五算法同轮脚本，KIVI/SnapKV/SCOPE参数及代码路径不变。
+  每形状预热后正式至少3次，固定生成长度，报告逐形状中位数；整体平均不能
+  掩盖短输入或长输入回退。真实生成轨迹可能分叉，微基准固定query用于纯归因。
+  指标：decode tok/s、prefill+压缩s、总耗时、冷却步p50/p95、实际KV底层容量、
+  有效payload、页内空闲、辅助工作区、峰值allocated/reserved。
+  预分配的空闲页必须计入实际KV，不得只报有效码值字节。
+
+D. 质量与数值
+  P1/P2/P5目标是存储和量化等价；P3/P4可能改变归约次序，不能用所有生成token
+  完全一致作为唯一判据，但必须保留缓存/attention数值验证及完整质量评估。
+  复用现有LongBench同文档配对、prefill logits/首token审计、任务等权统计。
+  区分QA与摘要，报告逐任务/长度和配对区间；原有1分门槛不是所有任务达标保证。
+  不通过时定位原因，不增加容差或删除失败案例。长输出4096这里只测性能，
+  若另做长文语义评估应明确新增数据与评分，不能冒称原脚本已覆盖。
+
+E. 隔离与交付
+  不覆盖reports/、sweep_result/、prompt_reset_result/或已有results中的历史证据。
+  新结果使用独立目录，例如results/phasekv_optimization_20261027。
+  source_hashes会追踪算法代码变化；旧任务不可在新代码上--resume混跑。
+  原有基准脚本只有为存储审计/验证适配所必需时才改；保持其他算法测量对称。
+  交付：逐项文件改动清单、开关说明、测试通过/失败/skip清单、原始测量JSON、
+  当前segmented基线对照及消融报告、Linux启动命令、精确列明内容的增量上传ZIP。
+  ZIP使用UTF-8/LF，含实际依赖改动和新增文件；不打包模型缓存或历史大结果。
+  若本地没有CUDA，完成CPU验证和GPU测试脚本，明确等待远程执行的数据项；
+  绝不填入估计吞吐，也不把未运行的GPU测试写成通过。
+
+给新agent的执行要求
+==================
+请根据本任务表按P1→P5分阶段实现。先保存当前两启动segmented实现作为基线，
+保持70%/4-bit/W128/C4/D1/lazy16等算法语义不变，每阶段完成数值检查和消融工具。
+重点注意KIVI共享packing、页式存储的物理字节去重、环形hot的多轮输入语义。
+无需修改历史报告；无GPU时交付可在4090D运行的验证与性能脚本，明确未验证项。
+不要只交概念方案，也不要一次混入改变准确率的参数调整。

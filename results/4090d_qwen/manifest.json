@@ -1,0 +1,311 @@
+{
+  "protocol": "phasekv_4090d_v1_chunked_sdpa_tail_attention",
+  "settings": {
+    "qwen": "Qwen/Qwen2.5-7B-Instruct",
+    "qwen_profile": "Qwen2.5-7B-Instruct",
+    "llama": "meta-llama/Llama-2-7b-chat-hf",
+    "models": [
+      "qwen"
+    ],
+    "methods": [
+      "full",
+      "kivi",
+      "snapkv",
+      "scope",
+      "pyramidkv",
+      "phasekv"
+    ],
+    "phases": [
+      "capacity",
+      "needle",
+      "performance",
+      "quality"
+    ],
+    "tasks": [
+      "narrativeqa",
+      "qasper",
+      "multifieldqa_en",
+      "hotpotqa",
+      "2wikimqa",
+      "gov_report",
+      "qmsum",
+      "multi_news"
+    ],
+    "samples": 32,
+    "quality_lengths": [
+      1536,
+      3072,
+      8192,
+      16384
+    ],
+    "lengths": [
+      1024,
+      2048,
+      3072,
+      4096,
+      8192,
+      16384,
+      24576,
+      32000
+    ],
+    "outputs": [
+      256,
+      1024,
+      2048,
+      3072,
+      4096
+    ],
+    "compression_config": null,
+    "max_context": 32768,
+    "target_vram": 0.92,
+    "chunk_size": 512,
+    "needle_samples": 3,
+    "repeats": 3,
+    "seed": 1234,
+    "cpu_threads": 4,
+    "data_dir": "/root/KV/PhaseKV/.cache/longbench",
+    "out": "/root/KV/PhaseKV/results/4090d_qwen"
+  },
+  "profiles": [
+    {
+      "name": "Qwen2.5-7B-Instruct",
+      "model_id": "Qwen/Qwen2.5-7B-Instruct",
+      "family": "qwen2",
+      "revision": "main",
+      "architecture_file": "architecture.json",
+      "methods_file": "compression.json",
+      "dtype": "bfloat16",
+      "attention": "eager",
+      "batch_size": 1,
+      "architecture_source": "https://huggingface.co/Qwen/Qwen2.5-7B-Instruct/raw/main/config.json",
+      "verified_transformers": "4.46.3",
+      "quality_test": {
+        "tasks": [
+          "narrativeqa",
+          "multifieldqa_en",
+          "hotpotqa",
+          "2wikimqa",
+          "qasper"
+        ],
+        "samples_per_task": 32,
+        "max_length_before_chat_template": 1536
+      },
+      "status": "code_integrated_pretrained_7b_run_pending",
+      "architecture": {
+        "architectures": [
+          "Qwen2ForCausalLM"
+        ],
+        "attention_dropout": 0.0,
+        "bos_token_id": 151643,
+        "eos_token_id": 151645,
+        "hidden_act": "silu",
+        "hidden_size": 3584,
+        "initializer_range": 0.02,
+        "intermediate_size": 18944,
+        "max_position_embeddings": 32768,
+        "max_window_layers": 28,
+        "model_type": "qwen2",
+        "num_attention_heads": 28,
+        "num_hidden_layers": 28,
+        "num_key_value_heads": 4,
+        "rms_norm_eps": 1e-06,
+        "rope_theta": 1000000.0,
+        "sliding_window": 131072,
+        "tie_word_embeddings": false,
+        "torch_dtype": "bfloat16",
+        "transformers_version": "4.43.1",
+        "use_cache": true,
+        "use_sliding_window": false,
+        "vocab_size": 152064
+      },
+      "methods": [
+        {
+          "method": "full"
+        },
+        {
+          "method": "kivi",
+          "bits": 2,
+          "group_size": 32,
+          "recent_window": 64
+        },
+        {
+          "method": "snapkv",
+          "prefill_keep_ratio": 0.3,
+          "obs_window": 32
+        },
+        {
+          "method": "scope",
+          "recent_window": 16,
+          "max_cache_tokens": 32,
+          "decoding_metric": "slide"
+        },
+        {
+          "method": "pyramidkv",
+          "prefill_keep_ratio": 0.3,
+          "obs_window": 32,
+          "beta": 20
+        },
+        {
+          "method": "phasekv",
+          "prefill_keep_ratio": 0.3,
+          "prompt_bits": 2,
+          "cold_bits": 4,
+          "recent_window": 32,
+          "obs_window": 32,
+          "lazy_g": 16,
+          "group_size": 32,
+          "decode_keep_ratio": 1.0,
+          "sink_tokens": 0
+        }
+      ],
+      "model_path": "Qwen/Qwen2.5-7B-Instruct"
+    }
+  ],
+  "source_hashes": {
+    "KIVI/__init__.py": "c2eb213d3a40c2bd1d085de87f1d4d0de5700625ecd865b0e1faaf78cf6f6c08",
+    "KIVI/kernels.py": "b06b8e4c9263bbaf80d482dd7826a6fa6ac3a454f2ea2ca34284c4b7769bc226",
+    "KIVI/legacy_fake_quant.py": "b55f5f1c35a9cff735c3a9b7bc2c00b29c985739bb4cc5ba3311ab5358838025",
+    "KIVI/packed_cache.py": "f43a0fbfda8f6912eceaf7ac88cdbff3ccb8bad69ca2bb4c0cc4e21bfbf265e7",
+    "KIVI/qwen2_attention.py": "f043139d2785267ab6ed3d77fc5e61f2c7a97842edcd3b0afb9c68c6e08fc481",
+    "KIVI/sources.json": "afb37c7798eee5f9a47c7a3d6da243d67a6bba944b935620751e88365666dd93",
+    "PhaseKV/__init__.py": "6f23174be5b522f0e4a92ee90d47c512d0174a7d1157326a500915c20fccddc6",
+    "PhaseKV/compressor.py": "3ff381cc991c6abc4fa3cbedfd593da7d029361c048994e4240969c1d9b3168e",
+    "PhaseKV/decode_tier.py": "e64b7a58664f9eeb71a9d053b7b76074ba7f47b4a5ab3e350f1081c8cf21bfab",
+    "PhaseKV/hetero_cache.py": "b650b5edabefc5df9bd04cdb2129d728625f855353da4b432e4bfe5d1e594c6a",
+    "PhaseKV/kernels/__init__.py": "e17266e028cefed7b0e811f87a13ea6e815c3d75ac6e363d5dd17ed0645d8d0a",
+    "PhaseKV/kernels/attention_triton.py": "0b9de3442a7628b38a39bbd34d34e27d833b5c4ca3f05c0a22c2d55ce806af7c",
+    "PhaseKV/kernels/launch_config.py": "4ac747750f12e01067c4a0faf6d11809905f4e7dc9e2cfe9cdfbd15008ffa340",
+    "PhaseKV/kernels/packing.py": "f22f6ffb6d9f1e094130392fd16ca334cc30d09ce8632b291a883e72c437eb73",
+    "PhaseKV/kernels/reference.py": "7ea076b5929ee91592fca27b512db2400c79d59508078ff763c944b16d9bdb69",
+    "PhaseKV/llama/__init__.py": "1f2e5f8ea87b92970d5be4904a837dc36c10bb3a2dfed7328ba5fc3bc185ac7d",
+    "PhaseKV/llama/__main__.py": "572816a2125bcad0a1bb68775feb1725c6609906fe057f411f8ef93d02e4e1b7",
+    "PhaseKV/llama/llama.py": "1dcd67ea0134ce7b37b23c78db729d29d4aa9014c13aeaa061e4ce62c46a6555",
+    "PhaseKV/llama/llama_attention.py": "392d0e6cadff3df46a637afad2546f87573c4e5ee781aca8678b1c63fbb81f97",
+    "PhaseKV/model_runner.py": "1e63f3f657d1c2ab71dcf771f086fdb12d2d62b45b5377ec5b5161a3cfca7ab8",
+    "PhaseKV/opt/__init__.py": "43b2fd0fd321675275fa895d88c33a0dba9c2c66902dc3b33e3728b1306224a6",
+    "PhaseKV/opt/__main__.py": "466836dd676be56f028704fc8c483e3a4495ebec040a3f2d6a39feb5b9a67bd7",
+    "PhaseKV/opt/opt.py": "06f527d2b4ea2aff9ecfd730c75dd540d343c8f0f589a2e53a276ce8eb7b7416",
+    "PhaseKV/opt/opt_attention.py": "f6695feba8117ffb857d56dde1eb2033fff3e9c4736f268882299707ac513a15",
+    "PhaseKV/phasekv_cache.py": "4f5816cee2f61e871caf71eddb4a6cd9cb8d44bd7a2a11eb4c853dba3e2651d1",
+    "PhaseKV/planner.py": "3d8559e9c49372fb26033e41ca4eba4728eeb0d24c7f8ff241162408a4f8987a",
+    "PhaseKV/prompt_tier.py": "123d6d6b93e7b47d0170ce1d995ff76507c94e4e5527ca428f5d0aa79e068453",
+    "PhaseKV/quant.py": "d976ec4fbe2f486691fe5025b0c33fded2cc304cd5abcb7599a72fb68247c882",
+    "PhaseKV/qwen2/__init__.py": "b6b4689d28d04474562325c78d693d5a8668cb1e7c59c5a17fb380e7ef534723",
+    "PhaseKV/qwen2/__main__.py": "aa260e9e701715450022195c6f5bfa3aa75093661e8263387c83d3daaeb66b36",
+    "PhaseKV/qwen2/qwen2.py": "a6f3516e11c62902ab97cec7ef64bf926c603998ce1f98ea7f3d285841439012",
+    "PhaseKV/qwen2/qwen2_attention.py": "a249441775bf5f31cba6c61d8f0abd39791b6828d3b3992964324b8c23375705",
+    "PyramidKV/__init__.py": "cf87d94e05feb95f2ccb1729f9ca60d0518c4156be75b74a957a97fa4168dd91",
+    "PyramidKV/compressor.py": "b5a5e5ae02204085b46256d8087fbf0fc4022c9dd1fc78f339f0d229cc86fcdc",
+    "PyramidKV/sources.json": "ba1bbacd08eba3f1df041a00ce590df7772ce0d82ff4b785a7bdea2ad1a34c51",
+    "SCOPE/__init__.py": "305a962a341c91a6a52e3d56e2b06b5a1ddcba88af6f1f7b689eb9eea2493c70",
+    "SCOPE/compressor.py": "90708dead2dc6667184890fbd9e364cd74e383069d4022cc4edc4255f3ace7b0",
+    "SnapKV/__init__.py": "483c6f53ccf984e8652334bb15b3d7a62e0242e5c828f8986e006113ca147432",
+    "SnapKV/compressor.py": "041a2383214486520c9f29dc0bb4f1c4987c12ba8837be741cfff1702fd57d7b",
+    "SnapKV/sources.json": "9c8151ca212a46f54f996bff4f323eeaa13a429aeed46bd26de7b9e6f27da036",
+    "models/Llama/__init__.py": "bac9663e2b9b8db5eb74db9388245f43f6904b26d867fcfce144d4cf5a9847e0",
+    "models/Llama/__main__.py": "d47283190d98f697bf8d550d5640c81f261065cc8b479617b4fb881aa000be27",
+    "models/Llama/integration.py": "295db1aced74f52afcfd9aee1deac34ee11eefd8c617d9cb33689b6993d705ab",
+    "models/Llama/kivi_attention.py": "e5fdd1b9858606471e719d25d0202a7425286dae15bd98209fed0ddcdd71b34f",
+    "models/Llama/llama.py": "3e66ceaa36a978f4171cd15144bdebf3c81b7508b9adc33d66632bf32c65790f",
+    "models/Llama/llama_attention.py": "b9ce9e9748500da905d17926649ef327da55a0d4a5072ff7dcebeffee3600936",
+    "models/Llama/packed_runtime.py": "5701b171d194f06e195501e9bd4ee6789ce654903ca229692d96767a252854ec",
+    "models/Llama-2-7b-chat-hf/architecture.json": "84a3c4a75d22a73cd738a90b3c02978d03e7d6b9ec531712bcd3c9e872b6ac36",
+    "models/Llama-2-7b-chat-hf/compression.json": "2d2ab2d4e807366a921de98d437771438352e03cd6683a619b48d7223420193e",
+    "models/Llama-2-7b-chat-hf/profile.json": "a4f6ba6a2f943043e7c8dbc0111790ca9b99c682c6d4bb61cad17c9e87ffa549",
+    "models/Llama-2-7b-chat-hf/run.py": "d7ba342f85202823f871a3061a1d4ac269fa1a638d799c8ea1c7c77cc1880512",
+    "models/Llama-3.1-8B-Instruct/architecture.json": "c87f8c2ec103b812a917cf9941d675c0b84e3d5795555a820d7b769189b67c3a",
+    "models/Llama-3.1-8B-Instruct/compression.json": "2d2ab2d4e807366a921de98d437771438352e03cd6683a619b48d7223420193e",
+    "models/Llama-3.1-8B-Instruct/profile.json": "041416e6f8090c426211ff02da0074bc9dde87ffca991dd26c4ea66d7f45df28",
+    "models/Llama-3.1-8B-Instruct/run.py": "d7ba342f85202823f871a3061a1d4ac269fa1a638d799c8ea1c7c77cc1880512",
+    "models/OPT/__init__.py": "838a39a7b7780f4d751d0abb94333a18c680bb01aa50c26440d69cc26fdd626f",
+    "models/OPT/__main__.py": "212298cc3e5f99e946ad66a87bb498be9e9df0eb04abefd957aaafd7eabdd787",
+    "models/OPT/opt.py": "b766a4ce733acbef2857e841bcce6fb898fd02dd06a9567d4f196573f6c4ad7f",
+    "models/OPT/opt_attention.py": "ac4373dcf86e353ff382ecdd96e2e6a51a7b633d4026fbc635a9bbd5ce457788",
+    "models/Qwen2/__init__.py": "a980f090013f1835fb79dff12921e0a0f2a4298f73e6d7131c2a258ccd382f24",
+    "models/Qwen2/__main__.py": "4062c82d9c26c573fd73fc3e7679a741847365310be2ecd6e7c5fe793335b6f0",
+    "models/Qwen2/ablate_cold.py": "1e12740ca7c8c8c3503a23c9e7cf560f7aaf6a03107dac2861491516cbda06c7",
+    "models/Qwen2/ablate_prompt.py": "da39db3437306eeec46fbcc7e003d56e6a8be2f5efc41dbfbf6c8c3cb2064325",
+    "models/Qwen2/bench_phasekv.py": "eca13345da557cd2a43a94c3f79eb4cae0b02d9dc1bcf20b5cb60b628754feca",
+    "models/Qwen2/integration.py": "7985a961e47a2eb185c9d287b240dce9dc7c5d0b726563812a8b027ce98bb97d",
+    "models/Qwen2/kivi_attention.py": "2e5fce3cdaacb1095c471a938c81d0e46e7dc086191e54c8bbf42ed6df279554",
+    "models/Qwen2/packed_runtime.py": "92a4d4b91e87c4dc203ce7efa1336a9307c7fd63c2ecc902e0e554034a9925e4",
+    "models/Qwen2/qwen2.py": "13f22f290abfd077149c0652c35d8d83d33b25434c434a216bf4ac90411b56d7",
+    "models/Qwen2/qwen2_attention.py": "ba6eab236c3c581cf996e79e489d79302320c4cc800d097c8b9d8cce4f823c37",
+    "models/Qwen2-1.5B-Instruct/architecture.json": "a58e896d2756a7947f23f3db55667c19ca3b8524188a30c8c640cd7ff72a5136",
+    "models/Qwen2-1.5B-Instruct/compression.json": "2d2ab2d4e807366a921de98d437771438352e03cd6683a619b48d7223420193e",
+    "models/Qwen2-1.5B-Instruct/profile.json": "ea961430cc838e8644c4dbe8112b5d3f4b59d10504eae8b3db4ec9215cc6b79c",
+    "models/Qwen2-1.5B-Instruct/run.py": "d7ba342f85202823f871a3061a1d4ac269fa1a638d799c8ea1c7c77cc1880512",
+    "models/Qwen2-7B-Instruct/architecture.json": "8b9a4f6c0acf4854a2d301616d4203039c3d7972cb0a557dae98686b6c3ae4b2",
+    "models/Qwen2-7B-Instruct/compression.json": "2d2ab2d4e807366a921de98d437771438352e03cd6683a619b48d7223420193e",
+    "models/Qwen2-7B-Instruct/profile.json": "9bb00f57f216d2e7d1ed40d780ecc7215ed58d59447134c8c964e9f4bb726206",
+    "models/Qwen2-7B-Instruct/run.py": "d7ba342f85202823f871a3061a1d4ac269fa1a638d799c8ea1c7c77cc1880512",
+    "models/Qwen2.5-7B-Instruct/architecture.json": "7463bb0ea78315365e6c6b74de4e73bbcc8359dfb0c5a737584e077d42c0b03c",
+    "models/Qwen2.5-7B-Instruct/compression.json": "2d2ab2d4e807366a921de98d437771438352e03cd6683a619b48d7223420193e",
+    "models/Qwen2.5-7B-Instruct/profile.json": "8a7cc8f511311eb5480f734aa0e2253d51e857da6f07a41baaeb45d2d5b45701",
+    "models/Qwen2.5-7B-Instruct/run.py": "d7ba342f85202823f871a3061a1d4ac269fa1a638d799c8ea1c7c77cc1880512",
+    "models/__init__.py": "903aab5c230bfd7c9b6bfa57bc8492bd17eaaf495a7c2f6c231abe010940b2c5",
+    "models/generation.py": "f06b4d6cc1f902d56b0fda5b84e352e5bd1bd4a4640399a6d02b82ceca6b4ae7",
+    "models/packed_runtime.py": "f9fc87749bdad8a56e3a9d206c9fb8c2fca3a7558d51d2d6bff91e65423fec74",
+    "models/registry.py": "da83e5c7b12d840bca5311264b69219d77535a0e88115507ddf517f71a4cea46",
+    "run_4090d.sh": "97f1031a6c4697f559f5e3fa18d16ece7eaf2fa35c320994b064b53dbe65065e",
+    "scripts/benchmark_4090d.py": "402421c95d7c5e4f11b2362c12f899003389398e3b291dc687894f4195306d5c"
+  },
+  "data": {
+    "prompts_sha256": "56d22ad4f382169c2b8a11ff4c982a4a1bea096c8152b0f0b85b64686b157c30",
+    "tasks": {
+      "narrativeqa": {
+        "count": 200,
+        "sha256": "0fb8d08ba5cdad4b74244224b0dc2e8b41ee6b850d954a13eb2d282621ce2f71"
+      },
+      "qasper": {
+        "count": 200,
+        "sha256": "29aa07d2a63f36f4fb8e8cd200a3428ee3126d750bde6af1c8f9bc41c2366854"
+      },
+      "multifieldqa_en": {
+        "count": 150,
+        "sha256": "0aac182fd317dcf6d74f8e1e0f3e61029407435346c2e0b3ff9fb45ae49c5c3f"
+      },
+      "hotpotqa": {
+        "count": 200,
+        "sha256": "a0005ab2a1bc2ac3a70352dccbf96cccc4e0aac6bb677f6a55180fa51b92ef6f"
+      },
+      "2wikimqa": {
+        "count": 200,
+        "sha256": "dda279cf93a99e1e5bfa3291fb199fd55978d10a1feb31822953cf77a1742e37"
+      },
+      "gov_report": {
+        "count": 200,
+        "sha256": "d28112beb3a9b41d80aa390837fa1a31c9e3da84a5262009c97585cc49f597c4"
+      },
+      "qmsum": {
+        "count": 200,
+        "sha256": "e992f5157679b0c1ca281d0da19d1a8b3496117630ae639c9683ed3dab029113"
+      },
+      "multi_news": {
+        "count": 200,
+        "sha256": "f8817c00af317c2d7f81128f334bcfe5780c6c2a515d5c96811aa0ddf8b5ee6b"
+      }
+    }
+  },
+  "checkpoints": {
+    "Qwen2.5-7B-Instruct": {
+      "source": "Qwen/Qwen2.5-7B-Instruct",
+      "resolved_path": "/root/KV/PhaseKV/.cache/huggingface/hub/models--Qwen--Qwen2.5-7B-Instruct/snapshots/a09a35458c702b33eeacc393d103063234e8bc28",
+      "snapshot_revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+      "files_sha256": {
+        "model-00001-of-00004.safetensors": "a1333e6293854747c481288ea83b348226af178dd565c49b6f9495ba1966aba7",
+        "model-00002-of-00004.safetensors": "f5d25a2772cb825164a2a2c0fb6d51a87e282abf21e4dd75bc5cfb3cd0ea6185",
+        "model-00003-of-00004.safetensors": "8efdec4c1bc12317ae1a38dc42b595ce777738a64deea3fcb8a0a91381bcdfd5",
+        "model-00004-of-00004.safetensors": "1a72d403cdf0c1ec3cb7f289f17b394a01e64394c2e9b3c0f94dbce3faf879bd",
+        "config.json": "7463bb0ea78315365e6c6b74de4e73bbcc8359dfb0c5a737584e077d42c0b03c",
+        "generation_config.json": "3a8f9087e486054c8a4a08dae2e5a3ba62e23da212b5b8c08bc42cb983c3459f",
+        "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+        "model.safetensors.index.json": "624bf7c47cd12468fdc16e38a47cf4f19e0415b859a223ba3c027eed2f0e1028",
+        "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+        "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+        "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      }
+    }
+  },
+  "protocol_hash": "7ac82c8a0d4294568afed285a603689cb7a208ee8768049b6ebdc7427adf0e9f"
+}

@@ -1,0 +1,137 @@
+{
+  "id": "ruler/cwe/14/16384",
+  "suite": "ruler",
+  "task": "cwe",
+  "document_id": "14/16384",
+  "cluster_id": "cwe/14",
+  "length_budget": 16384,
+  "input_sha256": "de1770f4c028cec13ff12321203a84a440b6b3268d76eff1cfaadeec596a29a7",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": null,
+  "heldout_from_available_history": null,
+  "method": "snapkv",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 16128,
+  "output_tokens": 50,
+  "output_ids": [
+    220,
+    16,
+    13,
+    44229,
+    49518,
+    220,
+    17,
+    13,
+    2004,
+    42366,
+    220,
+    18,
+    13,
+    30338,
+    220,
+    19,
+    13,
+    44229,
+    49518,
+    220,
+    20,
+    13,
+    44229,
+    49518,
+    220,
+    21,
+    13,
+    44229,
+    49518,
+    220,
+    22,
+    13,
+    44229,
+    49518,
+    220,
+    23,
+    13,
+    44229,
+    49518,
+    220,
+    24,
+    13,
+    44229,
+    49518,
+    220,
+    605,
+    13,
+    44229,
+    49518,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 2.345255285035819,
+  "prefill_and_compress_s": 2.345255285035819,
+  "decode_s": 1.3801037329249084,
+  "decode_tokens_per_s": 35.50457754081453,
+  "generation_wall_s_including_instrumentation": 3.725932215806097,
+  "prefill_storage": {
+    "physical_bytes": 1073741824,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1073741824,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 1099431936,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1099431936,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 2048,
+    "stored_heads": 32
+  },
+  "final_trace": {
+    "physical_tokens": 2097,
+    "stored_heads": 32
+  },
+  "peak_allocated_bytes": 19070341632,
+  "peak_reserved_bytes": 19899875328,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 49,
+      "seconds": 1.3801037329249084,
+      "tokens": 49
+    }
+  ],
+  "effective_options": {
+    "max_capacity_prompt": 2048,
+    "window_size": 32,
+    "kernel_size": 7,
+    "pooling": "maxpool"
+  },
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 30.0,
+  "metric": "official_string_match_all",
+  "status": "ok",
+  "prediction": " 1. rivulet 2. keystone 3. merchant 4. rivulet 5. rivulet 6. rivulet 7. rivulet 8. rivulet 9. rivulet 10. rivulet",
+  "gpu_before": {
+    "time": 1793317017.853327,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15896 MiB, 78 %, 52, 210.43 W, 2670 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793317021.6585712,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 19408 MiB, 78 %, 58, 264.02 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793317021.6585755
+}

@@ -2,3 +2,15 @@
 __pycache__/
 *.pyc
 .env
+.cache/
+
+# Independently cloned upstream repository; pin recorded in SCOPE/README.md
+SCOPE/official/
+
+# 本地模型权重
+/weights/
+
+# 安装包、压缩包和未完成的下载
+*.whl
+*.zip
+*.incomplete

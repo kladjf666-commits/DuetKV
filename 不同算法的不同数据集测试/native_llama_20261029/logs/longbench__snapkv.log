@@ -1,0 +1,2319 @@
+Loading ONE model for snapkv/longbench; 640 records pending
+You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards:  25%|██▌       | 1/4 [03:29<10:29, 209.71s/it]
+Loading checkpoint shards:  50%|█████     | 2/4 [06:59<06:58, 209.47s/it]
+Loading checkpoint shards:  75%|███████▌  | 3/4 [10:29<03:29, 209.90s/it]
+Loading checkpoint shards: 100%|██████████| 4/4 [11:16<00:00, 145.81s/it]
+Loading checkpoint shards: 100%|██████████| 4/4 [11:16<00:00, 169.25s/it]
+CASE 1/640 snapkv longbench/narrativeqa/97/8192 repeat=0
+[snapkv/longbench/narrativeqa/97/8192] 11/128 tokens
+/data/phasekv-native-venv/lib/python3.10/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
+  warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
+RESULT ok: longbench/narrativeqa/97/8192 score=13.333333333333334 decode=22.538808500215467 token/s
+CASE 2/640 snapkv longbench/narrativeqa/97/16384 repeat=0
+[snapkv/longbench/narrativeqa/97/16384] 10/128 tokens
+RESULT ok: longbench/narrativeqa/97/16384 score=28.57142857142857 decode=35.31671505040175 token/s
+CASE 3/640 snapkv longbench/narrativeqa/190/8192 repeat=0
+[snapkv/longbench/narrativeqa/190/8192] 6/128 tokens
+RESULT ok: longbench/narrativeqa/190/8192 score=0 decode=34.3771096440352 token/s
+CASE 4/640 snapkv longbench/narrativeqa/190/16384 repeat=0
+[snapkv/longbench/narrativeqa/190/16384] 7/128 tokens
+RESULT ok: longbench/narrativeqa/190/16384 score=0 decode=35.33990156392474 token/s
+CASE 5/640 snapkv longbench/narrativeqa/12/8192 repeat=0
+[snapkv/longbench/narrativeqa/12/8192] 4/128 tokens
+RESULT ok: longbench/narrativeqa/12/8192 score=50.0 decode=35.01099687346292 token/s
+CASE 6/640 snapkv longbench/narrativeqa/12/16384 repeat=0
+[snapkv/longbench/narrativeqa/12/16384] 5/128 tokens
+RESULT ok: longbench/narrativeqa/12/16384 score=50.0 decode=34.11678957072225 token/s
+CASE 7/640 snapkv longbench/narrativeqa/93/8192 repeat=0
+[snapkv/longbench/narrativeqa/93/8192] 16/128 tokens
+RESULT ok: longbench/narrativeqa/93/8192 score=0 decode=34.617331377238166 token/s
+CASE 8/640 snapkv longbench/narrativeqa/93/16384 repeat=0
+[snapkv/longbench/narrativeqa/93/16384] 16/128 tokens
+RESULT ok: longbench/narrativeqa/93/16384 score=0 decode=35.6704356464225 token/s
+CASE 9/640 snapkv longbench/narrativeqa/105/8192 repeat=0
+[snapkv/longbench/narrativeqa/105/8192] 8/128 tokens
+RESULT ok: longbench/narrativeqa/105/8192 score=0 decode=35.67434524755343 token/s
+CASE 10/640 snapkv longbench/narrativeqa/105/16384 repeat=0
+[snapkv/longbench/narrativeqa/105/16384] 7/128 tokens
+RESULT ok: longbench/narrativeqa/105/16384 score=0 decode=35.557867640063506 token/s
+CASE 11/640 snapkv longbench/narrativeqa/96/8192 repeat=0
+[snapkv/longbench/narrativeqa/96/8192] 18/128 tokens
+RESULT ok: longbench/narrativeqa/96/8192 score=0 decode=34.84860373198565 token/s
+CASE 12/640 snapkv longbench/narrativeqa/96/16384 repeat=0
+[snapkv/longbench/narrativeqa/96/16384] 10/128 tokens
+RESULT ok: longbench/narrativeqa/96/16384 score=0 decode=35.38713685549838 token/s
+CASE 13/640 snapkv longbench/narrativeqa/179/8192 repeat=0
+[snapkv/longbench/narrativeqa/179/8192] 25/128 tokens
+RESULT ok: longbench/narrativeqa/179/8192 score=19.047619047619044 decode=35.58200918107606 token/s
+CASE 14/640 snapkv longbench/narrativeqa/179/16384 repeat=0
+[snapkv/longbench/narrativeqa/179/16384] 10/128 tokens
+RESULT ok: longbench/narrativeqa/179/16384 score=16.666666666666664 decode=35.741549762291505 token/s
+CASE 15/640 snapkv longbench/narrativeqa/122/8192 repeat=0
+[snapkv/longbench/narrativeqa/122/8192] 4/128 tokens
+RESULT ok: longbench/narrativeqa/122/8192 score=0 decode=35.4635431340043 token/s
+CASE 16/640 snapkv longbench/narrativeqa/122/16384 repeat=0
+[snapkv/longbench/narrativeqa/122/16384] 5/128 tokens
+RESULT ok: longbench/narrativeqa/122/16384 score=0 decode=34.18958119864076 token/s
+CASE 17/640 snapkv longbench/narrativeqa/139/8192 repeat=0
+[snapkv/longbench/narrativeqa/139/8192] 11/128 tokens
+RESULT ok: longbench/narrativeqa/139/8192 score=20.0 decode=34.702107416452705 token/s
+CASE 18/640 snapkv longbench/narrativeqa/139/16384 repeat=0
+[snapkv/longbench/narrativeqa/139/16384] 7/128 tokens
+RESULT ok: longbench/narrativeqa/139/16384 score=25.0 decode=34.9130226338419 token/s
+CASE 19/640 snapkv longbench/narrativeqa/70/8192 repeat=0
+[snapkv/longbench/narrativeqa/70/8192] 6/128 tokens
+RESULT ok: longbench/narrativeqa/70/8192 score=66.66666666666666 decode=35.2720165119561 token/s
+CASE 20/640 snapkv longbench/narrativeqa/70/16384 repeat=0
+[snapkv/longbench/narrativeqa/70/16384] 6/128 tokens
+RESULT ok: longbench/narrativeqa/70/16384 score=66.66666666666666 decode=35.18200164017038 token/s
+CASE 21/640 snapkv longbench/narrativeqa/198/8192 repeat=0
+[snapkv/longbench/narrativeqa/198/8192] 10/128 tokens
+RESULT ok: longbench/narrativeqa/198/8192 score=0 decode=35.152154929987994 token/s
+CASE 22/640 snapkv longbench/narrativeqa/198/16384 repeat=0
+[snapkv/longbench/narrativeqa/198/16384] 7/128 tokens
+RESULT ok: longbench/narrativeqa/198/16384 score=0 decode=35.541981339840504 token/s
+CASE 23/640 snapkv longbench/narrativeqa/100/8192 repeat=0
+[snapkv/longbench/narrativeqa/100/8192] 6/128 tokens
+RESULT ok: longbench/narrativeqa/100/8192 score=100.0 decode=35.543764281957365 token/s
+CASE 24/640 snapkv longbench/narrativeqa/100/16384 repeat=0
+[snapkv/longbench/narrativeqa/100/16384] 5/128 tokens
+RESULT ok: longbench/narrativeqa/100/16384 score=100.0 decode=35.33010136534155 token/s
+CASE 25/640 snapkv longbench/narrativeqa/142/8192 repeat=0
+[snapkv/longbench/narrativeqa/142/8192] 16/128 tokens
+RESULT ok: longbench/narrativeqa/142/8192 score=0 decode=35.54831503163391 token/s
+CASE 26/640 snapkv longbench/narrativeqa/142/16384 repeat=0
+[snapkv/longbench/narrativeqa/142/16384] 3/128 tokens
+RESULT ok: longbench/narrativeqa/142/16384 score=0 decode=35.0460224770825 token/s
+CASE 27/640 snapkv longbench/narrativeqa/9/8192 repeat=0
+[snapkv/longbench/narrativeqa/9/8192] 6/128 tokens
+RESULT ok: longbench/narrativeqa/9/8192 score=66.66666666666666 decode=35.510919539600756 token/s
+CASE 28/640 snapkv longbench/narrativeqa/9/16384 repeat=0
+[snapkv/longbench/narrativeqa/9/16384] 6/128 tokens
+RESULT ok: longbench/narrativeqa/9/16384 score=66.66666666666666 decode=35.54011685904479 token/s
+CASE 29/640 snapkv longbench/narrativeqa/88/8192 repeat=0
+[snapkv/longbench/narrativeqa/88/8192] 7/128 tokens
+RESULT ok: longbench/narrativeqa/88/8192 score=25.0 decode=35.2491886654215 token/s
+CASE 30/640 snapkv longbench/narrativeqa/88/16384 repeat=0
+[snapkv/longbench/narrativeqa/88/16384] 8/128 tokens
+RESULT ok: longbench/narrativeqa/88/16384 score=18.18181818181818 decode=35.06189353803717 token/s
+CASE 31/640 snapkv longbench/narrativeqa/152/8192 repeat=0
+[snapkv/longbench/narrativeqa/152/8192] 5/128 tokens
+RESULT ok: longbench/narrativeqa/152/8192 score=0 decode=34.262953200111205 token/s
+CASE 32/640 snapkv longbench/narrativeqa/152/16384 repeat=0
+[snapkv/longbench/narrativeqa/152/16384] 5/128 tokens
+RESULT ok: longbench/narrativeqa/152/16384 score=0 decode=35.49826924576877 token/s
+CASE 33/640 snapkv longbench/narrativeqa/116/8192 repeat=0
+[snapkv/longbench/narrativeqa/116/8192] 10/128 tokens
+RESULT ok: longbench/narrativeqa/116/8192 score=0 decode=35.37908516108009 token/s
+CASE 34/640 snapkv longbench/narrativeqa/116/16384 repeat=0
+[snapkv/longbench/narrativeqa/116/16384] 8/128 tokens
+RESULT ok: longbench/narrativeqa/116/16384 score=0 decode=34.9439570813668 token/s
+CASE 35/640 snapkv longbench/narrativeqa/169/8192 repeat=0
+[snapkv/longbench/narrativeqa/169/8192] 15/128 tokens
+RESULT ok: longbench/narrativeqa/169/8192 score=0 decode=35.54782315746397 token/s
+CASE 36/640 snapkv longbench/narrativeqa/169/16384 repeat=0
+[snapkv/longbench/narrativeqa/169/16384] 10/128 tokens
+RESULT ok: longbench/narrativeqa/169/16384 score=26.666666666666668 decode=35.655556894118575 token/s
+CASE 37/640 snapkv longbench/narrativeqa/83/8192 repeat=0
+[snapkv/longbench/narrativeqa/83/8192] 8/128 tokens
+RESULT ok: longbench/narrativeqa/83/8192 score=0 decode=35.496746626673556 token/s
+CASE 38/640 snapkv longbench/narrativeqa/83/16384 repeat=0
+[snapkv/longbench/narrativeqa/83/16384] 5/128 tokens
+RESULT ok: longbench/narrativeqa/83/16384 score=0 decode=35.47764433355217 token/s
+CASE 39/640 snapkv longbench/narrativeqa/111/8192 repeat=0
+[snapkv/longbench/narrativeqa/111/8192] 9/128 tokens
+RESULT ok: longbench/narrativeqa/111/8192 score=0 decode=35.364986700358216 token/s
+CASE 40/640 snapkv longbench/narrativeqa/111/16384 repeat=0
+[snapkv/longbench/narrativeqa/111/16384] 5/128 tokens
+RESULT ok: longbench/narrativeqa/111/16384 score=50.0 decode=35.1615610592873 token/s
+CASE 41/640 snapkv longbench/narrativeqa/156/8192 repeat=0
+[snapkv/longbench/narrativeqa/156/8192] 6/128 tokens
+RESULT ok: longbench/narrativeqa/156/8192 score=66.66666666666666 decode=35.550324656313975 token/s
+CASE 42/640 snapkv longbench/narrativeqa/156/16384 repeat=0
+[snapkv/longbench/narrativeqa/156/16384] 6/128 tokens
+RESULT ok: longbench/narrativeqa/156/16384 score=66.66666666666666 decode=34.79502885543335 token/s
+CASE 43/640 snapkv longbench/narrativeqa/192/8192 repeat=0
+[snapkv/longbench/narrativeqa/192/8192] 22/128 tokens
+RESULT ok: longbench/narrativeqa/192/8192 score=0 decode=35.30494575087899 token/s
+CASE 44/640 snapkv longbench/narrativeqa/192/16384 repeat=0
+[snapkv/longbench/narrativeqa/192/16384] 9/128 tokens
+RESULT ok: longbench/narrativeqa/192/16384 score=0 decode=35.032190084789434 token/s
+CASE 45/640 snapkv longbench/narrativeqa/143/8192 repeat=0
+[snapkv/longbench/narrativeqa/143/8192] 9/128 tokens
+RESULT ok: longbench/narrativeqa/143/8192 score=33.33333333333333 decode=35.47770506938242 token/s
+CASE 46/640 snapkv longbench/narrativeqa/143/16384 repeat=0
+[snapkv/longbench/narrativeqa/143/16384] 7/128 tokens
+RESULT ok: longbench/narrativeqa/143/16384 score=33.33333333333333 decode=35.72861736468503 token/s
+CASE 47/640 snapkv longbench/narrativeqa/6/8192 repeat=0
+[snapkv/longbench/narrativeqa/6/8192] 18/128 tokens
+RESULT ok: longbench/narrativeqa/6/8192 score=0 decode=35.25357955593514 token/s
+CASE 48/640 snapkv longbench/narrativeqa/6/16384 repeat=0
+[snapkv/longbench/narrativeqa/6/16384] 4/128 tokens
+RESULT ok: longbench/narrativeqa/6/16384 score=40.0 decode=35.477651855308366 token/s
+CASE 49/640 snapkv longbench/narrativeqa/135/8192 repeat=0
+[snapkv/longbench/narrativeqa/135/8192] 13/128 tokens
+RESULT ok: longbench/narrativeqa/135/8192 score=0 decode=35.4908154668598 token/s
+CASE 50/640 snapkv longbench/narrativeqa/135/16384 repeat=0
+[snapkv/longbench/narrativeqa/135/16384] 13/128 tokens
+RESULT ok: longbench/narrativeqa/135/16384 score=0 decode=36.00723726667609 token/s
+CASE 51/640 snapkv longbench/narrativeqa/183/8192 repeat=0
+[snapkv/longbench/narrativeqa/183/8192] 8/128 tokens
+RESULT ok: longbench/narrativeqa/183/8192 score=0 decode=35.51318410273809 token/s
+CASE 52/640 snapkv longbench/narrativeqa/183/16384 repeat=0
+[snapkv/longbench/narrativeqa/183/16384] 8/128 tokens
+RESULT ok: longbench/narrativeqa/183/16384 score=0 decode=35.215593192179554 token/s
+CASE 53/640 snapkv longbench/narrativeqa/86/8192 repeat=0
+[snapkv/longbench/narrativeqa/86/8192] 6/128 tokens
+RESULT ok: longbench/narrativeqa/86/8192 score=0 decode=34.89635429233918 token/s
+CASE 54/640 snapkv longbench/narrativeqa/86/16384 repeat=0
+[snapkv/longbench/narrativeqa/86/16384] 6/128 tokens
+RESULT ok: longbench/narrativeqa/86/16384 score=0 decode=35.50351835188936 token/s
+CASE 55/640 snapkv longbench/narrativeqa/146/8192 repeat=0
+[snapkv/longbench/narrativeqa/146/8192] 5/128 tokens
+RESULT ok: longbench/narrativeqa/146/8192 score=0 decode=35.57031970544503 token/s
+CASE 56/640 snapkv longbench/narrativeqa/146/16384 repeat=0
+[snapkv/longbench/narrativeqa/146/16384] 5/128 tokens
+RESULT ok: longbench/narrativeqa/146/16384 score=0 decode=35.48526878162104 token/s
+CASE 57/640 snapkv longbench/narrativeqa/132/8192 repeat=0
+[snapkv/longbench/narrativeqa/132/8192] 5/128 tokens
+RESULT ok: longbench/narrativeqa/132/8192 score=100.0 decode=33.31675779819561 token/s
+CASE 58/640 snapkv longbench/narrativeqa/132/16384 repeat=0
+[snapkv/longbench/narrativeqa/132/16384] 5/128 tokens
+RESULT ok: longbench/narrativeqa/132/16384 score=100.0 decode=35.561158156337875 token/s
+CASE 59/640 snapkv longbench/narrativeqa/82/8192 repeat=0
+[snapkv/longbench/narrativeqa/82/8192] 7/128 tokens
+RESULT ok: longbench/narrativeqa/82/8192 score=25.0 decode=35.5598254876616 token/s
+CASE 60/640 snapkv longbench/narrativeqa/82/16384 repeat=0
+[snapkv/longbench/narrativeqa/82/16384] 7/128 tokens
+RESULT ok: longbench/narrativeqa/82/16384 score=25.0 decode=35.30938812803832 token/s
+CASE 61/640 snapkv longbench/narrativeqa/27/8192 repeat=0
+[snapkv/longbench/narrativeqa/27/8192] 8/128 tokens
+RESULT ok: longbench/narrativeqa/27/8192 score=0 decode=35.14394624860994 token/s
+CASE 62/640 snapkv longbench/narrativeqa/27/16384 repeat=0
+[snapkv/longbench/narrativeqa/27/16384] 10/128 tokens
+RESULT ok: longbench/narrativeqa/27/16384 score=22.22222222222222 decode=35.553799350973904 token/s
+CASE 63/640 snapkv longbench/narrativeqa/7/8192 repeat=0
+[snapkv/longbench/narrativeqa/7/8192] 8/128 tokens
+RESULT ok: longbench/narrativeqa/7/8192 score=0 decode=35.342460484024635 token/s
+CASE 64/640 snapkv longbench/narrativeqa/7/16384 repeat=0
+[snapkv/longbench/narrativeqa/7/16384] 6/128 tokens
+RESULT ok: longbench/narrativeqa/7/16384 score=80.0 decode=35.49384790490542 token/s
+CASE 65/640 snapkv longbench/qasper/159/8192 repeat=0
+[snapkv/longbench/qasper/159/8192] 22/128 tokens
+RESULT ok: longbench/qasper/159/8192 score=55.55555555555556 decode=35.21177167860179 token/s
+CASE 66/640 snapkv longbench/qasper/159/16384 repeat=0
+[snapkv/longbench/qasper/159/16384] 22/128 tokens
+RESULT ok: longbench/qasper/159/16384 score=55.55555555555556 decode=35.21913498432779 token/s
+CASE 67/640 snapkv longbench/qasper/145/8192 repeat=0
+[snapkv/longbench/qasper/145/8192] 27/128 tokens
+RESULT ok: longbench/qasper/145/8192 score=100.0 decode=35.8682653672024 token/s
+CASE 68/640 snapkv longbench/qasper/145/16384 repeat=0
+[snapkv/longbench/qasper/145/16384] 27/128 tokens
+RESULT ok: longbench/qasper/145/16384 score=100.0 decode=35.8089172729097 token/s
+CASE 69/640 snapkv longbench/qasper/136/8192 repeat=0
+[snapkv/longbench/qasper/136/8192] 30/128 tokens
+RESULT ok: longbench/qasper/136/8192 score=10.81081081081081 decode=35.60360494477447 token/s
+CASE 70/640 snapkv longbench/qasper/136/16384 repeat=0
+[snapkv/longbench/qasper/136/16384] 30/128 tokens
+RESULT ok: longbench/qasper/136/16384 score=10.81081081081081 decode=35.793757076720766 token/s
+CASE 71/640 snapkv longbench/qasper/39/8192 repeat=0
+[snapkv/longbench/qasper/39/8192] 27/128 tokens
+RESULT ok: longbench/qasper/39/8192 score=32.0 decode=35.5217188227624 token/s
+CASE 72/640 snapkv longbench/qasper/39/16384 repeat=0
+[snapkv/longbench/qasper/39/16384] 27/128 tokens
+RESULT ok: longbench/qasper/39/16384 score=32.0 decode=35.588063897476935 token/s
+CASE 73/640 snapkv longbench/qasper/131/8192 repeat=0
+[snapkv/longbench/qasper/131/8192] 15/128 tokens
+RESULT ok: longbench/qasper/131/8192 score=85.71428571428571 decode=34.998856323192335 token/s
+CASE 74/640 snapkv longbench/qasper/131/16384 repeat=0
+[snapkv/longbench/qasper/131/16384] 15/128 tokens
+RESULT ok: longbench/qasper/131/16384 score=85.71428571428571 decode=34.78758921823353 token/s
+CASE 75/640 snapkv longbench/qasper/112/8192 repeat=0
+[snapkv/longbench/qasper/112/8192] 16/128 tokens
+RESULT ok: longbench/qasper/112/8192 score=30.0 decode=35.88896026564662 token/s
+CASE 76/640 snapkv longbench/qasper/112/16384 repeat=0
+[snapkv/longbench/qasper/112/16384] 16/128 tokens
+RESULT ok: longbench/qasper/112/16384 score=30.0 decode=35.68266204449356 token/s
+CASE 77/640 snapkv longbench/qasper/103/8192 repeat=0
+[snapkv/longbench/qasper/103/8192] 4/128 tokens
+RESULT ok: longbench/qasper/103/8192 score=0 decode=32.630626337751906 token/s
+CASE 78/640 snapkv longbench/qasper/103/16384 repeat=0
+[snapkv/longbench/qasper/103/16384] 4/128 tokens
+RESULT ok: longbench/qasper/103/16384 score=0 decode=32.65803460631376 token/s
+CASE 79/640 snapkv longbench/qasper/146/8192 repeat=0
+[snapkv/longbench/qasper/146/8192] 35/128 tokens
+RESULT ok: longbench/qasper/146/8192 score=26.08695652173913 decode=35.700916548006404 token/s
+CASE 80/640 snapkv longbench/qasper/146/16384 repeat=0
+[snapkv/longbench/qasper/146/16384] 35/128 tokens
+RESULT ok: longbench/qasper/146/16384 score=26.08695652173913 decode=35.517881634463 token/s
+CASE 81/640 snapkv longbench/qasper/148/8192 repeat=0
+[snapkv/longbench/qasper/148/8192] 59/128 tokens
+RESULT ok: longbench/qasper/148/8192 score=66.66666666666666 decode=35.57931160272384 token/s
+CASE 82/640 snapkv longbench/qasper/148/16384 repeat=0
+[snapkv/longbench/qasper/148/16384] 59/128 tokens
+RESULT ok: longbench/qasper/148/16384 score=66.66666666666666 decode=35.616998539710245 token/s
+CASE 83/640 snapkv longbench/qasper/83/8192 repeat=0
+[snapkv/longbench/qasper/83/8192] 27/128 tokens
+RESULT ok: longbench/qasper/83/8192 score=13.333333333333334 decode=35.158400200148314 token/s
+CASE 84/640 snapkv longbench/qasper/83/16384 repeat=0
+[snapkv/longbench/qasper/83/16384] 27/128 tokens
+RESULT ok: longbench/qasper/83/16384 score=13.333333333333334 decode=35.314277642389364 token/s
+CASE 85/640 snapkv longbench/qasper/41/8192 repeat=0
+[snapkv/longbench/qasper/41/8192] 3/128 tokens
+RESULT ok: longbench/qasper/41/8192 score=100.0 decode=33.67451347347144 token/s
+CASE 86/640 snapkv longbench/qasper/41/16384 repeat=0
+[snapkv/longbench/qasper/41/16384] 3/128 tokens
+RESULT ok: longbench/qasper/41/16384 score=100.0 decode=33.17099191891332 token/s
+CASE 87/640 snapkv longbench/qasper/84/8192 repeat=0
+[snapkv/longbench/qasper/84/8192] 10/128 tokens
+RESULT ok: longbench/qasper/84/8192 score=27.77777777777778 decode=34.760436347217734 token/s
+CASE 88/640 snapkv longbench/qasper/84/16384 repeat=0
+[snapkv/longbench/qasper/84/16384] 10/128 tokens
+RESULT ok: longbench/qasper/84/16384 score=27.77777777777778 decode=34.1299380065637 token/s
+CASE 89/640 snapkv longbench/qasper/130/8192 repeat=0
+[snapkv/longbench/qasper/130/8192] 31/128 tokens
+RESULT ok: longbench/qasper/130/8192 score=34.285714285714285 decode=35.382120107947344 token/s
+CASE 90/640 snapkv longbench/qasper/130/16384 repeat=0
+[snapkv/longbench/qasper/130/16384] 31/128 tokens
+RESULT ok: longbench/qasper/130/16384 score=34.285714285714285 decode=35.06840383349949 token/s
+CASE 91/640 snapkv longbench/qasper/38/8192 repeat=0
+[snapkv/longbench/qasper/38/8192] 24/128 tokens
+RESULT ok: longbench/qasper/38/8192 score=47.99999999999999 decode=35.7124588854588 token/s
+CASE 92/640 snapkv longbench/qasper/38/16384 repeat=0
+[snapkv/longbench/qasper/38/16384] 24/128 tokens
+RESULT ok: longbench/qasper/38/16384 score=47.99999999999999 decode=35.48948735323413 token/s
+CASE 93/640 snapkv longbench/qasper/54/8192 repeat=0
+[snapkv/longbench/qasper/54/8192] 22/128 tokens
+RESULT ok: longbench/qasper/54/8192 score=22.22222222222222 decode=34.999143738138265 token/s
+CASE 94/640 snapkv longbench/qasper/54/16384 repeat=0
+[snapkv/longbench/qasper/54/16384] 19/128 tokens
+RESULT ok: longbench/qasper/54/16384 score=25.0 decode=35.27143028489912 token/s
+CASE 95/640 snapkv longbench/qasper/140/8192 repeat=0
+[snapkv/longbench/qasper/140/8192] 26/128 tokens
+RESULT ok: longbench/qasper/140/8192 score=9.09090909090909 decode=35.772296711162916 token/s
+CASE 96/640 snapkv longbench/qasper/140/16384 repeat=0
+[snapkv/longbench/qasper/140/16384] 26/128 tokens
+RESULT ok: longbench/qasper/140/16384 score=9.09090909090909 decode=35.838602867454114 token/s
+CASE 97/640 snapkv longbench/qasper/87/8192 repeat=0
+[snapkv/longbench/qasper/87/8192] 101/128 tokens
+RESULT ok: longbench/qasper/87/8192 score=0 decode=35.72845144547143 token/s
+CASE 98/640 snapkv longbench/qasper/87/16384 repeat=0
+[snapkv/longbench/qasper/87/16384] 101/128 tokens
+RESULT ok: longbench/qasper/87/16384 score=0 decode=35.676691767627474 token/s
+CASE 99/640 snapkv longbench/qasper/53/8192 repeat=0
+[snapkv/longbench/qasper/53/8192] 31/128 tokens
+RESULT ok: longbench/qasper/53/8192 score=24.0 decode=34.925710607388424 token/s
+CASE 100/640 snapkv longbench/qasper/53/16384 repeat=0
+[snapkv/longbench/qasper/53/16384] 31/128 tokens
+RESULT ok: longbench/qasper/53/16384 score=24.0 decode=34.95642684433307 token/s
+CASE 101/640 snapkv longbench/qasper/160/8192 repeat=0
+[snapkv/longbench/qasper/160/8192] 14/128 tokens
+RESULT ok: longbench/qasper/160/8192 score=66.66666666666666 decode=34.95179239314303 token/s
+CASE 102/640 snapkv longbench/qasper/160/16384 repeat=0
+[snapkv/longbench/qasper/160/16384] 14/128 tokens
+RESULT ok: longbench/qasper/160/16384 score=66.66666666666666 decode=35.36602048049901 token/s
+CASE 103/640 snapkv longbench/qasper/37/8192 repeat=0
+[snapkv/longbench/qasper/37/8192] 41/128 tokens
+RESULT ok: longbench/qasper/37/8192 score=78.57142857142858 decode=35.46546913192116 token/s
+CASE 104/640 snapkv longbench/qasper/37/16384 repeat=0
+[snapkv/longbench/qasper/37/16384] 41/128 tokens
+RESULT ok: longbench/qasper/37/16384 score=78.57142857142858 decode=35.42611259325179 token/s
+CASE 105/640 snapkv longbench/qasper/95/8192 repeat=0
+[snapkv/longbench/qasper/95/8192] 3/128 tokens
+RESULT ok: longbench/qasper/95/8192 score=100.0 decode=31.08236056021218 token/s
+CASE 106/640 snapkv longbench/qasper/95/16384 repeat=0
+[snapkv/longbench/qasper/95/16384] 3/128 tokens
+RESULT ok: longbench/qasper/95/16384 score=100.0 decode=31.213191697861504 token/s
+CASE 107/640 snapkv longbench/qasper/176/8192 repeat=0
+[snapkv/longbench/qasper/176/8192] 10/128 tokens
+RESULT ok: longbench/qasper/176/8192 score=80.0 decode=35.31106207176755 token/s
+CASE 108/640 snapkv longbench/qasper/176/16384 repeat=0
+[snapkv/longbench/qasper/176/16384] 10/128 tokens
+RESULT ok: longbench/qasper/176/16384 score=80.0 decode=35.15124331944647 token/s
+CASE 109/640 snapkv longbench/qasper/157/8192 repeat=0
+[snapkv/longbench/qasper/157/8192] 17/128 tokens
+RESULT ok: longbench/qasper/157/8192 score=100.0 decode=34.955829324112834 token/s
+CASE 110/640 snapkv longbench/qasper/157/16384 repeat=0
+[snapkv/longbench/qasper/157/16384] 17/128 tokens
+RESULT ok: longbench/qasper/157/16384 score=100.0 decode=35.19234559098175 token/s
+CASE 111/640 snapkv longbench/qasper/133/8192 repeat=0
+[snapkv/longbench/qasper/133/8192] 3/128 tokens
+RESULT ok: longbench/qasper/133/8192 score=100.0 decode=35.57683675329429 token/s
+CASE 112/640 snapkv longbench/qasper/133/16384 repeat=0
+[snapkv/longbench/qasper/133/16384] 3/128 tokens
+RESULT ok: longbench/qasper/133/16384 score=100.0 decode=35.90938278934371 token/s
+CASE 113/640 snapkv longbench/qasper/168/8192 repeat=0
+[snapkv/longbench/qasper/168/8192] 26/128 tokens
+RESULT ok: longbench/qasper/168/8192 score=72.72727272727272 decode=35.51712856974346 token/s
+CASE 114/640 snapkv longbench/qasper/168/16384 repeat=0
+[snapkv/longbench/qasper/168/16384] 26/128 tokens
+RESULT ok: longbench/qasper/168/16384 score=72.72727272727272 decode=35.49869156529524 token/s
+CASE 115/640 snapkv longbench/qasper/166/8192 repeat=0
+[snapkv/longbench/qasper/166/8192] 15/128 tokens
+RESULT ok: longbench/qasper/166/8192 score=71.42857142857143 decode=35.09523821964116 token/s
+CASE 116/640 snapkv longbench/qasper/166/16384 repeat=0
+[snapkv/longbench/qasper/166/16384] 15/128 tokens
+RESULT ok: longbench/qasper/166/16384 score=71.42857142857143 decode=34.910869765593105 token/s
+CASE 117/640 snapkv longbench/qasper/67/8192 repeat=0
+[snapkv/longbench/qasper/67/8192] 45/128 tokens
+RESULT ok: longbench/qasper/67/8192 score=29.629629629629633 decode=35.598784496111655 token/s
+CASE 118/640 snapkv longbench/qasper/67/16384 repeat=0
+[snapkv/longbench/qasper/67/16384] 44/128 tokens
+RESULT ok: longbench/qasper/67/16384 score=27.58620689655173 decode=35.0066561105266 token/s
+CASE 119/640 snapkv longbench/qasper/119/8192 repeat=0
+[snapkv/longbench/qasper/119/8192] 7/128 tokens
+RESULT ok: longbench/qasper/119/8192 score=40.0 decode=34.66229733491793 token/s
+CASE 120/640 snapkv longbench/qasper/119/16384 repeat=0
+[snapkv/longbench/qasper/119/16384] 7/128 tokens
+RESULT ok: longbench/qasper/119/16384 score=40.0 decode=34.80429323423509 token/s
+CASE 121/640 snapkv longbench/qasper/183/8192 repeat=0
+[snapkv/longbench/qasper/183/8192] 5/128 tokens
+RESULT ok: longbench/qasper/183/8192 score=28.571428571428577 decode=34.38520983111618 token/s
+CASE 122/640 snapkv longbench/qasper/183/16384 repeat=0
+[snapkv/longbench/qasper/183/16384] 5/128 tokens
+RESULT ok: longbench/qasper/183/16384 score=28.571428571428577 decode=33.89496330978417 token/s
+CASE 123/640 snapkv longbench/qasper/90/8192 repeat=0
+[snapkv/longbench/qasper/90/8192] 7/128 tokens
+RESULT ok: longbench/qasper/90/8192 score=66.66666666666666 decode=34.99366588912331 token/s
+CASE 124/640 snapkv longbench/qasper/90/16384 repeat=0
+[snapkv/longbench/qasper/90/16384] 7/128 tokens
+RESULT ok: longbench/qasper/90/16384 score=66.66666666666666 decode=34.6884934305914 token/s
+CASE 125/640 snapkv longbench/qasper/51/8192 repeat=0
+[snapkv/longbench/qasper/51/8192] 3/128 tokens
+RESULT ok: longbench/qasper/51/8192 score=100.0 decode=33.27829494820014 token/s
+CASE 126/640 snapkv longbench/qasper/51/16384 repeat=0
+[snapkv/longbench/qasper/51/16384] 3/128 tokens
+RESULT ok: longbench/qasper/51/16384 score=100.0 decode=33.704628249637445 token/s
+CASE 127/640 snapkv longbench/qasper/89/8192 repeat=0
+[snapkv/longbench/qasper/89/8192] 49/128 tokens
+RESULT ok: longbench/qasper/89/8192 score=55.172413793103445 decode=35.36441375495939 token/s
+CASE 128/640 snapkv longbench/qasper/89/16384 repeat=0
+[snapkv/longbench/qasper/89/16384] 49/128 tokens
+RESULT ok: longbench/qasper/89/16384 score=55.172413793103445 decode=34.938407583694406 token/s
+CASE 129/640 snapkv longbench/multifieldqa_en/121/8192 repeat=0
+[snapkv/longbench/multifieldqa_en/121/8192] 23/64 tokens
+RESULT ok: longbench/multifieldqa_en/121/8192 score=33.333333333333336 decode=35.50321157944563 token/s
+CASE 130/640 snapkv longbench/multifieldqa_en/121/16384 repeat=0
+[snapkv/longbench/multifieldqa_en/121/16384] 23/64 tokens
+RESULT ok: longbench/multifieldqa_en/121/16384 score=33.333333333333336 decode=35.77680898535209 token/s
+CASE 131/640 snapkv longbench/multifieldqa_en/32/8192 repeat=0
+[snapkv/longbench/multifieldqa_en/32/8192] 22/64 tokens
+RESULT ok: longbench/multifieldqa_en/32/8192 score=66.66666666666666 decode=35.728931171194766 token/s
+CASE 132/640 snapkv longbench/multifieldqa_en/32/16384 repeat=0
+[snapkv/longbench/multifieldqa_en/32/16384] 22/64 tokens
+RESULT ok: longbench/multifieldqa_en/32/16384 score=66.66666666666666 decode=35.50331043858124 token/s
+CASE 133/640 snapkv longbench/multifieldqa_en/68/8192 repeat=0
+[snapkv/longbench/multifieldqa_en/68/8192] 6/64 tokens
+RESULT ok: longbench/multifieldqa_en/68/8192 score=60.0 decode=27.988895860917648 token/s
+CASE 134/640 snapkv longbench/multifieldqa_en/68/16384 repeat=0
+[snapkv/longbench/multifieldqa_en/68/16384] 6/64 tokens
+RESULT ok: longbench/multifieldqa_en/68/16384 score=60.0 decode=34.36228403596069 token/s
+CASE 135/640 snapkv longbench/multifieldqa_en/113/8192 repeat=0
+[snapkv/longbench/multifieldqa_en/113/8192] 9/64 tokens
+RESULT ok: longbench/multifieldqa_en/113/8192 score=60.0 decode=35.0037070267494 token/s
+CASE 136/640 snapkv longbench/multifieldqa_en/113/16384 repeat=0
+[snapkv/longbench/multifieldqa_en/113/16384] 9/64 tokens
+RESULT ok: longbench/multifieldqa_en/113/16384 score=60.0 decode=34.94771124313048 token/s
+CASE 137/640 snapkv longbench/multifieldqa_en/116/8192 repeat=0
+[snapkv/longbench/multifieldqa_en/116/8192] 7/64 tokens
+RESULT ok: longbench/multifieldqa_en/116/8192 score=40.0 decode=35.24358334188422 token/s
+CASE 138/640 snapkv longbench/multifieldqa_en/116/16384 repeat=0
+[snapkv/longbench/multifieldqa_en/116/16384] 7/64 tokens
+RESULT ok: longbench/multifieldqa_en/116/16384 score=40.0 decode=35.60916413694816 token/s
+CASE 139/640 snapkv longbench/multifieldqa_en/118/8192 repeat=0
+[snapkv/longbench/multifieldqa_en/118/8192] 5/64 tokens
+RESULT ok: longbench/multifieldqa_en/118/8192 score=100.0 decode=35.248705070074465 token/s
+CASE 140/640 snapkv longbench/multifieldqa_en/118/16384 repeat=0
+[snapkv/longbench/multifieldqa_en/118/16384] 5/64 tokens
+RESULT ok: longbench/multifieldqa_en/118/16384 score=100.0 decode=34.986689630057256 token/s
+CASE 141/640 snapkv longbench/multifieldqa_en/85/8192 repeat=0
+[snapkv/longbench/multifieldqa_en/85/8192] 64/64 tokens
+RESULT ok: longbench/multifieldqa_en/85/8192 score=33.333333333333336 decode=35.52263810446045 token/s
+CASE 142/640 snapkv longbench/multifieldqa_en/85/16384 repeat=0
+[snapkv/longbench/multifieldqa_en/85/16384] 64/64 tokens
+RESULT ok: longbench/multifieldqa_en/85/16384 score=31.034482758620697 decode=35.47398342171641 token/s
+CASE 143/640 snapkv longbench/multifieldqa_en/81/8192 repeat=0
+[snapkv/longbench/multifieldqa_en/81/8192] 64/64 tokens
+RESULT ok: longbench/multifieldqa_en/81/8192 score=8.16326530612245 decode=35.17884158632793 token/s
+CASE 144/640 snapkv longbench/multifieldqa_en/81/16384 repeat=0
+[snapkv/longbench/multifieldqa_en/81/16384] 64/64 tokens
+RESULT ok: longbench/multifieldqa_en/81/16384 score=8.16326530612245 decode=34.79822628816421 token/s
+CASE 145/640 snapkv longbench/multifieldqa_en/105/8192 repeat=0
+[snapkv/longbench/multifieldqa_en/105/8192] 24/64 tokens
+RESULT ok: longbench/multifieldqa_en/105/8192 score=30.303030303030305 decode=32.60257363880583 token/s
+CASE 146/640 snapkv longbench/multifieldqa_en/105/16384 repeat=0
+[snapkv/longbench/multifieldqa_en/105/16384] 24/64 tokens
+RESULT ok: longbench/multifieldqa_en/105/16384 score=30.303030303030305 decode=35.07609587582198 token/s
+CASE 147/640 snapkv longbench/multifieldqa_en/139/8192 repeat=0
+[snapkv/longbench/multifieldqa_en/139/8192] 24/64 tokens
+RESULT ok: longbench/multifieldqa_en/139/8192 score=78.78787878787877 decode=35.04363930630087 token/s
+CASE 148/640 snapkv longbench/multifieldqa_en/139/16384 repeat=0
+[snapkv/longbench/multifieldqa_en/139/16384] 24/64 tokens
+RESULT ok: longbench/multifieldqa_en/139/16384 score=78.78787878787877 decode=35.55684042089521 token/s
+CASE 149/640 snapkv longbench/multifieldqa_en/95/8192 repeat=0
+[snapkv/longbench/multifieldqa_en/95/8192] 34/64 tokens
+RESULT ok: longbench/multifieldqa_en/95/8192 score=28.57142857142857 decode=35.05662406001669 token/s
+CASE 150/640 snapkv longbench/multifieldqa_en/95/16384 repeat=0
+[snapkv/longbench/multifieldqa_en/95/16384] 34/64 tokens
+RESULT ok: longbench/multifieldqa_en/95/16384 score=28.57142857142857 decode=35.817675099181066 token/s
+CASE 151/640 snapkv longbench/multifieldqa_en/36/8192 repeat=0
+[snapkv/longbench/multifieldqa_en/36/8192] 2/64 tokens
+RESULT ok: longbench/multifieldqa_en/36/8192 score=100.0 decode=28.661320338785657 token/s
+CASE 152/640 snapkv longbench/multifieldqa_en/36/16384 repeat=0
+[snapkv/longbench/multifieldqa_en/36/16384] 2/64 tokens
+RESULT ok: longbench/multifieldqa_en/36/16384 score=100.0 decode=28.37450439867625 token/s
+CASE 153/640 snapkv longbench/multifieldqa_en/66/8192 repeat=0
+[snapkv/longbench/multifieldqa_en/66/8192] 4/64 tokens
+RESULT ok: longbench/multifieldqa_en/66/8192 score=100.0 decode=35.03450860933721 token/s
+CASE 154/640 snapkv longbench/multifieldqa_en/66/16384 repeat=0
+[snapkv/longbench/multifieldqa_en/66/16384] 4/64 tokens
+RESULT ok: longbench/multifieldqa_en/66/16384 score=100.0 decode=35.512931320031086 token/s
+CASE 155/640 snapkv longbench/multifieldqa_en/78/8192 repeat=0
+[snapkv/longbench/multifieldqa_en/78/8192] 33/64 tokens
+RESULT ok: longbench/multifieldqa_en/78/8192 score=28.57142857142857 decode=35.386726075664775 token/s
+CASE 156/640 snapkv longbench/multifieldqa_en/78/16384 repeat=0
+[snapkv/longbench/multifieldqa_en/78/16384] 33/64 tokens
+RESULT ok: longbench/multifieldqa_en/78/16384 score=28.57142857142857 decode=35.152283419714344 token/s
+CASE 157/640 snapkv longbench/multifieldqa_en/91/8192 repeat=0
+[snapkv/longbench/multifieldqa_en/91/8192] 2/64 tokens
+RESULT ok: longbench/multifieldqa_en/91/8192 score=100.0 decode=34.59635752597574 token/s
+CASE 158/640 snapkv longbench/multifieldqa_en/91/16384 repeat=0
+[snapkv/longbench/multifieldqa_en/91/16384] 2/64 tokens
+RESULT ok: longbench/multifieldqa_en/91/16384 score=100.0 decode=34.82952739255739 token/s
+CASE 159/640 snapkv longbench/multifieldqa_en/92/8192 repeat=0
+[snapkv/longbench/multifieldqa_en/92/8192] 36/64 tokens
+RESULT ok: longbench/multifieldqa_en/92/8192 score=40.0 decode=35.74698140274368 token/s
+CASE 160/640 snapkv longbench/multifieldqa_en/92/16384 repeat=0
+[snapkv/longbench/multifieldqa_en/92/16384] 43/64 tokens
+RESULT ok: longbench/multifieldqa_en/92/16384 score=35.8974358974359 decode=35.754215934808016 token/s
+CASE 161/640 snapkv longbench/multifieldqa_en/65/8192 repeat=0
+[snapkv/longbench/multifieldqa_en/65/8192] 17/64 tokens
+RESULT ok: longbench/multifieldqa_en/65/8192 score=74.07407407407406 decode=35.76345062196502 token/s
+CASE 162/640 snapkv longbench/multifieldqa_en/65/16384 repeat=0
+[snapkv/longbench/multifieldqa_en/65/16384] 17/64 tokens
+RESULT ok: longbench/multifieldqa_en/65/16384 score=74.07407407407406 decode=34.8847097838993 token/s
+CASE 163/640 snapkv longbench/multifieldqa_en/56/8192 repeat=0
+[snapkv/longbench/multifieldqa_en/56/8192] 6/64 tokens
+RESULT ok: longbench/multifieldqa_en/56/8192 score=80.0 decode=32.61904896729021 token/s
+CASE 164/640 snapkv longbench/multifieldqa_en/56/16384 repeat=0
+[snapkv/longbench/multifieldqa_en/56/16384] 6/64 tokens
+RESULT ok: longbench/multifieldqa_en/56/16384 score=80.0 decode=34.67411576004313 token/s
+CASE 165/640 snapkv longbench/multifieldqa_en/111/8192 repeat=0
+[snapkv/longbench/multifieldqa_en/111/8192] 4/64 tokens
+RESULT ok: longbench/multifieldqa_en/111/8192 score=50.0 decode=32.777545279718986 token/s
+CASE 166/640 snapkv longbench/multifieldqa_en/111/16384 repeat=0
+[snapkv/longbench/multifieldqa_en/111/16384] 4/64 tokens
+RESULT ok: longbench/multifieldqa_en/111/16384 score=50.0 decode=32.81117982506092 token/s
+CASE 167/640 snapkv longbench/multifieldqa_en/80/8192 repeat=0
+[snapkv/longbench/multifieldqa_en/80/8192] 50/64 tokens
+RESULT ok: longbench/multifieldqa_en/80/8192 score=69.56521739130436 decode=35.55128256057561 token/s
+CASE 168/640 snapkv longbench/multifieldqa_en/80/16384 repeat=0
+[snapkv/longbench/multifieldqa_en/80/16384] 50/64 tokens
+RESULT ok: longbench/multifieldqa_en/80/16384 score=69.56521739130436 decode=35.754489966255186 token/s
+CASE 169/640 snapkv longbench/multifieldqa_en/62/8192 repeat=0
+[snapkv/longbench/multifieldqa_en/62/8192] 8/64 tokens
+RESULT ok: longbench/multifieldqa_en/62/8192 score=46.15384615384615 decode=34.641255459446974 token/s
+CASE 170/640 snapkv longbench/multifieldqa_en/62/16384 repeat=0
+[snapkv/longbench/multifieldqa_en/62/16384] 8/64 tokens
+RESULT ok: longbench/multifieldqa_en/62/16384 score=46.15384615384615 decode=34.405709507607575 token/s
+CASE 171/640 snapkv longbench/multifieldqa_en/43/8192 repeat=0
+[snapkv/longbench/multifieldqa_en/43/8192] 22/64 tokens
+RESULT ok: longbench/multifieldqa_en/43/8192 score=15.384615384615385 decode=35.91100313949642 token/s
+CASE 172/640 snapkv longbench/multifieldqa_en/43/16384 repeat=0
+[snapkv/longbench/multifieldqa_en/43/16384] 22/64 tokens
+RESULT ok: longbench/multifieldqa_en/43/16384 score=15.384615384615385 decode=35.61891212385057 token/s
+CASE 173/640 snapkv longbench/multifieldqa_en/44/8192 repeat=0
+[snapkv/longbench/multifieldqa_en/44/8192] 4/64 tokens
+RESULT ok: longbench/multifieldqa_en/44/8192 score=9.09090909090909 decode=34.39374727216936 token/s
+CASE 174/640 snapkv longbench/multifieldqa_en/44/16384 repeat=0
+[snapkv/longbench/multifieldqa_en/44/16384] 4/64 tokens
+RESULT ok: longbench/multifieldqa_en/44/16384 score=9.09090909090909 decode=33.71318016623412 token/s
+CASE 175/640 snapkv longbench/multifieldqa_en/140/8192 repeat=0
+[snapkv/longbench/multifieldqa_en/140/8192] 10/64 tokens
+RESULT ok: longbench/multifieldqa_en/140/8192 score=87.50000000000001 decode=34.69258339203819 token/s
+CASE 176/640 snapkv longbench/multifieldqa_en/140/16384 repeat=0
+[snapkv/longbench/multifieldqa_en/140/16384] 10/64 tokens
+RESULT ok: longbench/multifieldqa_en/140/16384 score=87.50000000000001 decode=35.23579770638597 token/s
+CASE 177/640 snapkv longbench/multifieldqa_en/126/8192 repeat=0
+[snapkv/longbench/multifieldqa_en/126/8192] 44/64 tokens
+RESULT ok: longbench/multifieldqa_en/126/8192 score=34.285714285714285 decode=35.594923949613616 token/s
+CASE 178/640 snapkv longbench/multifieldqa_en/126/16384 repeat=0
+[snapkv/longbench/multifieldqa_en/126/16384] 44/64 tokens
+RESULT ok: longbench/multifieldqa_en/126/16384 score=34.285714285714285 decode=35.546124551282986 token/s
+CASE 179/640 snapkv longbench/multifieldqa_en/60/8192 repeat=0
+[snapkv/longbench/multifieldqa_en/60/8192] 64/64 tokens
+RESULT ok: longbench/multifieldqa_en/60/8192 score=38.70967741935484 decode=35.254547132263596 token/s
+CASE 180/640 snapkv longbench/multifieldqa_en/60/16384 repeat=0
+[snapkv/longbench/multifieldqa_en/60/16384] 38/64 tokens
+RESULT ok: longbench/multifieldqa_en/60/16384 score=41.02564102564102 decode=35.72723031294655 token/s
+CASE 181/640 snapkv longbench/multifieldqa_en/49/8192 repeat=0
+[snapkv/longbench/multifieldqa_en/49/8192] 3/64 tokens
+RESULT ok: longbench/multifieldqa_en/49/8192 score=100.0 decode=31.99620244275843 token/s
+CASE 182/640 snapkv longbench/multifieldqa_en/49/16384 repeat=0
+[snapkv/longbench/multifieldqa_en/49/16384] 3/64 tokens
+RESULT ok: longbench/multifieldqa_en/49/16384 score=100.0 decode=29.691147880822598 token/s
+CASE 183/640 snapkv longbench/multifieldqa_en/148/8192 repeat=0
+[snapkv/longbench/multifieldqa_en/148/8192] 39/64 tokens
+RESULT ok: longbench/multifieldqa_en/148/8192 score=92.3076923076923 decode=35.64725441320924 token/s
+CASE 184/640 snapkv longbench/multifieldqa_en/148/16384 repeat=0
+[snapkv/longbench/multifieldqa_en/148/16384] 39/64 tokens
+RESULT ok: longbench/multifieldqa_en/148/16384 score=92.3076923076923 decode=34.94197620860333 token/s
+CASE 185/640 snapkv longbench/multifieldqa_en/145/8192 repeat=0
+[snapkv/longbench/multifieldqa_en/145/8192] 46/64 tokens
+RESULT ok: longbench/multifieldqa_en/145/8192 score=44.44444444444445 decode=35.55182917267346 token/s
+CASE 186/640 snapkv longbench/multifieldqa_en/145/16384 repeat=0
+[snapkv/longbench/multifieldqa_en/145/16384] 64/64 tokens
+RESULT ok: longbench/multifieldqa_en/145/16384 score=38.0952380952381 decode=35.9270218056492 token/s
+CASE 187/640 snapkv longbench/multifieldqa_en/142/8192 repeat=0
+[snapkv/longbench/multifieldqa_en/142/8192] 61/64 tokens
+RESULT ok: longbench/multifieldqa_en/142/8192 score=40.816326530612244 decode=35.7809123039176 token/s
+CASE 188/640 snapkv longbench/multifieldqa_en/142/16384 repeat=0
+[snapkv/longbench/multifieldqa_en/142/16384] 59/64 tokens
+RESULT ok: longbench/multifieldqa_en/142/16384 score=42.5531914893617 decode=35.81537922967354 token/s
+CASE 189/640 snapkv longbench/multifieldqa_en/119/8192 repeat=0
+[snapkv/longbench/multifieldqa_en/119/8192] 64/64 tokens
+RESULT ok: longbench/multifieldqa_en/119/8192 score=21.05263157894737 decode=35.55173877127046 token/s
+CASE 190/640 snapkv longbench/multifieldqa_en/119/16384 repeat=0
+[snapkv/longbench/multifieldqa_en/119/16384] 64/64 tokens
+RESULT ok: longbench/multifieldqa_en/119/16384 score=21.05263157894737 decode=35.5693307738851 token/s
+CASE 191/640 snapkv longbench/multifieldqa_en/61/8192 repeat=0
+[snapkv/longbench/multifieldqa_en/61/8192] 25/64 tokens
+RESULT ok: longbench/multifieldqa_en/61/8192 score=37.5 decode=35.41095260488156 token/s
+CASE 192/640 snapkv longbench/multifieldqa_en/61/16384 repeat=0
+[snapkv/longbench/multifieldqa_en/61/16384] 25/64 tokens
+RESULT ok: longbench/multifieldqa_en/61/16384 score=37.5 decode=35.93361163246658 token/s
+CASE 193/640 snapkv longbench/hotpotqa/145/8192 repeat=0
+[snapkv/longbench/hotpotqa/145/8192] 4/32 tokens
+RESULT ok: longbench/hotpotqa/145/8192 score=0 decode=35.211730026328134 token/s
+CASE 194/640 snapkv longbench/hotpotqa/145/16384 repeat=0
+[snapkv/longbench/hotpotqa/145/16384] 4/32 tokens
+RESULT ok: longbench/hotpotqa/145/16384 score=0 decode=35.25057742444894 token/s
+CASE 195/640 snapkv longbench/hotpotqa/186/8192 repeat=0
+[snapkv/longbench/hotpotqa/186/8192] 4/32 tokens
+RESULT ok: longbench/hotpotqa/186/8192 score=0 decode=35.34878027261318 token/s
+CASE 196/640 snapkv longbench/hotpotqa/186/16384 repeat=0
+[snapkv/longbench/hotpotqa/186/16384] 5/32 tokens
+RESULT ok: longbench/hotpotqa/186/16384 score=100.0 decode=35.46239852794999 token/s
+CASE 197/640 snapkv longbench/hotpotqa/101/8192 repeat=0
+[snapkv/longbench/hotpotqa/101/8192] 3/32 tokens
+RESULT ok: longbench/hotpotqa/101/8192 score=57.14285714285715 decode=34.72380355879252 token/s
+CASE 198/640 snapkv longbench/hotpotqa/101/16384 repeat=0
+[snapkv/longbench/hotpotqa/101/16384] 3/32 tokens
+RESULT ok: longbench/hotpotqa/101/16384 score=57.14285714285715 decode=35.37178454853153 token/s
+CASE 199/640 snapkv longbench/hotpotqa/34/8192 repeat=0
+[snapkv/longbench/hotpotqa/34/8192] 24/32 tokens
+RESULT ok: longbench/hotpotqa/34/8192 score=10.526315789473683 decode=34.08210939320707 token/s
+CASE 200/640 snapkv longbench/hotpotqa/34/16384 repeat=0
+[snapkv/longbench/hotpotqa/34/16384] 20/32 tokens
+RESULT ok: longbench/hotpotqa/34/16384 score=11.76470588235294 decode=35.20333760258171 token/s
+CASE 201/640 snapkv longbench/hotpotqa/41/8192 repeat=0
+[snapkv/longbench/hotpotqa/41/8192] 13/32 tokens
+RESULT ok: longbench/hotpotqa/41/8192 score=73.68421052631578 decode=35.571986564851166 token/s
+CASE 202/640 snapkv longbench/hotpotqa/41/16384 repeat=0
+[snapkv/longbench/hotpotqa/41/16384] 13/32 tokens
+RESULT ok: longbench/hotpotqa/41/16384 score=73.68421052631578 decode=35.61684173028217 token/s
+CASE 203/640 snapkv longbench/hotpotqa/46/8192 repeat=0
+[snapkv/longbench/hotpotqa/46/8192] 3/32 tokens
+RESULT ok: longbench/hotpotqa/46/8192 score=100.0 decode=34.086894051340906 token/s
+CASE 204/640 snapkv longbench/hotpotqa/46/16384 repeat=0
+[snapkv/longbench/hotpotqa/46/16384] 3/32 tokens
+RESULT ok: longbench/hotpotqa/46/16384 score=100.0 decode=35.539207325829125 token/s
+CASE 205/640 snapkv longbench/hotpotqa/139/8192 repeat=0
+[snapkv/longbench/hotpotqa/139/8192] 5/32 tokens
+RESULT ok: longbench/hotpotqa/139/8192 score=100.0 decode=35.23501894339694 token/s
+CASE 206/640 snapkv longbench/hotpotqa/139/16384 repeat=0
+[snapkv/longbench/hotpotqa/139/16384] 5/32 tokens
+RESULT ok: longbench/hotpotqa/139/16384 score=100.0 decode=35.51787100869537 token/s
+CASE 207/640 snapkv longbench/hotpotqa/44/8192 repeat=0
+[snapkv/longbench/hotpotqa/44/8192] 10/32 tokens
+RESULT ok: longbench/hotpotqa/44/8192 score=0 decode=35.64127736323315 token/s
+CASE 208/640 snapkv longbench/hotpotqa/44/16384 repeat=0
+[snapkv/longbench/hotpotqa/44/16384] 5/32 tokens
+RESULT ok: longbench/hotpotqa/44/16384 score=80.0 decode=34.75057783895005 token/s
+CASE 209/640 snapkv longbench/hotpotqa/38/8192 repeat=0
+[snapkv/longbench/hotpotqa/38/8192] 4/32 tokens
+RESULT ok: longbench/hotpotqa/38/8192 score=80.0 decode=35.26692924438864 token/s
+CASE 210/640 snapkv longbench/hotpotqa/38/16384 repeat=0
+[snapkv/longbench/hotpotqa/38/16384] 4/32 tokens
+RESULT ok: longbench/hotpotqa/38/16384 score=80.0 decode=35.389981109873524 token/s
+CASE 211/640 snapkv longbench/hotpotqa/42/8192 repeat=0
+[snapkv/longbench/hotpotqa/42/8192] 4/32 tokens
+RESULT ok: longbench/hotpotqa/42/8192 score=66.66666666666666 decode=35.31762177563487 token/s
+CASE 212/640 snapkv longbench/hotpotqa/42/16384 repeat=0
+[snapkv/longbench/hotpotqa/42/16384] 4/32 tokens
+RESULT ok: longbench/hotpotqa/42/16384 score=66.66666666666666 decode=35.51714318466149 token/s
+CASE 213/640 snapkv longbench/hotpotqa/100/8192 repeat=0
+[snapkv/longbench/hotpotqa/100/8192] 5/32 tokens
+RESULT ok: longbench/hotpotqa/100/8192 score=100.0 decode=32.45649201321264 token/s
+CASE 214/640 snapkv longbench/hotpotqa/100/16384 repeat=0
+[snapkv/longbench/hotpotqa/100/16384] 5/32 tokens
+RESULT ok: longbench/hotpotqa/100/16384 score=100.0 decode=34.50763588692266 token/s
+CASE 215/640 snapkv longbench/hotpotqa/108/8192 repeat=0
+[snapkv/longbench/hotpotqa/108/8192] 6/32 tokens
+RESULT ok: longbench/hotpotqa/108/8192 score=0 decode=35.404678624017606 token/s
+CASE 216/640 snapkv longbench/hotpotqa/108/16384 repeat=0
+[snapkv/longbench/hotpotqa/108/16384] 6/32 tokens
+RESULT ok: longbench/hotpotqa/108/16384 score=0 decode=35.25292335553915 token/s
+CASE 217/640 snapkv longbench/hotpotqa/148/8192 repeat=0
+[snapkv/longbench/hotpotqa/148/8192] 5/32 tokens
+RESULT ok: longbench/hotpotqa/148/8192 score=0 decode=34.18755534376533 token/s
+CASE 218/640 snapkv longbench/hotpotqa/148/16384 repeat=0
+[snapkv/longbench/hotpotqa/148/16384] 7/32 tokens
+RESULT ok: longbench/hotpotqa/148/16384 score=100.0 decode=35.388873030683484 token/s
+CASE 219/640 snapkv longbench/hotpotqa/40/8192 repeat=0
+[snapkv/longbench/hotpotqa/40/8192] 11/32 tokens
+RESULT ok: longbench/hotpotqa/40/8192 score=50.0 decode=35.51328580411747 token/s
+CASE 220/640 snapkv longbench/hotpotqa/40/16384 repeat=0
+[snapkv/longbench/hotpotqa/40/16384] 6/32 tokens
+RESULT ok: longbench/hotpotqa/40/16384 score=66.66666666666666 decode=35.54705858240251 token/s
+CASE 221/640 snapkv longbench/hotpotqa/58/8192 repeat=0
+[snapkv/longbench/hotpotqa/58/8192] 3/32 tokens
+RESULT ok: longbench/hotpotqa/58/8192 score=0 decode=34.94509726234362 token/s
+CASE 222/640 snapkv longbench/hotpotqa/58/16384 repeat=0
+[snapkv/longbench/hotpotqa/58/16384] 3/32 tokens
+RESULT ok: longbench/hotpotqa/58/16384 score=100.0 decode=34.912605734078646 token/s
+CASE 223/640 snapkv longbench/hotpotqa/89/8192 repeat=0
+[snapkv/longbench/hotpotqa/89/8192] 3/32 tokens
+RESULT ok: longbench/hotpotqa/89/8192 score=0 decode=34.20840857846692 token/s
+CASE 224/640 snapkv longbench/hotpotqa/89/16384 repeat=0
+[snapkv/longbench/hotpotqa/89/16384] 3/32 tokens
+RESULT ok: longbench/hotpotqa/89/16384 score=0 decode=35.66193714095235 token/s
+CASE 225/640 snapkv longbench/hotpotqa/191/8192 repeat=0
+[snapkv/longbench/hotpotqa/191/8192] 3/32 tokens
+RESULT ok: longbench/hotpotqa/191/8192 score=100.0 decode=32.735890744615176 token/s
+CASE 226/640 snapkv longbench/hotpotqa/191/16384 repeat=0
+[snapkv/longbench/hotpotqa/191/16384] 3/32 tokens
+RESULT ok: longbench/hotpotqa/191/16384 score=100.0 decode=32.616626770672 token/s
+CASE 227/640 snapkv longbench/hotpotqa/117/8192 repeat=0
+[snapkv/longbench/hotpotqa/117/8192] 19/32 tokens
+RESULT ok: longbench/hotpotqa/117/8192 score=76.1904761904762 decode=35.553075024187315 token/s
+CASE 228/640 snapkv longbench/hotpotqa/117/16384 repeat=0
+[snapkv/longbench/hotpotqa/117/16384] 18/32 tokens
+RESULT ok: longbench/hotpotqa/117/16384 score=76.1904761904762 decode=35.032534483427035 token/s
+CASE 229/640 snapkv longbench/hotpotqa/144/8192 repeat=0
+[snapkv/longbench/hotpotqa/144/8192] 4/32 tokens
+RESULT ok: longbench/hotpotqa/144/8192 score=100.0 decode=35.02606145839964 token/s
+CASE 230/640 snapkv longbench/hotpotqa/144/16384 repeat=0
+[snapkv/longbench/hotpotqa/144/16384] 2/32 tokens
+RESULT ok: longbench/hotpotqa/144/16384 score=66.66666666666666 decode=35.06350727937016 token/s
+CASE 231/640 snapkv longbench/hotpotqa/199/8192 repeat=0
+[snapkv/longbench/hotpotqa/199/8192] 2/32 tokens
+RESULT ok: longbench/hotpotqa/199/8192 score=100.0 decode=33.47802207626958 token/s
+CASE 232/640 snapkv longbench/hotpotqa/199/16384 repeat=0
+[snapkv/longbench/hotpotqa/199/16384] 2/32 tokens
+RESULT ok: longbench/hotpotqa/199/16384 score=100.0 decode=33.39417907424722 token/s
+CASE 233/640 snapkv longbench/hotpotqa/53/8192 repeat=0
+[snapkv/longbench/hotpotqa/53/8192] 5/32 tokens
+RESULT ok: longbench/hotpotqa/53/8192 score=0 decode=35.174910445388356 token/s
+CASE 234/640 snapkv longbench/hotpotqa/53/16384 repeat=0
+[snapkv/longbench/hotpotqa/53/16384] 5/32 tokens
+RESULT ok: longbench/hotpotqa/53/16384 score=0 decode=35.29372844487943 token/s
+CASE 235/640 snapkv longbench/hotpotqa/152/8192 repeat=0
+[snapkv/longbench/hotpotqa/152/8192] 4/32 tokens
+RESULT ok: longbench/hotpotqa/152/8192 score=100.0 decode=35.16933227032796 token/s
+CASE 236/640 snapkv longbench/hotpotqa/152/16384 repeat=0
+[snapkv/longbench/hotpotqa/152/16384] 4/32 tokens
+RESULT ok: longbench/hotpotqa/152/16384 score=100.0 decode=35.45085596819168 token/s
+CASE 237/640 snapkv longbench/hotpotqa/164/8192 repeat=0
+[snapkv/longbench/hotpotqa/164/8192] 4/32 tokens
+RESULT ok: longbench/hotpotqa/164/8192 score=0 decode=35.10868641619293 token/s
+CASE 238/640 snapkv longbench/hotpotqa/164/16384 repeat=0
+[snapkv/longbench/hotpotqa/164/16384] 4/32 tokens
+RESULT ok: longbench/hotpotqa/164/16384 score=0 decode=34.24737373935082 token/s
+CASE 239/640 snapkv longbench/hotpotqa/179/8192 repeat=0
+[snapkv/longbench/hotpotqa/179/8192] 4/32 tokens
+RESULT ok: longbench/hotpotqa/179/8192 score=0 decode=34.5161245774937 token/s
+CASE 240/640 snapkv longbench/hotpotqa/179/16384 repeat=0
+[snapkv/longbench/hotpotqa/179/16384] 4/32 tokens
+RESULT ok: longbench/hotpotqa/179/16384 score=0 decode=34.33391944369258 token/s
+CASE 241/640 snapkv longbench/hotpotqa/194/8192 repeat=0
+[snapkv/longbench/hotpotqa/194/8192] 21/32 tokens
+RESULT ok: longbench/hotpotqa/194/8192 score=0 decode=35.53419946316442 token/s
+CASE 242/640 snapkv longbench/hotpotqa/194/16384 repeat=0
+[snapkv/longbench/hotpotqa/194/16384] 3/32 tokens
+RESULT ok: longbench/hotpotqa/194/16384 score=50.0 decode=32.532548558966795 token/s
+CASE 243/640 snapkv longbench/hotpotqa/68/8192 repeat=0
+[snapkv/longbench/hotpotqa/68/8192] 2/32 tokens
+RESULT ok: longbench/hotpotqa/68/8192 score=100.0 decode=34.13503589221048 token/s
+CASE 244/640 snapkv longbench/hotpotqa/68/16384 repeat=0
+[snapkv/longbench/hotpotqa/68/16384] 2/32 tokens
+RESULT ok: longbench/hotpotqa/68/16384 score=100.0 decode=34.92451414142157 token/s
+CASE 245/640 snapkv longbench/hotpotqa/187/8192 repeat=0
+[snapkv/longbench/hotpotqa/187/8192] 3/32 tokens
+RESULT ok: longbench/hotpotqa/187/8192 score=0 decode=34.60673298898123 token/s
+CASE 246/640 snapkv longbench/hotpotqa/187/16384 repeat=0
+[snapkv/longbench/hotpotqa/187/16384] 3/32 tokens
+RESULT ok: longbench/hotpotqa/187/16384 score=0 decode=34.39866995708935 token/s
+CASE 247/640 snapkv longbench/hotpotqa/66/8192 repeat=0
+[snapkv/longbench/hotpotqa/66/8192] 4/32 tokens
+RESULT ok: longbench/hotpotqa/66/8192 score=100.0 decode=35.69870106772816 token/s
+CASE 248/640 snapkv longbench/hotpotqa/66/16384 repeat=0
+[snapkv/longbench/hotpotqa/66/16384] 4/32 tokens
+RESULT ok: longbench/hotpotqa/66/16384 score=100.0 decode=35.54553024257431 token/s
+CASE 249/640 snapkv longbench/hotpotqa/183/8192 repeat=0
+[snapkv/longbench/hotpotqa/183/8192] 2/32 tokens
+RESULT ok: longbench/hotpotqa/183/8192 score=0 decode=34.34554788667076 token/s
+CASE 250/640 snapkv longbench/hotpotqa/183/16384 repeat=0
+[snapkv/longbench/hotpotqa/183/16384] 2/32 tokens
+RESULT ok: longbench/hotpotqa/183/16384 score=100.0 decode=34.146643643199695 token/s
+CASE 251/640 snapkv longbench/hotpotqa/64/8192 repeat=0
+[snapkv/longbench/hotpotqa/64/8192] 2/32 tokens
+RESULT ok: longbench/hotpotqa/64/8192 score=100.0 decode=33.95305465507908 token/s
+CASE 252/640 snapkv longbench/hotpotqa/64/16384 repeat=0
+[snapkv/longbench/hotpotqa/64/16384] 3/32 tokens
+RESULT ok: longbench/hotpotqa/64/16384 score=0 decode=35.33190477279096 token/s
+CASE 253/640 snapkv longbench/hotpotqa/114/8192 repeat=0
+[snapkv/longbench/hotpotqa/114/8192] 3/32 tokens
+RESULT ok: longbench/hotpotqa/114/8192 score=100.0 decode=33.06076275001103 token/s
+CASE 254/640 snapkv longbench/hotpotqa/114/16384 repeat=0
+[snapkv/longbench/hotpotqa/114/16384] 3/32 tokens
+RESULT ok: longbench/hotpotqa/114/16384 score=100.0 decode=32.680356545633074 token/s
+CASE 255/640 snapkv longbench/hotpotqa/159/8192 repeat=0
+[snapkv/longbench/hotpotqa/159/8192] 4/32 tokens
+RESULT ok: longbench/hotpotqa/159/8192 score=0 decode=35.333484927980706 token/s
+CASE 256/640 snapkv longbench/hotpotqa/159/16384 repeat=0
+[snapkv/longbench/hotpotqa/159/16384] 4/32 tokens
+RESULT ok: longbench/hotpotqa/159/16384 score=0 decode=35.47697940337096 token/s
+CASE 257/640 snapkv longbench/2wikimqa/139/8192 repeat=0
+[snapkv/longbench/2wikimqa/139/8192] 3/32 tokens
+RESULT ok: longbench/2wikimqa/139/8192 score=100.0 decode=32.11744962924814 token/s
+CASE 258/640 snapkv longbench/2wikimqa/139/16384 repeat=0
+[snapkv/longbench/2wikimqa/139/16384] 3/32 tokens
+RESULT ok: longbench/2wikimqa/139/16384 score=100.0 decode=33.066359870101415 token/s
+CASE 259/640 snapkv longbench/2wikimqa/152/8192 repeat=0
+[snapkv/longbench/2wikimqa/152/8192] 10/32 tokens
+RESULT ok: longbench/2wikimqa/152/8192 score=80.0 decode=35.22115804058509 token/s
+CASE 260/640 snapkv longbench/2wikimqa/152/16384 repeat=0
+[snapkv/longbench/2wikimqa/152/16384] 10/32 tokens
+RESULT ok: longbench/2wikimqa/152/16384 score=80.0 decode=35.245111869228964 token/s
+CASE 261/640 snapkv longbench/2wikimqa/135/8192 repeat=0
+[snapkv/longbench/2wikimqa/135/8192] 2/32 tokens
+RESULT ok: longbench/2wikimqa/135/8192 score=100.0 decode=32.162844710627525 token/s
+CASE 262/640 snapkv longbench/2wikimqa/135/16384 repeat=0
+[snapkv/longbench/2wikimqa/135/16384] 2/32 tokens
+RESULT ok: longbench/2wikimqa/135/16384 score=100.0 decode=30.82381390065697 token/s
+CASE 263/640 snapkv longbench/2wikimqa/35/8192 repeat=0
+[snapkv/longbench/2wikimqa/35/8192] 8/32 tokens
+RESULT ok: longbench/2wikimqa/35/8192 score=80.0 decode=34.99559334088746 token/s
+CASE 264/640 snapkv longbench/2wikimqa/35/16384 repeat=0
+[snapkv/longbench/2wikimqa/35/16384] 8/32 tokens
+RESULT ok: longbench/2wikimqa/35/16384 score=80.0 decode=34.86751102206774 token/s
+CASE 265/640 snapkv longbench/2wikimqa/39/8192 repeat=0
+[snapkv/longbench/2wikimqa/39/8192] 7/32 tokens
+RESULT ok: longbench/2wikimqa/39/8192 score=0 decode=35.376698450696374 token/s
+CASE 266/640 snapkv longbench/2wikimqa/39/16384 repeat=0
+[snapkv/longbench/2wikimqa/39/16384] 7/32 tokens
+RESULT ok: longbench/2wikimqa/39/16384 score=0 decode=35.41859025207662 token/s
+CASE 267/640 snapkv longbench/2wikimqa/44/8192 repeat=0
+[snapkv/longbench/2wikimqa/44/8192] 5/32 tokens
+RESULT ok: longbench/2wikimqa/44/8192 score=100.0 decode=34.1252140628607 token/s
+CASE 268/640 snapkv longbench/2wikimqa/44/16384 repeat=0
+[snapkv/longbench/2wikimqa/44/16384] 5/32 tokens
+RESULT ok: longbench/2wikimqa/44/16384 score=100.0 decode=32.759959473447715 token/s
+CASE 269/640 snapkv longbench/2wikimqa/145/8192 repeat=0
+[snapkv/longbench/2wikimqa/145/8192] 2/32 tokens
+RESULT ok: longbench/2wikimqa/145/8192 score=100.0 decode=33.83957803182473 token/s
+CASE 270/640 snapkv longbench/2wikimqa/145/16384 repeat=0
+[snapkv/longbench/2wikimqa/145/16384] 2/32 tokens
+RESULT ok: longbench/2wikimqa/145/16384 score=100.0 decode=35.170307027244625 token/s
+CASE 271/640 snapkv longbench/2wikimqa/41/8192 repeat=0
+[snapkv/longbench/2wikimqa/41/8192] 4/32 tokens
+RESULT ok: longbench/2wikimqa/41/8192 score=100.0 decode=32.58214696454038 token/s
+CASE 272/640 snapkv longbench/2wikimqa/41/16384 repeat=0
+[snapkv/longbench/2wikimqa/41/16384] 4/32 tokens
+RESULT ok: longbench/2wikimqa/41/16384 score=100.0 decode=33.291133809828644 token/s
+CASE 273/640 snapkv longbench/2wikimqa/37/8192 repeat=0
+[snapkv/longbench/2wikimqa/37/8192] 6/32 tokens
+RESULT ok: longbench/2wikimqa/37/8192 score=33.33333333333333 decode=33.1603389875629 token/s
+CASE 274/640 snapkv longbench/2wikimqa/37/16384 repeat=0
+[snapkv/longbench/2wikimqa/37/16384] 6/32 tokens
+RESULT ok: longbench/2wikimqa/37/16384 score=33.33333333333333 decode=34.64752503495143 token/s
+CASE 275/640 snapkv longbench/2wikimqa/137/8192 repeat=0
+[snapkv/longbench/2wikimqa/137/8192] 2/32 tokens
+RESULT ok: longbench/2wikimqa/137/8192 score=0 decode=35.062182548092295 token/s
+CASE 276/640 snapkv longbench/2wikimqa/137/16384 repeat=0
+[snapkv/longbench/2wikimqa/137/16384] 2/32 tokens
+RESULT ok: longbench/2wikimqa/137/16384 score=0 decode=34.57883373135122 token/s
+CASE 277/640 snapkv longbench/2wikimqa/162/8192 repeat=0
+[snapkv/longbench/2wikimqa/162/8192] 5/32 tokens
+RESULT ok: longbench/2wikimqa/162/8192 score=100.0 decode=35.27320647981539 token/s
+CASE 278/640 snapkv longbench/2wikimqa/162/16384 repeat=0
+[snapkv/longbench/2wikimqa/162/16384] 5/32 tokens
+RESULT ok: longbench/2wikimqa/162/16384 score=100.0 decode=35.43137153821212 token/s
+CASE 279/640 snapkv longbench/2wikimqa/115/8192 repeat=0
+[snapkv/longbench/2wikimqa/115/8192] 6/32 tokens
+RESULT ok: longbench/2wikimqa/115/8192 score=100.0 decode=35.26674916231103 token/s
+CASE 280/640 snapkv longbench/2wikimqa/115/16384 repeat=0
+[snapkv/longbench/2wikimqa/115/16384] 6/32 tokens
+RESULT ok: longbench/2wikimqa/115/16384 score=100.0 decode=34.321604045604175 token/s
+CASE 281/640 snapkv longbench/2wikimqa/118/8192 repeat=0
+[snapkv/longbench/2wikimqa/118/8192] 5/32 tokens
+RESULT ok: longbench/2wikimqa/118/8192 score=100.0 decode=33.27377820883982 token/s
+CASE 282/640 snapkv longbench/2wikimqa/118/16384 repeat=0
+[snapkv/longbench/2wikimqa/118/16384] 5/32 tokens
+RESULT ok: longbench/2wikimqa/118/16384 score=100.0 decode=33.14512901648709 token/s
+CASE 283/640 snapkv longbench/2wikimqa/38/8192 repeat=0
+[snapkv/longbench/2wikimqa/38/8192] 10/32 tokens
+RESULT ok: longbench/2wikimqa/38/8192 score=100.0 decode=35.62435003866859 token/s
+CASE 284/640 snapkv longbench/2wikimqa/38/16384 repeat=0
+[snapkv/longbench/2wikimqa/38/16384] 10/32 tokens
+RESULT ok: longbench/2wikimqa/38/16384 score=100.0 decode=35.60755739189292 token/s
+CASE 285/640 snapkv longbench/2wikimqa/66/8192 repeat=0
+[snapkv/longbench/2wikimqa/66/8192] 2/32 tokens
+RESULT ok: longbench/2wikimqa/66/8192 score=0 decode=31.05239452946776 token/s
+CASE 286/640 snapkv longbench/2wikimqa/66/16384 repeat=0
+[snapkv/longbench/2wikimqa/66/16384] 2/32 tokens
+RESULT ok: longbench/2wikimqa/66/16384 score=0 decode=30.516489701888787 token/s
+CASE 287/640 snapkv longbench/2wikimqa/99/8192 repeat=0
+[snapkv/longbench/2wikimqa/99/8192] 7/32 tokens
+RESULT ok: longbench/2wikimqa/99/8192 score=0 decode=34.72005663467744 token/s
+CASE 288/640 snapkv longbench/2wikimqa/99/16384 repeat=0
+[snapkv/longbench/2wikimqa/99/16384] 7/32 tokens
+RESULT ok: longbench/2wikimqa/99/16384 score=0 decode=10.688651676457809 token/s
+CASE 289/640 snapkv longbench/2wikimqa/190/8192 repeat=0
+[snapkv/longbench/2wikimqa/190/8192] 30/32 tokens
+RESULT ok: longbench/2wikimqa/190/8192 score=20.0 decode=35.46294493809985 token/s
+CASE 290/640 snapkv longbench/2wikimqa/190/16384 repeat=0
+[snapkv/longbench/2wikimqa/190/16384] 5/32 tokens
+RESULT ok: longbench/2wikimqa/190/16384 score=100.0 decode=32.96756567472135 token/s
+CASE 291/640 snapkv longbench/2wikimqa/119/8192 repeat=0
+[snapkv/longbench/2wikimqa/119/8192] 2/32 tokens
+RESULT ok: longbench/2wikimqa/119/8192 score=100.0 decode=28.287333208512468 token/s
+CASE 292/640 snapkv longbench/2wikimqa/119/16384 repeat=0
+[snapkv/longbench/2wikimqa/119/16384] 2/32 tokens
+RESULT ok: longbench/2wikimqa/119/16384 score=100.0 decode=28.259427334497484 token/s
+CASE 293/640 snapkv longbench/2wikimqa/136/8192 repeat=0
+[snapkv/longbench/2wikimqa/136/8192] 5/32 tokens
+RESULT ok: longbench/2wikimqa/136/8192 score=0 decode=34.443029466260136 token/s
+CASE 294/640 snapkv longbench/2wikimqa/136/16384 repeat=0
+[snapkv/longbench/2wikimqa/136/16384] 5/32 tokens
+RESULT ok: longbench/2wikimqa/136/16384 score=0 decode=34.25112011984012 token/s
+CASE 295/640 snapkv longbench/2wikimqa/142/8192 repeat=0
+[snapkv/longbench/2wikimqa/142/8192] 5/32 tokens
+RESULT ok: longbench/2wikimqa/142/8192 score=0 decode=35.32817652911085 token/s
+CASE 296/640 snapkv longbench/2wikimqa/142/16384 repeat=0
+[snapkv/longbench/2wikimqa/142/16384] 8/32 tokens
+RESULT ok: longbench/2wikimqa/142/16384 score=0 decode=35.012117594600085 token/s
+CASE 297/640 snapkv longbench/2wikimqa/63/8192 repeat=0
+[snapkv/longbench/2wikimqa/63/8192] 2/32 tokens
+RESULT ok: longbench/2wikimqa/63/8192 score=0 decode=34.30516899845348 token/s
+CASE 298/640 snapkv longbench/2wikimqa/63/16384 repeat=0
+[snapkv/longbench/2wikimqa/63/16384] 2/32 tokens
+RESULT ok: longbench/2wikimqa/63/16384 score=0 decode=34.155998655762346 token/s
+CASE 299/640 snapkv longbench/2wikimqa/155/8192 repeat=0
+[snapkv/longbench/2wikimqa/155/8192] 7/32 tokens
+RESULT ok: longbench/2wikimqa/155/8192 score=100.0 decode=35.399682194975696 token/s
+CASE 300/640 snapkv longbench/2wikimqa/155/16384 repeat=0
+[snapkv/longbench/2wikimqa/155/16384] 7/32 tokens
+RESULT ok: longbench/2wikimqa/155/16384 score=100.0 decode=35.09709166940665 token/s
+CASE 301/640 snapkv longbench/2wikimqa/193/8192 repeat=0
+[snapkv/longbench/2wikimqa/193/8192] 6/32 tokens
+RESULT ok: longbench/2wikimqa/193/8192 score=0 decode=35.08100105547978 token/s
+CASE 302/640 snapkv longbench/2wikimqa/193/16384 repeat=0
+[snapkv/longbench/2wikimqa/193/16384] 6/32 tokens
+RESULT ok: longbench/2wikimqa/193/16384 score=0 decode=34.900592118122226 token/s
+CASE 303/640 snapkv longbench/2wikimqa/187/8192 repeat=0
+[snapkv/longbench/2wikimqa/187/8192] 5/32 tokens
+RESULT ok: longbench/2wikimqa/187/8192 score=0 decode=34.241788828267836 token/s
+CASE 304/640 snapkv longbench/2wikimqa/187/16384 repeat=0
+[snapkv/longbench/2wikimqa/187/16384] 5/32 tokens
+RESULT ok: longbench/2wikimqa/187/16384 score=0 decode=34.4828493124782 token/s
+CASE 305/640 snapkv longbench/2wikimqa/112/8192 repeat=0
+[snapkv/longbench/2wikimqa/112/8192] 5/32 tokens
+RESULT ok: longbench/2wikimqa/112/8192 score=0 decode=34.225138291728506 token/s
+CASE 306/640 snapkv longbench/2wikimqa/112/16384 repeat=0
+[snapkv/longbench/2wikimqa/112/16384] 5/32 tokens
+RESULT ok: longbench/2wikimqa/112/16384 score=0 decode=34.4855686210732 token/s
+CASE 307/640 snapkv longbench/2wikimqa/77/8192 repeat=0
+[snapkv/longbench/2wikimqa/77/8192] 6/32 tokens
+RESULT ok: longbench/2wikimqa/77/8192 score=100.0 decode=34.600217519488474 token/s
+CASE 308/640 snapkv longbench/2wikimqa/77/16384 repeat=0
+[snapkv/longbench/2wikimqa/77/16384] 6/32 tokens
+RESULT ok: longbench/2wikimqa/77/16384 score=100.0 decode=34.77796301585922 token/s
+CASE 309/640 snapkv longbench/2wikimqa/194/8192 repeat=0
+[snapkv/longbench/2wikimqa/194/8192] 10/32 tokens
+RESULT ok: longbench/2wikimqa/194/8192 score=0 decode=35.02429951397645 token/s
+CASE 310/640 snapkv longbench/2wikimqa/194/16384 repeat=0
+[snapkv/longbench/2wikimqa/194/16384] 10/32 tokens
+RESULT ok: longbench/2wikimqa/194/16384 score=0 decode=35.24446080050313 token/s
+CASE 311/640 snapkv longbench/2wikimqa/72/8192 repeat=0
+[snapkv/longbench/2wikimqa/72/8192] 6/32 tokens
+RESULT ok: longbench/2wikimqa/72/8192 score=100.0 decode=35.00910380569968 token/s
+CASE 312/640 snapkv longbench/2wikimqa/72/16384 repeat=0
+[snapkv/longbench/2wikimqa/72/16384] 6/32 tokens
+RESULT ok: longbench/2wikimqa/72/16384 score=100.0 decode=34.82308068465938 token/s
+CASE 313/640 snapkv longbench/2wikimqa/179/8192 repeat=0
+[snapkv/longbench/2wikimqa/179/8192] 5/32 tokens
+RESULT ok: longbench/2wikimqa/179/8192 score=100.0 decode=34.14220377488698 token/s
+CASE 314/640 snapkv longbench/2wikimqa/179/16384 repeat=0
+[snapkv/longbench/2wikimqa/179/16384] 5/32 tokens
+RESULT ok: longbench/2wikimqa/179/16384 score=100.0 decode=34.29721002688926 token/s
+CASE 315/640 snapkv longbench/2wikimqa/70/8192 repeat=0
+[snapkv/longbench/2wikimqa/70/8192] 3/32 tokens
+RESULT ok: longbench/2wikimqa/70/8192 score=100.0 decode=33.31647144526658 token/s
+CASE 316/640 snapkv longbench/2wikimqa/70/16384 repeat=0
+[snapkv/longbench/2wikimqa/70/16384] 3/32 tokens
+RESULT ok: longbench/2wikimqa/70/16384 score=100.0 decode=33.42612269433878 token/s
+CASE 317/640 snapkv longbench/2wikimqa/117/8192 repeat=0
+[snapkv/longbench/2wikimqa/117/8192] 5/32 tokens
+RESULT ok: longbench/2wikimqa/117/8192 score=100.0 decode=35.181292328633766 token/s
+CASE 318/640 snapkv longbench/2wikimqa/117/16384 repeat=0
+[snapkv/longbench/2wikimqa/117/16384] 5/32 tokens
+RESULT ok: longbench/2wikimqa/117/16384 score=100.0 decode=35.283926732512015 token/s
+CASE 319/640 snapkv longbench/2wikimqa/159/8192 repeat=0
+[snapkv/longbench/2wikimqa/159/8192] 6/32 tokens
+RESULT ok: longbench/2wikimqa/159/8192 score=0 decode=35.33476740983326 token/s
+CASE 320/640 snapkv longbench/2wikimqa/159/16384 repeat=0
+[snapkv/longbench/2wikimqa/159/16384] 3/32 tokens
+RESULT ok: longbench/2wikimqa/159/16384 score=0 decode=35.238716563187666 token/s
+CASE 321/640 snapkv longbench/gov_report/100/8192 repeat=0
+[snapkv/longbench/gov_report/100/8192] 129/512 tokens
+[snapkv/longbench/gov_report/100/8192] 257/512 tokens
+[snapkv/longbench/gov_report/100/8192] 385/512 tokens
+[snapkv/longbench/gov_report/100/8192] 462/512 tokens
+RESULT ok: longbench/gov_report/100/8192 score=26.112759149310122 decode=35.77407869805969 token/s
+CASE 322/640 snapkv longbench/gov_report/100/16384 repeat=0
+[snapkv/longbench/gov_report/100/16384] 129/512 tokens
+[snapkv/longbench/gov_report/100/16384] 257/512 tokens
+[snapkv/longbench/gov_report/100/16384] 385/512 tokens
+[snapkv/longbench/gov_report/100/16384] 462/512 tokens
+RESULT ok: longbench/gov_report/100/16384 score=26.112759149310122 decode=35.590023331453956 token/s
+CASE 323/640 snapkv longbench/gov_report/129/8192 repeat=0
+[snapkv/longbench/gov_report/129/8192] 129/512 tokens
+[snapkv/longbench/gov_report/129/8192] 257/512 tokens
+[snapkv/longbench/gov_report/129/8192] 385/512 tokens
+[snapkv/longbench/gov_report/129/8192] 472/512 tokens
+RESULT ok: longbench/gov_report/129/8192 score=28.02547723091765 decode=35.68529408030533 token/s
+CASE 324/640 snapkv longbench/gov_report/129/16384 repeat=0
+[snapkv/longbench/gov_report/129/16384] 129/512 tokens
+[snapkv/longbench/gov_report/129/16384] 257/512 tokens
+[snapkv/longbench/gov_report/129/16384] 385/512 tokens
+[snapkv/longbench/gov_report/129/16384] 472/512 tokens
+RESULT ok: longbench/gov_report/129/16384 score=28.02547723091765 decode=35.520032804568636 token/s
+CASE 325/640 snapkv longbench/gov_report/3/8192 repeat=0
+[snapkv/longbench/gov_report/3/8192] 129/512 tokens
+[snapkv/longbench/gov_report/3/8192] 257/512 tokens
+[snapkv/longbench/gov_report/3/8192] 385/512 tokens
+[snapkv/longbench/gov_report/3/8192] 454/512 tokens
+RESULT ok: longbench/gov_report/3/8192 score=28.180038666059037 decode=35.72607919090084 token/s
+CASE 326/640 snapkv longbench/gov_report/3/16384 repeat=0
+[snapkv/longbench/gov_report/3/16384] 129/512 tokens
+[snapkv/longbench/gov_report/3/16384] 257/512 tokens
+[snapkv/longbench/gov_report/3/16384] 385/512 tokens
+[snapkv/longbench/gov_report/3/16384] 440/512 tokens
+RESULT ok: longbench/gov_report/3/16384 score=26.6940447176486 decode=35.644534616682314 token/s
+CASE 327/640 snapkv longbench/gov_report/121/8192 repeat=0
+[snapkv/longbench/gov_report/121/8192] 129/512 tokens
+[snapkv/longbench/gov_report/121/8192] 257/512 tokens
+[snapkv/longbench/gov_report/121/8192] 385/512 tokens
+[snapkv/longbench/gov_report/121/8192] 474/512 tokens
+RESULT ok: longbench/gov_report/121/8192 score=30.396475302451055 decode=35.532362459788736 token/s
+CASE 328/640 snapkv longbench/gov_report/121/16384 repeat=0
+[snapkv/longbench/gov_report/121/16384] 129/512 tokens
+[snapkv/longbench/gov_report/121/16384] 257/512 tokens
+[snapkv/longbench/gov_report/121/16384] 385/512 tokens
+[snapkv/longbench/gov_report/121/16384] 467/512 tokens
+RESULT ok: longbench/gov_report/121/16384 score=33.54838662130651 decode=35.79638275615448 token/s
+CASE 329/640 snapkv longbench/gov_report/157/8192 repeat=0
+[snapkv/longbench/gov_report/157/8192] 129/512 tokens
+[snapkv/longbench/gov_report/157/8192] 257/512 tokens
+[snapkv/longbench/gov_report/157/8192] 385/512 tokens
+[snapkv/longbench/gov_report/157/8192] 512/512 tokens
+RESULT ok: longbench/gov_report/157/8192 score=25.199999521632005 decode=35.80010401723743 token/s
+CASE 330/640 snapkv longbench/gov_report/157/16384 repeat=0
+[snapkv/longbench/gov_report/157/16384] 129/512 tokens
+[snapkv/longbench/gov_report/157/16384] 257/512 tokens
+[snapkv/longbench/gov_report/157/16384] 385/512 tokens
+[snapkv/longbench/gov_report/157/16384] 512/512 tokens
+RESULT ok: longbench/gov_report/157/16384 score=27.999999521632002 decode=35.672989496138314 token/s
+CASE 331/640 snapkv longbench/gov_report/40/8192 repeat=0
+[snapkv/longbench/gov_report/40/8192] 129/512 tokens
+[snapkv/longbench/gov_report/40/8192] 257/512 tokens
+[snapkv/longbench/gov_report/40/8192] 385/512 tokens
+[snapkv/longbench/gov_report/40/8192] 411/512 tokens
+RESULT ok: longbench/gov_report/40/8192 score=23.982868944495145 decode=35.45381711013265 token/s
+CASE 332/640 snapkv longbench/gov_report/40/16384 repeat=0
+[snapkv/longbench/gov_report/40/16384] 129/512 tokens
+[snapkv/longbench/gov_report/40/16384] 257/512 tokens
+[snapkv/longbench/gov_report/40/16384] 385/512 tokens
+[snapkv/longbench/gov_report/40/16384] 457/512 tokens
+RESULT ok: longbench/gov_report/40/16384 score=24.048095730073378 decode=35.86137057253245 token/s
+CASE 333/640 snapkv longbench/gov_report/85/8192 repeat=0
+[snapkv/longbench/gov_report/85/8192] 129/512 tokens
+[snapkv/longbench/gov_report/85/8192] 257/512 tokens
+[snapkv/longbench/gov_report/85/8192] 362/512 tokens
+RESULT ok: longbench/gov_report/85/8192 score=28.63436083246328 decode=35.70196972520983 token/s
+CASE 334/640 snapkv longbench/gov_report/85/16384 repeat=0
+[snapkv/longbench/gov_report/85/16384] 129/512 tokens
+[snapkv/longbench/gov_report/85/16384] 257/512 tokens
+[snapkv/longbench/gov_report/85/16384] 385/512 tokens
+[snapkv/longbench/gov_report/85/16384] 437/512 tokens
+RESULT ok: longbench/gov_report/85/16384 score=31.535269274702575 decode=35.18389487041996 token/s
+CASE 335/640 snapkv longbench/gov_report/68/8192 repeat=0
+[snapkv/longbench/gov_report/68/8192] 129/512 tokens
+[snapkv/longbench/gov_report/68/8192] 257/512 tokens
+[snapkv/longbench/gov_report/68/8192] 385/512 tokens
+[snapkv/longbench/gov_report/68/8192] 512/512 tokens
+RESULT ok: longbench/gov_report/68/8192 score=25.548901726734165 decode=35.79540343100174 token/s
+CASE 336/640 snapkv longbench/gov_report/68/16384 repeat=0
+[snapkv/longbench/gov_report/68/16384] 129/512 tokens
+[snapkv/longbench/gov_report/68/16384] 257/512 tokens
+[snapkv/longbench/gov_report/68/16384] 385/512 tokens
+[snapkv/longbench/gov_report/68/16384] 492/512 tokens
+RESULT ok: longbench/gov_report/68/16384 score=29.43722900023426 decode=35.488791978462764 token/s
+CASE 337/640 snapkv longbench/gov_report/175/8192 repeat=0
+[snapkv/longbench/gov_report/175/8192] 129/512 tokens
+[snapkv/longbench/gov_report/175/8192] 257/512 tokens
+[snapkv/longbench/gov_report/175/8192] 385/512 tokens
+[snapkv/longbench/gov_report/175/8192] 445/512 tokens
+RESULT ok: longbench/gov_report/175/8192 score=25.57077581434917 decode=35.72791719849284 token/s
+CASE 338/640 snapkv longbench/gov_report/175/16384 repeat=0
+[snapkv/longbench/gov_report/175/16384] 129/512 tokens
+[snapkv/longbench/gov_report/175/16384] 257/512 tokens
+[snapkv/longbench/gov_report/175/16384] 371/512 tokens
+RESULT ok: longbench/gov_report/175/16384 score=36.073058919371995 decode=35.558766665210996 token/s
+CASE 339/640 snapkv longbench/gov_report/2/8192 repeat=0
+[snapkv/longbench/gov_report/2/8192] 129/512 tokens
+[snapkv/longbench/gov_report/2/8192] 257/512 tokens
+[snapkv/longbench/gov_report/2/8192] 385/512 tokens
+[snapkv/longbench/gov_report/2/8192] 512/512 tokens
+RESULT ok: longbench/gov_report/2/8192 score=38.7596894565364 decode=35.69784701125437 token/s
+CASE 340/640 snapkv longbench/gov_report/2/16384 repeat=0
+[snapkv/longbench/gov_report/2/16384] 129/512 tokens
+[snapkv/longbench/gov_report/2/16384] 257/512 tokens
+[snapkv/longbench/gov_report/2/16384] 385/512 tokens
+[snapkv/longbench/gov_report/2/16384] 512/512 tokens
+RESULT ok: longbench/gov_report/2/16384 score=35.989716756035186 decode=35.508432216623966 token/s
+CASE 341/640 snapkv longbench/gov_report/149/8192 repeat=0
+[snapkv/longbench/gov_report/149/8192] 129/512 tokens
+[snapkv/longbench/gov_report/149/8192] 257/512 tokens
+[snapkv/longbench/gov_report/149/8192] 385/512 tokens
+[snapkv/longbench/gov_report/149/8192] 475/512 tokens
+RESULT ok: longbench/gov_report/149/8192 score=31.21597051348316 decode=35.19026701111423 token/s
+CASE 342/640 snapkv longbench/gov_report/149/16384 repeat=0
+[snapkv/longbench/gov_report/149/16384] 129/512 tokens
+[snapkv/longbench/gov_report/149/16384] 257/512 tokens
+[snapkv/longbench/gov_report/149/16384] 385/512 tokens
+[snapkv/longbench/gov_report/149/16384] 475/512 tokens
+RESULT ok: longbench/gov_report/149/16384 score=31.21597051348316 decode=35.62238437073695 token/s
+CASE 343/640 snapkv longbench/gov_report/33/8192 repeat=0
+[snapkv/longbench/gov_report/33/8192] 129/512 tokens
+[snapkv/longbench/gov_report/33/8192] 257/512 tokens
+[snapkv/longbench/gov_report/33/8192] 385/512 tokens
+[snapkv/longbench/gov_report/33/8192] 512/512 tokens
+RESULT ok: longbench/gov_report/33/8192 score=29.189188689247636 decode=35.498037012418905 token/s
+CASE 344/640 snapkv longbench/gov_report/33/16384 repeat=0
+[snapkv/longbench/gov_report/33/16384] 129/512 tokens
+[snapkv/longbench/gov_report/33/16384] 257/512 tokens
+[snapkv/longbench/gov_report/33/16384] 385/512 tokens
+[snapkv/longbench/gov_report/33/16384] 512/512 tokens
+RESULT ok: longbench/gov_report/33/16384 score=33.96226365097609 decode=35.70814169690182 token/s
+CASE 345/640 snapkv longbench/gov_report/67/8192 repeat=0
+[snapkv/longbench/gov_report/67/8192] 129/512 tokens
+[snapkv/longbench/gov_report/67/8192] 257/512 tokens
+[snapkv/longbench/gov_report/67/8192] 385/512 tokens
+[snapkv/longbench/gov_report/67/8192] 487/512 tokens
+RESULT ok: longbench/gov_report/67/8192 score=22.06896502358569 decode=35.59675431447983 token/s
+CASE 346/640 snapkv longbench/gov_report/67/16384 repeat=0
+[snapkv/longbench/gov_report/67/16384] 129/512 tokens
+[snapkv/longbench/gov_report/67/16384] 257/512 tokens
+[snapkv/longbench/gov_report/67/16384] 385/512 tokens
+[snapkv/longbench/gov_report/67/16384] 446/512 tokens
+RESULT ok: longbench/gov_report/67/16384 score=17.924527811899267 decode=35.63922710997284 token/s
+CASE 347/640 snapkv longbench/gov_report/8/8192 repeat=0
+[snapkv/longbench/gov_report/8/8192] 129/512 tokens
+[snapkv/longbench/gov_report/8/8192] 257/512 tokens
+[snapkv/longbench/gov_report/8/8192] 385/512 tokens
+RESULT ok: longbench/gov_report/8/8192 score=39.82869331447254 decode=35.45275051598566 token/s
+CASE 348/640 snapkv longbench/gov_report/8/16384 repeat=0
+[snapkv/longbench/gov_report/8/16384] 129/512 tokens
+[snapkv/longbench/gov_report/8/16384] 257/512 tokens
+[snapkv/longbench/gov_report/8/16384] 385/512 tokens
+RESULT ok: longbench/gov_report/8/16384 score=39.82869331447254 decode=35.75297095701644 token/s
+CASE 349/640 snapkv longbench/gov_report/13/8192 repeat=0
+[snapkv/longbench/gov_report/13/8192] 129/512 tokens
+[snapkv/longbench/gov_report/13/8192] 257/512 tokens
+[snapkv/longbench/gov_report/13/8192] 384/512 tokens
+RESULT ok: longbench/gov_report/13/8192 score=36.59147823006138 decode=35.589568336509465 token/s
+CASE 350/640 snapkv longbench/gov_report/13/16384 repeat=0
+[snapkv/longbench/gov_report/13/16384] 129/512 tokens
+[snapkv/longbench/gov_report/13/16384] 257/512 tokens
+[snapkv/longbench/gov_report/13/16384] 385/512 tokens
+[snapkv/longbench/gov_report/13/16384] 431/512 tokens
+RESULT ok: longbench/gov_report/13/16384 score=32.83582042646222 decode=35.557572053118555 token/s
+CASE 351/640 snapkv longbench/gov_report/94/8192 repeat=0
+[snapkv/longbench/gov_report/94/8192] 129/512 tokens
+[snapkv/longbench/gov_report/94/8192] 257/512 tokens
+[snapkv/longbench/gov_report/94/8192] 385/512 tokens
+[snapkv/longbench/gov_report/94/8192] 469/512 tokens
+RESULT ok: longbench/gov_report/94/8192 score=38.2284377583908 decode=35.56951769899229 token/s
+CASE 352/640 snapkv longbench/gov_report/94/16384 repeat=0
+[snapkv/longbench/gov_report/94/16384] 129/512 tokens
+[snapkv/longbench/gov_report/94/16384] 257/512 tokens
+[snapkv/longbench/gov_report/94/16384] 385/512 tokens
+[snapkv/longbench/gov_report/94/16384] 469/512 tokens
+RESULT ok: longbench/gov_report/94/16384 score=38.2284377583908 decode=35.829797013788735 token/s
+CASE 353/640 snapkv longbench/gov_report/55/8192 repeat=0
+[snapkv/longbench/gov_report/55/8192] 129/512 tokens
+[snapkv/longbench/gov_report/55/8192] 257/512 tokens
+[snapkv/longbench/gov_report/55/8192] 385/512 tokens
+[snapkv/longbench/gov_report/55/8192] 512/512 tokens
+RESULT ok: longbench/gov_report/55/8192 score=26.36815873249425 decode=35.46693545081914 token/s
+CASE 354/640 snapkv longbench/gov_report/55/16384 repeat=0
+[snapkv/longbench/gov_report/55/16384] 129/512 tokens
+[snapkv/longbench/gov_report/55/16384] 257/512 tokens
+[snapkv/longbench/gov_report/55/16384] 385/512 tokens
+[snapkv/longbench/gov_report/55/16384] 512/512 tokens
+RESULT ok: longbench/gov_report/55/16384 score=26.36815873249425 decode=35.59906291011279 token/s
+CASE 355/640 snapkv longbench/gov_report/37/8192 repeat=0
+[snapkv/longbench/gov_report/37/8192] 129/512 tokens
+[snapkv/longbench/gov_report/37/8192] 257/512 tokens
+[snapkv/longbench/gov_report/37/8192] 385/512 tokens
+[snapkv/longbench/gov_report/37/8192] 423/512 tokens
+RESULT ok: longbench/gov_report/37/8192 score=26.171874557746893 decode=35.63366449551871 token/s
+CASE 356/640 snapkv longbench/gov_report/37/16384 repeat=0
+[snapkv/longbench/gov_report/37/16384] 129/512 tokens
+[snapkv/longbench/gov_report/37/16384] 257/512 tokens
+[snapkv/longbench/gov_report/37/16384] 385/512 tokens
+[snapkv/longbench/gov_report/37/16384] 423/512 tokens
+RESULT ok: longbench/gov_report/37/16384 score=26.171874557746893 decode=35.682083145461895 token/s
+CASE 357/640 snapkv longbench/gov_report/78/8192 repeat=0
+[snapkv/longbench/gov_report/78/8192] 129/512 tokens
+[snapkv/longbench/gov_report/78/8192] 257/512 tokens
+[snapkv/longbench/gov_report/78/8192] 385/512 tokens
+RESULT ok: longbench/gov_report/78/8192 score=34.54545407670455 decode=35.560412098545754 token/s
+CASE 358/640 snapkv longbench/gov_report/78/16384 repeat=0
+[snapkv/longbench/gov_report/78/16384] 129/512 tokens
+[snapkv/longbench/gov_report/78/16384] 257/512 tokens
+[snapkv/longbench/gov_report/78/16384] 385/512 tokens
+RESULT ok: longbench/gov_report/78/16384 score=34.54545407670455 decode=35.62546636364153 token/s
+CASE 359/640 snapkv longbench/gov_report/161/8192 repeat=0
+[snapkv/longbench/gov_report/161/8192] 129/512 tokens
+[snapkv/longbench/gov_report/161/8192] 257/512 tokens
+[snapkv/longbench/gov_report/161/8192] 385/512 tokens
+[snapkv/longbench/gov_report/161/8192] 416/512 tokens
+RESULT ok: longbench/gov_report/161/8192 score=36.73469339259684 decode=35.715083714865074 token/s
+CASE 360/640 snapkv longbench/gov_report/161/16384 repeat=0
+[snapkv/longbench/gov_report/161/16384] 129/512 tokens
+[snapkv/longbench/gov_report/161/16384] 257/512 tokens
+[snapkv/longbench/gov_report/161/16384] 385/512 tokens
+[snapkv/longbench/gov_report/161/16384] 416/512 tokens
+RESULT ok: longbench/gov_report/161/16384 score=36.73469339259684 decode=36.005733492808346 token/s
+CASE 361/640 snapkv longbench/gov_report/104/8192 repeat=0
+[snapkv/longbench/gov_report/104/8192] 129/512 tokens
+[snapkv/longbench/gov_report/104/8192] 257/512 tokens
+[snapkv/longbench/gov_report/104/8192] 385/512 tokens
+[snapkv/longbench/gov_report/104/8192] 490/512 tokens
+RESULT ok: longbench/gov_report/104/8192 score=29.032257581505245 decode=35.73654048885183 token/s
+CASE 362/640 snapkv longbench/gov_report/104/16384 repeat=0
+[snapkv/longbench/gov_report/104/16384] 129/512 tokens
+[snapkv/longbench/gov_report/104/16384] 257/512 tokens
+[snapkv/longbench/gov_report/104/16384] 385/512 tokens
+[snapkv/longbench/gov_report/104/16384] 490/512 tokens
+RESULT ok: longbench/gov_report/104/16384 score=29.032257581505245 decode=35.7534287992858 token/s
+CASE 363/640 snapkv longbench/gov_report/136/8192 repeat=0
+[snapkv/longbench/gov_report/136/8192] 129/512 tokens
+[snapkv/longbench/gov_report/136/8192] 257/512 tokens
+[snapkv/longbench/gov_report/136/8192] 385/512 tokens
+[snapkv/longbench/gov_report/136/8192] 436/512 tokens
+RESULT ok: longbench/gov_report/136/8192 score=38.88888839439491 decode=35.62902830080285 token/s
+CASE 364/640 snapkv longbench/gov_report/136/16384 repeat=0
+[snapkv/longbench/gov_report/136/16384] 129/512 tokens
+[snapkv/longbench/gov_report/136/16384] 257/512 tokens
+[snapkv/longbench/gov_report/136/16384] 385/512 tokens
+[snapkv/longbench/gov_report/136/16384] 436/512 tokens
+RESULT ok: longbench/gov_report/136/16384 score=38.88888839439491 decode=35.55932516377909 token/s
+CASE 365/640 snapkv longbench/gov_report/177/8192 repeat=0
+[snapkv/longbench/gov_report/177/8192] 129/512 tokens
+[snapkv/longbench/gov_report/177/8192] 257/512 tokens
+[snapkv/longbench/gov_report/177/8192] 385/512 tokens
+[snapkv/longbench/gov_report/177/8192] 409/512 tokens
+RESULT ok: longbench/gov_report/177/8192 score=26.222221734320993 decode=35.6999773151723 token/s
+CASE 366/640 snapkv longbench/gov_report/177/16384 repeat=0
+[snapkv/longbench/gov_report/177/16384] 129/512 tokens
+[snapkv/longbench/gov_report/177/16384] 257/512 tokens
+[snapkv/longbench/gov_report/177/16384] 385/512 tokens
+[snapkv/longbench/gov_report/177/16384] 473/512 tokens
+RESULT ok: longbench/gov_report/177/16384 score=22.471909626562315 decode=35.833404743831366 token/s
+CASE 367/640 snapkv longbench/gov_report/11/8192 repeat=0
+[snapkv/longbench/gov_report/11/8192] 129/512 tokens
+[snapkv/longbench/gov_report/11/8192] 257/512 tokens
+[snapkv/longbench/gov_report/11/8192] 385/512 tokens
+[snapkv/longbench/gov_report/11/8192] 409/512 tokens
+RESULT ok: longbench/gov_report/11/8192 score=29.357797719678487 decode=35.633452931845895 token/s
+CASE 368/640 snapkv longbench/gov_report/11/16384 repeat=0
+[snapkv/longbench/gov_report/11/16384] 129/512 tokens
+[snapkv/longbench/gov_report/11/16384] 257/512 tokens
+[snapkv/longbench/gov_report/11/16384] 385/512 tokens
+[snapkv/longbench/gov_report/11/16384] 507/512 tokens
+RESULT ok: longbench/gov_report/11/16384 score=30.607965980336584 decode=34.89795498704254 token/s
+CASE 369/640 snapkv longbench/gov_report/118/8192 repeat=0
+[snapkv/longbench/gov_report/118/8192] 129/512 tokens
+[snapkv/longbench/gov_report/118/8192] 257/512 tokens
+[snapkv/longbench/gov_report/118/8192] 385/512 tokens
+[snapkv/longbench/gov_report/118/8192] 419/512 tokens
+RESULT ok: longbench/gov_report/118/8192 score=29.530200868829738 decode=34.951717939958094 token/s
+CASE 370/640 snapkv longbench/gov_report/118/16384 repeat=0
+[snapkv/longbench/gov_report/118/16384] 129/512 tokens
+[snapkv/longbench/gov_report/118/16384] 257/512 tokens
+[snapkv/longbench/gov_report/118/16384] 385/512 tokens
+[snapkv/longbench/gov_report/118/16384] 419/512 tokens
+RESULT ok: longbench/gov_report/118/16384 score=29.530200868829738 decode=35.70907781489684 token/s
+CASE 371/640 snapkv longbench/gov_report/113/8192 repeat=0
+[snapkv/longbench/gov_report/113/8192] 129/512 tokens
+[snapkv/longbench/gov_report/113/8192] 257/512 tokens
+[snapkv/longbench/gov_report/113/8192] 385/512 tokens
+[snapkv/longbench/gov_report/113/8192] 447/512 tokens
+RESULT ok: longbench/gov_report/113/8192 score=41.800642587979866 decode=35.73154698207355 token/s
+CASE 372/640 snapkv longbench/gov_report/113/16384 repeat=0
+[snapkv/longbench/gov_report/113/16384] 129/512 tokens
+[snapkv/longbench/gov_report/113/16384] 257/512 tokens
+[snapkv/longbench/gov_report/113/16384] 385/512 tokens
+[snapkv/longbench/gov_report/113/16384] 447/512 tokens
+RESULT ok: longbench/gov_report/113/16384 score=41.800642587979866 decode=35.77575243559315 token/s
+CASE 373/640 snapkv longbench/gov_report/60/8192 repeat=0
+[snapkv/longbench/gov_report/60/8192] 129/512 tokens
+[snapkv/longbench/gov_report/60/8192] 257/512 tokens
+[snapkv/longbench/gov_report/60/8192] 337/512 tokens
+RESULT ok: longbench/gov_report/60/8192 score=24.35597146455035 decode=35.66764452940873 token/s
+CASE 374/640 snapkv longbench/gov_report/60/16384 repeat=0
+[snapkv/longbench/gov_report/60/16384] 129/512 tokens
+[snapkv/longbench/gov_report/60/16384] 257/512 tokens
+[snapkv/longbench/gov_report/60/16384] 353/512 tokens
+RESULT ok: longbench/gov_report/60/16384 score=30.41474610350613 decode=35.43827851497689 token/s
+CASE 375/640 snapkv longbench/gov_report/4/8192 repeat=0
+[snapkv/longbench/gov_report/4/8192] 129/512 tokens
+[snapkv/longbench/gov_report/4/8192] 257/512 tokens
+[snapkv/longbench/gov_report/4/8192] 385/512 tokens
+[snapkv/longbench/gov_report/4/8192] 480/512 tokens
+RESULT ok: longbench/gov_report/4/8192 score=23.312882961345938 decode=35.62354346211404 token/s
+CASE 376/640 snapkv longbench/gov_report/4/16384 repeat=0
+[snapkv/longbench/gov_report/4/16384] 129/512 tokens
+[snapkv/longbench/gov_report/4/16384] 257/512 tokens
+[snapkv/longbench/gov_report/4/16384] 385/512 tokens
+[snapkv/longbench/gov_report/4/16384] 512/512 tokens
+RESULT ok: longbench/gov_report/4/16384 score=27.8884457341947 decode=35.84172491060924 token/s
+CASE 377/640 snapkv longbench/gov_report/93/8192 repeat=0
+[snapkv/longbench/gov_report/93/8192] 129/512 tokens
+[snapkv/longbench/gov_report/93/8192] 257/512 tokens
+[snapkv/longbench/gov_report/93/8192] 385/512 tokens
+[snapkv/longbench/gov_report/93/8192] 496/512 tokens
+RESULT ok: longbench/gov_report/93/8192 score=28.81071985498683 decode=35.833946448857446 token/s
+CASE 378/640 snapkv longbench/gov_report/93/16384 repeat=0
+[snapkv/longbench/gov_report/93/16384] 129/512 tokens
+[snapkv/longbench/gov_report/93/16384] 257/512 tokens
+[snapkv/longbench/gov_report/93/16384] 385/512 tokens
+[snapkv/longbench/gov_report/93/16384] 512/512 tokens
+RESULT ok: longbench/gov_report/93/16384 score=27.331189275457252 decode=35.63562389176591 token/s
+CASE 379/640 snapkv longbench/gov_report/135/8192 repeat=0
+[snapkv/longbench/gov_report/135/8192] 129/512 tokens
+[snapkv/longbench/gov_report/135/8192] 257/512 tokens
+[snapkv/longbench/gov_report/135/8192] 385/512 tokens
+[snapkv/longbench/gov_report/135/8192] 428/512 tokens
+RESULT ok: longbench/gov_report/135/8192 score=31.413612137155113 decode=35.55707616435235 token/s
+CASE 380/640 snapkv longbench/gov_report/135/16384 repeat=0
+[snapkv/longbench/gov_report/135/16384] 129/512 tokens
+[snapkv/longbench/gov_report/135/16384] 257/512 tokens
+[snapkv/longbench/gov_report/135/16384] 385/512 tokens
+[snapkv/longbench/gov_report/135/16384] 428/512 tokens
+RESULT ok: longbench/gov_report/135/16384 score=31.413612137155113 decode=35.65336825796108 token/s
+CASE 381/640 snapkv longbench/gov_report/98/8192 repeat=0
+[snapkv/longbench/gov_report/98/8192] 129/512 tokens
+[snapkv/longbench/gov_report/98/8192] 257/512 tokens
+[snapkv/longbench/gov_report/98/8192] 385/512 tokens
+[snapkv/longbench/gov_report/98/8192] 442/512 tokens
+RESULT ok: longbench/gov_report/98/8192 score=28.341384465500298 decode=35.652172957106345 token/s
+CASE 382/640 snapkv longbench/gov_report/98/16384 repeat=0
+[snapkv/longbench/gov_report/98/16384] 129/512 tokens
+[snapkv/longbench/gov_report/98/16384] 257/512 tokens
+[snapkv/longbench/gov_report/98/16384] 385/512 tokens
+[snapkv/longbench/gov_report/98/16384] 512/512 tokens
+RESULT ok: longbench/gov_report/98/16384 score=27.7070059646081 decode=35.79975970465091 token/s
+CASE 383/640 snapkv longbench/gov_report/142/8192 repeat=0
+[snapkv/longbench/gov_report/142/8192] 129/512 tokens
+[snapkv/longbench/gov_report/142/8192] 257/512 tokens
+[snapkv/longbench/gov_report/142/8192] 385/512 tokens
+[snapkv/longbench/gov_report/142/8192] 453/512 tokens
+RESULT ok: longbench/gov_report/142/8192 score=31.292516562358287 decode=35.64900602627213 token/s
+CASE 384/640 snapkv longbench/gov_report/142/16384 repeat=0
+[snapkv/longbench/gov_report/142/16384] 129/512 tokens
+[snapkv/longbench/gov_report/142/16384] 257/512 tokens
+[snapkv/longbench/gov_report/142/16384] 385/512 tokens
+[snapkv/longbench/gov_report/142/16384] 395/512 tokens
+RESULT ok: longbench/gov_report/142/16384 score=32.359550113430124 decode=35.692802437175914 token/s
+CASE 385/640 snapkv longbench/qmsum/133/8192 repeat=0
+[snapkv/longbench/qmsum/133/8192] 46/512 tokens
+RESULT ok: longbench/qmsum/133/8192 score=18.181817683654742 decode=35.23118413139554 token/s
+CASE 386/640 snapkv longbench/qmsum/133/16384 repeat=0
+[snapkv/longbench/qmsum/133/16384] 112/512 tokens
+RESULT ok: longbench/qmsum/133/16384 score=21.7391299633743 decode=35.77009333278144 token/s
+CASE 387/640 snapkv longbench/qmsum/19/8192 repeat=0
+[snapkv/longbench/qmsum/19/8192] 72/512 tokens
+RESULT ok: longbench/qmsum/19/8192 score=15.841583658856992 decode=35.72678100866705 token/s
+CASE 388/640 snapkv longbench/qmsum/19/16384 repeat=0
+[snapkv/longbench/qmsum/19/16384] 62/512 tokens
+RESULT ok: longbench/qmsum/19/16384 score=18.94736792554018 decode=35.785142977278 token/s
+CASE 389/640 snapkv longbench/qmsum/63/8192 repeat=0
+[snapkv/longbench/qmsum/63/8192] 129/512 tokens
+[snapkv/longbench/qmsum/63/8192] 183/512 tokens
+RESULT ok: longbench/qmsum/63/8192 score=22.222221763038558 decode=35.64857343849281 token/s
+CASE 390/640 snapkv longbench/qmsum/63/16384 repeat=0
+[snapkv/longbench/qmsum/63/16384] 129/512 tokens
+[snapkv/longbench/qmsum/63/16384] 168/512 tokens
+RESULT ok: longbench/qmsum/63/16384 score=18.487394487677435 decode=35.78510723284046 token/s
+CASE 391/640 snapkv longbench/qmsum/76/8192 repeat=0
+[snapkv/longbench/qmsum/76/8192] 41/512 tokens
+RESULT ok: longbench/qmsum/76/8192 score=24.999999536675354 decode=35.62945502390751 token/s
+CASE 392/640 snapkv longbench/qmsum/76/16384 repeat=0
+[snapkv/longbench/qmsum/76/16384] 45/512 tokens
+RESULT ok: longbench/qmsum/76/16384 score=26.086956074905487 decode=35.9686963312221 token/s
+CASE 393/640 snapkv longbench/qmsum/42/8192 repeat=0
+[snapkv/longbench/qmsum/42/8192] 81/512 tokens
+RESULT ok: longbench/qmsum/42/8192 score=22.413792610731285 decode=35.57544961994898 token/s
+CASE 394/640 snapkv longbench/qmsum/42/16384 repeat=0
+[snapkv/longbench/qmsum/42/16384] 81/512 tokens
+RESULT ok: longbench/qmsum/42/16384 score=22.413792610731285 decode=35.640297426521386 token/s
+CASE 395/640 snapkv longbench/qmsum/139/8192 repeat=0
+[snapkv/longbench/qmsum/139/8192] 127/512 tokens
+RESULT ok: longbench/qmsum/139/8192 score=13.00812959587549 decode=35.48423562899838 token/s
+CASE 396/640 snapkv longbench/qmsum/139/16384 repeat=0
+[snapkv/longbench/qmsum/139/16384] 129/512 tokens
+[snapkv/longbench/qmsum/139/16384] 162/512 tokens
+RESULT ok: longbench/qmsum/139/16384 score=22.058823060661776 decode=35.16959204694688 token/s
+CASE 397/640 snapkv longbench/qmsum/37/8192 repeat=0
+[snapkv/longbench/qmsum/37/8192] 108/512 tokens
+RESULT ok: longbench/qmsum/37/8192 score=19.99999950222223 decode=35.545261309133586 token/s
+CASE 398/640 snapkv longbench/qmsum/37/16384 repeat=0
+[snapkv/longbench/qmsum/37/16384] 129/512 tokens
+[snapkv/longbench/qmsum/37/16384] 131/512 tokens
+RESULT ok: longbench/qmsum/37/16384 score=25.423728314852067 decode=35.64319582556071 token/s
+CASE 399/640 snapkv longbench/qmsum/162/8192 repeat=0
+[snapkv/longbench/qmsum/162/8192] 129/512 tokens
+[snapkv/longbench/qmsum/162/8192] 134/512 tokens
+RESULT ok: longbench/qmsum/162/8192 score=30.303029808654735 decode=35.63020222779197 token/s
+CASE 400/640 snapkv longbench/qmsum/162/16384 repeat=0
+[snapkv/longbench/qmsum/162/16384] 129/512 tokens
+[snapkv/longbench/qmsum/162/16384] 137/512 tokens
+RESULT ok: longbench/qmsum/162/16384 score=28.571428073444206 decode=35.50306194596874 token/s
+CASE 401/640 snapkv longbench/qmsum/100/8192 repeat=0
+[snapkv/longbench/qmsum/100/8192] 118/512 tokens
+RESULT ok: longbench/qmsum/100/8192 score=23.999999502592008 decode=35.7480442115048 token/s
+CASE 402/640 snapkv longbench/qmsum/100/16384 repeat=0
+[snapkv/longbench/qmsum/100/16384] 108/512 tokens
+RESULT ok: longbench/qmsum/100/16384 score=24.99999950055557 decode=35.474984896549024 token/s
+CASE 403/640 snapkv longbench/qmsum/179/8192 repeat=0
+[snapkv/longbench/qmsum/179/8192] 54/512 tokens
+RESULT ok: longbench/qmsum/179/8192 score=6.521738649574706 decode=35.75536693565836 token/s
+CASE 404/640 snapkv longbench/qmsum/179/16384 repeat=0
+[snapkv/longbench/qmsum/179/16384] 83/512 tokens
+RESULT ok: longbench/qmsum/179/16384 score=16.513760967932008 decode=35.752280085245154 token/s
+CASE 405/640 snapkv longbench/qmsum/28/8192 repeat=0
+[snapkv/longbench/qmsum/28/8192] 122/512 tokens
+RESULT ok: longbench/qmsum/28/8192 score=25.563909274690495 decode=35.87094906509214 token/s
+CASE 406/640 snapkv longbench/qmsum/28/16384 repeat=0
+[snapkv/longbench/qmsum/28/16384] 129/512 tokens
+[snapkv/longbench/qmsum/28/16384] 139/512 tokens
+RESULT ok: longbench/qmsum/28/16384 score=18.840579211825258 decode=35.629091062995876 token/s
+CASE 407/640 snapkv longbench/qmsum/97/8192 repeat=0
+[snapkv/longbench/qmsum/97/8192] 64/512 tokens
+RESULT ok: longbench/qmsum/97/8192 score=21.686746493830753 decode=35.794321294447066 token/s
+CASE 408/640 snapkv longbench/qmsum/97/16384 repeat=0
+[snapkv/longbench/qmsum/97/16384] 117/512 tokens
+RESULT ok: longbench/qmsum/97/16384 score=21.782177753553587 decode=35.706536441346586 token/s
+CASE 409/640 snapkv longbench/qmsum/156/8192 repeat=0
+[snapkv/longbench/qmsum/156/8192] 129/512 tokens
+[snapkv/longbench/qmsum/156/8192] 183/512 tokens
+RESULT ok: longbench/qmsum/156/8192 score=32.499999509453126 decode=35.77197176419472 token/s
+CASE 410/640 snapkv longbench/qmsum/156/16384 repeat=0
+[snapkv/longbench/qmsum/156/16384] 129/512 tokens
+[snapkv/longbench/qmsum/156/16384] 183/512 tokens
+RESULT ok: longbench/qmsum/156/16384 score=32.499999509453126 decode=35.522491000651314 token/s
+CASE 411/640 snapkv longbench/qmsum/199/8192 repeat=0
+[snapkv/longbench/qmsum/199/8192] 128/512 tokens
+RESULT ok: longbench/qmsum/199/8192 score=29.457363849768647 decode=35.540459524847954 token/s
+CASE 412/640 snapkv longbench/qmsum/199/16384 repeat=0
+[snapkv/longbench/qmsum/199/16384] 96/512 tokens
+RESULT ok: longbench/qmsum/199/16384 score=27.027026527067616 decode=35.69774563815437 token/s
+CASE 413/640 snapkv longbench/qmsum/164/8192 repeat=0
+[snapkv/longbench/qmsum/164/8192] 129/512 tokens
+[snapkv/longbench/qmsum/164/8192] 154/512 tokens
+RESULT ok: longbench/qmsum/164/8192 score=20.134227689023028 decode=35.58670997603323 token/s
+CASE 414/640 snapkv longbench/qmsum/164/16384 repeat=0
+[snapkv/longbench/qmsum/164/16384] 129/512 tokens
+[snapkv/longbench/qmsum/164/16384] 154/512 tokens
+RESULT ok: longbench/qmsum/164/16384 score=20.134227689023028 decode=35.79116649683583 token/s
+CASE 415/640 snapkv longbench/qmsum/87/8192 repeat=0
+[snapkv/longbench/qmsum/87/8192] 89/512 tokens
+RESULT ok: longbench/qmsum/87/8192 score=13.636363142820265 decode=35.723782166539145 token/s
+CASE 416/640 snapkv longbench/qmsum/87/16384 repeat=0
+[snapkv/longbench/qmsum/87/16384] 82/512 tokens
+RESULT ok: longbench/qmsum/87/16384 score=19.999999508888905 decode=35.731218687997895 token/s
+CASE 417/640 snapkv longbench/qmsum/86/8192 repeat=0
+[snapkv/longbench/qmsum/86/8192] 116/512 tokens
+RESULT ok: longbench/qmsum/86/8192 score=30.76923027744905 decode=35.90323793327002 token/s
+CASE 418/640 snapkv longbench/qmsum/86/16384 repeat=0
+[snapkv/longbench/qmsum/86/16384] 116/512 tokens
+RESULT ok: longbench/qmsum/86/16384 score=30.76923027744905 decode=35.68164740264035 token/s
+CASE 419/640 snapkv longbench/qmsum/99/8192 repeat=0
+[snapkv/longbench/qmsum/99/8192] 129/512 tokens
+[snapkv/longbench/qmsum/99/8192] 221/512 tokens
+RESULT ok: longbench/qmsum/99/8192 score=20.48780437806069 decode=34.257350993926835 token/s
+CASE 420/640 snapkv longbench/qmsum/99/16384 repeat=0
+[snapkv/longbench/qmsum/99/16384] 129/512 tokens
+[snapkv/longbench/qmsum/99/16384] 184/512 tokens
+RESULT ok: longbench/qmsum/99/16384 score=20.833332835991765 decode=35.85496466239729 token/s
+CASE 421/640 snapkv longbench/qmsum/170/8192 repeat=0
+[snapkv/longbench/qmsum/170/8192] 71/512 tokens
+RESULT ok: longbench/qmsum/170/8192 score=25.80645111296104 decode=35.71226137405522 token/s
+CASE 422/640 snapkv longbench/qmsum/170/16384 repeat=0
+[snapkv/longbench/qmsum/170/16384] 80/512 tokens
+RESULT ok: longbench/qmsum/170/16384 score=41.237112902540126 decode=35.65835102768577 token/s
+CASE 423/640 snapkv longbench/qmsum/92/8192 repeat=0
+[snapkv/longbench/qmsum/92/8192] 53/512 tokens
+RESULT ok: longbench/qmsum/92/8192 score=22.22222172412743 decode=35.88210631773486 token/s
+CASE 424/640 snapkv longbench/qmsum/92/16384 repeat=0
+[snapkv/longbench/qmsum/92/16384] 60/512 tokens
+RESULT ok: longbench/qmsum/92/16384 score=29.999999502812503 decode=35.605298354458604 token/s
+CASE 425/640 snapkv longbench/qmsum/89/8192 repeat=0
+[snapkv/longbench/qmsum/89/8192] 83/512 tokens
+RESULT ok: longbench/qmsum/89/8192 score=11.864406284831967 decode=35.95663819920744 token/s
+CASE 426/640 snapkv longbench/qmsum/89/16384 repeat=0
+[snapkv/longbench/qmsum/89/16384] 66/512 tokens
+RESULT ok: longbench/qmsum/89/16384 score=14.81481433556243 decode=35.343448574559815 token/s
+CASE 427/640 snapkv longbench/qmsum/149/8192 repeat=0
+[snapkv/longbench/qmsum/149/8192] 99/512 tokens
+RESULT ok: longbench/qmsum/149/8192 score=29.357797668546425 decode=35.776822884413335 token/s
+CASE 428/640 snapkv longbench/qmsum/149/16384 repeat=0
+[snapkv/longbench/qmsum/149/16384] 99/512 tokens
+RESULT ok: longbench/qmsum/149/16384 score=29.357797668546425 decode=35.28428241375312 token/s
+CASE 429/640 snapkv longbench/qmsum/192/8192 repeat=0
+[snapkv/longbench/qmsum/192/8192] 68/512 tokens
+RESULT ok: longbench/qmsum/192/8192 score=17.204300579951454 decode=35.48721877446588 token/s
+CASE 430/640 snapkv longbench/qmsum/192/16384 repeat=0
+[snapkv/longbench/qmsum/192/16384] 76/512 tokens
+RESULT ok: longbench/qmsum/192/16384 score=20.20201970247935 decode=35.750038163463266 token/s
+CASE 431/640 snapkv longbench/qmsum/30/8192 repeat=0
+[snapkv/longbench/qmsum/30/8192] 129/512 tokens
+[snapkv/longbench/qmsum/30/8192] 257/512 tokens
+[snapkv/longbench/qmsum/30/8192] 302/512 tokens
+RESULT ok: longbench/qmsum/30/8192 score=19.38775470746565 decode=35.537773460719514 token/s
+CASE 432/640 snapkv longbench/qmsum/30/16384 repeat=0
+[snapkv/longbench/qmsum/30/16384] 129/512 tokens
+[snapkv/longbench/qmsum/30/16384] 257/512 tokens
+[snapkv/longbench/qmsum/30/16384] 308/512 tokens
+RESULT ok: longbench/qmsum/30/16384 score=18.28571386344491 decode=35.68464987107485 token/s
+CASE 433/640 snapkv longbench/qmsum/135/8192 repeat=0
+[snapkv/longbench/qmsum/135/8192] 118/512 tokens
+RESULT ok: longbench/qmsum/135/8192 score=22.47190966544629 decode=35.29328397375291 token/s
+CASE 434/640 snapkv longbench/qmsum/135/16384 repeat=0
+[snapkv/longbench/qmsum/135/16384] 52/512 tokens
+RESULT ok: longbench/qmsum/135/16384 score=19.04761854875285 decode=35.77096152631237 token/s
+CASE 435/640 snapkv longbench/qmsum/163/8192 repeat=0
+[snapkv/longbench/qmsum/163/8192] 129/512 tokens
+[snapkv/longbench/qmsum/163/8192] 137/512 tokens
+RESULT ok: longbench/qmsum/163/8192 score=23.63636323966943 decode=35.45560170732907 token/s
+CASE 436/640 snapkv longbench/qmsum/163/16384 repeat=0
+[snapkv/longbench/qmsum/163/16384] 129/512 tokens
+[snapkv/longbench/qmsum/163/16384] 137/512 tokens
+RESULT ok: longbench/qmsum/163/16384 score=23.63636323966943 decode=35.73056208510301 token/s
+CASE 437/640 snapkv longbench/qmsum/104/8192 repeat=0
+[snapkv/longbench/qmsum/104/8192] 45/512 tokens
+RESULT ok: longbench/qmsum/104/8192 score=15.384614894201201 decode=35.179431059909945 token/s
+CASE 438/640 snapkv longbench/qmsum/104/16384 repeat=0
+[snapkv/longbench/qmsum/104/16384] 35/512 tokens
+RESULT ok: longbench/qmsum/104/16384 score=22.222221722908106 decode=35.66075649332191 token/s
+CASE 439/640 snapkv longbench/qmsum/178/8192 repeat=0
+[snapkv/longbench/qmsum/178/8192] 127/512 tokens
+RESULT ok: longbench/qmsum/178/8192 score=27.083332948133688 decode=35.73823008407863 token/s
+CASE 440/640 snapkv longbench/qmsum/178/16384 repeat=0
+[snapkv/longbench/qmsum/178/16384] 94/512 tokens
+RESULT ok: longbench/qmsum/178/16384 score=26.506023675424593 decode=35.53897991058981 token/s
+CASE 441/640 snapkv longbench/qmsum/140/8192 repeat=0
+[snapkv/longbench/qmsum/140/8192] 129/512 tokens
+[snapkv/longbench/qmsum/140/8192] 152/512 tokens
+RESULT ok: longbench/qmsum/140/8192 score=20.31249953527833 decode=35.980011723863846 token/s
+CASE 442/640 snapkv longbench/qmsum/140/16384 repeat=0
+[snapkv/longbench/qmsum/140/16384] 104/512 tokens
+RESULT ok: longbench/qmsum/140/16384 score=23.30097037760393 decode=35.69279858742253 token/s
+CASE 443/640 snapkv longbench/qmsum/109/8192 repeat=0
+[snapkv/longbench/qmsum/109/8192] 94/512 tokens
+RESULT ok: longbench/qmsum/109/8192 score=21.176470173010387 decode=34.7765593127633 token/s
+CASE 444/640 snapkv longbench/qmsum/109/16384 repeat=0
+[snapkv/longbench/qmsum/109/16384] 129/512 tokens
+[snapkv/longbench/qmsum/109/16384] 134/512 tokens
+RESULT ok: longbench/qmsum/109/16384 score=29.411764335832373 decode=35.8285318208498 token/s
+CASE 445/640 snapkv longbench/qmsum/155/8192 repeat=0
+[snapkv/longbench/qmsum/155/8192] 112/512 tokens
+RESULT ok: longbench/qmsum/155/8192 score=17.543859164512174 decode=35.36474478800375 token/s
+CASE 446/640 snapkv longbench/qmsum/155/16384 repeat=0
+[snapkv/longbench/qmsum/155/16384] 122/512 tokens
+RESULT ok: longbench/qmsum/155/16384 score=13.445377673328174 decode=35.45446711409822 token/s
+CASE 447/640 snapkv longbench/qmsum/119/8192 repeat=0
+[snapkv/longbench/qmsum/119/8192] 80/512 tokens
+RESULT ok: longbench/qmsum/119/8192 score=34.04255269352649 decode=35.3179936023991 token/s
+CASE 448/640 snapkv longbench/qmsum/119/16384 repeat=0
+[snapkv/longbench/qmsum/119/16384] 46/512 tokens
+RESULT ok: longbench/qmsum/119/16384 score=41.0256405338593 decode=35.73793094310987 token/s
+CASE 449/640 snapkv longbench/multi_news/109/8192 repeat=0
+[snapkv/longbench/multi_news/109/8192] 129/512 tokens
+[snapkv/longbench/multi_news/109/8192] 257/512 tokens
+[snapkv/longbench/multi_news/109/8192] 360/512 tokens
+RESULT ok: longbench/multi_news/109/8192 score=24.427480497873088 decode=35.60140906993111 token/s
+CASE 450/640 snapkv longbench/multi_news/109/16384 repeat=0
+[snapkv/longbench/multi_news/109/16384] 129/512 tokens
+[snapkv/longbench/multi_news/109/16384] 257/512 tokens
+[snapkv/longbench/multi_news/109/16384] 360/512 tokens
+RESULT ok: longbench/multi_news/109/16384 score=24.427480497873088 decode=35.78103578925534 token/s
+CASE 451/640 snapkv longbench/multi_news/138/8192 repeat=0
+[snapkv/longbench/multi_news/138/8192] 129/512 tokens
+[snapkv/longbench/multi_news/138/8192] 257/512 tokens
+[snapkv/longbench/multi_news/138/8192] 385/512 tokens
+[snapkv/longbench/multi_news/138/8192] 444/512 tokens
+RESULT ok: longbench/multi_news/138/8192 score=34.693877057319874 decode=35.636142105443426 token/s
+CASE 452/640 snapkv longbench/multi_news/138/16384 repeat=0
+[snapkv/longbench/multi_news/138/16384] 129/512 tokens
+[snapkv/longbench/multi_news/138/16384] 257/512 tokens
+[snapkv/longbench/multi_news/138/16384] 385/512 tokens
+[snapkv/longbench/multi_news/138/16384] 444/512 tokens
+RESULT ok: longbench/multi_news/138/16384 score=34.693877057319874 decode=35.56907074592201 token/s
+CASE 453/640 snapkv longbench/multi_news/8/8192 repeat=0
+[snapkv/longbench/multi_news/8/8192] 129/512 tokens
+[snapkv/longbench/multi_news/8/8192] 257/512 tokens
+[snapkv/longbench/multi_news/8/8192] 385/512 tokens
+[snapkv/longbench/multi_news/8/8192] 445/512 tokens
+RESULT ok: longbench/multi_news/8/8192 score=20.708446367112398 decode=35.84292620124228 token/s
+CASE 454/640 snapkv longbench/multi_news/8/16384 repeat=0
+[snapkv/longbench/multi_news/8/16384] 129/512 tokens
+[snapkv/longbench/multi_news/8/16384] 257/512 tokens
+[snapkv/longbench/multi_news/8/16384] 385/512 tokens
+[snapkv/longbench/multi_news/8/16384] 445/512 tokens
+RESULT ok: longbench/multi_news/8/16384 score=20.708446367112398 decode=35.628350703889396 token/s
+CASE 455/640 snapkv longbench/multi_news/128/8192 repeat=0
+[snapkv/longbench/multi_news/128/8192] 129/512 tokens
+[snapkv/longbench/multi_news/128/8192] 257/512 tokens
+[snapkv/longbench/multi_news/128/8192] 385/512 tokens
+[snapkv/longbench/multi_news/128/8192] 498/512 tokens
+RESULT ok: longbench/multi_news/128/8192 score=26.84210476587258 decode=35.318767984454084 token/s
+CASE 456/640 snapkv longbench/multi_news/128/16384 repeat=0
+[snapkv/longbench/multi_news/128/16384] 129/512 tokens
+[snapkv/longbench/multi_news/128/16384] 257/512 tokens
+[snapkv/longbench/multi_news/128/16384] 385/512 tokens
+[snapkv/longbench/multi_news/128/16384] 498/512 tokens
+RESULT ok: longbench/multi_news/128/16384 score=26.84210476587258 decode=35.52707522889581 token/s
+CASE 457/640 snapkv longbench/multi_news/161/8192 repeat=0
+[snapkv/longbench/multi_news/161/8192] 129/512 tokens
+[snapkv/longbench/multi_news/161/8192] 257/512 tokens
+[snapkv/longbench/multi_news/161/8192] 385/512 tokens
+[snapkv/longbench/multi_news/161/8192] 512/512 tokens
+RESULT ok: longbench/multi_news/161/8192 score=27.924527807874693 decode=35.421891878965766 token/s
+CASE 458/640 snapkv longbench/multi_news/161/16384 repeat=0
+[snapkv/longbench/multi_news/161/16384] 129/512 tokens
+[snapkv/longbench/multi_news/161/16384] 257/512 tokens
+[snapkv/longbench/multi_news/161/16384] 385/512 tokens
+[snapkv/longbench/multi_news/161/16384] 512/512 tokens
+RESULT ok: longbench/multi_news/161/16384 score=27.924527807874693 decode=35.721742394519296 token/s
+CASE 459/640 snapkv longbench/multi_news/48/8192 repeat=0
+[snapkv/longbench/multi_news/48/8192] 129/512 tokens
+[snapkv/longbench/multi_news/48/8192] 257/512 tokens
+[snapkv/longbench/multi_news/48/8192] 385/512 tokens
+[snapkv/longbench/multi_news/48/8192] 408/512 tokens
+RESULT ok: longbench/multi_news/48/8192 score=32.10526266725763 decode=35.669928865590066 token/s
+CASE 460/640 snapkv longbench/multi_news/48/16384 repeat=0
+[snapkv/longbench/multi_news/48/16384] 129/512 tokens
+[snapkv/longbench/multi_news/48/16384] 257/512 tokens
+[snapkv/longbench/multi_news/48/16384] 385/512 tokens
+[snapkv/longbench/multi_news/48/16384] 408/512 tokens
+RESULT ok: longbench/multi_news/48/16384 score=32.10526266725763 decode=35.738479214151674 token/s
+CASE 461/640 snapkv longbench/multi_news/94/8192 repeat=0
+[snapkv/longbench/multi_news/94/8192] 129/512 tokens
+[snapkv/longbench/multi_news/94/8192] 257/512 tokens
+[snapkv/longbench/multi_news/94/8192] 365/512 tokens
+RESULT ok: longbench/multi_news/94/8192 score=27.480915556756607 decode=35.69839744607311 token/s
+CASE 462/640 snapkv longbench/multi_news/94/16384 repeat=0
+[snapkv/longbench/multi_news/94/16384] 129/512 tokens
+[snapkv/longbench/multi_news/94/16384] 257/512 tokens
+[snapkv/longbench/multi_news/94/16384] 365/512 tokens
+RESULT ok: longbench/multi_news/94/16384 score=27.480915556756607 decode=35.383501305428474 token/s
+CASE 463/640 snapkv longbench/multi_news/79/8192 repeat=0
+[snapkv/longbench/multi_news/79/8192] 129/512 tokens
+[snapkv/longbench/multi_news/79/8192] 257/512 tokens
+[snapkv/longbench/multi_news/79/8192] 385/512 tokens
+[snapkv/longbench/multi_news/79/8192] 455/512 tokens
+RESULT ok: longbench/multi_news/79/8192 score=36.65594808531756 decode=35.334865401010525 token/s
+CASE 464/640 snapkv longbench/multi_news/79/16384 repeat=0
+[snapkv/longbench/multi_news/79/16384] 129/512 tokens
+[snapkv/longbench/multi_news/79/16384] 257/512 tokens
+[snapkv/longbench/multi_news/79/16384] 385/512 tokens
+[snapkv/longbench/multi_news/79/16384] 455/512 tokens
+RESULT ok: longbench/multi_news/79/16384 score=36.65594808531756 decode=35.46269354353355 token/s
+CASE 465/640 snapkv longbench/multi_news/176/8192 repeat=0
+[snapkv/longbench/multi_news/176/8192] 129/512 tokens
+[snapkv/longbench/multi_news/176/8192] 257/512 tokens
+[snapkv/longbench/multi_news/176/8192] 385/512 tokens
+[snapkv/longbench/multi_news/176/8192] 407/512 tokens
+RESULT ok: longbench/multi_news/176/8192 score=27.184465547323555 decode=35.63814086404209 token/s
+CASE 466/640 snapkv longbench/multi_news/176/16384 repeat=0
+[snapkv/longbench/multi_news/176/16384] 129/512 tokens
+[snapkv/longbench/multi_news/176/16384] 257/512 tokens
+[snapkv/longbench/multi_news/176/16384] 385/512 tokens
+[snapkv/longbench/multi_news/176/16384] 407/512 tokens
+RESULT ok: longbench/multi_news/176/16384 score=27.184465547323555 decode=35.56795789220523 token/s
+CASE 467/640 snapkv longbench/multi_news/6/8192 repeat=0
+[snapkv/longbench/multi_news/6/8192] 129/512 tokens
+[snapkv/longbench/multi_news/6/8192] 257/512 tokens
+[snapkv/longbench/multi_news/6/8192] 385/512 tokens
+[snapkv/longbench/multi_news/6/8192] 512/512 tokens
+RESULT ok: longbench/multi_news/6/8192 score=26.562499519585508 decode=35.481172221688716 token/s
+CASE 468/640 snapkv longbench/multi_news/6/16384 repeat=0
+[snapkv/longbench/multi_news/6/16384] 129/512 tokens
+[snapkv/longbench/multi_news/6/16384] 257/512 tokens
+[snapkv/longbench/multi_news/6/16384] 385/512 tokens
+[snapkv/longbench/multi_news/6/16384] 512/512 tokens
+RESULT ok: longbench/multi_news/6/16384 score=26.562499519585508 decode=35.63189207900924 token/s
+CASE 469/640 snapkv longbench/multi_news/155/8192 repeat=0
+[snapkv/longbench/multi_news/155/8192] 129/512 tokens
+[snapkv/longbench/multi_news/155/8192] 257/512 tokens
+[snapkv/longbench/multi_news/155/8192] 385/512 tokens
+[snapkv/longbench/multi_news/155/8192] 512/512 tokens
+RESULT ok: longbench/multi_news/155/8192 score=32.21153796616125 decode=35.342942591847226 token/s
+CASE 470/640 snapkv longbench/multi_news/155/16384 repeat=0
+[snapkv/longbench/multi_news/155/16384] 129/512 tokens
+[snapkv/longbench/multi_news/155/16384] 257/512 tokens
+[snapkv/longbench/multi_news/155/16384] 385/512 tokens
+[snapkv/longbench/multi_news/155/16384] 512/512 tokens
+RESULT ok: longbench/multi_news/155/16384 score=32.21153796616125 decode=35.62059264803807 token/s
+CASE 471/640 snapkv longbench/multi_news/40/8192 repeat=0
+[snapkv/longbench/multi_news/40/8192] 129/512 tokens
+[snapkv/longbench/multi_news/40/8192] 257/512 tokens
+[snapkv/longbench/multi_news/40/8192] 385/512 tokens
+[snapkv/longbench/multi_news/40/8192] 512/512 tokens
+RESULT ok: longbench/multi_news/40/8192 score=20.3655347509084 decode=35.236516218215115 token/s
+CASE 472/640 snapkv longbench/multi_news/40/16384 repeat=0
+[snapkv/longbench/multi_news/40/16384] 129/512 tokens
+[snapkv/longbench/multi_news/40/16384] 257/512 tokens
+[snapkv/longbench/multi_news/40/16384] 385/512 tokens
+[snapkv/longbench/multi_news/40/16384] 512/512 tokens
+RESULT ok: longbench/multi_news/40/16384 score=20.3655347509084 decode=35.48303827335115 token/s
+CASE 473/640 snapkv longbench/multi_news/76/8192 repeat=0
+[snapkv/longbench/multi_news/76/8192] 129/512 tokens
+[snapkv/longbench/multi_news/76/8192] 257/512 tokens
+[snapkv/longbench/multi_news/76/8192] 385/512 tokens
+[snapkv/longbench/multi_news/76/8192] 445/512 tokens
+RESULT ok: longbench/multi_news/76/8192 score=30.853993990392286 decode=35.53217411345346 token/s
+CASE 474/640 snapkv longbench/multi_news/76/16384 repeat=0
+[snapkv/longbench/multi_news/76/16384] 129/512 tokens
+[snapkv/longbench/multi_news/76/16384] 257/512 tokens
+[snapkv/longbench/multi_news/76/16384] 385/512 tokens
+[snapkv/longbench/multi_news/76/16384] 445/512 tokens
+RESULT ok: longbench/multi_news/76/16384 score=30.853993990392286 decode=35.52785759967467 token/s
+CASE 475/640 snapkv longbench/multi_news/15/8192 repeat=0
+[snapkv/longbench/multi_news/15/8192] 129/512 tokens
+[snapkv/longbench/multi_news/15/8192] 257/512 tokens
+[snapkv/longbench/multi_news/15/8192] 385/512 tokens
+[snapkv/longbench/multi_news/15/8192] 512/512 tokens
+RESULT ok: longbench/multi_news/15/8192 score=17.999999505512516 decode=35.52856200573352 token/s
+CASE 476/640 snapkv longbench/multi_news/15/16384 repeat=0
+[snapkv/longbench/multi_news/15/16384] 129/512 tokens
+[snapkv/longbench/multi_news/15/16384] 257/512 tokens
+[snapkv/longbench/multi_news/15/16384] 385/512 tokens
+[snapkv/longbench/multi_news/15/16384] 512/512 tokens
+RESULT ok: longbench/multi_news/15/16384 score=17.999999505512516 decode=35.61959746886881 token/s
+CASE 477/640 snapkv longbench/multi_news/23/8192 repeat=0
+[snapkv/longbench/multi_news/23/8192] 129/512 tokens
+[snapkv/longbench/multi_news/23/8192] 257/512 tokens
+[snapkv/longbench/multi_news/23/8192] 385/512 tokens
+[snapkv/longbench/multi_news/23/8192] 403/512 tokens
+RESULT ok: longbench/multi_news/23/8192 score=26.038780666661566 decode=35.63491833044411 token/s
+CASE 478/640 snapkv longbench/multi_news/23/16384 repeat=0
+[snapkv/longbench/multi_news/23/16384] 129/512 tokens
+[snapkv/longbench/multi_news/23/16384] 257/512 tokens
+[snapkv/longbench/multi_news/23/16384] 385/512 tokens
+[snapkv/longbench/multi_news/23/16384] 403/512 tokens
+RESULT ok: longbench/multi_news/23/16384 score=26.038780666661566 decode=35.76740669978671 token/s
+CASE 479/640 snapkv longbench/multi_news/104/8192 repeat=0
+[snapkv/longbench/multi_news/104/8192] 129/512 tokens
+[snapkv/longbench/multi_news/104/8192] 257/512 tokens
+[snapkv/longbench/multi_news/104/8192] 385/512 tokens
+[snapkv/longbench/multi_news/104/8192] 403/512 tokens
+RESULT ok: longbench/multi_news/104/8192 score=30.81081031152667 decode=35.578037338476385 token/s
+CASE 480/640 snapkv longbench/multi_news/104/16384 repeat=0
+[snapkv/longbench/multi_news/104/16384] 129/512 tokens
+[snapkv/longbench/multi_news/104/16384] 257/512 tokens
+[snapkv/longbench/multi_news/104/16384] 385/512 tokens
+[snapkv/longbench/multi_news/104/16384] 403/512 tokens
+RESULT ok: longbench/multi_news/104/16384 score=30.81081031152667 decode=35.81461642862585 token/s
+CASE 481/640 snapkv longbench/multi_news/60/8192 repeat=0
+[snapkv/longbench/multi_news/60/8192] 129/512 tokens
+[snapkv/longbench/multi_news/60/8192] 257/512 tokens
+[snapkv/longbench/multi_news/60/8192] 365/512 tokens
+RESULT ok: longbench/multi_news/60/8192 score=25.50724587684941 decode=35.64117534105971 token/s
+CASE 482/640 snapkv longbench/multi_news/60/16384 repeat=0
+[snapkv/longbench/multi_news/60/16384] 129/512 tokens
+[snapkv/longbench/multi_news/60/16384] 257/512 tokens
+[snapkv/longbench/multi_news/60/16384] 365/512 tokens
+RESULT ok: longbench/multi_news/60/16384 score=25.50724587684941 decode=35.40496060517527 token/s
+CASE 483/640 snapkv longbench/multi_news/46/8192 repeat=0
+[snapkv/longbench/multi_news/46/8192] 129/512 tokens
+[snapkv/longbench/multi_news/46/8192] 257/512 tokens
+[snapkv/longbench/multi_news/46/8192] 314/512 tokens
+RESULT ok: longbench/multi_news/46/8192 score=22.429906042876148 decode=35.6172091770246 token/s
+CASE 484/640 snapkv longbench/multi_news/46/16384 repeat=0
+[snapkv/longbench/multi_news/46/16384] 129/512 tokens
+[snapkv/longbench/multi_news/46/16384] 257/512 tokens
+[snapkv/longbench/multi_news/46/16384] 314/512 tokens
+RESULT ok: longbench/multi_news/46/16384 score=22.429906042876148 decode=35.40650281435123 token/s
+CASE 485/640 snapkv longbench/multi_news/88/8192 repeat=0
+[snapkv/longbench/multi_news/88/8192] 129/512 tokens
+[snapkv/longbench/multi_news/88/8192] 257/512 tokens
+[snapkv/longbench/multi_news/88/8192] 385/512 tokens
+[snapkv/longbench/multi_news/88/8192] 512/512 tokens
+RESULT ok: longbench/multi_news/88/8192 score=20.67796562596956 decode=35.622463110294255 token/s
+CASE 486/640 snapkv longbench/multi_news/88/16384 repeat=0
+[snapkv/longbench/multi_news/88/16384] 129/512 tokens
+[snapkv/longbench/multi_news/88/16384] 257/512 tokens
+[snapkv/longbench/multi_news/88/16384] 385/512 tokens
+[snapkv/longbench/multi_news/88/16384] 512/512 tokens
+RESULT ok: longbench/multi_news/88/16384 score=19.572953276174328 decode=35.58190910188117 token/s
+CASE 487/640 snapkv longbench/multi_news/168/8192 repeat=0
+[snapkv/longbench/multi_news/168/8192] 129/512 tokens
+[snapkv/longbench/multi_news/168/8192] 257/512 tokens
+[snapkv/longbench/multi_news/168/8192] 385/512 tokens
+[snapkv/longbench/multi_news/168/8192] 512/512 tokens
+RESULT ok: longbench/multi_news/168/8192 score=24.26229461551197 decode=35.339945502553654 token/s
+CASE 488/640 snapkv longbench/multi_news/168/16384 repeat=0
+[snapkv/longbench/multi_news/168/16384] 129/512 tokens
+[snapkv/longbench/multi_news/168/16384] 257/512 tokens
+[snapkv/longbench/multi_news/168/16384] 385/512 tokens
+[snapkv/longbench/multi_news/168/16384] 512/512 tokens
+RESULT ok: longbench/multi_news/168/16384 score=24.26229461551197 decode=35.73713049557061 token/s
+CASE 489/640 snapkv longbench/multi_news/112/8192 repeat=0
+[snapkv/longbench/multi_news/112/8192] 129/512 tokens
+[snapkv/longbench/multi_news/112/8192] 257/512 tokens
+[snapkv/longbench/multi_news/112/8192] 385/512 tokens
+[snapkv/longbench/multi_news/112/8192] 490/512 tokens
+RESULT ok: longbench/multi_news/112/8192 score=25.120772447805095 decode=35.84649605122564 token/s
+CASE 490/640 snapkv longbench/multi_news/112/16384 repeat=0
+[snapkv/longbench/multi_news/112/16384] 129/512 tokens
+[snapkv/longbench/multi_news/112/16384] 257/512 tokens
+[snapkv/longbench/multi_news/112/16384] 385/512 tokens
+[snapkv/longbench/multi_news/112/16384] 490/512 tokens
+RESULT ok: longbench/multi_news/112/16384 score=25.120772447805095 decode=35.67134927838558 token/s
+CASE 491/640 snapkv longbench/multi_news/143/8192 repeat=0
+[snapkv/longbench/multi_news/143/8192] 129/512 tokens
+[snapkv/longbench/multi_news/143/8192] 257/512 tokens
+[snapkv/longbench/multi_news/143/8192] 385/512 tokens
+[snapkv/longbench/multi_news/143/8192] 512/512 tokens
+RESULT ok: longbench/multi_news/143/8192 score=16.847825616862607 decode=35.54777103468654 token/s
+CASE 492/640 snapkv longbench/multi_news/143/16384 repeat=0
+[snapkv/longbench/multi_news/143/16384] 129/512 tokens
+[snapkv/longbench/multi_news/143/16384] 257/512 tokens
+[snapkv/longbench/multi_news/143/16384] 385/512 tokens
+[snapkv/longbench/multi_news/143/16384] 512/512 tokens
+RESULT ok: longbench/multi_news/143/16384 score=16.847825616862607 decode=35.82990081054055 token/s
+CASE 493/640 snapkv longbench/multi_news/178/8192 repeat=0
+[snapkv/longbench/multi_news/178/8192] 129/512 tokens
+[snapkv/longbench/multi_news/178/8192] 257/512 tokens
+[snapkv/longbench/multi_news/178/8192] 385/512 tokens
+[snapkv/longbench/multi_news/178/8192] 479/512 tokens
+RESULT ok: longbench/multi_news/178/8192 score=26.210825716999054 decode=35.3651102695134 token/s
+CASE 494/640 snapkv longbench/multi_news/178/16384 repeat=0
+[snapkv/longbench/multi_news/178/16384] 129/512 tokens
+[snapkv/longbench/multi_news/178/16384] 257/512 tokens
+[snapkv/longbench/multi_news/178/16384] 385/512 tokens
+[snapkv/longbench/multi_news/178/16384] 479/512 tokens
+RESULT ok: longbench/multi_news/178/16384 score=26.210825716999054 decode=35.73877944242434 token/s
+CASE 495/640 snapkv longbench/multi_news/17/8192 repeat=0
+[snapkv/longbench/multi_news/17/8192] 129/512 tokens
+[snapkv/longbench/multi_news/17/8192] 257/512 tokens
+[snapkv/longbench/multi_news/17/8192] 385/512 tokens
+[snapkv/longbench/multi_news/17/8192] 411/512 tokens
+RESULT ok: longbench/multi_news/17/8192 score=22.85714235755103 decode=35.600971900853025 token/s
+CASE 496/640 snapkv longbench/multi_news/17/16384 repeat=0
+[snapkv/longbench/multi_news/17/16384] 129/512 tokens
+[snapkv/longbench/multi_news/17/16384] 257/512 tokens
+[snapkv/longbench/multi_news/17/16384] 385/512 tokens
+[snapkv/longbench/multi_news/17/16384] 411/512 tokens
+RESULT ok: longbench/multi_news/17/16384 score=22.85714235755103 decode=35.72407257310731 token/s
+CASE 497/640 snapkv longbench/multi_news/127/8192 repeat=0
+[snapkv/longbench/multi_news/127/8192] 129/512 tokens
+[snapkv/longbench/multi_news/127/8192] 257/512 tokens
+[snapkv/longbench/multi_news/127/8192] 385/512 tokens
+[snapkv/longbench/multi_news/127/8192] 404/512 tokens
+RESULT ok: longbench/multi_news/127/8192 score=17.599999500600905 decode=35.60222266991904 token/s
+CASE 498/640 snapkv longbench/multi_news/127/16384 repeat=0
+[snapkv/longbench/multi_news/127/16384] 129/512 tokens
+[snapkv/longbench/multi_news/127/16384] 257/512 tokens
+[snapkv/longbench/multi_news/127/16384] 385/512 tokens
+[snapkv/longbench/multi_news/127/16384] 404/512 tokens
+RESULT ok: longbench/multi_news/127/16384 score=17.599999500600905 decode=35.576122259817794 token/s
+CASE 499/640 snapkv longbench/multi_news/121/8192 repeat=0
+[snapkv/longbench/multi_news/121/8192] 129/512 tokens
+[snapkv/longbench/multi_news/121/8192] 257/512 tokens
+[snapkv/longbench/multi_news/121/8192] 385/512 tokens
+[snapkv/longbench/multi_news/121/8192] 496/512 tokens
+RESULT ok: longbench/multi_news/121/8192 score=26.55826508268888 decode=35.48977838456671 token/s
+CASE 500/640 snapkv longbench/multi_news/121/16384 repeat=0
+[snapkv/longbench/multi_news/121/16384] 129/512 tokens
+[snapkv/longbench/multi_news/121/16384] 257/512 tokens
+[snapkv/longbench/multi_news/121/16384] 385/512 tokens
+[snapkv/longbench/multi_news/121/16384] 496/512 tokens
+RESULT ok: longbench/multi_news/121/16384 score=26.55826508268888 decode=35.68690799147042 token/s
+CASE 501/640 snapkv longbench/multi_news/67/8192 repeat=0
+[snapkv/longbench/multi_news/67/8192] 129/512 tokens
+[snapkv/longbench/multi_news/67/8192] 257/512 tokens
+[snapkv/longbench/multi_news/67/8192] 385/512 tokens
+[snapkv/longbench/multi_news/67/8192] 512/512 tokens
+RESULT ok: longbench/multi_news/67/8192 score=32.307691815266274 decode=35.8403947165287 token/s
+CASE 502/640 snapkv longbench/multi_news/67/16384 repeat=0
+[snapkv/longbench/multi_news/67/16384] 129/512 tokens
+[snapkv/longbench/multi_news/67/16384] 257/512 tokens
+[snapkv/longbench/multi_news/67/16384] 385/512 tokens
+[snapkv/longbench/multi_news/67/16384] 512/512 tokens
+RESULT ok: longbench/multi_news/67/16384 score=32.307691815266274 decode=35.675701293395015 token/s
+CASE 503/640 snapkv longbench/multi_news/9/8192 repeat=0
+[snapkv/longbench/multi_news/9/8192] 129/512 tokens
+[snapkv/longbench/multi_news/9/8192] 257/512 tokens
+[snapkv/longbench/multi_news/9/8192] 385/512 tokens
+[snapkv/longbench/multi_news/9/8192] 512/512 tokens
+RESULT ok: longbench/multi_news/9/8192 score=25.925925437833413 decode=35.24879096029935 token/s
+CASE 504/640 snapkv longbench/multi_news/9/16384 repeat=0
+[snapkv/longbench/multi_news/9/16384] 129/512 tokens
+[snapkv/longbench/multi_news/9/16384] 257/512 tokens
+[snapkv/longbench/multi_news/9/16384] 385/512 tokens
+[snapkv/longbench/multi_news/9/16384] 512/512 tokens
+RESULT ok: longbench/multi_news/9/16384 score=25.925925437833413 decode=35.63658630345329 token/s
+CASE 505/640 snapkv longbench/multi_news/102/8192 repeat=0
+[snapkv/longbench/multi_news/102/8192] 129/512 tokens
+[snapkv/longbench/multi_news/102/8192] 257/512 tokens
+[snapkv/longbench/multi_news/102/8192] 385/512 tokens
+[snapkv/longbench/multi_news/102/8192] 512/512 tokens
+RESULT ok: longbench/multi_news/102/8192 score=14.189188743996544 decode=35.662214370799965 token/s
+CASE 506/640 snapkv longbench/multi_news/102/16384 repeat=0
+[snapkv/longbench/multi_news/102/16384] 129/512 tokens
+[snapkv/longbench/multi_news/102/16384] 257/512 tokens
+[snapkv/longbench/multi_news/102/16384] 385/512 tokens
+[snapkv/longbench/multi_news/102/16384] 512/512 tokens
+RESULT ok: longbench/multi_news/102/16384 score=14.189188743996544 decode=35.642055489038206 token/s
+CASE 507/640 snapkv longbench/multi_news/142/8192 repeat=0
+[snapkv/longbench/multi_news/142/8192] 129/512 tokens
+[snapkv/longbench/multi_news/142/8192] 257/512 tokens
+[snapkv/longbench/multi_news/142/8192] 385/512 tokens
+[snapkv/longbench/multi_news/142/8192] 443/512 tokens
+RESULT ok: longbench/multi_news/142/8192 score=29.571984007025087 decode=35.66051546701909 token/s
+CASE 508/640 snapkv longbench/multi_news/142/16384 repeat=0
+[snapkv/longbench/multi_news/142/16384] 129/512 tokens
+[snapkv/longbench/multi_news/142/16384] 257/512 tokens
+[snapkv/longbench/multi_news/142/16384] 385/512 tokens
+[snapkv/longbench/multi_news/142/16384] 443/512 tokens
+RESULT ok: longbench/multi_news/142/16384 score=29.571984007025087 decode=35.55437514268608 token/s
+CASE 509/640 snapkv longbench/multi_news/107/8192 repeat=0
+[snapkv/longbench/multi_news/107/8192] 129/512 tokens
+[snapkv/longbench/multi_news/107/8192] 257/512 tokens
+[snapkv/longbench/multi_news/107/8192] 385/512 tokens
+[snapkv/longbench/multi_news/107/8192] 490/512 tokens
+RESULT ok: longbench/multi_news/107/8192 score=15.59321994369435 decode=35.597133543514595 token/s
+CASE 510/640 snapkv longbench/multi_news/107/16384 repeat=0
+[snapkv/longbench/multi_news/107/16384] 129/512 tokens
+[snapkv/longbench/multi_news/107/16384] 257/512 tokens
+[snapkv/longbench/multi_news/107/16384] 385/512 tokens
+[snapkv/longbench/multi_news/107/16384] 490/512 tokens
+RESULT ok: longbench/multi_news/107/16384 score=15.59321994369435 decode=35.65073785436823 token/s
+CASE 511/640 snapkv longbench/multi_news/149/8192 repeat=0
+[snapkv/longbench/multi_news/149/8192] 129/512 tokens
+[snapkv/longbench/multi_news/149/8192] 257/512 tokens
+[snapkv/longbench/multi_news/149/8192] 385/512 tokens
+[snapkv/longbench/multi_news/149/8192] 512/512 tokens
+RESULT ok: longbench/multi_news/149/8192 score=26.704544975464877 decode=35.64585507406599 token/s
+CASE 512/640 snapkv longbench/multi_news/149/16384 repeat=0
+[snapkv/longbench/multi_news/149/16384] 129/512 tokens
+[snapkv/longbench/multi_news/149/16384] 257/512 tokens
+[snapkv/longbench/multi_news/149/16384] 385/512 tokens
+[snapkv/longbench/multi_news/149/16384] 512/512 tokens
+RESULT ok: longbench/multi_news/149/16384 score=26.704544975464877 decode=35.51814722864962 token/s
+CASE 513/640 snapkv longbench/lcc/309/8192 repeat=0
+[snapkv/longbench/lcc/309/8192] 64/64 tokens
+RESULT ok: longbench/lcc/309/8192 score=12.0 decode=35.41256296658743 token/s
+CASE 514/640 snapkv longbench/lcc/309/16384 repeat=0
+[snapkv/longbench/lcc/309/16384] 44/64 tokens
+RESULT ok: longbench/lcc/309/16384 score=13.0 decode=35.89394372879891 token/s
+CASE 515/640 snapkv longbench/lcc/169/8192 repeat=0
+[snapkv/longbench/lcc/169/8192] 64/64 tokens
+RESULT ok: longbench/lcc/169/8192 score=76.0 decode=35.38339797195828 token/s
+CASE 516/640 snapkv longbench/lcc/169/16384 repeat=0
+[snapkv/longbench/lcc/169/16384] 64/64 tokens
+RESULT ok: longbench/lcc/169/16384 score=76.0 decode=35.37119145310869 token/s
+CASE 517/640 snapkv longbench/lcc/195/8192 repeat=0
+[snapkv/longbench/lcc/195/8192] 64/64 tokens
+RESULT ok: longbench/lcc/195/8192 score=77.0 decode=35.14016237433147 token/s
+CASE 518/640 snapkv longbench/lcc/195/16384 repeat=0
+[snapkv/longbench/lcc/195/16384] 64/64 tokens
+RESULT ok: longbench/lcc/195/16384 score=77.0 decode=35.64745102749917 token/s
+CASE 519/640 snapkv longbench/lcc/445/8192 repeat=0
+[snapkv/longbench/lcc/445/8192] 64/64 tokens
+RESULT ok: longbench/lcc/445/8192 score=57.99999999999999 decode=35.55250574880584 token/s
+CASE 520/640 snapkv longbench/lcc/445/16384 repeat=0
+[snapkv/longbench/lcc/445/16384] 64/64 tokens
+RESULT ok: longbench/lcc/445/16384 score=57.99999999999999 decode=35.491666214062555 token/s
+CASE 521/640 snapkv longbench/lcc/442/8192 repeat=0
+[snapkv/longbench/lcc/442/8192] 64/64 tokens
+RESULT ok: longbench/lcc/442/8192 score=21.0 decode=23.032667500681352 token/s
+CASE 522/640 snapkv longbench/lcc/442/16384 repeat=0
+[snapkv/longbench/lcc/442/16384] 64/64 tokens
+RESULT ok: longbench/lcc/442/16384 score=21.0 decode=35.23974802265538 token/s
+CASE 523/640 snapkv longbench/lcc/251/8192 repeat=0
+[snapkv/longbench/lcc/251/8192] 64/64 tokens
+RESULT ok: longbench/lcc/251/8192 score=28.000000000000004 decode=34.03931646581677 token/s
+CASE 524/640 snapkv longbench/lcc/251/16384 repeat=0
+[snapkv/longbench/lcc/251/16384] 64/64 tokens
+RESULT ok: longbench/lcc/251/16384 score=28.000000000000004 decode=35.81115726890642 token/s
+CASE 525/640 snapkv longbench/lcc/48/8192 repeat=0
+[snapkv/longbench/lcc/48/8192] 64/64 tokens
+RESULT ok: longbench/lcc/48/8192 score=0.0 decode=35.66333518227006 token/s
+CASE 526/640 snapkv longbench/lcc/48/16384 repeat=0
+[snapkv/longbench/lcc/48/16384] 64/64 tokens
+RESULT ok: longbench/lcc/48/16384 score=0.0 decode=35.88415900374753 token/s
+CASE 527/640 snapkv longbench/lcc/387/8192 repeat=0
+[snapkv/longbench/lcc/387/8192] 64/64 tokens
+RESULT ok: longbench/lcc/387/8192 score=100.0 decode=35.67797532220841 token/s
+CASE 528/640 snapkv longbench/lcc/387/16384 repeat=0
+[snapkv/longbench/lcc/387/16384] 64/64 tokens
+RESULT ok: longbench/lcc/387/16384 score=100.0 decode=35.66537600910554 token/s
+CASE 529/640 snapkv longbench/lcc/347/8192 repeat=0
+[snapkv/longbench/lcc/347/8192] 64/64 tokens
+RESULT ok: longbench/lcc/347/8192 score=100.0 decode=35.688932859359525 token/s
+CASE 530/640 snapkv longbench/lcc/347/16384 repeat=0
+[snapkv/longbench/lcc/347/16384] 64/64 tokens
+RESULT ok: longbench/lcc/347/16384 score=100.0 decode=35.86883747755074 token/s
+CASE 531/640 snapkv longbench/lcc/58/8192 repeat=0
+[snapkv/longbench/lcc/58/8192] 64/64 tokens
+RESULT ok: longbench/lcc/58/8192 score=100.0 decode=35.18031765567346 token/s
+CASE 532/640 snapkv longbench/lcc/58/16384 repeat=0
+[snapkv/longbench/lcc/58/16384] 64/64 tokens
+RESULT ok: longbench/lcc/58/16384 score=100.0 decode=35.43173211350497 token/s
+CASE 533/640 snapkv longbench/lcc/11/8192 repeat=0
+[snapkv/longbench/lcc/11/8192] 64/64 tokens
+RESULT ok: longbench/lcc/11/8192 score=56.00000000000001 decode=35.409022043170715 token/s
+CASE 534/640 snapkv longbench/lcc/11/16384 repeat=0
+[snapkv/longbench/lcc/11/16384] 64/64 tokens
+RESULT ok: longbench/lcc/11/16384 score=56.00000000000001 decode=35.476222937039445 token/s
+CASE 535/640 snapkv longbench/lcc/211/8192 repeat=0
+[snapkv/longbench/lcc/211/8192] 64/64 tokens
+RESULT ok: longbench/lcc/211/8192 score=91.0 decode=35.65044986287971 token/s
+CASE 536/640 snapkv longbench/lcc/211/16384 repeat=0
+[snapkv/longbench/lcc/211/16384] 64/64 tokens
+RESULT ok: longbench/lcc/211/16384 score=91.0 decode=35.648981695068365 token/s
+CASE 537/640 snapkv longbench/lcc/490/8192 repeat=0
+[snapkv/longbench/lcc/490/8192] 64/64 tokens
+RESULT ok: longbench/lcc/490/8192 score=31.0 decode=35.755497326119766 token/s
+CASE 538/640 snapkv longbench/lcc/490/16384 repeat=0
+[snapkv/longbench/lcc/490/16384] 64/64 tokens
+RESULT ok: longbench/lcc/490/16384 score=31.0 decode=35.79864623824114 token/s
+CASE 539/640 snapkv longbench/lcc/357/8192 repeat=0
+[snapkv/longbench/lcc/357/8192] 64/64 tokens
+RESULT ok: longbench/lcc/357/8192 score=71.0 decode=35.514512461965964 token/s
+CASE 540/640 snapkv longbench/lcc/357/16384 repeat=0
+[snapkv/longbench/lcc/357/16384] 64/64 tokens
+RESULT ok: longbench/lcc/357/16384 score=71.0 decode=35.82746799573595 token/s
+CASE 541/640 snapkv longbench/lcc/22/8192 repeat=0
+[snapkv/longbench/lcc/22/8192] 64/64 tokens
+RESULT ok: longbench/lcc/22/8192 score=50.0 decode=35.6070059658539 token/s
+CASE 542/640 snapkv longbench/lcc/22/16384 repeat=0
+[snapkv/longbench/lcc/22/16384] 64/64 tokens
+RESULT ok: longbench/lcc/22/16384 score=42.0 decode=35.452487244511076 token/s
+CASE 543/640 snapkv longbench/lcc/375/8192 repeat=0
+[snapkv/longbench/lcc/375/8192] 64/64 tokens
+RESULT ok: longbench/lcc/375/8192 score=91.0 decode=35.704011295438875 token/s
+CASE 544/640 snapkv longbench/lcc/375/16384 repeat=0
+[snapkv/longbench/lcc/375/16384] 64/64 tokens
+RESULT ok: longbench/lcc/375/16384 score=91.0 decode=35.6240986632527 token/s
+CASE 545/640 snapkv longbench/lcc/244/8192 repeat=0
+[snapkv/longbench/lcc/244/8192] 64/64 tokens
+RESULT ok: longbench/lcc/244/8192 score=97.0 decode=34.409977958287016 token/s
+CASE 546/640 snapkv longbench/lcc/244/16384 repeat=0
+[snapkv/longbench/lcc/244/16384] 64/64 tokens
+RESULT ok: longbench/lcc/244/16384 score=97.0 decode=35.278844139626905 token/s
+CASE 547/640 snapkv longbench/lcc/497/8192 repeat=0
+[snapkv/longbench/lcc/497/8192] 64/64 tokens
+RESULT ok: longbench/lcc/497/8192 score=92.0 decode=35.683903313139254 token/s
+CASE 548/640 snapkv longbench/lcc/497/16384 repeat=0
+[snapkv/longbench/lcc/497/16384] 64/64 tokens
+RESULT ok: longbench/lcc/497/16384 score=92.0 decode=35.86880678996087 token/s
+CASE 549/640 snapkv longbench/lcc/128/8192 repeat=0
+[snapkv/longbench/lcc/128/8192] 64/64 tokens
+RESULT ok: longbench/lcc/128/8192 score=78.0 decode=35.78974429239876 token/s
+CASE 550/640 snapkv longbench/lcc/128/16384 repeat=0
+[snapkv/longbench/lcc/128/16384] 64/64 tokens
+RESULT ok: longbench/lcc/128/16384 score=78.0 decode=35.57926263476455 token/s
+CASE 551/640 snapkv longbench/lcc/457/8192 repeat=0
+[snapkv/longbench/lcc/457/8192] 64/64 tokens
+RESULT ok: longbench/lcc/457/8192 score=59.0 decode=35.717990110755125 token/s
+CASE 552/640 snapkv longbench/lcc/457/16384 repeat=0
+[snapkv/longbench/lcc/457/16384] 64/64 tokens
+RESULT ok: longbench/lcc/457/16384 score=59.0 decode=35.7945864043947 token/s
+CASE 553/640 snapkv longbench/lcc/102/8192 repeat=0
+[snapkv/longbench/lcc/102/8192] 64/64 tokens
+RESULT ok: longbench/lcc/102/8192 score=100.0 decode=35.046465497220105 token/s
+CASE 554/640 snapkv longbench/lcc/102/16384 repeat=0
+[snapkv/longbench/lcc/102/16384] 64/64 tokens
+RESULT ok: longbench/lcc/102/16384 score=100.0 decode=35.6858145356015 token/s
+CASE 555/640 snapkv longbench/lcc/351/8192 repeat=0
+[snapkv/longbench/lcc/351/8192] 64/64 tokens
+RESULT ok: longbench/lcc/351/8192 score=43.0 decode=35.742200639151896 token/s
+CASE 556/640 snapkv longbench/lcc/351/16384 repeat=0
+[snapkv/longbench/lcc/351/16384] 64/64 tokens
+RESULT ok: longbench/lcc/351/16384 score=43.0 decode=35.82861070460707 token/s
+CASE 557/640 snapkv longbench/lcc/76/8192 repeat=0
+[snapkv/longbench/lcc/76/8192] 64/64 tokens
+RESULT ok: longbench/lcc/76/8192 score=87.0 decode=35.30702671063084 token/s
+CASE 558/640 snapkv longbench/lcc/76/16384 repeat=0
+[snapkv/longbench/lcc/76/16384] 64/64 tokens
+RESULT ok: longbench/lcc/76/16384 score=87.0 decode=35.361443444785664 token/s
+CASE 559/640 snapkv longbench/lcc/429/8192 repeat=0
+[snapkv/longbench/lcc/429/8192] 64/64 tokens
+RESULT ok: longbench/lcc/429/8192 score=100.0 decode=35.696896308401655 token/s
+CASE 560/640 snapkv longbench/lcc/429/16384 repeat=0
+[snapkv/longbench/lcc/429/16384] 64/64 tokens
+RESULT ok: longbench/lcc/429/16384 score=100.0 decode=35.701361938222874 token/s
+CASE 561/640 snapkv longbench/lcc/344/8192 repeat=0
+[snapkv/longbench/lcc/344/8192] 64/64 tokens
+RESULT ok: longbench/lcc/344/8192 score=59.0 decode=35.294745089540974 token/s
+CASE 562/640 snapkv longbench/lcc/344/16384 repeat=0
+[snapkv/longbench/lcc/344/16384] 64/64 tokens
+RESULT ok: longbench/lcc/344/16384 score=59.0 decode=35.66581332326427 token/s
+CASE 563/640 snapkv longbench/lcc/441/8192 repeat=0
+[snapkv/longbench/lcc/441/8192] 64/64 tokens
+RESULT ok: longbench/lcc/441/8192 score=100.0 decode=35.92995252018705 token/s
+CASE 564/640 snapkv longbench/lcc/441/16384 repeat=0
+[snapkv/longbench/lcc/441/16384] 64/64 tokens
+RESULT ok: longbench/lcc/441/16384 score=100.0 decode=35.59545834901036 token/s
+CASE 565/640 snapkv longbench/lcc/240/8192 repeat=0
+[snapkv/longbench/lcc/240/8192] 64/64 tokens
+RESULT ok: longbench/lcc/240/8192 score=22.0 decode=35.63103618367869 token/s
+CASE 566/640 snapkv longbench/lcc/240/16384 repeat=0
+[snapkv/longbench/lcc/240/16384] 64/64 tokens
+RESULT ok: longbench/lcc/240/16384 score=22.0 decode=35.52349852782299 token/s
+CASE 567/640 snapkv longbench/lcc/17/8192 repeat=0
+[snapkv/longbench/lcc/17/8192] 64/64 tokens
+RESULT ok: longbench/lcc/17/8192 score=92.0 decode=35.47102230902783 token/s
+CASE 568/640 snapkv longbench/lcc/17/16384 repeat=0
+[snapkv/longbench/lcc/17/16384] 64/64 tokens
+RESULT ok: longbench/lcc/17/16384 score=92.0 decode=35.575978487165784 token/s
+CASE 569/640 snapkv longbench/lcc/165/8192 repeat=0
+[snapkv/longbench/lcc/165/8192] 64/64 tokens
+RESULT ok: longbench/lcc/165/8192 score=35.0 decode=35.65560029839531 token/s
+CASE 570/640 snapkv longbench/lcc/165/16384 repeat=0
+[snapkv/longbench/lcc/165/16384] 64/64 tokens
+RESULT ok: longbench/lcc/165/16384 score=35.0 decode=35.771415050424025 token/s
+CASE 571/640 snapkv longbench/lcc/94/8192 repeat=0
+[snapkv/longbench/lcc/94/8192] 64/64 tokens
+RESULT ok: longbench/lcc/94/8192 score=100.0 decode=35.64845284385078 token/s
+CASE 572/640 snapkv longbench/lcc/94/16384 repeat=0
+[snapkv/longbench/lcc/94/16384] 64/64 tokens
+RESULT ok: longbench/lcc/94/16384 score=100.0 decode=35.73277042080658 token/s
+CASE 573/640 snapkv longbench/lcc/119/8192 repeat=0
+[snapkv/longbench/lcc/119/8192] 64/64 tokens
+RESULT ok: longbench/lcc/119/8192 score=100.0 decode=35.301191119046464 token/s
+CASE 574/640 snapkv longbench/lcc/119/16384 repeat=0
+[snapkv/longbench/lcc/119/16384] 64/64 tokens
+RESULT ok: longbench/lcc/119/16384 score=100.0 decode=35.75846211277308 token/s
+CASE 575/640 snapkv longbench/lcc/437/8192 repeat=0
+[snapkv/longbench/lcc/437/8192] 64/64 tokens
+RESULT ok: longbench/lcc/437/8192 score=55.00000000000001 decode=35.61061201912866 token/s
+CASE 576/640 snapkv longbench/lcc/437/16384 repeat=0
+[snapkv/longbench/lcc/437/16384] 64/64 tokens
+RESULT ok: longbench/lcc/437/16384 score=55.00000000000001 decode=35.596267467672085 token/s
+CASE 577/640 snapkv longbench/repobench-p/309/8192 repeat=0
+[snapkv/longbench/repobench-p/309/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/309/8192 score=31.0 decode=35.2817925370328 token/s
+CASE 578/640 snapkv longbench/repobench-p/309/16384 repeat=0
+[snapkv/longbench/repobench-p/309/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/309/16384 score=30.0 decode=35.89631963591558 token/s
+CASE 579/640 snapkv longbench/repobench-p/169/8192 repeat=0
+[snapkv/longbench/repobench-p/169/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/169/8192 score=100.0 decode=35.262435822835975 token/s
+CASE 580/640 snapkv longbench/repobench-p/169/16384 repeat=0
+[snapkv/longbench/repobench-p/169/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/169/16384 score=100.0 decode=35.33399064219054 token/s
+CASE 581/640 snapkv longbench/repobench-p/195/8192 repeat=0
+[snapkv/longbench/repobench-p/195/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/195/8192 score=32.0 decode=35.951253904210546 token/s
+CASE 582/640 snapkv longbench/repobench-p/195/16384 repeat=0
+[snapkv/longbench/repobench-p/195/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/195/16384 score=27.0 decode=35.25742409245126 token/s
+CASE 583/640 snapkv longbench/repobench-p/445/8192 repeat=0
+[snapkv/longbench/repobench-p/445/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/445/8192 score=37.0 decode=35.73818588364417 token/s
+CASE 584/640 snapkv longbench/repobench-p/445/16384 repeat=0
+[snapkv/longbench/repobench-p/445/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/445/16384 score=37.0 decode=35.789449232406476 token/s
+CASE 585/640 snapkv longbench/repobench-p/442/8192 repeat=0
+[snapkv/longbench/repobench-p/442/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/442/8192 score=54.0 decode=35.6587636824661 token/s
+CASE 586/640 snapkv longbench/repobench-p/442/16384 repeat=0
+[snapkv/longbench/repobench-p/442/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/442/16384 score=54.0 decode=35.31602326004184 token/s
+CASE 587/640 snapkv longbench/repobench-p/251/8192 repeat=0
+[snapkv/longbench/repobench-p/251/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/251/8192 score=43.0 decode=35.75002293001219 token/s
+CASE 588/640 snapkv longbench/repobench-p/251/16384 repeat=0
+[snapkv/longbench/repobench-p/251/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/251/16384 score=43.0 decode=36.15845558558585 token/s
+CASE 589/640 snapkv longbench/repobench-p/48/8192 repeat=0
+[snapkv/longbench/repobench-p/48/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/48/8192 score=25.0 decode=35.58076795086213 token/s
+CASE 590/640 snapkv longbench/repobench-p/48/16384 repeat=0
+[snapkv/longbench/repobench-p/48/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/48/16384 score=32.0 decode=34.384791646786255 token/s
+CASE 591/640 snapkv longbench/repobench-p/387/8192 repeat=0
+[snapkv/longbench/repobench-p/387/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/387/8192 score=44.0 decode=35.86488819655988 token/s
+CASE 592/640 snapkv longbench/repobench-p/387/16384 repeat=0
+[snapkv/longbench/repobench-p/387/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/387/16384 score=35.0 decode=35.77330462367107 token/s
+CASE 593/640 snapkv longbench/repobench-p/347/8192 repeat=0
+[snapkv/longbench/repobench-p/347/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/347/8192 score=100.0 decode=35.63734820739501 token/s
+CASE 594/640 snapkv longbench/repobench-p/347/16384 repeat=0
+[snapkv/longbench/repobench-p/347/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/347/16384 score=100.0 decode=35.75826121905735 token/s
+CASE 595/640 snapkv longbench/repobench-p/58/8192 repeat=0
+[snapkv/longbench/repobench-p/58/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/58/8192 score=67.0 decode=35.598983239354816 token/s
+CASE 596/640 snapkv longbench/repobench-p/58/16384 repeat=0
+[snapkv/longbench/repobench-p/58/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/58/16384 score=66.0 decode=35.777344540500586 token/s
+CASE 597/640 snapkv longbench/repobench-p/11/8192 repeat=0
+[snapkv/longbench/repobench-p/11/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/11/8192 score=63.0 decode=35.68720859444876 token/s
+CASE 598/640 snapkv longbench/repobench-p/11/16384 repeat=0
+[snapkv/longbench/repobench-p/11/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/11/16384 score=63.0 decode=35.34357053368958 token/s
+CASE 599/640 snapkv longbench/repobench-p/211/8192 repeat=0
+[snapkv/longbench/repobench-p/211/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/211/8192 score=100.0 decode=35.79487008983578 token/s
+CASE 600/640 snapkv longbench/repobench-p/211/16384 repeat=0
+[snapkv/longbench/repobench-p/211/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/211/16384 score=100.0 decode=35.49925151222564 token/s
+CASE 601/640 snapkv longbench/repobench-p/490/8192 repeat=0
+[snapkv/longbench/repobench-p/490/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/490/8192 score=100.0 decode=35.40623232442417 token/s
+CASE 602/640 snapkv longbench/repobench-p/490/16384 repeat=0
+[snapkv/longbench/repobench-p/490/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/490/16384 score=49.0 decode=36.07009169113653 token/s
+CASE 603/640 snapkv longbench/repobench-p/357/8192 repeat=0
+[snapkv/longbench/repobench-p/357/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/357/8192 score=31.0 decode=35.45535938953203 token/s
+CASE 604/640 snapkv longbench/repobench-p/357/16384 repeat=0
+[snapkv/longbench/repobench-p/357/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/357/16384 score=31.0 decode=35.34484859717364 token/s
+CASE 605/640 snapkv longbench/repobench-p/22/8192 repeat=0
+[snapkv/longbench/repobench-p/22/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/22/8192 score=100.0 decode=35.83305272090123 token/s
+CASE 606/640 snapkv longbench/repobench-p/22/16384 repeat=0
+[snapkv/longbench/repobench-p/22/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/22/16384 score=100.0 decode=35.39998436352396 token/s
+CASE 607/640 snapkv longbench/repobench-p/375/8192 repeat=0
+[snapkv/longbench/repobench-p/375/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/375/8192 score=30.0 decode=35.71272056880884 token/s
+CASE 608/640 snapkv longbench/repobench-p/375/16384 repeat=0
+[snapkv/longbench/repobench-p/375/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/375/16384 score=30.0 decode=35.78615620453515 token/s
+CASE 609/640 snapkv longbench/repobench-p/244/8192 repeat=0
+[snapkv/longbench/repobench-p/244/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/244/8192 score=42.0 decode=35.77655724485008 token/s
+CASE 610/640 snapkv longbench/repobench-p/244/16384 repeat=0
+[snapkv/longbench/repobench-p/244/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/244/16384 score=39.0 decode=35.54965447033557 token/s
+CASE 611/640 snapkv longbench/repobench-p/497/8192 repeat=0
+[snapkv/longbench/repobench-p/497/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/497/8192 score=55.00000000000001 decode=35.83294690016301 token/s
+CASE 612/640 snapkv longbench/repobench-p/497/16384 repeat=0
+[snapkv/longbench/repobench-p/497/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/497/16384 score=55.00000000000001 decode=35.767729550559686 token/s
+CASE 613/640 snapkv longbench/repobench-p/128/8192 repeat=0
+[snapkv/longbench/repobench-p/128/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/128/8192 score=24.0 decode=35.78174304941341 token/s
+CASE 614/640 snapkv longbench/repobench-p/128/16384 repeat=0
+[snapkv/longbench/repobench-p/128/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/128/16384 score=24.0 decode=35.70656516796893 token/s
+CASE 615/640 snapkv longbench/repobench-p/457/8192 repeat=0
+[snapkv/longbench/repobench-p/457/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/457/8192 score=100.0 decode=35.90704978125759 token/s
+CASE 616/640 snapkv longbench/repobench-p/457/16384 repeat=0
+[snapkv/longbench/repobench-p/457/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/457/16384 score=100.0 decode=35.87135534162664 token/s
+CASE 617/640 snapkv longbench/repobench-p/102/8192 repeat=0
+[snapkv/longbench/repobench-p/102/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/102/8192 score=72.0 decode=35.58444989374419 token/s
+CASE 618/640 snapkv longbench/repobench-p/102/16384 repeat=0
+[snapkv/longbench/repobench-p/102/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/102/16384 score=56.99999999999999 decode=35.82363701776527 token/s
+CASE 619/640 snapkv longbench/repobench-p/351/8192 repeat=0
+[snapkv/longbench/repobench-p/351/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/351/8192 score=22.0 decode=35.49005687657513 token/s
+CASE 620/640 snapkv longbench/repobench-p/351/16384 repeat=0
+[snapkv/longbench/repobench-p/351/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/351/16384 score=35.0 decode=36.07044415463687 token/s
+CASE 621/640 snapkv longbench/repobench-p/76/8192 repeat=0
+[snapkv/longbench/repobench-p/76/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/76/8192 score=54.0 decode=35.39486236280033 token/s
+CASE 622/640 snapkv longbench/repobench-p/76/16384 repeat=0
+[snapkv/longbench/repobench-p/76/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/76/16384 score=48.0 decode=35.36367866335862 token/s
+CASE 623/640 snapkv longbench/repobench-p/429/8192 repeat=0
+[snapkv/longbench/repobench-p/429/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/429/8192 score=36.0 decode=35.47884973916972 token/s
+CASE 624/640 snapkv longbench/repobench-p/429/16384 repeat=0
+[snapkv/longbench/repobench-p/429/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/429/16384 score=36.0 decode=35.41294111869494 token/s
+CASE 625/640 snapkv longbench/repobench-p/344/8192 repeat=0
+[snapkv/longbench/repobench-p/344/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/344/8192 score=100.0 decode=35.54340615248242 token/s
+CASE 626/640 snapkv longbench/repobench-p/344/16384 repeat=0
+[snapkv/longbench/repobench-p/344/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/344/16384 score=100.0 decode=35.74303163668834 token/s
+CASE 627/640 snapkv longbench/repobench-p/441/8192 repeat=0
+[snapkv/longbench/repobench-p/441/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/441/8192 score=98.0 decode=35.233326383475266 token/s
+CASE 628/640 snapkv longbench/repobench-p/441/16384 repeat=0
+[snapkv/longbench/repobench-p/441/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/441/16384 score=100.0 decode=35.6613318126706 token/s
+CASE 629/640 snapkv longbench/repobench-p/240/8192 repeat=0
+[snapkv/longbench/repobench-p/240/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/240/8192 score=100.0 decode=35.56135810334499 token/s
+CASE 630/640 snapkv longbench/repobench-p/240/16384 repeat=0
+[snapkv/longbench/repobench-p/240/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/240/16384 score=100.0 decode=35.40335611691228 token/s
+CASE 631/640 snapkv longbench/repobench-p/17/8192 repeat=0
+[snapkv/longbench/repobench-p/17/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/17/8192 score=34.0 decode=35.49885235469705 token/s
+CASE 632/640 snapkv longbench/repobench-p/17/16384 repeat=0
+[snapkv/longbench/repobench-p/17/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/17/16384 score=72.0 decode=35.4843483486939 token/s
+CASE 633/640 snapkv longbench/repobench-p/165/8192 repeat=0
+[snapkv/longbench/repobench-p/165/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/165/8192 score=16.0 decode=35.191069108208396 token/s
+CASE 634/640 snapkv longbench/repobench-p/165/16384 repeat=0
+[snapkv/longbench/repobench-p/165/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/165/16384 score=16.0 decode=35.600958381492134 token/s
+CASE 635/640 snapkv longbench/repobench-p/94/8192 repeat=0
+[snapkv/longbench/repobench-p/94/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/94/8192 score=19.0 decode=35.40231441860149 token/s
+CASE 636/640 snapkv longbench/repobench-p/94/16384 repeat=0
+[snapkv/longbench/repobench-p/94/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/94/16384 score=8.0 decode=35.2416145968937 token/s
+CASE 637/640 snapkv longbench/repobench-p/119/8192 repeat=0
+[snapkv/longbench/repobench-p/119/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/119/8192 score=25.0 decode=35.04890353851914 token/s
+CASE 638/640 snapkv longbench/repobench-p/119/16384 repeat=0
+[snapkv/longbench/repobench-p/119/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/119/16384 score=25.0 decode=35.14595991805674 token/s
+CASE 639/640 snapkv longbench/repobench-p/437/8192 repeat=0
+[snapkv/longbench/repobench-p/437/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/437/8192 score=100.0 decode=35.653864275519396 token/s
+CASE 640/640 snapkv longbench/repobench-p/437/16384 repeat=0
+[snapkv/longbench/repobench-p/437/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/437/16384 score=100.0 decode=35.21951855186077 token/s

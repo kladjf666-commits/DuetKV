@@ -1,0 +1,97 @@
+{
+  "id": "ruler/vt/9/8192",
+  "suite": "ruler",
+  "task": "vt",
+  "document_id": "9/8192",
+  "cluster_id": "vt/9",
+  "length_budget": 8192,
+  "input_sha256": "689846b9e9ab71d28e9b1294a0d8dd36d030dee0cae058d733e528e464e9bc8a",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": null,
+  "heldout_from_available_history": null,
+  "method": "full",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 8139,
+  "output_tokens": 15,
+  "output_ids": [
+    33260,
+    37630,
+    57,
+    1630,
+    1308,
+    9560,
+    426,
+    1753,
+    37,
+    25321,
+    39,
+    31565,
+    56841,
+    87240,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 1.067755026742816,
+  "prefill_and_compress_s": 1.067755026742816,
+  "decode_s": 0.365028565749526,
+  "decode_tokens_per_s": 38.35316277577703,
+  "generation_wall_s_including_instrumentation": 1.4331873240880668,
+  "prefill_storage": {
+    "physical_bytes": 1066795008,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1066795008,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 1068630016,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1068630016,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 8139,
+    "stored_heads": 8
+  },
+  "final_trace": {
+    "physical_tokens": 8153,
+    "stored_heads": 8
+  },
+  "peak_allocated_bytes": 18224486400,
+  "peak_reserved_bytes": 18702401536,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 14,
+      "seconds": 0.365028565749526,
+      "tokens": 14
+    }
+  ],
+  "effective_options": {},
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 100.0,
+  "metric": "official_string_match_all",
+  "status": "ok",
+  "prediction": " NLXLZ XROEG BINGF WRHQR LWIBC",
+  "gpu_before": {
+    "time": 1793319427.9107983,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15894 MiB, 85 %, 58, 362.93 W, 2655 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793319429.4369082,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 18264 MiB, 100 %, 65, 353.06 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793319429.4369135
+}

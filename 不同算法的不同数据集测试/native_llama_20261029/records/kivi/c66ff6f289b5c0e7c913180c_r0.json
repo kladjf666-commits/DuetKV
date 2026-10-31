@@ -1,0 +1,98 @@
+{
+  "id": "longbench/narrativeqa/111/16384",
+  "suite": "longbench",
+  "task": "narrativeqa",
+  "document_id": "111/16384",
+  "cluster_id": "narrativeqa/994ea4ff500e7668190487704e3296a83410b5a247e46785aa350e36f0be7ad6",
+  "length_budget": 16384,
+  "input_sha256": "b66ee85ca83fde004f2df282c33597e030504eb2fa60b3dad9a74edbbb703b25",
+  "truncated_input": true,
+  "capacity_extension": null,
+  "evaluation_split": "historical_retest",
+  "heldout_from_available_history": false,
+  "method": "kivi",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 16376,
+  "output_tokens": 6,
+  "output_ids": [
+    32,
+    21296,
+    54594,
+    8448,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 2.3914128779433668,
+  "prefill_and_compress_s": 2.3914128779433668,
+  "decode_s": 0.2617460140027106,
+  "decode_tokens_per_s": 19.102487650292247,
+  "generation_wall_s_including_instrumentation": 2.655081349890679,
+  "prefill_storage": {
+    "physical_bytes": 681934848,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 681934848,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 682364928,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 682364928,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "prefill_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 16376
+  },
+  "final_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 16381
+  },
+  "peak_allocated_bytes": 18702667776,
+  "peak_reserved_bytes": 19811794944,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 5,
+      "seconds": 0.2617460140027106,
+      "tokens": 5
+    }
+  ],
+  "effective_options": {
+    "k_bits": 4,
+    "v_bits": 4,
+    "group_size": 32,
+    "residual_length": 128,
+    "use_flash": true
+  },
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 40.0,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "A Han scout ship.",
+  "gpu_before": {
+    "time": 1793297273.2798464,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 16002 MiB, 48 %, 55, 315.84 W, 2655 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793297276.0406961,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 19322 MiB, 48 %, 57, 366.39 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793297276.0407007
+}

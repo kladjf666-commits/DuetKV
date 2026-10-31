@@ -1,0 +1,89 @@
+{
+  "id": "longbench/qasper/90/16384",
+  "suite": "longbench",
+  "task": "qasper",
+  "document_id": "90/16384",
+  "cluster_id": "qasper/82f3470f946719279d846f1a408bffb7f4166ee27131441b8542717e9e51b992",
+  "length_budget": 16384,
+  "input_sha256": "2f18b2259ba10a5020d98512ee0cefde86d85ca54e4b18b6b9b660ff528cf91d",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": "heldout",
+  "heldout_from_available_history": true,
+  "method": "full",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 5676,
+  "output_tokens": 7,
+  "output_ids": [
+    791,
+    328,
+    2232,
+    1846,
+    10550,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 0.7481447290629148,
+  "prefill_and_compress_s": 0.7481447290629148,
+  "decode_s": 0.15957886911928654,
+  "decode_tokens_per_s": 37.598963027585754,
+  "generation_wall_s_including_instrumentation": 0.908153897151351,
+  "prefill_storage": {
+    "physical_bytes": 743964672,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 743964672,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 744751104,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 744751104,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 5676,
+    "stored_heads": 8
+  },
+  "final_trace": {
+    "physical_tokens": 5682,
+    "stored_heads": 8
+  },
+  "peak_allocated_bytes": 17576038400,
+  "peak_reserved_bytes": 17955815424,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 6,
+      "seconds": 0.15957886911928654,
+      "tokens": 6
+    }
+  ],
+  "effective_options": {},
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 66.66666666666666,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "The SQuAD dataset.",
+  "gpu_before": {
+    "time": 1793313323.210103,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15894 MiB, 0 %, 53, 295.55 W, 2670 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793313324.2096508,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 17552 MiB, 100 %, 63, 252.15 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793313324.2096555
+}

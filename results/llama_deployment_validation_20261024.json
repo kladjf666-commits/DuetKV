@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-24",
+  "scope": "Code integration only; no pretrained Llama weights downloaded or executed",
+  "profiles": [
+    "Llama-2-7b-chat-hf",
+    "Llama-3.1-8B-Instruct"
+  ],
+  "methods": [
+    "full",
+    "kivi",
+    "snapkv",
+    "scope",
+    "pyramidkv",
+    "phasekv"
+  ],
+  "tests": {
+    "total": 40,
+    "passed": 35,
+    "skipped": 5,
+    "skips": {
+      "cuda_checks": 4,
+      "optional_official_scope_differential": 1
+    },
+    "log": "results/llama_code_integration_20261024.log"
+  },
+  "cli_checks": {
+    "help_passed": 5,
+    "missing_checkpoint_correctly_rejected": 2,
+    "details": "results/llama_cli_validation_20261024.json"
+  },
+  "verified_on_cpu": [
+    "Expected architecture parameter counts via meta tensors",
+    "Unchanged dense forward after native Llama attention wrappers",
+    "Real uint8 packed cache storage without dense shadow",
+    "MHA and 4:1 GQA eviction/absolute position handling",
+    "Native Llama-3.1 scaled RoPE in random small models",
+    "All EOS IDs and fixed-output override",
+    "No duplicated BOS in chat template",
+    "Existing Qwen/reporting compatibility"
+  ],
+  "pending": [
+    "GPU packed decode reference test",
+    "Full pretrained weights loading",
+    "Pretrained model quality, long-input memory and throughput"
+  ],
+  "architecture_source_status": "Expected schemas; gated official raw configs unavailable to browser. Runtime checks actual original config before weight allocation.",
+  "gpu_check_command": "python -m unittest tests.test_llama_deployment.TestLlamaGPU -v",
+  "comparison_basis": "Same defaults as Qwen profile, not equal physical KV budgets",
+  "scope_variant": "ALLKV+Slide; no Adaptive/Discontinuous",
+  "docs": [
+    "models/Llama-2-7b-chat-hf/README.md",
+    "models/Llama-3.1-8B-Instruct/README.md"
+  ]
+}

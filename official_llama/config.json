@@ -1,0 +1,17 @@
+{
+  "model": "meta-llama/Llama-3.1-8B-Instruct",
+  "dtype": "float16",
+  "batch_size": 1,
+  "transformers": "4.46.3",
+  "torch": "2.5.1",
+  "flash_attn": "2.7.4.post1",
+  "methods": {
+    "full": {},
+    "kivi": {"k_bits": 4, "v_bits": 4, "group_size": 32, "residual_length": 128, "use_flash": true},
+    "snapkv": {"max_capacity_prompt": 2048, "window_size": 32, "kernel_size": 7, "pooling": "maxpool"},
+    "scope": {"max_capacity_prompt": 2048, "window_size": 8, "kernel_size": 7, "pooling": "maxpool", "decoding_window_size": 512, "decoding_recent_size": 256, "decoding_metric": "discontinuous"},
+    "scope_slide": {"max_capacity_prompt": 2048, "window_size": 8, "kernel_size": 7, "pooling": "maxpool", "decoding_window_size": 512, "decoding_recent_size": 256, "decoding_metric": "slide"},
+    "scope_adaptive": {"max_capacity_prompt": 2048, "window_size": 8, "kernel_size": 7, "pooling": "maxpool", "decoding_window_size": 512, "decoding_recent_size": 256, "decoding_metric": "adaptive"},
+    "phasekv": {"prefill_keep_ratio": 0.7, "obs_window": 32, "sink_tokens": 0, "prompt_bits": 4, "cold_bits": 4, "group_size": 32, "recent_window": 128, "lazy_g": 16, "decode_keep_ratio": 1.0, "optimizations": {"fused_quantize": true, "reuse_workspace": true, "paged_cold": true, "page_slots": 32, "cold_group": 8, "specialized_4bit": true, "gqa_reuse": false, "hot_ring": true}}
+  }
+}

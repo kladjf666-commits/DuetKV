@@ -1,0 +1,117 @@
+{
+  "id": "longbench/qasper/136/8192",
+  "suite": "longbench",
+  "task": "qasper",
+  "document_id": "136/8192",
+  "cluster_id": "qasper/2ea2e50d721680e315e68067bdf811430ff5dbad089f75a20ec5572c36abd87c",
+  "length_budget": 8192,
+  "input_sha256": "031b812f6315bcab5032f147b362ce3679d29583a3f5f464661f4b0db5ee2150",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": "heldout",
+  "heldout_from_available_history": true,
+  "method": "snapkv",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 6325,
+  "output_tokens": 30,
+  "output_ids": [
+    791,
+    1005,
+    315,
+    264,
+    220,
+    16,
+    48435,
+    62822,
+    95810,
+    304,
+    279,
+    15432,
+    38,
+    12450,
+    2390,
+    734,
+    374,
+    38279,
+    311,
+    1701,
+    264,
+    7447,
+    48435,
+    62822,
+    95810,
+    320,
+    2735,
+    47,
+    570,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 0.8498479388654232,
+  "prefill_and_compress_s": 0.8498479388654232,
+  "decode_s": 0.814524260815233,
+  "decode_tokens_per_s": 35.60360494477447,
+  "generation_wall_s_including_instrumentation": 1.6649262686260045,
+  "prefill_storage": {
+    "physical_bytes": 1073741824,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1073741824,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 1088946176,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1088946176,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 2048,
+    "stored_heads": 32
+  },
+  "final_trace": {
+    "physical_tokens": 2077,
+    "stored_heads": 32
+  },
+  "peak_allocated_bytes": 18235697664,
+  "peak_reserved_bytes": 18608029696,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 29,
+      "seconds": 0.814524260815233,
+      "tokens": 29
+    }
+  ],
+  "effective_options": {
+    "max_capacity_prompt": 2048,
+    "window_size": 32,
+    "kernel_size": 7,
+    "pooling": "maxpool"
+  },
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 10.81081081081081,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "The use of a 1-layer perceptron in the AGGREGATE function is inferior to using a multi-layer perceptron (MLP).",
+  "gpu_before": {
+    "time": 1793303071.5297847,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15896 MiB, 0 %, 53, 251.96 W, 2670 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793303073.2903943,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 18176 MiB, 53 %, 57, 278.70 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793303073.2904
+}

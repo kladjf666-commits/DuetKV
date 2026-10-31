@@ -1,0 +1,117 @@
+{
+  "id": "longbench/qasper/146/8192",
+  "suite": "longbench",
+  "task": "qasper",
+  "document_id": "146/8192",
+  "cluster_id": "qasper/7c5d0624b70140835ae67963f5f9784e9c9fe3669ce3be88ca96258ee96d4f7a",
+  "length_budget": 8192,
+  "input_sha256": "796a4c19a6b4b1941e4a1ba030cdbdf6f403b7241d6a2220a43ce06e9478d488",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": "heldout",
+  "heldout_from_available_history": true,
+  "method": "full",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 2495,
+  "output_tokens": 35,
+  "output_ids": [
+    791,
+    30525,
+    1511,
+    2997,
+    66279,
+    828,
+    505,
+    426,
+    3336,
+    6124,
+    15,
+    11,
+    8071,
+    94949,
+    828,
+    11,
+    659,
+    65319,
+    5403,
+    892,
+    11,
+    323,
+    264,
+    12735,
+    315,
+    14253,
+    30427,
+    323,
+    279,
+    30631,
+    69981,
+    596,
+    14637,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 0.3020580690354109,
+  "prefill_and_compress_s": 0.3020580690354109,
+  "decode_s": 0.8771966528147459,
+  "decode_tokens_per_s": 38.759837820745105,
+  "generation_wall_s_including_instrumentation": 1.1796524873934686,
+  "prefill_storage": {
+    "physical_bytes": 327024640,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 327024640,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 331481088,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 331481088,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 2495,
+    "stored_heads": 8
+  },
+  "final_trace": {
+    "physical_tokens": 2529,
+    "stored_heads": 8
+  },
+  "peak_allocated_bytes": 16730498560,
+  "peak_reserved_bytes": 16974348288,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 34,
+      "seconds": 0.8771966528147459,
+      "tokens": 34
+    }
+  ],
+  "effective_options": {},
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 26.08695652173913,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "The datasets used include ERP data from BIBREF0, eye-tracking data, self-paced reading time, and a chapter of Harry Potter and the Sorcerer's Stone.",
+  "gpu_before": {
+    "time": 1793313252.7892036,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15894 MiB, 0 %, 64, 226.47 W, 2655 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793313254.062263,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 16616 MiB, 75 %, 55, 276.84 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793313254.0622673
+}

@@ -1,0 +1,114 @@
+{
+  "id": "longbench/multifieldqa_en/32/16384",
+  "suite": "longbench",
+  "task": "multifieldqa_en",
+  "document_id": "32/16384",
+  "cluster_id": "multifieldqa_en/8f493f652fb16680515a6101af10f591353c977f8ac53a35208d750722e5fafc",
+  "length_budget": 16384,
+  "input_sha256": "3bedcf88e6ca528e35cf136ce9fbb141fa83e3ff7a1f352dee240d99e0824689",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": "heldout",
+  "heldout_from_available_history": true,
+  "method": "kivi",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 7731,
+  "output_tokens": 22,
+  "output_ids": [
+    791,
+    26954,
+    15407,
+    279,
+    5209,
+    1486,
+    315,
+    279,
+    50977,
+    369,
+    279,
+    8040,
+    320,
+    438,
+    837,
+    13167,
+    291,
+    8,
+    3185,
+    7090,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 1.0341399107128382,
+  "prefill_and_compress_s": 1.0341399107128382,
+  "decode_s": 1.047210190910846,
+  "decode_tokens_per_s": 20.05328078571748,
+  "generation_wall_s_including_instrumentation": 2.0825538840144873,
+  "prefill_storage": {
+    "physical_bytes": 324726784,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 324726784,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 326533120,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 326533120,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "prefill_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 7731
+  },
+  "final_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 7752
+  },
+  "peak_allocated_bytes": 17324848640,
+  "peak_reserved_bytes": 17947426816,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 21,
+      "seconds": 1.047210190910846,
+      "tokens": 21
+    }
+  ],
+  "effective_options": {
+    "k_bits": 4,
+    "v_bits": 4,
+    "group_size": 32,
+    "residual_length": 128,
+    "use_flash": true
+  },
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 66.66666666666666,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "The baseline references the mid point of the firewall for the developed (and true dimensioned) side panel.",
+  "gpu_before": {
+    "time": 1793297483.4437435,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 16002 MiB, 48 %, 49, 143.56 W, 2670 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793297485.6230986,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 17544 MiB, 48 %, 53, 223.46 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793297485.6231027
+}

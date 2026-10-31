@@ -1,0 +1,129 @@
+{
+  "id": "ruler/cwe/6/8192",
+  "suite": "ruler",
+  "task": "cwe",
+  "document_id": "6/8192",
+  "cluster_id": "cwe/6",
+  "length_budget": 8192,
+  "input_sha256": "131df06ef3536ff3718a1bf5acb1e12d75fa1b109f75c5d7666c7f850f8967f9",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": null,
+  "heldout_from_available_history": null,
+  "method": "snapkv",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 7935,
+  "output_tokens": 42,
+  "output_ids": [
+    220,
+    16,
+    13,
+    7732,
+    220,
+    17,
+    13,
+    11879,
+    220,
+    18,
+    13,
+    21546,
+    220,
+    19,
+    13,
+    42863,
+    220,
+    20,
+    13,
+    1176,
+    220,
+    21,
+    13,
+    13160,
+    220,
+    22,
+    13,
+    6916,
+    77333,
+    220,
+    23,
+    13,
+    40828,
+    220,
+    24,
+    13,
+    7732,
+    220,
+    605,
+    13,
+    42863,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 1.0576829961501062,
+  "prefill_and_compress_s": 1.0576829961501062,
+  "decode_s": 1.1470488090999424,
+  "decode_tokens_per_s": 35.74390180673442,
+  "generation_wall_s_including_instrumentation": 2.2052203780040145,
+  "prefill_storage": {
+    "physical_bytes": 1073741824,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1073741824,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 1095237632,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1095237632,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 2048,
+    "stored_heads": 32
+  },
+  "final_trace": {
+    "physical_tokens": 2089,
+    "stored_heads": 32
+  },
+  "peak_allocated_bytes": 18235710464,
+  "peak_reserved_bytes": 18857590784,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 41,
+      "seconds": 1.1470488090999424,
+      "tokens": 41
+    }
+  ],
+  "effective_options": {
+    "max_capacity_prompt": 2048,
+    "window_size": 32,
+    "kernel_size": 7,
+    "pooling": "maxpool"
+  },
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 70.0,
+  "metric": "official_string_match_all",
+  "status": "ok",
+  "prediction": " 1. wood 2. journey 3. navigate 4. therapist 5. first 6. marked 7. arm-rest 8. salon 9. wood 10. therapist",
+  "gpu_before": {
+    "time": 1793316890.9604452,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15896 MiB, 78 %, 50, 212.84 W, 2670 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793316893.2559612,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 18414 MiB, 78 %, 56, 289.90 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793316893.2559674
+}

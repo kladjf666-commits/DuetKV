@@ -1,0 +1,97 @@
+{
+  "id": "longbench/narrativeqa/198/8192",
+  "suite": "longbench",
+  "task": "narrativeqa",
+  "document_id": "198/8192",
+  "cluster_id": "narrativeqa/532131d29ea9074c8da292835dec2b5c388cbfc862cb9513229594d970673308",
+  "length_budget": 8192,
+  "input_sha256": "c57ef904e70bf55e4632a5fb7bb2ea2b4f551827c47dba7682f5c1bd82d11f6d",
+  "truncated_input": true,
+  "capacity_extension": null,
+  "evaluation_split": "historical_retest",
+  "heldout_from_available_history": false,
+  "method": "snapkv",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 8184,
+  "output_tokens": 10,
+  "output_ids": [
+    791,
+    90249,
+    1565,
+    596,
+    4538,
+    11,
+    43342,
+    6015,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 1.0853473520837724,
+  "prefill_and_compress_s": 1.0853473520837724,
+  "decode_s": 0.2560298228636384,
+  "decode_tokens_per_s": 35.152154929987994,
+  "generation_wall_s_including_instrumentation": 1.342254193034023,
+  "prefill_storage": {
+    "physical_bytes": 1073741824,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1073741824,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 1078460416,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1078460416,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 2048,
+    "stored_heads": 32
+  },
+  "final_trace": {
+    "physical_tokens": 2057,
+    "stored_heads": 32
+  },
+  "peak_allocated_bytes": 18236982272,
+  "peak_reserved_bytes": 18658361344,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 9,
+      "seconds": 0.2560298228636384,
+      "tokens": 9
+    }
+  ],
+  "effective_options": {
+    "max_capacity_prompt": 2048,
+    "window_size": 32,
+    "kernel_size": 7,
+    "pooling": "maxpool"
+  },
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 0,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "The juggler's son, Mikael.",
+  "gpu_before": {
+    "time": 1793302965.2423823,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15896 MiB, 100 %, 56, 370.04 W, 2655 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793302966.6858091,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 18224 MiB, 100 %, 63, 321.16 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793302966.6858153
+}

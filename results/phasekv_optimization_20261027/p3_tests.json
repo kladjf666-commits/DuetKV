@@ -1,0 +1,31 @@
+{
+  "tests_run": 13,
+  "failures": [],
+  "errors": [],
+  "skips": [
+    [
+      "test_cached_workspace_survives_steps_and_refreshes_on_cooling (test_phasekv_segmented_decode.TestSegmentedKernels.test_cached_workspace_survives_steps_and_refreshes_on_cooling)",
+      "requires CUDA + Triton or TRITON_INTERPRET=1"
+    ],
+    [
+      "test_grouped_and_specialized_match_dense (test_phasekv_segmented_decode.TestSegmentedKernels.test_grouped_and_specialized_match_dense)",
+      "requires CUDA + Triton or TRITON_INTERPRET=1"
+    ],
+    [
+      "test_mixed_bits_tails_hot_and_many_segments_match_dense (test_phasekv_segmented_decode.TestSegmentedKernels.test_mixed_bits_tails_hot_and_many_segments_match_dense)",
+      "requires CUDA + Triton or TRITON_INTERPRET=1"
+    ],
+    [
+      "test_auto_and_manual_match_dense_quantized_reference (test_phasekv_launch_config.TestPackedAutoLaunch.test_auto_and_manual_match_dense_quantized_reference)",
+      "requires CUDA"
+    ]
+  ],
+  "successful": true,
+  "torch": "2.5.1+cpu",
+  "cuda_available": false,
+  "patterns": [
+    "test_phasekv_paged_storage.py",
+    "test_phasekv_segmented_decode.py",
+    "test_phasekv_launch_config.py"
+  ]
+}

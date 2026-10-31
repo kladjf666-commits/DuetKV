@@ -1,0 +1,2333 @@
+Loading ONE model for kivi/longbench; 640 records pending
+You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+LlamaForCausalLM_KIVI has generative capabilities, as `prepare_inputs_for_generation` is explicitly overwritten. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards:  25%|██▌       | 1/4 [03:20<10:01, 200.66s/it]
+Loading checkpoint shards:  50%|█████     | 2/4 [06:39<06:39, 199.63s/it]
+Loading checkpoint shards:  75%|███████▌  | 3/4 [09:59<03:19, 199.79s/it]
+Loading checkpoint shards: 100%|██████████| 4/4 [10:50<00:00, 140.84s/it]
+Loading checkpoint shards: 100%|██████████| 4/4 [10:50<00:00, 162.51s/it]
+CASE 1/640 kivi longbench/narrativeqa/97/8192 repeat=0
+[kivi/longbench/narrativeqa/97/8192] 13/128 tokens
+/data/phasekv-native-venv/lib/python3.10/site-packages/fuzzywuzzy/fuzz.py:11: UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
+  warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
+RESULT ok: longbench/narrativeqa/97/8192 score=0 decode=10.98108510051775 token/s
+CASE 2/640 kivi longbench/narrativeqa/97/16384 repeat=0
+[kivi/longbench/narrativeqa/97/16384] 7/128 tokens
+RESULT ok: longbench/narrativeqa/97/16384 score=0 decode=19.26006506938091 token/s
+CASE 3/640 kivi longbench/narrativeqa/190/8192 repeat=0
+[kivi/longbench/narrativeqa/190/8192] 6/128 tokens
+RESULT ok: longbench/narrativeqa/190/8192 score=0 decode=19.793993132229378 token/s
+CASE 4/640 kivi longbench/narrativeqa/190/16384 repeat=0
+[kivi/longbench/narrativeqa/190/16384] 7/128 tokens
+RESULT ok: longbench/narrativeqa/190/16384 score=0 decode=18.65197634220025 token/s
+CASE 5/640 kivi longbench/narrativeqa/12/8192 repeat=0
+[kivi/longbench/narrativeqa/12/8192] 4/128 tokens
+RESULT ok: longbench/narrativeqa/12/8192 score=50.0 decode=18.742355105327675 token/s
+CASE 6/640 kivi longbench/narrativeqa/12/16384 repeat=0
+[kivi/longbench/narrativeqa/12/16384] 5/128 tokens
+RESULT ok: longbench/narrativeqa/12/16384 score=50.0 decode=19.138607648918423 token/s
+CASE 7/640 kivi longbench/narrativeqa/93/8192 repeat=0
+[kivi/longbench/narrativeqa/93/8192] 16/128 tokens
+RESULT ok: longbench/narrativeqa/93/8192 score=0 decode=19.771877257578883 token/s
+CASE 8/640 kivi longbench/narrativeqa/93/16384 repeat=0
+[kivi/longbench/narrativeqa/93/16384] 16/128 tokens
+RESULT ok: longbench/narrativeqa/93/16384 score=0 decode=19.86926187053655 token/s
+CASE 9/640 kivi longbench/narrativeqa/105/8192 repeat=0
+[kivi/longbench/narrativeqa/105/8192] 8/128 tokens
+RESULT ok: longbench/narrativeqa/105/8192 score=0 decode=19.677076403448726 token/s
+CASE 10/640 kivi longbench/narrativeqa/105/16384 repeat=0
+[kivi/longbench/narrativeqa/105/16384] 7/128 tokens
+RESULT ok: longbench/narrativeqa/105/16384 score=0 decode=18.528562081493433 token/s
+CASE 11/640 kivi longbench/narrativeqa/96/8192 repeat=0
+[kivi/longbench/narrativeqa/96/8192] 20/128 tokens
+RESULT ok: longbench/narrativeqa/96/8192 score=0 decode=20.01732713422846 token/s
+CASE 12/640 kivi longbench/narrativeqa/96/16384 repeat=0
+[kivi/longbench/narrativeqa/96/16384] 20/128 tokens
+RESULT ok: longbench/narrativeqa/96/16384 score=0 decode=19.756695478508068 token/s
+CASE 13/640 kivi longbench/narrativeqa/179/8192 repeat=0
+[kivi/longbench/narrativeqa/179/8192] 23/128 tokens
+RESULT ok: longbench/narrativeqa/179/8192 score=10.0 decode=19.932212644775145 token/s
+CASE 14/640 kivi longbench/narrativeqa/179/16384 repeat=0
+[kivi/longbench/narrativeqa/179/16384] 11/128 tokens
+RESULT ok: longbench/narrativeqa/179/16384 score=16.666666666666664 decode=18.9209080698483 token/s
+CASE 15/640 kivi longbench/narrativeqa/122/8192 repeat=0
+[kivi/longbench/narrativeqa/122/8192] 4/128 tokens
+RESULT ok: longbench/narrativeqa/122/8192 score=0 decode=18.542342460087212 token/s
+CASE 16/640 kivi longbench/narrativeqa/122/16384 repeat=0
+[kivi/longbench/narrativeqa/122/16384] 5/128 tokens
+RESULT ok: longbench/narrativeqa/122/16384 score=0 decode=18.747548282708554 token/s
+CASE 17/640 kivi longbench/narrativeqa/139/8192 repeat=0
+[kivi/longbench/narrativeqa/139/8192] 7/128 tokens
+RESULT ok: longbench/narrativeqa/139/8192 score=25.0 decode=19.188687203883987 token/s
+CASE 18/640 kivi longbench/narrativeqa/139/16384 repeat=0
+[kivi/longbench/narrativeqa/139/16384] 7/128 tokens
+RESULT ok: longbench/narrativeqa/139/16384 score=25.0 decode=19.02054684643575 token/s
+CASE 19/640 kivi longbench/narrativeqa/70/8192 repeat=0
+[kivi/longbench/narrativeqa/70/8192] 6/128 tokens
+RESULT ok: longbench/narrativeqa/70/8192 score=66.66666666666666 decode=19.61613545797809 token/s
+CASE 20/640 kivi longbench/narrativeqa/70/16384 repeat=0
+[kivi/longbench/narrativeqa/70/16384] 6/128 tokens
+RESULT ok: longbench/narrativeqa/70/16384 score=66.66666666666666 decode=19.442001736870676 token/s
+CASE 21/640 kivi longbench/narrativeqa/198/8192 repeat=0
+[kivi/longbench/narrativeqa/198/8192] 7/128 tokens
+RESULT ok: longbench/narrativeqa/198/8192 score=0 decode=19.920007763621257 token/s
+CASE 22/640 kivi longbench/narrativeqa/198/16384 repeat=0
+[kivi/longbench/narrativeqa/198/16384] 7/128 tokens
+RESULT ok: longbench/narrativeqa/198/16384 score=0 decode=19.460402337857783 token/s
+CASE 23/640 kivi longbench/narrativeqa/100/8192 repeat=0
+[kivi/longbench/narrativeqa/100/8192] 6/128 tokens
+RESULT ok: longbench/narrativeqa/100/8192 score=100.0 decode=19.44062690289881 token/s
+CASE 24/640 kivi longbench/narrativeqa/100/16384 repeat=0
+[kivi/longbench/narrativeqa/100/16384] 6/128 tokens
+RESULT ok: longbench/narrativeqa/100/16384 score=100.0 decode=19.075201263958842 token/s
+CASE 25/640 kivi longbench/narrativeqa/142/8192 repeat=0
+[kivi/longbench/narrativeqa/142/8192] 16/128 tokens
+RESULT ok: longbench/narrativeqa/142/8192 score=0 decode=19.83290576546613 token/s
+CASE 26/640 kivi longbench/narrativeqa/142/16384 repeat=0
+[kivi/longbench/narrativeqa/142/16384] 3/128 tokens
+RESULT ok: longbench/narrativeqa/142/16384 score=0 decode=17.290173992969727 token/s
+CASE 27/640 kivi longbench/narrativeqa/9/8192 repeat=0
+[kivi/longbench/narrativeqa/9/8192] 6/128 tokens
+RESULT ok: longbench/narrativeqa/9/8192 score=66.66666666666666 decode=19.74440114947253 token/s
+CASE 28/640 kivi longbench/narrativeqa/9/16384 repeat=0
+[kivi/longbench/narrativeqa/9/16384] 6/128 tokens
+RESULT ok: longbench/narrativeqa/9/16384 score=66.66666666666666 decode=19.321991195849453 token/s
+CASE 29/640 kivi longbench/narrativeqa/88/8192 repeat=0
+[kivi/longbench/narrativeqa/88/8192] 9/128 tokens
+RESULT ok: longbench/narrativeqa/88/8192 score=20.000000000000004 decode=19.474436836599903 token/s
+CASE 30/640 kivi longbench/narrativeqa/88/16384 repeat=0
+[kivi/longbench/narrativeqa/88/16384] 9/128 tokens
+RESULT ok: longbench/narrativeqa/88/16384 score=18.18181818181818 decode=19.433722075740214 token/s
+CASE 31/640 kivi longbench/narrativeqa/152/8192 repeat=0
+[kivi/longbench/narrativeqa/152/8192] 5/128 tokens
+RESULT ok: longbench/narrativeqa/152/8192 score=0 decode=19.058730611160545 token/s
+CASE 32/640 kivi longbench/narrativeqa/152/16384 repeat=0
+[kivi/longbench/narrativeqa/152/16384] 5/128 tokens
+RESULT ok: longbench/narrativeqa/152/16384 score=0 decode=18.220444992471336 token/s
+CASE 33/640 kivi longbench/narrativeqa/116/8192 repeat=0
+[kivi/longbench/narrativeqa/116/8192] 8/128 tokens
+RESULT ok: longbench/narrativeqa/116/8192 score=0 decode=19.752261973470887 token/s
+CASE 34/640 kivi longbench/narrativeqa/116/16384 repeat=0
+[kivi/longbench/narrativeqa/116/16384] 8/128 tokens
+RESULT ok: longbench/narrativeqa/116/16384 score=0 decode=19.512718309455007 token/s
+CASE 35/640 kivi longbench/narrativeqa/169/8192 repeat=0
+[kivi/longbench/narrativeqa/169/8192] 15/128 tokens
+RESULT ok: longbench/narrativeqa/169/8192 score=0 decode=19.950819552695 token/s
+CASE 36/640 kivi longbench/narrativeqa/169/16384 repeat=0
+[kivi/longbench/narrativeqa/169/16384] 10/128 tokens
+RESULT ok: longbench/narrativeqa/169/16384 score=26.666666666666668 decode=18.95554525212113 token/s
+CASE 37/640 kivi longbench/narrativeqa/83/8192 repeat=0
+[kivi/longbench/narrativeqa/83/8192] 8/128 tokens
+RESULT ok: longbench/narrativeqa/83/8192 score=0 decode=19.958108505448664 token/s
+CASE 38/640 kivi longbench/narrativeqa/83/16384 repeat=0
+[kivi/longbench/narrativeqa/83/16384] 5/128 tokens
+RESULT ok: longbench/narrativeqa/83/16384 score=0 decode=19.03834244536618 token/s
+CASE 39/640 kivi longbench/narrativeqa/111/8192 repeat=0
+[kivi/longbench/narrativeqa/111/8192] 9/128 tokens
+RESULT ok: longbench/narrativeqa/111/8192 score=0 decode=19.526891931092198 token/s
+CASE 40/640 kivi longbench/narrativeqa/111/16384 repeat=0
+[kivi/longbench/narrativeqa/111/16384] 6/128 tokens
+RESULT ok: longbench/narrativeqa/111/16384 score=40.0 decode=19.102487650292247 token/s
+CASE 41/640 kivi longbench/narrativeqa/156/8192 repeat=0
+[kivi/longbench/narrativeqa/156/8192] 6/128 tokens
+RESULT ok: longbench/narrativeqa/156/8192 score=66.66666666666666 decode=19.703478330556003 token/s
+CASE 42/640 kivi longbench/narrativeqa/156/16384 repeat=0
+[kivi/longbench/narrativeqa/156/16384] 6/128 tokens
+RESULT ok: longbench/narrativeqa/156/16384 score=66.66666666666666 decode=19.6866744591472 token/s
+CASE 43/640 kivi longbench/narrativeqa/192/8192 repeat=0
+[kivi/longbench/narrativeqa/192/8192] 22/128 tokens
+RESULT ok: longbench/narrativeqa/192/8192 score=0 decode=20.12032980322361 token/s
+CASE 44/640 kivi longbench/narrativeqa/192/16384 repeat=0
+[kivi/longbench/narrativeqa/192/16384] 9/128 tokens
+RESULT ok: longbench/narrativeqa/192/16384 score=0 decode=19.61244668222161 token/s
+CASE 45/640 kivi longbench/narrativeqa/143/8192 repeat=0
+[kivi/longbench/narrativeqa/143/8192] 25/128 tokens
+RESULT ok: longbench/narrativeqa/143/8192 score=0 decode=20.12924572811475 token/s
+CASE 46/640 kivi longbench/narrativeqa/143/16384 repeat=0
+[kivi/longbench/narrativeqa/143/16384] 7/128 tokens
+RESULT ok: longbench/narrativeqa/143/16384 score=33.33333333333333 decode=19.46384049288904 token/s
+CASE 47/640 kivi longbench/narrativeqa/6/8192 repeat=0
+[kivi/longbench/narrativeqa/6/8192] 18/128 tokens
+RESULT ok: longbench/narrativeqa/6/8192 score=0 decode=20.060267583307894 token/s
+CASE 48/640 kivi longbench/narrativeqa/6/16384 repeat=0
+[kivi/longbench/narrativeqa/6/16384] 4/128 tokens
+RESULT ok: longbench/narrativeqa/6/16384 score=40.0 decode=18.59169729253075 token/s
+CASE 49/640 kivi longbench/narrativeqa/135/8192 repeat=0
+[kivi/longbench/narrativeqa/135/8192] 13/128 tokens
+RESULT ok: longbench/narrativeqa/135/8192 score=0 decode=19.913528861514564 token/s
+CASE 50/640 kivi longbench/narrativeqa/135/16384 repeat=0
+[kivi/longbench/narrativeqa/135/16384] 13/128 tokens
+RESULT ok: longbench/narrativeqa/135/16384 score=0 decode=19.332505118606655 token/s
+CASE 51/640 kivi longbench/narrativeqa/183/8192 repeat=0
+[kivi/longbench/narrativeqa/183/8192] 8/128 tokens
+RESULT ok: longbench/narrativeqa/183/8192 score=0 decode=19.937925825594945 token/s
+CASE 52/640 kivi longbench/narrativeqa/183/16384 repeat=0
+[kivi/longbench/narrativeqa/183/16384] 8/128 tokens
+RESULT ok: longbench/narrativeqa/183/16384 score=0 decode=19.27247628940438 token/s
+CASE 53/640 kivi longbench/narrativeqa/86/8192 repeat=0
+[kivi/longbench/narrativeqa/86/8192] 6/128 tokens
+RESULT ok: longbench/narrativeqa/86/8192 score=0 decode=19.82281559590257 token/s
+CASE 54/640 kivi longbench/narrativeqa/86/16384 repeat=0
+[kivi/longbench/narrativeqa/86/16384] 4/128 tokens
+RESULT ok: longbench/narrativeqa/86/16384 score=0 decode=18.372130398957193 token/s
+CASE 55/640 kivi longbench/narrativeqa/146/8192 repeat=0
+[kivi/longbench/narrativeqa/146/8192] 5/128 tokens
+RESULT ok: longbench/narrativeqa/146/8192 score=0 decode=19.14646677383227 token/s
+CASE 56/640 kivi longbench/narrativeqa/146/16384 repeat=0
+[kivi/longbench/narrativeqa/146/16384] 6/128 tokens
+RESULT ok: longbench/narrativeqa/146/16384 score=0 decode=19.032601693755453 token/s
+CASE 57/640 kivi longbench/narrativeqa/132/8192 repeat=0
+[kivi/longbench/narrativeqa/132/8192] 5/128 tokens
+RESULT ok: longbench/narrativeqa/132/8192 score=100.0 decode=19.137939184014176 token/s
+CASE 58/640 kivi longbench/narrativeqa/132/16384 repeat=0
+[kivi/longbench/narrativeqa/132/16384] 5/128 tokens
+RESULT ok: longbench/narrativeqa/132/16384 score=100.0 decode=18.752954673307148 token/s
+CASE 59/640 kivi longbench/narrativeqa/82/8192 repeat=0
+[kivi/longbench/narrativeqa/82/8192] 7/128 tokens
+RESULT ok: longbench/narrativeqa/82/8192 score=25.0 decode=19.708359197405812 token/s
+CASE 60/640 kivi longbench/narrativeqa/82/16384 repeat=0
+[kivi/longbench/narrativeqa/82/16384] 7/128 tokens
+RESULT ok: longbench/narrativeqa/82/16384 score=25.0 decode=19.317400893407733 token/s
+CASE 61/640 kivi longbench/narrativeqa/27/8192 repeat=0
+[kivi/longbench/narrativeqa/27/8192] 8/128 tokens
+RESULT ok: longbench/narrativeqa/27/8192 score=0 decode=19.898312509649745 token/s
+CASE 62/640 kivi longbench/narrativeqa/27/16384 repeat=0
+[kivi/longbench/narrativeqa/27/16384] 8/128 tokens
+RESULT ok: longbench/narrativeqa/27/16384 score=0 decode=19.53224482174548 token/s
+CASE 63/640 kivi longbench/narrativeqa/7/8192 repeat=0
+[kivi/longbench/narrativeqa/7/8192] 8/128 tokens
+RESULT ok: longbench/narrativeqa/7/8192 score=0 decode=19.987902172418625 token/s
+CASE 64/640 kivi longbench/narrativeqa/7/16384 repeat=0
+[kivi/longbench/narrativeqa/7/16384] 7/128 tokens
+RESULT ok: longbench/narrativeqa/7/16384 score=80.0 decode=19.173722127574013 token/s
+CASE 65/640 kivi longbench/qasper/159/8192 repeat=0
+[kivi/longbench/qasper/159/8192] 22/128 tokens
+RESULT ok: longbench/qasper/159/8192 score=55.55555555555556 decode=20.01835026439527 token/s
+CASE 66/640 kivi longbench/qasper/159/16384 repeat=0
+[kivi/longbench/qasper/159/16384] 22/128 tokens
+RESULT ok: longbench/qasper/159/16384 score=55.55555555555556 decode=20.329287490095897 token/s
+CASE 67/640 kivi longbench/qasper/145/8192 repeat=0
+[kivi/longbench/qasper/145/8192] 27/128 tokens
+RESULT ok: longbench/qasper/145/8192 score=100.0 decode=20.21775627806858 token/s
+CASE 68/640 kivi longbench/qasper/145/16384 repeat=0
+[kivi/longbench/qasper/145/16384] 27/128 tokens
+RESULT ok: longbench/qasper/145/16384 score=100.0 decode=20.254555264303743 token/s
+CASE 69/640 kivi longbench/qasper/136/8192 repeat=0
+[kivi/longbench/qasper/136/8192] 14/128 tokens
+RESULT ok: longbench/qasper/136/8192 score=6.451612903225806 decode=20.062971125699708 token/s
+CASE 70/640 kivi longbench/qasper/136/16384 repeat=0
+[kivi/longbench/qasper/136/16384] 14/128 tokens
+RESULT ok: longbench/qasper/136/16384 score=6.451612903225806 decode=20.05305568871466 token/s
+CASE 71/640 kivi longbench/qasper/39/8192 repeat=0
+[kivi/longbench/qasper/39/8192] 27/128 tokens
+RESULT ok: longbench/qasper/39/8192 score=32.0 decode=20.21974812431374 token/s
+CASE 72/640 kivi longbench/qasper/39/16384 repeat=0
+[kivi/longbench/qasper/39/16384] 27/128 tokens
+RESULT ok: longbench/qasper/39/16384 score=32.0 decode=20.305457003928407 token/s
+CASE 73/640 kivi longbench/qasper/131/8192 repeat=0
+[kivi/longbench/qasper/131/8192] 18/128 tokens
+RESULT ok: longbench/qasper/131/8192 score=87.50000000000001 decode=19.91720997277461 token/s
+CASE 74/640 kivi longbench/qasper/131/16384 repeat=0
+[kivi/longbench/qasper/131/16384] 18/128 tokens
+RESULT ok: longbench/qasper/131/16384 score=87.50000000000001 decode=19.744236689547346 token/s
+CASE 75/640 kivi longbench/qasper/112/8192 repeat=0
+[kivi/longbench/qasper/112/8192] 16/128 tokens
+RESULT ok: longbench/qasper/112/8192 score=30.0 decode=19.546597002721867 token/s
+CASE 76/640 kivi longbench/qasper/112/16384 repeat=0
+[kivi/longbench/qasper/112/16384] 16/128 tokens
+RESULT ok: longbench/qasper/112/16384 score=30.0 decode=20.03587024361006 token/s
+CASE 77/640 kivi longbench/qasper/103/8192 repeat=0
+[kivi/longbench/qasper/103/8192] 4/128 tokens
+RESULT ok: longbench/qasper/103/8192 score=0 decode=19.119860927319813 token/s
+CASE 78/640 kivi longbench/qasper/103/16384 repeat=0
+[kivi/longbench/qasper/103/16384] 4/128 tokens
+RESULT ok: longbench/qasper/103/16384 score=0 decode=18.825058571799648 token/s
+CASE 79/640 kivi longbench/qasper/146/8192 repeat=0
+[kivi/longbench/qasper/146/8192] 48/128 tokens
+RESULT ok: longbench/qasper/146/8192 score=22.22222222222222 decode=20.33613021994886 token/s
+CASE 80/640 kivi longbench/qasper/146/16384 repeat=0
+[kivi/longbench/qasper/146/16384] 48/128 tokens
+RESULT ok: longbench/qasper/146/16384 score=22.22222222222222 decode=20.277570445180263 token/s
+CASE 81/640 kivi longbench/qasper/148/8192 repeat=0
+[kivi/longbench/qasper/148/8192] 53/128 tokens
+RESULT ok: longbench/qasper/148/8192 score=92.3076923076923 decode=20.188321717548295 token/s
+CASE 82/640 kivi longbench/qasper/148/16384 repeat=0
+[kivi/longbench/qasper/148/16384] 53/128 tokens
+RESULT ok: longbench/qasper/148/16384 score=92.3076923076923 decode=20.271752092186368 token/s
+CASE 83/640 kivi longbench/qasper/83/8192 repeat=0
+[kivi/longbench/qasper/83/8192] 27/128 tokens
+RESULT ok: longbench/qasper/83/8192 score=13.333333333333334 decode=20.275901125555997 token/s
+CASE 84/640 kivi longbench/qasper/83/16384 repeat=0
+[kivi/longbench/qasper/83/16384] 27/128 tokens
+RESULT ok: longbench/qasper/83/16384 score=13.333333333333334 decode=20.02925020577884 token/s
+CASE 85/640 kivi longbench/qasper/41/8192 repeat=0
+[kivi/longbench/qasper/41/8192] 3/128 tokens
+RESULT ok: longbench/qasper/41/8192 score=100.0 decode=18.87639325818702 token/s
+CASE 86/640 kivi longbench/qasper/41/16384 repeat=0
+[kivi/longbench/qasper/41/16384] 3/128 tokens
+RESULT ok: longbench/qasper/41/16384 score=100.0 decode=18.15651510352015 token/s
+CASE 87/640 kivi longbench/qasper/84/8192 repeat=0
+[kivi/longbench/qasper/84/8192] 10/128 tokens
+RESULT ok: longbench/qasper/84/8192 score=33.33333333333333 decode=20.028593092141136 token/s
+CASE 88/640 kivi longbench/qasper/84/16384 repeat=0
+[kivi/longbench/qasper/84/16384] 10/128 tokens
+RESULT ok: longbench/qasper/84/16384 score=33.33333333333333 decode=20.108926289098036 token/s
+CASE 89/640 kivi longbench/qasper/130/8192 repeat=0
+[kivi/longbench/qasper/130/8192] 31/128 tokens
+RESULT ok: longbench/qasper/130/8192 score=34.285714285714285 decode=20.21075069856243 token/s
+CASE 90/640 kivi longbench/qasper/130/16384 repeat=0
+[kivi/longbench/qasper/130/16384] 31/128 tokens
+RESULT ok: longbench/qasper/130/16384 score=34.285714285714285 decode=20.275859982939597 token/s
+CASE 91/640 kivi longbench/qasper/38/8192 repeat=0
+[kivi/longbench/qasper/38/8192] 17/128 tokens
+RESULT ok: longbench/qasper/38/8192 score=20.0 decode=20.187305668677137 token/s
+CASE 92/640 kivi longbench/qasper/38/16384 repeat=0
+[kivi/longbench/qasper/38/16384] 17/128 tokens
+RESULT ok: longbench/qasper/38/16384 score=20.0 decode=20.21145430860408 token/s
+CASE 93/640 kivi longbench/qasper/54/8192 repeat=0
+[kivi/longbench/qasper/54/8192] 20/128 tokens
+RESULT ok: longbench/qasper/54/8192 score=57.14285714285715 decode=20.006299475035362 token/s
+CASE 94/640 kivi longbench/qasper/54/16384 repeat=0
+[kivi/longbench/qasper/54/16384] 22/128 tokens
+RESULT ok: longbench/qasper/54/16384 score=23.529411764705884 decode=19.78772047816832 token/s
+CASE 95/640 kivi longbench/qasper/140/8192 repeat=0
+[kivi/longbench/qasper/140/8192] 26/128 tokens
+RESULT ok: longbench/qasper/140/8192 score=9.09090909090909 decode=20.326805383951157 token/s
+CASE 96/640 kivi longbench/qasper/140/16384 repeat=0
+[kivi/longbench/qasper/140/16384] 26/128 tokens
+RESULT ok: longbench/qasper/140/16384 score=9.09090909090909 decode=20.355365819837125 token/s
+CASE 97/640 kivi longbench/qasper/87/8192 repeat=0
+[kivi/longbench/qasper/87/8192] 16/128 tokens
+RESULT ok: longbench/qasper/87/8192 score=9.75609756097561 decode=20.203956981675052 token/s
+CASE 98/640 kivi longbench/qasper/87/16384 repeat=0
+[kivi/longbench/qasper/87/16384] 16/128 tokens
+RESULT ok: longbench/qasper/87/16384 score=9.75609756097561 decode=20.145354701806305 token/s
+CASE 99/640 kivi longbench/qasper/53/8192 repeat=0
+[kivi/longbench/qasper/53/8192] 31/128 tokens
+RESULT ok: longbench/qasper/53/8192 score=24.0 decode=20.12390335253851 token/s
+CASE 100/640 kivi longbench/qasper/53/16384 repeat=0
+[kivi/longbench/qasper/53/16384] 31/128 tokens
+RESULT ok: longbench/qasper/53/16384 score=24.0 decode=20.004567429174358 token/s
+CASE 101/640 kivi longbench/qasper/160/8192 repeat=0
+[kivi/longbench/qasper/160/8192] 13/128 tokens
+RESULT ok: longbench/qasper/160/8192 score=36.36363636363637 decode=19.890072080271366 token/s
+CASE 102/640 kivi longbench/qasper/160/16384 repeat=0
+[kivi/longbench/qasper/160/16384] 13/128 tokens
+RESULT ok: longbench/qasper/160/16384 score=36.36363636363637 decode=19.78469066667777 token/s
+CASE 103/640 kivi longbench/qasper/37/8192 repeat=0
+[kivi/longbench/qasper/37/8192] 41/128 tokens
+RESULT ok: longbench/qasper/37/8192 score=78.57142857142858 decode=19.937999919488398 token/s
+CASE 104/640 kivi longbench/qasper/37/16384 repeat=0
+[kivi/longbench/qasper/37/16384] 41/128 tokens
+RESULT ok: longbench/qasper/37/16384 score=78.57142857142858 decode=20.227915761320038 token/s
+CASE 105/640 kivi longbench/qasper/95/8192 repeat=0
+[kivi/longbench/qasper/95/8192] 3/128 tokens
+RESULT ok: longbench/qasper/95/8192 score=100.0 decode=18.42461217815738 token/s
+CASE 106/640 kivi longbench/qasper/95/16384 repeat=0
+[kivi/longbench/qasper/95/16384] 3/128 tokens
+RESULT ok: longbench/qasper/95/16384 score=100.0 decode=17.560718746924294 token/s
+CASE 107/640 kivi longbench/qasper/176/8192 repeat=0
+[kivi/longbench/qasper/176/8192] 10/128 tokens
+RESULT ok: longbench/qasper/176/8192 score=80.0 decode=19.925335071558127 token/s
+CASE 108/640 kivi longbench/qasper/176/16384 repeat=0
+[kivi/longbench/qasper/176/16384] 10/128 tokens
+RESULT ok: longbench/qasper/176/16384 score=80.0 decode=19.9633918051751 token/s
+CASE 109/640 kivi longbench/qasper/157/8192 repeat=0
+[kivi/longbench/qasper/157/8192] 17/128 tokens
+RESULT ok: longbench/qasper/157/8192 score=100.0 decode=20.206993423503345 token/s
+CASE 110/640 kivi longbench/qasper/157/16384 repeat=0
+[kivi/longbench/qasper/157/16384] 17/128 tokens
+RESULT ok: longbench/qasper/157/16384 score=100.0 decode=20.230105845773636 token/s
+CASE 111/640 kivi longbench/qasper/133/8192 repeat=0
+[kivi/longbench/qasper/133/8192] 3/128 tokens
+RESULT ok: longbench/qasper/133/8192 score=100.0 decode=18.898878350289518 token/s
+CASE 112/640 kivi longbench/qasper/133/16384 repeat=0
+[kivi/longbench/qasper/133/16384] 3/128 tokens
+RESULT ok: longbench/qasper/133/16384 score=100.0 decode=18.112982441748404 token/s
+CASE 113/640 kivi longbench/qasper/168/8192 repeat=0
+[kivi/longbench/qasper/168/8192] 28/128 tokens
+RESULT ok: longbench/qasper/168/8192 score=39.130434782608695 decode=20.194456994103902 token/s
+CASE 114/640 kivi longbench/qasper/168/16384 repeat=0
+[kivi/longbench/qasper/168/16384] 28/128 tokens
+RESULT ok: longbench/qasper/168/16384 score=39.130434782608695 decode=20.169401385311023 token/s
+CASE 115/640 kivi longbench/qasper/166/8192 repeat=0
+[kivi/longbench/qasper/166/8192] 15/128 tokens
+RESULT ok: longbench/qasper/166/8192 score=71.42857142857143 decode=20.060600631447127 token/s
+CASE 116/640 kivi longbench/qasper/166/16384 repeat=0
+[kivi/longbench/qasper/166/16384] 15/128 tokens
+RESULT ok: longbench/qasper/166/16384 score=71.42857142857143 decode=19.978472148208244 token/s
+CASE 117/640 kivi longbench/qasper/67/8192 repeat=0
+[kivi/longbench/qasper/67/8192] 44/128 tokens
+RESULT ok: longbench/qasper/67/8192 score=27.58620689655173 decode=20.001526377447608 token/s
+CASE 118/640 kivi longbench/qasper/67/16384 repeat=0
+[kivi/longbench/qasper/67/16384] 21/128 tokens
+RESULT ok: longbench/qasper/67/16384 score=21.05263157894737 decode=19.94556545784493 token/s
+CASE 119/640 kivi longbench/qasper/119/8192 repeat=0
+[kivi/longbench/qasper/119/8192] 7/128 tokens
+RESULT ok: longbench/qasper/119/8192 score=40.0 decode=19.80476729509432 token/s
+CASE 120/640 kivi longbench/qasper/119/16384 repeat=0
+[kivi/longbench/qasper/119/16384] 7/128 tokens
+RESULT ok: longbench/qasper/119/16384 score=40.0 decode=19.67228632667854 token/s
+CASE 121/640 kivi longbench/qasper/183/8192 repeat=0
+[kivi/longbench/qasper/183/8192] 5/128 tokens
+RESULT ok: longbench/qasper/183/8192 score=28.571428571428577 decode=19.49317741311103 token/s
+CASE 122/640 kivi longbench/qasper/183/16384 repeat=0
+[kivi/longbench/qasper/183/16384] 5/128 tokens
+RESULT ok: longbench/qasper/183/16384 score=28.571428571428577 decode=19.65146350081299 token/s
+CASE 123/640 kivi longbench/qasper/90/8192 repeat=0
+[kivi/longbench/qasper/90/8192] 7/128 tokens
+RESULT ok: longbench/qasper/90/8192 score=66.66666666666666 decode=19.88671494494026 token/s
+CASE 124/640 kivi longbench/qasper/90/16384 repeat=0
+[kivi/longbench/qasper/90/16384] 7/128 tokens
+RESULT ok: longbench/qasper/90/16384 score=66.66666666666666 decode=19.94147547619221 token/s
+CASE 125/640 kivi longbench/qasper/51/8192 repeat=0
+[kivi/longbench/qasper/51/8192] 3/128 tokens
+RESULT ok: longbench/qasper/51/8192 score=100.0 decode=19.16340270682202 token/s
+CASE 126/640 kivi longbench/qasper/51/16384 repeat=0
+[kivi/longbench/qasper/51/16384] 3/128 tokens
+RESULT ok: longbench/qasper/51/16384 score=100.0 decode=19.206861725288295 token/s
+CASE 127/640 kivi longbench/qasper/89/8192 repeat=0
+[kivi/longbench/qasper/89/8192] 43/128 tokens
+RESULT ok: longbench/qasper/89/8192 score=46.15384615384615 decode=20.28330320233327 token/s
+CASE 128/640 kivi longbench/qasper/89/16384 repeat=0
+[kivi/longbench/qasper/89/16384] 43/128 tokens
+RESULT ok: longbench/qasper/89/16384 score=46.15384615384615 decode=20.080388277442204 token/s
+CASE 129/640 kivi longbench/multifieldqa_en/121/8192 repeat=0
+[kivi/longbench/multifieldqa_en/121/8192] 23/64 tokens
+RESULT ok: longbench/multifieldqa_en/121/8192 score=33.333333333333336 decode=19.980955932091387 token/s
+CASE 130/640 kivi longbench/multifieldqa_en/121/16384 repeat=0
+[kivi/longbench/multifieldqa_en/121/16384] 23/64 tokens
+RESULT ok: longbench/multifieldqa_en/121/16384 score=33.333333333333336 decode=19.920244760412164 token/s
+CASE 131/640 kivi longbench/multifieldqa_en/32/8192 repeat=0
+[kivi/longbench/multifieldqa_en/32/8192] 22/64 tokens
+RESULT ok: longbench/multifieldqa_en/32/8192 score=66.66666666666666 decode=20.21225891956377 token/s
+CASE 132/640 kivi longbench/multifieldqa_en/32/16384 repeat=0
+[kivi/longbench/multifieldqa_en/32/16384] 22/64 tokens
+RESULT ok: longbench/multifieldqa_en/32/16384 score=66.66666666666666 decode=20.05328078571748 token/s
+CASE 133/640 kivi longbench/multifieldqa_en/68/8192 repeat=0
+[kivi/longbench/multifieldqa_en/68/8192] 6/64 tokens
+RESULT ok: longbench/multifieldqa_en/68/8192 score=60.0 decode=19.66549297593242 token/s
+CASE 134/640 kivi longbench/multifieldqa_en/68/16384 repeat=0
+[kivi/longbench/multifieldqa_en/68/16384] 6/64 tokens
+RESULT ok: longbench/multifieldqa_en/68/16384 score=60.0 decode=19.577301625612137 token/s
+CASE 135/640 kivi longbench/multifieldqa_en/113/8192 repeat=0
+[kivi/longbench/multifieldqa_en/113/8192] 9/64 tokens
+RESULT ok: longbench/multifieldqa_en/113/8192 score=60.0 decode=19.455101604962525 token/s
+CASE 136/640 kivi longbench/multifieldqa_en/113/16384 repeat=0
+[kivi/longbench/multifieldqa_en/113/16384] 9/64 tokens
+RESULT ok: longbench/multifieldqa_en/113/16384 score=60.0 decode=19.09872792832253 token/s
+CASE 137/640 kivi longbench/multifieldqa_en/116/8192 repeat=0
+[kivi/longbench/multifieldqa_en/116/8192] 7/64 tokens
+RESULT ok: longbench/multifieldqa_en/116/8192 score=40.0 decode=19.622640198690636 token/s
+CASE 138/640 kivi longbench/multifieldqa_en/116/16384 repeat=0
+[kivi/longbench/multifieldqa_en/116/16384] 7/64 tokens
+RESULT ok: longbench/multifieldqa_en/116/16384 score=40.0 decode=19.311942153216982 token/s
+CASE 139/640 kivi longbench/multifieldqa_en/118/8192 repeat=0
+[kivi/longbench/multifieldqa_en/118/8192] 5/64 tokens
+RESULT ok: longbench/multifieldqa_en/118/8192 score=100.0 decode=19.545132279368044 token/s
+CASE 140/640 kivi longbench/multifieldqa_en/118/16384 repeat=0
+[kivi/longbench/multifieldqa_en/118/16384] 5/64 tokens
+RESULT ok: longbench/multifieldqa_en/118/16384 score=100.0 decode=19.426037349417015 token/s
+CASE 141/640 kivi longbench/multifieldqa_en/85/8192 repeat=0
+[kivi/longbench/multifieldqa_en/85/8192] 64/64 tokens
+RESULT ok: longbench/multifieldqa_en/85/8192 score=27.118644067796605 decode=20.145172121848834 token/s
+CASE 142/640 kivi longbench/multifieldqa_en/85/16384 repeat=0
+[kivi/longbench/multifieldqa_en/85/16384] 50/64 tokens
+RESULT ok: longbench/multifieldqa_en/85/16384 score=41.66666666666667 decode=20.07404270468957 token/s
+CASE 143/640 kivi longbench/multifieldqa_en/81/8192 repeat=0
+[kivi/longbench/multifieldqa_en/81/8192] 60/64 tokens
+RESULT ok: longbench/multifieldqa_en/81/8192 score=17.02127659574468 decode=19.83387980875148 token/s
+CASE 144/640 kivi longbench/multifieldqa_en/81/16384 repeat=0
+[kivi/longbench/multifieldqa_en/81/16384] 60/64 tokens
+RESULT ok: longbench/multifieldqa_en/81/16384 score=17.02127659574468 decode=19.937880296236905 token/s
+CASE 145/640 kivi longbench/multifieldqa_en/105/8192 repeat=0
+[kivi/longbench/multifieldqa_en/105/8192] 26/64 tokens
+RESULT ok: longbench/multifieldqa_en/105/8192 score=29.411764705882348 decode=20.085240182412296 token/s
+CASE 146/640 kivi longbench/multifieldqa_en/105/16384 repeat=0
+[kivi/longbench/multifieldqa_en/105/16384] 26/64 tokens
+RESULT ok: longbench/multifieldqa_en/105/16384 score=29.411764705882348 decode=20.133864896365456 token/s
+CASE 147/640 kivi longbench/multifieldqa_en/139/8192 repeat=0
+[kivi/longbench/multifieldqa_en/139/8192] 24/64 tokens
+RESULT ok: longbench/multifieldqa_en/139/8192 score=78.78787878787877 decode=20.13877032901006 token/s
+CASE 148/640 kivi longbench/multifieldqa_en/139/16384 repeat=0
+[kivi/longbench/multifieldqa_en/139/16384] 24/64 tokens
+RESULT ok: longbench/multifieldqa_en/139/16384 score=78.78787878787877 decode=20.205246493120978 token/s
+CASE 149/640 kivi longbench/multifieldqa_en/95/8192 repeat=0
+[kivi/longbench/multifieldqa_en/95/8192] 31/64 tokens
+RESULT ok: longbench/multifieldqa_en/95/8192 score=31.25 decode=20.213724599070826 token/s
+CASE 150/640 kivi longbench/multifieldqa_en/95/16384 repeat=0
+[kivi/longbench/multifieldqa_en/95/16384] 31/64 tokens
+RESULT ok: longbench/multifieldqa_en/95/16384 score=31.25 decode=19.79206532851723 token/s
+CASE 151/640 kivi longbench/multifieldqa_en/36/8192 repeat=0
+[kivi/longbench/multifieldqa_en/36/8192] 2/64 tokens
+RESULT ok: longbench/multifieldqa_en/36/8192 score=100.0 decode=18.5298081003084 token/s
+CASE 152/640 kivi longbench/multifieldqa_en/36/16384 repeat=0
+[kivi/longbench/multifieldqa_en/36/16384] 2/64 tokens
+RESULT ok: longbench/multifieldqa_en/36/16384 score=100.0 decode=18.693964072164665 token/s
+CASE 153/640 kivi longbench/multifieldqa_en/66/8192 repeat=0
+[kivi/longbench/multifieldqa_en/66/8192] 4/64 tokens
+RESULT ok: longbench/multifieldqa_en/66/8192 score=100.0 decode=19.337446824542837 token/s
+CASE 154/640 kivi longbench/multifieldqa_en/66/16384 repeat=0
+[kivi/longbench/multifieldqa_en/66/16384] 4/64 tokens
+RESULT ok: longbench/multifieldqa_en/66/16384 score=100.0 decode=18.394796698402228 token/s
+CASE 155/640 kivi longbench/multifieldqa_en/78/8192 repeat=0
+[kivi/longbench/multifieldqa_en/78/8192] 31/64 tokens
+RESULT ok: longbench/multifieldqa_en/78/8192 score=30.303030303030305 decode=20.07178370673099 token/s
+CASE 156/640 kivi longbench/multifieldqa_en/78/16384 repeat=0
+[kivi/longbench/multifieldqa_en/78/16384] 31/64 tokens
+RESULT ok: longbench/multifieldqa_en/78/16384 score=30.303030303030305 decode=20.27063423651107 token/s
+CASE 157/640 kivi longbench/multifieldqa_en/91/8192 repeat=0
+[kivi/longbench/multifieldqa_en/91/8192] 2/64 tokens
+RESULT ok: longbench/multifieldqa_en/91/8192 score=100.0 decode=18.770419579367033 token/s
+CASE 158/640 kivi longbench/multifieldqa_en/91/16384 repeat=0
+[kivi/longbench/multifieldqa_en/91/16384] 2/64 tokens
+RESULT ok: longbench/multifieldqa_en/91/16384 score=100.0 decode=17.29764943251075 token/s
+CASE 159/640 kivi longbench/multifieldqa_en/92/8192 repeat=0
+[kivi/longbench/multifieldqa_en/92/8192] 42/64 tokens
+RESULT ok: longbench/multifieldqa_en/92/8192 score=36.84210526315789 decode=19.95798268986343 token/s
+CASE 160/640 kivi longbench/multifieldqa_en/92/16384 repeat=0
+[kivi/longbench/multifieldqa_en/92/16384] 42/64 tokens
+RESULT ok: longbench/multifieldqa_en/92/16384 score=36.84210526315789 decode=20.147454676831206 token/s
+CASE 161/640 kivi longbench/multifieldqa_en/65/8192 repeat=0
+[kivi/longbench/multifieldqa_en/65/8192] 17/64 tokens
+RESULT ok: longbench/multifieldqa_en/65/8192 score=74.07407407407406 decode=19.958889792405355 token/s
+CASE 162/640 kivi longbench/multifieldqa_en/65/16384 repeat=0
+[kivi/longbench/multifieldqa_en/65/16384] 17/64 tokens
+RESULT ok: longbench/multifieldqa_en/65/16384 score=74.07407407407406 decode=19.708073130058 token/s
+CASE 163/640 kivi longbench/multifieldqa_en/56/8192 repeat=0
+[kivi/longbench/multifieldqa_en/56/8192] 4/64 tokens
+RESULT ok: longbench/multifieldqa_en/56/8192 score=100.0 decode=19.081415200127925 token/s
+CASE 164/640 kivi longbench/multifieldqa_en/56/16384 repeat=0
+[kivi/longbench/multifieldqa_en/56/16384] 4/64 tokens
+RESULT ok: longbench/multifieldqa_en/56/16384 score=100.0 decode=18.820949256973062 token/s
+CASE 165/640 kivi longbench/multifieldqa_en/111/8192 repeat=0
+[kivi/longbench/multifieldqa_en/111/8192] 4/64 tokens
+RESULT ok: longbench/multifieldqa_en/111/8192 score=50.0 decode=19.622141423224292 token/s
+CASE 166/640 kivi longbench/multifieldqa_en/111/16384 repeat=0
+[kivi/longbench/multifieldqa_en/111/16384] 4/64 tokens
+RESULT ok: longbench/multifieldqa_en/111/16384 score=50.0 decode=18.993880221011143 token/s
+CASE 167/640 kivi longbench/multifieldqa_en/80/8192 repeat=0
+[kivi/longbench/multifieldqa_en/80/8192] 48/64 tokens
+RESULT ok: longbench/multifieldqa_en/80/8192 score=72.72727272727273 decode=19.99653011691116 token/s
+CASE 168/640 kivi longbench/multifieldqa_en/80/16384 repeat=0
+[kivi/longbench/multifieldqa_en/80/16384] 48/64 tokens
+RESULT ok: longbench/multifieldqa_en/80/16384 score=72.72727272727273 decode=20.273661647308106 token/s
+CASE 169/640 kivi longbench/multifieldqa_en/62/8192 repeat=0
+[kivi/longbench/multifieldqa_en/62/8192] 9/64 tokens
+RESULT ok: longbench/multifieldqa_en/62/8192 score=46.15384615384615 decode=20.06118505316458 token/s
+CASE 170/640 kivi longbench/multifieldqa_en/62/16384 repeat=0
+[kivi/longbench/multifieldqa_en/62/16384] 9/64 tokens
+RESULT ok: longbench/multifieldqa_en/62/16384 score=46.15384615384615 decode=20.106729349767377 token/s
+CASE 171/640 kivi longbench/multifieldqa_en/43/8192 repeat=0
+[kivi/longbench/multifieldqa_en/43/8192] 22/64 tokens
+RESULT ok: longbench/multifieldqa_en/43/8192 score=15.384615384615385 decode=19.858461524386648 token/s
+CASE 172/640 kivi longbench/multifieldqa_en/43/16384 repeat=0
+[kivi/longbench/multifieldqa_en/43/16384] 9/64 tokens
+RESULT ok: longbench/multifieldqa_en/43/16384 score=21.052631578947366 decode=19.709292811881284 token/s
+CASE 173/640 kivi longbench/multifieldqa_en/44/8192 repeat=0
+[kivi/longbench/multifieldqa_en/44/8192] 4/64 tokens
+RESULT ok: longbench/multifieldqa_en/44/8192 score=9.09090909090909 decode=19.013171392509896 token/s
+CASE 174/640 kivi longbench/multifieldqa_en/44/16384 repeat=0
+[kivi/longbench/multifieldqa_en/44/16384] 4/64 tokens
+RESULT ok: longbench/multifieldqa_en/44/16384 score=9.09090909090909 decode=19.037518173580764 token/s
+CASE 175/640 kivi longbench/multifieldqa_en/140/8192 repeat=0
+[kivi/longbench/multifieldqa_en/140/8192] 10/64 tokens
+RESULT ok: longbench/multifieldqa_en/140/8192 score=87.50000000000001 decode=19.920670746908044 token/s
+CASE 176/640 kivi longbench/multifieldqa_en/140/16384 repeat=0
+[kivi/longbench/multifieldqa_en/140/16384] 10/64 tokens
+RESULT ok: longbench/multifieldqa_en/140/16384 score=87.50000000000001 decode=20.106518568598933 token/s
+CASE 177/640 kivi longbench/multifieldqa_en/126/8192 repeat=0
+[kivi/longbench/multifieldqa_en/126/8192] 43/64 tokens
+RESULT ok: longbench/multifieldqa_en/126/8192 score=35.294117647058826 decode=20.126477545600114 token/s
+CASE 178/640 kivi longbench/multifieldqa_en/126/16384 repeat=0
+[kivi/longbench/multifieldqa_en/126/16384] 43/64 tokens
+RESULT ok: longbench/multifieldqa_en/126/16384 score=35.294117647058826 decode=20.150360558601452 token/s
+CASE 179/640 kivi longbench/multifieldqa_en/60/8192 repeat=0
+[kivi/longbench/multifieldqa_en/60/8192] 50/64 tokens
+RESULT ok: longbench/multifieldqa_en/60/8192 score=32.6530612244898 decode=20.162604891094556 token/s
+CASE 180/640 kivi longbench/multifieldqa_en/60/16384 repeat=0
+[kivi/longbench/multifieldqa_en/60/16384] 64/64 tokens
+RESULT ok: longbench/multifieldqa_en/60/16384 score=40.74074074074075 decode=20.13055364593965 token/s
+CASE 181/640 kivi longbench/multifieldqa_en/49/8192 repeat=0
+[kivi/longbench/multifieldqa_en/49/8192] 3/64 tokens
+RESULT ok: longbench/multifieldqa_en/49/8192 score=100.0 decode=19.298606448025794 token/s
+CASE 182/640 kivi longbench/multifieldqa_en/49/16384 repeat=0
+[kivi/longbench/multifieldqa_en/49/16384] 3/64 tokens
+RESULT ok: longbench/multifieldqa_en/49/16384 score=100.0 decode=19.484762679340857 token/s
+CASE 183/640 kivi longbench/multifieldqa_en/148/8192 repeat=0
+[kivi/longbench/multifieldqa_en/148/8192] 39/64 tokens
+RESULT ok: longbench/multifieldqa_en/148/8192 score=92.3076923076923 decode=20.205005727030603 token/s
+CASE 184/640 kivi longbench/multifieldqa_en/148/16384 repeat=0
+[kivi/longbench/multifieldqa_en/148/16384] 39/64 tokens
+RESULT ok: longbench/multifieldqa_en/148/16384 score=92.3076923076923 decode=20.29793426677113 token/s
+CASE 185/640 kivi longbench/multifieldqa_en/145/8192 repeat=0
+[kivi/longbench/multifieldqa_en/145/8192] 46/64 tokens
+RESULT ok: longbench/multifieldqa_en/145/8192 score=44.44444444444445 decode=20.237666735549915 token/s
+CASE 186/640 kivi longbench/multifieldqa_en/145/16384 repeat=0
+[kivi/longbench/multifieldqa_en/145/16384] 64/64 tokens
+RESULT ok: longbench/multifieldqa_en/145/16384 score=36.36363636363637 decode=20.280255191307127 token/s
+CASE 187/640 kivi longbench/multifieldqa_en/142/8192 repeat=0
+[kivi/longbench/multifieldqa_en/142/8192] 61/64 tokens
+RESULT ok: longbench/multifieldqa_en/142/8192 score=40.816326530612244 decode=20.19199652733002 token/s
+CASE 188/640 kivi longbench/multifieldqa_en/142/16384 repeat=0
+[kivi/longbench/multifieldqa_en/142/16384] 61/64 tokens
+RESULT ok: longbench/multifieldqa_en/142/16384 score=40.816326530612244 decode=19.859472629635338 token/s
+CASE 189/640 kivi longbench/multifieldqa_en/119/8192 repeat=0
+[kivi/longbench/multifieldqa_en/119/8192] 64/64 tokens
+RESULT ok: longbench/multifieldqa_en/119/8192 score=12.5 decode=20.160760437942535 token/s
+CASE 190/640 kivi longbench/multifieldqa_en/119/16384 repeat=0
+[kivi/longbench/multifieldqa_en/119/16384] 64/64 tokens
+RESULT ok: longbench/multifieldqa_en/119/16384 score=12.5 decode=20.125930861718512 token/s
+CASE 191/640 kivi longbench/multifieldqa_en/61/8192 repeat=0
+[kivi/longbench/multifieldqa_en/61/8192] 25/64 tokens
+RESULT ok: longbench/multifieldqa_en/61/8192 score=37.5 decode=19.921785043102727 token/s
+CASE 192/640 kivi longbench/multifieldqa_en/61/16384 repeat=0
+[kivi/longbench/multifieldqa_en/61/16384] 25/64 tokens
+RESULT ok: longbench/multifieldqa_en/61/16384 score=37.5 decode=19.998278230585665 token/s
+CASE 193/640 kivi longbench/hotpotqa/145/8192 repeat=0
+[kivi/longbench/hotpotqa/145/8192] 4/32 tokens
+RESULT ok: longbench/hotpotqa/145/8192 score=0 decode=19.436158859378498 token/s
+CASE 194/640 kivi longbench/hotpotqa/145/16384 repeat=0
+[kivi/longbench/hotpotqa/145/16384] 4/32 tokens
+RESULT ok: longbench/hotpotqa/145/16384 score=0 decode=16.543068170295662 token/s
+CASE 195/640 kivi longbench/hotpotqa/186/8192 repeat=0
+[kivi/longbench/hotpotqa/186/8192] 4/32 tokens
+RESULT ok: longbench/hotpotqa/186/8192 score=0 decode=18.682965633095098 token/s
+CASE 196/640 kivi longbench/hotpotqa/186/16384 repeat=0
+[kivi/longbench/hotpotqa/186/16384] 5/32 tokens
+RESULT ok: longbench/hotpotqa/186/16384 score=100.0 decode=18.716085928788882 token/s
+CASE 197/640 kivi longbench/hotpotqa/101/8192 repeat=0
+[kivi/longbench/hotpotqa/101/8192] 3/32 tokens
+RESULT ok: longbench/hotpotqa/101/8192 score=57.14285714285715 decode=18.896907591020376 token/s
+CASE 198/640 kivi longbench/hotpotqa/101/16384 repeat=0
+[kivi/longbench/hotpotqa/101/16384] 3/32 tokens
+RESULT ok: longbench/hotpotqa/101/16384 score=57.14285714285715 decode=17.906647205265777 token/s
+CASE 199/640 kivi longbench/hotpotqa/34/8192 repeat=0
+[kivi/longbench/hotpotqa/34/8192] 24/32 tokens
+RESULT ok: longbench/hotpotqa/34/8192 score=10.526315789473683 decode=20.04606889533065 token/s
+CASE 200/640 kivi longbench/hotpotqa/34/16384 repeat=0
+[kivi/longbench/hotpotqa/34/16384] 24/32 tokens
+RESULT ok: longbench/hotpotqa/34/16384 score=10.526315789473683 decode=19.983523548485508 token/s
+CASE 201/640 kivi longbench/hotpotqa/41/8192 repeat=0
+[kivi/longbench/hotpotqa/41/8192] 13/32 tokens
+RESULT ok: longbench/hotpotqa/41/8192 score=73.68421052631578 decode=19.57951315767777 token/s
+CASE 202/640 kivi longbench/hotpotqa/41/16384 repeat=0
+[kivi/longbench/hotpotqa/41/16384] 13/32 tokens
+RESULT ok: longbench/hotpotqa/41/16384 score=73.68421052631578 decode=19.227514778681076 token/s
+CASE 203/640 kivi longbench/hotpotqa/46/8192 repeat=0
+[kivi/longbench/hotpotqa/46/8192] 3/32 tokens
+RESULT ok: longbench/hotpotqa/46/8192 score=100.0 decode=18.71007677998756 token/s
+CASE 204/640 kivi longbench/hotpotqa/46/16384 repeat=0
+[kivi/longbench/hotpotqa/46/16384] 3/32 tokens
+RESULT ok: longbench/hotpotqa/46/16384 score=100.0 decode=18.118698535490935 token/s
+CASE 205/640 kivi longbench/hotpotqa/139/8192 repeat=0
+[kivi/longbench/hotpotqa/139/8192] 5/32 tokens
+RESULT ok: longbench/hotpotqa/139/8192 score=100.0 decode=19.525071082255792 token/s
+CASE 206/640 kivi longbench/hotpotqa/139/16384 repeat=0
+[kivi/longbench/hotpotqa/139/16384] 5/32 tokens
+RESULT ok: longbench/hotpotqa/139/16384 score=100.0 decode=18.654950035300256 token/s
+CASE 207/640 kivi longbench/hotpotqa/44/8192 repeat=0
+[kivi/longbench/hotpotqa/44/8192] 10/32 tokens
+RESULT ok: longbench/hotpotqa/44/8192 score=0 decode=19.577160314611326 token/s
+CASE 208/640 kivi longbench/hotpotqa/44/16384 repeat=0
+[kivi/longbench/hotpotqa/44/16384] 5/32 tokens
+RESULT ok: longbench/hotpotqa/44/16384 score=80.0 decode=19.01017141544549 token/s
+CASE 209/640 kivi longbench/hotpotqa/38/8192 repeat=0
+[kivi/longbench/hotpotqa/38/8192] 4/32 tokens
+RESULT ok: longbench/hotpotqa/38/8192 score=80.0 decode=19.448513022841595 token/s
+CASE 210/640 kivi longbench/hotpotqa/38/16384 repeat=0
+[kivi/longbench/hotpotqa/38/16384] 4/32 tokens
+RESULT ok: longbench/hotpotqa/38/16384 score=80.0 decode=18.335254019297583 token/s
+CASE 211/640 kivi longbench/hotpotqa/42/8192 repeat=0
+[kivi/longbench/hotpotqa/42/8192] 4/32 tokens
+RESULT ok: longbench/hotpotqa/42/8192 score=66.66666666666666 decode=19.427178045913642 token/s
+CASE 212/640 kivi longbench/hotpotqa/42/16384 repeat=0
+[kivi/longbench/hotpotqa/42/16384] 4/32 tokens
+RESULT ok: longbench/hotpotqa/42/16384 score=66.66666666666666 decode=18.81663311205359 token/s
+CASE 213/640 kivi longbench/hotpotqa/100/8192 repeat=0
+[kivi/longbench/hotpotqa/100/8192] 5/32 tokens
+RESULT ok: longbench/hotpotqa/100/8192 score=100.0 decode=19.55791648398242 token/s
+CASE 214/640 kivi longbench/hotpotqa/100/16384 repeat=0
+[kivi/longbench/hotpotqa/100/16384] 5/32 tokens
+RESULT ok: longbench/hotpotqa/100/16384 score=100.0 decode=18.985572813039745 token/s
+CASE 215/640 kivi longbench/hotpotqa/108/8192 repeat=0
+[kivi/longbench/hotpotqa/108/8192] 6/32 tokens
+RESULT ok: longbench/hotpotqa/108/8192 score=0 decode=18.957091976790707 token/s
+CASE 216/640 kivi longbench/hotpotqa/108/16384 repeat=0
+[kivi/longbench/hotpotqa/108/16384] 6/32 tokens
+RESULT ok: longbench/hotpotqa/108/16384 score=0 decode=19.216603334702658 token/s
+CASE 217/640 kivi longbench/hotpotqa/148/8192 repeat=0
+[kivi/longbench/hotpotqa/148/8192] 5/32 tokens
+RESULT ok: longbench/hotpotqa/148/8192 score=0 decode=18.624816978340718 token/s
+CASE 218/640 kivi longbench/hotpotqa/148/16384 repeat=0
+[kivi/longbench/hotpotqa/148/16384] 8/32 tokens
+RESULT ok: longbench/hotpotqa/148/16384 score=100.0 decode=18.84231472541449 token/s
+CASE 219/640 kivi longbench/hotpotqa/40/8192 repeat=0
+[kivi/longbench/hotpotqa/40/8192] 11/32 tokens
+RESULT ok: longbench/hotpotqa/40/8192 score=50.0 decode=19.84062139832236 token/s
+CASE 220/640 kivi longbench/hotpotqa/40/16384 repeat=0
+[kivi/longbench/hotpotqa/40/16384] 6/32 tokens
+RESULT ok: longbench/hotpotqa/40/16384 score=66.66666666666666 decode=19.32262625483035 token/s
+CASE 221/640 kivi longbench/hotpotqa/58/8192 repeat=0
+[kivi/longbench/hotpotqa/58/8192] 3/32 tokens
+RESULT ok: longbench/hotpotqa/58/8192 score=0 decode=18.576601335124128 token/s
+CASE 222/640 kivi longbench/hotpotqa/58/16384 repeat=0
+[kivi/longbench/hotpotqa/58/16384] 3/32 tokens
+RESULT ok: longbench/hotpotqa/58/16384 score=100.0 decode=17.772725578954255 token/s
+CASE 223/640 kivi longbench/hotpotqa/89/8192 repeat=0
+[kivi/longbench/hotpotqa/89/8192] 3/32 tokens
+RESULT ok: longbench/hotpotqa/89/8192 score=0 decode=17.426984663016842 token/s
+CASE 224/640 kivi longbench/hotpotqa/89/16384 repeat=0
+[kivi/longbench/hotpotqa/89/16384] 3/32 tokens
+RESULT ok: longbench/hotpotqa/89/16384 score=0 decode=17.13929382546911 token/s
+CASE 225/640 kivi longbench/hotpotqa/191/8192 repeat=0
+[kivi/longbench/hotpotqa/191/8192] 3/32 tokens
+RESULT ok: longbench/hotpotqa/191/8192 score=100.0 decode=18.863069049270937 token/s
+CASE 226/640 kivi longbench/hotpotqa/191/16384 repeat=0
+[kivi/longbench/hotpotqa/191/16384] 3/32 tokens
+RESULT ok: longbench/hotpotqa/191/16384 score=100.0 decode=18.267712330108132 token/s
+CASE 227/640 kivi longbench/hotpotqa/117/8192 repeat=0
+[kivi/longbench/hotpotqa/117/8192] 19/32 tokens
+RESULT ok: longbench/hotpotqa/117/8192 score=76.1904761904762 decode=19.83087259863651 token/s
+CASE 228/640 kivi longbench/hotpotqa/117/16384 repeat=0
+[kivi/longbench/hotpotqa/117/16384] 18/32 tokens
+RESULT ok: longbench/hotpotqa/117/16384 score=76.1904761904762 decode=19.832595224242652 token/s
+CASE 229/640 kivi longbench/hotpotqa/144/8192 repeat=0
+[kivi/longbench/hotpotqa/144/8192] 4/32 tokens
+RESULT ok: longbench/hotpotqa/144/8192 score=100.0 decode=16.400940122029574 token/s
+CASE 230/640 kivi longbench/hotpotqa/144/16384 repeat=0
+[kivi/longbench/hotpotqa/144/16384] 2/32 tokens
+RESULT ok: longbench/hotpotqa/144/16384 score=66.66666666666666 decode=16.694201215141874 token/s
+CASE 231/640 kivi longbench/hotpotqa/199/8192 repeat=0
+[kivi/longbench/hotpotqa/199/8192] 2/32 tokens
+RESULT ok: longbench/hotpotqa/199/8192 score=100.0 decode=17.862534824202164 token/s
+CASE 232/640 kivi longbench/hotpotqa/199/16384 repeat=0
+[kivi/longbench/hotpotqa/199/16384] 2/32 tokens
+RESULT ok: longbench/hotpotqa/199/16384 score=100.0 decode=18.226695992335344 token/s
+CASE 233/640 kivi longbench/hotpotqa/53/8192 repeat=0
+[kivi/longbench/hotpotqa/53/8192] 5/32 tokens
+RESULT ok: longbench/hotpotqa/53/8192 score=0 decode=19.03544505304705 token/s
+CASE 234/640 kivi longbench/hotpotqa/53/16384 repeat=0
+[kivi/longbench/hotpotqa/53/16384] 5/32 tokens
+RESULT ok: longbench/hotpotqa/53/16384 score=0 decode=19.103668299863344 token/s
+CASE 235/640 kivi longbench/hotpotqa/152/8192 repeat=0
+[kivi/longbench/hotpotqa/152/8192] 4/32 tokens
+RESULT ok: longbench/hotpotqa/152/8192 score=100.0 decode=19.073016578202772 token/s
+CASE 236/640 kivi longbench/hotpotqa/152/16384 repeat=0
+[kivi/longbench/hotpotqa/152/16384] 4/32 tokens
+RESULT ok: longbench/hotpotqa/152/16384 score=100.0 decode=18.22927440713216 token/s
+CASE 237/640 kivi longbench/hotpotqa/164/8192 repeat=0
+[kivi/longbench/hotpotqa/164/8192] 4/32 tokens
+RESULT ok: longbench/hotpotqa/164/8192 score=0 decode=19.101297306542694 token/s
+CASE 238/640 kivi longbench/hotpotqa/164/16384 repeat=0
+[kivi/longbench/hotpotqa/164/16384] 4/32 tokens
+RESULT ok: longbench/hotpotqa/164/16384 score=0 decode=18.281423265423715 token/s
+CASE 239/640 kivi longbench/hotpotqa/179/8192 repeat=0
+[kivi/longbench/hotpotqa/179/8192] 4/32 tokens
+RESULT ok: longbench/hotpotqa/179/8192 score=0 decode=19.024171272883994 token/s
+CASE 240/640 kivi longbench/hotpotqa/179/16384 repeat=0
+[kivi/longbench/hotpotqa/179/16384] 4/32 tokens
+RESULT ok: longbench/hotpotqa/179/16384 score=0 decode=16.90736142726689 token/s
+CASE 241/640 kivi longbench/hotpotqa/194/8192 repeat=0
+[kivi/longbench/hotpotqa/194/8192] 21/32 tokens
+RESULT ok: longbench/hotpotqa/194/8192 score=0 decode=19.65549286696641 token/s
+CASE 242/640 kivi longbench/hotpotqa/194/16384 repeat=0
+[kivi/longbench/hotpotqa/194/16384] 3/32 tokens
+RESULT ok: longbench/hotpotqa/194/16384 score=50.0 decode=17.649205613685098 token/s
+CASE 243/640 kivi longbench/hotpotqa/68/8192 repeat=0
+[kivi/longbench/hotpotqa/68/8192] 2/32 tokens
+RESULT ok: longbench/hotpotqa/68/8192 score=100.0 decode=18.739216179608697 token/s
+CASE 244/640 kivi longbench/hotpotqa/68/16384 repeat=0
+[kivi/longbench/hotpotqa/68/16384] 2/32 tokens
+RESULT ok: longbench/hotpotqa/68/16384 score=100.0 decode=17.52815717265203 token/s
+CASE 245/640 kivi longbench/hotpotqa/187/8192 repeat=0
+[kivi/longbench/hotpotqa/187/8192] 3/32 tokens
+RESULT ok: longbench/hotpotqa/187/8192 score=0 decode=18.632828371307557 token/s
+CASE 246/640 kivi longbench/hotpotqa/187/16384 repeat=0
+[kivi/longbench/hotpotqa/187/16384] 3/32 tokens
+RESULT ok: longbench/hotpotqa/187/16384 score=0 decode=18.373168874124534 token/s
+CASE 247/640 kivi longbench/hotpotqa/66/8192 repeat=0
+[kivi/longbench/hotpotqa/66/8192] 4/32 tokens
+RESULT ok: longbench/hotpotqa/66/8192 score=100.0 decode=18.895668714595374 token/s
+CASE 248/640 kivi longbench/hotpotqa/66/16384 repeat=0
+[kivi/longbench/hotpotqa/66/16384] 4/32 tokens
+RESULT ok: longbench/hotpotqa/66/16384 score=100.0 decode=18.74603044217906 token/s
+CASE 249/640 kivi longbench/hotpotqa/183/8192 repeat=0
+[kivi/longbench/hotpotqa/183/8192] 2/32 tokens
+RESULT ok: longbench/hotpotqa/183/8192 score=0 decode=18.645961454566596 token/s
+CASE 250/640 kivi longbench/hotpotqa/183/16384 repeat=0
+[kivi/longbench/hotpotqa/183/16384] 2/32 tokens
+RESULT ok: longbench/hotpotqa/183/16384 score=100.0 decode=17.72543188560313 token/s
+CASE 251/640 kivi longbench/hotpotqa/64/8192 repeat=0
+[kivi/longbench/hotpotqa/64/8192] 2/32 tokens
+RESULT ok: longbench/hotpotqa/64/8192 score=100.0 decode=17.618226732938286 token/s
+CASE 252/640 kivi longbench/hotpotqa/64/16384 repeat=0
+[kivi/longbench/hotpotqa/64/16384] 3/32 tokens
+RESULT ok: longbench/hotpotqa/64/16384 score=0 decode=17.802202716680757 token/s
+CASE 253/640 kivi longbench/hotpotqa/114/8192 repeat=0
+[kivi/longbench/hotpotqa/114/8192] 3/32 tokens
+RESULT ok: longbench/hotpotqa/114/8192 score=100.0 decode=19.045114481653485 token/s
+CASE 254/640 kivi longbench/hotpotqa/114/16384 repeat=0
+[kivi/longbench/hotpotqa/114/16384] 3/32 tokens
+RESULT ok: longbench/hotpotqa/114/16384 score=100.0 decode=16.866331303851204 token/s
+CASE 255/640 kivi longbench/hotpotqa/159/8192 repeat=0
+[kivi/longbench/hotpotqa/159/8192] 8/32 tokens
+RESULT ok: longbench/hotpotqa/159/8192 score=0 decode=19.94315335605834 token/s
+CASE 256/640 kivi longbench/hotpotqa/159/16384 repeat=0
+[kivi/longbench/hotpotqa/159/16384] 8/32 tokens
+RESULT ok: longbench/hotpotqa/159/16384 score=0 decode=19.53690480211978 token/s
+CASE 257/640 kivi longbench/2wikimqa/139/8192 repeat=0
+[kivi/longbench/2wikimqa/139/8192] 3/32 tokens
+RESULT ok: longbench/2wikimqa/139/8192 score=100.0 decode=18.872057343264164 token/s
+CASE 258/640 kivi longbench/2wikimqa/139/16384 repeat=0
+[kivi/longbench/2wikimqa/139/16384] 3/32 tokens
+RESULT ok: longbench/2wikimqa/139/16384 score=100.0 decode=19.073479583079074 token/s
+CASE 259/640 kivi longbench/2wikimqa/152/8192 repeat=0
+[kivi/longbench/2wikimqa/152/8192] 10/32 tokens
+RESULT ok: longbench/2wikimqa/152/8192 score=80.0 decode=19.970698499394782 token/s
+CASE 260/640 kivi longbench/2wikimqa/152/16384 repeat=0
+[kivi/longbench/2wikimqa/152/16384] 10/32 tokens
+RESULT ok: longbench/2wikimqa/152/16384 score=80.0 decode=19.93568053444629 token/s
+CASE 261/640 kivi longbench/2wikimqa/135/8192 repeat=0
+[kivi/longbench/2wikimqa/135/8192] 2/32 tokens
+RESULT ok: longbench/2wikimqa/135/8192 score=100.0 decode=18.51217948621798 token/s
+CASE 262/640 kivi longbench/2wikimqa/135/16384 repeat=0
+[kivi/longbench/2wikimqa/135/16384] 2/32 tokens
+RESULT ok: longbench/2wikimqa/135/16384 score=100.0 decode=18.422488904494386 token/s
+CASE 263/640 kivi longbench/2wikimqa/35/8192 repeat=0
+[kivi/longbench/2wikimqa/35/8192] 8/32 tokens
+RESULT ok: longbench/2wikimqa/35/8192 score=80.0 decode=18.11666661006358 token/s
+CASE 264/640 kivi longbench/2wikimqa/35/16384 repeat=0
+[kivi/longbench/2wikimqa/35/16384] 8/32 tokens
+RESULT ok: longbench/2wikimqa/35/16384 score=80.0 decode=19.432693929039026 token/s
+CASE 265/640 kivi longbench/2wikimqa/39/8192 repeat=0
+[kivi/longbench/2wikimqa/39/8192] 7/32 tokens
+RESULT ok: longbench/2wikimqa/39/8192 score=0 decode=19.87203001227763 token/s
+CASE 266/640 kivi longbench/2wikimqa/39/16384 repeat=0
+[kivi/longbench/2wikimqa/39/16384] 7/32 tokens
+RESULT ok: longbench/2wikimqa/39/16384 score=0 decode=19.924752440449733 token/s
+CASE 267/640 kivi longbench/2wikimqa/44/8192 repeat=0
+[kivi/longbench/2wikimqa/44/8192] 5/32 tokens
+RESULT ok: longbench/2wikimqa/44/8192 score=100.0 decode=19.390748148977593 token/s
+CASE 268/640 kivi longbench/2wikimqa/44/16384 repeat=0
+[kivi/longbench/2wikimqa/44/16384] 5/32 tokens
+RESULT ok: longbench/2wikimqa/44/16384 score=100.0 decode=19.207702731153987 token/s
+CASE 269/640 kivi longbench/2wikimqa/145/8192 repeat=0
+[kivi/longbench/2wikimqa/145/8192] 2/32 tokens
+RESULT ok: longbench/2wikimqa/145/8192 score=100.0 decode=17.72607843785464 token/s
+CASE 270/640 kivi longbench/2wikimqa/145/16384 repeat=0
+[kivi/longbench/2wikimqa/145/16384] 2/32 tokens
+RESULT ok: longbench/2wikimqa/145/16384 score=100.0 decode=18.046144616257095 token/s
+CASE 271/640 kivi longbench/2wikimqa/41/8192 repeat=0
+[kivi/longbench/2wikimqa/41/8192] 4/32 tokens
+RESULT ok: longbench/2wikimqa/41/8192 score=100.0 decode=19.674292453003048 token/s
+CASE 272/640 kivi longbench/2wikimqa/41/16384 repeat=0
+[kivi/longbench/2wikimqa/41/16384] 4/32 tokens
+RESULT ok: longbench/2wikimqa/41/16384 score=100.0 decode=19.704335529099662 token/s
+CASE 273/640 kivi longbench/2wikimqa/37/8192 repeat=0
+[kivi/longbench/2wikimqa/37/8192] 7/32 tokens
+RESULT ok: longbench/2wikimqa/37/8192 score=33.33333333333333 decode=19.68357607443706 token/s
+CASE 274/640 kivi longbench/2wikimqa/37/16384 repeat=0
+[kivi/longbench/2wikimqa/37/16384] 7/32 tokens
+RESULT ok: longbench/2wikimqa/37/16384 score=33.33333333333333 decode=19.504683750549365 token/s
+CASE 275/640 kivi longbench/2wikimqa/137/8192 repeat=0
+[kivi/longbench/2wikimqa/137/8192] 2/32 tokens
+RESULT ok: longbench/2wikimqa/137/8192 score=0 decode=16.49305357214996 token/s
+CASE 276/640 kivi longbench/2wikimqa/137/16384 repeat=0
+[kivi/longbench/2wikimqa/137/16384] 2/32 tokens
+RESULT ok: longbench/2wikimqa/137/16384 score=0 decode=17.982078777294408 token/s
+CASE 277/640 kivi longbench/2wikimqa/162/8192 repeat=0
+[kivi/longbench/2wikimqa/162/8192] 5/32 tokens
+RESULT ok: longbench/2wikimqa/162/8192 score=100.0 decode=19.44939994147973 token/s
+CASE 278/640 kivi longbench/2wikimqa/162/16384 repeat=0
+[kivi/longbench/2wikimqa/162/16384] 5/32 tokens
+RESULT ok: longbench/2wikimqa/162/16384 score=100.0 decode=19.199376875120358 token/s
+CASE 279/640 kivi longbench/2wikimqa/115/8192 repeat=0
+[kivi/longbench/2wikimqa/115/8192] 6/32 tokens
+RESULT ok: longbench/2wikimqa/115/8192 score=100.0 decode=19.726073799736383 token/s
+CASE 280/640 kivi longbench/2wikimqa/115/16384 repeat=0
+[kivi/longbench/2wikimqa/115/16384] 6/32 tokens
+RESULT ok: longbench/2wikimqa/115/16384 score=100.0 decode=19.16128372959244 token/s
+CASE 281/640 kivi longbench/2wikimqa/118/8192 repeat=0
+[kivi/longbench/2wikimqa/118/8192] 5/32 tokens
+RESULT ok: longbench/2wikimqa/118/8192 score=100.0 decode=19.20898486781575 token/s
+CASE 282/640 kivi longbench/2wikimqa/118/16384 repeat=0
+[kivi/longbench/2wikimqa/118/16384] 5/32 tokens
+RESULT ok: longbench/2wikimqa/118/16384 score=100.0 decode=19.041395331090126 token/s
+CASE 283/640 kivi longbench/2wikimqa/38/8192 repeat=0
+[kivi/longbench/2wikimqa/38/8192] 10/32 tokens
+RESULT ok: longbench/2wikimqa/38/8192 score=100.0 decode=19.473793637510575 token/s
+CASE 284/640 kivi longbench/2wikimqa/38/16384 repeat=0
+[kivi/longbench/2wikimqa/38/16384] 10/32 tokens
+RESULT ok: longbench/2wikimqa/38/16384 score=100.0 decode=19.48820147015856 token/s
+CASE 285/640 kivi longbench/2wikimqa/66/8192 repeat=0
+[kivi/longbench/2wikimqa/66/8192] 2/32 tokens
+RESULT ok: longbench/2wikimqa/66/8192 score=0 decode=18.82813965849782 token/s
+CASE 286/640 kivi longbench/2wikimqa/66/16384 repeat=0
+[kivi/longbench/2wikimqa/66/16384] 2/32 tokens
+RESULT ok: longbench/2wikimqa/66/16384 score=0 decode=18.656302226370144 token/s
+CASE 287/640 kivi longbench/2wikimqa/99/8192 repeat=0
+[kivi/longbench/2wikimqa/99/8192] 7/32 tokens
+RESULT ok: longbench/2wikimqa/99/8192 score=0 decode=19.727566445950593 token/s
+CASE 288/640 kivi longbench/2wikimqa/99/16384 repeat=0
+[kivi/longbench/2wikimqa/99/16384] 7/32 tokens
+RESULT ok: longbench/2wikimqa/99/16384 score=0 decode=19.587064963775198 token/s
+CASE 289/640 kivi longbench/2wikimqa/190/8192 repeat=0
+[kivi/longbench/2wikimqa/190/8192] 30/32 tokens
+RESULT ok: longbench/2wikimqa/190/8192 score=20.0 decode=19.90840458495115 token/s
+CASE 290/640 kivi longbench/2wikimqa/190/16384 repeat=0
+[kivi/longbench/2wikimqa/190/16384] 30/32 tokens
+RESULT ok: longbench/2wikimqa/190/16384 score=20.0 decode=19.885715026514898 token/s
+CASE 291/640 kivi longbench/2wikimqa/119/8192 repeat=0
+[kivi/longbench/2wikimqa/119/8192] 2/32 tokens
+RESULT ok: longbench/2wikimqa/119/8192 score=100.0 decode=17.571082446813996 token/s
+CASE 292/640 kivi longbench/2wikimqa/119/16384 repeat=0
+[kivi/longbench/2wikimqa/119/16384] 2/32 tokens
+RESULT ok: longbench/2wikimqa/119/16384 score=100.0 decode=16.77897726827013 token/s
+CASE 293/640 kivi longbench/2wikimqa/136/8192 repeat=0
+[kivi/longbench/2wikimqa/136/8192] 5/32 tokens
+RESULT ok: longbench/2wikimqa/136/8192 score=0 decode=19.099424232910977 token/s
+CASE 294/640 kivi longbench/2wikimqa/136/16384 repeat=0
+[kivi/longbench/2wikimqa/136/16384] 5/32 tokens
+RESULT ok: longbench/2wikimqa/136/16384 score=0 decode=19.033719887492442 token/s
+CASE 295/640 kivi longbench/2wikimqa/142/8192 repeat=0
+[kivi/longbench/2wikimqa/142/8192] 5/32 tokens
+RESULT ok: longbench/2wikimqa/142/8192 score=0 decode=18.68105918619341 token/s
+CASE 296/640 kivi longbench/2wikimqa/142/16384 repeat=0
+[kivi/longbench/2wikimqa/142/16384] 8/32 tokens
+RESULT ok: longbench/2wikimqa/142/16384 score=0 decode=19.33933221665706 token/s
+CASE 297/640 kivi longbench/2wikimqa/63/8192 repeat=0
+[kivi/longbench/2wikimqa/63/8192] 2/32 tokens
+RESULT ok: longbench/2wikimqa/63/8192 score=0 decode=18.279880128017847 token/s
+CASE 298/640 kivi longbench/2wikimqa/63/16384 repeat=0
+[kivi/longbench/2wikimqa/63/16384] 2/32 tokens
+RESULT ok: longbench/2wikimqa/63/16384 score=0 decode=18.640641569329155 token/s
+CASE 299/640 kivi longbench/2wikimqa/155/8192 repeat=0
+[kivi/longbench/2wikimqa/155/8192] 7/32 tokens
+RESULT ok: longbench/2wikimqa/155/8192 score=100.0 decode=19.395036476290286 token/s
+CASE 300/640 kivi longbench/2wikimqa/155/16384 repeat=0
+[kivi/longbench/2wikimqa/155/16384] 7/32 tokens
+RESULT ok: longbench/2wikimqa/155/16384 score=100.0 decode=19.62518912768185 token/s
+CASE 301/640 kivi longbench/2wikimqa/193/8192 repeat=0
+[kivi/longbench/2wikimqa/193/8192] 6/32 tokens
+RESULT ok: longbench/2wikimqa/193/8192 score=0 decode=19.622087790907138 token/s
+CASE 302/640 kivi longbench/2wikimqa/193/16384 repeat=0
+[kivi/longbench/2wikimqa/193/16384] 6/32 tokens
+RESULT ok: longbench/2wikimqa/193/16384 score=0 decode=19.44037900501947 token/s
+CASE 303/640 kivi longbench/2wikimqa/187/8192 repeat=0
+[kivi/longbench/2wikimqa/187/8192] 5/32 tokens
+RESULT ok: longbench/2wikimqa/187/8192 score=0 decode=19.5621439434959 token/s
+CASE 304/640 kivi longbench/2wikimqa/187/16384 repeat=0
+[kivi/longbench/2wikimqa/187/16384] 5/32 tokens
+RESULT ok: longbench/2wikimqa/187/16384 score=0 decode=19.49694452294666 token/s
+CASE 305/640 kivi longbench/2wikimqa/112/8192 repeat=0
+[kivi/longbench/2wikimqa/112/8192] 5/32 tokens
+RESULT ok: longbench/2wikimqa/112/8192 score=0 decode=19.671584657530182 token/s
+CASE 306/640 kivi longbench/2wikimqa/112/16384 repeat=0
+[kivi/longbench/2wikimqa/112/16384] 5/32 tokens
+RESULT ok: longbench/2wikimqa/112/16384 score=0 decode=19.54462264270375 token/s
+CASE 307/640 kivi longbench/2wikimqa/77/8192 repeat=0
+[kivi/longbench/2wikimqa/77/8192] 6/32 tokens
+RESULT ok: longbench/2wikimqa/77/8192 score=100.0 decode=19.501174448217583 token/s
+CASE 308/640 kivi longbench/2wikimqa/77/16384 repeat=0
+[kivi/longbench/2wikimqa/77/16384] 6/32 tokens
+RESULT ok: longbench/2wikimqa/77/16384 score=100.0 decode=19.548701334516572 token/s
+CASE 309/640 kivi longbench/2wikimqa/194/8192 repeat=0
+[kivi/longbench/2wikimqa/194/8192] 10/32 tokens
+RESULT ok: longbench/2wikimqa/194/8192 score=0 decode=19.846302381345946 token/s
+CASE 310/640 kivi longbench/2wikimqa/194/16384 repeat=0
+[kivi/longbench/2wikimqa/194/16384] 10/32 tokens
+RESULT ok: longbench/2wikimqa/194/16384 score=0 decode=19.73203929782318 token/s
+CASE 311/640 kivi longbench/2wikimqa/72/8192 repeat=0
+[kivi/longbench/2wikimqa/72/8192] 6/32 tokens
+RESULT ok: longbench/2wikimqa/72/8192 score=100.0 decode=19.3790471067966 token/s
+CASE 312/640 kivi longbench/2wikimqa/72/16384 repeat=0
+[kivi/longbench/2wikimqa/72/16384] 6/32 tokens
+RESULT ok: longbench/2wikimqa/72/16384 score=100.0 decode=19.683298728868277 token/s
+CASE 313/640 kivi longbench/2wikimqa/179/8192 repeat=0
+[kivi/longbench/2wikimqa/179/8192] 5/32 tokens
+RESULT ok: longbench/2wikimqa/179/8192 score=100.0 decode=19.42100938740515 token/s
+CASE 314/640 kivi longbench/2wikimqa/179/16384 repeat=0
+[kivi/longbench/2wikimqa/179/16384] 5/32 tokens
+RESULT ok: longbench/2wikimqa/179/16384 score=100.0 decode=19.155884102753934 token/s
+CASE 315/640 kivi longbench/2wikimqa/70/8192 repeat=0
+[kivi/longbench/2wikimqa/70/8192] 3/32 tokens
+RESULT ok: longbench/2wikimqa/70/8192 score=100.0 decode=18.33051686104781 token/s
+CASE 316/640 kivi longbench/2wikimqa/70/16384 repeat=0
+[kivi/longbench/2wikimqa/70/16384] 3/32 tokens
+RESULT ok: longbench/2wikimqa/70/16384 score=100.0 decode=18.542781979782617 token/s
+CASE 317/640 kivi longbench/2wikimqa/117/8192 repeat=0
+[kivi/longbench/2wikimqa/117/8192] 5/32 tokens
+RESULT ok: longbench/2wikimqa/117/8192 score=100.0 decode=19.377163225226194 token/s
+CASE 318/640 kivi longbench/2wikimqa/117/16384 repeat=0
+[kivi/longbench/2wikimqa/117/16384] 5/32 tokens
+RESULT ok: longbench/2wikimqa/117/16384 score=100.0 decode=19.185618290270277 token/s
+CASE 319/640 kivi longbench/2wikimqa/159/8192 repeat=0
+[kivi/longbench/2wikimqa/159/8192] 6/32 tokens
+RESULT ok: longbench/2wikimqa/159/8192 score=0 decode=19.6606448532243 token/s
+CASE 320/640 kivi longbench/2wikimqa/159/16384 repeat=0
+[kivi/longbench/2wikimqa/159/16384] 3/32 tokens
+RESULT ok: longbench/2wikimqa/159/16384 score=0 decode=18.532467795341816 token/s
+CASE 321/640 kivi longbench/gov_report/100/8192 repeat=0
+[kivi/longbench/gov_report/100/8192] 129/512 tokens
+[kivi/longbench/gov_report/100/8192] 257/512 tokens
+[kivi/longbench/gov_report/100/8192] 385/512 tokens
+[kivi/longbench/gov_report/100/8192] 491/512 tokens
+RESULT ok: longbench/gov_report/100/8192 score=27.976189981310235 decode=20.21157011097811 token/s
+CASE 322/640 kivi longbench/gov_report/100/16384 repeat=0
+[kivi/longbench/gov_report/100/16384] 129/512 tokens
+[kivi/longbench/gov_report/100/16384] 257/512 tokens
+[kivi/longbench/gov_report/100/16384] 385/512 tokens
+[kivi/longbench/gov_report/100/16384] 491/512 tokens
+RESULT ok: longbench/gov_report/100/16384 score=27.976189981310235 decode=19.829185202122616 token/s
+CASE 323/640 kivi longbench/gov_report/129/8192 repeat=0
+[kivi/longbench/gov_report/129/8192] 129/512 tokens
+[kivi/longbench/gov_report/129/8192] 257/512 tokens
+[kivi/longbench/gov_report/129/8192] 385/512 tokens
+[kivi/longbench/gov_report/129/8192] 433/512 tokens
+RESULT ok: longbench/gov_report/129/8192 score=34.28571381991547 decode=19.958188241395096 token/s
+CASE 324/640 kivi longbench/gov_report/129/16384 repeat=0
+[kivi/longbench/gov_report/129/16384] 129/512 tokens
+[kivi/longbench/gov_report/129/16384] 257/512 tokens
+[kivi/longbench/gov_report/129/16384] 385/512 tokens
+[kivi/longbench/gov_report/129/16384] 433/512 tokens
+RESULT ok: longbench/gov_report/129/16384 score=34.28571381991547 decode=20.17450699817316 token/s
+CASE 325/640 kivi longbench/gov_report/3/8192 repeat=0
+[kivi/longbench/gov_report/3/8192] 129/512 tokens
+[kivi/longbench/gov_report/3/8192] 257/512 tokens
+[kivi/longbench/gov_report/3/8192] 385/512 tokens
+[kivi/longbench/gov_report/3/8192] 451/512 tokens
+RESULT ok: longbench/gov_report/3/8192 score=29.118773467763255 decode=20.152911207690476 token/s
+CASE 326/640 kivi longbench/gov_report/3/16384 repeat=0
+[kivi/longbench/gov_report/3/16384] 129/512 tokens
+[kivi/longbench/gov_report/3/16384] 257/512 tokens
+[kivi/longbench/gov_report/3/16384] 385/512 tokens
+[kivi/longbench/gov_report/3/16384] 512/512 tokens
+RESULT ok: longbench/gov_report/3/16384 score=29.27756605947029 decode=20.043598191882136 token/s
+CASE 327/640 kivi longbench/gov_report/121/8192 repeat=0
+[kivi/longbench/gov_report/121/8192] 129/512 tokens
+[kivi/longbench/gov_report/121/8192] 257/512 tokens
+[kivi/longbench/gov_report/121/8192] 385/512 tokens
+[kivi/longbench/gov_report/121/8192] 512/512 tokens
+RESULT ok: longbench/gov_report/121/8192 score=32.936507444570424 decode=20.28406834065114 token/s
+CASE 328/640 kivi longbench/gov_report/121/16384 repeat=0
+[kivi/longbench/gov_report/121/16384] 129/512 tokens
+[kivi/longbench/gov_report/121/16384] 257/512 tokens
+[kivi/longbench/gov_report/121/16384] 385/512 tokens
+[kivi/longbench/gov_report/121/16384] 442/512 tokens
+RESULT ok: longbench/gov_report/121/16384 score=36.20689607684305 decode=20.18574384209077 token/s
+CASE 329/640 kivi longbench/gov_report/157/8192 repeat=0
+[kivi/longbench/gov_report/157/8192] 129/512 tokens
+[kivi/longbench/gov_report/157/8192] 257/512 tokens
+[kivi/longbench/gov_report/157/8192] 385/512 tokens
+[kivi/longbench/gov_report/157/8192] 487/512 tokens
+RESULT ok: longbench/gov_report/157/8192 score=24.32989643731747 decode=20.04836228886845 token/s
+CASE 330/640 kivi longbench/gov_report/157/16384 repeat=0
+[kivi/longbench/gov_report/157/16384] 129/512 tokens
+[kivi/longbench/gov_report/157/16384] 257/512 tokens
+[kivi/longbench/gov_report/157/16384] 385/512 tokens
+[kivi/longbench/gov_report/157/16384] 445/512 tokens
+RESULT ok: longbench/gov_report/157/16384 score=28.915662173255274 decode=19.86254693827 token/s
+CASE 331/640 kivi longbench/gov_report/40/8192 repeat=0
+[kivi/longbench/gov_report/40/8192] 129/512 tokens
+[kivi/longbench/gov_report/40/8192] 257/512 tokens
+[kivi/longbench/gov_report/40/8192] 385/512 tokens
+[kivi/longbench/gov_report/40/8192] 450/512 tokens
+RESULT ok: longbench/gov_report/40/8192 score=28.392483896095293 decode=20.03749971285639 token/s
+CASE 332/640 kivi longbench/gov_report/40/16384 repeat=0
+[kivi/longbench/gov_report/40/16384] 129/512 tokens
+[kivi/longbench/gov_report/40/16384] 257/512 tokens
+[kivi/longbench/gov_report/40/16384] 385/512 tokens
+[kivi/longbench/gov_report/40/16384] 440/512 tokens
+RESULT ok: longbench/gov_report/40/16384 score=34.31952615958826 decode=20.179346027522303 token/s
+CASE 333/640 kivi longbench/gov_report/85/8192 repeat=0
+[kivi/longbench/gov_report/85/8192] 129/512 tokens
+[kivi/longbench/gov_report/85/8192] 257/512 tokens
+[kivi/longbench/gov_report/85/8192] 385/512 tokens
+[kivi/longbench/gov_report/85/8192] 400/512 tokens
+RESULT ok: longbench/gov_report/85/8192 score=35.29411720171653 decode=20.205121212646848 token/s
+CASE 334/640 kivi longbench/gov_report/85/16384 repeat=0
+[kivi/longbench/gov_report/85/16384] 129/512 tokens
+[kivi/longbench/gov_report/85/16384] 257/512 tokens
+[kivi/longbench/gov_report/85/16384] 385/512 tokens
+[kivi/longbench/gov_report/85/16384] 417/512 tokens
+RESULT ok: longbench/gov_report/85/16384 score=31.73277618622653 decode=20.22229573184708 token/s
+CASE 335/640 kivi longbench/gov_report/68/8192 repeat=0
+[kivi/longbench/gov_report/68/8192] 129/512 tokens
+[kivi/longbench/gov_report/68/8192] 257/512 tokens
+[kivi/longbench/gov_report/68/8192] 385/512 tokens
+[kivi/longbench/gov_report/68/8192] 512/512 tokens
+RESULT ok: longbench/gov_report/68/8192 score=27.255277831248787 decode=20.022948289400848 token/s
+CASE 336/640 kivi longbench/gov_report/68/16384 repeat=0
+[kivi/longbench/gov_report/68/16384] 129/512 tokens
+[kivi/longbench/gov_report/68/16384] 257/512 tokens
+[kivi/longbench/gov_report/68/16384] 385/512 tokens
+[kivi/longbench/gov_report/68/16384] 512/512 tokens
+RESULT ok: longbench/gov_report/68/16384 score=28.190475708981406 decode=20.22195350628381 token/s
+CASE 337/640 kivi longbench/gov_report/175/8192 repeat=0
+[kivi/longbench/gov_report/175/8192] 129/512 tokens
+[kivi/longbench/gov_report/175/8192] 257/512 tokens
+[kivi/longbench/gov_report/175/8192] 385/512 tokens
+[kivi/longbench/gov_report/175/8192] 508/512 tokens
+RESULT ok: longbench/gov_report/175/8192 score=40.08350683278054 decode=20.170346535828028 token/s
+CASE 338/640 kivi longbench/gov_report/175/16384 repeat=0
+[kivi/longbench/gov_report/175/16384] 129/512 tokens
+[kivi/longbench/gov_report/175/16384] 257/512 tokens
+[kivi/longbench/gov_report/175/16384] 385/512 tokens
+[kivi/longbench/gov_report/175/16384] 447/512 tokens
+RESULT ok: longbench/gov_report/175/16384 score=39.82494483648953 decode=20.241365875664847 token/s
+CASE 339/640 kivi longbench/gov_report/2/8192 repeat=0
+[kivi/longbench/gov_report/2/8192] 129/512 tokens
+[kivi/longbench/gov_report/2/8192] 257/512 tokens
+[kivi/longbench/gov_report/2/8192] 385/512 tokens
+[kivi/longbench/gov_report/2/8192] 391/512 tokens
+RESULT ok: longbench/gov_report/2/8192 score=48.607594464425574 decode=20.35411014769722 token/s
+CASE 340/640 kivi longbench/gov_report/2/16384 repeat=0
+[kivi/longbench/gov_report/2/16384] 129/512 tokens
+[kivi/longbench/gov_report/2/16384] 257/512 tokens
+[kivi/longbench/gov_report/2/16384] 385/512 tokens
+[kivi/longbench/gov_report/2/16384] 512/512 tokens
+RESULT ok: longbench/gov_report/2/16384 score=41.09588991747462 decode=20.256332496348808 token/s
+CASE 341/640 kivi longbench/gov_report/149/8192 repeat=0
+[kivi/longbench/gov_report/149/8192] 129/512 tokens
+[kivi/longbench/gov_report/149/8192] 257/512 tokens
+[kivi/longbench/gov_report/149/8192] 385/512 tokens
+[kivi/longbench/gov_report/149/8192] 512/512 tokens
+RESULT ok: longbench/gov_report/149/8192 score=33.10104483215774 decode=19.959147758204242 token/s
+CASE 342/640 kivi longbench/gov_report/149/16384 repeat=0
+[kivi/longbench/gov_report/149/16384] 129/512 tokens
+[kivi/longbench/gov_report/149/16384] 257/512 tokens
+[kivi/longbench/gov_report/149/16384] 385/512 tokens
+[kivi/longbench/gov_report/149/16384] 512/512 tokens
+RESULT ok: longbench/gov_report/149/16384 score=33.10104483215774 decode=20.250561345808244 token/s
+CASE 343/640 kivi longbench/gov_report/33/8192 repeat=0
+[kivi/longbench/gov_report/33/8192] 129/512 tokens
+[kivi/longbench/gov_report/33/8192] 257/512 tokens
+[kivi/longbench/gov_report/33/8192] 385/512 tokens
+[kivi/longbench/gov_report/33/8192] 512/512 tokens
+RESULT ok: longbench/gov_report/33/8192 score=41.23711290271283 decode=19.970283209200087 token/s
+CASE 344/640 kivi longbench/gov_report/33/16384 repeat=0
+[kivi/longbench/gov_report/33/16384] 129/512 tokens
+[kivi/longbench/gov_report/33/16384] 257/512 tokens
+[kivi/longbench/gov_report/33/16384] 385/512 tokens
+[kivi/longbench/gov_report/33/16384] 512/512 tokens
+RESULT ok: longbench/gov_report/33/16384 score=33.823528915236935 decode=20.116643253770736 token/s
+CASE 345/640 kivi longbench/gov_report/67/8192 repeat=0
+[kivi/longbench/gov_report/67/8192] 129/512 tokens
+[kivi/longbench/gov_report/67/8192] 257/512 tokens
+[kivi/longbench/gov_report/67/8192] 385/512 tokens
+[kivi/longbench/gov_report/67/8192] 512/512 tokens
+RESULT ok: longbench/gov_report/67/8192 score=22.462202524786708 decode=20.095397599641856 token/s
+CASE 346/640 kivi longbench/gov_report/67/16384 repeat=0
+[kivi/longbench/gov_report/67/16384] 129/512 tokens
+[kivi/longbench/gov_report/67/16384] 257/512 tokens
+[kivi/longbench/gov_report/67/16384] 385/512 tokens
+[kivi/longbench/gov_report/67/16384] 512/512 tokens
+RESULT ok: longbench/gov_report/67/16384 score=21.670428398188026 decode=20.24277082083988 token/s
+CASE 347/640 kivi longbench/gov_report/8/8192 repeat=0
+[kivi/longbench/gov_report/8/8192] 129/512 tokens
+[kivi/longbench/gov_report/8/8192] 257/512 tokens
+[kivi/longbench/gov_report/8/8192] 385/512 tokens
+[kivi/longbench/gov_report/8/8192] 512/512 tokens
+RESULT ok: longbench/gov_report/8/8192 score=49.99999952859169 decode=20.180751240498648 token/s
+CASE 348/640 kivi longbench/gov_report/8/16384 repeat=0
+[kivi/longbench/gov_report/8/16384] 129/512 tokens
+[kivi/longbench/gov_report/8/16384] 257/512 tokens
+[kivi/longbench/gov_report/8/16384] 385/512 tokens
+[kivi/longbench/gov_report/8/16384] 512/512 tokens
+RESULT ok: longbench/gov_report/8/16384 score=49.99999952859169 decode=20.215507324264816 token/s
+CASE 349/640 kivi longbench/gov_report/13/8192 repeat=0
+[kivi/longbench/gov_report/13/8192] 129/512 tokens
+[kivi/longbench/gov_report/13/8192] 257/512 tokens
+[kivi/longbench/gov_report/13/8192] 365/512 tokens
+RESULT ok: longbench/gov_report/13/8192 score=36.45569573922129 decode=20.277878098692973 token/s
+CASE 350/640 kivi longbench/gov_report/13/16384 repeat=0
+[kivi/longbench/gov_report/13/16384] 129/512 tokens
+[kivi/longbench/gov_report/13/16384] 257/512 tokens
+[kivi/longbench/gov_report/13/16384] 375/512 tokens
+RESULT ok: longbench/gov_report/13/16384 score=41.29353186924829 decode=20.19356762754477 token/s
+CASE 351/640 kivi longbench/gov_report/94/8192 repeat=0
+[kivi/longbench/gov_report/94/8192] 129/512 tokens
+[kivi/longbench/gov_report/94/8192] 257/512 tokens
+[kivi/longbench/gov_report/94/8192] 385/512 tokens
+[kivi/longbench/gov_report/94/8192] 403/512 tokens
+RESULT ok: longbench/gov_report/94/8192 score=43.735762621364564 decode=20.050651934922744 token/s
+CASE 352/640 kivi longbench/gov_report/94/16384 repeat=0
+[kivi/longbench/gov_report/94/16384] 129/512 tokens
+[kivi/longbench/gov_report/94/16384] 257/512 tokens
+[kivi/longbench/gov_report/94/16384] 385/512 tokens
+[kivi/longbench/gov_report/94/16384] 403/512 tokens
+RESULT ok: longbench/gov_report/94/16384 score=43.735762621364564 decode=20.148758717937117 token/s
+CASE 353/640 kivi longbench/gov_report/55/8192 repeat=0
+[kivi/longbench/gov_report/55/8192] 129/512 tokens
+[kivi/longbench/gov_report/55/8192] 257/512 tokens
+[kivi/longbench/gov_report/55/8192] 385/512 tokens
+[kivi/longbench/gov_report/55/8192] 479/512 tokens
+RESULT ok: longbench/gov_report/55/8192 score=28.175519141752325 decode=19.950188737492272 token/s
+CASE 354/640 kivi longbench/gov_report/55/16384 repeat=0
+[kivi/longbench/gov_report/55/16384] 129/512 tokens
+[kivi/longbench/gov_report/55/16384] 257/512 tokens
+[kivi/longbench/gov_report/55/16384] 385/512 tokens
+[kivi/longbench/gov_report/55/16384] 479/512 tokens
+RESULT ok: longbench/gov_report/55/16384 score=28.175519141752325 decode=20.070926129916693 token/s
+CASE 355/640 kivi longbench/gov_report/37/8192 repeat=0
+[kivi/longbench/gov_report/37/8192] 129/512 tokens
+[kivi/longbench/gov_report/37/8192] 257/512 tokens
+[kivi/longbench/gov_report/37/8192] 385/512 tokens
+[kivi/longbench/gov_report/37/8192] 458/512 tokens
+RESULT ok: longbench/gov_report/37/8192 score=27.49529144467498 decode=19.984200764908735 token/s
+CASE 356/640 kivi longbench/gov_report/37/16384 repeat=0
+[kivi/longbench/gov_report/37/16384] 129/512 tokens
+[kivi/longbench/gov_report/37/16384] 257/512 tokens
+[kivi/longbench/gov_report/37/16384] 385/512 tokens
+[kivi/longbench/gov_report/37/16384] 458/512 tokens
+RESULT ok: longbench/gov_report/37/16384 score=27.49529144467498 decode=20.13933879703664 token/s
+CASE 357/640 kivi longbench/gov_report/78/8192 repeat=0
+[kivi/longbench/gov_report/78/8192] 129/512 tokens
+[kivi/longbench/gov_report/78/8192] 257/512 tokens
+[kivi/longbench/gov_report/78/8192] 385/512 tokens
+[kivi/longbench/gov_report/78/8192] 402/512 tokens
+RESULT ok: longbench/gov_report/78/8192 score=37.826086475661626 decode=20.058613090669073 token/s
+CASE 358/640 kivi longbench/gov_report/78/16384 repeat=0
+[kivi/longbench/gov_report/78/16384] 129/512 tokens
+[kivi/longbench/gov_report/78/16384] 257/512 tokens
+[kivi/longbench/gov_report/78/16384] 385/512 tokens
+[kivi/longbench/gov_report/78/16384] 402/512 tokens
+RESULT ok: longbench/gov_report/78/16384 score=37.826086475661626 decode=20.191185557073144 token/s
+CASE 359/640 kivi longbench/gov_report/161/8192 repeat=0
+[kivi/longbench/gov_report/161/8192] 129/512 tokens
+[kivi/longbench/gov_report/161/8192] 257/512 tokens
+[kivi/longbench/gov_report/161/8192] 385/512 tokens
+[kivi/longbench/gov_report/161/8192] 512/512 tokens
+RESULT ok: longbench/gov_report/161/8192 score=34.54987785260566 decode=20.17295620409241 token/s
+CASE 360/640 kivi longbench/gov_report/161/16384 repeat=0
+[kivi/longbench/gov_report/161/16384] 129/512 tokens
+[kivi/longbench/gov_report/161/16384] 257/512 tokens
+[kivi/longbench/gov_report/161/16384] 385/512 tokens
+[kivi/longbench/gov_report/161/16384] 512/512 tokens
+RESULT ok: longbench/gov_report/161/16384 score=34.54987785260566 decode=20.203025886472474 token/s
+CASE 361/640 kivi longbench/gov_report/104/8192 repeat=0
+[kivi/longbench/gov_report/104/8192] 129/512 tokens
+[kivi/longbench/gov_report/104/8192] 257/512 tokens
+[kivi/longbench/gov_report/104/8192] 385/512 tokens
+[kivi/longbench/gov_report/104/8192] 512/512 tokens
+RESULT ok: longbench/gov_report/104/8192 score=35.497835004169715 decode=20.077584156416542 token/s
+CASE 362/640 kivi longbench/gov_report/104/16384 repeat=0
+[kivi/longbench/gov_report/104/16384] 129/512 tokens
+[kivi/longbench/gov_report/104/16384] 257/512 tokens
+[kivi/longbench/gov_report/104/16384] 385/512 tokens
+[kivi/longbench/gov_report/104/16384] 512/512 tokens
+RESULT ok: longbench/gov_report/104/16384 score=35.497835004169715 decode=20.205385059033436 token/s
+CASE 363/640 kivi longbench/gov_report/136/8192 repeat=0
+[kivi/longbench/gov_report/136/8192] 129/512 tokens
+[kivi/longbench/gov_report/136/8192] 257/512 tokens
+[kivi/longbench/gov_report/136/8192] 385/512 tokens
+[kivi/longbench/gov_report/136/8192] 461/512 tokens
+RESULT ok: longbench/gov_report/136/8192 score=35.01683451711277 decode=20.01752308549234 token/s
+CASE 364/640 kivi longbench/gov_report/136/16384 repeat=0
+[kivi/longbench/gov_report/136/16384] 129/512 tokens
+[kivi/longbench/gov_report/136/16384] 257/512 tokens
+[kivi/longbench/gov_report/136/16384] 385/512 tokens
+[kivi/longbench/gov_report/136/16384] 461/512 tokens
+RESULT ok: longbench/gov_report/136/16384 score=35.01683451711277 decode=20.23740550113312 token/s
+CASE 365/640 kivi longbench/gov_report/177/8192 repeat=0
+[kivi/longbench/gov_report/177/8192] 129/512 tokens
+[kivi/longbench/gov_report/177/8192] 257/512 tokens
+[kivi/longbench/gov_report/177/8192] 385/512 tokens
+[kivi/longbench/gov_report/177/8192] 452/512 tokens
+RESULT ok: longbench/gov_report/177/8192 score=31.143551846602858 decode=20.12681743084724 token/s
+CASE 366/640 kivi longbench/gov_report/177/16384 repeat=0
+[kivi/longbench/gov_report/177/16384] 129/512 tokens
+[kivi/longbench/gov_report/177/16384] 257/512 tokens
+[kivi/longbench/gov_report/177/16384] 385/512 tokens
+[kivi/longbench/gov_report/177/16384] 512/512 tokens
+RESULT ok: longbench/gov_report/177/16384 score=30.341879848053182 decode=19.76481097721004 token/s
+CASE 367/640 kivi longbench/gov_report/11/8192 repeat=0
+[kivi/longbench/gov_report/11/8192] 129/512 tokens
+[kivi/longbench/gov_report/11/8192] 257/512 tokens
+[kivi/longbench/gov_report/11/8192] 385/512 tokens
+[kivi/longbench/gov_report/11/8192] 512/512 tokens
+RESULT ok: longbench/gov_report/11/8192 score=40.77253171876439 decode=20.234093113285525 token/s
+CASE 368/640 kivi longbench/gov_report/11/16384 repeat=0
+[kivi/longbench/gov_report/11/16384] 129/512 tokens
+[kivi/longbench/gov_report/11/16384] 257/512 tokens
+[kivi/longbench/gov_report/11/16384] 385/512 tokens
+[kivi/longbench/gov_report/11/16384] 444/512 tokens
+RESULT ok: longbench/gov_report/11/16384 score=41.55844109105902 decode=20.111120184465875 token/s
+CASE 369/640 kivi longbench/gov_report/118/8192 repeat=0
+[kivi/longbench/gov_report/118/8192] 129/512 tokens
+[kivi/longbench/gov_report/118/8192] 257/512 tokens
+[kivi/longbench/gov_report/118/8192] 385/512 tokens
+[kivi/longbench/gov_report/118/8192] 394/512 tokens
+RESULT ok: longbench/gov_report/118/8192 score=36.1990945524764 decode=20.037721074093785 token/s
+CASE 370/640 kivi longbench/gov_report/118/16384 repeat=0
+[kivi/longbench/gov_report/118/16384] 129/512 tokens
+[kivi/longbench/gov_report/118/16384] 257/512 tokens
+[kivi/longbench/gov_report/118/16384] 385/512 tokens
+[kivi/longbench/gov_report/118/16384] 394/512 tokens
+RESULT ok: longbench/gov_report/118/16384 score=36.1990945524764 decode=20.216149369394675 token/s
+CASE 371/640 kivi longbench/gov_report/113/8192 repeat=0
+[kivi/longbench/gov_report/113/8192] 129/512 tokens
+[kivi/longbench/gov_report/113/8192] 257/512 tokens
+[kivi/longbench/gov_report/113/8192] 385/512 tokens
+[kivi/longbench/gov_report/113/8192] 434/512 tokens
+RESULT ok: longbench/gov_report/113/8192 score=41.33738552326753 decode=19.9456239457007 token/s
+CASE 372/640 kivi longbench/gov_report/113/16384 repeat=0
+[kivi/longbench/gov_report/113/16384] 129/512 tokens
+[kivi/longbench/gov_report/113/16384] 257/512 tokens
+[kivi/longbench/gov_report/113/16384] 385/512 tokens
+[kivi/longbench/gov_report/113/16384] 434/512 tokens
+RESULT ok: longbench/gov_report/113/16384 score=41.33738552326753 decode=20.308000175423512 token/s
+CASE 373/640 kivi longbench/gov_report/60/8192 repeat=0
+[kivi/longbench/gov_report/60/8192] 129/512 tokens
+[kivi/longbench/gov_report/60/8192] 257/512 tokens
+[kivi/longbench/gov_report/60/8192] 385/512 tokens
+[kivi/longbench/gov_report/60/8192] 455/512 tokens
+RESULT ok: longbench/gov_report/60/8192 score=38.655461710613665 decode=20.263516044594375 token/s
+CASE 374/640 kivi longbench/gov_report/60/16384 repeat=0
+[kivi/longbench/gov_report/60/16384] 129/512 tokens
+[kivi/longbench/gov_report/60/16384] 257/512 tokens
+[kivi/longbench/gov_report/60/16384] 385/512 tokens
+[kivi/longbench/gov_report/60/16384] 483/512 tokens
+RESULT ok: longbench/gov_report/60/16384 score=37.6068371375557 decode=20.292977005426227 token/s
+CASE 375/640 kivi longbench/gov_report/4/8192 repeat=0
+[kivi/longbench/gov_report/4/8192] 129/512 tokens
+[kivi/longbench/gov_report/4/8192] 257/512 tokens
+[kivi/longbench/gov_report/4/8192] 385/512 tokens
+[kivi/longbench/gov_report/4/8192] 491/512 tokens
+RESULT ok: longbench/gov_report/4/8192 score=24.948024478628643 decode=20.174310556502498 token/s
+CASE 376/640 kivi longbench/gov_report/4/16384 repeat=0
+[kivi/longbench/gov_report/4/16384] 129/512 tokens
+[kivi/longbench/gov_report/4/16384] 257/512 tokens
+[kivi/longbench/gov_report/4/16384] 385/512 tokens
+[kivi/longbench/gov_report/4/16384] 500/512 tokens
+RESULT ok: longbench/gov_report/4/16384 score=27.75510156601417 decode=20.034341071427118 token/s
+CASE 377/640 kivi longbench/gov_report/93/8192 repeat=0
+[kivi/longbench/gov_report/93/8192] 129/512 tokens
+[kivi/longbench/gov_report/93/8192] 257/512 tokens
+[kivi/longbench/gov_report/93/8192] 385/512 tokens
+[kivi/longbench/gov_report/93/8192] 512/512 tokens
+RESULT ok: longbench/gov_report/93/8192 score=27.31554115508085 decode=20.172344109836104 token/s
+CASE 378/640 kivi longbench/gov_report/93/16384 repeat=0
+[kivi/longbench/gov_report/93/16384] 129/512 tokens
+[kivi/longbench/gov_report/93/16384] 257/512 tokens
+[kivi/longbench/gov_report/93/16384] 385/512 tokens
+[kivi/longbench/gov_report/93/16384] 512/512 tokens
+RESULT ok: longbench/gov_report/93/16384 score=28.348909207805633 decode=19.72744911926139 token/s
+CASE 379/640 kivi longbench/gov_report/135/8192 repeat=0
+[kivi/longbench/gov_report/135/8192] 129/512 tokens
+[kivi/longbench/gov_report/135/8192] 257/512 tokens
+[kivi/longbench/gov_report/135/8192] 385/512 tokens
+[kivi/longbench/gov_report/135/8192] 422/512 tokens
+RESULT ok: longbench/gov_report/135/8192 score=28.72727232247934 decode=13.925508082874764 token/s
+CASE 380/640 kivi longbench/gov_report/135/16384 repeat=0
+[kivi/longbench/gov_report/135/16384] 129/512 tokens
+[kivi/longbench/gov_report/135/16384] 257/512 tokens
+[kivi/longbench/gov_report/135/16384] 385/512 tokens
+[kivi/longbench/gov_report/135/16384] 422/512 tokens
+RESULT ok: longbench/gov_report/135/16384 score=28.72727232247934 decode=20.012219761495036 token/s
+CASE 381/640 kivi longbench/gov_report/98/8192 repeat=0
+[kivi/longbench/gov_report/98/8192] 129/512 tokens
+[kivi/longbench/gov_report/98/8192] 257/512 tokens
+[kivi/longbench/gov_report/98/8192] 377/512 tokens
+RESULT ok: longbench/gov_report/98/8192 score=20.884955430094763 decode=20.35497736015731 token/s
+CASE 382/640 kivi longbench/gov_report/98/16384 repeat=0
+[kivi/longbench/gov_report/98/16384] 129/512 tokens
+[kivi/longbench/gov_report/98/16384] 257/512 tokens
+[kivi/longbench/gov_report/98/16384] 385/512 tokens
+[kivi/longbench/gov_report/98/16384] 512/512 tokens
+RESULT ok: longbench/gov_report/98/16384 score=33.59746393453904 decode=20.338164448101004 token/s
+CASE 383/640 kivi longbench/gov_report/142/8192 repeat=0
+[kivi/longbench/gov_report/142/8192] 129/512 tokens
+[kivi/longbench/gov_report/142/8192] 257/512 tokens
+[kivi/longbench/gov_report/142/8192] 385/512 tokens
+[kivi/longbench/gov_report/142/8192] 462/512 tokens
+RESULT ok: longbench/gov_report/142/8192 score=35.85313128590421 decode=20.349470611128545 token/s
+CASE 384/640 kivi longbench/gov_report/142/16384 repeat=0
+[kivi/longbench/gov_report/142/16384] 129/512 tokens
+[kivi/longbench/gov_report/142/16384] 257/512 tokens
+[kivi/longbench/gov_report/142/16384] 385/512 tokens
+[kivi/longbench/gov_report/142/16384] 448/512 tokens
+RESULT ok: longbench/gov_report/142/16384 score=40.84210479145485 decode=20.18445228782476 token/s
+CASE 385/640 kivi longbench/qmsum/133/8192 repeat=0
+[kivi/longbench/qmsum/133/8192] 39/512 tokens
+RESULT ok: longbench/qmsum/133/8192 score=19.0476185537919 decode=20.23302325661601 token/s
+CASE 386/640 kivi longbench/qmsum/133/16384 repeat=0
+[kivi/longbench/qmsum/133/16384] 52/512 tokens
+RESULT ok: longbench/qmsum/133/16384 score=17.391303847931123 decode=20.224869973792217 token/s
+CASE 387/640 kivi longbench/qmsum/19/8192 repeat=0
+[kivi/longbench/qmsum/19/8192] 59/512 tokens
+RESULT ok: longbench/qmsum/19/8192 score=21.052631083434914 decode=20.046538114400146 token/s
+CASE 388/640 kivi longbench/qmsum/19/16384 repeat=0
+[kivi/longbench/qmsum/19/16384] 124/512 tokens
+RESULT ok: longbench/qmsum/19/16384 score=17.599999514112017 decode=19.963857636560977 token/s
+CASE 389/640 kivi longbench/qmsum/63/8192 repeat=0
+[kivi/longbench/qmsum/63/8192] 129/512 tokens
+[kivi/longbench/qmsum/63/8192] 190/512 tokens
+RESULT ok: longbench/qmsum/63/8192 score=18.978101748628067 decode=20.189110473518436 token/s
+CASE 390/640 kivi longbench/qmsum/63/16384 repeat=0
+[kivi/longbench/qmsum/63/16384] 129/512 tokens
+[kivi/longbench/qmsum/63/16384] 213/512 tokens
+RESULT ok: longbench/qmsum/63/16384 score=20.289854632955272 decode=20.106617189143627 token/s
+CASE 391/640 kivi longbench/qmsum/76/8192 repeat=0
+[kivi/longbench/qmsum/76/8192] 34/512 tokens
+RESULT ok: longbench/qmsum/76/8192 score=17.777777340987665 decode=20.223376833119136 token/s
+CASE 392/640 kivi longbench/qmsum/76/16384 repeat=0
+[kivi/longbench/qmsum/76/16384] 86/512 tokens
+RESULT ok: longbench/qmsum/76/16384 score=18.181817687768607 decode=19.99867461421057 token/s
+CASE 393/640 kivi longbench/qmsum/42/8192 repeat=0
+[kivi/longbench/qmsum/42/8192] 69/512 tokens
+RESULT ok: longbench/qmsum/42/8192 score=20.370369891117985 decode=20.243256419228462 token/s
+CASE 394/640 kivi longbench/qmsum/42/16384 repeat=0
+[kivi/longbench/qmsum/42/16384] 69/512 tokens
+RESULT ok: longbench/qmsum/42/16384 score=20.370369891117985 decode=20.20047357486004 token/s
+CASE 395/640 kivi longbench/qmsum/139/8192 repeat=0
+[kivi/longbench/qmsum/139/8192] 119/512 tokens
+RESULT ok: longbench/qmsum/139/8192 score=9.917354884229244 decode=20.41131763546403 token/s
+CASE 396/640 kivi longbench/qmsum/139/16384 repeat=0
+[kivi/longbench/qmsum/139/16384] 129/512 tokens
+[kivi/longbench/qmsum/139/16384] 159/512 tokens
+RESULT ok: longbench/qmsum/139/16384 score=17.054263087795217 decode=20.244282680801412 token/s
+CASE 397/640 kivi longbench/qmsum/37/8192 repeat=0
+[kivi/longbench/qmsum/37/8192] 121/512 tokens
+RESULT ok: longbench/qmsum/37/8192 score=17.886178365787575 decode=20.19220462796635 token/s
+CASE 398/640 kivi longbench/qmsum/37/16384 repeat=0
+[kivi/longbench/qmsum/37/16384] 129/512 tokens
+[kivi/longbench/qmsum/37/16384] 148/512 tokens
+RESULT ok: longbench/qmsum/37/16384 score=18.32061019754095 decode=20.11975993174524 token/s
+CASE 399/640 kivi longbench/qmsum/162/8192 repeat=0
+[kivi/longbench/qmsum/162/8192] 124/512 tokens
+RESULT ok: longbench/qmsum/162/8192 score=25.757575263200195 decode=20.468239882145365 token/s
+CASE 400/640 kivi longbench/qmsum/162/16384 repeat=0
+[kivi/longbench/qmsum/162/16384] 129/512 tokens
+[kivi/longbench/qmsum/162/16384] 149/512 tokens
+RESULT ok: longbench/qmsum/162/16384 score=24.113474690609134 decode=20.11416034688254 token/s
+CASE 401/640 kivi longbench/qmsum/100/8192 repeat=0
+[kivi/longbench/qmsum/100/8192] 129/512 tokens
+[kivi/longbench/qmsum/100/8192] 133/512 tokens
+RESULT ok: longbench/qmsum/100/8192 score=26.666666176570647 decode=20.387906138243515 token/s
+CASE 402/640 kivi longbench/qmsum/100/16384 repeat=0
+[kivi/longbench/qmsum/100/16384] 129/512 tokens
+RESULT ok: longbench/qmsum/100/16384 score=25.18518469508917 decode=20.251361121875775 token/s
+CASE 403/640 kivi longbench/qmsum/179/8192 repeat=0
+[kivi/longbench/qmsum/179/8192] 39/512 tokens
+RESULT ok: longbench/qmsum/179/8192 score=7.05882307266439 decode=20.23327807721574 token/s
+CASE 404/640 kivi longbench/qmsum/179/16384 repeat=0
+[kivi/longbench/qmsum/179/16384] 82/512 tokens
+RESULT ok: longbench/qmsum/179/16384 score=18.69158828543979 decode=19.888777326624634 token/s
+CASE 405/640 kivi longbench/qmsum/28/8192 repeat=0
+[kivi/longbench/qmsum/28/8192] 129/512 tokens
+[kivi/longbench/qmsum/28/8192] 131/512 tokens
+RESULT ok: longbench/qmsum/28/8192 score=30.656933807874694 decode=20.41206893565947 token/s
+CASE 406/640 kivi longbench/qmsum/28/16384 repeat=0
+[kivi/longbench/qmsum/28/16384] 129/512 tokens
+[kivi/longbench/qmsum/28/16384] 175/512 tokens
+RESULT ok: longbench/qmsum/28/16384 score=24.67532418746838 decode=20.207318435804158 token/s
+CASE 407/640 kivi longbench/qmsum/97/8192 repeat=0
+[kivi/longbench/qmsum/97/8192] 85/512 tokens
+RESULT ok: longbench/qmsum/97/8192 score=24.44444396024692 decode=20.353688591073997 token/s
+CASE 408/640 kivi longbench/qmsum/97/16384 repeat=0
+[kivi/longbench/qmsum/97/16384] 80/512 tokens
+RESULT ok: longbench/qmsum/97/16384 score=20.22471861532636 decode=20.090315290679314 token/s
+CASE 409/640 kivi longbench/qmsum/156/8192 repeat=0
+[kivi/longbench/qmsum/156/8192] 129/512 tokens
+[kivi/longbench/qmsum/156/8192] 257/512 tokens
+[kivi/longbench/qmsum/156/8192] 276/512 tokens
+RESULT ok: longbench/qmsum/156/8192 score=29.508196251545282 decode=20.328598250142615 token/s
+CASE 410/640 kivi longbench/qmsum/156/16384 repeat=0
+[kivi/longbench/qmsum/156/16384] 129/512 tokens
+[kivi/longbench/qmsum/156/16384] 257/512 tokens
+[kivi/longbench/qmsum/156/16384] 276/512 tokens
+RESULT ok: longbench/qmsum/156/16384 score=29.508196251545282 decode=20.200567288433163 token/s
+CASE 411/640 kivi longbench/qmsum/199/8192 repeat=0
+[kivi/longbench/qmsum/199/8192] 129/512 tokens
+[kivi/longbench/qmsum/199/8192] 130/512 tokens
+RESULT ok: longbench/qmsum/199/8192 score=28.571428077601418 decode=20.342198103660092 token/s
+CASE 412/640 kivi longbench/qmsum/199/16384 repeat=0
+[kivi/longbench/qmsum/199/16384] 121/512 tokens
+RESULT ok: longbench/qmsum/199/16384 score=35.087718798399514 decode=20.319728124074043 token/s
+CASE 413/640 kivi longbench/qmsum/164/8192 repeat=0
+[kivi/longbench/qmsum/164/8192] 129/512 tokens
+[kivi/longbench/qmsum/164/8192] 149/512 tokens
+RESULT ok: longbench/qmsum/164/8192 score=18.543045859392144 decode=20.400125651892356 token/s
+CASE 414/640 kivi longbench/qmsum/164/16384 repeat=0
+[kivi/longbench/qmsum/164/16384] 129/512 tokens
+[kivi/longbench/qmsum/164/16384] 149/512 tokens
+RESULT ok: longbench/qmsum/164/16384 score=18.543045859392144 decode=20.443267959094523 token/s
+CASE 415/640 kivi longbench/qmsum/87/8192 repeat=0
+[kivi/longbench/qmsum/87/8192] 89/512 tokens
+RESULT ok: longbench/qmsum/87/8192 score=13.483145575053673 decode=20.456433437276726 token/s
+CASE 416/640 kivi longbench/qmsum/87/16384 repeat=0
+[kivi/longbench/qmsum/87/16384] 102/512 tokens
+RESULT ok: longbench/qmsum/87/16384 score=18.1818177043159 decode=20.397685850077032 token/s
+CASE 417/640 kivi longbench/qmsum/86/8192 repeat=0
+[kivi/longbench/qmsum/86/8192] 129/512 tokens
+[kivi/longbench/qmsum/86/8192] 132/512 tokens
+RESULT ok: longbench/qmsum/86/8192 score=30.864197034598394 decode=20.42423194937543 token/s
+CASE 418/640 kivi longbench/qmsum/86/16384 repeat=0
+[kivi/longbench/qmsum/86/16384] 129/512 tokens
+[kivi/longbench/qmsum/86/16384] 132/512 tokens
+RESULT ok: longbench/qmsum/86/16384 score=30.864197034598394 decode=20.44591405515914 token/s
+CASE 419/640 kivi longbench/qmsum/99/8192 repeat=0
+[kivi/longbench/qmsum/99/8192] 129/512 tokens
+[kivi/longbench/qmsum/99/8192] 156/512 tokens
+RESULT ok: longbench/qmsum/99/8192 score=13.978494129436946 decode=20.39773375555885 token/s
+CASE 420/640 kivi longbench/qmsum/99/16384 repeat=0
+[kivi/longbench/qmsum/99/16384] 129/512 tokens
+[kivi/longbench/qmsum/99/16384] 182/512 tokens
+RESULT ok: longbench/qmsum/99/16384 score=17.56097510976801 decode=20.304577190585682 token/s
+CASE 421/640 kivi longbench/qmsum/170/8192 repeat=0
+[kivi/longbench/qmsum/170/8192] 51/512 tokens
+RESULT ok: longbench/qmsum/170/8192 score=34.14634097412255 decode=20.401966044371722 token/s
+CASE 422/640 kivi longbench/qmsum/170/16384 repeat=0
+[kivi/longbench/qmsum/170/16384] 84/512 tokens
+RESULT ok: longbench/qmsum/170/16384 score=30.927834552024663 decode=20.24907813291605 token/s
+CASE 423/640 kivi longbench/qmsum/92/8192 repeat=0
+[kivi/longbench/qmsum/92/8192] 54/512 tokens
+RESULT ok: longbench/qmsum/92/8192 score=21.686746488605035 decode=20.196477120396157 token/s
+CASE 424/640 kivi longbench/qmsum/92/16384 repeat=0
+[kivi/longbench/qmsum/92/16384] 66/512 tokens
+RESULT ok: longbench/qmsum/92/16384 score=15.555555056543227 decode=19.97020417270025 token/s
+CASE 425/640 kivi longbench/qmsum/89/8192 repeat=0
+[kivi/longbench/qmsum/89/8192] 73/512 tokens
+RESULT ok: longbench/qmsum/89/8192 score=14.545454061983488 decode=20.396432351250255 token/s
+CASE 426/640 kivi longbench/qmsum/89/16384 repeat=0
+[kivi/longbench/qmsum/89/16384] 72/512 tokens
+RESULT ok: longbench/qmsum/89/16384 score=12.844036215806767 decode=20.205577022326413 token/s
+CASE 427/640 kivi longbench/qmsum/149/8192 repeat=0
+[kivi/longbench/qmsum/149/8192] 129/512 tokens
+RESULT ok: longbench/qmsum/149/8192 score=23.43749952392579 decode=20.28412947447185 token/s
+CASE 428/640 kivi longbench/qmsum/149/16384 repeat=0
+[kivi/longbench/qmsum/149/16384] 129/512 tokens
+RESULT ok: longbench/qmsum/149/16384 score=23.43749952392579 decode=20.30580390014632 token/s
+CASE 429/640 kivi longbench/qmsum/192/8192 repeat=0
+[kivi/longbench/qmsum/192/8192] 64/512 tokens
+RESULT ok: longbench/qmsum/192/8192 score=22.471909623027404 decode=20.248709316965982 token/s
+CASE 430/640 kivi longbench/qmsum/192/16384 repeat=0
+[kivi/longbench/qmsum/192/16384] 69/512 tokens
+RESULT ok: longbench/qmsum/192/16384 score=17.391303853733476 decode=20.057090058464883 token/s
+CASE 431/640 kivi longbench/qmsum/30/8192 repeat=0
+[kivi/longbench/qmsum/30/8192] 129/512 tokens
+[kivi/longbench/qmsum/30/8192] 146/512 tokens
+RESULT ok: longbench/qmsum/30/8192 score=24.806201066282085 decode=20.182438129723522 token/s
+CASE 432/640 kivi longbench/qmsum/30/16384 repeat=0
+[kivi/longbench/qmsum/30/16384] 87/512 tokens
+RESULT ok: longbench/qmsum/30/16384 score=21.56862695174934 decode=20.091291689619737 token/s
+CASE 433/640 kivi longbench/qmsum/135/8192 repeat=0
+[kivi/longbench/qmsum/135/8192] 69/512 tokens
+RESULT ok: longbench/qmsum/135/8192 score=27.397259789829242 decode=20.18958366992055 token/s
+CASE 434/640 kivi longbench/qmsum/135/16384 repeat=0
+[kivi/longbench/qmsum/135/16384] 77/512 tokens
+RESULT ok: longbench/qmsum/135/16384 score=24.691357558299043 decode=20.302106315993985 token/s
+CASE 435/640 kivi longbench/qmsum/163/8192 repeat=0
+[kivi/longbench/qmsum/163/8192] 127/512 tokens
+RESULT ok: longbench/qmsum/163/8192 score=29.411764290657445 decode=20.383484542782917 token/s
+CASE 436/640 kivi longbench/qmsum/163/16384 repeat=0
+[kivi/longbench/qmsum/163/16384] 127/512 tokens
+RESULT ok: longbench/qmsum/163/16384 score=29.411764290657445 decode=20.355190913122147 token/s
+CASE 437/640 kivi longbench/qmsum/104/8192 repeat=0
+[kivi/longbench/qmsum/104/8192] 45/512 tokens
+RESULT ok: longbench/qmsum/104/8192 score=20.3389825521402 decode=20.245939360433116 token/s
+CASE 438/640 kivi longbench/qmsum/104/16384 repeat=0
+[kivi/longbench/qmsum/104/16384] 34/512 tokens
+RESULT ok: longbench/qmsum/104/16384 score=22.641508935564264 decode=20.274320798244023 token/s
+CASE 439/640 kivi longbench/qmsum/178/8192 repeat=0
+[kivi/longbench/qmsum/178/8192] 124/512 tokens
+RESULT ok: longbench/qmsum/178/8192 score=27.368420664819947 decode=20.356580908858803 token/s
+CASE 440/640 kivi longbench/qmsum/178/16384 repeat=0
+[kivi/longbench/qmsum/178/16384] 112/512 tokens
+RESULT ok: longbench/qmsum/178/16384 score=29.21348274207802 decode=20.141640011947466 token/s
+CASE 441/640 kivi longbench/qmsum/140/8192 repeat=0
+[kivi/longbench/qmsum/140/8192] 129/512 tokens
+RESULT ok: longbench/qmsum/140/8192 score=16.129031787330916 decode=20.342210824100466 token/s
+CASE 442/640 kivi longbench/qmsum/140/16384 repeat=0
+[kivi/longbench/qmsum/140/16384] 129/512 tokens
+[kivi/longbench/qmsum/140/16384] 170/512 tokens
+RESULT ok: longbench/qmsum/140/16384 score=14.173227880215777 decode=19.924546870248655 token/s
+CASE 443/640 kivi longbench/qmsum/109/8192 repeat=0
+[kivi/longbench/qmsum/109/8192] 84/512 tokens
+RESULT ok: longbench/qmsum/109/8192 score=34.999999570312504 decode=19.83644997087484 token/s
+CASE 444/640 kivi longbench/qmsum/109/16384 repeat=0
+[kivi/longbench/qmsum/109/16384] 129/512 tokens
+RESULT ok: longbench/qmsum/109/16384 score=15.238094875283453 decode=20.294061753073304 token/s
+CASE 445/640 kivi longbench/qmsum/155/8192 repeat=0
+[kivi/longbench/qmsum/155/8192] 129/512 tokens
+[kivi/longbench/qmsum/155/8192] 181/512 tokens
+RESULT ok: longbench/qmsum/155/8192 score=17.93103404461357 decode=20.40555655058293 token/s
+CASE 446/640 kivi longbench/qmsum/155/16384 repeat=0
+[kivi/longbench/qmsum/155/16384] 129/512 tokens
+[kivi/longbench/qmsum/155/16384] 154/512 tokens
+RESULT ok: longbench/qmsum/155/16384 score=18.181817723255293 decode=20.329191833956024 token/s
+CASE 447/640 kivi longbench/qmsum/119/8192 repeat=0
+[kivi/longbench/qmsum/119/8192] 114/512 tokens
+RESULT ok: longbench/qmsum/119/8192 score=34.18803371875228 decode=20.412429717240432 token/s
+CASE 448/640 kivi longbench/qmsum/119/16384 repeat=0
+[kivi/longbench/qmsum/119/16384] 84/512 tokens
+RESULT ok: longbench/qmsum/119/16384 score=38.83495096691488 decode=20.326616592106973 token/s
+CASE 449/640 kivi longbench/multi_news/109/8192 repeat=0
+[kivi/longbench/multi_news/109/8192] 129/512 tokens
+[kivi/longbench/multi_news/109/8192] 257/512 tokens
+[kivi/longbench/multi_news/109/8192] 385/512 tokens
+[kivi/longbench/multi_news/109/8192] 481/512 tokens
+RESULT ok: longbench/multi_news/109/8192 score=27.205881943879756 decode=20.255303247682097 token/s
+CASE 450/640 kivi longbench/multi_news/109/16384 repeat=0
+[kivi/longbench/multi_news/109/16384] 129/512 tokens
+[kivi/longbench/multi_news/109/16384] 257/512 tokens
+[kivi/longbench/multi_news/109/16384] 385/512 tokens
+[kivi/longbench/multi_news/109/16384] 481/512 tokens
+RESULT ok: longbench/multi_news/109/16384 score=27.205881943879756 decode=20.424125052526342 token/s
+CASE 451/640 kivi longbench/multi_news/138/8192 repeat=0
+[kivi/longbench/multi_news/138/8192] 129/512 tokens
+[kivi/longbench/multi_news/138/8192] 257/512 tokens
+[kivi/longbench/multi_news/138/8192] 385/512 tokens
+[kivi/longbench/multi_news/138/8192] 504/512 tokens
+RESULT ok: longbench/multi_news/138/8192 score=32.35294068728374 decode=20.156221627230277 token/s
+CASE 452/640 kivi longbench/multi_news/138/16384 repeat=0
+[kivi/longbench/multi_news/138/16384] 129/512 tokens
+[kivi/longbench/multi_news/138/16384] 257/512 tokens
+[kivi/longbench/multi_news/138/16384] 385/512 tokens
+[kivi/longbench/multi_news/138/16384] 504/512 tokens
+RESULT ok: longbench/multi_news/138/16384 score=32.35294068728374 decode=20.337710411031527 token/s
+CASE 453/640 kivi longbench/multi_news/8/8192 repeat=0
+[kivi/longbench/multi_news/8/8192] 129/512 tokens
+[kivi/longbench/multi_news/8/8192] 257/512 tokens
+[kivi/longbench/multi_news/8/8192] 385/512 tokens
+[kivi/longbench/multi_news/8/8192] 498/512 tokens
+RESULT ok: longbench/multi_news/8/8192 score=20.58047443404043 decode=20.429420667708538 token/s
+CASE 454/640 kivi longbench/multi_news/8/16384 repeat=0
+[kivi/longbench/multi_news/8/16384] 129/512 tokens
+[kivi/longbench/multi_news/8/16384] 257/512 tokens
+[kivi/longbench/multi_news/8/16384] 385/512 tokens
+[kivi/longbench/multi_news/8/16384] 498/512 tokens
+RESULT ok: longbench/multi_news/8/16384 score=20.58047443404043 decode=20.452212765870257 token/s
+CASE 455/640 kivi longbench/multi_news/128/8192 repeat=0
+[kivi/longbench/multi_news/128/8192] 129/512 tokens
+[kivi/longbench/multi_news/128/8192] 257/512 tokens
+[kivi/longbench/multi_news/128/8192] 385/512 tokens
+[kivi/longbench/multi_news/128/8192] 455/512 tokens
+RESULT ok: longbench/multi_news/128/8192 score=21.717171217630867 decode=20.26468241555463 token/s
+CASE 456/640 kivi longbench/multi_news/128/16384 repeat=0
+[kivi/longbench/multi_news/128/16384] 129/512 tokens
+[kivi/longbench/multi_news/128/16384] 257/512 tokens
+[kivi/longbench/multi_news/128/16384] 385/512 tokens
+[kivi/longbench/multi_news/128/16384] 455/512 tokens
+RESULT ok: longbench/multi_news/128/16384 score=21.717171217630867 decode=20.36109757850319 token/s
+CASE 457/640 kivi longbench/multi_news/161/8192 repeat=0
+[kivi/longbench/multi_news/161/8192] 129/512 tokens
+[kivi/longbench/multi_news/161/8192] 257/512 tokens
+[kivi/longbench/multi_news/161/8192] 385/512 tokens
+[kivi/longbench/multi_news/161/8192] 512/512 tokens
+RESULT ok: longbench/multi_news/161/8192 score=24.603174105190238 decode=20.306729351683146 token/s
+CASE 458/640 kivi longbench/multi_news/161/16384 repeat=0
+[kivi/longbench/multi_news/161/16384] 129/512 tokens
+[kivi/longbench/multi_news/161/16384] 257/512 tokens
+[kivi/longbench/multi_news/161/16384] 385/512 tokens
+[kivi/longbench/multi_news/161/16384] 512/512 tokens
+RESULT ok: longbench/multi_news/161/16384 score=24.603174105190238 decode=20.255320322598514 token/s
+CASE 459/640 kivi longbench/multi_news/48/8192 repeat=0
+[kivi/longbench/multi_news/48/8192] 129/512 tokens
+[kivi/longbench/multi_news/48/8192] 257/512 tokens
+[kivi/longbench/multi_news/48/8192] 385/512 tokens
+[kivi/longbench/multi_news/48/8192] 487/512 tokens
+RESULT ok: longbench/multi_news/48/8192 score=28.92768031457516 decode=20.299814224195202 token/s
+CASE 460/640 kivi longbench/multi_news/48/16384 repeat=0
+[kivi/longbench/multi_news/48/16384] 129/512 tokens
+[kivi/longbench/multi_news/48/16384] 257/512 tokens
+[kivi/longbench/multi_news/48/16384] 385/512 tokens
+[kivi/longbench/multi_news/48/16384] 487/512 tokens
+RESULT ok: longbench/multi_news/48/16384 score=28.92768031457516 decode=20.42835027621579 token/s
+CASE 461/640 kivi longbench/multi_news/94/8192 repeat=0
+[kivi/longbench/multi_news/94/8192] 129/512 tokens
+[kivi/longbench/multi_news/94/8192] 257/512 tokens
+[kivi/longbench/multi_news/94/8192] 359/512 tokens
+RESULT ok: longbench/multi_news/94/8192 score=26.923076447958582 decode=20.397515901579332 token/s
+CASE 462/640 kivi longbench/multi_news/94/16384 repeat=0
+[kivi/longbench/multi_news/94/16384] 129/512 tokens
+[kivi/longbench/multi_news/94/16384] 257/512 tokens
+[kivi/longbench/multi_news/94/16384] 359/512 tokens
+RESULT ok: longbench/multi_news/94/16384 score=26.923076447958582 decode=16.836968255300075 token/s
+CASE 463/640 kivi longbench/multi_news/79/8192 repeat=0
+[kivi/longbench/multi_news/79/8192] 129/512 tokens
+[kivi/longbench/multi_news/79/8192] 257/512 tokens
+[kivi/longbench/multi_news/79/8192] 385/512 tokens
+[kivi/longbench/multi_news/79/8192] 471/512 tokens
+RESULT ok: longbench/multi_news/79/8192 score=37.26708028440261 decode=20.152596358403667 token/s
+CASE 464/640 kivi longbench/multi_news/79/16384 repeat=0
+[kivi/longbench/multi_news/79/16384] 129/512 tokens
+[kivi/longbench/multi_news/79/16384] 257/512 tokens
+[kivi/longbench/multi_news/79/16384] 385/512 tokens
+[kivi/longbench/multi_news/79/16384] 471/512 tokens
+RESULT ok: longbench/multi_news/79/16384 score=37.26708028440261 decode=20.39725331033094 token/s
+CASE 465/640 kivi longbench/multi_news/176/8192 repeat=0
+[kivi/longbench/multi_news/176/8192] 129/512 tokens
+[kivi/longbench/multi_news/176/8192] 257/512 tokens
+[kivi/longbench/multi_news/176/8192] 385/512 tokens
+[kivi/longbench/multi_news/176/8192] 425/512 tokens
+RESULT ok: longbench/multi_news/176/8192 score=22.155688165800147 decode=19.940853315434335 token/s
+CASE 466/640 kivi longbench/multi_news/176/16384 repeat=0
+[kivi/longbench/multi_news/176/16384] 129/512 tokens
+[kivi/longbench/multi_news/176/16384] 257/512 tokens
+[kivi/longbench/multi_news/176/16384] 385/512 tokens
+[kivi/longbench/multi_news/176/16384] 425/512 tokens
+RESULT ok: longbench/multi_news/176/16384 score=22.155688165800147 decode=20.348760859828474 token/s
+CASE 467/640 kivi longbench/multi_news/6/8192 repeat=0
+[kivi/longbench/multi_news/6/8192] 129/512 tokens
+[kivi/longbench/multi_news/6/8192] 257/512 tokens
+[kivi/longbench/multi_news/6/8192] 385/512 tokens
+[kivi/longbench/multi_news/6/8192] 480/512 tokens
+RESULT ok: longbench/multi_news/6/8192 score=26.984126501273764 decode=20.130752139699084 token/s
+CASE 468/640 kivi longbench/multi_news/6/16384 repeat=0
+[kivi/longbench/multi_news/6/16384] 129/512 tokens
+[kivi/longbench/multi_news/6/16384] 257/512 tokens
+[kivi/longbench/multi_news/6/16384] 385/512 tokens
+[kivi/longbench/multi_news/6/16384] 480/512 tokens
+RESULT ok: longbench/multi_news/6/16384 score=26.984126501273764 decode=20.417940237095706 token/s
+CASE 469/640 kivi longbench/multi_news/155/8192 repeat=0
+[kivi/longbench/multi_news/155/8192] 129/512 tokens
+[kivi/longbench/multi_news/155/8192] 257/512 tokens
+[kivi/longbench/multi_news/155/8192] 385/512 tokens
+[kivi/longbench/multi_news/155/8192] 461/512 tokens
+RESULT ok: longbench/multi_news/155/8192 score=29.14572814474383 decode=20.431637037176348 token/s
+CASE 470/640 kivi longbench/multi_news/155/16384 repeat=0
+[kivi/longbench/multi_news/155/16384] 129/512 tokens
+[kivi/longbench/multi_news/155/16384] 257/512 tokens
+[kivi/longbench/multi_news/155/16384] 385/512 tokens
+[kivi/longbench/multi_news/155/16384] 461/512 tokens
+RESULT ok: longbench/multi_news/155/16384 score=29.14572814474383 decode=20.16118051382927 token/s
+CASE 471/640 kivi longbench/multi_news/40/8192 repeat=0
+[kivi/longbench/multi_news/40/8192] 129/512 tokens
+[kivi/longbench/multi_news/40/8192] 257/512 tokens
+[kivi/longbench/multi_news/40/8192] 385/512 tokens
+[kivi/longbench/multi_news/40/8192] 512/512 tokens
+RESULT ok: longbench/multi_news/40/8192 score=23.113207047570324 decode=20.154769245629616 token/s
+CASE 472/640 kivi longbench/multi_news/40/16384 repeat=0
+[kivi/longbench/multi_news/40/16384] 129/512 tokens
+[kivi/longbench/multi_news/40/16384] 257/512 tokens
+[kivi/longbench/multi_news/40/16384] 385/512 tokens
+[kivi/longbench/multi_news/40/16384] 512/512 tokens
+RESULT ok: longbench/multi_news/40/16384 score=23.113207047570324 decode=20.34847850687937 token/s
+CASE 473/640 kivi longbench/multi_news/76/8192 repeat=0
+[kivi/longbench/multi_news/76/8192] 129/512 tokens
+[kivi/longbench/multi_news/76/8192] 257/512 tokens
+[kivi/longbench/multi_news/76/8192] 385/512 tokens
+[kivi/longbench/multi_news/76/8192] 463/512 tokens
+RESULT ok: longbench/multi_news/76/8192 score=29.949238082403575 decode=20.298605678824902 token/s
+CASE 474/640 kivi longbench/multi_news/76/16384 repeat=0
+[kivi/longbench/multi_news/76/16384] 129/512 tokens
+[kivi/longbench/multi_news/76/16384] 257/512 tokens
+[kivi/longbench/multi_news/76/16384] 385/512 tokens
+[kivi/longbench/multi_news/76/16384] 463/512 tokens
+RESULT ok: longbench/multi_news/76/16384 score=29.949238082403575 decode=20.257224788138718 token/s
+CASE 475/640 kivi longbench/multi_news/15/8192 repeat=0
+[kivi/longbench/multi_news/15/8192] 129/512 tokens
+[kivi/longbench/multi_news/15/8192] 257/512 tokens
+[kivi/longbench/multi_news/15/8192] 385/512 tokens
+[kivi/longbench/multi_news/15/8192] 512/512 tokens
+RESULT ok: longbench/multi_news/15/8192 score=23.414633654384307 decode=20.1159558150909 token/s
+CASE 476/640 kivi longbench/multi_news/15/16384 repeat=0
+[kivi/longbench/multi_news/15/16384] 129/512 tokens
+[kivi/longbench/multi_news/15/16384] 257/512 tokens
+[kivi/longbench/multi_news/15/16384] 385/512 tokens
+[kivi/longbench/multi_news/15/16384] 512/512 tokens
+RESULT ok: longbench/multi_news/15/16384 score=23.414633654384307 decode=20.29566012488933 token/s
+CASE 477/640 kivi longbench/multi_news/23/8192 repeat=0
+[kivi/longbench/multi_news/23/8192] 129/512 tokens
+[kivi/longbench/multi_news/23/8192] 257/512 tokens
+[kivi/longbench/multi_news/23/8192] 385/512 tokens
+[kivi/longbench/multi_news/23/8192] 462/512 tokens
+RESULT ok: longbench/multi_news/23/8192 score=27.532467041942997 decode=20.241871095790305 token/s
+CASE 478/640 kivi longbench/multi_news/23/16384 repeat=0
+[kivi/longbench/multi_news/23/16384] 129/512 tokens
+[kivi/longbench/multi_news/23/16384] 257/512 tokens
+[kivi/longbench/multi_news/23/16384] 385/512 tokens
+[kivi/longbench/multi_news/23/16384] 462/512 tokens
+RESULT ok: longbench/multi_news/23/16384 score=27.532467041942997 decode=20.25425484611616 token/s
+CASE 479/640 kivi longbench/multi_news/104/8192 repeat=0
+[kivi/longbench/multi_news/104/8192] 129/512 tokens
+[kivi/longbench/multi_news/104/8192] 257/512 tokens
+[kivi/longbench/multi_news/104/8192] 385/512 tokens
+[kivi/longbench/multi_news/104/8192] 414/512 tokens
+RESULT ok: longbench/multi_news/104/8192 score=31.351350852067206 decode=20.31437000183636 token/s
+CASE 480/640 kivi longbench/multi_news/104/16384 repeat=0
+[kivi/longbench/multi_news/104/16384] 129/512 tokens
+[kivi/longbench/multi_news/104/16384] 257/512 tokens
+[kivi/longbench/multi_news/104/16384] 385/512 tokens
+[kivi/longbench/multi_news/104/16384] 414/512 tokens
+RESULT ok: longbench/multi_news/104/16384 score=31.351350852067206 decode=20.283181613750912 token/s
+CASE 481/640 kivi longbench/multi_news/60/8192 repeat=0
+[kivi/longbench/multi_news/60/8192] 129/512 tokens
+[kivi/longbench/multi_news/60/8192] 257/512 tokens
+[kivi/longbench/multi_news/60/8192] 385/512 tokens
+[kivi/longbench/multi_news/60/8192] 415/512 tokens
+RESULT ok: longbench/multi_news/60/8192 score=24.29378481130902 decode=20.142145733749263 token/s
+CASE 482/640 kivi longbench/multi_news/60/16384 repeat=0
+[kivi/longbench/multi_news/60/16384] 129/512 tokens
+[kivi/longbench/multi_news/60/16384] 257/512 tokens
+[kivi/longbench/multi_news/60/16384] 385/512 tokens
+[kivi/longbench/multi_news/60/16384] 415/512 tokens
+RESULT ok: longbench/multi_news/60/16384 score=24.29378481130902 decode=20.256347840559464 token/s
+CASE 483/640 kivi longbench/multi_news/46/8192 repeat=0
+[kivi/longbench/multi_news/46/8192] 129/512 tokens
+[kivi/longbench/multi_news/46/8192] 257/512 tokens
+[kivi/longbench/multi_news/46/8192] 328/512 tokens
+RESULT ok: longbench/multi_news/46/8192 score=23.668638553324474 decode=20.350154452976454 token/s
+CASE 484/640 kivi longbench/multi_news/46/16384 repeat=0
+[kivi/longbench/multi_news/46/16384] 129/512 tokens
+[kivi/longbench/multi_news/46/16384] 257/512 tokens
+[kivi/longbench/multi_news/46/16384] 328/512 tokens
+RESULT ok: longbench/multi_news/46/16384 score=23.668638553324474 decode=20.084422786706277 token/s
+CASE 485/640 kivi longbench/multi_news/88/8192 repeat=0
+[kivi/longbench/multi_news/88/8192] 129/512 tokens
+[kivi/longbench/multi_news/88/8192] 257/512 tokens
+[kivi/longbench/multi_news/88/8192] 385/512 tokens
+[kivi/longbench/multi_news/88/8192] 512/512 tokens
+RESULT ok: longbench/multi_news/88/8192 score=20.765026870912845 decode=20.271569194535665 token/s
+CASE 486/640 kivi longbench/multi_news/88/16384 repeat=0
+[kivi/longbench/multi_news/88/16384] 129/512 tokens
+[kivi/longbench/multi_news/88/16384] 257/512 tokens
+[kivi/longbench/multi_news/88/16384] 385/512 tokens
+[kivi/longbench/multi_news/88/16384] 512/512 tokens
+RESULT ok: longbench/multi_news/88/16384 score=20.070422071017667 decode=20.02193684651121 token/s
+CASE 487/640 kivi longbench/multi_news/168/8192 repeat=0
+[kivi/longbench/multi_news/168/8192] 129/512 tokens
+[kivi/longbench/multi_news/168/8192] 257/512 tokens
+[kivi/longbench/multi_news/168/8192] 385/512 tokens
+[kivi/longbench/multi_news/168/8192] 489/512 tokens
+RESULT ok: longbench/multi_news/168/8192 score=25.157232246252132 decode=20.112923514226765 token/s
+CASE 488/640 kivi longbench/multi_news/168/16384 repeat=0
+[kivi/longbench/multi_news/168/16384] 129/512 tokens
+[kivi/longbench/multi_news/168/16384] 257/512 tokens
+[kivi/longbench/multi_news/168/16384] 385/512 tokens
+[kivi/longbench/multi_news/168/16384] 489/512 tokens
+RESULT ok: longbench/multi_news/168/16384 score=25.157232246252132 decode=20.227107351843426 token/s
+CASE 489/640 kivi longbench/multi_news/112/8192 repeat=0
+[kivi/longbench/multi_news/112/8192] 129/512 tokens
+[kivi/longbench/multi_news/112/8192] 257/512 tokens
+[kivi/longbench/multi_news/112/8192] 385/512 tokens
+[kivi/longbench/multi_news/112/8192] 458/512 tokens
+RESULT ok: longbench/multi_news/112/8192 score=24.197530364444457 decode=20.28775077755848 token/s
+CASE 490/640 kivi longbench/multi_news/112/16384 repeat=0
+[kivi/longbench/multi_news/112/16384] 129/512 tokens
+[kivi/longbench/multi_news/112/16384] 257/512 tokens
+[kivi/longbench/multi_news/112/16384] 385/512 tokens
+[kivi/longbench/multi_news/112/16384] 458/512 tokens
+RESULT ok: longbench/multi_news/112/16384 score=24.197530364444457 decode=20.360171289366974 token/s
+CASE 491/640 kivi longbench/multi_news/143/8192 repeat=0
+[kivi/longbench/multi_news/143/8192] 129/512 tokens
+[kivi/longbench/multi_news/143/8192] 257/512 tokens
+[kivi/longbench/multi_news/143/8192] 385/512 tokens
+[kivi/longbench/multi_news/143/8192] 512/512 tokens
+RESULT ok: longbench/multi_news/143/8192 score=17.270194511526146 decode=20.151884345250593 token/s
+CASE 492/640 kivi longbench/multi_news/143/16384 repeat=0
+[kivi/longbench/multi_news/143/16384] 129/512 tokens
+[kivi/longbench/multi_news/143/16384] 257/512 tokens
+[kivi/longbench/multi_news/143/16384] 385/512 tokens
+[kivi/longbench/multi_news/143/16384] 512/512 tokens
+RESULT ok: longbench/multi_news/143/16384 score=17.270194511526146 decode=20.255296596088144 token/s
+CASE 493/640 kivi longbench/multi_news/178/8192 repeat=0
+[kivi/longbench/multi_news/178/8192] 129/512 tokens
+[kivi/longbench/multi_news/178/8192] 257/512 tokens
+[kivi/longbench/multi_news/178/8192] 385/512 tokens
+[kivi/longbench/multi_news/178/8192] 461/512 tokens
+RESULT ok: longbench/multi_news/178/8192 score=28.134556075975652 decode=20.221399516895985 token/s
+CASE 494/640 kivi longbench/multi_news/178/16384 repeat=0
+[kivi/longbench/multi_news/178/16384] 129/512 tokens
+[kivi/longbench/multi_news/178/16384] 257/512 tokens
+[kivi/longbench/multi_news/178/16384] 385/512 tokens
+[kivi/longbench/multi_news/178/16384] 461/512 tokens
+RESULT ok: longbench/multi_news/178/16384 score=28.134556075975652 decode=20.320516486384346 token/s
+CASE 495/640 kivi longbench/multi_news/17/8192 repeat=0
+[kivi/longbench/multi_news/17/8192] 129/512 tokens
+[kivi/longbench/multi_news/17/8192] 257/512 tokens
+[kivi/longbench/multi_news/17/8192] 385/512 tokens
+[kivi/longbench/multi_news/17/8192] 451/512 tokens
+RESULT ok: longbench/multi_news/17/8192 score=23.361822862314437 decode=20.325780763932485 token/s
+CASE 496/640 kivi longbench/multi_news/17/16384 repeat=0
+[kivi/longbench/multi_news/17/16384] 129/512 tokens
+[kivi/longbench/multi_news/17/16384] 257/512 tokens
+[kivi/longbench/multi_news/17/16384] 385/512 tokens
+[kivi/longbench/multi_news/17/16384] 451/512 tokens
+RESULT ok: longbench/multi_news/17/16384 score=23.361822862314437 decode=20.313390226358262 token/s
+CASE 497/640 kivi longbench/multi_news/127/8192 repeat=0
+[kivi/longbench/multi_news/127/8192] 129/512 tokens
+[kivi/longbench/multi_news/127/8192] 257/512 tokens
+[kivi/longbench/multi_news/127/8192] 385/512 tokens
+[kivi/longbench/multi_news/127/8192] 398/512 tokens
+RESULT ok: longbench/multi_news/127/8192 score=17.7083328333876 decode=20.309890454775722 token/s
+CASE 498/640 kivi longbench/multi_news/127/16384 repeat=0
+[kivi/longbench/multi_news/127/16384] 129/512 tokens
+[kivi/longbench/multi_news/127/16384] 257/512 tokens
+[kivi/longbench/multi_news/127/16384] 385/512 tokens
+[kivi/longbench/multi_news/127/16384] 398/512 tokens
+RESULT ok: longbench/multi_news/127/16384 score=17.7083328333876 decode=20.33016484794528 token/s
+CASE 499/640 kivi longbench/multi_news/121/8192 repeat=0
+[kivi/longbench/multi_news/121/8192] 129/512 tokens
+[kivi/longbench/multi_news/121/8192] 257/512 tokens
+[kivi/longbench/multi_news/121/8192] 385/512 tokens
+[kivi/longbench/multi_news/121/8192] 512/512 tokens
+RESULT ok: longbench/multi_news/121/8192 score=25.445292122292805 decode=19.8079281122904 token/s
+CASE 500/640 kivi longbench/multi_news/121/16384 repeat=0
+[kivi/longbench/multi_news/121/16384] 129/512 tokens
+[kivi/longbench/multi_news/121/16384] 257/512 tokens
+[kivi/longbench/multi_news/121/16384] 385/512 tokens
+[kivi/longbench/multi_news/121/16384] 512/512 tokens
+RESULT ok: longbench/multi_news/121/16384 score=25.445292122292805 decode=20.33496938054212 token/s
+CASE 501/640 kivi longbench/multi_news/67/8192 repeat=0
+[kivi/longbench/multi_news/67/8192] 129/512 tokens
+[kivi/longbench/multi_news/67/8192] 257/512 tokens
+[kivi/longbench/multi_news/67/8192] 385/512 tokens
+[kivi/longbench/multi_news/67/8192] 448/512 tokens
+RESULT ok: longbench/multi_news/67/8192 score=27.272726776387664 decode=20.3625187908958 token/s
+CASE 502/640 kivi longbench/multi_news/67/16384 repeat=0
+[kivi/longbench/multi_news/67/16384] 129/512 tokens
+[kivi/longbench/multi_news/67/16384] 257/512 tokens
+[kivi/longbench/multi_news/67/16384] 385/512 tokens
+[kivi/longbench/multi_news/67/16384] 448/512 tokens
+RESULT ok: longbench/multi_news/67/16384 score=27.272726776387664 decode=20.442557836972103 token/s
+CASE 503/640 kivi longbench/multi_news/9/8192 repeat=0
+[kivi/longbench/multi_news/9/8192] 129/512 tokens
+[kivi/longbench/multi_news/9/8192] 257/512 tokens
+[kivi/longbench/multi_news/9/8192] 385/512 tokens
+[kivi/longbench/multi_news/9/8192] 512/512 tokens
+RESULT ok: longbench/multi_news/9/8192 score=25.153373745850434 decode=20.324689794456734 token/s
+CASE 504/640 kivi longbench/multi_news/9/16384 repeat=0
+[kivi/longbench/multi_news/9/16384] 129/512 tokens
+[kivi/longbench/multi_news/9/16384] 257/512 tokens
+[kivi/longbench/multi_news/9/16384] 385/512 tokens
+[kivi/longbench/multi_news/9/16384] 512/512 tokens
+RESULT ok: longbench/multi_news/9/16384 score=25.153373745850434 decode=20.2626337168895 token/s
+CASE 505/640 kivi longbench/multi_news/102/8192 repeat=0
+[kivi/longbench/multi_news/102/8192] 129/512 tokens
+[kivi/longbench/multi_news/102/8192] 257/512 tokens
+[kivi/longbench/multi_news/102/8192] 385/512 tokens
+[kivi/longbench/multi_news/102/8192] 512/512 tokens
+RESULT ok: longbench/multi_news/102/8192 score=17.665614712416296 decode=20.056059415951356 token/s
+CASE 506/640 kivi longbench/multi_news/102/16384 repeat=0
+[kivi/longbench/multi_news/102/16384] 129/512 tokens
+[kivi/longbench/multi_news/102/16384] 257/512 tokens
+[kivi/longbench/multi_news/102/16384] 385/512 tokens
+[kivi/longbench/multi_news/102/16384] 512/512 tokens
+RESULT ok: longbench/multi_news/102/16384 score=17.665614712416296 decode=20.348385191968067 token/s
+CASE 507/640 kivi longbench/multi_news/142/8192 repeat=0
+[kivi/longbench/multi_news/142/8192] 129/512 tokens
+[kivi/longbench/multi_news/142/8192] 257/512 tokens
+[kivi/longbench/multi_news/142/8192] 368/512 tokens
+RESULT ok: longbench/multi_news/142/8192 score=30.27888402787258 decode=20.293740565113715 token/s
+CASE 508/640 kivi longbench/multi_news/142/16384 repeat=0
+[kivi/longbench/multi_news/142/16384] 129/512 tokens
+[kivi/longbench/multi_news/142/16384] 257/512 tokens
+[kivi/longbench/multi_news/142/16384] 368/512 tokens
+RESULT ok: longbench/multi_news/142/16384 score=30.27888402787258 decode=19.99519460809354 token/s
+CASE 509/640 kivi longbench/multi_news/107/8192 repeat=0
+[kivi/longbench/multi_news/107/8192] 129/512 tokens
+[kivi/longbench/multi_news/107/8192] 257/512 tokens
+[kivi/longbench/multi_news/107/8192] 385/512 tokens
+[kivi/longbench/multi_news/107/8192] 512/512 tokens
+RESULT ok: longbench/multi_news/107/8192 score=16.94915214708418 decode=20.354399378556312 token/s
+CASE 510/640 kivi longbench/multi_news/107/16384 repeat=0
+[kivi/longbench/multi_news/107/16384] 129/512 tokens
+[kivi/longbench/multi_news/107/16384] 257/512 tokens
+[kivi/longbench/multi_news/107/16384] 385/512 tokens
+[kivi/longbench/multi_news/107/16384] 512/512 tokens
+RESULT ok: longbench/multi_news/107/16384 score=16.94915214708418 decode=20.457694508085165 token/s
+CASE 511/640 kivi longbench/multi_news/149/8192 repeat=0
+[kivi/longbench/multi_news/149/8192] 129/512 tokens
+[kivi/longbench/multi_news/149/8192] 257/512 tokens
+[kivi/longbench/multi_news/149/8192] 385/512 tokens
+[kivi/longbench/multi_news/149/8192] 512/512 tokens
+RESULT ok: longbench/multi_news/149/8192 score=27.868851986622477 decode=20.353591509746742 token/s
+CASE 512/640 kivi longbench/multi_news/149/16384 repeat=0
+[kivi/longbench/multi_news/149/16384] 129/512 tokens
+[kivi/longbench/multi_news/149/16384] 257/512 tokens
+[kivi/longbench/multi_news/149/16384] 385/512 tokens
+[kivi/longbench/multi_news/149/16384] 512/512 tokens
+RESULT ok: longbench/multi_news/149/16384 score=27.868851986622477 decode=20.125254793227697 token/s
+CASE 513/640 kivi longbench/lcc/309/8192 repeat=0
+[kivi/longbench/lcc/309/8192] 64/64 tokens
+RESULT ok: longbench/lcc/309/8192 score=20.0 decode=20.197455751826286 token/s
+CASE 514/640 kivi longbench/lcc/309/16384 repeat=0
+[kivi/longbench/lcc/309/16384] 64/64 tokens
+RESULT ok: longbench/lcc/309/16384 score=20.0 decode=20.183575895430764 token/s
+CASE 515/640 kivi longbench/lcc/169/8192 repeat=0
+[kivi/longbench/lcc/169/8192] 64/64 tokens
+RESULT ok: longbench/lcc/169/8192 score=76.0 decode=20.30307242507791 token/s
+CASE 516/640 kivi longbench/lcc/169/16384 repeat=0
+[kivi/longbench/lcc/169/16384] 64/64 tokens
+RESULT ok: longbench/lcc/169/16384 score=76.0 decode=20.367398725831485 token/s
+CASE 517/640 kivi longbench/lcc/195/8192 repeat=0
+[kivi/longbench/lcc/195/8192] 64/64 tokens
+RESULT ok: longbench/lcc/195/8192 score=77.0 decode=20.356552573142036 token/s
+CASE 518/640 kivi longbench/lcc/195/16384 repeat=0
+[kivi/longbench/lcc/195/16384] 64/64 tokens
+RESULT ok: longbench/lcc/195/16384 score=77.0 decode=20.35983435289914 token/s
+CASE 519/640 kivi longbench/lcc/445/8192 repeat=0
+[kivi/longbench/lcc/445/8192] 64/64 tokens
+RESULT ok: longbench/lcc/445/8192 score=57.99999999999999 decode=20.282121004876373 token/s
+CASE 520/640 kivi longbench/lcc/445/16384 repeat=0
+[kivi/longbench/lcc/445/16384] 64/64 tokens
+RESULT ok: longbench/lcc/445/16384 score=57.99999999999999 decode=20.284177155676037 token/s
+CASE 521/640 kivi longbench/lcc/442/8192 repeat=0
+[kivi/longbench/lcc/442/8192] 64/64 tokens
+RESULT ok: longbench/lcc/442/8192 score=21.0 decode=20.224496226677623 token/s
+CASE 522/640 kivi longbench/lcc/442/16384 repeat=0
+[kivi/longbench/lcc/442/16384] 64/64 tokens
+RESULT ok: longbench/lcc/442/16384 score=21.0 decode=20.159154986373064 token/s
+CASE 523/640 kivi longbench/lcc/251/8192 repeat=0
+[kivi/longbench/lcc/251/8192] 64/64 tokens
+RESULT ok: longbench/lcc/251/8192 score=28.000000000000004 decode=20.30973122065699 token/s
+CASE 524/640 kivi longbench/lcc/251/16384 repeat=0
+[kivi/longbench/lcc/251/16384] 64/64 tokens
+RESULT ok: longbench/lcc/251/16384 score=28.000000000000004 decode=20.03212527852995 token/s
+CASE 525/640 kivi longbench/lcc/48/8192 repeat=0
+[kivi/longbench/lcc/48/8192] 64/64 tokens
+RESULT ok: longbench/lcc/48/8192 score=0.0 decode=20.139751488411314 token/s
+CASE 526/640 kivi longbench/lcc/48/16384 repeat=0
+[kivi/longbench/lcc/48/16384] 64/64 tokens
+RESULT ok: longbench/lcc/48/16384 score=0.0 decode=20.27996752743141 token/s
+CASE 527/640 kivi longbench/lcc/387/8192 repeat=0
+[kivi/longbench/lcc/387/8192] 64/64 tokens
+RESULT ok: longbench/lcc/387/8192 score=100.0 decode=20.16745691946068 token/s
+CASE 528/640 kivi longbench/lcc/387/16384 repeat=0
+[kivi/longbench/lcc/387/16384] 64/64 tokens
+RESULT ok: longbench/lcc/387/16384 score=100.0 decode=20.358110269243472 token/s
+CASE 529/640 kivi longbench/lcc/347/8192 repeat=0
+[kivi/longbench/lcc/347/8192] 64/64 tokens
+RESULT ok: longbench/lcc/347/8192 score=100.0 decode=20.18382775336516 token/s
+CASE 530/640 kivi longbench/lcc/347/16384 repeat=0
+[kivi/longbench/lcc/347/16384] 64/64 tokens
+RESULT ok: longbench/lcc/347/16384 score=100.0 decode=20.308814825563292 token/s
+CASE 531/640 kivi longbench/lcc/58/8192 repeat=0
+[kivi/longbench/lcc/58/8192] 64/64 tokens
+RESULT ok: longbench/lcc/58/8192 score=100.0 decode=20.358599320006725 token/s
+CASE 532/640 kivi longbench/lcc/58/16384 repeat=0
+[kivi/longbench/lcc/58/16384] 64/64 tokens
+RESULT ok: longbench/lcc/58/16384 score=100.0 decode=20.37122988958739 token/s
+CASE 533/640 kivi longbench/lcc/11/8192 repeat=0
+[kivi/longbench/lcc/11/8192] 64/64 tokens
+RESULT ok: longbench/lcc/11/8192 score=56.00000000000001 decode=20.382012089870486 token/s
+CASE 534/640 kivi longbench/lcc/11/16384 repeat=0
+[kivi/longbench/lcc/11/16384] 64/64 tokens
+RESULT ok: longbench/lcc/11/16384 score=56.00000000000001 decode=20.399424969542252 token/s
+CASE 535/640 kivi longbench/lcc/211/8192 repeat=0
+[kivi/longbench/lcc/211/8192] 64/64 tokens
+RESULT ok: longbench/lcc/211/8192 score=91.0 decode=20.425845694784392 token/s
+CASE 536/640 kivi longbench/lcc/211/16384 repeat=0
+[kivi/longbench/lcc/211/16384] 64/64 tokens
+RESULT ok: longbench/lcc/211/16384 score=91.0 decode=20.44595347304603 token/s
+CASE 537/640 kivi longbench/lcc/490/8192 repeat=0
+[kivi/longbench/lcc/490/8192] 64/64 tokens
+RESULT ok: longbench/lcc/490/8192 score=31.0 decode=20.3030550610131 token/s
+CASE 538/640 kivi longbench/lcc/490/16384 repeat=0
+[kivi/longbench/lcc/490/16384] 64/64 tokens
+RESULT ok: longbench/lcc/490/16384 score=31.0 decode=20.417412305712986 token/s
+CASE 539/640 kivi longbench/lcc/357/8192 repeat=0
+[kivi/longbench/lcc/357/8192] 64/64 tokens
+RESULT ok: longbench/lcc/357/8192 score=71.0 decode=20.195349103814856 token/s
+CASE 540/640 kivi longbench/lcc/357/16384 repeat=0
+[kivi/longbench/lcc/357/16384] 64/64 tokens
+RESULT ok: longbench/lcc/357/16384 score=71.0 decode=20.380210023162444 token/s
+CASE 541/640 kivi longbench/lcc/22/8192 repeat=0
+[kivi/longbench/lcc/22/8192] 64/64 tokens
+RESULT ok: longbench/lcc/22/8192 score=50.0 decode=20.28999064679386 token/s
+CASE 542/640 kivi longbench/lcc/22/16384 repeat=0
+[kivi/longbench/lcc/22/16384] 64/64 tokens
+RESULT ok: longbench/lcc/22/16384 score=42.0 decode=20.273860091788933 token/s
+CASE 543/640 kivi longbench/lcc/375/8192 repeat=0
+[kivi/longbench/lcc/375/8192] 64/64 tokens
+RESULT ok: longbench/lcc/375/8192 score=91.0 decode=20.14432201902761 token/s
+CASE 544/640 kivi longbench/lcc/375/16384 repeat=0
+[kivi/longbench/lcc/375/16384] 64/64 tokens
+RESULT ok: longbench/lcc/375/16384 score=91.0 decode=19.994214613526506 token/s
+CASE 545/640 kivi longbench/lcc/244/8192 repeat=0
+[kivi/longbench/lcc/244/8192] 64/64 tokens
+RESULT ok: longbench/lcc/244/8192 score=97.0 decode=20.441246631834485 token/s
+CASE 546/640 kivi longbench/lcc/244/16384 repeat=0
+[kivi/longbench/lcc/244/16384] 64/64 tokens
+RESULT ok: longbench/lcc/244/16384 score=97.0 decode=20.329507858195054 token/s
+CASE 547/640 kivi longbench/lcc/497/8192 repeat=0
+[kivi/longbench/lcc/497/8192] 64/64 tokens
+RESULT ok: longbench/lcc/497/8192 score=92.0 decode=20.190536502593275 token/s
+CASE 548/640 kivi longbench/lcc/497/16384 repeat=0
+[kivi/longbench/lcc/497/16384] 64/64 tokens
+RESULT ok: longbench/lcc/497/16384 score=92.0 decode=20.525855449805974 token/s
+CASE 549/640 kivi longbench/lcc/128/8192 repeat=0
+[kivi/longbench/lcc/128/8192] 64/64 tokens
+RESULT ok: longbench/lcc/128/8192 score=78.0 decode=20.32568681540412 token/s
+CASE 550/640 kivi longbench/lcc/128/16384 repeat=0
+[kivi/longbench/lcc/128/16384] 64/64 tokens
+RESULT ok: longbench/lcc/128/16384 score=78.0 decode=20.220347417577745 token/s
+CASE 551/640 kivi longbench/lcc/457/8192 repeat=0
+[kivi/longbench/lcc/457/8192] 64/64 tokens
+RESULT ok: longbench/lcc/457/8192 score=42.0 decode=20.087168611265614 token/s
+CASE 552/640 kivi longbench/lcc/457/16384 repeat=0
+[kivi/longbench/lcc/457/16384] 64/64 tokens
+RESULT ok: longbench/lcc/457/16384 score=42.0 decode=20.27436304396765 token/s
+CASE 553/640 kivi longbench/lcc/102/8192 repeat=0
+[kivi/longbench/lcc/102/8192] 64/64 tokens
+RESULT ok: longbench/lcc/102/8192 score=100.0 decode=20.319994231220967 token/s
+CASE 554/640 kivi longbench/lcc/102/16384 repeat=0
+[kivi/longbench/lcc/102/16384] 64/64 tokens
+RESULT ok: longbench/lcc/102/16384 score=100.0 decode=20.29236291959377 token/s
+CASE 555/640 kivi longbench/lcc/351/8192 repeat=0
+[kivi/longbench/lcc/351/8192] 64/64 tokens
+RESULT ok: longbench/lcc/351/8192 score=43.0 decode=20.334561001718487 token/s
+CASE 556/640 kivi longbench/lcc/351/16384 repeat=0
+[kivi/longbench/lcc/351/16384] 64/64 tokens
+RESULT ok: longbench/lcc/351/16384 score=43.0 decode=20.17742013125146 token/s
+CASE 557/640 kivi longbench/lcc/76/8192 repeat=0
+[kivi/longbench/lcc/76/8192] 64/64 tokens
+RESULT ok: longbench/lcc/76/8192 score=92.0 decode=20.260163120712583 token/s
+CASE 558/640 kivi longbench/lcc/76/16384 repeat=0
+[kivi/longbench/lcc/76/16384] 64/64 tokens
+RESULT ok: longbench/lcc/76/16384 score=92.0 decode=20.129610022389695 token/s
+CASE 559/640 kivi longbench/lcc/429/8192 repeat=0
+[kivi/longbench/lcc/429/8192] 64/64 tokens
+RESULT ok: longbench/lcc/429/8192 score=100.0 decode=20.364717017176453 token/s
+CASE 560/640 kivi longbench/lcc/429/16384 repeat=0
+[kivi/longbench/lcc/429/16384] 64/64 tokens
+RESULT ok: longbench/lcc/429/16384 score=100.0 decode=20.400702786186145 token/s
+CASE 561/640 kivi longbench/lcc/344/8192 repeat=0
+[kivi/longbench/lcc/344/8192] 64/64 tokens
+RESULT ok: longbench/lcc/344/8192 score=59.0 decode=20.403423484134308 token/s
+CASE 562/640 kivi longbench/lcc/344/16384 repeat=0
+[kivi/longbench/lcc/344/16384] 64/64 tokens
+RESULT ok: longbench/lcc/344/16384 score=59.0 decode=20.364023023298344 token/s
+CASE 563/640 kivi longbench/lcc/441/8192 repeat=0
+[kivi/longbench/lcc/441/8192] 64/64 tokens
+RESULT ok: longbench/lcc/441/8192 score=100.0 decode=20.30690948741687 token/s
+CASE 564/640 kivi longbench/lcc/441/16384 repeat=0
+[kivi/longbench/lcc/441/16384] 64/64 tokens
+RESULT ok: longbench/lcc/441/16384 score=100.0 decode=20.198344963235552 token/s
+CASE 565/640 kivi longbench/lcc/240/8192 repeat=0
+[kivi/longbench/lcc/240/8192] 64/64 tokens
+RESULT ok: longbench/lcc/240/8192 score=22.0 decode=20.23539813758264 token/s
+CASE 566/640 kivi longbench/lcc/240/16384 repeat=0
+[kivi/longbench/lcc/240/16384] 64/64 tokens
+RESULT ok: longbench/lcc/240/16384 score=22.0 decode=20.39525233496359 token/s
+CASE 567/640 kivi longbench/lcc/17/8192 repeat=0
+[kivi/longbench/lcc/17/8192] 64/64 tokens
+RESULT ok: longbench/lcc/17/8192 score=92.0 decode=20.384561297935985 token/s
+CASE 568/640 kivi longbench/lcc/17/16384 repeat=0
+[kivi/longbench/lcc/17/16384] 64/64 tokens
+RESULT ok: longbench/lcc/17/16384 score=92.0 decode=20.32812795343415 token/s
+CASE 569/640 kivi longbench/lcc/165/8192 repeat=0
+[kivi/longbench/lcc/165/8192] 64/64 tokens
+RESULT ok: longbench/lcc/165/8192 score=35.0 decode=20.21550645473451 token/s
+CASE 570/640 kivi longbench/lcc/165/16384 repeat=0
+[kivi/longbench/lcc/165/16384] 64/64 tokens
+RESULT ok: longbench/lcc/165/16384 score=35.0 decode=20.325089702822567 token/s
+CASE 571/640 kivi longbench/lcc/94/8192 repeat=0
+[kivi/longbench/lcc/94/8192] 64/64 tokens
+RESULT ok: longbench/lcc/94/8192 score=100.0 decode=20.373204062053087 token/s
+CASE 572/640 kivi longbench/lcc/94/16384 repeat=0
+[kivi/longbench/lcc/94/16384] 64/64 tokens
+RESULT ok: longbench/lcc/94/16384 score=100.0 decode=20.342598234484644 token/s
+CASE 573/640 kivi longbench/lcc/119/8192 repeat=0
+[kivi/longbench/lcc/119/8192] 64/64 tokens
+RESULT ok: longbench/lcc/119/8192 score=100.0 decode=20.24297620574871 token/s
+CASE 574/640 kivi longbench/lcc/119/16384 repeat=0
+[kivi/longbench/lcc/119/16384] 64/64 tokens
+RESULT ok: longbench/lcc/119/16384 score=100.0 decode=20.151425223735774 token/s
+CASE 575/640 kivi longbench/lcc/437/8192 repeat=0
+[kivi/longbench/lcc/437/8192] 64/64 tokens
+RESULT ok: longbench/lcc/437/8192 score=55.00000000000001 decode=20.344703442898656 token/s
+CASE 576/640 kivi longbench/lcc/437/16384 repeat=0
+[kivi/longbench/lcc/437/16384] 64/64 tokens
+RESULT ok: longbench/lcc/437/16384 score=55.00000000000001 decode=20.068749047212965 token/s
+CASE 577/640 kivi longbench/repobench-p/309/8192 repeat=0
+[kivi/longbench/repobench-p/309/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/309/8192 score=30.0 decode=20.269581653800845 token/s
+CASE 578/640 kivi longbench/repobench-p/309/16384 repeat=0
+[kivi/longbench/repobench-p/309/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/309/16384 score=35.0 decode=19.897062559077046 token/s
+CASE 579/640 kivi longbench/repobench-p/169/8192 repeat=0
+[kivi/longbench/repobench-p/169/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/169/8192 score=100.0 decode=20.14674320355829 token/s
+CASE 580/640 kivi longbench/repobench-p/169/16384 repeat=0
+[kivi/longbench/repobench-p/169/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/169/16384 score=100.0 decode=19.923602895370074 token/s
+CASE 581/640 kivi longbench/repobench-p/195/8192 repeat=0
+[kivi/longbench/repobench-p/195/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/195/8192 score=28.000000000000004 decode=20.235273203889346 token/s
+CASE 582/640 kivi longbench/repobench-p/195/16384 repeat=0
+[kivi/longbench/repobench-p/195/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/195/16384 score=27.0 decode=20.049294026590623 token/s
+CASE 583/640 kivi longbench/repobench-p/445/8192 repeat=0
+[kivi/longbench/repobench-p/445/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/445/8192 score=34.0 decode=20.208489252392404 token/s
+CASE 584/640 kivi longbench/repobench-p/445/16384 repeat=0
+[kivi/longbench/repobench-p/445/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/445/16384 score=34.0 decode=20.070169160337326 token/s
+CASE 585/640 kivi longbench/repobench-p/442/8192 repeat=0
+[kivi/longbench/repobench-p/442/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/442/8192 score=62.0 decode=19.86898113278909 token/s
+CASE 586/640 kivi longbench/repobench-p/442/16384 repeat=0
+[kivi/longbench/repobench-p/442/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/442/16384 score=62.0 decode=20.146401216164318 token/s
+CASE 587/640 kivi longbench/repobench-p/251/8192 repeat=0
+[kivi/longbench/repobench-p/251/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/251/8192 score=43.0 decode=20.156661008051614 token/s
+CASE 588/640 kivi longbench/repobench-p/251/16384 repeat=0
+[kivi/longbench/repobench-p/251/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/251/16384 score=43.0 decode=20.105740910023634 token/s
+CASE 589/640 kivi longbench/repobench-p/48/8192 repeat=0
+[kivi/longbench/repobench-p/48/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/48/8192 score=32.0 decode=20.221863811537244 token/s
+CASE 590/640 kivi longbench/repobench-p/48/16384 repeat=0
+[kivi/longbench/repobench-p/48/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/48/16384 score=32.0 decode=19.99877588599499 token/s
+CASE 591/640 kivi longbench/repobench-p/387/8192 repeat=0
+[kivi/longbench/repobench-p/387/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/387/8192 score=44.0 decode=20.13475524300201 token/s
+CASE 592/640 kivi longbench/repobench-p/387/16384 repeat=0
+[kivi/longbench/repobench-p/387/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/387/16384 score=34.0 decode=20.213217791379414 token/s
+CASE 593/640 kivi longbench/repobench-p/347/8192 repeat=0
+[kivi/longbench/repobench-p/347/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/347/8192 score=100.0 decode=20.182322715472615 token/s
+CASE 594/640 kivi longbench/repobench-p/347/16384 repeat=0
+[kivi/longbench/repobench-p/347/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/347/16384 score=100.0 decode=20.116493774195185 token/s
+CASE 595/640 kivi longbench/repobench-p/58/8192 repeat=0
+[kivi/longbench/repobench-p/58/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/58/8192 score=60.0 decode=20.307534825456152 token/s
+CASE 596/640 kivi longbench/repobench-p/58/16384 repeat=0
+[kivi/longbench/repobench-p/58/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/58/16384 score=60.0 decode=19.89622074356056 token/s
+CASE 597/640 kivi longbench/repobench-p/11/8192 repeat=0
+[kivi/longbench/repobench-p/11/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/11/8192 score=63.0 decode=20.11627943565169 token/s
+CASE 598/640 kivi longbench/repobench-p/11/16384 repeat=0
+[kivi/longbench/repobench-p/11/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/11/16384 score=63.0 decode=20.152178951396152 token/s
+CASE 599/640 kivi longbench/repobench-p/211/8192 repeat=0
+[kivi/longbench/repobench-p/211/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/211/8192 score=100.0 decode=19.905457394009193 token/s
+CASE 600/640 kivi longbench/repobench-p/211/16384 repeat=0
+[kivi/longbench/repobench-p/211/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/211/16384 score=100.0 decode=20.291648624240114 token/s
+CASE 601/640 kivi longbench/repobench-p/490/8192 repeat=0
+[kivi/longbench/repobench-p/490/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/490/8192 score=100.0 decode=20.165110606421344 token/s
+CASE 602/640 kivi longbench/repobench-p/490/16384 repeat=0
+[kivi/longbench/repobench-p/490/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/490/16384 score=49.0 decode=20.084962739595188 token/s
+CASE 603/640 kivi longbench/repobench-p/357/8192 repeat=0
+[kivi/longbench/repobench-p/357/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/357/8192 score=31.0 decode=20.14299014397897 token/s
+CASE 604/640 kivi longbench/repobench-p/357/16384 repeat=0
+[kivi/longbench/repobench-p/357/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/357/16384 score=31.0 decode=20.34850296560544 token/s
+CASE 605/640 kivi longbench/repobench-p/22/8192 repeat=0
+[kivi/longbench/repobench-p/22/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/22/8192 score=100.0 decode=20.258717059116787 token/s
+CASE 606/640 kivi longbench/repobench-p/22/16384 repeat=0
+[kivi/longbench/repobench-p/22/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/22/16384 score=100.0 decode=20.282614466403196 token/s
+CASE 607/640 kivi longbench/repobench-p/375/8192 repeat=0
+[kivi/longbench/repobench-p/375/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/375/8192 score=28.999999999999996 decode=20.19714971189309 token/s
+CASE 608/640 kivi longbench/repobench-p/375/16384 repeat=0
+[kivi/longbench/repobench-p/375/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/375/16384 score=28.999999999999996 decode=20.387210488014446 token/s
+CASE 609/640 kivi longbench/repobench-p/244/8192 repeat=0
+[kivi/longbench/repobench-p/244/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/244/8192 score=42.0 decode=20.31567018189223 token/s
+CASE 610/640 kivi longbench/repobench-p/244/16384 repeat=0
+[kivi/longbench/repobench-p/244/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/244/16384 score=39.0 decode=18.822543691933983 token/s
+CASE 611/640 kivi longbench/repobench-p/497/8192 repeat=0
+[kivi/longbench/repobench-p/497/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/497/8192 score=48.0 decode=19.791142708359544 token/s
+CASE 612/640 kivi longbench/repobench-p/497/16384 repeat=0
+[kivi/longbench/repobench-p/497/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/497/16384 score=48.0 decode=20.126446046305233 token/s
+CASE 613/640 kivi longbench/repobench-p/128/8192 repeat=0
+[kivi/longbench/repobench-p/128/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/128/8192 score=24.0 decode=20.22439760323404 token/s
+CASE 614/640 kivi longbench/repobench-p/128/16384 repeat=0
+[kivi/longbench/repobench-p/128/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/128/16384 score=24.0 decode=20.09301570393639 token/s
+CASE 615/640 kivi longbench/repobench-p/457/8192 repeat=0
+[kivi/longbench/repobench-p/457/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/457/8192 score=100.0 decode=20.039586592545085 token/s
+CASE 616/640 kivi longbench/repobench-p/457/16384 repeat=0
+[kivi/longbench/repobench-p/457/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/457/16384 score=100.0 decode=19.915926714818255 token/s
+CASE 617/640 kivi longbench/repobench-p/102/8192 repeat=0
+[kivi/longbench/repobench-p/102/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/102/8192 score=54.0 decode=20.185155030057256 token/s
+CASE 618/640 kivi longbench/repobench-p/102/16384 repeat=0
+[kivi/longbench/repobench-p/102/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/102/16384 score=56.99999999999999 decode=20.16874413858857 token/s
+CASE 619/640 kivi longbench/repobench-p/351/8192 repeat=0
+[kivi/longbench/repobench-p/351/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/351/8192 score=27.0 decode=20.0345230077664 token/s
+CASE 620/640 kivi longbench/repobench-p/351/16384 repeat=0
+[kivi/longbench/repobench-p/351/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/351/16384 score=22.0 decode=20.152247427405992 token/s
+CASE 621/640 kivi longbench/repobench-p/76/8192 repeat=0
+[kivi/longbench/repobench-p/76/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/76/8192 score=47.0 decode=20.05954135980968 token/s
+CASE 622/640 kivi longbench/repobench-p/76/16384 repeat=0
+[kivi/longbench/repobench-p/76/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/76/16384 score=64.0 decode=20.1578848010375 token/s
+CASE 623/640 kivi longbench/repobench-p/429/8192 repeat=0
+[kivi/longbench/repobench-p/429/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/429/8192 score=36.0 decode=20.079285802016056 token/s
+CASE 624/640 kivi longbench/repobench-p/429/16384 repeat=0
+[kivi/longbench/repobench-p/429/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/429/16384 score=36.0 decode=20.217119613783012 token/s
+CASE 625/640 kivi longbench/repobench-p/344/8192 repeat=0
+[kivi/longbench/repobench-p/344/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/344/8192 score=100.0 decode=20.036441687553094 token/s
+CASE 626/640 kivi longbench/repobench-p/344/16384 repeat=0
+[kivi/longbench/repobench-p/344/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/344/16384 score=100.0 decode=20.245383670578 token/s
+CASE 627/640 kivi longbench/repobench-p/441/8192 repeat=0
+[kivi/longbench/repobench-p/441/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/441/8192 score=98.0 decode=19.828664251707966 token/s
+CASE 628/640 kivi longbench/repobench-p/441/16384 repeat=0
+[kivi/longbench/repobench-p/441/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/441/16384 score=100.0 decode=19.846862853901676 token/s
+CASE 629/640 kivi longbench/repobench-p/240/8192 repeat=0
+[kivi/longbench/repobench-p/240/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/240/8192 score=100.0 decode=20.22989746846772 token/s
+CASE 630/640 kivi longbench/repobench-p/240/16384 repeat=0
+[kivi/longbench/repobench-p/240/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/240/16384 score=100.0 decode=20.373334116345138 token/s
+CASE 631/640 kivi longbench/repobench-p/17/8192 repeat=0
+[kivi/longbench/repobench-p/17/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/17/8192 score=26.0 decode=20.21594454449357 token/s
+CASE 632/640 kivi longbench/repobench-p/17/16384 repeat=0
+[kivi/longbench/repobench-p/17/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/17/16384 score=72.0 decode=19.780978967930153 token/s
+CASE 633/640 kivi longbench/repobench-p/165/8192 repeat=0
+[kivi/longbench/repobench-p/165/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/165/8192 score=13.0 decode=20.34026042445653 token/s
+CASE 634/640 kivi longbench/repobench-p/165/16384 repeat=0
+[kivi/longbench/repobench-p/165/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/165/16384 score=13.0 decode=20.13666158922691 token/s
+CASE 635/640 kivi longbench/repobench-p/94/8192 repeat=0
+[kivi/longbench/repobench-p/94/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/94/8192 score=19.0 decode=20.409481763261496 token/s
+CASE 636/640 kivi longbench/repobench-p/94/16384 repeat=0
+[kivi/longbench/repobench-p/94/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/94/16384 score=21.0 decode=20.11376639908374 token/s
+CASE 637/640 kivi longbench/repobench-p/119/8192 repeat=0
+[kivi/longbench/repobench-p/119/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/119/8192 score=25.0 decode=20.28745790474508 token/s
+CASE 638/640 kivi longbench/repobench-p/119/16384 repeat=0
+[kivi/longbench/repobench-p/119/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/119/16384 score=25.0 decode=20.326634903627543 token/s
+CASE 639/640 kivi longbench/repobench-p/437/8192 repeat=0
+[kivi/longbench/repobench-p/437/8192] 64/64 tokens
+RESULT ok: longbench/repobench-p/437/8192 score=100.0 decode=20.17133333720504 token/s
+CASE 640/640 kivi longbench/repobench-p/437/16384 repeat=0
+[kivi/longbench/repobench-p/437/16384] 64/64 tokens
+RESULT ok: longbench/repobench-p/437/16384 score=100.0 decode=20.219674853567064 token/s

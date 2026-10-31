@@ -1,0 +1,94 @@
+{
+  "id": "longbench/hotpotqa/148/16384",
+  "suite": "longbench",
+  "task": "hotpotqa",
+  "document_id": "148/16384",
+  "cluster_id": "hotpotqa/60c6ecafe2661ef2fbbad445d9da6f43a31f0a0ae1c8a83868d0807cf79032b0",
+  "length_budget": 16384,
+  "input_sha256": "e90e3c85cab1e874fde6f66cda1425cda22a03dcbff2000ff52d7ff7f3c77b2f",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": "heldout",
+  "heldout_from_available_history": true,
+  "method": "snapkv",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 11260,
+  "output_tokens": 7,
+  "output_ids": [
+    60029,
+    11269,
+    5654,
+    315,
+    17355,
+    15704,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 1.5709043452516198,
+  "prefill_and_compress_s": 1.5709043452516198,
+  "decode_s": 0.16954481694847345,
+  "decode_tokens_per_s": 35.388873030683484,
+  "generation_wall_s_including_instrumentation": 1.7411902360618114,
+  "prefill_storage": {
+    "physical_bytes": 1073741824,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1073741824,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 1076887552,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1076887552,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 2048,
+    "stored_heads": 32
+  },
+  "final_trace": {
+    "physical_tokens": 2054,
+    "stored_heads": 32
+  },
+  "peak_allocated_bytes": 18486663680,
+  "peak_reserved_bytes": 19100860416,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 6,
+      "seconds": 0.16954481694847345,
+      "tokens": 6
+    }
+  ],
+  "effective_options": {
+    "max_capacity_prompt": 2048,
+    "window_size": 32,
+    "kernel_size": 7,
+    "pooling": "maxpool"
+  },
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 100.0,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "Veneto region of Northern Italy",
+  "gpu_before": {
+    "time": 1793303364.4766061,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15896 MiB, 0 %, 53, 326.98 W, 2655 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793303366.3175669,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 18646 MiB, 62 %, 55, 358.31 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793303366.3175702
+}

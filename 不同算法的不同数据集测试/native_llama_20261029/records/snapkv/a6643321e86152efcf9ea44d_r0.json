@@ -1,0 +1,123 @@
+{
+  "id": "longbench/multifieldqa_en/92/8192",
+  "suite": "longbench",
+  "task": "multifieldqa_en",
+  "document_id": "92/8192",
+  "cluster_id": "multifieldqa_en/99f0cb9d891f09d56ef2d39504a3361abb7ed539a50394635d96a689fd52c288",
+  "length_budget": 8192,
+  "input_sha256": "0a653a1f54206390c4f9b03b77eb4dfc2f56dd1cec241c72082546f3ee20ea44",
+  "truncated_input": true,
+  "capacity_extension": null,
+  "evaluation_split": "heldout",
+  "heldout_from_available_history": true,
+  "method": "snapkv",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 8182,
+  "output_tokens": 36,
+  "output_ids": [
+    18876,
+    3756,
+    6373,
+    320,
+    6204,
+    44,
+    8,
+    6067,
+    527,
+    6118,
+    14183,
+    311,
+    1054,
+    24249,
+    58983,
+    2585,
+    315,
+    459,
+    4553,
+    26155,
+    315,
+    6505,
+    7766,
+    323,
+    6505,
+    8522,
+    555,
+    19486,
+    323,
+    23391,
+    864,
+    39817,
+    6683,
+    5110,
+    11453,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 1.0862937169149518,
+  "prefill_and_compress_s": 1.0862937169149518,
+  "decode_s": 0.9791036508977413,
+  "decode_tokens_per_s": 35.74698140274368,
+  "generation_wall_s_including_instrumentation": 2.065839760005474,
+  "prefill_storage": {
+    "physical_bytes": 1073741824,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1073741824,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 1092091904,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1092091904,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 2048,
+    "stored_heads": 32
+  },
+  "final_trace": {
+    "physical_tokens": 2083,
+    "stored_heads": 32
+  },
+  "peak_allocated_bytes": 18237133824,
+  "peak_reserved_bytes": 18658361344,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 35,
+      "seconds": 0.9791036508977413,
+      "tokens": 35
+    }
+  ],
+  "effective_options": {
+    "max_capacity_prompt": 2048,
+    "window_size": 32,
+    "kernel_size": 7,
+    "pooling": "maxpool"
+  },
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 40.0,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "Mobile device management (MDM) systems are usually referred to “support centralized control of an entire fleet of mobile devices and mobile applications by applying and ensuring pre-defined configuration settings”.",
+  "gpu_before": {
+    "time": 1793303237.2323508,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15896 MiB, 100 %, 67, 381.36 W, 2655 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793303239.3889482,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 18224 MiB, 78 %, 58, 268.94 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793303239.3889527
+}

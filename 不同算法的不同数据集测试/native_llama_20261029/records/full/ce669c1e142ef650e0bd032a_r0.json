@@ -1,0 +1,103 @@
+{
+  "id": "longbench/qasper/67/8192",
+  "suite": "longbench",
+  "task": "qasper",
+  "document_id": "67/8192",
+  "cluster_id": "qasper/37b469fecf371cfcee61d7a24fdaca46dbcc80859fdfc55d8d85cada008690d2",
+  "length_budget": 8192,
+  "input_sha256": "84c21899c7f45a1b97c3f83d35f2b25c35cd0a59ec53c0bf09adae2b3aae2e8d",
+  "truncated_input": true,
+  "capacity_extension": null,
+  "evaluation_split": "heldout",
+  "heldout_from_available_history": true,
+  "method": "full",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 8184,
+  "output_tokens": 21,
+  "output_ids": [
+    2250,
+    4633,
+    48570,
+    323,
+    264,
+    5655,
+    6975,
+    1646,
+    30464,
+    505,
+    85696,
+    1880,
+    453,
+    13,
+    527,
+    1511,
+    369,
+    432,
+    99125,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 1.071848182938993,
+  "prefill_and_compress_s": 1.071848182938993,
+  "decode_s": 0.5198202850297093,
+  "decode_tokens_per_s": 38.47483558448847,
+  "generation_wall_s_including_instrumentation": 1.59208626113832,
+  "prefill_storage": {
+    "physical_bytes": 1072693248,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1072693248,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 1075314688,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1075314688,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 8184,
+    "stored_heads": 8
+  },
+  "final_trace": {
+    "physical_tokens": 8204,
+    "stored_heads": 8
+  },
+  "peak_allocated_bytes": 18234122240,
+  "peak_reserved_bytes": 18702401536,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 20,
+      "seconds": 0.5198202850297093,
+      "tokens": 20
+    }
+  ],
+  "effective_options": {},
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 21.05263157894737,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "Logistic Regression and a deep learning model adapted from Bowman et al. are used for RQE.",
+  "gpu_before": {
+    "time": 1793313313.0687554,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15894 MiB, 12 %, 50, 234.47 W, 2670 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793313314.7499626,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 18264 MiB, 100 %, 56, 350.35 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793313314.7499666
+}

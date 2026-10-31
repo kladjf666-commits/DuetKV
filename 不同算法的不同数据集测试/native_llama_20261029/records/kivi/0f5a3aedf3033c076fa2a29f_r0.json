@@ -1,0 +1,122 @@
+{
+  "id": "longbench/2wikimqa/190/16384",
+  "suite": "longbench",
+  "task": "2wikimqa",
+  "document_id": "190/16384",
+  "cluster_id": "2wikimqa/a192d274d4e1d8fa1e557d185ff76fd9836363470a3fd67537d7a53af23ec4fc",
+  "length_budget": 16384,
+  "input_sha256": "6f37e7839480a99947bc2044910dccc1f0b1d5c986e8e3989c28ff360fc44b40",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": "heldout",
+  "heldout_from_available_history": true,
+  "method": "kivi",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 9070,
+  "output_tokens": 30,
+  "output_ids": [
+    88960,
+    50088,
+    496,
+    86684,
+    574,
+    9405,
+    389,
+    220,
+    20,
+    5587,
+    220,
+    5162,
+    20,
+    11,
+    323,
+    30206,
+    96425,
+    37246,
+    309,
+    574,
+    9405,
+    389,
+    220,
+    22,
+    3297,
+    220,
+    9367,
+    19,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 1.3270666971802711,
+  "prefill_and_compress_s": 1.3270666971802711,
+  "decode_s": 1.4583332790061831,
+  "decode_tokens_per_s": 19.885715026514898,
+  "generation_wall_s_including_instrumentation": 2.786957094911486,
+  "prefill_storage": {
+    "physical_bytes": 382230528,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 382230528,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 378957824,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 378957824,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "prefill_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 9070
+  },
+  "final_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 9099
+  },
+  "peak_allocated_bytes": 17533008896,
+  "peak_reserved_bytes": 18536726528,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 29,
+      "seconds": 1.4583332790061831,
+      "tokens": 29
+    }
+  ],
+  "effective_options": {
+    "k_bits": 4,
+    "v_bits": 4,
+    "group_size": 32,
+    "residual_length": 128,
+    "use_flash": true
+  },
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 20.0,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "Johnny Ekström was born on 5 March 1965, and Hugh Evelyn Wortham was born on 7 May 1884.",
+  "gpu_before": {
+    "time": 1793297848.803734,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 16004 MiB, 48 %, 51, 172.47 W, 2670 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793297851.6622927,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 18108 MiB, 48 %, 53, 179.54 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793297851.662297
+}

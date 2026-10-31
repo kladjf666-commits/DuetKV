@@ -1,0 +1,97 @@
+{
+  "id": "longbench/2wikimqa/187/8192",
+  "suite": "longbench",
+  "task": "2wikimqa",
+  "document_id": "187/8192",
+  "cluster_id": "2wikimqa/78349650d97024e6df711a7ebc815998e93aec5aa7e0162312c0ad636baa7538",
+  "length_budget": 8192,
+  "input_sha256": "133710408e594ad860f15bc3946278c49865f73211c19c9bce614da5201b6a5f",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": "heldout",
+  "heldout_from_available_history": true,
+  "method": "kivi",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 5964,
+  "output_tokens": 5,
+  "output_ids": [
+    54133,
+    5281,
+    13345,
+    43136,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 0.9187316382303834,
+  "prefill_and_compress_s": 0.9187316382303834,
+  "decode_s": 0.20447656512260437,
+  "decode_tokens_per_s": 19.5621439434959,
+  "generation_wall_s_including_instrumentation": 1.1248311903327703,
+  "prefill_storage": {
+    "physical_bytes": 253476864,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 253476864,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 253820928,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 253820928,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "prefill_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 5964
+  },
+  "final_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 5968
+  },
+  "peak_allocated_bytes": 17036659712,
+  "peak_reserved_bytes": 17588813824,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 4,
+      "seconds": 0.20447656512260437,
+      "tokens": 4
+    }
+  ],
+  "effective_options": {
+    "k_bits": 4,
+    "v_bits": 4,
+    "group_size": 32,
+    "residual_length": 128,
+    "use_flash": true
+  },
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 0,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "Durango Valley Raiders",
+  "gpu_before": {
+    "time": 1793297871.8628325,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 16004 MiB, 100 %, 54, 319.14 W, 2655 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793297873.0877233,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 17204 MiB, 44 %, 56, 308.19 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793297873.0877275
+}

@@ -1,0 +1,6 @@
+[validate] Qwen2.5-7B-Instruct: FP32 chunked prefill versus full eager
+Qwen2Model is using Qwen2SdpaAttention, but `torch.nn.functional.scaled_dot_product_attention` does not support `output_attentions=True`. Falling back to the manual attention implementation, but specifying the manual implementation will be required from Transformers version v5.0.0 onwards. This warning can be removed using the argument `attn_implementation="eager"` when loading the model.
+The attention layers in this model are transitioning from computing the RoPE embeddings internally through `position_ids` (2D tensor with the indexes of the tokens), to using externally computed `position_embeddings` (Tuple of tensors, containing cos and sin). In v4.46 `position_ids` will be removed and `position_embeddings` will be mandatory.
+[validate] Qwen2.5-7B-Instruct: BF16 native versus wrapped (identical chunks)
+[validate] BF16 chunk/full diagnostic: max_abs=0.0390625, rms=0.0175646
+[validate] Qwen2.5-7B-Instruct: full, 80 decode steps

@@ -1,0 +1,87 @@
+{
+  "id": "longbench/narrativeqa/152/16384",
+  "suite": "longbench",
+  "task": "narrativeqa",
+  "document_id": "152/16384",
+  "cluster_id": "narrativeqa/0c509886c69d3dbb04974c0af5aa71af45f4e9ee0be2a97de455eab782283c01",
+  "length_budget": 16384,
+  "input_sha256": "5c15afd5214d4c54e77dfc7e3fa63ec5ef055bc90c218c256928afc955313b0c",
+  "truncated_input": true,
+  "capacity_extension": null,
+  "evaluation_split": "historical_retest",
+  "heldout_from_available_history": false,
+  "method": "full",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 16374,
+  "output_tokens": 5,
+  "output_ids": [
+    36,
+    24444,
+    8078,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 2.36157897580415,
+  "prefill_and_compress_s": 2.36157897580415,
+  "decode_s": 0.10526385018602014,
+  "decode_tokens_per_s": 37.999750084490366,
+  "generation_wall_s_including_instrumentation": 2.467270698864013,
+  "prefill_storage": {
+    "physical_bytes": 2146172928,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 2146172928,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 2146697216,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 2146697216,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 16374,
+    "stored_heads": 8
+  },
+  "final_trace": {
+    "physical_tokens": 16378,
+    "stored_heads": 8
+  },
+  "peak_allocated_bytes": 20398451712,
+  "peak_reserved_bytes": 21227372544,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 4,
+      "seconds": 0.10526385018602014,
+      "tokens": 4
+    }
+  ],
+  "effective_options": {},
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 0,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "Eatonville.",
+  "gpu_before": {
+    "time": 1793313157.3908246,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15894 MiB, 98 %, 59, 370.26 W, 2655 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793313159.9497821,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 20672 MiB, 97 %, 56, 377.02 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793313159.9497867
+}

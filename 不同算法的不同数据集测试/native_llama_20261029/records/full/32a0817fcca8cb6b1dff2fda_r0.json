@@ -1,0 +1,91 @@
+{
+  "id": "longbench/multifieldqa_en/43/16384",
+  "suite": "longbench",
+  "task": "multifieldqa_en",
+  "document_id": "43/16384",
+  "cluster_id": "multifieldqa_en/89c056c586d3282840033a4561c8bb9e88a78d200967d1b170c7680c8b5a474b",
+  "length_budget": 16384,
+  "input_sha256": "be3d176bf0ff4adf1770909374bcbd8b29f2a35fdf2ee57f780d4dd9b43e935f",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": "heldout",
+  "heldout_from_available_history": true,
+  "method": "full",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 9905,
+  "output_tokens": 9,
+  "output_ids": [
+    533,
+    258,
+    323,
+    264,
+    6485,
+    4009,
+    315,
+    28896,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 1.3256170670501888,
+  "prefill_and_compress_s": 1.3256170670501888,
+  "decode_s": 0.21241434896364808,
+  "decode_tokens_per_s": 37.66223910499142,
+  "generation_wall_s_including_instrumentation": 1.5386175466701388,
+  "prefill_storage": {
+    "physical_bytes": 1298268160,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1298268160,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 1299316736,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1299316736,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 9905,
+    "stored_heads": 8
+  },
+  "final_trace": {
+    "physical_tokens": 9913,
+    "stored_heads": 8
+  },
+  "peak_allocated_bytes": 18689783296,
+  "peak_reserved_bytes": 19258146816,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 8,
+      "seconds": 0.21241434896364808,
+      "tokens": 8
+    }
+  ],
+  "effective_options": {},
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 21.052631578947366,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "actin and a complex network of proteins",
+  "gpu_before": {
+    "time": 1793313409.069931,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15894 MiB, 19 %, 50, 258.95 W, 2670 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793313410.7063675,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 18794 MiB, 100 %, 61, 380.45 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793313410.7063715
+}

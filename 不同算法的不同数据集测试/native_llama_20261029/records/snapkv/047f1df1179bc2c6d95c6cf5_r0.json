@@ -1,0 +1,110 @@
+{
+  "id": "longbench/multifieldqa_en/121/8192",
+  "suite": "longbench",
+  "task": "multifieldqa_en",
+  "document_id": "121/8192",
+  "cluster_id": "multifieldqa_en/adf2de189dbb844c8b07814b912e5bcfdf7d54d3327baa15571c9ba1ae663a9e",
+  "length_budget": 8192,
+  "input_sha256": "d0cd368f0355b2db45663581836bac2b6e71c890bad60afdcbc619f0c0cdb52b",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": "heldout",
+  "heldout_from_available_history": true,
+  "method": "snapkv",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 7026,
+  "output_tokens": 23,
+  "output_ids": [
+    8284,
+    23603,
+    1887,
+    48913,
+    5435,
+    11,
+    602,
+    1770,
+    2637,
+    25213,
+    41658,
+    14847,
+    315,
+    75098,
+    43524,
+    3046,
+    1234,
+    25142,
+    42408,
+    25435,
+    811,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 0.9231629148125648,
+  "prefill_and_compress_s": 0.9231629148125648,
+  "decode_s": 0.6196622508578002,
+  "decode_tokens_per_s": 35.50321157944563,
+  "generation_wall_s_including_instrumentation": 1.5435677031055093,
+  "prefill_storage": {
+    "physical_bytes": 1073741824,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1073741824,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 1085276160,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1085276160,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 2048,
+    "stored_heads": 32
+  },
+  "final_trace": {
+    "physical_tokens": 2070,
+    "stored_heads": 32
+  },
+  "peak_allocated_bytes": 18235703296,
+  "peak_reserved_bytes": 18637389824,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 22,
+      "seconds": 0.6196622508578002,
+      "tokens": 22
+    }
+  ],
+  "effective_options": {
+    "max_capacity_prompt": 2048,
+    "window_size": 32,
+    "kernel_size": 7,
+    "pooling": "maxpool"
+  },
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 33.333333333333336,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "Nonlinear system vibration problems, i.e., computing transient responses of nonlinear oscillators under arbitrary irregular excitations.",
+  "gpu_before": {
+    "time": 1793303177.0870333,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15896 MiB, 78 %, 52, 248.09 W, 2670 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793303178.718723,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 18204 MiB, 78 %, 56, 355.01 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793303178.7187274
+}

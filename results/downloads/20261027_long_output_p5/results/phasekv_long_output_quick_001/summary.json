@@ -1,0 +1,49 @@
+{
+  "version": "phasekv-long-output-quick-v1",
+  "manifest_hash": "b999a8030a057e1c889aafaa684c4160ede40f9b03daf33a4e90a3e3cf8a3851",
+  "record_hashes": {
+    "baseline": "ada56e0623c193ebf77e32df84d900238eac424f92676383ca3f668b92035d1e",
+    "p5": "832159c162974616fe6e97c9a194c966f76cb2076abc7a248dba97699dc547d5"
+  },
+  "shapes": [
+    {
+      "input_tokens": 1024,
+      "output_tokens": 4096,
+      "stages": {
+        "baseline": {
+          "repeats": 1,
+          "decode_tokens_per_s": 33.494838845657554,
+          "samples_tokens_per_s": [
+            33.494838845657554
+          ],
+          "decode_s": 122.2576415091753,
+          "prefill_and_compress_s": 0.17452565720304847,
+          "total_s": 122.43216716637835,
+          "kv_mib": 94.460693359375,
+          "peak_allocated_gib": 14.530655860900879
+        },
+        "p5": {
+          "repeats": 1,
+          "decode_tokens_per_s": 37.0546378515259,
+          "samples_tokens_per_s": [
+            37.0546378515259
+          ],
+          "decode_s": 110.51248203823343,
+          "prefill_and_compress_s": 0.16274094162508845,
+          "total_s": 110.67522297985852,
+          "kv_mib": 97.167724609375,
+          "peak_allocated_gib": 14.36984395980835
+        }
+      },
+      "decode_speedup": 1.1062790306969892,
+      "throughput_change_percent": 10.627903069698919,
+      "total_speedup": 1.1062292342402549,
+      "timing_ranges_overlap": false
+    }
+  ],
+  "notes": [
+    "Decode includes cache maintenance; excludes prefill. Warmups excluded.",
+    "Baseline then P5 sequential blocks; possible clock/temperature order effects.",
+    "Synthetic fixed-length generation, not an accuracy or long-writing quality evaluation."
+  ]
+}

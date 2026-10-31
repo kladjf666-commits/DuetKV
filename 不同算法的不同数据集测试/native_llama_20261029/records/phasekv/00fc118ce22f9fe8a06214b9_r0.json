@@ -1,0 +1,151 @@
+{
+  "id": "longbench/narrativeqa/179/8192",
+  "suite": "longbench",
+  "task": "narrativeqa",
+  "document_id": "179/8192",
+  "cluster_id": "narrativeqa/f8f813bd0360c2386a518b688eefbaa05a8205ad7781076d18629822634f9d29",
+  "length_budget": 8192,
+  "input_sha256": "e8e364fde1f48b58162ecb619f50ee89d3840920e0de5b4483481a654284cd34",
+  "truncated_input": true,
+  "capacity_extension": null,
+  "evaluation_split": "historical_retest",
+  "heldout_from_available_history": false,
+  "method": "phasekv",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 8184,
+  "output_tokens": 25,
+  "output_ids": [
+    2181,
+    17888,
+    288,
+    279,
+    6372,
+    315,
+    279,
+    330,
+    75,
+    21473,
+    1,
+    323,
+    6276,
+    279,
+    1217,
+    311,
+    74809,
+    311,
+    264,
+    5190,
+    11277,
+    315,
+    14209,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 1.141368149779737,
+  "prefill_and_compress_s": 1.141368149779737,
+  "decode_s": 0.7170681478455663,
+  "decode_tokens_per_s": 33.469622199937454,
+  "generation_wall_s_including_instrumentation": 1.8595848227851093,
+  "prefill_storage": {
+    "code_bytes": 187744256,
+    "metadata_bytes": 47058944,
+    "fp16_residual_capacity_bytes": 18874368,
+    "physical_bytes": 253677568,
+    "code_payload_bytes": 187744256,
+    "metadata_payload_bytes": 47058944,
+    "hot_payload_bytes": 0,
+    "effective_payload_bytes": 234803200,
+    "page_free_bytes": 0,
+    "hot_free_bytes": 18874368,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 253677568,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.uint8"
+    ]
+  },
+  "final_storage": {
+    "code_bytes": 187744256,
+    "metadata_bytes": 47058944,
+    "fp16_residual_capacity_bytes": 18874368,
+    "physical_bytes": 253677568,
+    "code_payload_bytes": 187744256,
+    "metadata_payload_bytes": 47058944,
+    "hot_payload_bytes": 3145728,
+    "effective_payload_bytes": 237948928,
+    "page_free_bytes": 0,
+    "hot_free_bytes": 15728640,
+    "auxiliary_bytes": 34465792,
+    "total_owned_bytes": 288143360,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.uint8"
+    ]
+  },
+  "prefill_trace": {
+    "prompt_tokens": 5729,
+    "hot_tokens": 0,
+    "cold_segments": 0,
+    "physical_tokens": 5729
+  },
+  "final_trace": {
+    "prompt_tokens": 5729,
+    "hot_tokens": 24,
+    "cold_segments": 0,
+    "physical_tokens": 5753
+  },
+  "peak_allocated_bytes": 18113159680,
+  "peak_reserved_bytes": 18805161984,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 24,
+      "seconds": 0.7170681478455663,
+      "tokens": 24
+    }
+  ],
+  "effective_options": {
+    "prefill_keep_ratio": 0.7,
+    "obs_window": 32,
+    "sink_tokens": 0,
+    "prompt_bits": 4,
+    "cold_bits": 4,
+    "group_size": 32,
+    "recent_window": 128,
+    "lazy_g": 16,
+    "decode_keep_ratio": 1.0,
+    "optimizations": {
+      "fused_quantize": true,
+      "reuse_workspace": true,
+      "paged_cold": true,
+      "page_slots": 32,
+      "cold_group": 8,
+      "specialized_4bit": true,
+      "gqa_reuse": false,
+      "hot_ring": true
+    }
+  },
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 19.047619047619044,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "It reverses the effects of the \"ladder\" and allows the user to transcend to a higher plane of existence.",
+  "gpu_before": {
+    "time": 1793308908.7509375,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15896 MiB, 39 %, 44, 173.59 W, 2670 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793308910.704136,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 18364 MiB, 76 %, 48, 287.47 W, 2670 MHz",
+    "error": ""
+  },
+  "finished_at": 1793308910.70414
+}

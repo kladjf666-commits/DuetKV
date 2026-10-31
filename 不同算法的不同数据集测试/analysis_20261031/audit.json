@@ -1,0 +1,23 @@
+{
+  "records": 5861,
+  "status": {
+    "ok": 5021,
+    "oom": 840
+  },
+  "raw_records_equal_export": true,
+  "expected_ids_equal": true,
+  "frozen_hash_matches": true,
+  "input_hashes_match": true,
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "local_source_matches": {
+    "benchmark.py": true,
+    "benchmark_generate.py": true,
+    "benchmark_metrics.py": true,
+    "native_runtime.py": true,
+    "config.json": true,
+    "sources.json": true,
+    "bench_sources/RULER/scripts/eval/synthetic/constants.py": true,
+    "vendor/SnapKV/experiments/LongBench/metrics.py": true,
+    "vendor/SCOPE/eval_longgenbench.py": true
+  }
+}

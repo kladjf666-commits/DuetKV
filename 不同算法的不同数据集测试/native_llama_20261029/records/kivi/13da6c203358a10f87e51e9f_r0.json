@@ -1,0 +1,123 @@
+{
+  "id": "longbench/qasper/130/16384",
+  "suite": "longbench",
+  "task": "qasper",
+  "document_id": "130/16384",
+  "cluster_id": "qasper/490449da0cf082eb96b1fb530a40ad73843fe7fe5e66c3dce158b076ce48f849",
+  "length_budget": 16384,
+  "input_sha256": "47948e5145e55592c34016c1858451fc17c95e1ab2e31f891a048f39d29793e6",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": "heldout",
+  "heldout_from_available_history": true,
+  "method": "kivi",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 2997,
+  "output_tokens": 31,
+  "output_ids": [
+    18360,
+    6108,
+    21917,
+    5507,
+    11,
+    11630,
+    22824,
+    2065,
+    11,
+    79253,
+    28887,
+    449,
+    961,
+    8838,
+    1355,
+    40686,
+    2038,
+    11,
+    77582,
+    55458,
+    966,
+    42,
+    53349,
+    11,
+    323,
+    9928,
+    85,
+    467,
+    59454,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 0.3735660156235099,
+  "prefill_and_compress_s": 0.3735660156235099,
+  "decode_s": 1.4795919889584184,
+  "decode_tokens_per_s": 20.275859982939597,
+  "generation_wall_s_including_instrumentation": 1.8541864156723022,
+  "prefill_storage": {
+    "physical_bytes": 130912256,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 130912256,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 133492736,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 133492736,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "prefill_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 2997
+  },
+  "final_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 3027
+  },
+  "peak_allocated_bytes": 16556747776,
+  "peak_reserved_bytes": 16737370112,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 30,
+      "seconds": 1.4795919889584184,
+      "tokens": 30
+    }
+  ],
+  "effective_options": {
+    "k_bits": 4,
+    "v_bits": 4,
+    "group_size": 32,
+    "residual_length": 128,
+    "use_flash": true
+  },
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 34.285714285714285,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "Browser-based annotation tool, manual categorization, tagging descriptions with part-of-speech information, leveraging Flickr30K Entities, and Louvain clustering.",
+  "gpu_before": {
+    "time": 1793297393.2183623,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 16002 MiB, 37 %, 51, 165.27 W, 2670 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793297395.171051,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 16390 MiB, 45 %, 51, 166.24 W, 2670 MHz",
+    "error": ""
+  },
+  "finished_at": 1793297395.1710556
+}

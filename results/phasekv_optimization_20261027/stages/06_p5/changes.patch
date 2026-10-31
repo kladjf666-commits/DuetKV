@@ -1,0 +1,342 @@
+--- a/PhaseKV/kernels/segmented_attention.py
++++ b/PhaseKV/kernels/segmented_attention.py
+@@ -21,7 +21,7 @@
+                          BN: tl.constexpr, DW: tl.constexpr, CAPACITY: tl.constexpr = 0,
+                          PREFIX: tl.constexpr = 0, COLD_GROUP: tl.constexpr = 1,
+                          NROWS: tl.constexpr = 0, FOUR_BIT: tl.constexpr = False,
+-                         QPER: tl.constexpr = 1):
++                         QPER: tl.constexpr = 1, HOT_CAP: tl.constexpr = 0, HOT_START=0):
+     stride = CAPACITY if CAPACITY else NPARTIAL
+     lane = tl.arange(0, QPER)
+     if QPER == 1:
+@@ -96,9 +96,10 @@
+         for offset in range(0, HOT, BN):
+             n = offset + tl.arange(0, BN)
+             valid = n < HOT
+-            key = tl.load(HK + kvhead * KHH + n[:, None] * KHS + d[None, :] * KHD,
++            physical = (HOT_START + n) % HOT_CAP if HOT_CAP else n
++            key = tl.load(HK + kvhead * KHH + physical[:, None] * KHS + d[None, :] * KHD,
+                           mask=valid[:, None], other=0).to(tl.float32)
+-            value = tl.load(HV + kvhead * VHH + n[:, None] * VHS + d[None, :] * VHD,
++            value = tl.load(HV + kvhead * VHH + physical[:, None] * VHS + d[None, :] * VHD,
+                             mask=valid[:, None], other=0).to(tl.float32)
+             scores = tl.sum(key[None, :, :] * query[:, None, :], axis=2) * (HD ** -0.5)
+             scores = tl.where(valid[None, :], scores, -float("inf"))
+@@ -177,6 +178,7 @@
+         HD=hd, GROUP=heads // hk.shape[1], BN=config.block_n, DW=DESCRIPTOR_WIDTH, CAPACITY=workspace.capacity,
+         PREFIX=workspace.prefix_count, COLD_GROUP=workspace.cold_group, NROWS=workspace.valid_count,
+         FOUR_BIT=specialized, QPER=qper,
++        HOT_CAP=hk.shape[2] if tiers.optimizations.hot_ring else 0, HOT_START=tiers.hot_start,
+         num_warps=config.num_warps, enable_fp_fusion=False)
+     _merge_segments[(heads,)](
+         workspace.maxima, workspace.denominators, workspace.accumulators, out, count,
+--- a/PhaseKV/phasekv_cache.py
++++ b/PhaseKV/phasekv_cache.py
+@@ -19,7 +19,7 @@
+ import torch
+ from transformers.cache_utils import Cache
+ 
+-from .kernels.packing import PackedTensor, quantize_pack, quantize_pack_fast, quantize_pack_into
++from .kernels.packing import PackedTensor, quantize_pack, quantize_pack_fast, quantize_pack_into, allocate_packed
+ from .optimizations import OptimizationConfig, resolve_config
+ from .packed_storage import PackedPagePool, storage_identity, unique_storage_bytes
+ 
+@@ -51,7 +51,7 @@
+ 
+     prompt 是首轮 prompt；prompt_extensions 保存后续输入块；cold 保存
+     已冷却的生成 token。三个字段按用途组织，不代表多轮对话的全局时间顺序。
+-    hot_k/hot_v 为 [B, Hkv, capacity, hd]，只有前 hot_len 个位置有效。
++    hot_k/hot_v 为 [B, Hkv, capacity, hd]；从 hot_start 起的 hot_len 个逻辑位置有效。
+     """
+ 
+     prompt: PackedKVSegment
+@@ -60,6 +60,7 @@
+     hot_k: Optional[torch.Tensor] = None
+     hot_v: Optional[torch.Tensor] = None
+     hot_len: int = 0
++    hot_start: int = 0
+     optimizations: OptimizationConfig = field(default_factory=OptimizationConfig)
+     cold_pool: object = field(default=None, repr=False, compare=False)
+     # Derived GPU descriptors/scratch, not KV storage. Rebuilt only when frozen
+@@ -79,11 +80,30 @@
+         """当前保留的 token 数，不含热层预留空间和量化补齐。"""
+         return self.prompt_len + self.cold_len + self.hot_len
+ 
++    def hot_range(self, start=0, length=None):
++        """Ordered reference/debug view; wrapping ranges allocate a temporary.
++
++        Production CUDA decode reads hot_k/hot_v plus hot_start/hot_len directly.
++        This helper is also used for compatibility selection and prompt resizing.
++        """
++        if self.hot_k is None or self.hot_v is None:
++            raise RuntimeError("Hot buffers have not been allocated")
++        length = self.hot_len - start if length is None else length
++        if not 0 <= start <= self.hot_len or not 0 <= length <= self.hot_len - start:
++            raise ValueError("Hot range exceeds valid logical tokens")
++        capacity = self.hot_k.shape[2]
++        physical = (self.hot_start + start) % capacity
++        def ordered(tensor):
++            if physical + length <= capacity:
++                return tensor[:, :, physical:physical + length, :]
++            first = tensor[:, :, physical:, :]
++            second = tensor[:, :, :length - (capacity - physical), :]
++            return torch.cat((first, second), dim=2)
++        return ordered(self.hot_k), ordered(self.hot_v)
++
+     def hot_views(self) -> tuple[torch.Tensor, torch.Tensor]:
+-        """注意力只读取已写入部分，不能读取未初始化的预留空间。"""
+-        if self.hot_k is None or self.hot_v is None:
+-            raise RuntimeError("hot_k/hot_v 尚未分配，无法读取热层")
+-        return self.hot_k[:, :, :self.hot_len, :], self.hot_v[:, :, :self.hot_len, :]
++        """Ordered logical hot KV; may copy on wrap. Never used by fast decode."""
++        return self.hot_range()
+ 
+ 
+ def _require_positive_int(name: str, value: int) -> None:
+@@ -106,13 +126,21 @@
+ 
+ 
+ def _pack_kv(key: torch.Tensor, value: torch.Tensor, bits: int,
+-             group_size: int, *, fast=False) -> PackedKVSegment:
+-    """统一 K/V 量化方向；输入必须是非空的 [B,Hkv,S,hd]。"""
+-    pack = quantize_pack_fast if fast else quantize_pack
+-    return PackedKVSegment(
+-        pack(key, bits, axis=-2, group_size=group_size),
+-        pack(value, bits, axis=-1, group_size=group_size),
+-    )
++             group_size: int, *, fast=False, pool=None,
++             token_start=0, token_count=None) -> PackedKVSegment:
++    """Keep K/token and V/channel grouping while optionally writing a page slot."""
++    if pool is None and token_count is None:
++        pack = quantize_pack_fast if fast else quantize_pack
++        return PackedKVSegment(pack(key, bits, axis=2, group_size=group_size),
++                               pack(value, bits, axis=3, group_size=group_size))
++    shape = list(key.shape)
++    if token_count is not None:
++        shape[2] = token_count
++    outputs = (pool.reserve(shape, bits, group_size, key.device) if pool is not None else
++               tuple(allocate_packed(shape, bits, axis, group_size, key.device) for axis in (2, 3)))
++    for source, out in zip((key, value), outputs):
++        quantize_pack_into(source, out, fast=fast, token_start=token_start, token_count=token_count)
++    return PackedKVSegment(*outputs)
+ 
+ 
+ def _gather_kv(key: torch.Tensor, value: torch.Tensor,
+@@ -342,31 +370,33 @@
+         aged = layer.hot_len - self.recent_window
+         if aged < self.lazy_g:#要超过recent_window+lazy_g才会量化一批
+             return
+-        key = layer.hot_k[:, :, :aged, :]
+-        value = layer.hot_v[:, :, :aged, :]
+-        keep_count = max(1, round(self.decode_keep_ratio * aged))  #计算旧的这一批aged token保留多少个，其余的直接丢弃。保留的压入冷层
++        keep_count = max(1, round(self.decode_keep_ratio * aged))
++        token_start, token_count = 0, None
+         if keep_count < aged:
+-            importance = torch.linalg.vector_norm(value.float(), dim=-1)#求L2范数
++            # Selection requires logical token order. Only the cooling batch is
++            # materialized; the retained hot window is never moved in ring mode.
++            key, value = layer.hot_range(0, aged)
++            importance = torch.linalg.vector_norm(value.float(), dim=-1)
+             indices = importance.topk(keep_count, dim=-1).indices.sort(dim=-1).values
+-            key, value = _gather_kv(key, value, indices)  #保留重要的一些Token
+-        if layer.cold_pool is None:
+-            segment = _pack_kv(key, value, self.cold_bits, self.group_size,
+-                               fast=self.optimizations.fused_quantize)
++            key, value = _gather_kv(key, value, indices)
++        elif self.optimizations.hot_ring:
++            key, value = layer.hot_k, layer.hot_v
++            token_start, token_count = layer.hot_start, aged
+         else:
+-            packed_k, packed_v = layer.cold_pool.reserve(key.shape, self.cold_bits,
+-                                                        self.group_size, key.device)
+-            quantize_pack_into(key, packed_k, fast=self.optimizations.fused_quantize)
+-            quantize_pack_into(value, packed_v, fast=self.optimizations.fused_quantize)
+-            segment = PackedKVSegment(packed_k, packed_v)
++            key, value = layer.hot_range(0, aged)
++        segment = _pack_kv(key, value, self.cold_bits, self.group_size,
++                           fast=self.optimizations.fused_quantize, pool=layer.cold_pool,
++                           token_start=token_start, token_count=token_count)
+         layer.cold.append(segment)
+         if not self.optimizations.reuse_workspace:
+             layer._decode_workspace = None
+-        # 例如 hot_len=48、window=32：处理前 16 个，尾部 32 个搬回热区起点。
+-        # 源与目标可能重叠，需 clone；这里是连续缓冲区，不是环形队列。
+-        remaining = layer.hot_len - aged  #将剩余热区的token直接搬回热区起点
+-        layer.hot_k[:, :, :remaining, :].copy_(layer.hot_k[:, :, aged:layer.hot_len, :].clone())
+-        layer.hot_v[:, :, :remaining, :].copy_(layer.hot_v[:, :, aged:layer.hot_len, :].clone())
+-        layer.hot_len = remaining  #更新hot_len
++        remaining = layer.hot_len - aged
++        if self.optimizations.hot_ring:
++            layer.hot_start = (layer.hot_start + aged) % layer.hot_k.shape[2]
++        else:
++            layer.hot_k[:, :, :remaining, :].copy_(layer.hot_k[:, :, aged:layer.hot_len, :].clone())
++            layer.hot_v[:, :, :remaining, :].copy_(layer.hot_v[:, :, aged:layer.hot_len, :].clone())
++        layer.hot_len = remaining
+ 
+     # 多轮输入：临时借用热区，块内逐 token 做因果注意力，块末冻结。
+     @torch.no_grad()
+@@ -383,6 +413,7 @@
+             new_k[:, :, :layer.hot_len, :].copy_(hot_k)
+             new_v[:, :, :layer.hot_len, :].copy_(hot_v)
+             layer.hot_k, layer.hot_v = new_k, new_v
++            layer.hot_start = 0
+         self._prompt_chunk_start = [layer.hot_len for layer in self.layers]  #记录prefill前，已有的token数（就是hot_len）
+         self._prompt_chunk_len = length
+ 
+@@ -414,18 +445,21 @@
+         for layer, start in zip(self.layers, self._prompt_chunk_start):
+             #start:layer.hot_len保留的才是本论的prompt。0:start是上一轮留在热区的生成token
+             prompt_segment = _pack_kv(
+-                layer.hot_k[:, :, start:layer.hot_len, :],
+-                layer.hot_v[:, :, start:layer.hot_len, :],
+-                self.prompt_bits, self.group_size, fast=self.optimizations.fused_quantize)
+-            # 移走临时追加的 prompt，恢复正常容量，保留原有生成热窗口。
+-            # start 也包含尚未攒够 lazy_g 的旧生成 token，不能只保留 recent_window 个。
++                layer.hot_k, layer.hot_v, self.prompt_bits, self.group_size,
++                fast=self.optimizations.fused_quantize,
++                token_start=(layer.hot_start + start) % layer.hot_k.shape[2],
++                token_count=self._prompt_chunk_len)
++            # Restore ordinary capacity, retaining every pre-prompt generated
++            # token (including an incomplete cooling batch) in logical order.
++            old_k, old_v = layer.hot_range(0, start)
+             hot_k, hot_v = self._empty_hot(layer, self.recent_window + self.lazy_g)
+-            hot_k[:, :, :start, :].copy_(layer.hot_k[:, :, :start, :])
+-            hot_v[:, :, :start, :].copy_(layer.hot_v[:, :, :start, :])
++            hot_k[:, :, :start, :].copy_(old_k)
++            hot_v[:, :, :start, :].copy_(old_v)
+             layer.prompt_extensions.append(prompt_segment)
+             layer._decode_workspace = None
+             layer.hot_k, layer.hot_v = hot_k, hot_v
+             layer.hot_len = start
++            layer.hot_start = 0
+         self._seen_tokens += self._prompt_chunk_len
+         self._prompt_chunk_len = 0
+         self._prompt_chunk_start = []
+@@ -446,7 +480,7 @@
+             raise ValueError(f"{context} 必须与热层在同一设备 {layer.hot_k.device}，实际为 {key.device}/{value.device}")
+         if layer.hot_len >= layer.hot_k.shape[2]:
+             raise RuntimeError(f"第 {layer_idx} 层热层容量不足：hot_len={layer.hot_len}，capacity={layer.hot_k.shape[2]}")
+-        position = layer.hot_len
++        position = (layer.hot_start + layer.hot_len) % layer.hot_k.shape[2]
+         layer.hot_k[:, :, position:position + 1, :].copy_(key)
+         layer.hot_v[:, :, position:position + 1, :].copy_(value)
+         layer.hot_len += 1
+--- a/tests/test_phasekv_fused_quantize.py
++++ b/tests/test_phasekv_fused_quantize.py
+@@ -58,6 +58,23 @@
+     def test_raw_byte_equivalence(self):
+         self.run_matrix("cuda")
+ 
++    def test_ring_batch_and_strided_outputs(self):
++        for start in (0, 1, 127, 137):
++            x = torch.randn(1, 4, 144, 128, device="cuda", dtype=torch.float16)
++            logical = x.index_select(2, (torch.arange(16, device="cuda") + start) % 144)
++            for axis in (2, 3):
++                expected = quantize_pack(logical, 4, axis, 32)
++                out = allocate_packed(logical.shape, 4, axis, 32, x.device)
++                # Noncontiguous destination views must use their real strides.
++                for name in ("packed", "scale", "mins"):
++                    t = getattr(out, name)
++                    backing = torch.empty((*t.shape[:-1], t.shape[-1] * 2), dtype=t.dtype, device=t.device)
++                    setattr(out, name, backing[..., ::2])
++                quantize_pack_into(x, out, fast=True, token_start=start, token_count=16)
++                for name in ("packed", "scale", "mins"):
++                    self.assertTrue(torch.equal(getattr(out, name).contiguous().view(torch.uint8),
++                                                getattr(expected, name).contiguous().view(torch.uint8)))
++
+ 
+ if __name__ == "__main__":
+     unittest.main()
+--- a/tests/test_phasekv_hot_ring.py
++++ b/tests/test_phasekv_hot_ring.py
+@@ -0,0 +1,90 @@
++"""Token-by-token equivalence of contiguous and circular hot buffers."""
++import importlib.util
++import sys
++import unittest
++from unittest.mock import patch
++import torch
++from transformers.cache_utils import DynamicCache
++from scripts.benchmark_4090d import bootstrap_algorithms
++if "eval" not in sys.modules:
++    bootstrap_algorithms()
++from PhaseKV.phasekv_cache import PhaseKVCache, LayerTiers
++from PhaseKV.optimizations import OptimizationConfig
++
++
++class RingContract:
++    def run_lifecycle(self, device, keep):
++        torch.manual_seed(82)
++        dense = DynamicCache()
++        dense.update(torch.randn(1, 2, 33, 32, device=device, dtype=torch.bfloat16),
++                     torch.randn(1, 2, 33, 32, device=device, dtype=torch.bfloat16), 0)
++        args = dict(prompt_len=33, prompt_bits=4, group_size=32,
++                    recent_window=5, lazy_g=3, decode_keep_ratio=keep)
++        base = PhaseKVCache.from_dense_prefill(dense, **args)
++        ring = PhaseKVCache.from_dense_prefill(dense, **args,
++            optimizations=OptimizationConfig(fused_quantize=True, paged_cold=True,
++                reuse_workspace=True, cold_group=4, specialized_4bit=True, hot_ring=True))
++        batch = 1
++
++        def compare():
++            a, b = base.layers[0], ring.layers[0]
++            self.assertEqual(base.true_seq_length, ring.true_seq_length)
++            self.assertEqual(base.get_seq_length(), ring.get_seq_length())
++            self.assertEqual(a.hot_len, b.hot_len)
++            for x, y in zip(a.hot_views(), b.hot_views()):
++                self.assertTrue(torch.equal(x, y))
++            for x, y in zip((a.prompt, *a.prompt_extensions, *a.cold),
++                            (b.prompt, *b.prompt_extensions, *b.cold)):
++                for px, py in ((x.key, y.key), (x.value, y.value)):
++                    for name in ("packed", "scale", "mins"):
++                        self.assertTrue(torch.equal(getattr(px, name).contiguous().view(torch.uint8),
++                                                    getattr(py, name).contiguous().view(torch.uint8)))
++
++        for step in range(120):
++            token = torch.randn(batch, 2, 1, 32, device=device, dtype=torch.float16)
++            if step in (11, 29, 46):
++                length = {11: 1, 29: 17, 46: 4}[step]
++                for c in (base, ring):
++                    c.begin_prompt_chunk(length)
++                    for _ in range(length):
++                        c.append_prompt_token(0, token, token)
++                    c.finish_prompt_chunk()
++                compare()
++            if step == 78 and device == "cpu":
++                for c in (base, ring):
++                    c.reorder_cache(torch.tensor([0, 0], device=device))
++                batch = 2
++                token = token.expand(2, -1, -1, -1)
++            for c in (base, ring):
++                c.append_hot(0, token, token)
++            compare()
++            if device == "cuda":
++                from PhaseKV.kernels.segmented_attention import segmented_phasekv_decode
++                from test_phasekv_segmented_decode import reference
++                q = torch.randn(4, 32, device=device, dtype=torch.float16)
++                expected = reference(q, base.layers[0])
++                with patch.object(LayerTiers, "hot_views", side_effect=AssertionError("decode materialized hot")):
++                    actual = segmented_phasekv_decode(q, ring.layers[0], 4)
++                torch.testing.assert_close(actual.float(), expected, atol=.002, rtol=.01)
++            for c in (base, ring):
++                c.finish_decode_step()
++            compare()
++
++
++class TestHotRingCPU(unittest.TestCase, RingContract):
++    def test_wrap_prompt_growth_reorder_and_selection(self):
++        for keep in (1., .5):
++            with self.subTest(keep=keep):
++                self.run_lifecycle("cpu", keep)
++
++
++@unittest.skipUnless(torch.cuda.is_available() and importlib.util.find_spec("triton"),
++                     "requires actual CUDA + Triton")
++class TestHotRingCUDA(unittest.TestCase, RingContract):
++    def test_cuda_ring_attention_and_quantize(self):
++        for keep in (1., .5):
++            self.run_lifecycle("cuda", keep)
++
++
++if __name__ == "__main__":
++    unittest.main()

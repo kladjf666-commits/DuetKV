@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-28",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "torch": "2.5.1+cpu",
+  "transformers": "4.46.3",
+  "cuda_available": false,
+  "source_hashes": {
+    "status": "passed",
+    "files": 941
+  },
+  "python_syntax": {
+    "status": "passed",
+    "files": 9
+  },
+  "cpu_native_contract": {
+    "status": "passed",
+    "log": "cpu_tests.txt"
+  },
+  "native_cuda_compilation": "not_run_on_this_host",
+  "cuda_kernel_numerics": "not_run_on_this_host",
+  "real_llama31_8b_fp16": "not_run_on_this_host",
+  "linux_shell_execution": "not_run_on_this_windows_host"
+}

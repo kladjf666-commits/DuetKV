@@ -1,0 +1,132 @@
+PhaseKV 参数搜索：单卡 Linux 4090D
+================================
+
+一、用途与起点
+当前配置是 prefill_keep_ratio=0.30、prompt_bits=2、recent_window=32、
+cold_bits=4、decode_keep_ratio=1.0。现有 Qwen 测试中，PhaseKV 的 QA F1
+约34.66、摘要 ROUGE-L 约24.00；Full 约35.92、25.91。这里的两类指标
+分开比较，均为0–100分。摘要损失比QA更明确，不能简单认定是某个参数造成。
+
+建议先关注 0.50 / 4-bit / 窗口64或128 / 冷区4-bit / 冷区保留1.0。
+这只是待验证的候选，不是已证实的最优设置。
+
+prefill_keep_ratio：选择并保留多少prompt token，删除不可恢复。
+prompt_bits：对保留下来的prompt KV量化；2/4/8-bit。
+recent_window：保护最近多少个生成token；热区固定FP16，不是cold_bits位宽。
+cold_bits：生成token离开热区后量化的位宽；2/4/8-bit。
+decode_keep_ratio：每批冷却token保留比例，目前按V向量范数筛选。
+它不是整个生成序列的统一缓存预算；丢弃可能影响长输出连贯性。
+固定 lazy_g=16、group_size=32、obs_window=32、sink_tokens=0。
+
+提高窗口会增加少量FP16缓存，同时改变冷却时机。提高bit或保留比例通常
+降低压缩程度，但实际速度取决于kernel、元数据与冷却维护，必须测量。
+只看编码数据时，prompt缓存比例近似 keep_ratio * prompt_bits / 16；
+例如0.5*4/16=12.5%。实际KV还包含量化元数据、热区和冷区，不能用该估算
+替代实测。总显存还包含模型权重、临时attention与workspace。
+
+二、上传与运行
+上传 PhaseKV_parameter_sweep.zip 到远程 /root/KV/PhaseKV。
+需要此前已安装的 .venv-4090d 环境、算法目录以及分段attention实现。
+包内不重新提供模型或算法，不安装依赖；复用原有模型与LongBench缓存。
+请在原来的测试结束后覆盖脚本。原测试数据不会被删除。
+
+cd /root/KV/PhaseKV
+unzip -o PhaseKV_parameter_sweep.zip
+bash run_phasekv_sweep.sh --dry-run
+
+完整运行（默认Qwen2.5-7B-Instruct）：
+bash run_phasekv_sweep.sh --out results/phasekv_parameter_sweep
+
+已经缓存完整模型和数据、希望禁止HF模型联网查询时：
+HF_HUB_OFFLINE=1 bash run_phasekv_sweep.sh --out results/phasekv_parameter_sweep
+
+该环境变量不禁止LongBench下载；若数据缺失，脚本仍会尝试下载数据。
+可明确指定原始BF16模型与已有数据路径：
+bash run_phasekv_sweep.sh --model-path /path/to/model --data-dir /path/to/longbench --out results/phasekv_parameter_sweep
+数据目录需要包含 data/*.jsonl 和 dataset2prompt.json。
+
+想先控制计算成本，只做第一阶段：
+bash run_phasekv_sweep.sh --until prefill --out results/phasekv_parameter_sweep
+看完筛选结果后继续（其余参数保持完全相同）：
+bash run_phasekv_sweep.sh --resume --out results/phasekv_parameter_sweep
+
+终端关闭后仍可靠运行并写总日志：
+nohup bash run_phasekv_sweep.sh --out results/phasekv_parameter_sweep > phasekv_sweep.log 2>&1 &
+tail -f phasekv_sweep.log
+在tail终端按Ctrl-C只会退出日志查看。不要重复启动同一测试占用GPU。
+每条样本保存后可恢复；中断的单个样本需重跑。正常Ctrl-C会结束子进程。
+若断电/强制杀进程遗留RUNNING.lock，先确认记录的PID和GPU工作进程均已停止，
+再删除该锁。不要在另一份测试仍运行时删除锁。
+
+三、默认搜索规模
+prefill：13组PhaseKV + Full，每组4任务*8文档*2长度=64条质量样本。
+12组为保留比例0.3/0.5/0.7/1.0 × 2/4/8-bit，固定W64/C4/D1；
+额外加入当前配置P0.3/B2/W32/C4/D1作对照。
+Qwen筛选输入预算为3072和16384；性能形状1024+1024、16384+256、16384+2048。
+每种形状预热1次、计时1次；计时包含冷却维护。
+
+decode：沿用同一批筛选文档，从第一阶段选2组prefill设置。
+每组测试13种代表性组合：窗口32/64/128 × 冷区2/4/8-bit，保留1.0；
+另加窗口64/128 × 冷区4-bit × 保留0.5/0.75。
+最多26组PhaseKV + Full；不是全参数笛卡尔积穷举。
+两阶段先保留满足质量门槛的候选，在Pareto前沿考虑质量、速度、KV大小。
+默认先选质量较好和速度较快的配置；若无达标配置，取质量损失较小的候选
+继续验证，并明确标记未达标，不会伪装成最佳配置。
+
+final：选3组候选，并加入当前PhaseKV参数对照和Full，去重后最多5组。
+每组8任务*32文档*4长度=1024条质量样本，使用与筛选不重叠的文档。
+输入预算1536/3072/8192/16384。性能测试增加1024+4096、32000+256、
+24576+4096；每种形状预热1次、计时3次；额外跑容量探测和多位置needle。
+数千条长上下文样本可能耗时很长，不承诺几小时结束。先跑prefill可评估成本。
+
+--screen-samples 16 提高筛选稳定性；--final-samples 64 扩大复核。
+--screen-repeats 2 提高筛选测速稳定性。
+--top-prefill 3 扩大进入第二阶段的prefill方案数。
+--top-final 5 扩大复核候选数。
+--max-quality-drop 1.0 表示QA与摘要两类均值各下降不超过1分。
+更改这些参数必须用新输出目录，不能接续旧实验。
+最终输出文档中的样本仍是调参验证集；若要论文级泛化结论，应再用未参与
+选择的独立测试集报告，而不是把本轮最好的复核分数当无偏估计。
+
+Llama单独运行：
+bash run_phasekv_sweep.sh --model llama --model-path /path/to/Llama-2-7b-chat-hf --out results/phasekv_parameter_sweep_llama
+Llama-2保持原生4096上下文，不自动扩RoPE；输入预算1536/3072，长输出
+形状1024+3072。Qwen找到的配置不能直接断言同样适合Llama。
+
+四、结果读取与限制
+每完成一组更新 report.html、comparison.json。
+prefill/、decode/、final/ 下保存逐配置job.json、run.log、records.jsonl。
+validation/ 保存每组参数的实际GPU数值检查。覆盖至少两次冷却边界；
+核对packed attention与对应解量化参考，并验证冷区保留数量。
+验证失败即停止，不会放宽容差或跳过失败配置。
+代码、参数、权重、数据会记录哈希；变更后恢复被拒绝，避免结果混杂。
+
+报告：QA F1与摘要ROUGE-L分别按任务等权平均；不混合成官方总分。
+质量门槛按均值判定，不代表每个任务都达标或差异显著。
+final提供按任务分层、按文档聚类的配对bootstrap 95%区间；同一文档
+所有输入长度一起重采样。区间描述相对Full的分数变化，不能消除选优偏差。
+速度为各固定形状的中位数，再相对Full作等权几何平均；KV比值同理。
+详细表含各任务/长度、各形状token/s、prefill与端到端耗时、KV及显存峰值。
+固定4096输出用于吞吐测试，不评分其语义质量；LongBench摘要质量输出上限
+512 token。needle是检索补充，不参与两类质量门槛。
+缺失、OOM、输入不匹配不会被悄悄剔除后宣称达标。容量探测遇OOM可正常
+回退；容量不足导致必要质量/性能形状失败的配置不会入选。
+
+final全部完成且有达标配置后，导出：
+recommended_quality.json / recommended_speed.json / recommended_compression.json。
+它们可能指向同一组参数。若没有候选达标，明确报告无推荐。
+推荐文件可以供原脚本使用，例如：
+bash run_4090d.sh --models qwen --methods phasekv --compression-config results/phasekv_parameter_sweep/recommended_quality.json --out results/phasekv_selected
+
+更新报告（不跑GPU）：
+bash run_phasekv_sweep.sh --out results/phasekv_parameter_sweep --report-only
+
+整个目录打包后可下载：
+tar -czf phasekv_parameter_sweep_results.tar.gz -C results phasekv_parameter_sweep
+
+不能为了“吃满24GB”而放大到超过模型原生上下文或填充无用张量；压缩率
+本身就是对比指标。本脚本的容量探测目标为92%显存或原生上下文上限，
+先达到后者时峰值低于24GB是合理结果。
+
+本包在本机做控制流程、配对统计、恢复和计划检查；RTX4090D实际数值与
+性能验证会在远程运行时执行。本机检查不能替代远程GPU验证。

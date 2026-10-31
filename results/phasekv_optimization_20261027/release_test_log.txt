@@ -1,0 +1,52 @@
+test_bf16_prefill_is_packed_for_fp16_decode (test_phasekv_cache.TestPhaseKVCache.test_bf16_prefill_is_packed_for_fp16_decode) ... ok
+test_cooling_threshold_selection_and_hot_tail (test_phasekv_cache.TestPhaseKVCache.test_cooling_threshold_selection_and_hot_tail) ... ok
+test_decode_cools_batches_without_repacking_old_segments (test_phasekv_cache.TestPhaseKVCache.test_decode_cools_batches_without_repacking_old_segments) ... ok
+test_dense_update_is_rejected (test_phasekv_cache.TestPhaseKVCache.test_dense_update_is_rejected) ... ok
+test_invalid_config_and_fractional_indices_fail_before_packing (test_phasekv_cache.TestPhaseKVCache.test_invalid_config_and_fractional_indices_fail_before_packing) ... ok
+test_invalid_layer_and_failed_writes_do_not_advance_state (test_phasekv_cache.TestPhaseKVCache.test_invalid_layer_and_failed_writes_do_not_advance_state) ... ok
+test_new_prompt_is_packed_without_rebuilding_old_cache (test_phasekv_cache.TestPhaseKVCache.test_new_prompt_is_packed_without_rebuilding_old_cache) ... ok
+test_prefill_is_packed_with_key_and_value_on_different_axes (test_phasekv_cache.TestPhaseKVCache.test_prefill_is_packed_with_key_and_value_on_different_axes) ... ok
+test_prompt_chunk_state_errors_and_decode_after_finish (test_phasekv_cache.TestPhaseKVCache.test_prompt_chunk_state_errors_and_decode_after_finish) ... ok
+test_prompt_chunks_preserve_decode_window_and_cooling_schedule (test_phasekv_cache.TestPhaseKVCache.test_prompt_chunks_preserve_decode_window_and_cooling_schedule) ... ok
+test_reorder_keeps_all_tiers_and_rejects_invalid_indices (test_phasekv_cache.TestPhaseKVCache.test_reorder_keeps_all_tiers_and_rejects_invalid_indices) ... ok
+test_splits_cover_each_segment_once_and_preserve_bytes (test_phasekv_segmented_decode.TestSegmentDescriptors.test_splits_cover_each_segment_once_and_preserve_bytes) ... ok
+test_workspace_invalidated_only_when_frozen_segments_change (test_phasekv_segmented_decode.TestSegmentDescriptors.test_workspace_invalidated_only_when_frozen_segments_change) ... ok
+test_cached_workspace_survives_steps_and_refreshes_on_cooling (test_phasekv_segmented_decode.TestSegmentedKernels.test_cached_workspace_survives_steps_and_refreshes_on_cooling) ... skipped 'requires CUDA + Triton or TRITON_INTERPRET=1'
+test_grouped_and_specialized_match_dense (test_phasekv_segmented_decode.TestSegmentedKernels.test_grouped_and_specialized_match_dense) ... skipped 'requires CUDA + Triton or TRITON_INTERPRET=1'
+test_mixed_bits_tails_hot_and_many_segments_match_dense (test_phasekv_segmented_decode.TestSegmentedKernels.test_mixed_bits_tails_hot_and_many_segments_match_dense) ... skipped 'requires CUDA + Triton or TRITON_INTERPRET=1'
+test_strided_packed_views_stream_switch_and_unused_capacity (test_phasekv_segmented_decode.TestSegmentedKernels.test_strided_packed_views_stream_switch_and_unused_capacity) ... skipped 'requires CUDA + Triton or TRITON_INTERPRET=1'
+test_boundaries_cover_segment_without_empty_splits (test_phasekv_launch_config.TestLaunchPlanning.test_boundaries_cover_segment_without_empty_splits) ... ok
+test_invalid_parameters (test_phasekv_launch_config.TestLaunchPlanning.test_invalid_parameters) ... ok
+test_length_and_hardware_change_parallelism (test_phasekv_launch_config.TestLaunchPlanning.test_length_and_hardware_change_parallelism) ... ok
+test_overrides_and_uneven_splits (test_phasekv_launch_config.TestLaunchPlanning.test_overrides_and_uneven_splits) ... ok
+test_auto_and_manual_match_dense_quantized_reference (test_phasekv_launch_config.TestPackedAutoLaunch.test_auto_and_manual_match_dense_quantized_reference) ... skipped 'requires CUDA'
+test_cuda_kernel_against_independent_dense_attention (test_kivi_packed.TestPackedKIVI.test_cuda_kernel_against_independent_dense_attention) ... skipped 'Requires a real CUDA GPU'
+test_flush_boundaries_preserve_prefix_and_lengths (test_kivi_packed.TestPackedKIVI.test_flush_boundaries_preserve_prefix_and_lengths) ... ok
+test_independent_residuals_and_actual_storage (test_kivi_packed.TestPackedKIVI.test_independent_residuals_and_actual_storage) ... ok
+test_phasekv_mixed_tiers_against_dense_reference (test_kivi_packed.TestPackedKIVI.test_phasekv_mixed_tiers_against_dense_reference) ... skipped 'Requires a real CUDA GPU'
+test_qwen_bf16_adapter_matches_dense_quantized_reference (test_kivi_packed.TestPackedKIVI.test_qwen_bf16_adapter_matches_dense_quantized_reference) ... skipped 'Requires a real CUDA GPU'
+test_install_preserves_uncompressed_prefill (test_qwen2_attention_adapter.TestQwen2Adapter.test_install_preserves_uncompressed_prefill) ... ok
+test_prompt_block_matches_causal_token_forwards_and_preserves_hot (test_qwen2_attention_adapter.TestQwen2Adapter.test_prompt_block_matches_causal_token_forwards_and_preserves_hot) ... skipped '��ʵ packed attention ��Ҫ CUDA'
+test_llama_dense_forward_and_prompt_packing (test_llama_opt_adapters.TestModelAdapters.test_llama_dense_forward_and_prompt_packing) ... ok
+test_opt_legacy_cache_and_prompt_packing (test_llama_opt_adapters.TestModelAdapters.test_opt_legacy_cache_and_prompt_packing) ... ok
+test_other_bits_and_odd_groups (test_phasekv_fused_quantize.TestQuantizeCPU.test_other_bits_and_odd_groups) ... ok
+test_reference_fallback (test_phasekv_fused_quantize.TestQuantizeCPU.test_reference_fallback) ... ok
+test_large_target_prompt (test_phasekv_fused_quantize.TestQuantizeCUDA.test_large_target_prompt) ... skipped 'requires actual CUDA + Triton'
+test_raw_byte_equivalence (test_phasekv_fused_quantize.TestQuantizeCUDA.test_raw_byte_equivalence) ... skipped 'requires actual CUDA + Triton'
+test_ring_batch_and_strided_outputs (test_phasekv_fused_quantize.TestQuantizeCUDA.test_ring_batch_and_strided_outputs) ... skipped 'requires actual CUDA + Triton'
+test_pages_keep_old_bytes_and_count_unused_capacity_once (test_phasekv_paged_storage.TestPagedCold.test_pages_keep_old_bytes_and_count_unused_capacity_once) ... ok
+test_grouped_schedule_covers_all_descriptors (test_phasekv_paged_storage.TestWorkspaceCapacity.test_grouped_schedule_covers_all_descriptors) ... ok
+test_incremental_growth_preserves_pointers_and_rows (test_phasekv_paged_storage.TestWorkspaceCapacity.test_incremental_growth_preserves_pointers_and_rows) ... ok
+test_real_cooling_keeps_workspace_and_appends_visible_rows (test_phasekv_paged_storage.TestWorkspaceCapacity.test_real_cooling_keeps_workspace_and_appends_visible_rows) ... ok
+test_specialization_rejects_incompatible_bits_and_groups (test_phasekv_paged_storage.TestWorkspaceCapacity.test_specialization_rejects_incompatible_bits_and_groups) ... ok
+test_wrap_prompt_growth_reorder_and_selection (test_phasekv_hot_ring.TestHotRingCPU.test_wrap_prompt_growth_reorder_and_selection) ... ok
+test_cuda_ring_attention_and_quantize (test_phasekv_hot_ring.TestHotRingCUDA.test_cuda_ring_attention_and_quantize) ... skipped 'requires actual CUDA + Triton'
+test_default_and_invalid_switches (test_phasekv_optimization_protocol.TestOptimizationProtocol.test_default_and_invalid_switches) ... ok
+test_e2e_plan_preserves_other_algorithms_and_full_matrix (test_phasekv_optimization_protocol.TestOptimizationProtocol.test_e2e_plan_preserves_other_algorithms_and_full_matrix) ... ok
+test_every_stage_matches_saved_storage (test_phasekv_optimization_protocol.TestOptimizationProtocol.test_every_stage_matches_saved_storage) ... ok
+test_individual_switches_can_be_disabled (test_phasekv_optimization_protocol.TestOptimizationProtocol.test_individual_switches_can_be_disabled) ... ok
+
+----------------------------------------------------------------------
+Ran 47 tests in 4.645s
+
+OK (skipped=13)

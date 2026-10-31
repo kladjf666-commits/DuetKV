@@ -1,0 +1,24 @@
+{
+  "torch": "2.5.1+cu121",
+  "transformers": "4.46.3",
+  "flash_attn": "2.7.4.post1",
+  "triton": "3.1.0",
+  "cuda": "12.1",
+  "gpu": "NVIDIA GeForce RTX 4090 D",
+  "dtype": "float16",
+  "batch_size": 1,
+  "options": {
+    "max_capacity_prompt": 2048,
+    "window_size": 32,
+    "kernel_size": 7,
+    "pooling": "maxpool"
+  },
+  "source": [
+    "runtime/SnapKV/snapkv/monkeypatch/llama_hijack_4_37.py"
+  ],
+  "attention_classes": [
+    "LlamaFlashAttention2"
+  ],
+  "device": "cuda:0",
+  "pid": 61726
+}

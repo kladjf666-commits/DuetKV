@@ -1,0 +1,86 @@
+{
+  "id": "longbench/hotpotqa/152/16384",
+  "suite": "longbench",
+  "task": "hotpotqa",
+  "document_id": "152/16384",
+  "cluster_id": "hotpotqa/78ccf45780f745abd06c556b2c6b8177b81cfa3a3edfdda15bc4bbdf6cac19ab",
+  "length_budget": 16384,
+  "input_sha256": "94486ab8acefc8cef21a2c5b323f45f58dade4ef8fa23d05f25b5663186a58c7",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": "heldout",
+  "heldout_from_available_history": true,
+  "method": "full",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 16214,
+  "output_tokens": 4,
+  "output_ids": [
+    51188,
+    98620,
+    31038,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 2.3413685667328537,
+  "prefill_and_compress_s": 2.3413685667328537,
+  "decode_s": 0.08374481508508325,
+  "decode_tokens_per_s": 35.82311331097995,
+  "generation_wall_s_including_instrumentation": 2.4258740339428186,
+  "prefill_storage": {
+    "physical_bytes": 2125201408,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 2125201408,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 2125594624,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 2125594624,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 16214,
+    "stored_heads": 8
+  },
+  "final_trace": {
+    "physical_tokens": 16217,
+    "stored_heads": 8
+  },
+  "peak_allocated_bytes": 20360429056,
+  "peak_reserved_bytes": 21187526656,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 3,
+      "seconds": 0.08374481508508325,
+      "tokens": 3
+    }
+  ],
+  "effective_options": {},
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 100.0,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "Brian Stokes Mitchell",
+  "gpu_before": {
+    "time": 1793313542.1495647,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15894 MiB, 0 %, 54, 332.59 W, 2670 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793313544.665844,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 20634 MiB, 100 %, 68, 393.34 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793313544.665848
+}

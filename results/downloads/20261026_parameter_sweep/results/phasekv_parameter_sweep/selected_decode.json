@@ -1,0 +1,458 @@
+[
+  {
+    "name": "P0.7-B2-W128-C8-D1",
+    "spec": {
+      "method": "phasekv",
+      "prefill_keep_ratio": 0.7,
+      "prompt_bits": 2,
+      "recent_window": 128,
+      "cold_bits": 8,
+      "decode_keep_ratio": 1.0,
+      "obs_window": 32,
+      "sink_tokens": 0,
+      "lazy_g": 16,
+      "group_size": 32
+    },
+    "valid": true,
+    "feasible": false,
+    "qa": 26.153082816433923,
+    "qa_loss": 4.7537238989070145,
+    "summary": 29.310154132504074,
+    "summary_loss": 0.6516277475967396,
+    "loss": 4.7537238989070145,
+    "speed": 1.133198305941316,
+    "kv": 0.21780573946429002,
+    "peak_gib": 16.20635414123535,
+    "tasks": {
+      "gov_report": {
+        "score": 30.18192543646129,
+        "full": 32.70622084189638,
+        "n": 16
+      },
+      "multi_news": {
+        "score": 28.43838282854686,
+        "full": 27.21734291830525,
+        "n": 16
+      },
+      "multifieldqa_en": {
+        "score": 41.96326838779669,
+        "full": 40.89272145715832,
+        "n": 16
+      },
+      "qasper": {
+        "score": 10.342897245071159,
+        "full": 20.920891973523553,
+        "n": 16
+      }
+    },
+    "shapes": [
+      {
+        "input": 1024,
+        "output": 1024,
+        "group": "short",
+        "tokens_s": 37.71822136136207,
+        "speed_vs_full": 0.8390497017187548,
+        "kv_ratio": 0.39165547142159257,
+        "kv_mib": 43.843994140625,
+        "prefill_kv_mib": 15.269775390625,
+        "total_s": 27.290703552775085,
+        "prefill_s": 0.16853386722505093,
+        "peak_gib": 14.374328136444092
+      },
+      {
+        "input": 16384,
+        "output": 256,
+        "group": "long_input",
+        "tokens_s": 38.93069992931622,
+        "speed_vs_full": 1.3527693315096179,
+        "kv_ratio": 0.14193874331390108,
+        "kv_mib": 129.156494140625,
+        "prefill_kv_mib": 125.519775390625,
+        "total_s": 9.37167847994715,
+        "prefill_s": 2.8215779047459364,
+        "peak_gib": 16.20635414123535
+      },
+      {
+        "input": 16384,
+        "output": 2048,
+        "group": "joint",
+        "tokens_s": 35.941503029449194,
+        "speed_vs_full": 1.2820539870400223,
+        "kv_ratio": 0.18586722098638164,
+        "kv_mib": 187.343994140625,
+        "prefill_kv_mib": 125.519775390625,
+        "total_s": 59.775718150660396,
+        "prefill_s": 2.822062141261995,
+        "peak_gib": 16.20635414123535
+      }
+    ],
+    "quality_by_length": [
+      {
+        "task": "gov_report",
+        "length": 3072,
+        "score": 30.019560395344598,
+        "full": 32.421740357187744,
+        "n": 8
+      },
+      {
+        "task": "gov_report",
+        "length": 16384,
+        "score": 30.34429047757799,
+        "full": 32.99070132660502,
+        "n": 8
+      },
+      {
+        "task": "multi_news",
+        "length": 3072,
+        "score": 28.65456400483652,
+        "full": 27.358527110265037,
+        "n": 8
+      },
+      {
+        "task": "multi_news",
+        "length": 16384,
+        "score": 28.222201652257205,
+        "full": 27.076158726345458,
+        "n": 8
+      },
+      {
+        "task": "multifieldqa_en",
+        "length": 3072,
+        "score": 38.12350647256308,
+        "full": 38.80514875195726,
+        "n": 8
+      },
+      {
+        "task": "multifieldqa_en",
+        "length": 16384,
+        "score": 45.803030303030305,
+        "full": 42.98029416235938,
+        "n": 8
+      },
+      {
+        "task": "qasper",
+        "length": 3072,
+        "score": 3.260869565217391,
+        "full": 21.710526315789473,
+        "n": 8
+      },
+      {
+        "task": "qasper",
+        "length": 16384,
+        "score": 17.424924924924923,
+        "full": 20.131257631257633,
+        "n": 8
+      }
+    ],
+    "needle": {
+      "paired_n": 0,
+      "score": null,
+      "full": null
+    },
+    "failed_cases": []
+  },
+  {
+    "name": "P0.7-B2-W128-C4-D1",
+    "spec": {
+      "method": "phasekv",
+      "prefill_keep_ratio": 0.7,
+      "prompt_bits": 2,
+      "recent_window": 128,
+      "cold_bits": 4,
+      "decode_keep_ratio": 1.0,
+      "obs_window": 32,
+      "sink_tokens": 0,
+      "lazy_g": 16,
+      "group_size": 32
+    },
+    "valid": true,
+    "feasible": false,
+    "qa": 26.153082816433923,
+    "qa_loss": 4.7537238989070145,
+    "summary": 29.360305089725415,
+    "summary_loss": 0.6014767903754024,
+    "loss": 4.7537238989070145,
+    "speed": 1.123128426412708,
+    "kv": 0.18545963797099038,
+    "peak_gib": 16.20635414123535,
+    "tasks": {
+      "gov_report": {
+        "score": 30.075246208434034,
+        "full": 32.70622084189638,
+        "n": 16
+      },
+      "multi_news": {
+        "score": 28.645363971016792,
+        "full": 27.21734291830525,
+        "n": 16
+      },
+      "multifieldqa_en": {
+        "score": 41.96326838779669,
+        "full": 40.89272145715832,
+        "n": 16
+      },
+      "qasper": {
+        "score": 10.342897245071159,
+        "full": 20.920891973523553,
+        "n": 16
+      }
+    },
+    "shapes": [
+      {
+        "input": 1024,
+        "output": 1024,
+        "group": "short",
+        "tokens_s": 37.2705730076965,
+        "speed_vs_full": 0.8290916707177822,
+        "kv_ratio": 0.28418111871030777,
+        "kv_mib": 31.812744140625,
+        "prefill_kv_mib": 15.269775390625,
+        "total_s": 27.61614895518869,
+        "prefill_s": 0.16822107415646315,
+        "peak_gib": 14.374328136444092
+      },
+      {
+        "input": 16384,
+        "output": 256,
+        "group": "long_input",
+        "tokens_s": 38.53487599604461,
+        "speed_vs_full": 1.3390151868736484,
+        "kv_ratio": 0.1402559498767955,
+        "kv_mib": 127.625244140625,
+        "prefill_kv_mib": 125.519775390625,
+        "total_s": 9.43934627622366,
+        "prefill_s": 2.8219641409814358,
+        "peak_gib": 16.20635414123535
+      },
+      {
+        "input": 16384,
+        "output": 2048,
+        "group": "joint",
+        "tokens_s": 35.77586347096991,
+        "speed_vs_full": 1.276145529172083,
+        "kv_ratio": 0.1600411670555043,
+        "kv_mib": 161.312744140625,
+        "prefill_kv_mib": 125.519775390625,
+        "total_s": 60.041994934901595,
+        "prefill_s": 2.8246477795764804,
+        "peak_gib": 16.20635414123535
+      }
+    ],
+    "quality_by_length": [
+      {
+        "task": "gov_report",
+        "length": 3072,
+        "score": 29.06670002394545,
+        "full": 32.421740357187744,
+        "n": 8
+      },
+      {
+        "task": "gov_report",
+        "length": 16384,
+        "score": 31.08379239292262,
+        "full": 32.99070132660502,
+        "n": 8
+      },
+      {
+        "task": "multi_news",
+        "length": 3072,
+        "score": 28.508934718432574,
+        "full": 27.358527110265037,
+        "n": 8
+      },
+      {
+        "task": "multi_news",
+        "length": 16384,
+        "score": 28.781793223601014,
+        "full": 27.076158726345458,
+        "n": 8
+      },
+      {
+        "task": "multifieldqa_en",
+        "length": 3072,
+        "score": 38.12350647256308,
+        "full": 38.80514875195726,
+        "n": 8
+      },
+      {
+        "task": "multifieldqa_en",
+        "length": 16384,
+        "score": 45.803030303030305,
+        "full": 42.98029416235938,
+        "n": 8
+      },
+      {
+        "task": "qasper",
+        "length": 3072,
+        "score": 3.260869565217391,
+        "full": 21.710526315789473,
+        "n": 8
+      },
+      {
+        "task": "qasper",
+        "length": 16384,
+        "score": 17.424924924924923,
+        "full": 20.131257631257633,
+        "n": 8
+      }
+    ],
+    "needle": {
+      "paired_n": 0,
+      "score": null,
+      "full": null
+    },
+    "failed_cases": []
+  },
+  {
+    "name": "P0.7-B2-W32-C8-D1",
+    "spec": {
+      "method": "phasekv",
+      "prefill_keep_ratio": 0.7,
+      "prompt_bits": 2,
+      "recent_window": 32,
+      "cold_bits": 8,
+      "decode_keep_ratio": 1.0,
+      "obs_window": 32,
+      "sink_tokens": 0,
+      "lazy_g": 16,
+      "group_size": 32
+    },
+    "valid": true,
+    "feasible": false,
+    "qa": 26.153082816433923,
+    "qa_loss": 4.7537238989070145,
+    "summary": 29.226773519802478,
+    "summary_loss": 0.7350083602983375,
+    "loss": 4.7537238989070145,
+    "speed": 1.1182330559944136,
+    "kv": 0.21221792919559399,
+    "peak_gib": 16.20635414123535,
+    "tasks": {
+      "gov_report": {
+        "score": 30.583996638301493,
+        "full": 32.70622084189638,
+        "n": 16
+      },
+      "multi_news": {
+        "score": 27.869550401303464,
+        "full": 27.21734291830525,
+        "n": 16
+      },
+      "multifieldqa_en": {
+        "score": 41.96326838779669,
+        "full": 40.89272145715832,
+        "n": 16
+      },
+      "qasper": {
+        "score": 10.342897245071159,
+        "full": 20.920891973523553,
+        "n": 16
+      }
+    },
+    "shapes": [
+      {
+        "input": 1024,
+        "output": 1024,
+        "group": "short",
+        "tokens_s": 37.43436046974424,
+        "speed_vs_full": 0.8327351569749897,
+        "kv_ratio": 0.3726031998045921,
+        "kv_mib": 41.711181640625,
+        "prefill_kv_mib": 10.019775390625,
+        "total_s": 27.496128913015127,
+        "prefill_s": 0.1682946141809225,
+        "peak_gib": 14.369384288787842
+      },
+      {
+        "input": 16384,
+        "output": 256,
+        "group": "long_input",
+        "tokens_s": 37.781930342793416,
+        "speed_vs_full": 1.3128517274480274,
+        "kv_ratio": 0.1395948524550754,
+        "kv_mib": 127.023681640625,
+        "prefill_kv_mib": 120.269775390625,
+        "total_s": 9.571767485700548,
+        "prefill_s": 2.822509369812906,
+        "peak_gib": 16.20635414123535
+      },
+      {
+        "input": 16384,
+        "output": 2048,
+        "group": "joint",
+        "tokens_s": 35.85620478927178,
+        "speed_vs_full": 1.2790113499856577,
+        "kv_ratio": 0.183751220769356,
+        "kv_mib": 185.211181640625,
+        "prefill_kv_mib": 120.269775390625,
+        "total_s": 59.91237830277532,
+        "prefill_s": 2.823235376738012,
+        "peak_gib": 16.20635414123535
+      }
+    ],
+    "quality_by_length": [
+      {
+        "task": "gov_report",
+        "length": 3072,
+        "score": 28.930829582335704,
+        "full": 32.421740357187744,
+        "n": 8
+      },
+      {
+        "task": "gov_report",
+        "length": 16384,
+        "score": 32.23716369426729,
+        "full": 32.99070132660502,
+        "n": 8
+      },
+      {
+        "task": "multi_news",
+        "length": 3072,
+        "score": 28.234311829715395,
+        "full": 27.358527110265037,
+        "n": 8
+      },
+      {
+        "task": "multi_news",
+        "length": 16384,
+        "score": 27.504788972891532,
+        "full": 27.076158726345458,
+        "n": 8
+      },
+      {
+        "task": "multifieldqa_en",
+        "length": 3072,
+        "score": 38.12350647256308,
+        "full": 38.80514875195726,
+        "n": 8
+      },
+      {
+        "task": "multifieldqa_en",
+        "length": 16384,
+        "score": 45.803030303030305,
+        "full": 42.98029416235938,
+        "n": 8
+      },
+      {
+        "task": "qasper",
+        "length": 3072,
+        "score": 3.260869565217391,
+        "full": 21.710526315789473,
+        "n": 8
+      },
+      {
+        "task": "qasper",
+        "length": 16384,
+        "score": 17.424924924924923,
+        "full": 20.131257631257633,
+        "n": 8
+      }
+    ],
+    "needle": {
+      "paired_n": 0,
+      "score": null,
+      "full": null
+    },
+    "failed_cases": []
+  }
+]

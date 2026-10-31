@@ -1,0 +1,93 @@
+{
+  "id": "longbench/2wikimqa/193/8192",
+  "suite": "longbench",
+  "task": "2wikimqa",
+  "document_id": "193/8192",
+  "cluster_id": "2wikimqa/0844ab322336b94475f1d5aa76f035b4fef633796e2fdc5e6d27fc5048085e3b",
+  "length_budget": 8192,
+  "input_sha256": "3a83842d6e609111d5a4661084bcfef584c6de7a020b6a83d3935b6c536168a3",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": "heldout",
+  "heldout_from_available_history": true,
+  "method": "snapkv",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 6340,
+  "output_tokens": 6,
+  "output_ids": [
+    64706,
+    29973,
+    596,
+    8624,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 0.8522710870020092,
+  "prefill_and_compress_s": 0.8522710870020092,
+  "decode_s": 0.1425272896885872,
+  "decode_tokens_per_s": 35.08100105547978,
+  "generation_wall_s_including_instrumentation": 0.9952615788206458,
+  "prefill_storage": {
+    "physical_bytes": 1073741824,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1073741824,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 1076363264,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1076363264,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 2048,
+    "stored_heads": 32
+  },
+  "final_trace": {
+    "physical_tokens": 2053,
+    "stored_heads": 32
+  },
+  "peak_allocated_bytes": 18235698176,
+  "peak_reserved_bytes": 18608029696,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 5,
+      "seconds": 0.1425272896885872,
+      "tokens": 5
+    }
+  ],
+  "effective_options": {
+    "max_capacity_prompt": 2048,
+    "window_size": 32,
+    "kernel_size": 7,
+    "pooling": "maxpool"
+  },
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 0,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "Parkinson's disease.",
+  "gpu_before": {
+    "time": 1793303503.3054755,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15896 MiB, 100 %, 64, 345.51 W, 2655 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793303504.3944705,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 18176 MiB, 78 %, 57, 324.65 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793303504.394474
+}

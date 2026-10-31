@@ -1,0 +1,50 @@
+nohup: ignoring input
+Results: /root/KV/PhaseKV/results/phasekv_long_output_quick_001
+GPU: NVIDIA GeForce RTX 4090 D, 23.52 GiB
+[GPU guard] cold=0: passed
+[GPU guard] cold=7: passed
+[GPU guard] cold=31: passed
+[GPU guard] cold=247: passed
+Hashing checkpoint: Qwen2.5-7B-Instruct (4 weight files)
+
+=== long-output: 1/2 baseline ===
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:03,  1.25s/it]
+Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.09s/it]
+Loading checkpoint shards:  75%|███████▌  | 3/4 [00:03<00:01,  1.07s/it]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.02it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:04<00:00,  1.03s/it]
+Qwen2Model is using Qwen2SdpaAttention, but `torch.nn.functional.scaled_dot_product_attention` does not support `output_attentions=True`. Falling back to the manual attention implementation, but specifying the manual implementation will be required from Transformers version v5.0.0 onwards. This warning can be removed using the argument `attn_implementation="eager"` when loading the model.
+The attention layers in this model are transitioning from computing the RoPE embeddings internally through `position_ids` (2D tensor with the indexes of the tokens), to using externally computed `position_embeddings` (Tuple of tensors, containing cos and sin). In v4.46 `position_ids` will be removed and `position_embeddings` will be mandatory.
+[start] Qwen2.5-7B-Instruct/phasekv performance/long_output_quick/1024/4096/0
+[Qwen2.5-7B-Instruct/phasekv] performance/long_output_quick/1024/4096/0: ok | peak=14.53 GiB | 4096 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv performance/long_output_quick/1024/4096/1
+[Qwen2.5-7B-Instruct/phasekv] performance/long_output_quick/1024/4096/1: ok | peak=14.53 GiB | 4096 output tokens
+
+=== long-output: 2/2 p5 ===
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:01<00:03,  1.27s/it]
+Loading checkpoint shards:  50%|█████     | 2/4 [00:02<00:02,  1.09s/it]
+Loading checkpoint shards:  75%|███████▌  | 3/4 [00:03<00:01,  1.01s/it]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.10it/s]
+Loading checkpoint shards: 100%|██████████| 4/4 [00:03<00:00,  1.03it/s]
+Qwen2Model is using Qwen2SdpaAttention, but `torch.nn.functional.scaled_dot_product_attention` does not support `output_attentions=True`. Falling back to the manual attention implementation, but specifying the manual implementation will be required from Transformers version v5.0.0 onwards. This warning can be removed using the argument `attn_implementation="eager"` when loading the model.
+The attention layers in this model are transitioning from computing the RoPE embeddings internally through `position_ids` (2D tensor with the indexes of the tokens), to using externally computed `position_embeddings` (Tuple of tensors, containing cos and sin). In v4.46 `position_ids` will be removed and `position_embeddings` will be mandatory.
+[start] Qwen2.5-7B-Instruct/phasekv performance/long_output_quick/1024/4096/0
+[Qwen2.5-7B-Instruct/phasekv] performance/long_output_quick/1024/4096/0: ok | peak=14.37 GiB | 4096 output tokens
+[start] Qwen2.5-7B-Instruct/phasekv performance/long_output_quick/1024/4096/1
+[Qwen2.5-7B-Instruct/phasekv] performance/long_output_quick/1024/4096/1: ok | peak=14.37 GiB | 4096 output tokens
+PhaseKV 长输出快速验证：保存的优化前版本 vs P5
+
+输入 1024，输出 4096，正式重复 1 次
+优化前：33.49 token/s；P5：37.05 token/s
+解码吞吐变化：+10.63%（1.106x）；总耗时加速比：1.106x
+实际KV：94.46 -> 97.17 MiB
+原始吞吐：[33.494838845657554] -> [37.0546378515259]
+单次初筛，不能判断稳定收益。
+
+本轮不测试准确率；未测Full/其他算法；生成内容可能分叉，但输入、首token和输出长度一致。
+预热不计入结果。基线先跑、P5后跑；小幅差异需在相同GPU负载下复测。
+Complete: /root/KV/PhaseKV/results/phasekv_long_output_quick_001/summary.txt

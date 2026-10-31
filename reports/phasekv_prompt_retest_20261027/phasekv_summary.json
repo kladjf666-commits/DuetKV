@@ -1,0 +1,16 @@
+{
+  "methods": [
+    {
+      "method": "phasekv",
+      "prefill_keep_ratio": 1.0,
+      "prompt_bits": 4,
+      "recent_window": 128,
+      "cold_bits": 4,
+      "decode_keep_ratio": 1.0,
+      "obs_window": 32,
+      "sink_tokens": 0,
+      "lazy_g": 16,
+      "group_size": 32
+    }
+  ]
+}

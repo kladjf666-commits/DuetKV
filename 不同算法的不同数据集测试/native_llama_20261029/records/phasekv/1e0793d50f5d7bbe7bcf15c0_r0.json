@@ -1,0 +1,133 @@
+{
+  "id": "ruler/niah_multikey_1/5/16384",
+  "suite": "ruler",
+  "task": "niah_multikey_1",
+  "document_id": "5/16384",
+  "cluster_id": "niah_multikey_1/5",
+  "length_budget": 16384,
+  "input_sha256": "9511bc9983da9a00fe3609addae3aedf53b2ddfe35f4558d1437bf0673f3f5ee",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": null,
+  "heldout_from_available_history": null,
+  "method": "phasekv",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 15672,
+  "output_tokens": 7,
+  "output_ids": [
+    25,
+    220,
+    19899,
+    17814,
+    21,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 2.64186999714002,
+  "prefill_and_compress_s": 2.64186999714002,
+  "decode_s": 0.1872865753248334,
+  "decode_tokens_per_s": 32.03646598584808,
+  "generation_wall_s_including_instrumentation": 2.830275700893253,
+  "prefill_storage": {
+    "code_bytes": 359464960,
+    "metadata_bytes": 89890816,
+    "fp16_residual_capacity_bytes": 18874368,
+    "physical_bytes": 468230144,
+    "code_payload_bytes": 359464960,
+    "metadata_payload_bytes": 89890816,
+    "hot_payload_bytes": 0,
+    "effective_payload_bytes": 449355776,
+    "page_free_bytes": 0,
+    "hot_free_bytes": 18874368,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 468230144,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.uint8"
+    ]
+  },
+  "final_storage": {
+    "code_bytes": 359464960,
+    "metadata_bytes": 89890816,
+    "fp16_residual_capacity_bytes": 18874368,
+    "physical_bytes": 468230144,
+    "code_payload_bytes": 359464960,
+    "metadata_payload_bytes": 89890816,
+    "hot_payload_bytes": 786432,
+    "effective_payload_bytes": 450142208,
+    "page_free_bytes": 0,
+    "hot_free_bytes": 18087936,
+    "auxiliary_bytes": 68937728,
+    "total_owned_bytes": 537167872,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.uint8"
+    ]
+  },
+  "prefill_trace": {
+    "prompt_tokens": 10970,
+    "hot_tokens": 0,
+    "cold_segments": 0,
+    "physical_tokens": 10970
+  },
+  "final_trace": {
+    "prompt_tokens": 10970,
+    "hot_tokens": 6,
+    "cold_segments": 0,
+    "physical_tokens": 10976
+  },
+  "peak_allocated_bytes": 19988329984,
+  "peak_reserved_bytes": 21185429504,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 6,
+      "seconds": 0.1872865753248334,
+      "tokens": 6
+    }
+  ],
+  "effective_options": {
+    "prefill_keep_ratio": 0.7,
+    "obs_window": 32,
+    "sink_tokens": 0,
+    "prompt_bits": 4,
+    "cold_bits": 4,
+    "group_size": 32,
+    "recent_window": 128,
+    "lazy_g": 16,
+    "decode_keep_ratio": 1.0,
+    "optimizations": {
+      "fused_quantize": true,
+      "reuse_workspace": true,
+      "paged_cold": true,
+      "page_slots": 32,
+      "cold_group": 8,
+      "specialized_4bit": true,
+      "gqa_reuse": false,
+      "hot_ring": true
+    }
+  },
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 100.0,
+  "metric": "official_string_match_all",
+  "status": "ok",
+  "prediction": ": 8406806.",
+  "gpu_before": {
+    "time": 1793317911.7968714,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15896 MiB, 82 %, 62, 371.14 W, 2655 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793317914.7242799,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 20634 MiB, 0 %, 54, 349.95 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793317914.7242835
+}

@@ -1,0 +1,133 @@
+{
+  "id": "longbench/qasper/37/8192",
+  "suite": "longbench",
+  "task": "qasper",
+  "document_id": "37/8192",
+  "cluster_id": "qasper/1200dfbaf212cc5b9f2feabc2e0f4d857b6cca56cbc761e5f0d2467fa3c67e5f",
+  "length_budget": 8192,
+  "input_sha256": "012e24607cbe60e3fb6dd4b7ff9a9dc19b3e56fbdfad05e364f7e2eb2a8e50ab",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": "heldout",
+  "heldout_from_available_history": true,
+  "method": "kivi",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 2690,
+  "output_tokens": 41,
+  "output_ids": [
+    791,
+    452,
+    13562,
+    72,
+    15823,
+    320,
+    89,
+    360,
+    11,
+    865,
+    6292,
+    11,
+    308,
+    2067,
+    11,
+    274,
+    2332,
+    8,
+    323,
+    279,
+    2100,
+    339,
+    78,
+    15823,
+    320,
+    77,
+    708,
+    11,
+    274,
+    354,
+    11,
+    259,
+    9810,
+    8,
+    527,
+    4528,
+    311,
+    1855,
+    1023,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 0.9331300710327923,
+  "prefill_and_compress_s": 0.9331300710327923,
+  "decode_s": 2.006219287868589,
+  "decode_tokens_per_s": 19.937999919488398,
+  "generation_wall_s_including_instrumentation": 2.9408408673480153,
+  "prefill_storage": {
+    "physical_bytes": 116039680,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 116039680,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 119480320,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 119480320,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "prefill_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 2690
+  },
+  "final_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 2730
+  },
+  "peak_allocated_bytes": 16510038016,
+  "peak_reserved_bytes": 16668164096,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 40,
+      "seconds": 2.006219287868589,
+      "tokens": 40
+    }
+  ],
+  "effective_options": {
+    "k_bits": 4,
+    "v_bits": 4,
+    "group_size": 32,
+    "residual_length": 128,
+    "use_flash": true
+  },
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 78.57142857142858,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "The Nguni languages (zul, xho, nbl, ssw) and the Sotho languages (nso, sot, tsn) are similar to each other.",
+  "gpu_before": {
+    "time": 1793297423.6966684,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 16002 MiB, 46 %, 49, 233.26 W, 2670 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793297426.7271323,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 16324 MiB, 44 %, 51, 163.75 W, 2670 MHz",
+    "error": ""
+  },
+  "finished_at": 1793297426.7271364
+}

@@ -1,0 +1,105 @@
+{
+  "id": "longbench/qasper/160/16384",
+  "suite": "longbench",
+  "task": "qasper",
+  "document_id": "160/16384",
+  "cluster_id": "qasper/7fbb00ea3a7893cdaddff2133676b68a112427a99b49dedab8f6c7d2e2b1f23f",
+  "length_budget": 16384,
+  "input_sha256": "46b2057b27d18aafe4818df60d99055c35b0b509baaf9f2738d41d5d0c3cf54e",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": "heldout",
+  "heldout_from_available_history": true,
+  "method": "scope",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 4983,
+  "output_tokens": 14,
+  "output_ids": [
+    791,
+    220,
+    679,
+    15,
+    602,
+    17,
+    65,
+    17,
+    14,
+    13114,
+    27809,
+    3465,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 1.3483742512762547,
+  "prefill_and_compress_s": 1.3483742512762547,
+  "decode_s": 0.44936653738841414,
+  "decode_tokens_per_s": 28.92961295149427,
+  "generation_wall_s_including_instrumentation": 1.7985447822138667,
+  "prefill_storage": {
+    "physical_bytes": 1073741824,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1073741824,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 1080557568,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1080557568,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 2048,
+    "stored_heads": 32
+  },
+  "final_trace": {
+    "physical_tokens": 2061,
+    "stored_heads": 32
+  },
+  "peak_allocated_bytes": 23719169024,
+  "peak_reserved_bytes": 24456986624,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 13,
+      "seconds": 0.44936653738841414,
+      "tokens": 13
+    }
+  ],
+  "effective_options": {
+    "max_capacity_prompt": 2048,
+    "window_size": 8,
+    "kernel_size": 7,
+    "pooling": "maxpool",
+    "decoding_window_size": 512,
+    "decoding_recent_size": 256,
+    "decoding_metric": "None",
+    "delta": 1
+  },
+  "scope_mode": "prefill_only_short_output_boundary",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 66.66666666666666,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "The 2010 i2b2/VA CE task.",
+  "gpu_before": {
+    "time": 1793306736.8117104,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15896 MiB, 0 %, 44, 249.83 W, 2670 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793306738.7035186,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 23754 MiB, 64 %, 49, 296.41 W, 2670 MHz",
+    "error": ""
+  },
+  "finished_at": 1793306738.7035232
+}

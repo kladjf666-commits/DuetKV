@@ -1,0 +1,112 @@
+{
+  "id": "longbench/narrativeqa/96/8192",
+  "suite": "longbench",
+  "task": "narrativeqa",
+  "document_id": "96/8192",
+  "cluster_id": "narrativeqa/083186ea580e18b77f6d8d8fb7ebf2a41b0fb9db280a6baf41e3c66d400c11b3",
+  "length_budget": 8192,
+  "input_sha256": "7efd138fa3e4c173847b3d963f56989204845b8266171dfec012ef44f71ca2b3",
+  "truncated_input": true,
+  "capacity_extension": null,
+  "evaluation_split": "historical_retest",
+  "heldout_from_available_history": false,
+  "method": "kivi",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 8184,
+  "output_tokens": 20,
+  "output_ids": [
+    1548,
+    2795,
+    41046,
+    283,
+    57948,
+    330,
+    11912,
+    323,
+    1794,
+    21152,
+    1,
+    323,
+    37856,
+    29600,
+    430,
+    49878,
+    813,
+    42655,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 1.0814633760601282,
+  "prefill_and_compress_s": 1.0814633760601282,
+  "decode_s": 0.9491776735521853,
+  "decode_tokens_per_s": 20.01732713422846,
+  "generation_wall_s_including_instrumentation": 2.031870248261839,
+  "prefill_storage": {
+    "physical_bytes": 346390528,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 346390528,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 342257664,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 342257664,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "prefill_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 8184
+  },
+  "final_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 8203
+  },
+  "peak_allocated_bytes": 17392459776,
+  "peak_reserved_bytes": 18062770176,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 19,
+      "seconds": 0.9491776735521853,
+      "tokens": 19
+    }
+  ],
+  "effective_options": {
+    "k_bits": 4,
+    "v_bits": 4,
+    "group_size": 32,
+    "residual_length": 128,
+    "use_flash": true
+  },
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 0,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "He says Grassou paints \"gray and sombre\" and lacks qualities that redeem his defects.",
+  "gpu_before": {
+    "time": 1793297201.1374004,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 16002 MiB, 4 %, 45, 289.66 W, 2670 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793297203.266079,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 17654 MiB, 48 %, 48, 264.47 W, 2670 MHz",
+    "error": ""
+  },
+  "finished_at": 1793297203.2660835
+}

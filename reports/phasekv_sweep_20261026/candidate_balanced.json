@@ -1,0 +1,17 @@
+{
+  "methods": [
+    {
+      "method": "phasekv",
+      "prefill_keep_ratio": 0.7,
+      "prompt_bits": 2,
+      "recent_window": 128,
+      "cold_bits": 4,
+      "decode_keep_ratio": 1.0,
+      "obs_window": 32,
+      "sink_tokens": 0,
+      "lazy_g": 16,
+      "group_size": 32
+    }
+  ],
+  "analysis_note": "Conditional candidate only: failed the original 1-point QA/summary gate; Full prefill backend differs. Not a validated universal optimum."
+}

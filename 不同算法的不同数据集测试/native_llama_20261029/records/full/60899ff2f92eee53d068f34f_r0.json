@@ -1,0 +1,86 @@
+{
+  "id": "longbench/hotpotqa/42/8192",
+  "suite": "longbench",
+  "task": "hotpotqa",
+  "document_id": "42/8192",
+  "cluster_id": "hotpotqa/3250305271ffc65de7677223c2964f1e2075d0fc7e89c9011cba5c775e36c343",
+  "length_budget": 8192,
+  "input_sha256": "504c8d0b7dc1073bcdebfeac435d4a7da0cffcde708b27c9c414c33ac3eea9fb",
+  "truncated_input": true,
+  "capacity_extension": null,
+  "evaluation_split": "heldout",
+  "heldout_from_available_history": true,
+  "method": "full",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 8184,
+  "output_tokens": 4,
+  "output_ids": [
+    36,
+    91794,
+    97084,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 1.0709731867536902,
+  "prefill_and_compress_s": 1.0709731867536902,
+  "decode_s": 0.07835710188373923,
+  "decode_tokens_per_s": 38.286255206977785,
+  "generation_wall_s_including_instrumentation": 1.1497603370808065,
+  "prefill_storage": {
+    "physical_bytes": 1072693248,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1072693248,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 1073086464,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1073086464,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 8184,
+    "stored_heads": 8
+  },
+  "final_trace": {
+    "physical_tokens": 8187,
+    "stored_heads": 8
+  },
+  "peak_allocated_bytes": 18234089984,
+  "peak_reserved_bytes": 18702401536,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 3,
+      "seconds": 0.07835710188373923,
+      "tokens": 3
+    }
+  ],
+  "effective_options": {},
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 66.66666666666666,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "Eileen Atkins",
+  "gpu_before": {
+    "time": 1793313494.933753,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15894 MiB, 100 %, 68, 390.35 W, 2640 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793313496.136526,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 18264 MiB, 100 %, 67, 359.84 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793313496.1365302
+}

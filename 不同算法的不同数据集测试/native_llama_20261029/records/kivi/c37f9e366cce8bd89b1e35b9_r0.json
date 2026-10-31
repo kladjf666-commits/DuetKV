@@ -1,0 +1,126 @@
+{
+  "id": "longbench/qmsum/104/16384",
+  "suite": "longbench",
+  "task": "qmsum",
+  "document_id": "104/16384",
+  "cluster_id": "qmsum/36f02c4ba13589e43aacea5e6cd4beade268107d19a62a26fb8451e394dbb4b4",
+  "length_budget": 16384,
+  "input_sha256": "5a03442aa07474a1d5958550b215085414d34205024d4426a4fb3a423284155c",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": "historical_retest",
+  "heldout_from_available_history": false,
+  "method": "kivi",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 15384,
+  "output_tokens": 34,
+  "output_ids": [
+    1502,
+    20620,
+    3463,
+    814,
+    1288,
+    1005,
+    810,
+    12706,
+    1109,
+    279,
+    1510,
+    832,
+    1606,
+    814,
+    4934,
+    311,
+    2997,
+    810,
+    5865,
+    11,
+    719,
+    814,
+    1047,
+    311,
+    8007,
+    430,
+    4623,
+    4245,
+    311,
+    279,
+    2447,
+    8670,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 2.3541392008773983,
+  "prefill_and_compress_s": 2.3541392008773983,
+  "decode_s": 1.6276747481897473,
+  "decode_tokens_per_s": 20.274320798244023,
+  "generation_wall_s_including_instrumentation": 3.9833228699862957,
+  "prefill_storage": {
+    "physical_bytes": 636977152,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 636977152,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 639815680,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 639815680,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "prefill_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 15384
+  },
+  "final_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 15417
+  },
+  "peak_allocated_bytes": 18534900736,
+  "peak_reserved_bytes": 20067647488,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 33,
+      "seconds": 1.6276747481897473,
+      "tokens": 33
+    }
+  ],
+  "effective_options": {
+    "k_bits": 4,
+    "v_bits": 4,
+    "group_size": 32,
+    "residual_length": 128,
+    "use_flash": true
+  },
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 22.641508935564264,
+  "metric": "rouge_score",
+  "status": "ok",
+  "prediction": "User Interface thought they should use more buttons than the current one because they wanted to include more functions, but they had to reject that idea due to the project requirements.",
+  "gpu_before": {
+    "time": 1793299905.3272858,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 16004 MiB, 0 %, 49, 166.91 W, 2670 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793299909.4079225,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 19568 MiB, 53 %, 54, 190.69 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793299909.4079273
+}

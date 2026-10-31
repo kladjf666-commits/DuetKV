@@ -1,0 +1,5 @@
+GPU: NVIDIA GeForce RTX 4090 D, 23.52 GiB
+[GPU guard] cold=0: passed
+[GPU guard] cold=7: passed
+[GPU guard] cold=31: passed
+[GPU guard] cold=247: passed

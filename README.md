@@ -1,5 +1,18 @@
 # PhaseKV：访问放大感知的相位异构 KV Cache 压缩
 
+## 按模型部署（2026-10-24）
+
+模型代码已集中到 [`models/`](models/README.md)。[`Qwen2-7B-Instruct`](models/Qwen2-7B-Instruct/README.md) 和 [`Qwen2.5-7B-Instruct`](models/Qwen2.5-7B-Instruct/README.md) 各有独立配置与六算法比较入口；本轮完成代码接入，完整7B测试待租卡执行。
+算法根目录保存通用实现，模型目录保存模型适配；原入口兼容转发。新结果按完整模型名分目录保存。
+Llama六方法入口也已补齐：[`Llama-2-7b-chat-hf`](models/Llama-2-7b-chat-hf/README.md)、[`Llama-3.1-8B-Instruct`](models/Llama-3.1-8B-Instruct/README.md)。本轮仅代码与CPU验证，完整模型测试留待租卡。
+
+## 算法目录（2026-10-24）
+
+实现按算法集中：[`SCOPE/`](SCOPE/README.md)、[`PhaseKV/`](PhaseKV/README.md)、[`KIVI/`](KIVI/README.md)、[`SnapKV/`](SnapKV/README.md)、[`PyramidKV/`](PyramidKV/README.md)。
+官方 SCOPE 克隆在 `SCOPE/official/`，本地实现单独保存。`src/phasekv/`、旧模型目录及 `baselines/` 中对应文件只保留兼容转发；修改算法请进入上述新目录。
+共享评估位于 `eval/`，Qwen2真实打包生成调度位于 `models/Qwen2/packed_runtime.py`（`eval/packed_runtime.py` 为兼容转发），触发记录位于 `eval/compression_trace.py`。算法迁移清单见 `results/algorithm_layout_migration_20261024.json`，模型迁移清单见 `results/model_layout_migration_20261024.json`。
+
+
 PhaseKV 将 KV Cache 视为由访问模式决定表示形式的异构存储层级。prompt KV 在 prefill 阶段写入一次，并在后续生成过程中重复读取；generated KV 则随 decode 逐 token 追加，且新近 token 的重要度尚未稳定。基于这一差异，PhaseKV 使用只读低比特 prompt 层、FP16 decode 热层和懒批量化冷层三种表示，并通过 roofline 预算分配器与单遍混合精度融合注意力 kernel 统一管理。
 
 代码库包含 PhaseKV 方法实现、统一 KV Cache 压缩评估框架、对比基线、实验脚本和完整技术文档。Qwen2.5-7B + LongBench 的实测结果显示，PhaseKV 在与 full 和主要基线统计不可区分的任务精度下，实现 93.31% 的逻辑 KV 字节节省（14.94× 压缩）；真实 2-bit decode kernel 在上下文长度 4096–32768 时相对 FP16 SDPA 达到 1.20–1.63× 加速。逻辑 KV 节省不等同于阶段 A 的峰值显存下降，现有速度数据为 kernel 级测量。
@@ -82,6 +95,23 @@ prefill 可以复用注意力计算产生的重要度信息；但在 FlashAttent
 release/kvcomp/
 ├── README.md                  本文件：项目总览 + 快速开始
 ├── requirements.txt           依赖清单（torch/triton 由环境提供，见 §5）
+├── qwen2/                    Qwen2 模型集成（默认 Qwen2-1.5B-Instruct）
+│   ├── qwen2.py              对话入口、模型加载、配置与生成循环
+│   ├── qwen2_attention.py    Qwen2 专用注意力适配器
+│   ├── __main__.py           python -m qwen2 入口
+│   └── README.md             运行方式与模型目录约定
+├── llama/                    Llama-2 / Llama-3.1 共用适配
+│   ├── llama.py              单轮推理入口
+│   ├── llama_attention.py    Llama 注意力适配器
+│   └── README.md             运行方式与支持范围
+├── opt/                      OPT 模型适配
+│   ├── opt.py                单轮推理入口
+│   ├── opt_attention.py      注意力和 decoder 缓存桥接
+│   └── README.md             运行方式与支持范围
+├── deepseek_v4_flash/        DeepSeek V4 Flash 原生 vLLM 部署与显存预检
+│   ├── deepseek_v4_flash.py  服务入口
+│   ├── deepseek_v4_flash_attention.py  PhaseKV 兼容性检查
+│   └── README.md             版本、显存和运行说明
 ├── src/phasekv/               PhaseKV 方法实现
 │   ├── __init__.py            导入即 register("phasekv", PhaseKVCompressor)
 │   ├── compressor.py          PhaseKVCompressor(KVCompressor)，接 eval 接口（阶段 A）
@@ -115,6 +145,15 @@ release/kvcomp/
 │   ├── idea/                  PhaseKV 技术原理、相关工作与实验结果
 │   └── delivery/              使用与复现指南
 ```
+
+模型专用入口和注意力适配器按架构集中在根目录的模型包中；后续新增模型也遵循
+`<model>/<model>.py`、`<model>/<model>_attention.py` 的布局，通用缓存和内核保留在
+`src/phasekv/`。Qwen2、Llama 和 OPT 分别通过 `python -m qwen2`、
+`python -m llama`、`python -m opt` 运行；具体支持范围与命令见
+[qwen2/README.md](qwen2/README.md)、[llama/README.md](llama/README.md) 和
+[opt/README.md](opt/README.md)。Llama/OPT 的真实 CUDA 推理需在 GPU 环境验证。
+DeepSeek V4 Flash 使用独立的 vLLM 原生部署入口与显存预检，暂未接入 PhaseKV；
+见 [deepseek_v4_flash/README.md](deepseek_v4_flash/README.md)。
 
 ---
 
@@ -256,13 +295,13 @@ python -m pytest tests/ -q
 python -m pytest tests/test_metrics.py tests/test_interface.py tests/test_compressors.py -q
 ```
 
-`bench_qwen2_phasekv.py` 比较的是 `qwen2.py` 使用的真实打包缓存；上述 `run_longbench.py`
+`bench_qwen2_phasekv.py` 比较的是 `qwen2/qwen2.py` 使用的真实打包缓存；上述 `run_longbench.py`
 仍使用阶段 A 的 fake quant。新脚本每题先同配置预热，再记录答案命中、重复 4-gram、
 token 上限、setup/TPOT、峰值显存和常驻 KV 字节，保存同名 `.json` 与 `.md`。
 可用 `--cases-jsonl` 指向自定义题目，每行格式为
 `{"id":"case1","prompt":"问题","answers":["标准答案"]}`；也可用 `messages` 数组代替 `prompt`。
 `ablate_qwen2_prompt.py` 只比较贪心回答与 KV 大小，不报告未经逐配置预热的速度。
-`qwen2.py` 的交互默认配置为 Prompt 4-bit、100% 保留；首轮 prefill 后复用同一份
+`qwen2/qwen2.py` 的交互默认配置为 Prompt 4-bit、100% 保留；首轮 prefill 后复用同一份
 PhaseKVCache，后续只输入新用户消息的 chat 模板 token，并将它们按 Prompt 位宽打包。
 `/clear` 才清空会话缓存。`ablate_qwen2_cold.py` 固定同一轮长回复前缀，隔离测试
 冷层量化和 50% token 筛选；结果见 `results/qwen2_phasekv_cold_ablation.md`。

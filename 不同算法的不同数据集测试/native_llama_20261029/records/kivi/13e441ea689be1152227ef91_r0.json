@@ -1,0 +1,97 @@
+{
+  "id": "longbench/narrativeqa/122/16384",
+  "suite": "longbench",
+  "task": "narrativeqa",
+  "document_id": "122/16384",
+  "cluster_id": "narrativeqa/b3f4ec448da877492401fe2f19727c14c33e301c5172c4e5aec469eadd20f10f",
+  "length_budget": 16384,
+  "input_sha256": "bf2f9e85f1bb0debf637845021528e508c1b6ae9217833c64be44912b2b991de",
+  "truncated_input": true,
+  "capacity_extension": null,
+  "evaluation_split": "historical_retest",
+  "heldout_from_available_history": false,
+  "method": "kivi",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 16376,
+  "output_tokens": 5,
+  "output_ids": [
+    29795,
+    19602,
+    96307,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 2.386249194853008,
+  "prefill_and_compress_s": 2.386249194853008,
+  "decode_s": 0.21336123207584023,
+  "decode_tokens_per_s": 18.747548282708554,
+  "generation_wall_s_including_instrumentation": 2.601053467951715,
+  "prefill_storage": {
+    "physical_bytes": 681934848,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 681934848,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 682278912,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 682278912,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "prefill_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 16376
+  },
+  "final_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 16380
+  },
+  "peak_allocated_bytes": 18702667776,
+  "peak_reserved_bytes": 19807600640,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 4,
+      "seconds": 0.21336123207584023,
+      "tokens": 4
+    }
+  ],
+  "effective_options": {
+    "k_bits": 4,
+    "v_bits": 4,
+    "group_size": 32,
+    "residual_length": 128,
+    "use_flash": true
+  },
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 0,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "Minimum wage waitress.",
+  "gpu_before": {
+    "time": 1793297214.5785441,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 16002 MiB, 100 %, 47, 292.25 W, 2670 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793297217.2801464,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 19318 MiB, 100 %, 62, 375.42 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793297217.280151
+}

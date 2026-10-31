@@ -1,0 +1,36 @@
+{
+  "tests_run": 21,
+  "failures": [],
+  "errors": [],
+  "skips": [
+    [
+      "test_cached_workspace_survives_steps_and_refreshes_on_cooling (test_phasekv_segmented_decode.TestSegmentedKernels.test_cached_workspace_survives_steps_and_refreshes_on_cooling)",
+      "requires CUDA + Triton or TRITON_INTERPRET=1"
+    ],
+    [
+      "test_mixed_bits_tails_hot_and_many_segments_match_dense (test_phasekv_segmented_decode.TestSegmentedKernels.test_mixed_bits_tails_hot_and_many_segments_match_dense)",
+      "requires CUDA + Triton or TRITON_INTERPRET=1"
+    ],
+    [
+      "test_cuda_kernel_against_independent_dense_attention (test_kivi_packed.TestPackedKIVI.test_cuda_kernel_against_independent_dense_attention)",
+      "Requires a real CUDA GPU"
+    ],
+    [
+      "test_phasekv_mixed_tiers_against_dense_reference (test_kivi_packed.TestPackedKIVI.test_phasekv_mixed_tiers_against_dense_reference)",
+      "Requires a real CUDA GPU"
+    ],
+    [
+      "test_qwen_bf16_adapter_matches_dense_quantized_reference (test_kivi_packed.TestPackedKIVI.test_qwen_bf16_adapter_matches_dense_quantized_reference)",
+      "Requires a real CUDA GPU"
+    ]
+  ],
+  "successful": true,
+  "torch": "2.5.1+cpu",
+  "cuda_available": false,
+  "patterns": [
+    "test_phasekv_cache.py",
+    "test_phasekv_segmented_decode.py",
+    "test_phasekv_paged_storage.py",
+    "test_kivi_packed.py"
+  ]
+}

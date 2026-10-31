@@ -1,0 +1,22 @@
+{
+  "id": "longbench/2wikimqa/117/8192",
+  "suite": "longbench",
+  "task": "2wikimqa",
+  "document_id": "117/8192",
+  "cluster_id": "2wikimqa/ab1849a1a3404dfe6ba8a8237f2c8de9d7f6f02da6f716bebd537067343cd314",
+  "length_budget": 8192,
+  "input_sha256": "79f69f1486efc2958a45b6a6dadd4bdd900195bbeed1e7fa2e62276e8edb00c2",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": "heldout",
+  "heldout_from_available_history": true,
+  "method": "scope",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "status": "oom",
+  "stage": "generation",
+  "error": "CUDA out of memory. Tried to allocate 6.97 GiB. GPU 0 has a total capacity of 23.52 GiB of which 4.21 GiB is free. Including non-PyTorch memory, this process has 19.29 GiB memory in use. Of the allocated memory 18.75 GiB is allocated by PyTorch, and 133.23 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)",
+  "traceback": "Traceback (most recent call last):\n  File \"/root/KV/PhaseKV/official_llama/benchmark.py\", line 140, in worker\n    result = generate(model, method, options, sample)\n  File \"/root/KV/PhaseKV/official_llama/benchmark_generate.py\", line 31, in generate\n    logits, cache, _ = forward(model, ids, cache, 0, method)\n  File \"/root/KV/PhaseKV/official_llama/native_runtime.py\", line 161, in forward\n    result = model.model(input_ids=ids, past_key_values=cache, position_ids=positions[None],\n  File \"/data/phasekv-native-venv/lib/python3.10/site-packages/torch/nn/modules/module.py\", line 1736, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n  File \"/data/phasekv-native-venv/lib/python3.10/site-packages/torch/nn/modules/module.py\", line 1747, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/data/phasekv-native-venv/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py\", line 945, in forward\n    layer_outputs = decoder_layer(\n  File \"/data/phasekv-native-venv/lib/python3.10/site-packages/torch/nn/modules/module.py\", line 1736, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n  File \"/data/phasekv-native-venv/lib/python3.10/site-packages/torch/nn/modules/module.py\", line 1747, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/data/phasekv-native-venv/lib/python3.10/site-packages/transformers/models/llama/modeling_llama.py\", line 676, in forward\n    hidden_states, self_attn_weights, present_key_value = self.self_attn(\n  File \"/data/phasekv-native-venv/lib/python3.10/site-packages/torch/nn/modules/module.py\", line 1736, in _wrapped_call_impl\n    return self._call_impl(*args, **kwargs)\n  File \"/data/phasekv-native-venv/lib/python3.10/site-packages/torch/nn/modules/module.py\", line 1747, in _call_impl\n    return forward_call(*args, **kwargs)\n  File \"/root/KV/PhaseKV/official_llama/runtime/SCOPE/model/llama_model.py\", line 1170, in llama_flash_attn2_forward_H2O\n    key_states_compress, value_states_compress = self.kv_cluster.update_kv(key_states, query_states, value_states, attention_mask, self.num_key_value_groups)\n  File \"/root/KV/PhaseKV/official_llama/runtime/SCOPE/model/kv_utils.py\", line 691, in update_kv\n    attn_weights = nn.functional.softmax(attn_weights, dim=-1, dtype=torch.float32).to(query_states.dtype)\n  File \"/data/phasekv-native-venv/lib/python3.10/site-packages/torch/nn/functional.py\", line 2142, in softmax\n    ret = input.softmax(dim, dtype=dtype)\ntorch.OutOfMemoryError: CUDA out of memory. Tried to allocate 6.97 GiB. GPU 0 has a total capacity of 23.52 GiB of which 4.21 GiB is free. Including non-PyTorch memory, this process has 19.29 GiB memory in use. Of the allocated memory 18.75 GiB is allocated by PyTorch, and 133.23 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)\n",
+  "finished_at": 1793306879.5898015
+}

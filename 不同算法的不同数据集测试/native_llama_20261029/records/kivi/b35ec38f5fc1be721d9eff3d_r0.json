@@ -1,0 +1,135 @@
+{
+  "id": "longbench/multifieldqa_en/126/8192",
+  "suite": "longbench",
+  "task": "multifieldqa_en",
+  "document_id": "126/8192",
+  "cluster_id": "multifieldqa_en/e47a4d74063733dc34fd0f251dc308158e941a1c059c46fd51a0c3e9b91fe935",
+  "length_budget": 8192,
+  "input_sha256": "910ff0aeb3af7bb6eca4bfafb96bfcef30a3dff91398a7fe5c120ef700c2df32",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": "heldout",
+  "heldout_from_available_history": true,
+  "method": "kivi",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 5335,
+  "output_tokens": 43,
+  "output_ids": [
+    791,
+    1925,
+    5357,
+    315,
+    279,
+    3495,
+    5684,
+    374,
+    311,
+    8417,
+    279,
+    11499,
+    14812,
+    2427,
+    300,
+    9320,
+    304,
+    279,
+    3831,
+    59086,
+    17942,
+    315,
+    55372,
+    1229,
+    6620,
+    11,
+    11951,
+    279,
+    1176,
+    24747,
+    9320,
+    505,
+    264,
+    6962,
+    315,
+    1047,
+    26692,
+    311,
+    264,
+    11499,
+    10474,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 0.8030468500219285,
+  "prefill_and_compress_s": 0.8030468500219285,
+  "decode_s": 2.086803311947733,
+  "decode_tokens_per_s": 20.126477545600114,
+  "generation_wall_s_including_instrumentation": 2.8909947192296386,
+  "prefill_storage": {
+    "physical_bytes": 228208640,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 228208640,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 226054144,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 226054144,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "prefill_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 5335
+  },
+  "final_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 5377
+  },
+  "peak_allocated_bytes": 16933821952,
+  "peak_reserved_bytes": 17267949568,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 42,
+      "seconds": 2.086803311947733,
+      "tokens": 42
+    }
+  ],
+  "effective_options": {
+    "k_bits": 4,
+    "v_bits": 4,
+    "group_size": 32,
+    "residual_length": 128,
+    "use_flash": true
+  },
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 35.294117647058826,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "The main focus of the research paper is to determine the nuclear liquid-gas transition in the strong coupling regime of lattice QCD, specifically the first-order transition from a gas of hadrons to a nuclear phase.",
+  "gpu_before": {
+    "time": 1793297591.1060193,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 16002 MiB, 12 %, 52, 265.01 W, 2655 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793297594.0873122,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 16896 MiB, 46 %, 53, 172.20 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793297594.0873163
+}

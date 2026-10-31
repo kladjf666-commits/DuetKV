@@ -1,0 +1,129 @@
+{
+  "id": "ruler/cwe/2/16384",
+  "suite": "ruler",
+  "task": "cwe",
+  "document_id": "2/16384",
+  "cluster_id": "cwe/2",
+  "length_budget": 16384,
+  "input_sha256": "041c54f9cde01390606b22a6daafd9b4d83c54c61cefae270e1efc254f15fd52",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": null,
+  "heldout_from_available_history": null,
+  "method": "snapkv",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 16234,
+  "output_tokens": 42,
+  "output_ids": [
+    220,
+    16,
+    13,
+    1841,
+    466,
+    220,
+    17,
+    13,
+    4299,
+    220,
+    18,
+    13,
+    9417,
+    220,
+    19,
+    13,
+    9417,
+    220,
+    20,
+    13,
+    9417,
+    220,
+    21,
+    13,
+    9417,
+    220,
+    22,
+    13,
+    9417,
+    220,
+    23,
+    13,
+    9417,
+    220,
+    24,
+    13,
+    9417,
+    220,
+    605,
+    13,
+    9417,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 2.375153392087668,
+  "prefill_and_compress_s": 2.375153392087668,
+  "decode_s": 1.157503467053175,
+  "decode_tokens_per_s": 35.42106021019502,
+  "generation_wall_s_including_instrumentation": 3.533183426130563,
+  "prefill_storage": {
+    "physical_bytes": 1073741824,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1073741824,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 1095237632,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 1095237632,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 2048,
+    "stored_heads": 32
+  },
+  "final_trace": {
+    "physical_tokens": 2089,
+    "stored_heads": 32
+  },
+  "peak_allocated_bytes": 19080108544,
+  "peak_reserved_bytes": 19925041152,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 41,
+      "seconds": 1.157503467053175,
+      "tokens": 41
+    }
+  ],
+  "effective_options": {
+    "max_capacity_prompt": 2048,
+    "window_size": 32,
+    "kernel_size": 7,
+    "pooling": "maxpool"
+  },
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 30.0,
+  "metric": "official_string_match_all",
+  "status": "ok",
+  "prediction": " 1. carter 2. click 3. episode 4. episode 5. episode 6. episode 7. episode 8. episode 9. episode 10. episode",
+  "gpu_before": {
+    "time": 1793316969.4039366,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15896 MiB, 32 %, 52, 208.83 W, 2670 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793316973.0274239,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 19432 MiB, 78 %, 58, 268.79 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793316973.027428
+}

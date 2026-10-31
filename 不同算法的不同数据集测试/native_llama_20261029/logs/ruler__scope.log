@@ -1,0 +1,905 @@
+Loading ONE model for scope/ruler; 384 records pending
+You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]
+Loading checkpoint shards:  25%|██▌       | 1/4 [00:41<02:04, 41.37s/it]
+Loading checkpoint shards:  50%|█████     | 2/4 [01:29<01:30, 45.08s/it]
+Loading checkpoint shards:  75%|███████▌  | 3/4 [02:19<00:47, 47.40s/it]
+Loading checkpoint shards: 100%|██████████| 4/4 [02:26<00:00, 31.63s/it]
+Loading checkpoint shards: 100%|██████████| 4/4 [02:26<00:00, 36.67s/it]
+CASE 1/384 scope ruler/niah_multikey_1/0/4096 repeat=0
+[scope/ruler/niah_multikey_1/0/4096] 7/128 tokens
+RESULT ok: ruler/niah_multikey_1/0/4096 score=100.0 decode=26.402324366456497 token/s
+CASE 2/384 scope ruler/niah_multikey_1/1/4096 repeat=0
+[scope/ruler/niah_multikey_1/1/4096] 6/128 tokens
+RESULT ok: ruler/niah_multikey_1/1/4096 score=100.0 decode=28.986313615366747 token/s
+CASE 3/384 scope ruler/niah_multikey_1/2/4096 repeat=0
+[scope/ruler/niah_multikey_1/2/4096] 6/128 tokens
+RESULT ok: ruler/niah_multikey_1/2/4096 score=100.0 decode=28.55849538524447 token/s
+CASE 4/384 scope ruler/niah_multikey_1/3/4096 repeat=0
+[scope/ruler/niah_multikey_1/3/4096] 6/128 tokens
+RESULT ok: ruler/niah_multikey_1/3/4096 score=100.0 decode=29.069090738936527 token/s
+CASE 5/384 scope ruler/niah_multikey_1/4/4096 repeat=0
+[scope/ruler/niah_multikey_1/4/4096] 7/128 tokens
+RESULT ok: ruler/niah_multikey_1/4/4096 score=100.0 decode=29.068976771738917 token/s
+CASE 6/384 scope ruler/niah_multikey_1/5/4096 repeat=0
+[scope/ruler/niah_multikey_1/5/4096] 7/128 tokens
+RESULT ok: ruler/niah_multikey_1/5/4096 score=100.0 decode=28.984393923160155 token/s
+CASE 7/384 scope ruler/niah_multikey_1/6/4096 repeat=0
+[scope/ruler/niah_multikey_1/6/4096] 7/128 tokens
+RESULT ok: ruler/niah_multikey_1/6/4096 score=100.0 decode=29.04894272349635 token/s
+CASE 8/384 scope ruler/niah_multikey_1/7/4096 repeat=0
+[scope/ruler/niah_multikey_1/7/4096] 7/128 tokens
+RESULT ok: ruler/niah_multikey_1/7/4096 score=100.0 decode=29.149167372409163 token/s
+CASE 9/384 scope ruler/niah_multikey_1/8/4096 repeat=0
+[scope/ruler/niah_multikey_1/8/4096] 6/128 tokens
+RESULT ok: ruler/niah_multikey_1/8/4096 score=100.0 decode=28.524242987192725 token/s
+CASE 10/384 scope ruler/niah_multikey_1/9/4096 repeat=0
+[scope/ruler/niah_multikey_1/9/4096] 7/128 tokens
+RESULT ok: ruler/niah_multikey_1/9/4096 score=100.0 decode=28.64165058218827 token/s
+CASE 11/384 scope ruler/niah_multikey_1/10/4096 repeat=0
+[scope/ruler/niah_multikey_1/10/4096] 7/128 tokens
+RESULT ok: ruler/niah_multikey_1/10/4096 score=100.0 decode=28.938783717712933 token/s
+CASE 12/384 scope ruler/niah_multikey_1/11/4096 repeat=0
+[scope/ruler/niah_multikey_1/11/4096] 5/128 tokens
+RESULT ok: ruler/niah_multikey_1/11/4096 score=0.0 decode=28.832893427524457 token/s
+CASE 13/384 scope ruler/niah_multikey_1/12/4096 repeat=0
+[scope/ruler/niah_multikey_1/12/4096] 7/128 tokens
+RESULT ok: ruler/niah_multikey_1/12/4096 score=100.0 decode=29.380812120424977 token/s
+CASE 14/384 scope ruler/niah_multikey_1/13/4096 repeat=0
+[scope/ruler/niah_multikey_1/13/4096] 6/128 tokens
+RESULT ok: ruler/niah_multikey_1/13/4096 score=0.0 decode=29.1348056271871 token/s
+CASE 15/384 scope ruler/niah_multikey_1/14/4096 repeat=0
+[scope/ruler/niah_multikey_1/14/4096] 7/128 tokens
+RESULT ok: ruler/niah_multikey_1/14/4096 score=100.0 decode=29.029711483700588 token/s
+CASE 16/384 scope ruler/niah_multikey_1/15/4096 repeat=0
+[scope/ruler/niah_multikey_1/15/4096] 7/128 tokens
+RESULT ok: ruler/niah_multikey_1/15/4096 score=100.0 decode=29.191977023924405 token/s
+CASE 17/384 scope ruler/niah_multikey_1/16/4096 repeat=0
+[scope/ruler/niah_multikey_1/16/4096] 7/128 tokens
+RESULT ok: ruler/niah_multikey_1/16/4096 score=100.0 decode=28.877096094774323 token/s
+CASE 18/384 scope ruler/niah_multikey_1/17/4096 repeat=0
+[scope/ruler/niah_multikey_1/17/4096] 7/128 tokens
+RESULT ok: ruler/niah_multikey_1/17/4096 score=100.0 decode=29.115082039841997 token/s
+CASE 19/384 scope ruler/niah_multikey_1/18/4096 repeat=0
+[scope/ruler/niah_multikey_1/18/4096] 6/128 tokens
+RESULT ok: ruler/niah_multikey_1/18/4096 score=100.0 decode=29.0713553681057 token/s
+CASE 20/384 scope ruler/niah_multikey_1/19/4096 repeat=0
+[scope/ruler/niah_multikey_1/19/4096] 7/128 tokens
+RESULT ok: ruler/niah_multikey_1/19/4096 score=100.0 decode=28.71395587614366 token/s
+CASE 21/384 scope ruler/niah_multikey_1/20/4096 repeat=0
+[scope/ruler/niah_multikey_1/20/4096] 7/128 tokens
+RESULT ok: ruler/niah_multikey_1/20/4096 score=100.0 decode=28.664503001151825 token/s
+CASE 22/384 scope ruler/niah_multikey_1/21/4096 repeat=0
+[scope/ruler/niah_multikey_1/21/4096] 7/128 tokens
+RESULT ok: ruler/niah_multikey_1/21/4096 score=100.0 decode=29.052441853896404 token/s
+CASE 23/384 scope ruler/niah_multikey_1/22/4096 repeat=0
+[scope/ruler/niah_multikey_1/22/4096] 7/128 tokens
+RESULT ok: ruler/niah_multikey_1/22/4096 score=100.0 decode=29.47547870274761 token/s
+CASE 24/384 scope ruler/niah_multikey_1/23/4096 repeat=0
+[scope/ruler/niah_multikey_1/23/4096] 7/128 tokens
+RESULT ok: ruler/niah_multikey_1/23/4096 score=100.0 decode=29.215717352994403 token/s
+CASE 25/384 scope ruler/niah_multikey_1/24/4096 repeat=0
+[scope/ruler/niah_multikey_1/24/4096] 7/128 tokens
+RESULT ok: ruler/niah_multikey_1/24/4096 score=100.0 decode=29.065168257746922 token/s
+CASE 26/384 scope ruler/niah_multikey_1/25/4096 repeat=0
+[scope/ruler/niah_multikey_1/25/4096] 7/128 tokens
+RESULT ok: ruler/niah_multikey_1/25/4096 score=100.0 decode=29.127689032042632 token/s
+CASE 27/384 scope ruler/niah_multikey_1/26/4096 repeat=0
+[scope/ruler/niah_multikey_1/26/4096] 7/128 tokens
+RESULT ok: ruler/niah_multikey_1/26/4096 score=100.0 decode=29.301816955033647 token/s
+CASE 28/384 scope ruler/niah_multikey_1/27/4096 repeat=0
+[scope/ruler/niah_multikey_1/27/4096] 7/128 tokens
+RESULT ok: ruler/niah_multikey_1/27/4096 score=100.0 decode=29.21396011583209 token/s
+CASE 29/384 scope ruler/niah_multikey_1/28/4096 repeat=0
+[scope/ruler/niah_multikey_1/28/4096] 7/128 tokens
+RESULT ok: ruler/niah_multikey_1/28/4096 score=100.0 decode=29.236627849122286 token/s
+CASE 30/384 scope ruler/niah_multikey_1/29/4096 repeat=0
+[scope/ruler/niah_multikey_1/29/4096] 7/128 tokens
+RESULT ok: ruler/niah_multikey_1/29/4096 score=100.0 decode=29.407474694778045 token/s
+CASE 31/384 scope ruler/niah_multikey_1/30/4096 repeat=0
+[scope/ruler/niah_multikey_1/30/4096] 7/128 tokens
+RESULT ok: ruler/niah_multikey_1/30/4096 score=100.0 decode=29.266271647958646 token/s
+CASE 32/384 scope ruler/niah_multikey_1/31/4096 repeat=0
+[scope/ruler/niah_multikey_1/31/4096] 7/128 tokens
+RESULT ok: ruler/niah_multikey_1/31/4096 score=100.0 decode=29.15268633800843 token/s
+CASE 33/384 scope ruler/niah_multikey_1/0/8192 repeat=0
+RESULT oom: ruler/niah_multikey_1/0/8192 score=None decode=None token/s
+CASE 34/384 scope ruler/niah_multikey_1/1/8192 repeat=0
+RESULT oom: ruler/niah_multikey_1/1/8192 score=None decode=None token/s
+CASE 35/384 scope ruler/niah_multikey_1/2/8192 repeat=0
+RESULT oom: ruler/niah_multikey_1/2/8192 score=None decode=None token/s
+CASE 36/384 scope ruler/niah_multikey_1/3/8192 repeat=0
+RESULT oom: ruler/niah_multikey_1/3/8192 score=None decode=None token/s
+CASE 37/384 scope ruler/niah_multikey_1/4/8192 repeat=0
+RESULT oom: ruler/niah_multikey_1/4/8192 score=None decode=None token/s
+CASE 38/384 scope ruler/niah_multikey_1/5/8192 repeat=0
+RESULT oom: ruler/niah_multikey_1/5/8192 score=None decode=None token/s
+CASE 39/384 scope ruler/niah_multikey_1/6/8192 repeat=0
+RESULT oom: ruler/niah_multikey_1/6/8192 score=None decode=None token/s
+CASE 40/384 scope ruler/niah_multikey_1/7/8192 repeat=0
+RESULT oom: ruler/niah_multikey_1/7/8192 score=None decode=None token/s
+CASE 41/384 scope ruler/niah_multikey_1/8/8192 repeat=0
+RESULT oom: ruler/niah_multikey_1/8/8192 score=None decode=None token/s
+CASE 42/384 scope ruler/niah_multikey_1/9/8192 repeat=0
+RESULT oom: ruler/niah_multikey_1/9/8192 score=None decode=None token/s
+CASE 43/384 scope ruler/niah_multikey_1/10/8192 repeat=0
+RESULT oom: ruler/niah_multikey_1/10/8192 score=None decode=None token/s
+CASE 44/384 scope ruler/niah_multikey_1/11/8192 repeat=0
+RESULT oom: ruler/niah_multikey_1/11/8192 score=None decode=None token/s
+CASE 45/384 scope ruler/niah_multikey_1/12/8192 repeat=0
+RESULT oom: ruler/niah_multikey_1/12/8192 score=None decode=None token/s
+CASE 46/384 scope ruler/niah_multikey_1/13/8192 repeat=0
+RESULT oom: ruler/niah_multikey_1/13/8192 score=None decode=None token/s
+CASE 47/384 scope ruler/niah_multikey_1/14/8192 repeat=0
+RESULT oom: ruler/niah_multikey_1/14/8192 score=None decode=None token/s
+CASE 48/384 scope ruler/niah_multikey_1/15/8192 repeat=0
+RESULT oom: ruler/niah_multikey_1/15/8192 score=None decode=None token/s
+CASE 49/384 scope ruler/niah_multikey_1/16/8192 repeat=0
+RESULT oom: ruler/niah_multikey_1/16/8192 score=None decode=None token/s
+CASE 50/384 scope ruler/niah_multikey_1/17/8192 repeat=0
+RESULT oom: ruler/niah_multikey_1/17/8192 score=None decode=None token/s
+CASE 51/384 scope ruler/niah_multikey_1/18/8192 repeat=0
+RESULT oom: ruler/niah_multikey_1/18/8192 score=None decode=None token/s
+CASE 52/384 scope ruler/niah_multikey_1/19/8192 repeat=0
+RESULT oom: ruler/niah_multikey_1/19/8192 score=None decode=None token/s
+CASE 53/384 scope ruler/niah_multikey_1/20/8192 repeat=0
+RESULT oom: ruler/niah_multikey_1/20/8192 score=None decode=None token/s
+CASE 54/384 scope ruler/niah_multikey_1/21/8192 repeat=0
+RESULT oom: ruler/niah_multikey_1/21/8192 score=None decode=None token/s
+CASE 55/384 scope ruler/niah_multikey_1/22/8192 repeat=0
+RESULT oom: ruler/niah_multikey_1/22/8192 score=None decode=None token/s
+CASE 56/384 scope ruler/niah_multikey_1/23/8192 repeat=0
+RESULT oom: ruler/niah_multikey_1/23/8192 score=None decode=None token/s
+CASE 57/384 scope ruler/niah_multikey_1/24/8192 repeat=0
+RESULT oom: ruler/niah_multikey_1/24/8192 score=None decode=None token/s
+CASE 58/384 scope ruler/niah_multikey_1/25/8192 repeat=0
+RESULT oom: ruler/niah_multikey_1/25/8192 score=None decode=None token/s
+CASE 59/384 scope ruler/niah_multikey_1/26/8192 repeat=0
+RESULT oom: ruler/niah_multikey_1/26/8192 score=None decode=None token/s
+CASE 60/384 scope ruler/niah_multikey_1/27/8192 repeat=0
+RESULT oom: ruler/niah_multikey_1/27/8192 score=None decode=None token/s
+CASE 61/384 scope ruler/niah_multikey_1/28/8192 repeat=0
+RESULT oom: ruler/niah_multikey_1/28/8192 score=None decode=None token/s
+CASE 62/384 scope ruler/niah_multikey_1/29/8192 repeat=0
+RESULT oom: ruler/niah_multikey_1/29/8192 score=None decode=None token/s
+CASE 63/384 scope ruler/niah_multikey_1/30/8192 repeat=0
+RESULT oom: ruler/niah_multikey_1/30/8192 score=None decode=None token/s
+CASE 64/384 scope ruler/niah_multikey_1/31/8192 repeat=0
+RESULT oom: ruler/niah_multikey_1/31/8192 score=None decode=None token/s
+CASE 65/384 scope ruler/niah_multikey_1/0/16384 repeat=0
+RESULT oom: ruler/niah_multikey_1/0/16384 score=None decode=None token/s
+CASE 66/384 scope ruler/niah_multikey_1/1/16384 repeat=0
+RESULT oom: ruler/niah_multikey_1/1/16384 score=None decode=None token/s
+CASE 67/384 scope ruler/niah_multikey_1/2/16384 repeat=0
+RESULT oom: ruler/niah_multikey_1/2/16384 score=None decode=None token/s
+CASE 68/384 scope ruler/niah_multikey_1/3/16384 repeat=0
+RESULT oom: ruler/niah_multikey_1/3/16384 score=None decode=None token/s
+CASE 69/384 scope ruler/niah_multikey_1/4/16384 repeat=0
+RESULT oom: ruler/niah_multikey_1/4/16384 score=None decode=None token/s
+CASE 70/384 scope ruler/niah_multikey_1/5/16384 repeat=0
+RESULT oom: ruler/niah_multikey_1/5/16384 score=None decode=None token/s
+CASE 71/384 scope ruler/niah_multikey_1/6/16384 repeat=0
+RESULT oom: ruler/niah_multikey_1/6/16384 score=None decode=None token/s
+CASE 72/384 scope ruler/niah_multikey_1/7/16384 repeat=0
+RESULT oom: ruler/niah_multikey_1/7/16384 score=None decode=None token/s
+CASE 73/384 scope ruler/niah_multikey_1/8/16384 repeat=0
+RESULT oom: ruler/niah_multikey_1/8/16384 score=None decode=None token/s
+CASE 74/384 scope ruler/niah_multikey_1/9/16384 repeat=0
+RESULT oom: ruler/niah_multikey_1/9/16384 score=None decode=None token/s
+CASE 75/384 scope ruler/niah_multikey_1/10/16384 repeat=0
+RESULT oom: ruler/niah_multikey_1/10/16384 score=None decode=None token/s
+CASE 76/384 scope ruler/niah_multikey_1/11/16384 repeat=0
+RESULT oom: ruler/niah_multikey_1/11/16384 score=None decode=None token/s
+CASE 77/384 scope ruler/niah_multikey_1/12/16384 repeat=0
+RESULT oom: ruler/niah_multikey_1/12/16384 score=None decode=None token/s
+CASE 78/384 scope ruler/niah_multikey_1/13/16384 repeat=0
+RESULT oom: ruler/niah_multikey_1/13/16384 score=None decode=None token/s
+CASE 79/384 scope ruler/niah_multikey_1/14/16384 repeat=0
+RESULT oom: ruler/niah_multikey_1/14/16384 score=None decode=None token/s
+CASE 80/384 scope ruler/niah_multikey_1/15/16384 repeat=0
+RESULT oom: ruler/niah_multikey_1/15/16384 score=None decode=None token/s
+CASE 81/384 scope ruler/niah_multikey_1/16/16384 repeat=0
+RESULT oom: ruler/niah_multikey_1/16/16384 score=None decode=None token/s
+CASE 82/384 scope ruler/niah_multikey_1/17/16384 repeat=0
+RESULT oom: ruler/niah_multikey_1/17/16384 score=None decode=None token/s
+CASE 83/384 scope ruler/niah_multikey_1/18/16384 repeat=0
+RESULT oom: ruler/niah_multikey_1/18/16384 score=None decode=None token/s
+CASE 84/384 scope ruler/niah_multikey_1/19/16384 repeat=0
+RESULT oom: ruler/niah_multikey_1/19/16384 score=None decode=None token/s
+CASE 85/384 scope ruler/niah_multikey_1/20/16384 repeat=0
+RESULT oom: ruler/niah_multikey_1/20/16384 score=None decode=None token/s
+CASE 86/384 scope ruler/niah_multikey_1/21/16384 repeat=0
+RESULT oom: ruler/niah_multikey_1/21/16384 score=None decode=None token/s
+CASE 87/384 scope ruler/niah_multikey_1/22/16384 repeat=0
+RESULT oom: ruler/niah_multikey_1/22/16384 score=None decode=None token/s
+CASE 88/384 scope ruler/niah_multikey_1/23/16384 repeat=0
+RESULT oom: ruler/niah_multikey_1/23/16384 score=None decode=None token/s
+CASE 89/384 scope ruler/niah_multikey_1/24/16384 repeat=0
+RESULT oom: ruler/niah_multikey_1/24/16384 score=None decode=None token/s
+CASE 90/384 scope ruler/niah_multikey_1/25/16384 repeat=0
+RESULT oom: ruler/niah_multikey_1/25/16384 score=None decode=None token/s
+CASE 91/384 scope ruler/niah_multikey_1/26/16384 repeat=0
+RESULT oom: ruler/niah_multikey_1/26/16384 score=None decode=None token/s
+CASE 92/384 scope ruler/niah_multikey_1/27/16384 repeat=0
+RESULT oom: ruler/niah_multikey_1/27/16384 score=None decode=None token/s
+CASE 93/384 scope ruler/niah_multikey_1/28/16384 repeat=0
+RESULT oom: ruler/niah_multikey_1/28/16384 score=None decode=None token/s
+CASE 94/384 scope ruler/niah_multikey_1/29/16384 repeat=0
+RESULT oom: ruler/niah_multikey_1/29/16384 score=None decode=None token/s
+CASE 95/384 scope ruler/niah_multikey_1/30/16384 repeat=0
+RESULT oom: ruler/niah_multikey_1/30/16384 score=None decode=None token/s
+CASE 96/384 scope ruler/niah_multikey_1/31/16384 repeat=0
+RESULT oom: ruler/niah_multikey_1/31/16384 score=None decode=None token/s
+CASE 97/384 scope ruler/niah_multivalue/0/4096 repeat=0
+[scope/ruler/niah_multivalue/0/4096] 29/128 tokens
+RESULT ok: ruler/niah_multivalue/0/4096 score=100.0 decode=28.902318645532766 token/s
+CASE 98/384 scope ruler/niah_multivalue/1/4096 repeat=0
+[scope/ruler/niah_multivalue/1/4096] 22/128 tokens
+RESULT ok: ruler/niah_multivalue/1/4096 score=75.0 decode=29.32279477513085 token/s
+CASE 99/384 scope ruler/niah_multivalue/2/4096 repeat=0
+[scope/ruler/niah_multivalue/2/4096] 21/128 tokens
+RESULT ok: ruler/niah_multivalue/2/4096 score=50.0 decode=29.291058842276154 token/s
+CASE 100/384 scope ruler/niah_multivalue/3/4096 repeat=0
+[scope/ruler/niah_multivalue/3/4096] 29/128 tokens
+RESULT ok: ruler/niah_multivalue/3/4096 score=100.0 decode=29.247568945130258 token/s
+CASE 101/384 scope ruler/niah_multivalue/4/4096 repeat=0
+[scope/ruler/niah_multivalue/4/4096] 29/128 tokens
+RESULT ok: ruler/niah_multivalue/4/4096 score=100.0 decode=28.9679218295395 token/s
+CASE 102/384 scope ruler/niah_multivalue/5/4096 repeat=0
+[scope/ruler/niah_multivalue/5/4096] 29/128 tokens
+RESULT ok: ruler/niah_multivalue/5/4096 score=100.0 decode=29.253725629225478 token/s
+CASE 103/384 scope ruler/niah_multivalue/6/4096 repeat=0
+[scope/ruler/niah_multivalue/6/4096] 29/128 tokens
+RESULT ok: ruler/niah_multivalue/6/4096 score=100.0 decode=29.269186265867205 token/s
+CASE 104/384 scope ruler/niah_multivalue/7/4096 repeat=0
+[scope/ruler/niah_multivalue/7/4096] 29/128 tokens
+RESULT ok: ruler/niah_multivalue/7/4096 score=100.0 decode=29.27823409159541 token/s
+CASE 105/384 scope ruler/niah_multivalue/8/4096 repeat=0
+[scope/ruler/niah_multivalue/8/4096] 29/128 tokens
+RESULT ok: ruler/niah_multivalue/8/4096 score=100.0 decode=28.654339521370453 token/s
+CASE 106/384 scope ruler/niah_multivalue/9/4096 repeat=0
+[scope/ruler/niah_multivalue/9/4096] 29/128 tokens
+RESULT ok: ruler/niah_multivalue/9/4096 score=100.0 decode=29.44781046608992 token/s
+CASE 107/384 scope ruler/niah_multivalue/10/4096 repeat=0
+[scope/ruler/niah_multivalue/10/4096] 29/128 tokens
+RESULT ok: ruler/niah_multivalue/10/4096 score=100.0 decode=29.385811514931948 token/s
+CASE 108/384 scope ruler/niah_multivalue/11/4096 repeat=0
+[scope/ruler/niah_multivalue/11/4096] 29/128 tokens
+RESULT ok: ruler/niah_multivalue/11/4096 score=100.0 decode=29.348300419977377 token/s
+CASE 109/384 scope ruler/niah_multivalue/12/4096 repeat=0
+[scope/ruler/niah_multivalue/12/4096] 29/128 tokens
+RESULT ok: ruler/niah_multivalue/12/4096 score=100.0 decode=29.015915747635628 token/s
+CASE 110/384 scope ruler/niah_multivalue/13/4096 repeat=0
+[scope/ruler/niah_multivalue/13/4096] 22/128 tokens
+RESULT ok: ruler/niah_multivalue/13/4096 score=50.0 decode=29.3499187186706 token/s
+CASE 111/384 scope ruler/niah_multivalue/14/4096 repeat=0
+[scope/ruler/niah_multivalue/14/4096] 29/128 tokens
+RESULT ok: ruler/niah_multivalue/14/4096 score=100.0 decode=29.015689591910135 token/s
+CASE 112/384 scope ruler/niah_multivalue/15/4096 repeat=0
+[scope/ruler/niah_multivalue/15/4096] 29/128 tokens
+RESULT ok: ruler/niah_multivalue/15/4096 score=100.0 decode=29.15666921727479 token/s
+CASE 113/384 scope ruler/niah_multivalue/16/4096 repeat=0
+[scope/ruler/niah_multivalue/16/4096] 36/128 tokens
+RESULT ok: ruler/niah_multivalue/16/4096 score=100.0 decode=29.268733737857644 token/s
+CASE 114/384 scope ruler/niah_multivalue/17/4096 repeat=0
+[scope/ruler/niah_multivalue/17/4096] 29/128 tokens
+RESULT ok: ruler/niah_multivalue/17/4096 score=100.0 decode=29.170816211212156 token/s
+CASE 115/384 scope ruler/niah_multivalue/18/4096 repeat=0
+[scope/ruler/niah_multivalue/18/4096] 29/128 tokens
+RESULT ok: ruler/niah_multivalue/18/4096 score=100.0 decode=29.095144919488874 token/s
+CASE 116/384 scope ruler/niah_multivalue/19/4096 repeat=0
+[scope/ruler/niah_multivalue/19/4096] 29/128 tokens
+RESULT ok: ruler/niah_multivalue/19/4096 score=100.0 decode=29.375768129423392 token/s
+CASE 117/384 scope ruler/niah_multivalue/20/4096 repeat=0
+[scope/ruler/niah_multivalue/20/4096] 29/128 tokens
+RESULT ok: ruler/niah_multivalue/20/4096 score=100.0 decode=29.236975648566087 token/s
+CASE 118/384 scope ruler/niah_multivalue/21/4096 repeat=0
+[scope/ruler/niah_multivalue/21/4096] 29/128 tokens
+RESULT ok: ruler/niah_multivalue/21/4096 score=100.0 decode=29.350610863788475 token/s
+CASE 119/384 scope ruler/niah_multivalue/22/4096 repeat=0
+[scope/ruler/niah_multivalue/22/4096] 29/128 tokens
+RESULT ok: ruler/niah_multivalue/22/4096 score=100.0 decode=29.508765191989767 token/s
+CASE 120/384 scope ruler/niah_multivalue/23/4096 repeat=0
+[scope/ruler/niah_multivalue/23/4096] 29/128 tokens
+RESULT ok: ruler/niah_multivalue/23/4096 score=100.0 decode=29.283250117248095 token/s
+CASE 121/384 scope ruler/niah_multivalue/24/4096 repeat=0
+[scope/ruler/niah_multivalue/24/4096] 29/128 tokens
+RESULT ok: ruler/niah_multivalue/24/4096 score=100.0 decode=29.316113377133323 token/s
+CASE 122/384 scope ruler/niah_multivalue/25/4096 repeat=0
+[scope/ruler/niah_multivalue/25/4096] 22/128 tokens
+RESULT ok: ruler/niah_multivalue/25/4096 score=75.0 decode=28.995811392549562 token/s
+CASE 123/384 scope ruler/niah_multivalue/26/4096 repeat=0
+[scope/ruler/niah_multivalue/26/4096] 29/128 tokens
+RESULT ok: ruler/niah_multivalue/26/4096 score=100.0 decode=29.261920565288275 token/s
+CASE 124/384 scope ruler/niah_multivalue/27/4096 repeat=0
+[scope/ruler/niah_multivalue/27/4096] 29/128 tokens
+RESULT ok: ruler/niah_multivalue/27/4096 score=100.0 decode=29.300390198504047 token/s
+CASE 125/384 scope ruler/niah_multivalue/28/4096 repeat=0
+[scope/ruler/niah_multivalue/28/4096] 29/128 tokens
+RESULT ok: ruler/niah_multivalue/28/4096 score=100.0 decode=29.319356099693977 token/s
+CASE 126/384 scope ruler/niah_multivalue/29/4096 repeat=0
+[scope/ruler/niah_multivalue/29/4096] 29/128 tokens
+RESULT ok: ruler/niah_multivalue/29/4096 score=100.0 decode=29.30634187614229 token/s
+CASE 127/384 scope ruler/niah_multivalue/30/4096 repeat=0
+[scope/ruler/niah_multivalue/30/4096] 29/128 tokens
+RESULT ok: ruler/niah_multivalue/30/4096 score=100.0 decode=29.06859018126776 token/s
+CASE 128/384 scope ruler/niah_multivalue/31/4096 repeat=0
+[scope/ruler/niah_multivalue/31/4096] 28/128 tokens
+RESULT ok: ruler/niah_multivalue/31/4096 score=75.0 decode=28.705201680280073 token/s
+CASE 129/384 scope ruler/niah_multivalue/0/8192 repeat=0
+RESULT oom: ruler/niah_multivalue/0/8192 score=None decode=None token/s
+CASE 130/384 scope ruler/niah_multivalue/1/8192 repeat=0
+RESULT oom: ruler/niah_multivalue/1/8192 score=None decode=None token/s
+CASE 131/384 scope ruler/niah_multivalue/2/8192 repeat=0
+RESULT oom: ruler/niah_multivalue/2/8192 score=None decode=None token/s
+CASE 132/384 scope ruler/niah_multivalue/3/8192 repeat=0
+RESULT oom: ruler/niah_multivalue/3/8192 score=None decode=None token/s
+CASE 133/384 scope ruler/niah_multivalue/4/8192 repeat=0
+RESULT oom: ruler/niah_multivalue/4/8192 score=None decode=None token/s
+CASE 134/384 scope ruler/niah_multivalue/5/8192 repeat=0
+RESULT oom: ruler/niah_multivalue/5/8192 score=None decode=None token/s
+CASE 135/384 scope ruler/niah_multivalue/6/8192 repeat=0
+RESULT oom: ruler/niah_multivalue/6/8192 score=None decode=None token/s
+CASE 136/384 scope ruler/niah_multivalue/7/8192 repeat=0
+RESULT oom: ruler/niah_multivalue/7/8192 score=None decode=None token/s
+CASE 137/384 scope ruler/niah_multivalue/8/8192 repeat=0
+RESULT oom: ruler/niah_multivalue/8/8192 score=None decode=None token/s
+CASE 138/384 scope ruler/niah_multivalue/9/8192 repeat=0
+RESULT oom: ruler/niah_multivalue/9/8192 score=None decode=None token/s
+CASE 139/384 scope ruler/niah_multivalue/10/8192 repeat=0
+RESULT oom: ruler/niah_multivalue/10/8192 score=None decode=None token/s
+CASE 140/384 scope ruler/niah_multivalue/11/8192 repeat=0
+RESULT oom: ruler/niah_multivalue/11/8192 score=None decode=None token/s
+CASE 141/384 scope ruler/niah_multivalue/12/8192 repeat=0
+RESULT oom: ruler/niah_multivalue/12/8192 score=None decode=None token/s
+CASE 142/384 scope ruler/niah_multivalue/13/8192 repeat=0
+RESULT oom: ruler/niah_multivalue/13/8192 score=None decode=None token/s
+CASE 143/384 scope ruler/niah_multivalue/14/8192 repeat=0
+RESULT oom: ruler/niah_multivalue/14/8192 score=None decode=None token/s
+CASE 144/384 scope ruler/niah_multivalue/15/8192 repeat=0
+RESULT oom: ruler/niah_multivalue/15/8192 score=None decode=None token/s
+CASE 145/384 scope ruler/niah_multivalue/16/8192 repeat=0
+RESULT oom: ruler/niah_multivalue/16/8192 score=None decode=None token/s
+CASE 146/384 scope ruler/niah_multivalue/17/8192 repeat=0
+RESULT oom: ruler/niah_multivalue/17/8192 score=None decode=None token/s
+CASE 147/384 scope ruler/niah_multivalue/18/8192 repeat=0
+RESULT oom: ruler/niah_multivalue/18/8192 score=None decode=None token/s
+CASE 148/384 scope ruler/niah_multivalue/19/8192 repeat=0
+RESULT oom: ruler/niah_multivalue/19/8192 score=None decode=None token/s
+CASE 149/384 scope ruler/niah_multivalue/20/8192 repeat=0
+RESULT oom: ruler/niah_multivalue/20/8192 score=None decode=None token/s
+CASE 150/384 scope ruler/niah_multivalue/21/8192 repeat=0
+RESULT oom: ruler/niah_multivalue/21/8192 score=None decode=None token/s
+CASE 151/384 scope ruler/niah_multivalue/22/8192 repeat=0
+RESULT oom: ruler/niah_multivalue/22/8192 score=None decode=None token/s
+CASE 152/384 scope ruler/niah_multivalue/23/8192 repeat=0
+RESULT oom: ruler/niah_multivalue/23/8192 score=None decode=None token/s
+CASE 153/384 scope ruler/niah_multivalue/24/8192 repeat=0
+RESULT oom: ruler/niah_multivalue/24/8192 score=None decode=None token/s
+CASE 154/384 scope ruler/niah_multivalue/25/8192 repeat=0
+RESULT oom: ruler/niah_multivalue/25/8192 score=None decode=None token/s
+CASE 155/384 scope ruler/niah_multivalue/26/8192 repeat=0
+RESULT oom: ruler/niah_multivalue/26/8192 score=None decode=None token/s
+CASE 156/384 scope ruler/niah_multivalue/27/8192 repeat=0
+RESULT oom: ruler/niah_multivalue/27/8192 score=None decode=None token/s
+CASE 157/384 scope ruler/niah_multivalue/28/8192 repeat=0
+RESULT oom: ruler/niah_multivalue/28/8192 score=None decode=None token/s
+CASE 158/384 scope ruler/niah_multivalue/29/8192 repeat=0
+RESULT oom: ruler/niah_multivalue/29/8192 score=None decode=None token/s
+CASE 159/384 scope ruler/niah_multivalue/30/8192 repeat=0
+RESULT oom: ruler/niah_multivalue/30/8192 score=None decode=None token/s
+CASE 160/384 scope ruler/niah_multivalue/31/8192 repeat=0
+RESULT oom: ruler/niah_multivalue/31/8192 score=None decode=None token/s
+CASE 161/384 scope ruler/niah_multivalue/0/16384 repeat=0
+RESULT oom: ruler/niah_multivalue/0/16384 score=None decode=None token/s
+CASE 162/384 scope ruler/niah_multivalue/1/16384 repeat=0
+RESULT oom: ruler/niah_multivalue/1/16384 score=None decode=None token/s
+CASE 163/384 scope ruler/niah_multivalue/2/16384 repeat=0
+RESULT oom: ruler/niah_multivalue/2/16384 score=None decode=None token/s
+CASE 164/384 scope ruler/niah_multivalue/3/16384 repeat=0
+RESULT oom: ruler/niah_multivalue/3/16384 score=None decode=None token/s
+CASE 165/384 scope ruler/niah_multivalue/4/16384 repeat=0
+RESULT oom: ruler/niah_multivalue/4/16384 score=None decode=None token/s
+CASE 166/384 scope ruler/niah_multivalue/5/16384 repeat=0
+RESULT oom: ruler/niah_multivalue/5/16384 score=None decode=None token/s
+CASE 167/384 scope ruler/niah_multivalue/6/16384 repeat=0
+RESULT oom: ruler/niah_multivalue/6/16384 score=None decode=None token/s
+CASE 168/384 scope ruler/niah_multivalue/7/16384 repeat=0
+RESULT oom: ruler/niah_multivalue/7/16384 score=None decode=None token/s
+CASE 169/384 scope ruler/niah_multivalue/8/16384 repeat=0
+RESULT oom: ruler/niah_multivalue/8/16384 score=None decode=None token/s
+CASE 170/384 scope ruler/niah_multivalue/9/16384 repeat=0
+RESULT oom: ruler/niah_multivalue/9/16384 score=None decode=None token/s
+CASE 171/384 scope ruler/niah_multivalue/10/16384 repeat=0
+RESULT oom: ruler/niah_multivalue/10/16384 score=None decode=None token/s
+CASE 172/384 scope ruler/niah_multivalue/11/16384 repeat=0
+RESULT oom: ruler/niah_multivalue/11/16384 score=None decode=None token/s
+CASE 173/384 scope ruler/niah_multivalue/12/16384 repeat=0
+RESULT oom: ruler/niah_multivalue/12/16384 score=None decode=None token/s
+CASE 174/384 scope ruler/niah_multivalue/13/16384 repeat=0
+RESULT oom: ruler/niah_multivalue/13/16384 score=None decode=None token/s
+CASE 175/384 scope ruler/niah_multivalue/14/16384 repeat=0
+RESULT oom: ruler/niah_multivalue/14/16384 score=None decode=None token/s
+CASE 176/384 scope ruler/niah_multivalue/15/16384 repeat=0
+RESULT oom: ruler/niah_multivalue/15/16384 score=None decode=None token/s
+CASE 177/384 scope ruler/niah_multivalue/16/16384 repeat=0
+RESULT oom: ruler/niah_multivalue/16/16384 score=None decode=None token/s
+CASE 178/384 scope ruler/niah_multivalue/17/16384 repeat=0
+RESULT oom: ruler/niah_multivalue/17/16384 score=None decode=None token/s
+CASE 179/384 scope ruler/niah_multivalue/18/16384 repeat=0
+RESULT oom: ruler/niah_multivalue/18/16384 score=None decode=None token/s
+CASE 180/384 scope ruler/niah_multivalue/19/16384 repeat=0
+RESULT oom: ruler/niah_multivalue/19/16384 score=None decode=None token/s
+CASE 181/384 scope ruler/niah_multivalue/20/16384 repeat=0
+RESULT oom: ruler/niah_multivalue/20/16384 score=None decode=None token/s
+CASE 182/384 scope ruler/niah_multivalue/21/16384 repeat=0
+RESULT oom: ruler/niah_multivalue/21/16384 score=None decode=None token/s
+CASE 183/384 scope ruler/niah_multivalue/22/16384 repeat=0
+RESULT oom: ruler/niah_multivalue/22/16384 score=None decode=None token/s
+CASE 184/384 scope ruler/niah_multivalue/23/16384 repeat=0
+RESULT oom: ruler/niah_multivalue/23/16384 score=None decode=None token/s
+CASE 185/384 scope ruler/niah_multivalue/24/16384 repeat=0
+RESULT oom: ruler/niah_multivalue/24/16384 score=None decode=None token/s
+CASE 186/384 scope ruler/niah_multivalue/25/16384 repeat=0
+RESULT oom: ruler/niah_multivalue/25/16384 score=None decode=None token/s
+CASE 187/384 scope ruler/niah_multivalue/26/16384 repeat=0
+RESULT oom: ruler/niah_multivalue/26/16384 score=None decode=None token/s
+CASE 188/384 scope ruler/niah_multivalue/27/16384 repeat=0
+RESULT oom: ruler/niah_multivalue/27/16384 score=None decode=None token/s
+CASE 189/384 scope ruler/niah_multivalue/28/16384 repeat=0
+RESULT oom: ruler/niah_multivalue/28/16384 score=None decode=None token/s
+CASE 190/384 scope ruler/niah_multivalue/29/16384 repeat=0
+RESULT oom: ruler/niah_multivalue/29/16384 score=None decode=None token/s
+CASE 191/384 scope ruler/niah_multivalue/30/16384 repeat=0
+RESULT oom: ruler/niah_multivalue/30/16384 score=None decode=None token/s
+CASE 192/384 scope ruler/niah_multivalue/31/16384 repeat=0
+RESULT oom: ruler/niah_multivalue/31/16384 score=None decode=None token/s
+CASE 193/384 scope ruler/vt/0/4096 repeat=0
+[scope/ruler/vt/0/4096] 16/30 tokens
+RESULT ok: ruler/vt/0/4096 score=100.0 decode=29.29563387944294 token/s
+CASE 194/384 scope ruler/vt/1/4096 repeat=0
+[scope/ruler/vt/1/4096] 14/30 tokens
+RESULT ok: ruler/vt/1/4096 score=100.0 decode=29.33655871518633 token/s
+CASE 195/384 scope ruler/vt/2/4096 repeat=0
+[scope/ruler/vt/2/4096] 17/30 tokens
+RESULT ok: ruler/vt/2/4096 score=100.0 decode=29.36497066434613 token/s
+CASE 196/384 scope ruler/vt/3/4096 repeat=0
+[scope/ruler/vt/3/4096] 17/30 tokens
+RESULT ok: ruler/vt/3/4096 score=100.0 decode=29.352565120976895 token/s
+CASE 197/384 scope ruler/vt/4/4096 repeat=0
+[scope/ruler/vt/4/4096] 16/30 tokens
+RESULT ok: ruler/vt/4/4096 score=100.0 decode=28.837057255648862 token/s
+CASE 198/384 scope ruler/vt/5/4096 repeat=0
+[scope/ruler/vt/5/4096] 18/30 tokens
+RESULT ok: ruler/vt/5/4096 score=100.0 decode=29.38308360158001 token/s
+CASE 199/384 scope ruler/vt/6/4096 repeat=0
+[scope/ruler/vt/6/4096] 16/30 tokens
+RESULT ok: ruler/vt/6/4096 score=100.0 decode=28.871762882707824 token/s
+CASE 200/384 scope ruler/vt/7/4096 repeat=0
+[scope/ruler/vt/7/4096] 15/30 tokens
+RESULT ok: ruler/vt/7/4096 score=100.0 decode=28.981106774290584 token/s
+CASE 201/384 scope ruler/vt/8/4096 repeat=0
+[scope/ruler/vt/8/4096] 16/30 tokens
+RESULT ok: ruler/vt/8/4096 score=100.0 decode=29.17538300532108 token/s
+CASE 202/384 scope ruler/vt/9/4096 repeat=0
+[scope/ruler/vt/9/4096] 15/30 tokens
+RESULT ok: ruler/vt/9/4096 score=100.0 decode=29.22362001885606 token/s
+CASE 203/384 scope ruler/vt/10/4096 repeat=0
+[scope/ruler/vt/10/4096] 16/30 tokens
+RESULT ok: ruler/vt/10/4096 score=100.0 decode=29.0104638218817 token/s
+CASE 204/384 scope ruler/vt/11/4096 repeat=0
+[scope/ruler/vt/11/4096] 16/30 tokens
+RESULT ok: ruler/vt/11/4096 score=100.0 decode=29.268386334498224 token/s
+CASE 205/384 scope ruler/vt/12/4096 repeat=0
+[scope/ruler/vt/12/4096] 16/30 tokens
+RESULT ok: ruler/vt/12/4096 score=100.0 decode=28.6234370229252 token/s
+CASE 206/384 scope ruler/vt/13/4096 repeat=0
+[scope/ruler/vt/13/4096] 17/30 tokens
+RESULT ok: ruler/vt/13/4096 score=100.0 decode=29.126063050058704 token/s
+CASE 207/384 scope ruler/vt/14/4096 repeat=0
+[scope/ruler/vt/14/4096] 15/30 tokens
+RESULT ok: ruler/vt/14/4096 score=100.0 decode=29.407876857431393 token/s
+CASE 208/384 scope ruler/vt/15/4096 repeat=0
+[scope/ruler/vt/15/4096] 19/30 tokens
+RESULT ok: ruler/vt/15/4096 score=100.0 decode=29.407975890422108 token/s
+CASE 209/384 scope ruler/vt/16/4096 repeat=0
+[scope/ruler/vt/16/4096] 16/30 tokens
+RESULT ok: ruler/vt/16/4096 score=100.0 decode=29.197721589239904 token/s
+CASE 210/384 scope ruler/vt/17/4096 repeat=0
+[scope/ruler/vt/17/4096] 16/30 tokens
+RESULT ok: ruler/vt/17/4096 score=100.0 decode=29.054452202997588 token/s
+CASE 211/384 scope ruler/vt/18/4096 repeat=0
+[scope/ruler/vt/18/4096] 18/30 tokens
+RESULT ok: ruler/vt/18/4096 score=100.0 decode=29.407383151041156 token/s
+CASE 212/384 scope ruler/vt/19/4096 repeat=0
+[scope/ruler/vt/19/4096] 16/30 tokens
+RESULT ok: ruler/vt/19/4096 score=100.0 decode=29.49033312748184 token/s
+CASE 213/384 scope ruler/vt/20/4096 repeat=0
+[scope/ruler/vt/20/4096] 16/30 tokens
+RESULT ok: ruler/vt/20/4096 score=100.0 decode=29.429384945646724 token/s
+CASE 214/384 scope ruler/vt/21/4096 repeat=0
+[scope/ruler/vt/21/4096] 18/30 tokens
+RESULT ok: ruler/vt/21/4096 score=100.0 decode=29.323834102105444 token/s
+CASE 215/384 scope ruler/vt/22/4096 repeat=0
+[scope/ruler/vt/22/4096] 17/30 tokens
+RESULT ok: ruler/vt/22/4096 score=100.0 decode=29.43302849529469 token/s
+CASE 216/384 scope ruler/vt/23/4096 repeat=0
+[scope/ruler/vt/23/4096] 18/30 tokens
+RESULT ok: ruler/vt/23/4096 score=100.0 decode=28.985332196301993 token/s
+CASE 217/384 scope ruler/vt/24/4096 repeat=0
+[scope/ruler/vt/24/4096] 16/30 tokens
+RESULT ok: ruler/vt/24/4096 score=100.0 decode=29.3688078058326 token/s
+CASE 218/384 scope ruler/vt/25/4096 repeat=0
+[scope/ruler/vt/25/4096] 15/30 tokens
+RESULT ok: ruler/vt/25/4096 score=100.0 decode=29.238661093541896 token/s
+CASE 219/384 scope ruler/vt/26/4096 repeat=0
+[scope/ruler/vt/26/4096] 14/30 tokens
+RESULT ok: ruler/vt/26/4096 score=100.0 decode=29.111576062175264 token/s
+CASE 220/384 scope ruler/vt/27/4096 repeat=0
+[scope/ruler/vt/27/4096] 17/30 tokens
+RESULT ok: ruler/vt/27/4096 score=100.0 decode=29.34818064656116 token/s
+CASE 221/384 scope ruler/vt/28/4096 repeat=0
+[scope/ruler/vt/28/4096] 17/30 tokens
+RESULT ok: ruler/vt/28/4096 score=100.0 decode=29.3317922677049 token/s
+CASE 222/384 scope ruler/vt/29/4096 repeat=0
+[scope/ruler/vt/29/4096] 17/30 tokens
+RESULT ok: ruler/vt/29/4096 score=100.0 decode=29.248165472739117 token/s
+CASE 223/384 scope ruler/vt/30/4096 repeat=0
+[scope/ruler/vt/30/4096] 16/30 tokens
+RESULT ok: ruler/vt/30/4096 score=100.0 decode=29.183572293353315 token/s
+CASE 224/384 scope ruler/vt/31/4096 repeat=0
+[scope/ruler/vt/31/4096] 15/30 tokens
+RESULT ok: ruler/vt/31/4096 score=100.0 decode=29.376360935259896 token/s
+CASE 225/384 scope ruler/vt/0/8192 repeat=0
+RESULT oom: ruler/vt/0/8192 score=None decode=None token/s
+CASE 226/384 scope ruler/vt/1/8192 repeat=0
+RESULT oom: ruler/vt/1/8192 score=None decode=None token/s
+CASE 227/384 scope ruler/vt/2/8192 repeat=0
+RESULT oom: ruler/vt/2/8192 score=None decode=None token/s
+CASE 228/384 scope ruler/vt/3/8192 repeat=0
+RESULT oom: ruler/vt/3/8192 score=None decode=None token/s
+CASE 229/384 scope ruler/vt/4/8192 repeat=0
+RESULT oom: ruler/vt/4/8192 score=None decode=None token/s
+CASE 230/384 scope ruler/vt/5/8192 repeat=0
+RESULT oom: ruler/vt/5/8192 score=None decode=None token/s
+CASE 231/384 scope ruler/vt/6/8192 repeat=0
+RESULT oom: ruler/vt/6/8192 score=None decode=None token/s
+CASE 232/384 scope ruler/vt/7/8192 repeat=0
+RESULT oom: ruler/vt/7/8192 score=None decode=None token/s
+CASE 233/384 scope ruler/vt/8/8192 repeat=0
+RESULT oom: ruler/vt/8/8192 score=None decode=None token/s
+CASE 234/384 scope ruler/vt/9/8192 repeat=0
+RESULT oom: ruler/vt/9/8192 score=None decode=None token/s
+CASE 235/384 scope ruler/vt/10/8192 repeat=0
+RESULT oom: ruler/vt/10/8192 score=None decode=None token/s
+CASE 236/384 scope ruler/vt/11/8192 repeat=0
+RESULT oom: ruler/vt/11/8192 score=None decode=None token/s
+CASE 237/384 scope ruler/vt/12/8192 repeat=0
+RESULT oom: ruler/vt/12/8192 score=None decode=None token/s
+CASE 238/384 scope ruler/vt/13/8192 repeat=0
+RESULT oom: ruler/vt/13/8192 score=None decode=None token/s
+CASE 239/384 scope ruler/vt/14/8192 repeat=0
+RESULT oom: ruler/vt/14/8192 score=None decode=None token/s
+CASE 240/384 scope ruler/vt/15/8192 repeat=0
+RESULT oom: ruler/vt/15/8192 score=None decode=None token/s
+CASE 241/384 scope ruler/vt/16/8192 repeat=0
+RESULT oom: ruler/vt/16/8192 score=None decode=None token/s
+CASE 242/384 scope ruler/vt/17/8192 repeat=0
+RESULT oom: ruler/vt/17/8192 score=None decode=None token/s
+CASE 243/384 scope ruler/vt/18/8192 repeat=0
+RESULT oom: ruler/vt/18/8192 score=None decode=None token/s
+CASE 244/384 scope ruler/vt/19/8192 repeat=0
+RESULT oom: ruler/vt/19/8192 score=None decode=None token/s
+CASE 245/384 scope ruler/vt/20/8192 repeat=0
+RESULT oom: ruler/vt/20/8192 score=None decode=None token/s
+CASE 246/384 scope ruler/vt/21/8192 repeat=0
+RESULT oom: ruler/vt/21/8192 score=None decode=None token/s
+CASE 247/384 scope ruler/vt/22/8192 repeat=0
+RESULT oom: ruler/vt/22/8192 score=None decode=None token/s
+CASE 248/384 scope ruler/vt/23/8192 repeat=0
+RESULT oom: ruler/vt/23/8192 score=None decode=None token/s
+CASE 249/384 scope ruler/vt/24/8192 repeat=0
+RESULT oom: ruler/vt/24/8192 score=None decode=None token/s
+CASE 250/384 scope ruler/vt/25/8192 repeat=0
+RESULT oom: ruler/vt/25/8192 score=None decode=None token/s
+CASE 251/384 scope ruler/vt/26/8192 repeat=0
+RESULT oom: ruler/vt/26/8192 score=None decode=None token/s
+CASE 252/384 scope ruler/vt/27/8192 repeat=0
+RESULT oom: ruler/vt/27/8192 score=None decode=None token/s
+CASE 253/384 scope ruler/vt/28/8192 repeat=0
+RESULT oom: ruler/vt/28/8192 score=None decode=None token/s
+CASE 254/384 scope ruler/vt/29/8192 repeat=0
+RESULT oom: ruler/vt/29/8192 score=None decode=None token/s
+CASE 255/384 scope ruler/vt/30/8192 repeat=0
+RESULT oom: ruler/vt/30/8192 score=None decode=None token/s
+CASE 256/384 scope ruler/vt/31/8192 repeat=0
+RESULT oom: ruler/vt/31/8192 score=None decode=None token/s
+CASE 257/384 scope ruler/vt/0/16384 repeat=0
+RESULT oom: ruler/vt/0/16384 score=None decode=None token/s
+CASE 258/384 scope ruler/vt/1/16384 repeat=0
+RESULT oom: ruler/vt/1/16384 score=None decode=None token/s
+CASE 259/384 scope ruler/vt/2/16384 repeat=0
+RESULT oom: ruler/vt/2/16384 score=None decode=None token/s
+CASE 260/384 scope ruler/vt/3/16384 repeat=0
+RESULT oom: ruler/vt/3/16384 score=None decode=None token/s
+CASE 261/384 scope ruler/vt/4/16384 repeat=0
+RESULT oom: ruler/vt/4/16384 score=None decode=None token/s
+CASE 262/384 scope ruler/vt/5/16384 repeat=0
+RESULT oom: ruler/vt/5/16384 score=None decode=None token/s
+CASE 263/384 scope ruler/vt/6/16384 repeat=0
+RESULT oom: ruler/vt/6/16384 score=None decode=None token/s
+CASE 264/384 scope ruler/vt/7/16384 repeat=0
+RESULT oom: ruler/vt/7/16384 score=None decode=None token/s
+CASE 265/384 scope ruler/vt/8/16384 repeat=0
+RESULT oom: ruler/vt/8/16384 score=None decode=None token/s
+CASE 266/384 scope ruler/vt/9/16384 repeat=0
+RESULT oom: ruler/vt/9/16384 score=None decode=None token/s
+CASE 267/384 scope ruler/vt/10/16384 repeat=0
+RESULT oom: ruler/vt/10/16384 score=None decode=None token/s
+CASE 268/384 scope ruler/vt/11/16384 repeat=0
+RESULT oom: ruler/vt/11/16384 score=None decode=None token/s
+CASE 269/384 scope ruler/vt/12/16384 repeat=0
+RESULT oom: ruler/vt/12/16384 score=None decode=None token/s
+CASE 270/384 scope ruler/vt/13/16384 repeat=0
+RESULT oom: ruler/vt/13/16384 score=None decode=None token/s
+CASE 271/384 scope ruler/vt/14/16384 repeat=0
+RESULT oom: ruler/vt/14/16384 score=None decode=None token/s
+CASE 272/384 scope ruler/vt/15/16384 repeat=0
+RESULT oom: ruler/vt/15/16384 score=None decode=None token/s
+CASE 273/384 scope ruler/vt/16/16384 repeat=0
+RESULT oom: ruler/vt/16/16384 score=None decode=None token/s
+CASE 274/384 scope ruler/vt/17/16384 repeat=0
+RESULT oom: ruler/vt/17/16384 score=None decode=None token/s
+CASE 275/384 scope ruler/vt/18/16384 repeat=0
+RESULT oom: ruler/vt/18/16384 score=None decode=None token/s
+CASE 276/384 scope ruler/vt/19/16384 repeat=0
+RESULT oom: ruler/vt/19/16384 score=None decode=None token/s
+CASE 277/384 scope ruler/vt/20/16384 repeat=0
+RESULT oom: ruler/vt/20/16384 score=None decode=None token/s
+CASE 278/384 scope ruler/vt/21/16384 repeat=0
+RESULT oom: ruler/vt/21/16384 score=None decode=None token/s
+CASE 279/384 scope ruler/vt/22/16384 repeat=0
+RESULT oom: ruler/vt/22/16384 score=None decode=None token/s
+CASE 280/384 scope ruler/vt/23/16384 repeat=0
+RESULT oom: ruler/vt/23/16384 score=None decode=None token/s
+CASE 281/384 scope ruler/vt/24/16384 repeat=0
+RESULT oom: ruler/vt/24/16384 score=None decode=None token/s
+CASE 282/384 scope ruler/vt/25/16384 repeat=0
+RESULT oom: ruler/vt/25/16384 score=None decode=None token/s
+CASE 283/384 scope ruler/vt/26/16384 repeat=0
+RESULT oom: ruler/vt/26/16384 score=None decode=None token/s
+CASE 284/384 scope ruler/vt/27/16384 repeat=0
+RESULT oom: ruler/vt/27/16384 score=None decode=None token/s
+CASE 285/384 scope ruler/vt/28/16384 repeat=0
+RESULT oom: ruler/vt/28/16384 score=None decode=None token/s
+CASE 286/384 scope ruler/vt/29/16384 repeat=0
+RESULT oom: ruler/vt/29/16384 score=None decode=None token/s
+CASE 287/384 scope ruler/vt/30/16384 repeat=0
+RESULT oom: ruler/vt/30/16384 score=None decode=None token/s
+CASE 288/384 scope ruler/vt/31/16384 repeat=0
+RESULT oom: ruler/vt/31/16384 score=None decode=None token/s
+CASE 289/384 scope ruler/cwe/0/4096 repeat=0
+[scope/ruler/cwe/0/4096] 42/120 tokens
+RESULT ok: ruler/cwe/0/4096 score=100.0 decode=29.189017012685756 token/s
+CASE 290/384 scope ruler/cwe/1/4096 repeat=0
+[scope/ruler/cwe/1/4096] 45/120 tokens
+RESULT ok: ruler/cwe/1/4096 score=100.0 decode=29.64637481889171 token/s
+CASE 291/384 scope ruler/cwe/2/4096 repeat=0
+[scope/ruler/cwe/2/4096] 46/120 tokens
+RESULT ok: ruler/cwe/2/4096 score=100.0 decode=28.330092964100242 token/s
+CASE 292/384 scope ruler/cwe/3/4096 repeat=0
+[scope/ruler/cwe/3/4096] 42/120 tokens
+RESULT ok: ruler/cwe/3/4096 score=80.0 decode=29.027731322787982 token/s
+CASE 293/384 scope ruler/cwe/4/4096 repeat=0
+[scope/ruler/cwe/4/4096] 44/120 tokens
+RESULT ok: ruler/cwe/4/4096 score=100.0 decode=29.356422026402257 token/s
+CASE 294/384 scope ruler/cwe/5/4096 repeat=0
+[scope/ruler/cwe/5/4096] 44/120 tokens
+RESULT ok: ruler/cwe/5/4096 score=100.0 decode=29.18595555922061 token/s
+CASE 295/384 scope ruler/cwe/6/4096 repeat=0
+[scope/ruler/cwe/6/4096] 44/120 tokens
+RESULT ok: ruler/cwe/6/4096 score=100.0 decode=29.40834151190339 token/s
+CASE 296/384 scope ruler/cwe/7/4096 repeat=0
+[scope/ruler/cwe/7/4096] 42/120 tokens
+RESULT ok: ruler/cwe/7/4096 score=100.0 decode=29.33035353304981 token/s
+CASE 297/384 scope ruler/cwe/8/4096 repeat=0
+[scope/ruler/cwe/8/4096] 43/120 tokens
+RESULT ok: ruler/cwe/8/4096 score=100.0 decode=29.40296603497435 token/s
+CASE 298/384 scope ruler/cwe/9/4096 repeat=0
+[scope/ruler/cwe/9/4096] 44/120 tokens
+RESULT ok: ruler/cwe/9/4096 score=100.0 decode=29.419876804550825 token/s
+CASE 299/384 scope ruler/cwe/10/4096 repeat=0
+[scope/ruler/cwe/10/4096] 44/120 tokens
+RESULT ok: ruler/cwe/10/4096 score=100.0 decode=29.34268620405912 token/s
+CASE 300/384 scope ruler/cwe/11/4096 repeat=0
+[scope/ruler/cwe/11/4096] 49/120 tokens
+RESULT ok: ruler/cwe/11/4096 score=100.0 decode=26.517438062176815 token/s
+CASE 301/384 scope ruler/cwe/12/4096 repeat=0
+[scope/ruler/cwe/12/4096] 45/120 tokens
+RESULT ok: ruler/cwe/12/4096 score=100.0 decode=29.309461660736567 token/s
+CASE 302/384 scope ruler/cwe/13/4096 repeat=0
+[scope/ruler/cwe/13/4096] 41/120 tokens
+RESULT ok: ruler/cwe/13/4096 score=100.0 decode=29.414266692830292 token/s
+CASE 303/384 scope ruler/cwe/14/4096 repeat=0
+[scope/ruler/cwe/14/4096] 45/120 tokens
+RESULT ok: ruler/cwe/14/4096 score=90.0 decode=29.298597306740927 token/s
+CASE 304/384 scope ruler/cwe/15/4096 repeat=0
+[scope/ruler/cwe/15/4096] 45/120 tokens
+RESULT ok: ruler/cwe/15/4096 score=100.0 decode=29.469412585209792 token/s
+CASE 305/384 scope ruler/cwe/16/4096 repeat=0
+[scope/ruler/cwe/16/4096] 44/120 tokens
+RESULT ok: ruler/cwe/16/4096 score=100.0 decode=29.27331175135063 token/s
+CASE 306/384 scope ruler/cwe/17/4096 repeat=0
+[scope/ruler/cwe/17/4096] 43/120 tokens
+RESULT ok: ruler/cwe/17/4096 score=100.0 decode=29.40079104543014 token/s
+CASE 307/384 scope ruler/cwe/18/4096 repeat=0
+[scope/ruler/cwe/18/4096] 43/120 tokens
+RESULT ok: ruler/cwe/18/4096 score=100.0 decode=29.349693677538987 token/s
+CASE 308/384 scope ruler/cwe/19/4096 repeat=0
+[scope/ruler/cwe/19/4096] 41/120 tokens
+RESULT ok: ruler/cwe/19/4096 score=20.0 decode=29.01650779330963 token/s
+CASE 309/384 scope ruler/cwe/20/4096 repeat=0
+[scope/ruler/cwe/20/4096] 45/120 tokens
+RESULT ok: ruler/cwe/20/4096 score=100.0 decode=29.318151889598383 token/s
+CASE 310/384 scope ruler/cwe/21/4096 repeat=0
+[scope/ruler/cwe/21/4096] 41/120 tokens
+RESULT ok: ruler/cwe/21/4096 score=100.0 decode=29.37178031589383 token/s
+CASE 311/384 scope ruler/cwe/22/4096 repeat=0
+[scope/ruler/cwe/22/4096] 46/120 tokens
+RESULT ok: ruler/cwe/22/4096 score=100.0 decode=29.38950835474746 token/s
+CASE 312/384 scope ruler/cwe/23/4096 repeat=0
+[scope/ruler/cwe/23/4096] 46/120 tokens
+RESULT ok: ruler/cwe/23/4096 score=90.0 decode=29.138281101704017 token/s
+CASE 313/384 scope ruler/cwe/24/4096 repeat=0
+[scope/ruler/cwe/24/4096] 45/120 tokens
+RESULT ok: ruler/cwe/24/4096 score=100.0 decode=29.293451749070805 token/s
+CASE 314/384 scope ruler/cwe/25/4096 repeat=0
+[scope/ruler/cwe/25/4096] 46/120 tokens
+RESULT ok: ruler/cwe/25/4096 score=100.0 decode=29.312609802797446 token/s
+CASE 315/384 scope ruler/cwe/26/4096 repeat=0
+[scope/ruler/cwe/26/4096] 42/120 tokens
+RESULT ok: ruler/cwe/26/4096 score=100.0 decode=29.34280271881771 token/s
+CASE 316/384 scope ruler/cwe/27/4096 repeat=0
+[scope/ruler/cwe/27/4096] 48/120 tokens
+RESULT ok: ruler/cwe/27/4096 score=100.0 decode=29.085527543421502 token/s
+CASE 317/384 scope ruler/cwe/28/4096 repeat=0
+[scope/ruler/cwe/28/4096] 44/120 tokens
+RESULT ok: ruler/cwe/28/4096 score=100.0 decode=25.807404347900707 token/s
+CASE 318/384 scope ruler/cwe/29/4096 repeat=0
+[scope/ruler/cwe/29/4096] 46/120 tokens
+RESULT ok: ruler/cwe/29/4096 score=100.0 decode=29.355542134288 token/s
+CASE 319/384 scope ruler/cwe/30/4096 repeat=0
+[scope/ruler/cwe/30/4096] 46/120 tokens
+RESULT ok: ruler/cwe/30/4096 score=100.0 decode=29.353883165203015 token/s
+CASE 320/384 scope ruler/cwe/31/4096 repeat=0
+[scope/ruler/cwe/31/4096] 42/120 tokens
+RESULT ok: ruler/cwe/31/4096 score=100.0 decode=29.2314533841352 token/s
+CASE 321/384 scope ruler/cwe/0/8192 repeat=0
+RESULT oom: ruler/cwe/0/8192 score=None decode=None token/s
+CASE 322/384 scope ruler/cwe/1/8192 repeat=0
+RESULT oom: ruler/cwe/1/8192 score=None decode=None token/s
+CASE 323/384 scope ruler/cwe/2/8192 repeat=0
+RESULT oom: ruler/cwe/2/8192 score=None decode=None token/s
+CASE 324/384 scope ruler/cwe/3/8192 repeat=0
+RESULT oom: ruler/cwe/3/8192 score=None decode=None token/s
+CASE 325/384 scope ruler/cwe/4/8192 repeat=0
+RESULT oom: ruler/cwe/4/8192 score=None decode=None token/s
+CASE 326/384 scope ruler/cwe/5/8192 repeat=0
+RESULT oom: ruler/cwe/5/8192 score=None decode=None token/s
+CASE 327/384 scope ruler/cwe/6/8192 repeat=0
+RESULT oom: ruler/cwe/6/8192 score=None decode=None token/s
+CASE 328/384 scope ruler/cwe/7/8192 repeat=0
+RESULT oom: ruler/cwe/7/8192 score=None decode=None token/s
+CASE 329/384 scope ruler/cwe/8/8192 repeat=0
+RESULT oom: ruler/cwe/8/8192 score=None decode=None token/s
+CASE 330/384 scope ruler/cwe/9/8192 repeat=0
+RESULT oom: ruler/cwe/9/8192 score=None decode=None token/s
+CASE 331/384 scope ruler/cwe/10/8192 repeat=0
+RESULT oom: ruler/cwe/10/8192 score=None decode=None token/s
+CASE 332/384 scope ruler/cwe/11/8192 repeat=0
+RESULT oom: ruler/cwe/11/8192 score=None decode=None token/s
+CASE 333/384 scope ruler/cwe/12/8192 repeat=0
+RESULT oom: ruler/cwe/12/8192 score=None decode=None token/s
+CASE 334/384 scope ruler/cwe/13/8192 repeat=0
+RESULT oom: ruler/cwe/13/8192 score=None decode=None token/s
+CASE 335/384 scope ruler/cwe/14/8192 repeat=0
+RESULT oom: ruler/cwe/14/8192 score=None decode=None token/s
+CASE 336/384 scope ruler/cwe/15/8192 repeat=0
+RESULT oom: ruler/cwe/15/8192 score=None decode=None token/s
+CASE 337/384 scope ruler/cwe/16/8192 repeat=0
+RESULT oom: ruler/cwe/16/8192 score=None decode=None token/s
+CASE 338/384 scope ruler/cwe/17/8192 repeat=0
+RESULT oom: ruler/cwe/17/8192 score=None decode=None token/s
+CASE 339/384 scope ruler/cwe/18/8192 repeat=0
+RESULT oom: ruler/cwe/18/8192 score=None decode=None token/s
+CASE 340/384 scope ruler/cwe/19/8192 repeat=0
+RESULT oom: ruler/cwe/19/8192 score=None decode=None token/s
+CASE 341/384 scope ruler/cwe/20/8192 repeat=0
+RESULT oom: ruler/cwe/20/8192 score=None decode=None token/s
+CASE 342/384 scope ruler/cwe/21/8192 repeat=0
+RESULT oom: ruler/cwe/21/8192 score=None decode=None token/s
+CASE 343/384 scope ruler/cwe/22/8192 repeat=0
+RESULT oom: ruler/cwe/22/8192 score=None decode=None token/s
+CASE 344/384 scope ruler/cwe/23/8192 repeat=0
+RESULT oom: ruler/cwe/23/8192 score=None decode=None token/s
+CASE 345/384 scope ruler/cwe/24/8192 repeat=0
+RESULT oom: ruler/cwe/24/8192 score=None decode=None token/s
+CASE 346/384 scope ruler/cwe/25/8192 repeat=0
+RESULT oom: ruler/cwe/25/8192 score=None decode=None token/s
+CASE 347/384 scope ruler/cwe/26/8192 repeat=0
+RESULT oom: ruler/cwe/26/8192 score=None decode=None token/s
+CASE 348/384 scope ruler/cwe/27/8192 repeat=0
+RESULT oom: ruler/cwe/27/8192 score=None decode=None token/s
+CASE 349/384 scope ruler/cwe/28/8192 repeat=0
+RESULT oom: ruler/cwe/28/8192 score=None decode=None token/s
+CASE 350/384 scope ruler/cwe/29/8192 repeat=0
+RESULT oom: ruler/cwe/29/8192 score=None decode=None token/s
+CASE 351/384 scope ruler/cwe/30/8192 repeat=0
+RESULT oom: ruler/cwe/30/8192 score=None decode=None token/s
+CASE 352/384 scope ruler/cwe/31/8192 repeat=0
+RESULT oom: ruler/cwe/31/8192 score=None decode=None token/s
+CASE 353/384 scope ruler/cwe/0/16384 repeat=0
+RESULT oom: ruler/cwe/0/16384 score=None decode=None token/s
+CASE 354/384 scope ruler/cwe/1/16384 repeat=0
+RESULT oom: ruler/cwe/1/16384 score=None decode=None token/s
+CASE 355/384 scope ruler/cwe/2/16384 repeat=0
+RESULT oom: ruler/cwe/2/16384 score=None decode=None token/s
+CASE 356/384 scope ruler/cwe/3/16384 repeat=0
+RESULT oom: ruler/cwe/3/16384 score=None decode=None token/s
+CASE 357/384 scope ruler/cwe/4/16384 repeat=0
+RESULT oom: ruler/cwe/4/16384 score=None decode=None token/s
+CASE 358/384 scope ruler/cwe/5/16384 repeat=0
+RESULT oom: ruler/cwe/5/16384 score=None decode=None token/s
+CASE 359/384 scope ruler/cwe/6/16384 repeat=0
+RESULT oom: ruler/cwe/6/16384 score=None decode=None token/s
+CASE 360/384 scope ruler/cwe/7/16384 repeat=0
+RESULT oom: ruler/cwe/7/16384 score=None decode=None token/s
+CASE 361/384 scope ruler/cwe/8/16384 repeat=0
+RESULT oom: ruler/cwe/8/16384 score=None decode=None token/s
+CASE 362/384 scope ruler/cwe/9/16384 repeat=0
+RESULT oom: ruler/cwe/9/16384 score=None decode=None token/s
+CASE 363/384 scope ruler/cwe/10/16384 repeat=0
+RESULT oom: ruler/cwe/10/16384 score=None decode=None token/s
+CASE 364/384 scope ruler/cwe/11/16384 repeat=0
+RESULT oom: ruler/cwe/11/16384 score=None decode=None token/s
+CASE 365/384 scope ruler/cwe/12/16384 repeat=0
+RESULT oom: ruler/cwe/12/16384 score=None decode=None token/s
+CASE 366/384 scope ruler/cwe/13/16384 repeat=0
+RESULT oom: ruler/cwe/13/16384 score=None decode=None token/s
+CASE 367/384 scope ruler/cwe/14/16384 repeat=0
+RESULT oom: ruler/cwe/14/16384 score=None decode=None token/s
+CASE 368/384 scope ruler/cwe/15/16384 repeat=0
+RESULT oom: ruler/cwe/15/16384 score=None decode=None token/s
+CASE 369/384 scope ruler/cwe/16/16384 repeat=0
+RESULT oom: ruler/cwe/16/16384 score=None decode=None token/s
+CASE 370/384 scope ruler/cwe/17/16384 repeat=0
+RESULT oom: ruler/cwe/17/16384 score=None decode=None token/s
+CASE 371/384 scope ruler/cwe/18/16384 repeat=0
+RESULT oom: ruler/cwe/18/16384 score=None decode=None token/s
+CASE 372/384 scope ruler/cwe/19/16384 repeat=0
+RESULT oom: ruler/cwe/19/16384 score=None decode=None token/s
+CASE 373/384 scope ruler/cwe/20/16384 repeat=0
+RESULT oom: ruler/cwe/20/16384 score=None decode=None token/s
+CASE 374/384 scope ruler/cwe/21/16384 repeat=0
+RESULT oom: ruler/cwe/21/16384 score=None decode=None token/s
+CASE 375/384 scope ruler/cwe/22/16384 repeat=0
+RESULT oom: ruler/cwe/22/16384 score=None decode=None token/s
+CASE 376/384 scope ruler/cwe/23/16384 repeat=0
+RESULT oom: ruler/cwe/23/16384 score=None decode=None token/s
+CASE 377/384 scope ruler/cwe/24/16384 repeat=0
+RESULT oom: ruler/cwe/24/16384 score=None decode=None token/s
+CASE 378/384 scope ruler/cwe/25/16384 repeat=0
+RESULT oom: ruler/cwe/25/16384 score=None decode=None token/s
+CASE 379/384 scope ruler/cwe/26/16384 repeat=0
+RESULT oom: ruler/cwe/26/16384 score=None decode=None token/s
+CASE 380/384 scope ruler/cwe/27/16384 repeat=0
+RESULT oom: ruler/cwe/27/16384 score=None decode=None token/s
+CASE 381/384 scope ruler/cwe/28/16384 repeat=0
+RESULT oom: ruler/cwe/28/16384 score=None decode=None token/s
+CASE 382/384 scope ruler/cwe/29/16384 repeat=0
+RESULT oom: ruler/cwe/29/16384 score=None decode=None token/s
+CASE 383/384 scope ruler/cwe/30/16384 repeat=0
+RESULT oom: ruler/cwe/30/16384 score=None decode=None token/s
+CASE 384/384 scope ruler/cwe/31/16384 repeat=0
+RESULT oom: ruler/cwe/31/16384 score=None decode=None token/s

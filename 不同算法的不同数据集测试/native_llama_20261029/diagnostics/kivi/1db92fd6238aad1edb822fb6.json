@@ -1,0 +1,315 @@
+{
+  "id": "performance/16384+4096/2",
+  "suite": "performance",
+  "task": "16384+4096",
+  "document_id": "2",
+  "cluster_id": "performance/16384+4096/2",
+  "length_budget": 16384,
+  "input_sha256": "6dc4ea1e93f13a5b5cd8531cecb4dfa0a4a67655522313563434da205e38fccf",
+  "truncated_input": null,
+  "capacity_extension": false,
+  "evaluation_split": null,
+  "heldout_from_available_history": null,
+  "method": "kivi",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 16384,
+  "output_tokens": 4096,
+  "stopped_on_eos": false,
+  "hit_output_limit": true,
+  "ttft_s": 2.6145369899459183,
+  "prefill_and_compress_s": 2.6145369899459183,
+  "decode_s": 200.82541763642803,
+  "decode_tokens_per_s": 20.390845183818016,
+  "generation_wall_s_including_instrumentation": 203.44180753221735,
+  "prefill_storage": {
+    "physical_bytes": 676855808,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 676855808,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 850309120,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 850309120,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "prefill_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 16384
+  },
+  "final_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 20479
+  },
+  "peak_allocated_bytes": 18694299648,
+  "peak_reserved_bytes": 19920846848,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 128,
+      "seconds": 6.342634320259094,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 128,
+      "to_decode_step": 256,
+      "seconds": 6.2799835642799735,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 256,
+      "to_decode_step": 384,
+      "seconds": 6.2538759731687605,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 384,
+      "to_decode_step": 511,
+      "seconds": 6.217843947932124,
+      "tokens": 127
+    },
+    {
+      "from_decode_step": 511,
+      "to_decode_step": 512,
+      "seconds": 0.05867818184196949,
+      "tokens": 1
+    },
+    {
+      "from_decode_step": 512,
+      "to_decode_step": 640,
+      "seconds": 6.242731226608157,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 640,
+      "to_decode_step": 768,
+      "seconds": 6.232307287864387,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 768,
+      "to_decode_step": 896,
+      "seconds": 6.239192912820727,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 896,
+      "to_decode_step": 1024,
+      "seconds": 6.246701190713793,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 1024,
+      "to_decode_step": 1152,
+      "seconds": 6.2585765779949725,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 1152,
+      "to_decode_step": 1280,
+      "seconds": 6.234212683979422,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 1280,
+      "to_decode_step": 1408,
+      "seconds": 6.256617296021432,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 1408,
+      "to_decode_step": 1536,
+      "seconds": 6.240896466653794,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 1536,
+      "to_decode_step": 1664,
+      "seconds": 6.261609350331128,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 1664,
+      "to_decode_step": 1792,
+      "seconds": 6.254954908974469,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 1792,
+      "to_decode_step": 1920,
+      "seconds": 6.230838112998754,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 1920,
+      "to_decode_step": 2047,
+      "seconds": 6.357724666129798,
+      "tokens": 127
+    },
+    {
+      "from_decode_step": 2047,
+      "to_decode_step": 2048,
+      "seconds": 0.0589552391320467,
+      "tokens": 1
+    },
+    {
+      "from_decode_step": 2048,
+      "to_decode_step": 2176,
+      "seconds": 6.323588017839938,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 2176,
+      "to_decode_step": 2304,
+      "seconds": 6.253672472666949,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 2304,
+      "to_decode_step": 2432,
+      "seconds": 6.312920746859163,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 2432,
+      "to_decode_step": 2560,
+      "seconds": 6.3109712288714945,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 2560,
+      "to_decode_step": 2688,
+      "seconds": 6.291244184132665,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 2688,
+      "to_decode_step": 2816,
+      "seconds": 6.260501844808459,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 2816,
+      "to_decode_step": 2944,
+      "seconds": 6.241391193121672,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 2944,
+      "to_decode_step": 3072,
+      "seconds": 6.266473958734423,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 3072,
+      "to_decode_step": 3200,
+      "seconds": 6.2769934753887355,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 3200,
+      "to_decode_step": 3328,
+      "seconds": 6.271547177806497,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 3328,
+      "to_decode_step": 3456,
+      "seconds": 6.328811473213136,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 3456,
+      "to_decode_step": 3584,
+      "seconds": 6.251284296158701,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 3584,
+      "to_decode_step": 3712,
+      "seconds": 6.309215398039669,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 3712,
+      "to_decode_step": 3840,
+      "seconds": 6.3110388540662825,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 3840,
+      "to_decode_step": 3968,
+      "seconds": 6.241906179115176,
+      "tokens": 128
+    },
+    {
+      "from_decode_step": 3968,
+      "to_decode_step": 4095,
+      "seconds": 6.305523227900267,
+      "tokens": 127
+    }
+  ],
+  "effective_options": {
+    "k_bits": 4,
+    "v_bits": 4,
+    "group_size": 32,
+    "residual_length": 128,
+    "use_flash": true
+  },
+  "scope_mode": "native",
+  "storage_checkpoints": [
+    {
+      "generated_cached": 0,
+      "physical_bytes": 676855808,
+      "auxiliary_bytes": 0,
+      "total_owned_bytes": 676855808,
+      "tensor_dtypes": [
+        "torch.float16",
+        "torch.int32"
+      ]
+    },
+    {
+      "generated_cached": 511,
+      "physical_bytes": 703508480,
+      "auxiliary_bytes": 0,
+      "total_owned_bytes": 703508480,
+      "tensor_dtypes": [
+        "torch.float16",
+        "torch.int32"
+      ]
+    },
+    {
+      "generated_cached": 2047,
+      "physical_bytes": 766423040,
+      "auxiliary_bytes": 0,
+      "total_owned_bytes": 766423040,
+      "tensor_dtypes": [
+        "torch.float16",
+        "torch.int32"
+      ]
+    },
+    {
+      "generated_cached": 4095,
+      "physical_bytes": 850309120,
+      "auxiliary_bytes": 0,
+      "total_owned_bytes": 850309120,
+      "tensor_dtypes": [
+        "torch.float16",
+        "torch.int32"
+      ]
+    }
+  ],
+  "persistent_kv_peak_bytes_diagnostic": 850309120,
+  "diagnostic_pass": true,
+  "timing_excluded": true
+}

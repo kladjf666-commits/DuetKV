@@ -1,0 +1,104 @@
+{
+  "id": "longbench/qasper/54/16384",
+  "suite": "longbench",
+  "task": "qasper",
+  "document_id": "54/16384",
+  "cluster_id": "qasper/f3033a0bc264a5d480e9787aa2e2dd32aca6384eba9a6e5bf4836f156cf2976b",
+  "length_budget": 16384,
+  "input_sha256": "05c61de6ffc66175095a3ff59932629b902ae64ef0e0369b73e9ddbe61132fa7",
+  "truncated_input": true,
+  "capacity_extension": null,
+  "evaluation_split": "heldout",
+  "heldout_from_available_history": true,
+  "method": "full",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 16376,
+  "output_tokens": 22,
+  "output_ids": [
+    14819,
+    6956,
+    304,
+    279,
+    41602,
+    11,
+    11951,
+    8349,
+    11,
+    35022,
+    11,
+    25695,
+    11,
+    84129,
+    83,
+    1147,
+    11,
+    323,
+    2098,
+    83241,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 2.3568082340061665,
+  "prefill_and_compress_s": 2.3568082340061665,
+  "decode_s": 0.5466480646282434,
+  "decode_tokens_per_s": 38.41594136856842,
+  "generation_wall_s_including_instrumentation": 2.9038975802250206,
+  "prefill_storage": {
+    "physical_bytes": 2146435072,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 2146435072,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 2149187584,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 2149187584,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 16376,
+    "stored_heads": 8
+  },
+  "final_trace": {
+    "physical_tokens": 16397,
+    "stored_heads": 8
+  },
+  "peak_allocated_bytes": 20398448640,
+  "peak_reserved_bytes": 21227372544,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 21,
+      "seconds": 0.5466480646282434,
+      "tokens": 21
+    }
+  ],
+  "effective_options": {},
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 23.529411764705884,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "argument components in the discourse, specifically claims, premises, backing, rebuttals, and refutations.",
+  "gpu_before": {
+    "time": 1793313277.7055237,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15894 MiB, 98 %, 56, 325.70 W, 2655 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793313280.6612108,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 20672 MiB, 100 %, 58, 359.57 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793313280.661215
+}

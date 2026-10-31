@@ -1,0 +1,108 @@
+{
+  "id": "longbench/qasper/140/16384",
+  "suite": "longbench",
+  "task": "qasper",
+  "document_id": "140/16384",
+  "cluster_id": "qasper/7b872ba2d0d0fc9cb33bb399cbc48cea11a23cd9f306254f576c66e876d1ed8e",
+  "length_budget": 16384,
+  "input_sha256": "c6e6412d27f9ac2294e1757ed5bcb9dd26f6f2d14e0de2c977068e93f722d601",
+  "truncated_input": false,
+  "capacity_extension": null,
+  "evaluation_split": "heldout",
+  "heldout_from_available_history": true,
+  "method": "full",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 7226,
+  "output_tokens": 26,
+  "output_ids": [
+    984,
+    46,
+    17455,
+    83691,
+    264,
+    5199,
+    16048,
+    389,
+    279,
+    2218,
+    3752,
+    4221,
+    1742,
+    57470,
+    3465,
+    7863,
+    311,
+    279,
+    26954,
+    1825,
+    73894,
+    6369,
+    6465,
+    4211,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 0.9220679788850248,
+  "prefill_and_compress_s": 0.9220679788850248,
+  "decode_s": 0.644822736736387,
+  "decode_tokens_per_s": 38.77034505100022,
+  "generation_wall_s_including_instrumentation": 1.5673088300973177,
+  "prefill_storage": {
+    "physical_bytes": 947126272,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 947126272,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 950403072,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 950403072,
+    "tensor_dtypes": [
+      "torch.float16"
+    ]
+  },
+  "prefill_trace": {
+    "physical_tokens": 7226,
+    "stored_heads": 8
+  },
+  "final_trace": {
+    "physical_tokens": 7251,
+    "stored_heads": 8
+  },
+  "peak_allocated_bytes": 17982169600,
+  "peak_reserved_bytes": 18421383168,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 25,
+      "seconds": 0.644822736736387,
+      "tokens": 25
+    }
+  ],
+  "effective_options": {},
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 9.09090909090909,
+  "metric": "qa_f1_score",
+  "status": "ok",
+  "prediction": "ALOHA achieves a significant improvement on the target character language style retrieval task compared to the baseline open-domain chatbot models.",
+  "gpu_before": {
+    "time": 1793313282.9898224,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 15894 MiB, 6 %, 50, 203.45 W, 2670 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793313284.6534936,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 17996 MiB, 100 %, 56, 329.00 W, 2655 MHz",
+    "error": ""
+  },
+  "finished_at": 1793313284.6534984
+}

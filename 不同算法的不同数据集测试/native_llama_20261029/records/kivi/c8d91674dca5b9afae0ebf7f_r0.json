@@ -1,0 +1,126 @@
+{
+  "id": "longbench/qmsum/76/8192",
+  "suite": "longbench",
+  "task": "qmsum",
+  "document_id": "76/8192",
+  "cluster_id": "qmsum/123971118da8e8c839d275c95aad85ae6369289792d484aae3328ea5ca3fbe05",
+  "length_budget": 8192,
+  "input_sha256": "d14b49a25fa93a6b7536e3b9d6635233c3bb7ce753e2605600dd4e88b9623bea",
+  "truncated_input": true,
+  "capacity_extension": null,
+  "evaluation_split": "heldout",
+  "heldout_from_available_history": true,
+  "method": "kivi",
+  "repeat": 0,
+  "dtype": "float16",
+  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0",
+  "input_tokens": 8177,
+  "output_tokens": 34,
+  "output_ids": [
+    791,
+    18729,
+    33257,
+    9932,
+    430,
+    814,
+    1047,
+    1027,
+    10307,
+    18845,
+    323,
+    3463,
+    430,
+    22745,
+    19207,
+    1051,
+    10671,
+    810,
+    5526,
+    11,
+    902,
+    374,
+    3249,
+    814,
+    12090,
+    2737,
+    1124,
+    304,
+    279,
+    8870,
+    2585,
+    2955,
+    13,
+    128009
+  ],
+  "stopped_on_eos": true,
+  "hit_output_limit": false,
+  "ttft_s": 1.2076458190567791,
+  "prefill_and_compress_s": 1.2076458190567791,
+  "decode_s": 1.63177496381104,
+  "decode_tokens_per_s": 20.223376833119136,
+  "generation_wall_s_including_instrumentation": 2.8415063554421067,
+  "prefill_storage": {
+    "physical_bytes": 345788416,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 345788416,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "final_storage": {
+    "physical_bytes": 342859776,
+    "auxiliary_bytes": 0,
+    "total_owned_bytes": 342859776,
+    "tensor_dtypes": [
+      "torch.float16",
+      "torch.int32"
+    ]
+  },
+  "prefill_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 8177
+  },
+  "final_trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 8210
+  },
+  "peak_allocated_bytes": 17393048064,
+  "peak_reserved_bytes": 18060673024,
+  "decode_chunks": [
+    {
+      "from_decode_step": 0,
+      "to_decode_step": 33,
+      "seconds": 1.63177496381104,
+      "tokens": 33
+    }
+  ],
+  "effective_options": {
+    "k_bits": 4,
+    "v_bits": 4,
+    "group_size": 32,
+    "residual_length": 128,
+    "use_flash": true
+  },
+  "scope_mode": "native",
+  "storage_checkpoints": [],
+  "persistent_kv_peak_bytes_diagnostic": null,
+  "diagnostic_pass": false,
+  "score": 17.777777340987665,
+  "metric": "rouge_score",
+  "status": "ok",
+  "prediction": "The Marketing Expert mentioned that they had been watching trends and thought that LCD displays were becoming more popular, which is why they suggested including them in the remote control design.",
+  "gpu_before": {
+    "time": 1793299559.3145707,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 16004 MiB, 0 %, 49, 170.31 W, 2670 MHz",
+    "error": ""
+  },
+  "gpu_after": {
+    "time": 1793299562.2471018,
+    "csv": "GPU-481f0f22-40a0-0492-c3c5-7f228339db47, NVIDIA GeForce RTX 4090 D, 17654 MiB, 48 %, 52, 176.24 W, 2670 MHz",
+    "error": ""
+  },
+  "finished_at": 1793299562.247106
+}
