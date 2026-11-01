@@ -12,10 +12,11 @@ class OptimizationConfig:
     specialized_4bit: bool = False
     gqa_reuse: bool = False
     hot_ring: bool = False
+    channel_contiguous_k: bool = False
 
     def __post_init__(self):
         for name in ("fused_quantize", "reuse_workspace", "paged_cold",
-                     "specialized_4bit", "gqa_reuse", "hot_ring"):
+                     "specialized_4bit", "gqa_reuse", "hot_ring", "channel_contiguous_k"):
             if type(getattr(self, name)) is not bool:
                 raise ValueError(f"{name} must be bool")
         if type(self.page_slots) is not int or self.page_slots <= 0:
@@ -36,7 +37,7 @@ def resolve_config(value=None):
 def uses_optimized_attention(config):
     """P1/page-only changes must keep the original attention kernels as control."""
     return (config.reuse_workspace or config.cold_group != 1 or config.specialized_4bit
-            or config.gqa_reuse or config.hot_ring)
+            or config.gqa_reuse or config.hot_ring or config.channel_contiguous_k)
 
 
 def stage_configs():

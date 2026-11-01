@@ -175,7 +175,15 @@ def unpack_dequantize(pt: PackedTensor) -> torch.Tensor:
     return deq.to(torch.float16)
 
 
-def allocate_packed(shape, bits, axis, group_size, device) -> PackedTensor:
+def empty_packed_storage(shape, dtype, device, channel_contiguous=False):
+    """Keep logical [channel, byte/group] indexing while placing channels adjacently."""
+    if channel_contiguous:
+        physical_shape = (*shape[:-2], shape[-1], shape[-2])
+        return torch.empty(physical_shape, dtype=dtype, device=device).transpose(-2, -1)
+    return torch.empty(shape, dtype=dtype, device=device)
+
+
+def allocate_packed(shape, bits, axis, group_size, device, *, channel_contiguous_k=False) -> PackedTensor:
     """Allocate the reference layout without allocating intermediate dense codes."""
     _vals_per_byte(bits)
     shape = tuple(shape)
@@ -185,10 +193,13 @@ def allocate_packed(shape, bits, axis, group_size, device) -> PackedTensor:
         raise ValueError("Cannot pack an empty quantization axis")
     gs = length if group_size is None or group_size <= 0 else min(group_size, length)
     prefix = tuple(size for i, size in enumerate(shape) if i != axis)
+    channels = channel_contiguous_k and axis == 2 and bits == 4
+    codes = (*prefix, (length + 8 // bits - 1) // (8 // bits))
+    meta = (*prefix, (length + gs - 1) // gs)
     return PackedTensor(
-        torch.empty((*prefix, (length + 8 // bits - 1) // (8 // bits)), dtype=torch.uint8, device=device),
-        torch.empty((*prefix, (length + gs - 1) // gs), dtype=torch.float16, device=device),
-        torch.empty((*prefix, (length + gs - 1) // gs), dtype=torch.float16, device=device),
+        empty_packed_storage(codes, torch.uint8, device, channels),
+        empty_packed_storage(meta, torch.float16, device, channels),
+        empty_packed_storage(meta, torch.float16, device, channels),
         bits, axis, gs, shape, length)
 
 

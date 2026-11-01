@@ -110,7 +110,7 @@ def build_phasekv_cache(prefill, model, prompt_len: int, *,
                         decode_keep_ratio: float = DECODE_KEEP_RATIO,
                         sink_tokens: int = SINK_TOKENS, obs_window: int = OBS_WINDOW,
                         recent_window: int = RECENT_WINDOW, lazy_g: int = LAZY_G,
-                        group_size: int = GROUP_SIZE) -> PhaseKVCache:
+                        group_size: int = GROUP_SIZE, optimizations=None) -> PhaseKVCache:
     """首次 prefill 后建立打包缓存；完整保留时无需注意力分数。"""
     keep = (None if prefill_keep_ratio == 1.0 else select_prompt_indices(
         prefill.attentions, prompt_len=prompt_len, model_config=model.config,
@@ -120,7 +120,7 @@ def build_phasekv_cache(prefill, model, prompt_len: int, *,
         prefill.past_key_values, prompt_len=prompt_len, keep_indices=keep,
         prompt_bits=prompt_bits, cold_bits=cold_bits, group_size=group_size,
         recent_window=recent_window, lazy_g=lazy_g,
-        decode_keep_ratio=decode_keep_ratio)
+        decode_keep_ratio=decode_keep_ratio, optimizations=optimizations)
 
 
 def assistant_end_tokens(tokenizer) -> list[int]:

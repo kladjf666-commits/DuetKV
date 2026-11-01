@@ -85,7 +85,8 @@ def cache_factory(inputs, config, frozen=False):
         keep_indices=[indices], **support.TARGET, **options)
     layer = cache.layers[0]
     for ck, cv in cold:
-        kwargs = {} if frozen else {"fast": config["fused_quantize"], "pool": layer.cold_pool}
+        kwargs = {} if frozen else {"fast": config["fused_quantize"], "pool": layer.cold_pool,
+                                    "channel_contiguous_k": config.get("channel_contiguous_k", False)}
         layer.cold.append(module._pack_kv(ck, cv, 4, 32, **kwargs))
     layer.hot_len = hk.shape[2]
     start = 137 if not frozen and config["hot_ring"] else 0
@@ -114,8 +115,8 @@ def assert_storage_equal(base, actual):
     for x, y in zip((a.prompt, *a.cold), (b.prompt, *b.cold)):
         for px, py in ((x.key, y.key), (x.value, y.value)):
             for field in ("packed", "scale", "mins"):
-                torch.testing.assert_close(getattr(px, field).contiguous().view(torch.uint8),
-                                           getattr(py, field).contiguous().view(torch.uint8), rtol=0, atol=0)
+                torch.testing.assert_close(getattr(px, field).flatten().contiguous().view(torch.uint8),
+                                           getattr(py, field).flatten().contiguous().view(torch.uint8), rtol=0, atol=0)
     for x, y in zip(a.hot_views(), b.hot_views()):
         torch.testing.assert_close(x, y, atol=0, rtol=0)
 
@@ -148,7 +149,8 @@ def prepared_calls(q, layer, frozen):
         options = dict(CAPACITY=w.capacity, PREFIX=w.prefix_count, COLD_GROUP=w.cold_group,
             NROWS=w.valid_count, FOUR_BIT=layer.optimizations.specialized_4bit and w.compatible_4bit,
             QPER=triton.next_power_of_2(heads // hk.shape[1]) if gqa else 1,
-            HOT_CAP=hk.shape[2] if layer.optimizations.hot_ring else 0, HOT_START=layer.hot_start)
+            HOT_CAP=hk.shape[2] if layer.optimizations.hot_ring else 0, HOT_START=layer.hot_start,
+            CHANNEL_CONTIGUOUS_K=layer.optimizations.channel_contiguous_k)
         merge_options = dict(CAPACITY=w.capacity)
     out = torch.empty_like(q)
     def attention():

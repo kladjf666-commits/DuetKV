@@ -23,7 +23,8 @@ def _segmented_attention(Q, DESC, HK, HV, PM, PL, PA,
                          BN: tl.constexpr, DW: tl.constexpr, CAPACITY: tl.constexpr = 0,
                          PREFIX=0, COLD_GROUP: tl.constexpr = 1,
                          NROWS=0, FOUR_BIT: tl.constexpr = False,
-                         QPER: tl.constexpr = 1, HOT_CAP: tl.constexpr = 0, HOT_START=0):
+                         QPER: tl.constexpr = 1, HOT_CAP: tl.constexpr = 0, HOT_START=0,
+                         CHANNEL_CONTIGUOUS_K: tl.constexpr = False):
     stride = CAPACITY if CAPACITY else NPARTIAL
     lane = tl.arange(0, QPER)
     if QPER == 1:
@@ -57,7 +58,10 @@ def _segmented_attention(Q, DESC, HK, HV, PM, PL, PA,
             end = tl.load(row + 7).to(tl.int32)
             if FOUR_BIT:
                 kb, vb, vgs = 4, 4, 32
-                kgs = tl.where(row_index < PREFIX, 32, 16)
+                if CHANNEL_CONTIGUOUS_K:
+                    kshift = tl.where(row_index < PREFIX, 5, 4)
+                else:
+                    kgs = tl.where(row_index < PREFIX, 32, 16)
             else:
                 kb = tl.load(row + 8).to(tl.int32)
                 vb = tl.load(row + 9).to(tl.int32)
@@ -65,6 +69,9 @@ def _segmented_attention(Q, DESC, HK, HV, PM, PL, PA,
                 vgs = tl.load(row + 11).to(tl.int32)
             kph, kpd, kpb = tl.load(row + 12), tl.load(row + 13), tl.load(row + 14)
             ksh, ksd, ksg = tl.load(row + 15), tl.load(row + 16), tl.load(row + 17)
+            if FOUR_BIT and CHANNEL_CONTIGUOUS_K:
+                # Validated for every live descriptor, including appended cold pages.
+                kpd, ksd, kpb, ksg = 1, 1, HD, HD
             vph, vps, vpb = tl.load(row + 18), tl.load(row + 19), tl.load(row + 20)
             vsh, vss, vsg = tl.load(row + 21), tl.load(row + 22), tl.load(row + 23)
             kvpb = 8 // kb
@@ -76,7 +83,11 @@ def _segmented_attention(Q, DESC, HK, HV, PM, PL, PA,
                                 + (n[:, None] // kvpb) * kpb,
                                 mask=valid[:, None], other=0).to(tl.int32)
                 codes = (codes >> ((n[:, None] % kvpb) * kb)) & ((1 << kb) - 1)
-                ki = kvhead * ksh + d[None, :] * ksd + (n[:, None] // kgs) * ksg
+                if FOUR_BIT and CHANNEL_CONTIGUOUS_K:
+                    key_group = n >> kshift
+                else:
+                    key_group = n // kgs
+                ki = kvhead * ksh + d[None, :] * ksd + key_group[:, None] * ksg
                 key = (codes.to(tl.float32) * tl.load(ks + ki, mask=valid[:, None], other=0).to(tl.float32)
                        + tl.load(km + ki, mask=valid[:, None], other=0).to(tl.float32))
                 scores = tl.sum(key[None, :, :] * query[:, None, :], axis=2) * (HD ** -0.5)
@@ -186,6 +197,7 @@ def segmented_phasekv_decode(q, tiers, num_attention_heads,
         HD=hd, GROUP=heads // hk.shape[1], BN=config.block_n, DW=DESCRIPTOR_WIDTH, CAPACITY=workspace.capacity,
         PREFIX=workspace.prefix_count, COLD_GROUP=workspace.cold_group, NROWS=workspace.valid_count,
         FOUR_BIT=specialized, QPER=qper,
+        CHANNEL_CONTIGUOUS_K=tiers.optimizations.channel_contiguous_k,
         HOT_CAP=hk.shape[2] if tiers.optimizations.hot_ring else 0, HOT_START=tiers.hot_start,
         num_warps=config.num_warps, enable_fp_fusion=False)
     _merge_segments[(heads,)](

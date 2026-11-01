@@ -82,6 +82,33 @@ class TestWorkspaceCapacity(unittest.TestCase):
 
 
 class TestPagedCold(unittest.TestCase):
+    def test_channel_contiguous_key_preserves_codes_during_cooling_and_prompt_extension(self):
+        dense = DynamicCache()
+        tensors = [torch.randn(1, 2, 67, 128, dtype=torch.float16) for _ in range(2)]
+        dense.update(*tensors, 0)
+        caches = [PhaseKVCache.from_dense_prefill(dense, prompt_len=67, prompt_bits=4, cold_bits=4,
+                    recent_window=2, lazy_g=2, optimizations=OptimizationConfig(
+                        paged_cold=True, page_slots=2, hot_ring=True, channel_contiguous_k=flag))
+                  for flag in (False, True)]
+        for cache in caches:
+            for i in range(8):
+                cache.append_hot(0, *(t[:, :, i:i+1] for t in tensors))
+                cache.finish_decode_step()
+            cache.begin_prompt_chunk(3)
+            for i in range(3):
+                cache.append_prompt_token(0, *(t[:, :, i:i+1] for t in tensors))
+            cache.finish_prompt_chunk()
+        old, new = (c.layers[0] for c in caches)
+        self.assertGreater(len(new.cold), 2)
+        self.assertTrue(new.prompt_extensions)
+        self.assertEqual(caches[0].physical_nbytes(), caches[1].physical_nbytes())
+        for a, b in zip((old.prompt, *old.cold, *old.prompt_extensions),
+                        (new.prompt, *new.cold, *new.prompt_extensions), strict=True):
+            for name in ('packed', 'scale', 'mins'):
+                self.assertEqual(getattr(b.key, name).stride(-2), 1)
+                self.assertTrue(torch.equal(getattr(a.key, name), getattr(b.key, name)))
+                self.assertTrue(torch.equal(getattr(a.value, name), getattr(b.value, name)))
+
     def test_pages_keep_old_bytes_and_count_unused_capacity_once(self):
         dense = DynamicCache()
         dense.update(torch.randn(1, 2, 17, 32, dtype=torch.float16),

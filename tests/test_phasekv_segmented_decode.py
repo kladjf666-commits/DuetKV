@@ -103,6 +103,31 @@ HAS_TRITON = importlib.util.find_spec("triton") is not None
 @unittest.skipUnless(HAS_TRITON and (torch.cuda.is_available() or INTERPRET),
                      "requires CUDA + Triton or TRITON_INTERPRET=1")
 class TestSegmentedKernels(unittest.TestCase):
+    @unittest.skipIf(INTERPRET, "production CUDA dispatch required")
+    def test_channel_contiguous_k_matches_dense_after_reorder_and_mixed_groups(self):
+        from PhaseKV.kernels.attention_triton import fused_phasekv_decode
+        from PhaseKV.optimizations import stage_configs
+        dense = DynamicCache()
+        k, v = (torch.randn(1, 2, 259, 128, device='cuda', dtype=torch.float16) for _ in range(2))
+        dense.update(k, v, 0)
+        opt = replace(stage_configs()['p5'], channel_contiguous_k=True)
+        # Cold K16 uses the specialized path; K7 exercises generic stride arithmetic.
+        for lazy, keep in ((16, 1.0), (16, 0.8), (7, 1.0)):
+            cache = PhaseKVCache.from_dense_prefill(dense, prompt_len=259, prompt_bits=4,
+                cold_bits=4, recent_window=3, lazy_g=lazy, decode_keep_ratio=keep, optimizations=opt)
+            for i in range(3 + 2 * lazy):
+                cache.append_hot(0, k[:, :, i:i+1], v[:, :, i:i+1])
+                cache.finish_decode_step()
+            layer = cache.layers[0]
+            self.assertEqual([s.length for s in layer.cold], [round(lazy * keep)] * 2)
+            q = torch.randn(12, 128, device='cuda', dtype=torch.float16)
+            for reorder in (False, True):
+                if reorder:
+                    cache.reorder_cache(torch.tensor([0], device='cuda'))
+                output = fused_phasekv_decode(q, layer, 12)
+                self.assertEqual(layer._decode_workspace.compatible_4bit, lazy == 16 and not reorder)
+                torch.testing.assert_close(output.float(), reference(q, layer), atol=.002, rtol=.01)
+
     @unittest.skipIf(INTERPRET, "actual CUDA dispatch and stream semantics required")
     @torch.inference_mode()
     def test_strided_packed_views_stream_switch_and_unused_capacity(self):

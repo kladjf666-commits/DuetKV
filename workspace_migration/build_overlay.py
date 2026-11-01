@@ -141,12 +141,21 @@ def build():
             raise RuntimeError('Archive integrity check failed')
     tmp.replace(out)
     out.with_suffix('.zip.sha256').write_text(sha(out)+'  '+out.name+'\n', encoding='ascii')
-    patch = DELIVERY/'PhaseKV_CPU_first_tools.zip'
+    patch = DELIVERY/'PhaseKV_volume_tools.zip'
     with zipfile.ZipFile(patch, 'w', compression=zipfile.ZIP_DEFLATED) as z:
         for name in ('install.py', 'parallel.py', 'README.txt'):
             z.write(HERE/name, 'migration/'+name)
     with zipfile.ZipFile(patch) as z:
         if z.testzip() is not None: raise RuntimeError('CPU tools patch integrity check failed')
+    with zipfile.ZipFile(DELIVERY/'PhaseKV_first_8k.zip','w',compression=zipfile.ZIP_DEFLATED) as z:
+        z.write(HERE/'parallel.py','first_8k.py')
+    with zipfile.ZipFile(DELIVERY/'PhaseKV_rtx4090_tools.zip','w',compression=zipfile.ZIP_DEFLATED) as z:
+        z.write(HERE/'warm_sm80.py','migration/warm_gpu.py')
+        z.write(HERE/'parallel.py','migration/first_8k.py')
+    with zipfile.ZipFile(DELIVERY/'PhaseKV_4090_common.zip','w',compression=zipfile.ZIP_DEFLATED) as z:
+        for src,dst in [('warm_sm80.py','warm_gpu.py'),('parallel.py','rtx4090_common.py'),
+                        ('run_4090_common.sh','run_4090_common.sh')]:
+            z.writestr('migration/'+dst,(HERE/src).read_text(encoding='utf-8').encode('utf-8'))
     print(out, out.stat().st_size, sha(out))
 
 

@@ -6,7 +6,7 @@ Reordering detaches existing views and resets the pool for future appends.
 """
 from dataclasses import dataclass
 import torch
-from .kernels.packing import PackedTensor
+from .kernels.packing import PackedTensor, empty_packed_storage
 
 
 def storage_identity(tensor):
@@ -38,11 +38,11 @@ class PackedPagePool:
         self.slots = slots
         self.pages = {}
 
-    def reserve(self, shape, bits, group_size, device):
+    def reserve(self, shape, bits, group_size, device, *, channel_contiguous_k=False):
         """Return K/V PackedTensor views into a fresh slot, without quantizing."""
         shape = tuple(shape)
         device = torch.device(device)
-        signature = (shape, bits, group_size, device)
+        signature = (shape, bits, group_size, device, channel_contiguous_k)
         pages = self.pages.setdefault(signature, [])
         layouts = []
         for axis in (2, 3):
@@ -53,9 +53,10 @@ class PackedPagePool:
                             (*prefix, (length + gs - 1) // gs)))
         if not pages or pages[-1].used == self.slots:
             tensors = []
-            for _, _, _, codes, meta in layouts:
+            for axis, _, _, codes, meta in layouts:
                 for size, dtype in ((codes, torch.uint8), (meta, torch.float16), (meta, torch.float16)):
-                    tensors.append(torch.empty((self.slots, *size), dtype=dtype, device=device))
+                    tensors.append(empty_packed_storage((self.slots, *size), dtype, device,
+                                                        channel_contiguous_k and axis == 2 and bits == 4))
             pages.append(PackedPage(tuple(tensors)))
         page = pages[-1]
         slot = page.used

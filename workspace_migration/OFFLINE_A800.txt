@@ -1,0 +1,27 @@
+A800 离线补包，用于已挂载在 /root/data 的 CPython 3.10 Linux x86_64 工作空间。
+
+1. 先解压原 PhaseKV_new_workspace_cp310_cu121.zip 和 PhaseKV_volume_tools.zip。
+   将本补包和对应 .zip.sha256 上传到 /root/data，再执行：
+   cd /root/data
+   sha256sum -c PhaseKV_torch_cuda121_offline.zip.sha256
+   unzip -o PhaseKV_torch_cuda121_offline.zip
+
+2. 在 CPU 实例复用或准备项目，离线安装 torch 2.5.1+cu121 和 12 个固定版本 CUDA 依赖。
+   python migration/install.py --prepare-cpu --offline-cu121 --workspace /root/data/phasekv-ws --model /root/data/Llama-3.1-8B-Instruct/snapshots/master
+   权重尚未传完可先省略 --model，上传完成后重新运行带 --model 的命令。
+   本补包不覆盖基础镜像的 cu124 环境，安装目标是持久卷中的项目私有目录。
+
+3. 可选：在 CPU 实例用安装好的 Linux Triton 编译 A800 sm80 的 8K 常用变体：
+   python migration/warm_sm80.py
+   本步骤只生成可复用的编译缓存。无需 GPU、联网或下载 CUDA Toolkit。
+   覆盖 Full/PhaseKV 分段 attention、merge、unpack 和量化的常见形状；
+   门禁中的其他形状、编译环境或指针对齐方式不同时仍可能首次 JIT。
+   保留同一挂载路径、项目目录、版本和缓存目录。
+
+4. GPU 实例挂回同一卷后检查一张 A800，再开始首测：
+   cd /root/data
+   python migration/install.py --check-gpu --expected-gpus 1
+   cp migration/first_8k.py phasekv-ws/official_llama/first_8k.py
+   cd /root/data/phasekv-ws/official_llama
+   PHASEKV_TRITON_CACHE_DIR=/root/data/phasekv-triton-sm80 ../venv/bin/python -u first_8k.py --gpus 1 --only-8k --profile-8k --out /root/data/phasekv-results/a800_paper
+   GPU 驱动由平台镜像提供；启动器需要 gcc 和 Python.h。运行时的 CUDA 正确性/速度需由实际 GPU 验证。

@@ -16,11 +16,21 @@ from .launch_config import plan_phasekv_cold_group
 DESCRIPTOR_WIDTH = 24
 
 
-def compatible_4bit(segment, *, prompt):
-    """Fixed-layout specialization: prompt K32, cold K16, V32; no guesswork."""
+def compatible_4bit(segment, *, prompt, channel_contiguous_k=False):
+    """Check that every live K/V index matches the fixed-layout addressing."""
     k, v = segment.key, segment.value
+    if channel_contiguous_k:
+        hd = k.orig_shape[-1]
+        for tensor in (k.packed, k.scale, k.mins):
+            if tensor.stride(-2) != 1 or (tensor.size(-1) > 1 and tensor.stride(-1) != hd):
+                return False
+    key_groups_match = k.group_size == (32 if prompt else 16)
+    if channel_contiguous_k and not prompt and k.axis_len == k.group_size == 13:
+        # D=0.8 retains 13 of 16. Every live local token still indexes
+        # scale group zero with n >> 4; masked padding is never read.
+        key_groups_match = k.scale.size(-1) == 1
     return (k.bits == v.bits == 4 and k.axis == 2 and v.axis == 3
-            and k.group_size == (32 if prompt else 16) and v.group_size == 32)
+            and key_groups_match and v.group_size == 32)
 
 
 def segment_rows(segment, heads, head_dim, device, sm_count,
@@ -119,7 +129,9 @@ def build_workspace(tiers, heads, head_dim, device, sm_count, key,
         torch.empty((heads, capacity, head_dim), dtype=torch.float32, device=device),
         len(rows), len(tiers.cold), len(tiers.prompt_extensions),
         prefix_count, group,
-        all(compatible_4bit(s, prompt=i <= len(tiers.prompt_extensions)) for i, s in enumerate(owners)),
+        all(compatible_4bit(s, prompt=i <= len(tiers.prompt_extensions),
+                            channel_contiguous_k=tiers.optimizations.channel_contiguous_k)
+            for i, s in enumerate(owners)),
     )
 
 
@@ -170,6 +182,7 @@ def ensure_workspace(tiers, heads, head_dim, device, sm_count, key,
             workspace.cold_count = len(tiers.cold)
             workspace.owners.extend(added)
             workspace.compatible_4bit = workspace.compatible_4bit and all(
-                compatible_4bit(s, prompt=False) for s in added)
+                compatible_4bit(s, prompt=False, channel_contiguous_k=tiers.optimizations.channel_contiguous_k)
+                for s in added)
     tiers._decode_workspace = workspace
     return workspace

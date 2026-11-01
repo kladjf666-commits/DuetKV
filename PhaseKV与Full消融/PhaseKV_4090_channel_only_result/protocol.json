@@ -1,0 +1,57 @@
+{
+  "gpu": "GPU-5e30cd76-9996-4158-a0bb-cdbd0d59d878, NVIDIA GeForce RTX 4090, 580.65.06",
+  "model": "/root/data/Llama-3.1-8B-Instruct/snapshots/master",
+  "data": "88e85ac0a6d1ca0a437543c1187731c81b4933d699246639a7429c6d8a6cfcde",
+  "prompts": [
+    "performance/8192+256/0",
+    "performance/8192+256/1",
+    "performance/8192+256/2"
+  ],
+  "repeats": 5,
+  "measured_arm": "phasekv_channel_k",
+  "files": {
+    "retest.py": "d9250a9dd33e8794f71cbe27b0f8838c6fd40f52511f3035c25ae6c2ab1cf120",
+    "run.sh": "1bddbbcc3959109a2d1db0a2daa23290d9f1bb51282af86f3c99c5edcc80a56e",
+    "historical_summary.json": "3a70f33e0387ed72734a975b9fbc6bf17880d9e42ecba86cedf24cde308048f4",
+    "probe.py": "b96313d668aacbbe4e9bce6b03759c8e58fdfe4eb139cee6c9e80fbf41f8649b",
+    "batch_attention.py": "105009be1881b191fe4624fdbab87a094db0d3406a2c1e3745ebd41360c5629e",
+    "trace_budget.py": "b052099c66e0ee664c3aa06aeebcba1400b2094b74354e8f36f4b5dfbdb044b1",
+    "channel_impl/__init__.py": "abb806b33e69507a4a38db30e27fbff3744ce3b2a5702a43f1f95057ca92eb6b",
+    "channel_impl/optimizations.py": "923e4a53b522852978d85b699d732b63b4216e4d32a71b62d75546d15069ee20",
+    "channel_impl/phasekv_cache.py": "9904a2e06c98a304697d4c25e2d520c468c28c978c723eded2c3e8e047c506a6",
+    "channel_impl/packed_storage.py": "c5825691ac3a910f335d5634b105c245de9e43643ef15e9eaa975fdadf2781b9",
+    "channel_impl/kernels/__init__.py": "e17266e028cefed7b0e811f87a13ea6e815c3d75ac6e363d5dd17ed0645d8d0a",
+    "channel_impl/kernels/attention_triton.py": "06a3fa7b54d7247b62e128cc5724e270d37f06cdd5d9099dddc06d5823b16ae7",
+    "channel_impl/kernels/launch_config.py": "aa9c797cc46bf27ea817b51f9149fa8c54146a0519f0c87a36aad1322f05bc18",
+    "channel_impl/kernels/packing.py": "5db07d56a04685c8f140ff2980c00cd1ddf148c6caef6cce5c990f86d14fdba1",
+    "channel_impl/kernels/quantize_triton.py": "02fbb9f9f61ffed60655d304987705fedfe726218b96f7d3e6fd8ef1d77076d9",
+    "channel_impl/kernels/reference.py": "7ea076b5929ee91592fca27b512db2400c79d59508078ff763c944b16d9bdb69",
+    "channel_impl/kernels/segmented_attention.py": "e5125fa85185215581d4addab478b5253b44cc145eeeb54eff04a759e76ef4a0",
+    "channel_impl/kernels/segmented_baseline.py": "908737ac9a5ca5253ef536ceff120146babc1b588815f4c7c3de7113ba323f56",
+    "channel_impl/kernels/segmented_plan.py": "58d08f440b9e0bb6c18174c9bad7227fa6b4088ba553446cf563763615ef2551"
+  },
+  "base_options": {
+    "prefill_keep_ratio": 0.7,
+    "obs_window": 32,
+    "sink_tokens": 0,
+    "prompt_bits": 4,
+    "cold_bits": 4,
+    "group_size": 32,
+    "recent_window": 128,
+    "lazy_g": 16,
+    "decode_keep_ratio": 1.0,
+    "optimizations": {
+      "fused_quantize": true,
+      "reuse_workspace": true,
+      "paged_cold": true,
+      "page_slots": 32,
+      "cold_group": 8,
+      "specialized_4bit": true,
+      "gqa_reuse": false,
+      "hot_ring": true
+    }
+  },
+  "candidate_override": {
+    "channel_contiguous_k": true
+  }
+}

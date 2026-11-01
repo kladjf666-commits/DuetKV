@@ -127,17 +127,20 @@ def _validate_config(prompt_bits, cold_bits, group_size, recent_window,
 
 def _pack_kv(key: torch.Tensor, value: torch.Tensor, bits: int,
              group_size: int, *, fast=False, pool=None,
-             token_start=0, token_count=None) -> PackedKVSegment:
+             token_start=0, token_count=None, channel_contiguous_k=False) -> PackedKVSegment:
     """Keep K/token and V/channel grouping while optionally writing a page slot."""
-    if pool is None and token_count is None:
+    if pool is None and token_count is None and not (channel_contiguous_k and bits == 4):
         pack = quantize_pack_fast if fast else quantize_pack
         return PackedKVSegment(pack(key, bits, axis=2, group_size=group_size),
                                pack(value, bits, axis=3, group_size=group_size))
     shape = list(key.shape)
     if token_count is not None:
         shape[2] = token_count
-    outputs = (pool.reserve(shape, bits, group_size, key.device) if pool is not None else
-               tuple(allocate_packed(shape, bits, axis, group_size, key.device) for axis in (2, 3)))
+    if pool is not None:
+        outputs = pool.reserve(shape, bits, group_size, key.device, channel_contiguous_k=channel_contiguous_k)
+    else:
+        outputs = tuple(allocate_packed(shape, bits, axis, group_size, key.device,
+                                        channel_contiguous_k=channel_contiguous_k) for axis in (2, 3))
     for source, out in zip((key, value), outputs):
         quantize_pack_into(source, out, fast=fast, token_start=token_start, token_count=token_count)
     return PackedKVSegment(*outputs)
@@ -295,7 +298,8 @@ class PhaseKVCache(Cache):
             shape = (key.shape[0], key.shape[1], capacity, key.shape[3])
             #预分配hot容量
             layers.append(LayerTiers(
-                prompt=_pack_kv(key, value, prompt_bits, group_size, fast=optimizations.fused_quantize),
+                prompt=_pack_kv(key, value, prompt_bits, group_size, fast=optimizations.fused_quantize,
+                                channel_contiguous_k=optimizations.channel_contiguous_k),
                 hot_k=torch.empty(shape, dtype=torch.float16, device=key.device),
                 hot_v=torch.empty(shape, dtype=torch.float16, device=key.device),
             ))
@@ -386,6 +390,7 @@ class PhaseKVCache(Cache):
             key, value = layer.hot_range(0, aged)
         segment = _pack_kv(key, value, self.cold_bits, self.group_size,
                            fast=self.optimizations.fused_quantize, pool=layer.cold_pool,
+                           channel_contiguous_k=self.optimizations.channel_contiguous_k,
                            token_start=token_start, token_count=token_count)
         layer.cold.append(segment)
         if not self.optimizations.reuse_workspace:
@@ -447,6 +452,7 @@ class PhaseKVCache(Cache):
             prompt_segment = _pack_kv(
                 layer.hot_k, layer.hot_v, self.prompt_bits, self.group_size,
                 fast=self.optimizations.fused_quantize,
+                channel_contiguous_k=self.optimizations.channel_contiguous_k,
                 token_start=(layer.hot_start + start) % layer.hot_k.shape[2],
                 token_count=self._prompt_chunk_len)
             # Restore ordinary capacity, retaining every pre-prompt generated

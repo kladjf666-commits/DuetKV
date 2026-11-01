@@ -102,6 +102,55 @@ def check_prepared(project, identity):
         raise RuntimeError('No matching CPU preparation in this workspace. Use --prepare-cpu with a new directory.')
 
 
+def stage_cu121(project, *, offline=False):
+    """Install the binary torch stack on the CPU instance; offline uses only uploaded files."""
+    torch_site = project/'.torch-cu121'
+    wheels = []
+    lock = HERE/'runtime_manifest.json'
+    if offline:
+        if not lock.is_file():
+            raise FileNotFoundError('Unzip the torch/cu121 offline supplement into the volume first')
+        expected = json.loads(lock.read_text())
+        if len(expected)!=13 or 'torch-2.5.1+cu121-cp310-cp310-linux_x86_64.whl' not in expected:
+            raise RuntimeError('Incomplete Linux torch/CUDA wheel manifest')
+        for name, checksum in expected.items():
+            if Path(name).name!=name or not name.endswith('.whl'): raise ValueError('Invalid wheel name')
+            path = HERE/'runtime_wheels'/name
+            if not path.is_file() or digest(path)!=checksum: raise ValueError('Runtime wheel hash mismatch: '+name)
+            wheels.append(path)
+    probe = """import sys
+from pathlib import Path
+sys.path[:0] = sys.argv[1:3]
+import torch
+if not Path(torch.__file__).resolve().is_relative_to(Path(sys.argv[2]).resolve()):
+    raise RuntimeError('torch did not load from the volume')
+if torch.__version__.split('+')[0] != '2.5.1' or torch.version.cuda != '12.1' or torch._C._GLIBCXX_USE_CXX11_ABI:
+    raise RuntimeError('Staged torch build mismatch')
+print('Volume torch verified:', torch.__version__, torch.version.cuda)
+"""
+    if torch_site.exists():
+        if offline and (not (torch_site/'.runtime-lock').is_file()
+                        or (torch_site/'.runtime-lock').read_text()!=digest(lock)):
+            raise RuntimeError('Existing torch site has a different provenance. Use a fresh workspace for the offline stack.')
+        run(sys.executable, '-c', probe, project/'.cp310-site', torch_site)
+        return
+    with tempfile.TemporaryDirectory(dir=project.parent) as temp:
+        dest = Path(temp)/'site'
+        env = {**os.environ, 'TMPDIR':temp, 'PIP_DISABLE_PIP_VERSION_CHECK':'1'}
+        base = [sys.executable,'-m','pip','--isolated','install','--no-cache-dir',
+                '--ignore-installed','--only-binary=:all:','--no-compile','--target',str(dest)]
+        if offline:
+            env['PIP_NO_INDEX']='1'
+            subprocess.run([*base,'--no-index','--no-deps',*map(str,wheels)],env=env,check=True)
+            (dest/'.runtime-lock').write_text(digest(lock))
+        else:
+            env.pop('PIP_NO_INDEX',None)
+            subprocess.run([*base,'--index-url','https://download.pytorch.org/whl/cu121',
+                            '--find-links',str(HERE/'wheels'),'torch==2.5.1+cu121'],env=env,check=True)
+        run(sys.executable, '-c', probe, project/'.cp310-site', dest)
+        dest.rename(torch_site)
+
+
 def check_gpu(target, identity, expected_gpus):
     project = target/'official_llama'
     check_prepared(project, identity)
@@ -116,7 +165,10 @@ def check_gpu(target, identity, expected_gpus):
     owner.write_text(json.dumps(identity)+'\n')
     run(sys.executable, '-m', 'venv', '--without-pip', '--system-site-packages', venv)
     # The GPU image supplies torch and its CUDA libraries; the overlay has priority.
-    paths = [str(project/'.cp310-site'), *site.getsitepackages()]
+    paths = [str(project/'.cp310-site')]
+    if (project/'.torch-cu121').is_dir():
+        paths.append(str(project/'.torch-cu121'))
+    paths.extend(site.getsitepackages())
     dest = venv/'lib/python3.10/site-packages/phasekv-base-image.pth'
     dest.write_text('\n'.join(paths)+'\n')
     py = venv/'bin/python'
@@ -127,14 +179,18 @@ def check_gpu(target, identity, expected_gpus):
 
 def main():
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--workspace', type=Path, default=Path('/data/phasekv-ws'))
+    p.add_argument('--workspace', type=Path, default=HERE.parent/'phasekv-ws')
     mode = p.add_mutually_exclusive_group()
     mode.add_argument('--prepare-cpu', action='store_true', help='Stage project and wheels without any GPU')
     mode.add_argument('--check-gpu', action='store_true', help='Bind the prepared workspace to this GPU image')
     p.add_argument('--model', type=Path, help='Check uploaded checkpoint structure and frozen tokenizer/config hashes')
     p.add_argument('--expected-gpus', type=int, default=1, help='Minimum number of visible devices required by GPU smoke')
+    source = p.add_mutually_exclusive_group()
+    source.add_argument('--with-cu121', action='store_true', help='Download pinned PyTorch CUDA wheels to the persistent volume during CPU preparation (requires internet)')
+    source.add_argument('--offline-cu121', action='store_true', help='Install the uploaded torch/CUDA supplement on CPU without network access')
     args = p.parse_args()
     if args.expected_gpus < 1: p.error('--expected-gpus must be positive')
+    if (args.with_cu121 or args.offline_cu121) and not args.prepare_cpu: p.error('Runtime installation requires --prepare-cpu')
     if sys.platform != 'linux' or platform.machine() != 'x86_64' or sys.version_info[:2] != (3, 10):
         raise RuntimeError('Use Linux x86_64 with CPython 3.10')
     libc, ver = platform.libc_ver()
@@ -149,6 +205,8 @@ def main():
         fcntl.flock(lock, fcntl.LOCK_EX | fcntl.LOCK_NB)
         if not args.check_gpu:
             prepare_cpu(target, json.loads(manifest_path.read_text()), identity, args.model)
+            if args.with_cu121 or args.offline_cu121:
+                stage_cu121(target/'official_llama',offline=args.offline_cu121)
             print(f'CPU preparation complete: {target}.', flush=True)
         if not args.prepare_cpu:
             if args.check_gpu and args.model: model_check(target/'official_llama', args.model)

@@ -1,0 +1,83 @@
+{
+  "points": {
+    "full_fa2/B1": {
+      "successful_repeats": 5,
+      "ms_per_batch_step": 26.734414999829788,
+      "total_tokens_per_s": 37.4049703352913
+    },
+    "full_fa2/B2": {
+      "successful_repeats": 5,
+      "ms_per_batch_step": 34.00373563955666,
+      "total_tokens_per_s": 58.81706707757701
+    },
+    "full_fa2/B3": {
+      "successful_repeats": 5,
+      "ms_per_batch_step": 33.933310667235475,
+      "total_tokens_per_s": 88.40870345423352
+    },
+    "full_fa2/B4": {
+      "successful_repeats": 5,
+      "ms_per_batch_step": 34.39867357705154,
+      "total_tokens_per_s": 116.2835535224977
+    },
+    "phasekv_triton/B1": {
+      "successful_repeats": 5,
+      "ms_per_batch_step": 28.014004863250783,
+      "total_tokens_per_s": 35.6964312986115
+    },
+    "phasekv_triton/B2": {
+      "successful_repeats": 5,
+      "ms_per_batch_step": 35.212572563585695,
+      "total_tokens_per_s": 56.79789502424074
+    },
+    "phasekv_triton/B3": {
+      "successful_repeats": 5,
+      "ms_per_batch_step": 35.112481655589505,
+      "total_tokens_per_s": 85.43970287905965
+    },
+    "phasekv_triton/B4": {
+      "successful_repeats": 5,
+      "ms_per_batch_step": 35.027514183528574,
+      "total_tokens_per_s": 114.19594262503989
+    }
+  },
+  "marginal_ms_per_batch_step": {
+    "full_fa2/1->2": 7.269320639726871,
+    "full_fa2/2->3": -0.0704249723211845,
+    "full_fa2/3->4": 0.465362909816065,
+    "phasekv_triton/1->2": 7.1985677003349124,
+    "phasekv_triton/2->3": -0.10009090799619003,
+    "phasekv_triton/3->4": -0.08496747206093147
+  },
+  "phase_minus_full_batch_ms": {
+    "1": 1.2795898634209948,
+    "2": 1.2088369240290362,
+    "3": 1.1791709883540307,
+    "4": 0.6288406064770342
+  },
+  "historical_residual_ms": {
+    "terms": {
+      "historical_minus_new_full_run": 1.5130731365790053,
+      "full_255_minus_matched_16": -0.17344932929000834,
+      "unprofiled_minus_profiled_window": -2.3370418009413427,
+      "device_union_minus_sum": 0.0,
+      "new_minus_historical_device_sum": 0.022148606445309693,
+      "device_idle_while_sync API": 0.007444671630859375,
+      "device_idle_while_launch API": 0.09348229980468759,
+      "device_idle_while_other CUDA API": 0.0677685546875,
+      "device_idle_while_cache finish": 0.45027984619140626,
+      "device_idle_while_cache append": 2.552881042480469,
+      "device_idle_while_workspace": 0.7894790344238282,
+      "device_idle_while_attention dispatch": 4.009043334960937,
+      "device_idle_while_argmax": 0.002366943359375,
+      "device_idle_while_PyTorch CPU op": -4.675689453125001,
+      "device_idle_while_model forward": -0.3836158142089845,
+      "device_idle_while_other host": -0.0008810729980468753
+    },
+    "sum": 1.9372899999999942,
+    "fresh_unprofiled_full_gap": 1.2795898634209948,
+    "fresh_unprofiled_window_gap": 1.4530391927110031,
+    "fresh_profiled_device_sum_gap": 0.8775216064453097,
+    "notes": "Signed differences. Idle/CPU labels describe coincidence. Instrumentation and run variability remain explicit."
+  }
+}
