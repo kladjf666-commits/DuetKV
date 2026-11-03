@@ -219,6 +219,8 @@ class PhaseKVCache(Cache):
         self.recent_window = recent_window
         self.lazy_g = lazy_g
         self.decode_keep_ratio = decode_keep_ratio
+        # One page slot can hold a cooling batch across all homogeneous layers.
+        self._batched_cold_pool = None
         # 当前 decode 步中已经写入一个 token 的模型层。
         self._pending_layers: set[int] = set()   #当前这一次 decode 前向中，哪些模型层已经写入了新 token 的 K/V，但还没有统一结束这一步。
         # 0 表示没有新增 prompt 块；start 记录每层原有生成热 token 的数量。
@@ -364,10 +366,52 @@ class PhaseKVCache(Cache):
         lengths = [(layer.physical_len, layer.hot_len) for layer in self.layers]
         if len(set(lengths)) != 1:
             raise RuntimeError(f"冷却前各层的 (物理长度, 热层长度) 不一致：{lengths}")
-        for layer in self.layers:
-            self._cool_aged_tokens(layer)
+        aged = self.layers[0].hot_len - self.recent_window
+        if aged >= self.lazy_g and not self._cool_batch(aged):
+            for layer in self.layers:
+                self._cool_aged_tokens(layer)
         self._seen_tokens += 1
         self._pending_layers.clear()
+
+    def _cool_batch(self, aged: int) -> bool:
+        """Pack the 16-to-13 CUDA case across layers, preserving per-head selection."""
+        opt = self.optimizations
+        if not (len(self.layers) > 1 and opt.hot_ring and opt.paged_cold and opt.fused_quantize
+                and self.cold_bits == 4 and self.group_size == 32 and aged == 16
+                and round(self.decode_keep_ratio * aged) == 13):
+            return False
+        first = self.layers[0].hot_k
+        if first.device.type != "cuda" or first.shape[0] != 1 or first.shape[-1] != 128:
+            return False
+        if any(t.shape != first.shape or t.device != first.device or t.dtype != torch.float16
+               for layer in self.layers for t in (layer.hot_k, layer.hot_v)):
+            return False
+
+        # Each leading row is one layer. Norm, topk and sort still operate on
+        # the same dimensions as in the single-layer path (including tie handling).
+        key_ranges, value_ranges = zip(*(layer.hot_range(0, aged) for layer in self.layers))
+        keys = torch.cat(key_ranges, dim=0)
+        values = torch.cat(value_ranges, dim=0)
+        scores = torch.linalg.vector_norm(values.float(), dim=-1)
+        indices = scores.topk(13, dim=-1).indices.sort(dim=-1).values
+        keys, values = _gather_kv(keys, values, indices)
+        if self._batched_cold_pool is None:
+            self._batched_cold_pool = PackedPagePool(opt.page_slots)
+        batch = _pack_kv(keys, values, self.cold_bits, self.group_size, fast=True,
+                         pool=self._batched_cold_pool, channel_contiguous_k=opt.channel_contiguous_k)
+
+        def layer_views(packed):
+            # The batch axis here represents layers. Each segment must expose
+            # batch=1 while retaining its view of the shared page.
+            shape = (1, *packed.orig_shape[1:])
+            return [replace(packed, packed=codes, scale=scale, mins=mins, orig_shape=shape)
+                    for codes, scale, mins in zip(packed.packed.split(1), packed.scale.split(1),
+                                                  packed.mins.split(1))]
+
+        segments = [PackedKVSegment(k, v) for k, v in zip(layer_views(batch.key), layer_views(batch.value))]
+        for layer, segment in zip(self.layers, segments):
+            self._commit_cooling(layer, segment, aged)
+        return True
 
     def _cool_aged_tokens(self, layer: LayerTiers) -> None:
         """仅处理热区最旧的一批；已冻结 prompt/cold 永不重新量化。"""
@@ -392,6 +436,9 @@ class PhaseKVCache(Cache):
                            fast=self.optimizations.fused_quantize, pool=layer.cold_pool,
                            channel_contiguous_k=self.optimizations.channel_contiguous_k,
                            token_start=token_start, token_count=token_count)
+        self._commit_cooling(layer, segment, aged)
+
+    def _commit_cooling(self, layer, segment, aged):
         layer.cold.append(segment)
         if not self.optimizations.reuse_workspace:
             layer._decode_workspace = None
@@ -509,6 +556,8 @@ class PhaseKVCache(Cache):
 
     def storage_tensors(self):
         """Enumerate KV owners, including full pages; consumers must deduplicate."""
+        if self._batched_cold_pool is not None:
+            yield from self._batched_cold_pool.storage_tensors()
         for layer in self.layers:
             for segment in (layer.prompt, *layer.prompt_extensions, *layer.cold):
                 for packed in (segment.key, segment.value):
@@ -589,3 +638,4 @@ class PhaseKVCache(Cache):
                 for segment in layer.cold]
             layer.hot_k = layer.hot_k.index_select(0, beam_idx.to(layer.hot_k.device))
             layer.hot_v = layer.hot_v.index_select(0, beam_idx.to(layer.hot_v.device))
+        self._batched_cold_pool = None

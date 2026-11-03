@@ -1,0 +1,244 @@
+{
+  "gpu": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "scope": "synthetic cache only, first cooling and descriptor update, 32 layers Hkv8 D128, prompt 5734",
+  "pairs": [
+    {
+      "old": {
+        "cooling": {
+          "host_ms": 12.7258,
+          "sync_wall_ms": 12.8283,
+          "allocated_growth_bytes": 20054016,
+          "transient_above_final_bytes": 54784
+        },
+        "descriptors": {
+          "host_ms": 2.2953,
+          "sync_wall_ms": 2.3171
+        }
+      },
+      "new": {
+        "cooling": {
+          "host_ms": 1.3548,
+          "sync_wall_ms": 1.3762,
+          "allocated_growth_bytes": 20998144,
+          "transient_above_final_bytes": 1746944
+        },
+        "descriptors": {
+          "host_ms": 0.9591,
+          "sync_wall_ms": 0.9782
+        }
+      }
+    },
+    {
+      "new": {
+        "cooling": {
+          "host_ms": 1.3076,
+          "sync_wall_ms": 1.7342,
+          "allocated_growth_bytes": 20054016,
+          "transient_above_final_bytes": 1746944
+        },
+        "descriptors": {
+          "host_ms": 0.8424,
+          "sync_wall_ms": 0.8546
+        }
+      },
+      "old": {
+        "cooling": {
+          "host_ms": 10.474,
+          "sync_wall_ms": 10.4947,
+          "allocated_growth_bytes": 20054016,
+          "transient_above_final_bytes": 54784
+        },
+        "descriptors": {
+          "host_ms": 2.1794,
+          "sync_wall_ms": 2.1953
+        }
+      }
+    },
+    {
+      "old": {
+        "cooling": {
+          "host_ms": 11.459,
+          "sync_wall_ms": 11.519,
+          "allocated_growth_bytes": 20054016,
+          "transient_above_final_bytes": 54784
+        },
+        "descriptors": {
+          "host_ms": 1.4265,
+          "sync_wall_ms": 1.4391
+        }
+      },
+      "new": {
+        "cooling": {
+          "host_ms": 1.0895,
+          "sync_wall_ms": 1.1033,
+          "allocated_growth_bytes": 20998144,
+          "transient_above_final_bytes": 1746944
+        },
+        "descriptors": {
+          "host_ms": 0.9661,
+          "sync_wall_ms": 0.9824
+        }
+      }
+    },
+    {
+      "new": {
+        "cooling": {
+          "host_ms": 1.2238,
+          "sync_wall_ms": 1.2426,
+          "allocated_growth_bytes": 20054016,
+          "transient_above_final_bytes": 1746944
+        },
+        "descriptors": {
+          "host_ms": 0.9242,
+          "sync_wall_ms": 0.9601
+        }
+      },
+      "old": {
+        "cooling": {
+          "host_ms": 10.1661,
+          "sync_wall_ms": 10.1865,
+          "allocated_growth_bytes": 20054016,
+          "transient_above_final_bytes": 54784
+        },
+        "descriptors": {
+          "host_ms": 1.4125,
+          "sync_wall_ms": 1.4234
+        }
+      }
+    },
+    {
+      "old": {
+        "cooling": {
+          "host_ms": 9.5531,
+          "sync_wall_ms": 9.6659,
+          "allocated_growth_bytes": 20054016,
+          "transient_above_final_bytes": 54784
+        },
+        "descriptors": {
+          "host_ms": 1.6775,
+          "sync_wall_ms": 1.6897
+        }
+      },
+      "new": {
+        "cooling": {
+          "host_ms": 1.2412,
+          "sync_wall_ms": 1.2575,
+          "allocated_growth_bytes": 20998144,
+          "transient_above_final_bytes": 1746944
+        },
+        "descriptors": {
+          "host_ms": 0.8648,
+          "sync_wall_ms": 0.8759
+        }
+      }
+    },
+    {
+      "new": {
+        "cooling": {
+          "host_ms": 1.1964,
+          "sync_wall_ms": 1.2129,
+          "allocated_growth_bytes": 20054016,
+          "transient_above_final_bytes": 1746944
+        },
+        "descriptors": {
+          "host_ms": 0.9197,
+          "sync_wall_ms": 0.9343
+        }
+      },
+      "old": {
+        "cooling": {
+          "host_ms": 11.1011,
+          "sync_wall_ms": 11.1267,
+          "allocated_growth_bytes": 20054016,
+          "transient_above_final_bytes": 54784
+        },
+        "descriptors": {
+          "host_ms": 1.4434,
+          "sync_wall_ms": 1.4572
+        }
+      }
+    },
+    {
+      "old": {
+        "cooling": {
+          "host_ms": 10.9281,
+          "sync_wall_ms": 10.9518,
+          "allocated_growth_bytes": 20054016,
+          "transient_above_final_bytes": 54784
+        },
+        "descriptors": {
+          "host_ms": 1.5246,
+          "sync_wall_ms": 1.5488
+        }
+      },
+      "new": {
+        "cooling": {
+          "host_ms": 1.1776,
+          "sync_wall_ms": 1.1938,
+          "allocated_growth_bytes": 20998144,
+          "transient_above_final_bytes": 1746944
+        },
+        "descriptors": {
+          "host_ms": 0.9488,
+          "sync_wall_ms": 0.9641
+        }
+      }
+    },
+    {
+      "new": {
+        "cooling": {
+          "host_ms": 1.116,
+          "sync_wall_ms": 1.1313,
+          "allocated_growth_bytes": 20054016,
+          "transient_above_final_bytes": 1746944
+        },
+        "descriptors": {
+          "host_ms": 0.863,
+          "sync_wall_ms": 0.8745
+        }
+      },
+      "old": {
+        "cooling": {
+          "host_ms": 10.0537,
+          "sync_wall_ms": 10.0747,
+          "allocated_growth_bytes": 20054016,
+          "transient_above_final_bytes": 54784
+        },
+        "descriptors": {
+          "host_ms": 1.4187,
+          "sync_wall_ms": 1.4299
+        }
+      }
+    }
+  ],
+  "summary": {
+    "cooling": {
+      "host_ms": {
+        "old": 10.70105,
+        "new": 1.2101,
+        "delta": -9.45845,
+        "new_faster": 8
+      },
+      "sync_wall_ms": {
+        "old": 10.72325,
+        "new": 1.22775,
+        "delta": -9.350950000000001,
+        "new_faster": 8
+      }
+    },
+    "descriptors": {
+      "host_ms": {
+        "old": 1.484,
+        "new": 0.92195,
+        "delta": -0.56575,
+        "new_faster": 8
+      },
+      "sync_wall_ms": {
+        "old": 1.5030000000000001,
+        "new": 0.9472,
+        "delta": -0.57005,
+        "new_faster": 8
+      }
+    }
+  }
+}

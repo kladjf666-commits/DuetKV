@@ -1,0 +1,66 @@
+{
+  "fingerprint": "2c305a7ce40e4ca89ebcf4c037aadd7572df58557115edcbb3c101298211aa27",
+  "protocol": {
+    "gpu": "GPU-36667aa2-b1df-c859-f3dd-0848e1cd2efd, NVIDIA GeForce RTX 4090, 580.76.05",
+    "environment": {
+      "torch": "2.5.1+cu121",
+      "flash_attn": "2.7.4.post1",
+      "transformers": "4.46.3",
+      "triton": "3.1.0"
+    },
+    "model": "/data/Llama-3.1-8B-Instruct/snapshots/master",
+    "code_sha256": "4cb90f4a343baf56ee6336b8acaa2bde9a66d5851f75e6cac100e3e5c01f0163",
+    "reference_fingerprints": {
+      "70": "590b7564bcd93cbdd722886e7c7d54745a26ef07f7deb8c61c549609ebda3773",
+      "100": "87951834fe319f7efcc8ab6a886365d02ce3b24f1f4be1993d2b7dabd15bf766"
+    },
+    "same_gpu_as_endpoints": true,
+    "grid": [
+      70,
+      75,
+      80,
+      85,
+      90,
+      95,
+      100
+    ],
+    "run_order": [
+      80,
+      90,
+      75,
+      85,
+      95
+    ],
+    "base_options": {
+      "prefill_keep_ratio": 0.7,
+      "obs_window": 32,
+      "sink_tokens": 0,
+      "prompt_bits": 4,
+      "cold_bits": 4,
+      "group_size": 32,
+      "recent_window": 128,
+      "lazy_g": 16,
+      "decode_keep_ratio": 0.8,
+      "optimizations": {
+        "fused_quantize": true,
+        "reuse_workspace": true,
+        "paged_cold": true,
+        "page_slots": 32,
+        "cold_group": 8,
+        "specialized_4bit": true,
+        "gqa_reuse": true,
+        "hot_ring": true,
+        "channel_contiguous_k": true
+      }
+    },
+    "overridden_option": "prefill_keep_ratio",
+    "selector": "standard",
+    "batch": 1,
+    "dtype": "float16",
+    "greedy": true,
+    "natural_eos": true,
+    "max_output": 4096,
+    "analysis": "Per task: largest adjacent score gain; >=5pp and one-sided paired sign flip, Holm .05 over six neighbors; sustained near100 = score >= score100-3 and zero severe loops at this and all higher tested levels. Short-period repeat: >=128 tokens, period <=16.",
+    "package_sha256": "cde47eabb388538264c3344424bc4fa85cc60391a8831a7a9e66cf19b4d5e8c0"
+  }
+}

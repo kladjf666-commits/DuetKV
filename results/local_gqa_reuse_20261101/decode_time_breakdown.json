@@ -1,0 +1,575 @@
+{
+  "model": "Llama-3.1-8B-Instruct first 4 layers and full LM head",
+  "gpu": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "torch": "2.5.1+cu121",
+  "context": 8192,
+  "greedy_steps": 288,
+  "start_at": 160,
+  "width": 16,
+  "cold_keep": 0.8,
+  "method": "Same prompt and prefill as local resident benchmark. Each pair advances two independent GPU caches over identical positions. Alternating arm order. Untraced, then CUPTI concurrent kernel activity, then untraced on reset caches. Windows include per-call host dispatch and final synchronization. No GPU performance counters.",
+  "all_greedy_ids_sha256": "9638c0c1f6d6e9e5d5fd21f2cbbde722f69e9ae5c9156702d2c4a283ac813ba1",
+  "dropped_cuda_records": 0,
+  "windows": [
+    {
+      "pass_name": "plain1",
+      "arm": 0,
+      "start": 160,
+      "end": 176,
+      "wall_ms": 12.298543750148383
+    },
+    {
+      "pass_name": "plain1",
+      "arm": 1,
+      "start": 160,
+      "end": 176,
+      "wall_ms": 11.874475000240636
+    },
+    {
+      "pass_name": "plain1",
+      "arm": 1,
+      "start": 176,
+      "end": 192,
+      "wall_ms": 12.477312500323023
+    },
+    {
+      "pass_name": "plain1",
+      "arm": 0,
+      "start": 176,
+      "end": 192,
+      "wall_ms": 12.42339374994117
+    },
+    {
+      "pass_name": "plain1",
+      "arm": 0,
+      "start": 192,
+      "end": 208,
+      "wall_ms": 12.329200000294804
+    },
+    {
+      "pass_name": "plain1",
+      "arm": 1,
+      "start": 192,
+      "end": 208,
+      "wall_ms": 13.375843750054628
+    },
+    {
+      "pass_name": "plain1",
+      "arm": 1,
+      "start": 208,
+      "end": 224,
+      "wall_ms": 12.266624999938358
+    },
+    {
+      "pass_name": "plain1",
+      "arm": 0,
+      "start": 208,
+      "end": 224,
+      "wall_ms": 12.681050000082905
+    },
+    {
+      "pass_name": "plain1",
+      "arm": 0,
+      "start": 224,
+      "end": 240,
+      "wall_ms": 11.909687500065047
+    },
+    {
+      "pass_name": "plain1",
+      "arm": 1,
+      "start": 224,
+      "end": 240,
+      "wall_ms": 11.03616249974948
+    },
+    {
+      "pass_name": "plain1",
+      "arm": 1,
+      "start": 240,
+      "end": 256,
+      "wall_ms": 11.674181249873072
+    },
+    {
+      "pass_name": "plain1",
+      "arm": 0,
+      "start": 240,
+      "end": 256,
+      "wall_ms": 12.237937499776308
+    },
+    {
+      "pass_name": "plain1",
+      "arm": 0,
+      "start": 256,
+      "end": 272,
+      "wall_ms": 13.668318750205799
+    },
+    {
+      "pass_name": "plain1",
+      "arm": 1,
+      "start": 256,
+      "end": 272,
+      "wall_ms": 12.359768750229705
+    },
+    {
+      "pass_name": "plain1",
+      "arm": 1,
+      "start": 272,
+      "end": 288,
+      "wall_ms": 14.486112499980663
+    },
+    {
+      "pass_name": "plain1",
+      "arm": 0,
+      "start": 272,
+      "end": 288,
+      "wall_ms": 13.337906249944353
+    },
+    {
+      "pass_name": "traced",
+      "arm": 1,
+      "start": 160,
+      "end": 176,
+      "wall_ms": 15.069631249843951,
+      "kernel_ms_per_token": {
+        "other": 0.44541162500000064,
+        "gemv_gemm": 9.545746312500002,
+        "packed_main": 1.1881206875000005,
+        "merge": 0.044837562500000004
+      },
+      "count": {
+        "other": 2572,
+        "gemv_gemm": 480,
+        "packed_main": 64,
+        "merge": 64
+      },
+      "all_kernel_union_ms": 11.2241161875,
+      "wall_outside_kernel_ms": 3.845515062343951
+    },
+    {
+      "pass_name": "traced",
+      "arm": 0,
+      "start": 160,
+      "end": 176,
+      "wall_ms": 13.780974999917817,
+      "kernel_ms_per_token": {
+        "other": 0.5279828749999983,
+        "gemv_gemm": 9.111149249999999,
+        "packed_main": 2.120408562499999,
+        "merge": 0.046691750000000004
+      },
+      "count": {
+        "other": 2572,
+        "gemv_gemm": 480,
+        "packed_main": 64,
+        "merge": 64
+      },
+      "all_kernel_union_ms": 11.8062324375,
+      "wall_outside_kernel_ms": 1.9747425624178163
+    },
+    {
+      "pass_name": "traced",
+      "arm": 0,
+      "start": 176,
+      "end": 192,
+      "wall_ms": 13.289131250076025,
+      "kernel_ms_per_token": {
+        "other": 0.5265078749999985,
+        "gemv_gemm": 8.7050639375,
+        "packed_main": 2.2817334999999996,
+        "merge": 0.0465175625
+      },
+      "count": {
+        "other": 2572,
+        "gemv_gemm": 480,
+        "packed_main": 64,
+        "merge": 64
+      },
+      "all_kernel_union_ms": 11.559822875,
+      "wall_outside_kernel_ms": 1.729308375076025
+    },
+    {
+      "pass_name": "traced",
+      "arm": 1,
+      "start": 176,
+      "end": 192,
+      "wall_ms": 12.425287499809201,
+      "kernel_ms_per_token": {
+        "other": 0.5260203749999988,
+        "gemv_gemm": 8.68122656250001,
+        "packed_main": 1.23306475,
+        "merge": 0.046265562500000024
+      },
+      "count": {
+        "other": 2572,
+        "gemv_gemm": 480,
+        "packed_main": 64,
+        "merge": 64
+      },
+      "all_kernel_union_ms": 10.48657725,
+      "wall_outside_kernel_ms": 1.9387102498092013
+    },
+    {
+      "pass_name": "traced",
+      "arm": 1,
+      "start": 192,
+      "end": 208,
+      "wall_ms": 12.36015624999709,
+      "kernel_ms_per_token": {
+        "other": 0.5249934999999998,
+        "gemv_gemm": 8.856807625000007,
+        "packed_main": 1.3055480625,
+        "merge": 0.046601562500000006
+      },
+      "count": {
+        "other": 2572,
+        "gemv_gemm": 480,
+        "packed_main": 64,
+        "merge": 64
+      },
+      "all_kernel_union_ms": 10.73395075,
+      "wall_outside_kernel_ms": 1.6262054999970896
+    },
+    {
+      "pass_name": "traced",
+      "arm": 0,
+      "start": 192,
+      "end": 208,
+      "wall_ms": 14.756425000086892,
+      "kernel_ms_per_token": {
+        "other": 0.5258293749999992,
+        "gemv_gemm": 9.573144625000005,
+        "packed_main": 2.812356437499999,
+        "merge": 0.04643931249999999
+      },
+      "count": {
+        "other": 2572,
+        "gemv_gemm": 480,
+        "packed_main": 64,
+        "merge": 64
+      },
+      "all_kernel_union_ms": 12.95776975,
+      "wall_outside_kernel_ms": 1.7986552500868918
+    },
+    {
+      "pass_name": "traced",
+      "arm": 0,
+      "start": 208,
+      "end": 224,
+      "wall_ms": 14.700312499826396,
+      "kernel_ms_per_token": {
+        "other": 0.5257370624999984,
+        "gemv_gemm": 9.574499562499996,
+        "packed_main": 2.6605798749999985,
+        "merge": 0.0466855625
+      },
+      "count": {
+        "other": 2572,
+        "gemv_gemm": 480,
+        "packed_main": 64,
+        "merge": 64
+      },
+      "all_kernel_union_ms": 12.8075020625,
+      "wall_outside_kernel_ms": 1.8928104373263963
+    },
+    {
+      "pass_name": "traced",
+      "arm": 1,
+      "start": 208,
+      "end": 224,
+      "wall_ms": 13.498456249635638,
+      "kernel_ms_per_token": {
+        "other": 0.5540022499999983,
+        "gemv_gemm": 9.769168062500007,
+        "packed_main": 1.1784793124999997,
+        "merge": 0.045285437500000005
+      },
+      "count": {
+        "other": 2572,
+        "gemv_gemm": 480,
+        "packed_main": 64,
+        "merge": 64
+      },
+      "all_kernel_union_ms": 11.5469350625,
+      "wall_outside_kernel_ms": 1.9515211871356382
+    },
+    {
+      "pass_name": "traced",
+      "arm": 1,
+      "start": 224,
+      "end": 240,
+      "wall_ms": 12.990493750294263,
+      "kernel_ms_per_token": {
+        "other": 0.5541508749999993,
+        "gemv_gemm": 9.19225475,
+        "packed_main": 1.2511126874999996,
+        "merge": 0.0455519375
+      },
+      "count": {
+        "other": 2572,
+        "gemv_gemm": 480,
+        "packed_main": 64,
+        "merge": 64
+      },
+      "all_kernel_union_ms": 11.04307025,
+      "wall_outside_kernel_ms": 1.9474235002942635
+    },
+    {
+      "pass_name": "traced",
+      "arm": 0,
+      "start": 224,
+      "end": 240,
+      "wall_ms": 14.01898749963948,
+      "kernel_ms_per_token": {
+        "other": 0.5254661249999982,
+        "gemv_gemm": 9.076393250000004,
+        "packed_main": 2.5879065625,
+        "merge": 0.0464516875
+      },
+      "count": {
+        "other": 2572,
+        "gemv_gemm": 480,
+        "packed_main": 64,
+        "merge": 64
+      },
+      "all_kernel_union_ms": 12.236217625,
+      "wall_outside_kernel_ms": 1.7827698746394791
+    },
+    {
+      "pass_name": "traced",
+      "arm": 0,
+      "start": 240,
+      "end": 256,
+      "wall_ms": 14.36699999976554,
+      "kernel_ms_per_token": {
+        "other": 0.5404267499999974,
+        "gemv_gemm": 9.092848312500001,
+        "packed_main": 3.0902557499999994,
+        "merge": 0.0467413125
+      },
+      "count": {
+        "other": 2572,
+        "gemv_gemm": 480,
+        "packed_main": 64,
+        "merge": 64
+      },
+      "all_kernel_union_ms": 12.770272125,
+      "wall_outside_kernel_ms": 1.5967278747655396
+    },
+    {
+      "pass_name": "traced",
+      "arm": 1,
+      "start": 240,
+      "end": 256,
+      "wall_ms": 11.662856250040932,
+      "kernel_ms_per_token": {
+        "other": 0.5236818124999993,
+        "gemv_gemm": 8.403563250000008,
+        "packed_main": 1.1912091249999996,
+        "merge": 0.04546762500000001
+      },
+      "count": {
+        "other": 2572,
+        "gemv_gemm": 480,
+        "packed_main": 64,
+        "merge": 64
+      },
+      "all_kernel_union_ms": 10.1639218125,
+      "wall_outside_kernel_ms": 1.4989344375409317
+    },
+    {
+      "pass_name": "traced",
+      "arm": 1,
+      "start": 256,
+      "end": 272,
+      "wall_ms": 11.789168749601231,
+      "kernel_ms_per_token": {
+        "other": 0.44468237499999874,
+        "gemv_gemm": 8.681152312499997,
+        "packed_main": 1.132955625,
+        "merge": 0.034265624999999994
+      },
+      "count": {
+        "other": 2572,
+        "gemv_gemm": 480,
+        "packed_main": 64,
+        "merge": 64
+      },
+      "all_kernel_union_ms": 10.2930559375,
+      "wall_outside_kernel_ms": 1.4961128121012308
+    },
+    {
+      "pass_name": "traced",
+      "arm": 0,
+      "start": 256,
+      "end": 272,
+      "wall_ms": 13.296618750246125,
+      "kernel_ms_per_token": {
+        "other": 0.46074137499999995,
+        "gemv_gemm": 8.972002437499999,
+        "packed_main": 2.2675072500000004,
+        "merge": 0.034705312499999995
+      },
+      "count": {
+        "other": 2572,
+        "gemv_gemm": 480,
+        "packed_main": 64,
+        "merge": 64
+      },
+      "all_kernel_union_ms": 11.734956375,
+      "wall_outside_kernel_ms": 1.5616623752461258
+    },
+    {
+      "pass_name": "traced",
+      "arm": 0,
+      "start": 272,
+      "end": 288,
+      "wall_ms": 14.639243750025344,
+      "kernel_ms_per_token": {
+        "other": 0.4966931874999996,
+        "gemv_gemm": 9.312058749999995,
+        "packed_main": 3.0511039999999983,
+        "merge": 0.035339999999999996
+      },
+      "count": {
+        "other": 2572,
+        "gemv_gemm": 480,
+        "packed_main": 64,
+        "merge": 64
+      },
+      "all_kernel_union_ms": 12.8951959375,
+      "wall_outside_kernel_ms": 1.7440478125253431
+    },
+    {
+      "pass_name": "traced",
+      "arm": 1,
+      "start": 272,
+      "end": 288,
+      "wall_ms": 12.40211249978529,
+      "kernel_ms_per_token": {
+        "other": 0.47513262499999853,
+        "gemv_gemm": 9.196232187499993,
+        "packed_main": 1.1300939374999999,
+        "merge": 0.034558124999999995
+      },
+      "count": {
+        "other": 2572,
+        "gemv_gemm": 480,
+        "packed_main": 64,
+        "merge": 64
+      },
+      "all_kernel_union_ms": 10.836016875,
+      "wall_outside_kernel_ms": 1.566095624785289
+    },
+    {
+      "pass_name": "plain2",
+      "arm": 0,
+      "start": 160,
+      "end": 176,
+      "wall_ms": 12.094331249954848
+    },
+    {
+      "pass_name": "plain2",
+      "arm": 1,
+      "start": 160,
+      "end": 176,
+      "wall_ms": 11.416656249821244
+    },
+    {
+      "pass_name": "plain2",
+      "arm": 1,
+      "start": 176,
+      "end": 192,
+      "wall_ms": 11.368668750037614
+    },
+    {
+      "pass_name": "plain2",
+      "arm": 0,
+      "start": 176,
+      "end": 192,
+      "wall_ms": 12.0112062500084
+    },
+    {
+      "pass_name": "plain2",
+      "arm": 0,
+      "start": 192,
+      "end": 208,
+      "wall_ms": 12.10871249986667
+    },
+    {
+      "pass_name": "plain2",
+      "arm": 1,
+      "start": 192,
+      "end": 208,
+      "wall_ms": 11.637850000170147
+    },
+    {
+      "pass_name": "plain2",
+      "arm": 1,
+      "start": 208,
+      "end": 224,
+      "wall_ms": 11.439175000305113
+    },
+    {
+      "pass_name": "plain2",
+      "arm": 0,
+      "start": 208,
+      "end": 224,
+      "wall_ms": 12.226837500293186
+    },
+    {
+      "pass_name": "plain2",
+      "arm": 0,
+      "start": 224,
+      "end": 240,
+      "wall_ms": 12.173075000191602
+    },
+    {
+      "pass_name": "plain2",
+      "arm": 1,
+      "start": 224,
+      "end": 240,
+      "wall_ms": 11.497406250327913
+    },
+    {
+      "pass_name": "plain2",
+      "arm": 1,
+      "start": 240,
+      "end": 256,
+      "wall_ms": 11.739481250060635
+    },
+    {
+      "pass_name": "plain2",
+      "arm": 0,
+      "start": 240,
+      "end": 256,
+      "wall_ms": 13.346706250104035
+    },
+    {
+      "pass_name": "plain2",
+      "arm": 0,
+      "start": 256,
+      "end": 272,
+      "wall_ms": 12.985718749860098
+    },
+    {
+      "pass_name": "plain2",
+      "arm": 1,
+      "start": 256,
+      "end": 272,
+      "wall_ms": 12.03306249999514
+    },
+    {
+      "pass_name": "plain2",
+      "arm": 1,
+      "start": 272,
+      "end": 288,
+      "wall_ms": 12.487250000049244
+    },
+    {
+      "pass_name": "plain2",
+      "arm": 0,
+      "start": 272,
+      "end": 288,
+      "wall_ms": 12.65836875018067
+    }
+  ]
+}

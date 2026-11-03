@@ -1,6 +1,6 @@
 # PhaseKV 项目交接
 
-截至 2026-11-01，当前任务是在单张 RTX 4090 上用 Llama-3.1-8B-Instruct、FP16、batch=1 复测新版 PhaseKV。80% 离线包已准备好，本地 GPU 数值检查已通过。本目录尚无本轮正式结果。已回传的 `PhaseKV_4090_channel_only_result` 是上一轮 **100%** 的批量测试。
+2026-11-02 已核对单张 RTX 4090 上的 Llama-3.1-8B-Instruct、FP16、batch=1 正式结果。冷区保留率 80% 的 1,126 条记录全部成功。上一轮优化版 100% 的批量测试位于 `PhaseKV_4090_channel_only_result`。[本轮速度和质量对比](PhaseKV与Full消融/80%25复测结果对比.md)
 
 ## 本轮改动
 

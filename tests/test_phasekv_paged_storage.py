@@ -1,6 +1,7 @@
 """Capacity reuse and independently audited backing storage."""
 import sys
 import unittest
+from unittest.mock import patch
 import torch
 from scripts.benchmark_4090d import bootstrap_algorithms
 if "eval" not in sys.modules:
@@ -82,6 +83,67 @@ class TestWorkspaceCapacity(unittest.TestCase):
 
 
 class TestPagedCold(unittest.TestCase):
+    @unittest.skipUnless(torch.cuda.is_available(), "requires actual packed CUDA decode")
+    def test_batched_keep80_matches_each_layer_across_wrap_and_page_growth(self):
+        from PhaseKV.kernels.segmented_attention import segmented_phasekv_decode
+        from PhaseKV import phasekv_cache as runtime
+
+        torch.manual_seed(173)
+        dense = DynamicCache()
+        for layer_id in range(4):
+            dense.update(*(torch.randn(1, 2, 33, 128, dtype=torch.float16, device="cuda")
+                           for _ in range(2)), layer_id)
+        options = OptimizationConfig(paged_cold=True, fused_quantize=True, reuse_workspace=True,
+                                     channel_contiguous_k=True, specialized_4bit=True, hot_ring=True,
+                                     gqa_reuse=True, page_slots=2)
+        ref, batch = (PhaseKVCache.from_dense_prefill(dense, prompt_len=33, prompt_bits=4,
+                      recent_window=3, lazy_g=16, decode_keep_ratio=.8, optimizations=options)
+                      for _ in range(2))
+        original_gather = runtime._gather_kv
+        q = torch.randn(8, 128, dtype=torch.float16, device="cuda")
+        for step in range(51):
+            for layer_id in range(4):
+                k, v = (torch.randn(1, 2, 1, 128, dtype=torch.float16, device="cuda") for _ in range(2))
+                # Exact ties in one head, distinct keys reveal a changed tie choice.
+                v[:, 0].zero_()
+                v[:, 0, 0, step % 128] = 1
+                for cache in (ref, batch):
+                    cache.append_hot(layer_id, k, v)
+            with patch.object(ref, "_cool_batch", return_value=False), \
+                    patch.object(runtime, "_gather_kv", wraps=original_gather) as old_gather:
+                ref.finish_decode_step()
+            with patch.object(runtime, "_gather_kv", wraps=original_gather) as new_gather:
+                batch.finish_decode_step()
+            if old_gather.called:
+                self.assertEqual(old_gather.call_count, 4)
+                self.assertEqual(new_gather.call_count, 1)
+                expected = torch.cat([call.args[2] for call in old_gather.call_args_list])
+                self.assertTrue(torch.equal(expected, new_gather.call_args.args[2]))
+                self.assertEqual(batch.physical_nbytes(), ref.physical_nbytes())
+                for a, b in zip(ref.layers, batch.layers):
+                    self.assertEqual((a.hot_len, a.hot_start), (b.hot_len, b.hot_start))
+                    for old, new in zip(a.cold, b.cold):
+                        for x, y in ((old.key, new.key), (old.value, new.value)):
+                            for name in ("packed", "scale", "mins"):
+                                left = getattr(x, name).reshape(-1).contiguous().view(torch.uint8)
+                                right = getattr(y, name).reshape(-1).contiguous().view(torch.uint8)
+                                self.assertTrue(torch.equal(left, right))
+                    self.assertTrue(torch.equal(segmented_phasekv_decode(q, a, 8),
+                                                segmented_phasekv_decode(q, b, 8)))
+        self.assertEqual(len(batch.layers[0].cold), 3)
+        for cache in (ref, batch):
+            cache.reorder_cache(torch.tensor([0, 0], device="cuda"))
+            # A changed batch size releases the old page and resumes scalar cooling.
+            for _ in range(16):
+                for layer_id in range(4):
+                    cache.append_hot(layer_id, k.expand(2, -1, -1, -1), v.expand(2, -1, -1, -1))
+                cache.finish_decode_step()
+        self.assertIsNone(batch._batched_cold_pool)
+        for a, b in zip(ref.layers, batch.layers):
+            self.assertEqual(b.cold[-1].key.orig_shape, (2, 2, 13, 128))
+            self.assertTrue(torch.equal(a.cold[-1].key.packed, b.cold[-1].key.packed))
+        self.assertEqual(batch.physical_nbytes(), ref.physical_nbytes())
+
     def test_channel_contiguous_key_preserves_codes_during_cooling_and_prompt_extension(self):
         dense = DynamicCache()
         tensors = [torch.randn(1, 2, 67, 128, dtype=torch.float16) for _ in range(2)]

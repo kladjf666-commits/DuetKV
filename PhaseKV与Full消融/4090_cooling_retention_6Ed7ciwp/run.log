@@ -1,0 +1,35 @@
+OK model-00001-of-00004.safetensors: 4.977 GB
+OK model-00002-of-00004.safetensors: 5.000 GB
+OK model-00003-of-00004.safetensors: 4.916 GB
+OK model-00004-of-00004.safetensors: 1.168 GB
+Checkpoint structure/length checks passed (not a cryptographic authenticity check).
+GPU-36667aa2-b1df-c859-f3dd-0848e1cd2efd, NVIDIA GeForce RTX 4090, 580.76.05 | performance/8192+256/0 | loading full Llama-3.1-8B once | results /data/phasekv-results/4090_cooling_retention_6Ed7ciwp
+You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [01:10<03:32, 70.76s/it]Loading checkpoint shards:  50%|█████     | 2/4 [02:26<02:27, 73.97s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [03:57<01:21, 81.75s/it]Loading checkpoint shards: 100%|██████████| 4/4 [04:09<00:00, 54.20s/it]Loading checkpoint shards: 100%|██████████| 4/4 [04:09<00:00, 62.49s/it]
+[phasekv_triton/performance/8192+256/0] 129/256 tokens
+[phasekv_triton/performance/8192+256/0] 256/256 tokens
+[phasekv_triton/performance/8192+256/0] 129/256 tokens
+[phasekv_triton/performance/8192+256/0] 256/256 tokens
+[phasekv_triton/performance/8192+256/0] 129/256 tokens
+[phasekv_triton/performance/8192+256/0] 256/256 tokens
+WARMUP passed for all arms and measurement modes.
+[phasekv_triton/performance/8192+256/0] 129/256 tokens
+[phasekv_triton/performance/8192+256/0] 256/256 tokens
+[phasekv_triton/performance/8192+256/0] 129/256 tokens
+[phasekv_triton/performance/8192+256/0] 256/256 tokens
+[phasekv_triton/performance/8192+256/0] 129/256 tokens
+[phasekv_triton/performance/8192+256/0] 256/256 tokens
+ROUND 1/2 new80_minus_old80 throughput +0.59% decode -0.125 ms/token
+ROUND 1/2 new80_minus_new100 throughput -0.01% decode +0.001 ms/token
+[phasekv_triton/performance/8192+256/0] 129/256 tokens
+[phasekv_triton/performance/8192+256/0] 256/256 tokens
+[phasekv_triton/performance/8192+256/0] 129/256 tokens
+[phasekv_triton/performance/8192+256/0] 256/256 tokens
+[phasekv_triton/performance/8192+256/0] 129/256 tokens
+[phasekv_triton/performance/8192+256/0] 256/256 tokens
+ROUND 2/2 new80_minus_old80 throughput +0.62% decode -0.132 ms/token
+ROUND 2/2 new80_minus_new100 throughput -0.02% decode +0.004 ms/token
+old keep=0.8 46.62 token/s, 21.451 ms/token
+new keep=0.8 46.90 token/s, 21.322 ms/token
+new100 keep=1 46.91 token/s, 21.320 ms/token
+FINISHED /data/phasekv-results/4090_cooling_retention_6Ed7ciwp/summary.json

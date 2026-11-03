@@ -100,6 +100,13 @@ def _capacity(count, reuse):
     return max(32, 1 << (count - 1).bit_length()) if reuse else count
 
 
+def _write_rows(descriptors, offset, rows):
+    # Copy directly into the final row range on the current stream. A fresh
+    # CPU source prevents a later decode step from overwriting an in-flight copy.
+    source = torch.tensor(rows, dtype=torch.int64, device="cpu")
+    descriptors.narrow(0, offset, len(rows)).copy_(source, non_blocking=True)
+
+
 def build_workspace(tiers, heads, head_dim, device, sm_count, key,
                     num_splits=None, block_n=None, num_warps=None):
     owners = [tiers.prompt, *tiers.prompt_extensions, *tiers.cold]
@@ -121,7 +128,7 @@ def build_workspace(tiers, heads, head_dim, device, sm_count, key,
     capacity = _capacity(partials, tiers.optimizations.reuse_workspace)
     descriptors = torch.empty((descriptor_capacity, DESCRIPTOR_WIDTH), dtype=torch.int64, device=device)
     if rows:
-        descriptors[:len(rows)].copy_(torch.tensor(rows, dtype=torch.int64, device=device))
+        _write_rows(descriptors, 0, rows)
     return DecodeWorkspace(
         key, owners, descriptors,
         torch.empty((heads, capacity), dtype=torch.float32, device=device),
@@ -176,8 +183,7 @@ def ensure_workspace(tiers, heads, head_dim, device, sm_count, key,
                 workspace.denominators = torch.empty_like(workspace.maxima)
                 workspace.accumulators = torch.empty((heads, capacity, head_dim), device=device, dtype=torch.float32)
             if rows:
-                workspace.descriptors[workspace.valid_count:count].copy_(
-                    torch.tensor(rows, dtype=torch.int64, device=device))
+                _write_rows(workspace.descriptors, workspace.valid_count, rows)
             workspace.valid_count = count
             workspace.cold_count = len(tiers.cold)
             workspace.owners.extend(added)

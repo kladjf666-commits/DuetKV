@@ -1,0 +1,3662 @@
+{
+  "model": "Llama-3.1-8B-Instruct",
+  "layers": 32,
+  "gpu": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+  "torch_version": "2.5.1+cu121",
+  "mode": "fixed teacher prefix, no generated cold blocks, layer streaming, FP16",
+  "controls": "Shared SDPA/eager-tail prefill. Factorial arms use one dense SDPA backend. 4-bit prompt K/V are actually packed then dequantized to FP16. keep70_packed uses the production segmented attention with each token streamed separately. Pin arms preserve the exact same budget.",
+  "cohorts": "7 archived keep80 severe loops plus old-only GSM8K/15, 16 MMLU, two descriptive controls.",
+  "rows": [
+    {
+      "id": "longgenbench/csqa/1",
+      "cohort": "severe",
+      "length": 2242,
+      "input_sha256": "b0336826ca7a66eb9c08312740f966f546d95f72852dea51b6db11c6b74c68c2",
+      "teacher": [
+        16533,
+        62,
+        21,
+        512,
+        16533,
+        62,
+        21,
+        512,
+        16533,
+        62,
+        21,
+        512
+      ],
+      "positions": [
+        4,
+        8,
+        12
+      ],
+      "history_full": 10267,
+      "history_phase": 16533,
+      "regions": [
+        [
+          519,
+          568
+        ],
+        [
+          977,
+          1026
+        ]
+      ],
+      "standard_retention_in_target_and_control": [
+        0.5708705357142857,
+        0.8489317602040817
+      ],
+      "predictions": {
+        "all_fp16": [
+          {
+            "top1": 10267,
+            "text": "Let",
+            "answer_token": 16533,
+            "label_logit": 17.796875,
+            "full_next_logit": 21.5,
+            "label_minus_full_next": -3.703125,
+            "label_rank": 3
+          },
+          {
+            "top1": 10267,
+            "text": "Let",
+            "answer_token": 16533,
+            "label_logit": 14.96875,
+            "full_next_logit": 19.875,
+            "label_minus_full_next": -4.90625,
+            "label_rank": 6
+          },
+          {
+            "top1": 10267,
+            "text": "Let",
+            "answer_token": 16533,
+            "label_logit": 16.375,
+            "full_next_logit": 18.109375,
+            "label_minus_full_next": -1.734375,
+            "label_rank": 2
+          }
+        ],
+        "all_4bit": [
+          {
+            "top1": 10267,
+            "text": "Let",
+            "answer_token": 16533,
+            "label_logit": 17.28125,
+            "full_next_logit": 21.4375,
+            "label_minus_full_next": -4.15625,
+            "label_rank": 3
+          },
+          {
+            "top1": 10267,
+            "text": "Let",
+            "answer_token": 16533,
+            "label_logit": 14.6796875,
+            "full_next_logit": 19.765625,
+            "label_minus_full_next": -5.0859375,
+            "label_rank": 9
+          },
+          {
+            "top1": 10267,
+            "text": "Let",
+            "answer_token": 16533,
+            "label_logit": 16.15625,
+            "full_next_logit": 17.921875,
+            "label_minus_full_next": -1.765625,
+            "label_rank": 2
+          }
+        ],
+        "keep70_fp16": [
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 18.390625,
+            "full_next_logit": 16.25,
+            "label_minus_full_next": 2.140625,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.625,
+            "full_next_logit": 16.90625,
+            "label_minus_full_next": 0.71875,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 18.203125,
+            "full_next_logit": 15.4140625,
+            "label_minus_full_next": 2.7890625,
+            "label_rank": 1
+          }
+        ],
+        "keep70_4bit": [
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 18.03125,
+            "full_next_logit": 16.1875,
+            "label_minus_full_next": 1.84375,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.359375,
+            "full_next_logit": 17.078125,
+            "label_minus_full_next": 0.28125,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 18.109375,
+            "full_next_logit": 15.4921875,
+            "label_minus_full_next": 2.6171875,
+            "label_rank": 1
+          }
+        ],
+        "keep70_packed": [
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 18.03125,
+            "full_next_logit": 16.1875,
+            "label_minus_full_next": 1.84375,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.359375,
+            "full_next_logit": 17.078125,
+            "label_minus_full_next": 0.28125,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 18.109375,
+            "full_next_logit": 15.4921875,
+            "label_minus_full_next": 2.6171875,
+            "label_rank": 1
+          }
+        ],
+        "keep70_4bit_pin_question": [
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 18.5,
+            "full_next_logit": 18.453125,
+            "label_minus_full_next": 0.046875,
+            "label_rank": 1
+          },
+          {
+            "top1": 10267,
+            "text": "Let",
+            "answer_token": 16533,
+            "label_logit": 16.859375,
+            "full_next_logit": 18.859375,
+            "label_minus_full_next": -2.0,
+            "label_rank": 2
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.703125,
+            "full_next_logit": 17.078125,
+            "label_minus_full_next": 0.625,
+            "label_rank": 1
+          }
+        ],
+        "keep70_4bit_pin_control": [
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 18.03125,
+            "full_next_logit": 16.265625,
+            "label_minus_full_next": 1.765625,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.3125,
+            "full_next_logit": 17.140625,
+            "label_minus_full_next": 0.171875,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 18.0625,
+            "full_next_logit": 15.515625,
+            "label_minus_full_next": 2.546875,
+            "label_rank": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "longgenbench/csqa/12",
+      "cohort": "control",
+      "length": 2134,
+      "input_sha256": "c4e9a0c4876a204c4560dc5436c58bf5eade9a25faac184eddd43ded7dce2336",
+      "teacher": [
+        16533,
+        62,
+        21,
+        512,
+        10267,
+        596,
+        1781,
+        3094,
+        555,
+        3094,
+        13,
+        386,
+        560,
+        527,
+        36021,
+        76056,
+        11,
+        779,
+        433
+      ],
+      "positions": [
+        19
+      ],
+      "history_full": 596,
+      "history_phase": 1053,
+      "regions": [
+        [
+          519,
+          556
+        ],
+        [
+          924,
+          961
+        ]
+      ],
+      "predictions": {
+        "all_fp16": [
+          {
+            "top1": 596,
+            "text": "'s",
+            "answer_token": 16533,
+            "label_logit": 2.458984375,
+            "full_next_logit": 25.703125,
+            "label_minus_full_next": -23.244140625,
+            "label_rank": 10478
+          }
+        ],
+        "all_4bit": [
+          {
+            "top1": 596,
+            "text": "'s",
+            "answer_token": 16533,
+            "label_logit": 2.29296875,
+            "full_next_logit": 25.734375,
+            "label_minus_full_next": -23.44140625,
+            "label_rank": 11665
+          }
+        ],
+        "keep70_fp16": [
+          {
+            "top1": 1053,
+            "text": " would",
+            "answer_token": 16533,
+            "label_logit": 3.537109375,
+            "full_next_logit": 25.0,
+            "label_minus_full_next": -21.462890625,
+            "label_rank": 4637
+          }
+        ],
+        "keep70_4bit": [
+          {
+            "top1": 1053,
+            "text": " would",
+            "answer_token": 16533,
+            "label_logit": 3.501953125,
+            "full_next_logit": 24.84375,
+            "label_minus_full_next": -21.341796875,
+            "label_rank": 4822
+          }
+        ],
+        "keep70_packed": [
+          {
+            "top1": 1053,
+            "text": " would",
+            "answer_token": 16533,
+            "label_logit": 3.501953125,
+            "full_next_logit": 24.84375,
+            "label_minus_full_next": -21.341796875,
+            "label_rank": 4817
+          }
+        ]
+      }
+    },
+    {
+      "id": "longgenbench/csqa/22",
+      "cohort": "severe",
+      "length": 2308,
+      "input_sha256": "c602694734dcedb0ed6b289040c16c893ee7190f7ade53ed9322890fd3632e1c",
+      "teacher": [
+        16533,
+        62,
+        21,
+        512,
+        16533,
+        62,
+        21,
+        512,
+        16533,
+        62,
+        21,
+        512
+      ],
+      "positions": [
+        4,
+        8,
+        12
+      ],
+      "history_full": 10267,
+      "history_phase": 16533,
+      "regions": [
+        [
+          519,
+          562
+        ],
+        [
+          961,
+          1004
+        ]
+      ],
+      "standard_retention_in_target_and_control": [
+        0.693859011627907,
+        0.5041787790697675
+      ],
+      "predictions": {
+        "all_fp16": [
+          {
+            "top1": 10267,
+            "text": "Let",
+            "answer_token": 16533,
+            "label_logit": 16.34375,
+            "full_next_logit": 21.359375,
+            "label_minus_full_next": -5.015625,
+            "label_rank": 3
+          },
+          {
+            "top1": 10267,
+            "text": "Let",
+            "answer_token": 16533,
+            "label_logit": 13.4375,
+            "full_next_logit": 19.25,
+            "label_minus_full_next": -5.8125,
+            "label_rank": 11
+          },
+          {
+            "top1": 10267,
+            "text": "Let",
+            "answer_token": 16533,
+            "label_logit": 15.6796875,
+            "full_next_logit": 17.453125,
+            "label_minus_full_next": -1.7734375,
+            "label_rank": 2
+          }
+        ],
+        "all_4bit": [
+          {
+            "top1": 10267,
+            "text": "Let",
+            "answer_token": 16533,
+            "label_logit": 15.703125,
+            "full_next_logit": 21.296875,
+            "label_minus_full_next": -5.59375,
+            "label_rank": 3
+          },
+          {
+            "top1": 10267,
+            "text": "Let",
+            "answer_token": 16533,
+            "label_logit": 13.28125,
+            "full_next_logit": 19.265625,
+            "label_minus_full_next": -5.984375,
+            "label_rank": 13
+          },
+          {
+            "top1": 10267,
+            "text": "Let",
+            "answer_token": 16533,
+            "label_logit": 15.5,
+            "full_next_logit": 17.46875,
+            "label_minus_full_next": -1.96875,
+            "label_rank": 2
+          }
+        ],
+        "keep70_fp16": [
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 18.4375,
+            "full_next_logit": 16.84375,
+            "label_minus_full_next": 1.59375,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.40625,
+            "full_next_logit": 16.828125,
+            "label_minus_full_next": 0.578125,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.53125,
+            "full_next_logit": 15.359375,
+            "label_minus_full_next": 2.171875,
+            "label_rank": 1
+          }
+        ],
+        "keep70_4bit": [
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 18.203125,
+            "full_next_logit": 16.65625,
+            "label_minus_full_next": 1.546875,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.28125,
+            "full_next_logit": 16.53125,
+            "label_minus_full_next": 0.75,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.296875,
+            "full_next_logit": 15.0859375,
+            "label_minus_full_next": 2.2109375,
+            "label_rank": 1
+          }
+        ],
+        "keep70_packed": [
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 18.203125,
+            "full_next_logit": 16.65625,
+            "label_minus_full_next": 1.546875,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.28125,
+            "full_next_logit": 16.53125,
+            "label_minus_full_next": 0.75,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.296875,
+            "full_next_logit": 15.0859375,
+            "label_minus_full_next": 2.2109375,
+            "label_rank": 1
+          }
+        ],
+        "keep70_4bit_pin_question": [
+          {
+            "top1": 10267,
+            "text": "Let",
+            "answer_token": 16533,
+            "label_logit": 17.78125,
+            "full_next_logit": 20.375,
+            "label_minus_full_next": -2.59375,
+            "label_rank": 2
+          },
+          {
+            "top1": 10267,
+            "text": "Let",
+            "answer_token": 16533,
+            "label_logit": 15.84375,
+            "full_next_logit": 18.765625,
+            "label_minus_full_next": -2.921875,
+            "label_rank": 4
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.046875,
+            "full_next_logit": 16.9375,
+            "label_minus_full_next": 0.109375,
+            "label_rank": 1
+          }
+        ],
+        "keep70_4bit_pin_control": [
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 18.015625,
+            "full_next_logit": 16.71875,
+            "label_minus_full_next": 1.296875,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.125,
+            "full_next_logit": 16.515625,
+            "label_minus_full_next": 0.609375,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.203125,
+            "full_next_logit": 15.046875,
+            "label_minus_full_next": 2.15625,
+            "label_rank": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "longgenbench/csqa/23",
+      "cohort": "severe",
+      "length": 2189,
+      "input_sha256": "0e17c4242fe899c4e2c98a605f5af8770661279e8b3c567453aea7e7aa1a61d6",
+      "teacher": [
+        16533,
+        62,
+        21,
+        512,
+        16533,
+        62,
+        21,
+        512,
+        16533,
+        62,
+        21,
+        512
+      ],
+      "positions": [
+        4,
+        8,
+        12
+      ],
+      "history_full": 10267,
+      "history_phase": 16533,
+      "regions": [
+        [
+          519,
+          557
+        ],
+        [
+          934,
+          972
+        ]
+      ],
+      "standard_retention_in_target_and_control": [
+        0.7821751644736842,
+        0.8396381578947368
+      ],
+      "predictions": {
+        "all_fp16": [
+          {
+            "top1": 10267,
+            "text": "Let",
+            "answer_token": 16533,
+            "label_logit": 17.703125,
+            "full_next_logit": 20.65625,
+            "label_minus_full_next": -2.953125,
+            "label_rank": 2
+          },
+          {
+            "top1": 10267,
+            "text": "Let",
+            "answer_token": 16533,
+            "label_logit": 14.5078125,
+            "full_next_logit": 19.546875,
+            "label_minus_full_next": -5.0390625,
+            "label_rank": 6
+          },
+          {
+            "top1": 10267,
+            "text": "Let",
+            "answer_token": 16533,
+            "label_logit": 16.46875,
+            "full_next_logit": 17.625,
+            "label_minus_full_next": -1.15625,
+            "label_rank": 2
+          }
+        ],
+        "all_4bit": [
+          {
+            "top1": 10267,
+            "text": "Let",
+            "answer_token": 16533,
+            "label_logit": 17.28125,
+            "full_next_logit": 20.46875,
+            "label_minus_full_next": -3.1875,
+            "label_rank": 3
+          },
+          {
+            "top1": 10267,
+            "text": "Let",
+            "answer_token": 16533,
+            "label_logit": 14.265625,
+            "full_next_logit": 19.328125,
+            "label_minus_full_next": -5.0625,
+            "label_rank": 7
+          },
+          {
+            "top1": 10267,
+            "text": "Let",
+            "answer_token": 16533,
+            "label_logit": 16.09375,
+            "full_next_logit": 17.265625,
+            "label_minus_full_next": -1.171875,
+            "label_rank": 2
+          }
+        ],
+        "keep70_fp16": [
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 18.625,
+            "full_next_logit": 17.859375,
+            "label_minus_full_next": 0.765625,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.625,
+            "full_next_logit": 17.578125,
+            "label_minus_full_next": 0.046875,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.40625,
+            "full_next_logit": 15.9296875,
+            "label_minus_full_next": 1.4765625,
+            "label_rank": 1
+          }
+        ],
+        "keep70_4bit": [
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 18.46875,
+            "full_next_logit": 17.546875,
+            "label_minus_full_next": 0.921875,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.4375,
+            "full_next_logit": 17.1875,
+            "label_minus_full_next": 0.25,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.28125,
+            "full_next_logit": 15.65625,
+            "label_minus_full_next": 1.625,
+            "label_rank": 1
+          }
+        ],
+        "keep70_packed": [
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 18.46875,
+            "full_next_logit": 17.53125,
+            "label_minus_full_next": 0.9375,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.4375,
+            "full_next_logit": 17.1875,
+            "label_minus_full_next": 0.25,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.28125,
+            "full_next_logit": 15.65625,
+            "label_minus_full_next": 1.625,
+            "label_rank": 1
+          }
+        ],
+        "keep70_4bit_pin_question": [
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 18.328125,
+            "full_next_logit": 18.1875,
+            "label_minus_full_next": 0.140625,
+            "label_rank": 1
+          },
+          {
+            "top1": 10267,
+            "text": "Let",
+            "answer_token": 16533,
+            "label_logit": 17.65625,
+            "full_next_logit": 18.109375,
+            "label_minus_full_next": -0.453125,
+            "label_rank": 2
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.3125,
+            "full_next_logit": 16.546875,
+            "label_minus_full_next": 0.765625,
+            "label_rank": 1
+          }
+        ],
+        "keep70_4bit_pin_control": [
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 18.6875,
+            "full_next_logit": 17.359375,
+            "label_minus_full_next": 1.328125,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.6875,
+            "full_next_logit": 17.15625,
+            "label_minus_full_next": 0.53125,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.328125,
+            "full_next_logit": 15.4609375,
+            "label_minus_full_next": 1.8671875,
+            "label_rank": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "longgenbench/csqa/26",
+      "cohort": "severe",
+      "length": 2201,
+      "input_sha256": "9a2161271f28898999c1db72224a0dd7fca17602d82f4771b011e614f38ea2f9",
+      "teacher": [
+        16533,
+        62,
+        21,
+        512,
+        16533,
+        62,
+        21,
+        512,
+        16533,
+        62,
+        21,
+        512
+      ],
+      "positions": [
+        4,
+        8,
+        12
+      ],
+      "history_full": 10267,
+      "history_phase": 16533,
+      "regions": [
+        [
+          519,
+          561
+        ],
+        [
+          905,
+          947
+        ]
+      ],
+      "standard_retention_in_target_and_control": [
+        0.6540178571428571,
+        0.7328869047619048
+      ],
+      "predictions": {
+        "all_fp16": [
+          {
+            "top1": 10267,
+            "text": "Let",
+            "answer_token": 16533,
+            "label_logit": 18.359375,
+            "full_next_logit": 20.6875,
+            "label_minus_full_next": -2.328125,
+            "label_rank": 2
+          },
+          {
+            "top1": 10267,
+            "text": "Let",
+            "answer_token": 16533,
+            "label_logit": 14.3125,
+            "full_next_logit": 19.34375,
+            "label_minus_full_next": -5.03125,
+            "label_rank": 7
+          },
+          {
+            "top1": 10267,
+            "text": "Let",
+            "answer_token": 16533,
+            "label_logit": 15.921875,
+            "full_next_logit": 17.03125,
+            "label_minus_full_next": -1.109375,
+            "label_rank": 2
+          }
+        ],
+        "all_4bit": [
+          {
+            "top1": 10267,
+            "text": "Let",
+            "answer_token": 16533,
+            "label_logit": 18.015625,
+            "full_next_logit": 20.53125,
+            "label_minus_full_next": -2.515625,
+            "label_rank": 2
+          },
+          {
+            "top1": 10267,
+            "text": "Let",
+            "answer_token": 16533,
+            "label_logit": 14.3515625,
+            "full_next_logit": 19.328125,
+            "label_minus_full_next": -4.9765625,
+            "label_rank": 7
+          },
+          {
+            "top1": 10267,
+            "text": "Let",
+            "answer_token": 16533,
+            "label_logit": 15.6328125,
+            "full_next_logit": 16.984375,
+            "label_minus_full_next": -1.3515625,
+            "label_rank": 2
+          }
+        ],
+        "keep70_fp16": [
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.296875,
+            "full_next_logit": 15.765625,
+            "label_minus_full_next": 1.53125,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 16.953125,
+            "full_next_logit": 16.265625,
+            "label_minus_full_next": 0.6875,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.203125,
+            "full_next_logit": 14.640625,
+            "label_minus_full_next": 2.5625,
+            "label_rank": 1
+          }
+        ],
+        "keep70_4bit": [
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.125,
+            "full_next_logit": 15.453125,
+            "label_minus_full_next": 1.671875,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 16.640625,
+            "full_next_logit": 16.046875,
+            "label_minus_full_next": 0.59375,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 16.90625,
+            "full_next_logit": 14.2890625,
+            "label_minus_full_next": 2.6171875,
+            "label_rank": 1
+          }
+        ],
+        "keep70_packed": [
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.125,
+            "full_next_logit": 15.453125,
+            "label_minus_full_next": 1.671875,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 16.625,
+            "full_next_logit": 16.046875,
+            "label_minus_full_next": 0.578125,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 16.890625,
+            "full_next_logit": 14.2734375,
+            "label_minus_full_next": 2.6171875,
+            "label_rank": 1
+          }
+        ],
+        "keep70_4bit_pin_question": [
+          {
+            "top1": 10267,
+            "text": "Let",
+            "answer_token": 16533,
+            "label_logit": 17.640625,
+            "full_next_logit": 18.46875,
+            "label_minus_full_next": -0.828125,
+            "label_rank": 2
+          },
+          {
+            "top1": 10267,
+            "text": "Let",
+            "answer_token": 16533,
+            "label_logit": 16.53125,
+            "full_next_logit": 18.765625,
+            "label_minus_full_next": -2.234375,
+            "label_rank": 3
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 16.515625,
+            "full_next_logit": 16.234375,
+            "label_minus_full_next": 0.28125,
+            "label_rank": 1
+          }
+        ],
+        "keep70_4bit_pin_control": [
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 16.984375,
+            "full_next_logit": 15.28125,
+            "label_minus_full_next": 1.703125,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 16.5625,
+            "full_next_logit": 16.046875,
+            "label_minus_full_next": 0.515625,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 16.8125,
+            "full_next_logit": 14.2265625,
+            "label_minus_full_next": 2.5859375,
+            "label_rank": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "longgenbench/csqa/3",
+      "cohort": "severe",
+      "length": 2268,
+      "input_sha256": "b6787e5fa9ce104b25225d1b27067cdfd0fab5f993cc3d544199a6ac784ea7e6",
+      "teacher": [
+        16533,
+        62,
+        21,
+        512,
+        16533,
+        62,
+        21,
+        512,
+        16533,
+        62,
+        21,
+        512
+      ],
+      "positions": [
+        4,
+        8,
+        12
+      ],
+      "history_full": 10267,
+      "history_phase": 16533,
+      "regions": [
+        [
+          519,
+          573
+        ],
+        [
+          961,
+          1015
+        ]
+      ],
+      "standard_retention_in_target_and_control": [
+        0.6094473379629629,
+        0.7137586805555556
+      ],
+      "predictions": {
+        "all_fp16": [
+          {
+            "top1": 10267,
+            "text": "Let",
+            "answer_token": 16533,
+            "label_logit": 17.09375,
+            "full_next_logit": 20.8125,
+            "label_minus_full_next": -3.71875,
+            "label_rank": 3
+          },
+          {
+            "top1": 10267,
+            "text": "Let",
+            "answer_token": 16533,
+            "label_logit": 13.734375,
+            "full_next_logit": 19.109375,
+            "label_minus_full_next": -5.375,
+            "label_rank": 12
+          },
+          {
+            "top1": 10267,
+            "text": "Let",
+            "answer_token": 16533,
+            "label_logit": 15.78125,
+            "full_next_logit": 17.1875,
+            "label_minus_full_next": -1.40625,
+            "label_rank": 2
+          }
+        ],
+        "all_4bit": [
+          {
+            "top1": 10267,
+            "text": "Let",
+            "answer_token": 16533,
+            "label_logit": 16.8125,
+            "full_next_logit": 20.796875,
+            "label_minus_full_next": -3.984375,
+            "label_rank": 3
+          },
+          {
+            "top1": 10267,
+            "text": "Let",
+            "answer_token": 16533,
+            "label_logit": 13.734375,
+            "full_next_logit": 19.203125,
+            "label_minus_full_next": -5.46875,
+            "label_rank": 11
+          },
+          {
+            "top1": 10267,
+            "text": "Let",
+            "answer_token": 16533,
+            "label_logit": 15.5703125,
+            "full_next_logit": 17.171875,
+            "label_minus_full_next": -1.6015625,
+            "label_rank": 3
+          }
+        ],
+        "keep70_fp16": [
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.234375,
+            "full_next_logit": 14.8359375,
+            "label_minus_full_next": 2.3984375,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 16.640625,
+            "full_next_logit": 15.3359375,
+            "label_minus_full_next": 1.3046875,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.359375,
+            "full_next_logit": 13.796875,
+            "label_minus_full_next": 3.5625,
+            "label_rank": 1
+          }
+        ],
+        "keep70_4bit": [
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.1875,
+            "full_next_logit": 14.9765625,
+            "label_minus_full_next": 2.2109375,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 16.703125,
+            "full_next_logit": 15.46875,
+            "label_minus_full_next": 1.234375,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.390625,
+            "full_next_logit": 13.875,
+            "label_minus_full_next": 3.515625,
+            "label_rank": 1
+          }
+        ],
+        "keep70_packed": [
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.1875,
+            "full_next_logit": 14.96875,
+            "label_minus_full_next": 2.21875,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 16.703125,
+            "full_next_logit": 15.46875,
+            "label_minus_full_next": 1.234375,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.390625,
+            "full_next_logit": 13.8828125,
+            "label_minus_full_next": 3.5078125,
+            "label_rank": 1
+          }
+        ],
+        "keep70_4bit_pin_question": [
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 18.1875,
+            "full_next_logit": 17.734375,
+            "label_minus_full_next": 0.453125,
+            "label_rank": 1
+          },
+          {
+            "top1": 10267,
+            "text": "Let",
+            "answer_token": 16533,
+            "label_logit": 16.90625,
+            "full_next_logit": 18.03125,
+            "label_minus_full_next": -1.125,
+            "label_rank": 3
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.328125,
+            "full_next_logit": 16.265625,
+            "label_minus_full_next": 1.0625,
+            "label_rank": 1
+          }
+        ],
+        "keep70_4bit_pin_control": [
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.25,
+            "full_next_logit": 14.546875,
+            "label_minus_full_next": 2.703125,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 16.6875,
+            "full_next_logit": 15.046875,
+            "label_minus_full_next": 1.640625,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.46875,
+            "full_next_logit": 13.453125,
+            "label_minus_full_next": 4.015625,
+            "label_rank": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "longgenbench/gsm8k/12",
+      "cohort": "severe",
+      "length": 2561,
+      "input_sha256": "75048f3910a321c9005b8c192cddf5c669450e7edc552ad9d9dc3d89beb61e2e",
+      "teacher": [
+        16533,
+        62,
+        24,
+        512,
+        16533,
+        62,
+        24,
+        512,
+        16533,
+        62,
+        24,
+        512
+      ],
+      "positions": [
+        4,
+        8,
+        12
+      ],
+      "history_full": 9028,
+      "history_phase": 16533,
+      "regions": [
+        [
+          767,
+          805
+        ],
+        [
+          1416,
+          1454
+        ]
+      ],
+      "standard_retention_in_target_and_control": [
+        0.6295230263157895,
+        0.7457853618421053
+      ],
+      "predictions": {
+        "all_fp16": [
+          {
+            "top1": 9028,
+            "text": "Car",
+            "answer_token": 16533,
+            "label_logit": 14.1953125,
+            "full_next_logit": 19.8125,
+            "label_minus_full_next": -5.6171875,
+            "label_rank": 12
+          },
+          {
+            "top1": 9028,
+            "text": "Car",
+            "answer_token": 16533,
+            "label_logit": 13.03125,
+            "full_next_logit": 19.09375,
+            "label_minus_full_next": -6.0625,
+            "label_rank": 18
+          },
+          {
+            "top1": 9028,
+            "text": "Car",
+            "answer_token": 16533,
+            "label_logit": 16.078125,
+            "full_next_logit": 16.84375,
+            "label_minus_full_next": -0.765625,
+            "label_rank": 2
+          }
+        ],
+        "all_4bit": [
+          {
+            "top1": 9028,
+            "text": "Car",
+            "answer_token": 16533,
+            "label_logit": 14.125,
+            "full_next_logit": 19.78125,
+            "label_minus_full_next": -5.65625,
+            "label_rank": 13
+          },
+          {
+            "top1": 9028,
+            "text": "Car",
+            "answer_token": 16533,
+            "label_logit": 12.9921875,
+            "full_next_logit": 19.1875,
+            "label_minus_full_next": -6.1953125,
+            "label_rank": 21
+          },
+          {
+            "top1": 9028,
+            "text": "Car",
+            "answer_token": 16533,
+            "label_logit": 16.09375,
+            "full_next_logit": 16.796875,
+            "label_minus_full_next": -0.703125,
+            "label_rank": 2
+          }
+        ],
+        "keep70_fp16": [
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.515625,
+            "full_next_logit": 16.265625,
+            "label_minus_full_next": 1.25,
+            "label_rank": 1
+          },
+          {
+            "top1": 9028,
+            "text": "Car",
+            "answer_token": 16533,
+            "label_logit": 16.25,
+            "full_next_logit": 16.484375,
+            "label_minus_full_next": -0.234375,
+            "label_rank": 2
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.46875,
+            "full_next_logit": 14.6328125,
+            "label_minus_full_next": 2.8359375,
+            "label_rank": 1
+          }
+        ],
+        "keep70_4bit": [
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.234375,
+            "full_next_logit": 15.8984375,
+            "label_minus_full_next": 1.3359375,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 16.25,
+            "full_next_logit": 15.8671875,
+            "label_minus_full_next": 0.3828125,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.4375,
+            "full_next_logit": 14.3125,
+            "label_minus_full_next": 3.125,
+            "label_rank": 1
+          }
+        ],
+        "keep70_packed": [
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.21875,
+            "full_next_logit": 15.8984375,
+            "label_minus_full_next": 1.3203125,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 16.234375,
+            "full_next_logit": 15.8671875,
+            "label_minus_full_next": 0.3671875,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.4375,
+            "full_next_logit": 14.3203125,
+            "label_minus_full_next": 3.1171875,
+            "label_rank": 1
+          }
+        ],
+        "keep70_4bit_pin_question": [
+          {
+            "top1": 9028,
+            "text": "Car",
+            "answer_token": 16533,
+            "label_logit": 16.03125,
+            "full_next_logit": 17.46875,
+            "label_minus_full_next": -1.4375,
+            "label_rank": 3
+          },
+          {
+            "top1": 9028,
+            "text": "Car",
+            "answer_token": 16533,
+            "label_logit": 14.734375,
+            "full_next_logit": 17.65625,
+            "label_minus_full_next": -2.921875,
+            "label_rank": 8
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.171875,
+            "full_next_logit": 16.625,
+            "label_minus_full_next": 0.546875,
+            "label_rank": 1
+          }
+        ],
+        "keep70_4bit_pin_control": [
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.078125,
+            "full_next_logit": 15.7734375,
+            "label_minus_full_next": 1.3046875,
+            "label_rank": 1
+          },
+          {
+            "top1": 1271,
+            "text": "To",
+            "answer_token": 16533,
+            "label_logit": 16.078125,
+            "full_next_logit": 15.7890625,
+            "label_minus_full_next": 0.2890625,
+            "label_rank": 2
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.375,
+            "full_next_logit": 14.1953125,
+            "label_minus_full_next": 3.1796875,
+            "label_rank": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "longgenbench/gsm8k/15",
+      "cohort": "escaped",
+      "length": 2510,
+      "input_sha256": "d00c5748803cc43e389faab3de2e253a3fe8bf96d5c620a203bcddf79d6dbf0e",
+      "teacher": [
+        16533,
+        62,
+        24,
+        512,
+        16533,
+        62,
+        24,
+        512,
+        16533,
+        62,
+        24,
+        512
+      ],
+      "positions": [
+        4,
+        8,
+        12
+      ],
+      "history_full": 791,
+      "history_phase": 16533,
+      "regions": [
+        [
+          767,
+          851
+        ],
+        [
+          1429,
+          1513
+        ]
+      ],
+      "standard_retention_in_target_and_control": [
+        0.6708519345238095,
+        0.8523995535714286
+      ],
+      "predictions": {
+        "all_fp16": [
+          {
+            "top1": 791,
+            "text": "The",
+            "answer_token": 16533,
+            "label_logit": 11.4921875,
+            "full_next_logit": 18.1875,
+            "label_minus_full_next": -6.6953125,
+            "label_rank": 72
+          },
+          {
+            "top1": 791,
+            "text": "The",
+            "answer_token": 16533,
+            "label_logit": 11.359375,
+            "full_next_logit": 17.6875,
+            "label_minus_full_next": -6.328125,
+            "label_rank": 70
+          },
+          {
+            "top1": 791,
+            "text": "The",
+            "answer_token": 16533,
+            "label_logit": 15.125,
+            "full_next_logit": 15.609375,
+            "label_minus_full_next": -0.484375,
+            "label_rank": 2
+          }
+        ],
+        "all_4bit": [
+          {
+            "top1": 791,
+            "text": "The",
+            "answer_token": 16533,
+            "label_logit": 11.4921875,
+            "full_next_logit": 18.25,
+            "label_minus_full_next": -6.7578125,
+            "label_rank": 72
+          },
+          {
+            "top1": 791,
+            "text": "The",
+            "answer_token": 16533,
+            "label_logit": 11.28125,
+            "full_next_logit": 17.75,
+            "label_minus_full_next": -6.46875,
+            "label_rank": 72
+          },
+          {
+            "top1": 791,
+            "text": "The",
+            "answer_token": 16533,
+            "label_logit": 15.0390625,
+            "full_next_logit": 15.8046875,
+            "label_minus_full_next": -0.765625,
+            "label_rank": 2
+          }
+        ],
+        "keep70_fp16": [
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 16.265625,
+            "full_next_logit": 15.0,
+            "label_minus_full_next": 1.265625,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 15.1875,
+            "full_next_logit": 14.828125,
+            "label_minus_full_next": 0.359375,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 16.875,
+            "full_next_logit": 13.59375,
+            "label_minus_full_next": 3.28125,
+            "label_rank": 1
+          }
+        ],
+        "keep70_4bit": [
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 15.828125,
+            "full_next_logit": 14.984375,
+            "label_minus_full_next": 0.84375,
+            "label_rank": 1
+          },
+          {
+            "top1": 791,
+            "text": "The",
+            "answer_token": 16533,
+            "label_logit": 14.7265625,
+            "full_next_logit": 14.8515625,
+            "label_minus_full_next": -0.125,
+            "label_rank": 2
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 16.78125,
+            "full_next_logit": 13.46875,
+            "label_minus_full_next": 3.3125,
+            "label_rank": 1
+          }
+        ],
+        "keep70_packed": [
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 15.8359375,
+            "full_next_logit": 14.9921875,
+            "label_minus_full_next": 0.84375,
+            "label_rank": 1
+          },
+          {
+            "top1": 791,
+            "text": "The",
+            "answer_token": 16533,
+            "label_logit": 14.734375,
+            "full_next_logit": 14.859375,
+            "label_minus_full_next": -0.125,
+            "label_rank": 2
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 16.78125,
+            "full_next_logit": 13.4609375,
+            "label_minus_full_next": 3.3203125,
+            "label_rank": 1
+          }
+        ],
+        "keep70_4bit_pin_question": [
+          {
+            "top1": 791,
+            "text": "The",
+            "answer_token": 16533,
+            "label_logit": 15.203125,
+            "full_next_logit": 16.0625,
+            "label_minus_full_next": -0.859375,
+            "label_rank": 4
+          },
+          {
+            "top1": 791,
+            "text": "The",
+            "answer_token": 16533,
+            "label_logit": 13.921875,
+            "full_next_logit": 16.15625,
+            "label_minus_full_next": -2.234375,
+            "label_rank": 10
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 15.828125,
+            "full_next_logit": 14.75,
+            "label_minus_full_next": 1.078125,
+            "label_rank": 1
+          }
+        ],
+        "keep70_4bit_pin_control": [
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 16.15625,
+            "full_next_logit": 14.6484375,
+            "label_minus_full_next": 1.5078125,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 15.0234375,
+            "full_next_logit": 14.5234375,
+            "label_minus_full_next": 0.5,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 16.921875,
+            "full_next_logit": 13.28125,
+            "label_minus_full_next": 3.640625,
+            "label_rank": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "longgenbench/gsm8k/24",
+      "cohort": "control",
+      "length": 2674,
+      "input_sha256": "957d71963082b75908069525122f3a1c519593194085266a47b5d206badd0d59",
+      "teacher": [
+        16533,
+        62,
+        24,
+        512
+      ],
+      "positions": [
+        4
+      ],
+      "history_full": 87703,
+      "history_phase": 16533,
+      "regions": [
+        [
+          767,
+          815
+        ],
+        [
+          1477,
+          1525
+        ]
+      ],
+      "predictions": {
+        "all_fp16": [
+          {
+            "top1": 87703,
+            "text": "Castle",
+            "answer_token": 16533,
+            "label_logit": 13.828125,
+            "full_next_logit": 20.625,
+            "label_minus_full_next": -6.796875,
+            "label_rank": 28
+          }
+        ],
+        "all_4bit": [
+          {
+            "top1": 87703,
+            "text": "Castle",
+            "answer_token": 16533,
+            "label_logit": 13.8125,
+            "full_next_logit": 20.53125,
+            "label_minus_full_next": -6.71875,
+            "label_rank": 31
+          }
+        ],
+        "keep70_fp16": [
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.296875,
+            "full_next_logit": 16.0,
+            "label_minus_full_next": 1.296875,
+            "label_rank": 1
+          }
+        ],
+        "keep70_4bit": [
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.171875,
+            "full_next_logit": 15.25,
+            "label_minus_full_next": 1.921875,
+            "label_rank": 1
+          }
+        ],
+        "keep70_packed": [
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.1875,
+            "full_next_logit": 15.234375,
+            "label_minus_full_next": 1.953125,
+            "label_rank": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "longgenbench/gsm8k/32",
+      "cohort": "severe",
+      "length": 2722,
+      "input_sha256": "fca9b3a91c6bd3c47a35b5bee525eec1ad26bd77c4162f25c4d7995a66af7c9e",
+      "teacher": [
+        16533,
+        62,
+        24,
+        512,
+        16533,
+        62,
+        24,
+        512,
+        16533,
+        62,
+        24,
+        512
+      ],
+      "positions": [
+        4,
+        8,
+        12
+      ],
+      "history_full": 791,
+      "history_phase": 16533,
+      "regions": [
+        [
+          767,
+          889
+        ],
+        [
+          1608,
+          1730
+        ]
+      ],
+      "standard_retention_in_target_and_control": [
+        0.7156121926229508,
+        0.8089139344262295
+      ],
+      "predictions": {
+        "all_fp16": [
+          {
+            "top1": 791,
+            "text": "The",
+            "answer_token": 16533,
+            "label_logit": 14.203125,
+            "full_next_logit": 19.125,
+            "label_minus_full_next": -4.921875,
+            "label_rank": 23
+          },
+          {
+            "top1": 791,
+            "text": "The",
+            "answer_token": 16533,
+            "label_logit": 13.0234375,
+            "full_next_logit": 18.515625,
+            "label_minus_full_next": -5.4921875,
+            "label_rank": 31
+          },
+          {
+            "top1": 791,
+            "text": "The",
+            "answer_token": 16533,
+            "label_logit": 16.25,
+            "full_next_logit": 16.421875,
+            "label_minus_full_next": -0.171875,
+            "label_rank": 3
+          }
+        ],
+        "all_4bit": [
+          {
+            "top1": 791,
+            "text": "The",
+            "answer_token": 16533,
+            "label_logit": 14.2890625,
+            "full_next_logit": 19.15625,
+            "label_minus_full_next": -4.8671875,
+            "label_rank": 21
+          },
+          {
+            "top1": 791,
+            "text": "The",
+            "answer_token": 16533,
+            "label_logit": 13.15625,
+            "full_next_logit": 18.625,
+            "label_minus_full_next": -5.46875,
+            "label_rank": 31
+          },
+          {
+            "top1": 791,
+            "text": "The",
+            "answer_token": 16533,
+            "label_logit": 16.265625,
+            "full_next_logit": 16.5,
+            "label_minus_full_next": -0.234375,
+            "label_rank": 3
+          }
+        ],
+        "keep70_fp16": [
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 16.609375,
+            "full_next_logit": 14.0078125,
+            "label_minus_full_next": 2.6015625,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 16.0,
+            "full_next_logit": 13.4453125,
+            "label_minus_full_next": 2.5546875,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 16.96875,
+            "full_next_logit": 12.890625,
+            "label_minus_full_next": 4.078125,
+            "label_rank": 1
+          }
+        ],
+        "keep70_4bit": [
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 16.125,
+            "full_next_logit": 13.890625,
+            "label_minus_full_next": 2.234375,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 15.8203125,
+            "full_next_logit": 13.4921875,
+            "label_minus_full_next": 2.328125,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 16.65625,
+            "full_next_logit": 12.7578125,
+            "label_minus_full_next": 3.8984375,
+            "label_rank": 1
+          }
+        ],
+        "keep70_packed": [
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 16.109375,
+            "full_next_logit": 13.8984375,
+            "label_minus_full_next": 2.2109375,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 15.8046875,
+            "full_next_logit": 13.4921875,
+            "label_minus_full_next": 2.3125,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 16.65625,
+            "full_next_logit": 12.765625,
+            "label_minus_full_next": 3.890625,
+            "label_rank": 1
+          }
+        ],
+        "keep70_4bit_pin_question": [
+          {
+            "top1": 791,
+            "text": "The",
+            "answer_token": 16533,
+            "label_logit": 16.8125,
+            "full_next_logit": 17.359375,
+            "label_minus_full_next": -0.546875,
+            "label_rank": 2
+          },
+          {
+            "top1": 791,
+            "text": "The",
+            "answer_token": 16533,
+            "label_logit": 15.3203125,
+            "full_next_logit": 17.53125,
+            "label_minus_full_next": -2.2109375,
+            "label_rank": 9
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 17.109375,
+            "full_next_logit": 16.25,
+            "label_minus_full_next": 0.859375,
+            "label_rank": 1
+          }
+        ],
+        "keep70_4bit_pin_control": [
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 16.40625,
+            "full_next_logit": 14.0078125,
+            "label_minus_full_next": 2.3984375,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 16.078125,
+            "full_next_logit": 13.671875,
+            "label_minus_full_next": 2.40625,
+            "label_rank": 1
+          },
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 16.953125,
+            "full_next_logit": 12.90625,
+            "label_minus_full_next": 4.046875,
+            "label_rank": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "longgenbench/mmlu/0",
+      "cohort": "mmlu",
+      "length": 3034,
+      "input_sha256": "830f297b2e393c3f1913f75c32ed45ab3c7fc258347008580c49e16a8670f643",
+      "teacher": [
+        16533,
+        62,
+        21,
+        512,
+        10267,
+        596,
+        1781,
+        3094,
+        555,
+        3094,
+        13
+      ],
+      "positions": [
+        11
+      ],
+      "history_full": 1229,
+      "history_phase": 578,
+      "regions": [
+        [
+          1077,
+          1122
+        ],
+        [
+          1724,
+          1769
+        ]
+      ],
+      "predictions": {
+        "all_fp16": [
+          {
+            "top1": 1229,
+            "text": " Q",
+            "answer_token": 16533,
+            "label_logit": -1.185546875,
+            "full_next_logit": 17.390625,
+            "label_minus_full_next": -18.576171875,
+            "label_rank": 49830
+          }
+        ],
+        "all_4bit": [
+          {
+            "top1": 1229,
+            "text": " Q",
+            "answer_token": 16533,
+            "label_logit": -1.2080078125,
+            "full_next_logit": 17.296875,
+            "label_minus_full_next": -18.5048828125,
+            "label_rank": 49726
+          }
+        ],
+        "keep70_fp16": [
+          {
+            "top1": 578,
+            "text": " The",
+            "answer_token": 16533,
+            "label_logit": -0.66748046875,
+            "full_next_logit": 16.96875,
+            "label_minus_full_next": -17.63623046875,
+            "label_rank": 34154
+          }
+        ],
+        "keep70_4bit": [
+          {
+            "top1": 578,
+            "text": " The",
+            "answer_token": 16533,
+            "label_logit": -0.67236328125,
+            "full_next_logit": 17.09375,
+            "label_minus_full_next": -17.76611328125,
+            "label_rank": 34571
+          }
+        ],
+        "keep70_packed": [
+          {
+            "top1": 578,
+            "text": " The",
+            "answer_token": 16533,
+            "label_logit": -0.6708984375,
+            "full_next_logit": 17.09375,
+            "label_minus_full_next": -17.7646484375,
+            "label_rank": 34546
+          }
+        ]
+      }
+    },
+    {
+      "id": "longgenbench/mmlu/1",
+      "cohort": "mmlu",
+      "length": 2979,
+      "input_sha256": "13b7cb229cf826ea87996b9f3b28f8fbb1cbb272e78ea01a943294328694b5e0",
+      "teacher": [
+        16533,
+        62,
+        21,
+        512,
+        10267,
+        596,
+        1781,
+        3094,
+        555,
+        3094,
+        13
+      ],
+      "positions": [
+        11
+      ],
+      "history_full": 1226,
+      "history_phase": 578,
+      "regions": [
+        [
+          1094,
+          1175
+        ],
+        [
+          1646,
+          1727
+        ]
+      ],
+      "predictions": {
+        "all_fp16": [
+          {
+            "top1": 1226,
+            "text": " We",
+            "answer_token": 16533,
+            "label_logit": 1.802734375,
+            "full_next_logit": 22.171875,
+            "label_minus_full_next": -20.369140625,
+            "label_rank": 15487
+          }
+        ],
+        "all_4bit": [
+          {
+            "top1": 1226,
+            "text": " We",
+            "answer_token": 16533,
+            "label_logit": 1.615234375,
+            "full_next_logit": 22.140625,
+            "label_minus_full_next": -20.525390625,
+            "label_rank": 16919
+          }
+        ],
+        "keep70_fp16": [
+          {
+            "top1": 578,
+            "text": " The",
+            "answer_token": 16533,
+            "label_logit": 3.7578125,
+            "full_next_logit": 17.984375,
+            "label_minus_full_next": -14.2265625,
+            "label_rank": 5594
+          }
+        ],
+        "keep70_4bit": [
+          {
+            "top1": 578,
+            "text": " The",
+            "answer_token": 16533,
+            "label_logit": 3.59765625,
+            "full_next_logit": 18.0,
+            "label_minus_full_next": -14.40234375,
+            "label_rank": 5913
+          }
+        ],
+        "keep70_packed": [
+          {
+            "top1": 578,
+            "text": " The",
+            "answer_token": 16533,
+            "label_logit": 3.6015625,
+            "full_next_logit": 18.0,
+            "label_minus_full_next": -14.3984375,
+            "label_rank": 5900
+          }
+        ]
+      }
+    },
+    {
+      "id": "longgenbench/mmlu/13",
+      "cohort": "mmlu",
+      "length": 2819,
+      "input_sha256": "b703f0da7f7bfa99cf73c89803facf1940128ac907f6e49babf22c53a78d6e01",
+      "teacher": [
+        16533,
+        62,
+        21,
+        512,
+        10267,
+        596,
+        1781,
+        3094,
+        555,
+        3094,
+        13
+      ],
+      "positions": [
+        11
+      ],
+      "history_full": 1226,
+      "history_phase": 362,
+      "regions": [
+        [
+          1418,
+          1526
+        ],
+        [
+          2175,
+          2283
+        ]
+      ],
+      "predictions": {
+        "all_fp16": [
+          {
+            "top1": 1226,
+            "text": " We",
+            "answer_token": 16533,
+            "label_logit": 1.703125,
+            "full_next_logit": 21.09375,
+            "label_minus_full_next": -19.390625,
+            "label_rank": 13358
+          }
+        ],
+        "all_4bit": [
+          {
+            "top1": 1226,
+            "text": " We",
+            "answer_token": 16533,
+            "label_logit": 1.6142578125,
+            "full_next_logit": 21.21875,
+            "label_minus_full_next": -19.6044921875,
+            "label_rank": 14029
+          }
+        ],
+        "keep70_fp16": [
+          {
+            "top1": 362,
+            "text": " A",
+            "answer_token": 16533,
+            "label_logit": 2.96484375,
+            "full_next_logit": 17.328125,
+            "label_minus_full_next": -14.36328125,
+            "label_rank": 7843
+          }
+        ],
+        "keep70_4bit": [
+          {
+            "top1": 362,
+            "text": " A",
+            "answer_token": 16533,
+            "label_logit": 2.94140625,
+            "full_next_logit": 17.34375,
+            "label_minus_full_next": -14.40234375,
+            "label_rank": 7862
+          }
+        ],
+        "keep70_packed": [
+          {
+            "top1": 362,
+            "text": " A",
+            "answer_token": 16533,
+            "label_logit": 2.935546875,
+            "full_next_logit": 17.34375,
+            "label_minus_full_next": -14.408203125,
+            "label_rank": 7891
+          }
+        ]
+      }
+    },
+    {
+      "id": "longgenbench/mmlu/2",
+      "cohort": "mmlu",
+      "length": 3220,
+      "input_sha256": "530dd6c487cc0e863153845abf8f61a7281b0de77b8b1ef091430f28c42f4109",
+      "teacher": [
+        16533,
+        62,
+        21,
+        512
+      ],
+      "positions": [
+        4
+      ],
+      "history_full": 10267,
+      "history_phase": 16533,
+      "regions": [
+        [
+          979,
+          1037
+        ],
+        [
+          1809,
+          1867
+        ]
+      ],
+      "predictions": {
+        "all_fp16": [
+          {
+            "top1": 10267,
+            "text": "Let",
+            "answer_token": 16533,
+            "label_logit": 17.3125,
+            "full_next_logit": 20.28125,
+            "label_minus_full_next": -2.96875,
+            "label_rank": 2
+          }
+        ],
+        "all_4bit": [
+          {
+            "top1": 10267,
+            "text": "Let",
+            "answer_token": 16533,
+            "label_logit": 17.421875,
+            "full_next_logit": 20.140625,
+            "label_minus_full_next": -2.71875,
+            "label_rank": 2
+          }
+        ],
+        "keep70_fp16": [
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 19.875,
+            "full_next_logit": 16.515625,
+            "label_minus_full_next": 3.359375,
+            "label_rank": 1
+          }
+        ],
+        "keep70_4bit": [
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 19.625,
+            "full_next_logit": 16.421875,
+            "label_minus_full_next": 3.203125,
+            "label_rank": 1
+          }
+        ],
+        "keep70_packed": [
+          {
+            "top1": 16533,
+            "text": "Answer",
+            "answer_token": 16533,
+            "label_logit": 19.625,
+            "full_next_logit": 16.4375,
+            "label_minus_full_next": 3.1875,
+            "label_rank": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "longgenbench/mmlu/21",
+      "cohort": "mmlu",
+      "length": 13075,
+      "input_sha256": "fd9a45a1d51a98c0704935626e279034ca0151bae5342ae02b239045bffa4b25",
+      "teacher": [
+        16533,
+        62
+      ],
+      "positions": [
+        2
+      ],
+      "history_full": 1927,
+      "history_phase": 16,
+      "regions": [
+        [
+          2814,
+          3052
+        ],
+        [
+          6152,
+          6390
+        ]
+      ],
+      "predictions": {
+        "all_fp16": [
+          {
+            "top1": 1927,
+            "text": "36",
+            "answer_token": 16533,
+            "label_logit": 10.4609375,
+            "full_next_logit": 21.703125,
+            "label_minus_full_next": -11.2421875,
+            "label_rank": 74
+          }
+        ],
+        "all_4bit": [
+          {
+            "top1": 1927,
+            "text": "36",
+            "answer_token": 16533,
+            "label_logit": 10.4140625,
+            "full_next_logit": 21.90625,
+            "label_minus_full_next": -11.4921875,
+            "label_rank": 77
+          }
+        ],
+        "keep70_fp16": [
+          {
+            "top1": 1927,
+            "text": "36",
+            "answer_token": 16533,
+            "label_logit": 10.4296875,
+            "full_next_logit": 21.6875,
+            "label_minus_full_next": -11.2578125,
+            "label_rank": 75
+          }
+        ],
+        "keep70_4bit": [
+          {
+            "top1": 16,
+            "text": "1",
+            "answer_token": 16533,
+            "label_logit": 10.53125,
+            "full_next_logit": 21.1875,
+            "label_minus_full_next": -10.65625,
+            "label_rank": 73
+          }
+        ],
+        "keep70_packed": [
+          {
+            "top1": 16,
+            "text": "1",
+            "answer_token": 16533,
+            "label_logit": 10.5078125,
+            "full_next_logit": 21.1875,
+            "label_minus_full_next": -10.6796875,
+            "label_rank": 73
+          }
+        ]
+      }
+    },
+    {
+      "id": "longgenbench/mmlu/25",
+      "cohort": "mmlu",
+      "length": 2965,
+      "input_sha256": "b0c3d1cf50fe59d973ef7c9c2d90227431e56cef2abc296873e92891bc95f263",
+      "teacher": [
+        16533,
+        62,
+        21,
+        512,
+        10267,
+        596,
+        1781,
+        3094,
+        555,
+        3094,
+        13,
+        578,
+        22599,
+        315,
+        264,
+        1486,
+        320,
+        64,
+        8568,
+        8,
+        4028,
+        279,
+        1584,
+        379,
+        26459,
+        374,
+        279,
+        1486,
+        320,
+        65,
+        15362,
+        570,
+        15636,
+        11,
+        279,
+        22599,
+        315,
+        279,
+        1486
+      ],
+      "positions": [
+        39
+      ],
+      "history_full": 10505,
+      "history_phase": 320,
+      "regions": [
+        [
+          982,
+          1093
+        ],
+        [
+          1750,
+          1861
+        ]
+      ],
+      "predictions": {
+        "all_fp16": [
+          {
+            "top1": 10505,
+            "text": " (-",
+            "answer_token": 16533,
+            "label_logit": 1.146484375,
+            "full_next_logit": 19.9375,
+            "label_minus_full_next": -18.791015625,
+            "label_rank": 57350
+          }
+        ],
+        "all_4bit": [
+          {
+            "top1": 10505,
+            "text": " (-",
+            "answer_token": 16533,
+            "label_logit": 1.2158203125,
+            "full_next_logit": 19.90625,
+            "label_minus_full_next": -18.6904296875,
+            "label_rank": 56011
+          }
+        ],
+        "keep70_fp16": [
+          {
+            "top1": 320,
+            "text": " (",
+            "answer_token": 16533,
+            "label_logit": 1.3271484375,
+            "full_next_logit": 18.703125,
+            "label_minus_full_next": -17.3759765625,
+            "label_rank": 45712
+          }
+        ],
+        "keep70_4bit": [
+          {
+            "top1": 320,
+            "text": " (",
+            "answer_token": 16533,
+            "label_logit": 1.509765625,
+            "full_next_logit": 18.96875,
+            "label_minus_full_next": -17.458984375,
+            "label_rank": 40050
+          }
+        ],
+        "keep70_packed": [
+          {
+            "top1": 320,
+            "text": " (",
+            "answer_token": 16533,
+            "label_logit": 1.5107421875,
+            "full_next_logit": 18.96875,
+            "label_minus_full_next": -17.4580078125,
+            "label_rank": 39992
+          }
+        ]
+      }
+    },
+    {
+      "id": "longgenbench/mmlu/26",
+      "cohort": "mmlu",
+      "length": 2878,
+      "input_sha256": "fb05558b38fd23e8462f41529866e56b436dd3c83ccd9a5560ebe2f565ad5a40",
+      "teacher": [
+        16533,
+        62,
+        21,
+        512,
+        10267,
+        596,
+        1781,
+        3094,
+        555,
+        3094,
+        13,
+        1226,
+        8464,
+        311,
+        27685,
+        9908,
+        389,
+        8162,
+        68,
+        81192
+      ],
+      "positions": [
+        20
+      ],
+      "history_full": 369,
+      "history_phase": 13,
+      "regions": [
+        [
+          666,
+          722
+        ],
+        [
+          1354,
+          1410
+        ]
+      ],
+      "predictions": {
+        "all_fp16": [
+          {
+            "top1": 369,
+            "text": " for",
+            "answer_token": 16533,
+            "label_logit": 1.962890625,
+            "full_next_logit": 22.234375,
+            "label_minus_full_next": -20.271484375,
+            "label_rank": 15448
+          }
+        ],
+        "all_4bit": [
+          {
+            "top1": 369,
+            "text": " for",
+            "answer_token": 16533,
+            "label_logit": 1.849609375,
+            "full_next_logit": 22.078125,
+            "label_minus_full_next": -20.228515625,
+            "label_rank": 16529
+          }
+        ],
+        "keep70_fp16": [
+          {
+            "top1": 13,
+            "text": ".",
+            "answer_token": 16533,
+            "label_logit": 1.18359375,
+            "full_next_logit": 16.90625,
+            "label_minus_full_next": -15.72265625,
+            "label_rank": 14098
+          }
+        ],
+        "keep70_4bit": [
+          {
+            "top1": 13,
+            "text": ".",
+            "answer_token": 16533,
+            "label_logit": 1.2734375,
+            "full_next_logit": 16.875,
+            "label_minus_full_next": -15.6015625,
+            "label_rank": 13381
+          }
+        ],
+        "keep70_packed": [
+          {
+            "top1": 13,
+            "text": ".",
+            "answer_token": 16533,
+            "label_logit": 1.2734375,
+            "full_next_logit": 16.890625,
+            "label_minus_full_next": -15.6171875,
+            "label_rank": 13378
+          }
+        ]
+      }
+    },
+    {
+      "id": "longgenbench/mmlu/30",
+      "cohort": "mmlu",
+      "length": 10903,
+      "input_sha256": "4099e916595df21d88201fce95526197f360500a98dbd8ea48488590ad91d9eb",
+      "teacher": [
+        16533,
+        62
+      ],
+      "positions": [
+        2
+      ],
+      "history_full": 21,
+      "history_phase": 16,
+      "regions": [
+        [
+          2275,
+          2527
+        ],
+        [
+          5097,
+          5349
+        ]
+      ],
+      "predictions": {
+        "all_fp16": [
+          {
+            "top1": 21,
+            "text": "6",
+            "answer_token": 16533,
+            "label_logit": 11.9609375,
+            "full_next_logit": 22.96875,
+            "label_minus_full_next": -11.0078125,
+            "label_rank": 47
+          }
+        ],
+        "all_4bit": [
+          {
+            "top1": 21,
+            "text": "6",
+            "answer_token": 16533,
+            "label_logit": 11.046875,
+            "full_next_logit": 22.734375,
+            "label_minus_full_next": -11.6875,
+            "label_rank": 55
+          }
+        ],
+        "keep70_fp16": [
+          {
+            "top1": 21,
+            "text": "6",
+            "answer_token": 16533,
+            "label_logit": 12.2109375,
+            "full_next_logit": 22.640625,
+            "label_minus_full_next": -10.4296875,
+            "label_rank": 44
+          }
+        ],
+        "keep70_4bit": [
+          {
+            "top1": 16,
+            "text": "1",
+            "answer_token": 16533,
+            "label_logit": 11.671875,
+            "full_next_logit": 19.796875,
+            "label_minus_full_next": -8.125,
+            "label_rank": 56
+          }
+        ],
+        "keep70_packed": [
+          {
+            "top1": 16,
+            "text": "1",
+            "answer_token": 16533,
+            "label_logit": 11.65625,
+            "full_next_logit": 19.78125,
+            "label_minus_full_next": -8.125,
+            "label_rank": 56
+          }
+        ]
+      }
+    },
+    {
+      "id": "longgenbench/mmlu/37",
+      "cohort": "mmlu",
+      "length": 3009,
+      "input_sha256": "4d2137cb29a3d1e8f80f63963181eb836aaaa4ca5747d59e5d21e34526e79fae",
+      "teacher": [
+        16533,
+        62,
+        21,
+        512,
+        10267,
+        596,
+        1781,
+        3094,
+        555,
+        3094,
+        13
+      ],
+      "positions": [
+        11
+      ],
+      "history_full": 578,
+      "history_phase": 22504,
+      "regions": [
+        [
+          1100,
+          1162
+        ],
+        [
+          1724,
+          1786
+        ]
+      ],
+      "predictions": {
+        "all_fp16": [
+          {
+            "top1": 578,
+            "text": " The",
+            "answer_token": 16533,
+            "label_logit": 2.05078125,
+            "full_next_logit": 17.03125,
+            "label_minus_full_next": -14.98046875,
+            "label_rank": 13413
+          }
+        ],
+        "all_4bit": [
+          {
+            "top1": 22504,
+            "text": " Statement",
+            "answer_token": 16533,
+            "label_logit": 1.9365234375,
+            "full_next_logit": 17.015625,
+            "label_minus_full_next": -15.0791015625,
+            "label_rank": 14144
+          }
+        ],
+        "keep70_fp16": [
+          {
+            "top1": 22504,
+            "text": " Statement",
+            "answer_token": 16533,
+            "label_logit": 2.646484375,
+            "full_next_logit": 16.734375,
+            "label_minus_full_next": -14.087890625,
+            "label_rank": 10375
+          }
+        ],
+        "keep70_4bit": [
+          {
+            "top1": 22504,
+            "text": " Statement",
+            "answer_token": 16533,
+            "label_logit": 2.779296875,
+            "full_next_logit": 16.71875,
+            "label_minus_full_next": -13.939453125,
+            "label_rank": 9838
+          }
+        ],
+        "keep70_packed": [
+          {
+            "top1": 22504,
+            "text": " Statement",
+            "answer_token": 16533,
+            "label_logit": 2.779296875,
+            "full_next_logit": 16.71875,
+            "label_minus_full_next": -13.939453125,
+            "label_rank": 9831
+          }
+        ]
+      }
+    },
+    {
+      "id": "longgenbench/mmlu/4",
+      "cohort": "mmlu",
+      "length": 2563,
+      "input_sha256": "a1e9dc206b016a9cc8c742f285a9b223ab01d7af14a2ef048efa23723be7f7bb",
+      "teacher": [
+        16533,
+        62,
+        21,
+        512,
+        10267,
+        596,
+        1781,
+        3094,
+        555,
+        3094,
+        13,
+        1226,
+        8464,
+        311
+      ],
+      "positions": [
+        14
+      ],
+      "history_full": 27685,
+      "history_phase": 14830,
+      "regions": [
+        [
+          634,
+          689
+        ],
+        [
+          1194,
+          1249
+        ]
+      ],
+      "predictions": {
+        "all_fp16": [
+          {
+            "top1": 27685,
+            "text": " Wikipedia",
+            "answer_token": 16533,
+            "label_logit": 0.029052734375,
+            "full_next_logit": 21.046875,
+            "label_minus_full_next": -21.017822265625,
+            "label_rank": 42439
+          }
+        ],
+        "all_4bit": [
+          {
+            "top1": 27685,
+            "text": " Wikipedia",
+            "answer_token": 16533,
+            "label_logit": -0.086669921875,
+            "full_next_logit": 21.171875,
+            "label_minus_full_next": -21.258544921875,
+            "label_rank": 44447
+          }
+        ],
+        "keep70_fp16": [
+          {
+            "top1": 14830,
+            "text": " clinical",
+            "answer_token": 16533,
+            "label_logit": -0.7392578125,
+            "full_next_logit": 17.796875,
+            "label_minus_full_next": -18.5361328125,
+            "label_rank": 68919
+          }
+        ],
+        "keep70_4bit": [
+          {
+            "top1": 14830,
+            "text": " clinical",
+            "answer_token": 16533,
+            "label_logit": -0.869140625,
+            "full_next_logit": 18.03125,
+            "label_minus_full_next": -18.900390625,
+            "label_rank": 74401
+          }
+        ],
+        "keep70_packed": [
+          {
+            "top1": 14830,
+            "text": " clinical",
+            "answer_token": 16533,
+            "label_logit": -0.865234375,
+            "full_next_logit": 18.03125,
+            "label_minus_full_next": -18.896484375,
+            "label_rank": 74156
+          }
+        ]
+      }
+    },
+    {
+      "id": "longgenbench/mmlu/42",
+      "cohort": "mmlu",
+      "length": 2841,
+      "input_sha256": "185f3ed967c2e9ee37afb3b3febcb66194483fb29768025e4bb310d8046d9dfd",
+      "teacher": [
+        16533,
+        62,
+        21,
+        512,
+        10267,
+        596,
+        1781,
+        3094,
+        555,
+        3094,
+        13
+      ],
+      "positions": [
+        11
+      ],
+      "history_full": 1226,
+      "history_phase": 220,
+      "regions": [
+        [
+          809,
+          851
+        ],
+        [
+          1356,
+          1398
+        ]
+      ],
+      "predictions": {
+        "all_fp16": [
+          {
+            "top1": 1226,
+            "text": " We",
+            "answer_token": 16533,
+            "label_logit": 3.0703125,
+            "full_next_logit": 20.796875,
+            "label_minus_full_next": -17.7265625,
+            "label_rank": 8033
+          }
+        ],
+        "all_4bit": [
+          {
+            "top1": 1226,
+            "text": " We",
+            "answer_token": 16533,
+            "label_logit": 3.193359375,
+            "full_next_logit": 20.484375,
+            "label_minus_full_next": -17.291015625,
+            "label_rank": 7706
+          }
+        ],
+        "keep70_fp16": [
+          {
+            "top1": 220,
+            "text": " ",
+            "answer_token": 16533,
+            "label_logit": 3.791015625,
+            "full_next_logit": 14.3984375,
+            "label_minus_full_next": -10.607421875,
+            "label_rank": 5947
+          }
+        ],
+        "keep70_4bit": [
+          {
+            "top1": 220,
+            "text": " ",
+            "answer_token": 16533,
+            "label_logit": 3.755859375,
+            "full_next_logit": 14.359375,
+            "label_minus_full_next": -10.603515625,
+            "label_rank": 5981
+          }
+        ],
+        "keep70_packed": [
+          {
+            "top1": 220,
+            "text": " ",
+            "answer_token": 16533,
+            "label_logit": 3.759765625,
+            "full_next_logit": 14.3515625,
+            "label_minus_full_next": -10.591796875,
+            "label_rank": 5975
+          }
+        ]
+      }
+    },
+    {
+      "id": "longgenbench/mmlu/49",
+      "cohort": "mmlu",
+      "length": 6917,
+      "input_sha256": "8c6128a5e487b5d622f9e0ff1474c67b6de8d53ca12603cec7c74a0d38229cf1",
+      "teacher": [
+        16533,
+        62,
+        21,
+        512,
+        10267,
+        596,
+        1781,
+        3094,
+        555,
+        3094,
+        13,
+        1226,
+        8464,
+        311,
+        27685,
+        9908,
+        389,
+        16088,
+        369,
+        1520,
+        13,
+        578,
+        8893,
+        1047,
+        264
+      ],
+      "positions": [
+        25
+      ],
+      "history_full": 96849,
+      "history_phase": 70524,
+      "regions": [
+        [
+          1276,
+          1528
+        ],
+        [
+          3110,
+          3362
+        ]
+      ],
+      "predictions": {
+        "all_fp16": [
+          {
+            "top1": 96849,
+            "text": " hemat",
+            "answer_token": 16533,
+            "label_logit": 0.595703125,
+            "full_next_logit": 16.984375,
+            "label_minus_full_next": -16.388671875,
+            "label_rank": 35370
+          }
+        ],
+        "all_4bit": [
+          {
+            "top1": 96849,
+            "text": " hemat",
+            "answer_token": 16533,
+            "label_logit": 0.4755859375,
+            "full_next_logit": 17.328125,
+            "label_minus_full_next": -16.8525390625,
+            "label_rank": 36438
+          }
+        ],
+        "keep70_fp16": [
+          {
+            "top1": 70524,
+            "text": " pulmonary",
+            "answer_token": 16533,
+            "label_logit": 0.6591796875,
+            "full_next_logit": 15.703125,
+            "label_minus_full_next": -15.0439453125,
+            "label_rank": 31371
+          }
+        ],
+        "keep70_4bit": [
+          {
+            "top1": 70524,
+            "text": " pulmonary",
+            "answer_token": 16533,
+            "label_logit": 0.80322265625,
+            "full_next_logit": 15.9375,
+            "label_minus_full_next": -15.13427734375,
+            "label_rank": 27491
+          }
+        ],
+        "keep70_packed": [
+          {
+            "top1": 70524,
+            "text": " pulmonary",
+            "answer_token": 16533,
+            "label_logit": 0.80419921875,
+            "full_next_logit": 15.9453125,
+            "label_minus_full_next": -15.14111328125,
+            "label_rank": 27496
+          }
+        ]
+      }
+    },
+    {
+      "id": "longgenbench/mmlu/50",
+      "cohort": "mmlu",
+      "length": 3382,
+      "input_sha256": "5fe2c942e117ef8b119a68c187fc67fe47d35f02e3b5f8e59f8768aff7a8a64d",
+      "teacher": [
+        16533,
+        62,
+        21,
+        512,
+        10267,
+        596,
+        1781,
+        3094,
+        555,
+        3094,
+        13,
+        1226,
+        8464,
+        311,
+        27685,
+        9908,
+        389,
+        31018,
+        369,
+        1520,
+        13,
+        77188,
+        374,
+        5938,
+        449,
+        264,
+        18174,
+        304,
+        7392,
+        31301,
+        13,
+        578,
+        4320,
+        374,
+        320
+      ],
+      "positions": [
+        35
+      ],
+      "history_full": 34,
+      "history_phase": 35,
+      "regions": [
+        [
+          756,
+          838
+        ],
+        [
+          1545,
+          1627
+        ]
+      ],
+      "predictions": {
+        "all_fp16": [
+          {
+            "top1": 34,
+            "text": "C",
+            "answer_token": 16533,
+            "label_logit": 9.6015625,
+            "full_next_logit": 26.265625,
+            "label_minus_full_next": -16.6640625,
+            "label_rank": 211
+          }
+        ],
+        "all_4bit": [
+          {
+            "top1": 34,
+            "text": "C",
+            "answer_token": 16533,
+            "label_logit": 9.53125,
+            "full_next_logit": 26.15625,
+            "label_minus_full_next": -16.625,
+            "label_rank": 209
+          }
+        ],
+        "keep70_fp16": [
+          {
+            "top1": 35,
+            "text": "D",
+            "answer_token": 16533,
+            "label_logit": 9.1953125,
+            "full_next_logit": 22.90625,
+            "label_minus_full_next": -13.7109375,
+            "label_rank": 158
+          }
+        ],
+        "keep70_4bit": [
+          {
+            "top1": 35,
+            "text": "D",
+            "answer_token": 16533,
+            "label_logit": 9.34375,
+            "full_next_logit": 23.0,
+            "label_minus_full_next": -13.65625,
+            "label_rank": 134
+          }
+        ],
+        "keep70_packed": [
+          {
+            "top1": 35,
+            "text": "D",
+            "answer_token": 16533,
+            "label_logit": 9.3515625,
+            "full_next_logit": 22.984375,
+            "label_minus_full_next": -13.6328125,
+            "label_rank": 133
+          }
+        ]
+      }
+    },
+    {
+      "id": "longgenbench/mmlu/55",
+      "cohort": "mmlu",
+      "length": 2061,
+      "input_sha256": "6240c8623c18bf268b7ed55d50b536b8e951de9cd62142e56360285c4dc3f251",
+      "teacher": [
+        16533,
+        62,
+        21,
+        512,
+        10267,
+        596,
+        1781,
+        3094,
+        555,
+        3094,
+        13
+      ],
+      "positions": [
+        11
+      ],
+      "history_full": 1226,
+      "history_phase": 2684,
+      "regions": [
+        [
+          552,
+          584
+        ],
+        [
+          1054,
+          1086
+        ]
+      ],
+      "predictions": {
+        "all_fp16": [
+          {
+            "top1": 1226,
+            "text": " We",
+            "answer_token": 16533,
+            "label_logit": 3.306640625,
+            "full_next_logit": 21.515625,
+            "label_minus_full_next": -18.208984375,
+            "label_rank": 8841
+          }
+        ],
+        "all_4bit": [
+          {
+            "top1": 1226,
+            "text": " We",
+            "answer_token": 16533,
+            "label_logit": 3.486328125,
+            "full_next_logit": 21.53125,
+            "label_minus_full_next": -18.044921875,
+            "label_rank": 7827
+          }
+        ],
+        "keep70_fp16": [
+          {
+            "top1": 2684,
+            "text": " There",
+            "answer_token": 16533,
+            "label_logit": 4.58203125,
+            "full_next_logit": 17.640625,
+            "label_minus_full_next": -13.05859375,
+            "label_rank": 3513
+          }
+        ],
+        "keep70_4bit": [
+          {
+            "top1": 2684,
+            "text": " There",
+            "answer_token": 16533,
+            "label_logit": 4.53125,
+            "full_next_logit": 17.8125,
+            "label_minus_full_next": -13.28125,
+            "label_rank": 3460
+          }
+        ],
+        "keep70_packed": [
+          {
+            "top1": 2684,
+            "text": " There",
+            "answer_token": 16533,
+            "label_logit": 4.53125,
+            "full_next_logit": 17.8125,
+            "label_minus_full_next": -13.28125,
+            "label_rank": 3458
+          }
+        ]
+      }
+    },
+    {
+      "id": "longgenbench/mmlu/56",
+      "cohort": "mmlu",
+      "length": 1709,
+      "input_sha256": "b6921de8ff553cc1a7fe56b02c7f8521b9390db4538df3da49520a2ab7bd9199",
+      "teacher": [
+        16533,
+        62,
+        21,
+        512,
+        10267,
+        596,
+        1781,
+        3094,
+        555,
+        3094,
+        13
+      ],
+      "positions": [
+        11
+      ],
+      "history_full": 1226,
+      "history_phase": 386,
+      "regions": [
+        [
+          522,
+          553
+        ],
+        [
+          928,
+          959
+        ]
+      ],
+      "predictions": {
+        "all_fp16": [
+          {
+            "top1": 1226,
+            "text": " We",
+            "answer_token": 16533,
+            "label_logit": 3.7421875,
+            "full_next_logit": 22.015625,
+            "label_minus_full_next": -18.2734375,
+            "label_rank": 7480
+          }
+        ],
+        "all_4bit": [
+          {
+            "top1": 1226,
+            "text": " We",
+            "answer_token": 16533,
+            "label_logit": 3.521484375,
+            "full_next_logit": 22.046875,
+            "label_minus_full_next": -18.525390625,
+            "label_rank": 8162
+          }
+        ],
+        "keep70_fp16": [
+          {
+            "top1": 386,
+            "text": " M",
+            "answer_token": 16533,
+            "label_logit": 6.66015625,
+            "full_next_logit": 16.625,
+            "label_minus_full_next": -9.96484375,
+            "label_rank": 904
+          }
+        ],
+        "keep70_4bit": [
+          {
+            "top1": 386,
+            "text": " M",
+            "answer_token": 16533,
+            "label_logit": 6.6015625,
+            "full_next_logit": 16.59375,
+            "label_minus_full_next": -9.9921875,
+            "label_rank": 957
+          }
+        ],
+        "keep70_packed": [
+          {
+            "top1": 386,
+            "text": " M",
+            "answer_token": 16533,
+            "label_logit": 6.6015625,
+            "full_next_logit": 16.59375,
+            "label_minus_full_next": -9.9921875,
+            "label_rank": 956
+          }
+        ]
+      }
+    },
+    {
+      "id": "longgenbench/mmlu/7",
+      "cohort": "mmlu",
+      "length": 4775,
+      "input_sha256": "d7952a05883c7773bf43179b9c015849fe9623bc3a7656043889b33194fd9114",
+      "teacher": [
+        16533,
+        62
+      ],
+      "positions": [
+        2
+      ],
+      "history_full": 21,
+      "history_phase": 1927,
+      "regions": [
+        [
+          1671,
+          1747
+        ],
+        [
+          2955,
+          3031
+        ]
+      ],
+      "predictions": {
+        "all_fp16": [
+          {
+            "top1": 21,
+            "text": "6",
+            "answer_token": 16533,
+            "label_logit": 10.1796875,
+            "full_next_logit": 22.484375,
+            "label_minus_full_next": -12.3046875,
+            "label_rank": 93
+          }
+        ],
+        "all_4bit": [
+          {
+            "top1": 21,
+            "text": "6",
+            "answer_token": 16533,
+            "label_logit": 10.9296875,
+            "full_next_logit": 21.75,
+            "label_minus_full_next": -10.8203125,
+            "label_rank": 80
+          }
+        ],
+        "keep70_fp16": [
+          {
+            "top1": 1927,
+            "text": "36",
+            "answer_token": 16533,
+            "label_logit": 10.28125,
+            "full_next_logit": 21.546875,
+            "label_minus_full_next": -11.265625,
+            "label_rank": 94
+          }
+        ],
+        "keep70_4bit": [
+          {
+            "top1": 1927,
+            "text": "36",
+            "answer_token": 16533,
+            "label_logit": 10.59375,
+            "full_next_logit": 20.171875,
+            "label_minus_full_next": -9.578125,
+            "label_rank": 87
+          }
+        ],
+        "keep70_packed": [
+          {
+            "top1": 1927,
+            "text": "36",
+            "answer_token": 16533,
+            "label_logit": 10.5859375,
+            "full_next_logit": 20.171875,
+            "label_minus_full_next": -9.5859375,
+            "label_rank": 87
+          }
+        ]
+      }
+    }
+  ]
+}

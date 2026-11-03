@@ -1,0 +1,6863 @@
+{
+  "status": "complete",
+  "base_protocol": {
+    "gpu": "NVIDIA GeForce RTX 3070 Ti Laptop GPU",
+    "code_sha256": "07ba4241206399b03a155d7c8860df5d6fad442665bbb072517cc3f7eaa9c98b",
+    "input_sha256": "91d7a9999c6c84ae4ea01ffde7954083f05e1043e63a755d9cfda6183a5e0046",
+    "scope": "local two-layer CUDA smoke, SDPA prefill; correctness only"
+  },
+  "options": {
+    "prefill_keep_ratio": 0.7,
+    "obs_window": 32,
+    "sink_tokens": 0,
+    "prompt_bits": 4,
+    "cold_bits": 4,
+    "group_size": 32,
+    "recent_window": 128,
+    "lazy_g": 16,
+    "decode_keep_ratio": 0.8,
+    "optimizations": {
+      "fused_quantize": true,
+      "reuse_workspace": true,
+      "paged_cold": true,
+      "page_slots": 32,
+      "cold_group": 8,
+      "specialized_4bit": true,
+      "gqa_reuse": true,
+      "hot_ring": true,
+      "channel_contiguous_k": true
+    }
+  },
+  "arms": {
+    "old": {
+      "version": "old",
+      "decode_keep_ratio": 0.8,
+      "retained_per_16": 13
+    },
+    "new": {
+      "version": "new",
+      "decode_keep_ratio": 0.8,
+      "retained_per_16": 13
+    },
+    "new100": {
+      "version": "new",
+      "decode_keep_ratio": 1.0,
+      "retained_per_16": 16
+    }
+  },
+  "comparison_arms": {
+    "new80_minus_old80": {
+      "baseline": "old",
+      "candidate": "new"
+    },
+    "new80_minus_new100": {
+      "baseline": "new100",
+      "candidate": "new"
+    }
+  },
+  "candidate_sha256": {
+    "phasekv_cache.py": "a71afb27ac30e1d73d5d567c33893f7a573ca866106d9193aeacc1dec9cd0861",
+    "segmented_plan.py": "2f773ceeccfc14a47b73f9de34bf23aac697f947fc3ee25460a8a5791646dde4"
+  },
+  "clocks": {
+    "host_elapsed_ms": {
+      "implementation": "QueryPerformanceCounter()",
+      "resolution_s": 1e-07,
+      "observed_min_increment_ns": 100,
+      "positive_increments": 3847,
+      "suitable_for_short_calls": true
+    },
+    "thread_cpu_ms": {
+      "implementation": "GetThreadTimes()",
+      "resolution_s": 1e-07,
+      "observed_min_increment_ns": null,
+      "positive_increments": 0,
+      "suitable_for_short_calls": false
+    }
+  },
+  "pairs": 2,
+  "reference_by_retention": {
+    "0.8": "0f31d8a2e3034455bc44939b1f483668342c33f8fb74d257c9f0249c25447401",
+    "1.0": "474021b7e516d1ec17fad34ffea316422143fc2c1d18727bb238742eb7c4af2a"
+  },
+  "runs": [
+    {
+      "pair": 0,
+      "warmup": true,
+      "variant": "old",
+      "mode": "whole_decode",
+      "decode_keep_ratio": 0.8,
+      "arm": "PhaseKV_GQA_on",
+      "decode_steps": 255,
+      "ms_per_token": 2.515964313724729,
+      "tokens_per_s": 397.46191730341434,
+      "ttft_s": 0.43519229999992604,
+      "decode_chunks": [
+        {
+          "from_decode_step": 0,
+          "to_decode_step": 128,
+          "seconds": 0.3123919999998179,
+          "tokens": 128
+        },
+        {
+          "from_decode_step": 128,
+          "to_decode_step": 255,
+          "seconds": 0.32917889999998806,
+          "tokens": 127
+        }
+      ],
+      "final_trace": {
+        "prompt_tokens": 5734,
+        "hot_tokens": 143,
+        "cold_segments": 7,
+        "physical_tokens": 5968,
+        "cold_tokens": 91
+      },
+      "final_kv_bytes": 2139840,
+      "output_sha256": "0f31d8a2e3034455bc44939b1f483668342c33f8fb74d257c9f0249c25447401",
+      "peak_allocated_bytes": 378165760
+    },
+    {
+      "pair": 0,
+      "warmup": true,
+      "variant": "new",
+      "mode": "whole_decode",
+      "decode_keep_ratio": 0.8,
+      "arm": "PhaseKV_GQA_on",
+      "decode_steps": 255,
+      "ms_per_token": 2.0874133333331972,
+      "tokens_per_s": 479.0618053604135,
+      "ttft_s": 0.017432499999813444,
+      "decode_chunks": [
+        {
+          "from_decode_step": 0,
+          "to_decode_step": 128,
+          "seconds": 0.26797510000005786,
+          "tokens": 128
+        },
+        {
+          "from_decode_step": 128,
+          "to_decode_step": 255,
+          "seconds": 0.26431529999990744,
+          "tokens": 127
+        }
+      ],
+      "final_trace": {
+        "prompt_tokens": 5734,
+        "hot_tokens": 143,
+        "cold_segments": 7,
+        "physical_tokens": 5968,
+        "cold_tokens": 91
+      },
+      "final_kv_bytes": 2139840,
+      "output_sha256": "0f31d8a2e3034455bc44939b1f483668342c33f8fb74d257c9f0249c25447401",
+      "peak_allocated_bytes": 378100224
+    },
+    {
+      "pair": 0,
+      "warmup": true,
+      "variant": "new100",
+      "mode": "whole_decode",
+      "decode_keep_ratio": 1.0,
+      "arm": "PhaseKV_GQA_on",
+      "decode_steps": 255,
+      "ms_per_token": 2.9762109803913535,
+      "tokens_per_s": 335.99768517368557,
+      "ttft_s": 0.01742659999990792,
+      "decode_chunks": [
+        {
+          "from_decode_step": 0,
+          "to_decode_step": 128,
+          "seconds": 0.26350749999983236,
+          "tokens": 128
+        },
+        {
+          "from_decode_step": 128,
+          "to_decode_step": 255,
+          "seconds": 0.4954262999999628,
+          "tokens": 127
+        }
+      ],
+      "final_trace": {
+        "prompt_tokens": 5734,
+        "hot_tokens": 143,
+        "cold_segments": 7,
+        "physical_tokens": 5989,
+        "cold_tokens": 112
+      },
+      "final_kv_bytes": 2163392,
+      "output_sha256": "474021b7e516d1ec17fad34ffea316422143fc2c1d18727bb238742eb7c4af2a",
+      "peak_allocated_bytes": 378100224
+    },
+    {
+      "pair": 0,
+      "warmup": true,
+      "variant": "new100",
+      "mode": "host_timed",
+      "decode_keep_ratio": 1.0,
+      "arm": "host_timed",
+      "wall_ms": {
+        "reference129": 2.2307,
+        "before": 1.89605,
+        "cooling144": 2.1251,
+        "first_cold145": 2.2733,
+        "after": 2.319107142857143
+      },
+      "output_sha256": "474021b7e516d1ec17fad34ffea316422143fc2c1d18727bb238742eb7c4af2a",
+      "cache_states": [
+        {
+          "end_step": 129,
+          "cold_segments": 0,
+          "hot_tokens": 129
+        },
+        {
+          "end_step": 143,
+          "cold_segments": 0,
+          "hot_tokens": 143
+        },
+        {
+          "end_step": 144,
+          "cold_segments": 1,
+          "hot_tokens": 128
+        },
+        {
+          "end_step": 145,
+          "cold_segments": 1,
+          "hot_tokens": 129
+        },
+        {
+          "end_step": 159,
+          "cold_segments": 1,
+          "hot_tokens": 143
+        }
+      ],
+      "steps": {
+        "129": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0997,
+            "cache_finish": 0.0216,
+            "workspace": 0.006,
+            "cache_total": 0.1273
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "130": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.097,
+            "cache_finish": 0.0233,
+            "workspace": 0.0052,
+            "cache_total": 0.1255
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "131": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0998,
+            "cache_finish": 0.0211,
+            "workspace": 0.0055,
+            "cache_total": 0.1264
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "132": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0983,
+            "cache_finish": 0.0198,
+            "workspace": 0.0054,
+            "cache_total": 0.1235
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "133": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0916,
+            "cache_finish": 0.0185,
+            "workspace": 0.0051,
+            "cache_total": 0.1152
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "134": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0957,
+            "cache_finish": 0.0193,
+            "workspace": 0.0051,
+            "cache_total": 0.1201
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "135": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0912,
+            "cache_finish": 0.0184,
+            "workspace": 0.0051,
+            "cache_total": 0.1147
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "136": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0949,
+            "cache_finish": 0.021,
+            "workspace": 0.0056,
+            "cache_total": 0.1215
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "137": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1382,
+            "cache_finish": 0.0193,
+            "workspace": 0.0047,
+            "cache_total": 0.16219999999999998
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "138": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0947,
+            "cache_finish": 0.0179,
+            "workspace": 0.0049,
+            "cache_total": 0.11750000000000001
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "139": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0872,
+            "cache_finish": 0.0172,
+            "workspace": 0.0047,
+            "cache_total": 0.1091
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "140": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0966,
+            "cache_finish": 0.019,
+            "workspace": 0.0048,
+            "cache_total": 0.12040000000000001
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "141": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0963,
+            "cache_finish": 0.0178,
+            "workspace": 0.0053,
+            "cache_total": 0.11939999999999999
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "142": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0964,
+            "cache_finish": 0.0177,
+            "workspace": 0.0048,
+            "cache_total": 0.1189
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "143": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0937,
+            "cache_finish": 0.0179,
+            "workspace": 0.0048,
+            "cache_total": 0.1164
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "144": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0979,
+            "cache_finish": 0.3019,
+            "workspace": 0.0048,
+            "cache_total": 0.4046
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "145": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0972,
+            "cache_finish": 0.022,
+            "workspace": 0.1165,
+            "cache_total": 0.2357
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "146": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0931,
+            "cache_finish": 0.0181,
+            "workspace": 0.0047,
+            "cache_total": 0.1159
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "147": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.095,
+            "cache_finish": 0.0213,
+            "workspace": 0.0046,
+            "cache_total": 0.12090000000000001
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "148": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1461,
+            "cache_finish": 0.0195,
+            "workspace": 0.0383,
+            "cache_total": 0.2039
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "149": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0959,
+            "cache_finish": 0.018,
+            "workspace": 0.0049,
+            "cache_total": 0.1188
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "150": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0928,
+            "cache_finish": 0.0183,
+            "workspace": 0.0047,
+            "cache_total": 0.1158
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "151": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0968,
+            "cache_finish": 0.0182,
+            "workspace": 0.0048,
+            "cache_total": 0.1198
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "152": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0947,
+            "cache_finish": 0.0178,
+            "workspace": 0.0049,
+            "cache_total": 0.1174
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "153": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0957,
+            "cache_finish": 0.0173,
+            "workspace": 0.0052,
+            "cache_total": 0.1182
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "154": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.2505,
+            "cache_finish": 0.0197,
+            "workspace": 0.0059,
+            "cache_total": 0.2761
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "155": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0957,
+            "cache_finish": 0.0179,
+            "workspace": 0.0048,
+            "cache_total": 0.11839999999999999
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "156": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1288,
+            "cache_finish": 0.0232,
+            "workspace": 0.0053,
+            "cache_total": 0.1573
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "157": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1628,
+            "cache_finish": 0.0206,
+            "workspace": 0.0055,
+            "cache_total": 0.1889
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "158": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1501,
+            "cache_finish": 0.0205,
+            "workspace": 0.0051,
+            "cache_total": 0.17570000000000002
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "159": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1651,
+            "cache_finish": 0.0206,
+            "workspace": 0.0054,
+            "cache_total": 0.1911
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        }
+      },
+      "windows": {
+        "reference129": {
+          "host_elapsed_ms": {
+            "cache_append": 0.0997,
+            "cache_finish": 0.0216,
+            "workspace": 0.006,
+            "cache_total": 0.1273
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "before": {
+          "host_elapsed_ms": {
+            "cache_append": 0.09797142857142857,
+            "cache_finish": 0.01915714285714286,
+            "workspace": 0.005071428571428571,
+            "cache_total": 0.1222
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "cooling144": {
+          "host_elapsed_ms": {
+            "cache_append": 0.0979,
+            "cache_finish": 0.3019,
+            "workspace": 0.0048,
+            "cache_total": 0.4046
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "first_cold145": {
+          "host_elapsed_ms": {
+            "cache_append": 0.0972,
+            "cache_finish": 0.022,
+            "workspace": 0.1165,
+            "cache_total": 0.2357
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "after": {
+          "host_elapsed_ms": {
+            "cache_append": 0.1259357142857143,
+            "cache_finish": 0.019357142857142857,
+            "workspace": 0.007435714285714286,
+            "cache_total": 0.15272857142857144
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        }
+      }
+    },
+    {
+      "pair": 0,
+      "warmup": true,
+      "variant": "new",
+      "mode": "host_timed",
+      "decode_keep_ratio": 0.8,
+      "arm": "host_timed",
+      "wall_ms": {
+        "reference129": 2.3334,
+        "before": 2.1290642857142856,
+        "cooling144": 2.6204,
+        "first_cold145": 2.4681,
+        "after": 1.9138214285714288
+      },
+      "output_sha256": "0f31d8a2e3034455bc44939b1f483668342c33f8fb74d257c9f0249c25447401",
+      "cache_states": [
+        {
+          "end_step": 129,
+          "cold_segments": 0,
+          "hot_tokens": 129
+        },
+        {
+          "end_step": 143,
+          "cold_segments": 0,
+          "hot_tokens": 143
+        },
+        {
+          "end_step": 144,
+          "cold_segments": 1,
+          "hot_tokens": 128
+        },
+        {
+          "end_step": 145,
+          "cold_segments": 1,
+          "hot_tokens": 129
+        },
+        {
+          "end_step": 159,
+          "cold_segments": 1,
+          "hot_tokens": 143
+        }
+      ],
+      "steps": {
+        "129": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1048,
+            "cache_finish": 0.0181,
+            "workspace": 0.0051,
+            "cache_total": 0.128
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "130": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1019,
+            "cache_finish": 0.02,
+            "workspace": 0.0057,
+            "cache_total": 0.1276
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "131": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0975,
+            "cache_finish": 0.0204,
+            "workspace": 0.0052,
+            "cache_total": 0.1231
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "132": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1031,
+            "cache_finish": 0.02,
+            "workspace": 0.0058,
+            "cache_total": 0.1289
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "133": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0953,
+            "cache_finish": 0.0191,
+            "workspace": 0.0048,
+            "cache_total": 0.1192
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "134": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0958,
+            "cache_finish": 0.0285,
+            "workspace": 0.0053,
+            "cache_total": 0.1296
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "135": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1058,
+            "cache_finish": 0.0201,
+            "workspace": 0.0052,
+            "cache_total": 0.1311
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "136": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1059,
+            "cache_finish": 0.0202,
+            "workspace": 0.0088,
+            "cache_total": 0.1349
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "137": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.188,
+            "cache_finish": 0.0231,
+            "workspace": 0.0059,
+            "cache_total": 0.217
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "138": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0988,
+            "cache_finish": 0.0191,
+            "workspace": 0.0051,
+            "cache_total": 0.123
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "139": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0999,
+            "cache_finish": 0.0179,
+            "workspace": 0.0048,
+            "cache_total": 0.1226
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "140": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1061,
+            "cache_finish": 0.0188,
+            "workspace": 0.0053,
+            "cache_total": 0.1302
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "141": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0967,
+            "cache_finish": 0.0177,
+            "workspace": 0.0054,
+            "cache_total": 0.11979999999999999
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "142": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.096,
+            "cache_finish": 0.0173,
+            "workspace": 0.0047,
+            "cache_total": 0.11800000000000001
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "143": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.095,
+            "cache_finish": 0.0195,
+            "workspace": 0.0051,
+            "cache_total": 0.1196
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "144": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1013,
+            "cache_finish": 0.4677,
+            "workspace": 0.0052,
+            "cache_total": 0.5742
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "145": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1125,
+            "cache_finish": 0.0194,
+            "workspace": 0.1212,
+            "cache_total": 0.2531
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "146": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0964,
+            "cache_finish": 0.0197,
+            "workspace": 0.0047,
+            "cache_total": 0.1208
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "147": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1056,
+            "cache_finish": 0.0213,
+            "workspace": 0.0052,
+            "cache_total": 0.1321
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "148": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0968,
+            "cache_finish": 0.02,
+            "workspace": 0.0051,
+            "cache_total": 0.1219
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "149": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0973,
+            "cache_finish": 0.0196,
+            "workspace": 0.0048,
+            "cache_total": 0.1217
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "150": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0947,
+            "cache_finish": 0.0188,
+            "workspace": 0.0047,
+            "cache_total": 0.11820000000000001
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "151": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1218,
+            "cache_finish": 0.0181,
+            "workspace": 0.0047,
+            "cache_total": 0.1446
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "152": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1315,
+            "cache_finish": 0.0203,
+            "workspace": 0.0052,
+            "cache_total": 0.157
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "153": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1267,
+            "cache_finish": 0.0237,
+            "workspace": 0.0057,
+            "cache_total": 0.15610000000000002
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "154": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1084,
+            "cache_finish": 0.0238,
+            "workspace": 0.0055,
+            "cache_total": 0.1377
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "155": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0968,
+            "cache_finish": 0.035,
+            "workspace": 0.0053,
+            "cache_total": 0.1371
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "156": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0912,
+            "cache_finish": 0.0184,
+            "workspace": 0.0049,
+            "cache_total": 0.1145
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "157": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1006,
+            "cache_finish": 0.0177,
+            "workspace": 0.0049,
+            "cache_total": 0.12319999999999999
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "158": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0933,
+            "cache_finish": 0.0179,
+            "workspace": 0.0044,
+            "cache_total": 0.1156
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "159": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0937,
+            "cache_finish": 0.0179,
+            "workspace": 0.0044,
+            "cache_total": 0.116
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        }
+      },
+      "windows": {
+        "reference129": {
+          "host_elapsed_ms": {
+            "cache_append": 0.1048,
+            "cache_finish": 0.0181,
+            "workspace": 0.0051,
+            "cache_total": 0.128
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "before": {
+          "host_elapsed_ms": {
+            "cache_append": 0.10612857142857143,
+            "cache_finish": 0.02012142857142857,
+            "workspace": 0.005507142857142857,
+            "cache_total": 0.13175714285714285
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "cooling144": {
+          "host_elapsed_ms": {
+            "cache_append": 0.1013,
+            "cache_finish": 0.4677,
+            "workspace": 0.0052,
+            "cache_total": 0.5742
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "first_cold145": {
+          "host_elapsed_ms": {
+            "cache_append": 0.1125,
+            "cache_finish": 0.0194,
+            "workspace": 0.1212,
+            "cache_total": 0.2531
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "after": {
+          "host_elapsed_ms": {
+            "cache_append": 0.10391428571428571,
+            "cache_finish": 0.020871428571428572,
+            "workspace": 0.0049642857142857145,
+            "cache_total": 0.12975
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        }
+      }
+    },
+    {
+      "pair": 0,
+      "warmup": true,
+      "variant": "old",
+      "mode": "host_timed",
+      "decode_keep_ratio": 0.8,
+      "arm": "host_timed",
+      "wall_ms": {
+        "reference129": 2.2217,
+        "before": 2.1530214285714284,
+        "cooling144": 6.0625,
+        "first_cold145": 2.6388,
+        "after": 2.2302785714285713
+      },
+      "output_sha256": "0f31d8a2e3034455bc44939b1f483668342c33f8fb74d257c9f0249c25447401",
+      "cache_states": [
+        {
+          "end_step": 129,
+          "cold_segments": 0,
+          "hot_tokens": 129
+        },
+        {
+          "end_step": 143,
+          "cold_segments": 0,
+          "hot_tokens": 143
+        },
+        {
+          "end_step": 144,
+          "cold_segments": 1,
+          "hot_tokens": 128
+        },
+        {
+          "end_step": 145,
+          "cold_segments": 1,
+          "hot_tokens": 129
+        },
+        {
+          "end_step": 159,
+          "cold_segments": 1,
+          "hot_tokens": 143
+        }
+      ],
+      "steps": {
+        "129": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1226,
+            "cache_finish": 0.0215,
+            "workspace": 0.0049,
+            "cache_total": 0.149
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "130": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0967,
+            "cache_finish": 0.0207,
+            "workspace": 0.0047,
+            "cache_total": 0.1221
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "131": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0956,
+            "cache_finish": 0.0201,
+            "workspace": 0.0056,
+            "cache_total": 0.1213
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "132": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0948,
+            "cache_finish": 0.0173,
+            "workspace": 0.005,
+            "cache_total": 0.1171
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "133": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1043,
+            "cache_finish": 0.0181,
+            "workspace": 0.0054,
+            "cache_total": 0.1278
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "134": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0955,
+            "cache_finish": 0.0181,
+            "workspace": 0.0048,
+            "cache_total": 0.1184
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "135": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0938,
+            "cache_finish": 0.018,
+            "workspace": 0.0049,
+            "cache_total": 0.1167
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "136": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1123,
+            "cache_finish": 0.0233,
+            "workspace": 0.0058,
+            "cache_total": 0.1414
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "137": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1511,
+            "cache_finish": 0.0266,
+            "workspace": 0.0075,
+            "cache_total": 0.1852
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "138": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1182,
+            "cache_finish": 0.0255,
+            "workspace": 0.006,
+            "cache_total": 0.1497
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "139": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1426,
+            "cache_finish": 0.0275,
+            "workspace": 0.0064,
+            "cache_total": 0.17650000000000002
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "140": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.119,
+            "cache_finish": 0.0261,
+            "workspace": 0.0063,
+            "cache_total": 0.1514
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "141": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1213,
+            "cache_finish": 0.0245,
+            "workspace": 0.0062,
+            "cache_total": 0.152
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "142": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1224,
+            "cache_finish": 0.0279,
+            "workspace": 0.0087,
+            "cache_total": 0.159
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "143": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1304,
+            "cache_finish": 0.0226,
+            "workspace": 0.007,
+            "cache_total": 0.15999999999999998
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "144": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1941,
+            "cache_finish": 0.743,
+            "workspace": 0.0105,
+            "cache_total": 0.9476
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "145": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1058,
+            "cache_finish": 0.0224,
+            "workspace": 0.1629,
+            "cache_total": 0.29109999999999997
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "146": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1111,
+            "cache_finish": 0.0222,
+            "workspace": 0.0058,
+            "cache_total": 0.1391
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "147": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.095,
+            "cache_finish": 0.0212,
+            "workspace": 0.0049,
+            "cache_total": 0.1211
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "148": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.2483,
+            "cache_finish": 0.0254,
+            "workspace": 0.0085,
+            "cache_total": 0.2822
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "149": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1663,
+            "cache_finish": 0.0361,
+            "workspace": 0.0074,
+            "cache_total": 0.20980000000000001
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "150": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1148,
+            "cache_finish": 0.0205,
+            "workspace": 0.0058,
+            "cache_total": 0.1411
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "151": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1414,
+            "cache_finish": 0.0219,
+            "workspace": 0.0054,
+            "cache_total": 0.1687
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "152": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1082,
+            "cache_finish": 0.02,
+            "workspace": 0.0052,
+            "cache_total": 0.13340000000000002
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "153": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1113,
+            "cache_finish": 0.0232,
+            "workspace": 0.0053,
+            "cache_total": 0.1398
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "154": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1057,
+            "cache_finish": 0.0217,
+            "workspace": 0.0053,
+            "cache_total": 0.1327
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "155": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1102,
+            "cache_finish": 0.023,
+            "workspace": 0.0061,
+            "cache_total": 0.1393
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "156": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0958,
+            "cache_finish": 0.0196,
+            "workspace": 0.0055,
+            "cache_total": 0.1209
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "157": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1064,
+            "cache_finish": 0.0223,
+            "workspace": 0.0052,
+            "cache_total": 0.1339
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "158": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0962,
+            "cache_finish": 0.0199,
+            "workspace": 0.0051,
+            "cache_total": 0.1212
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "159": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1293,
+            "cache_finish": 0.0193,
+            "workspace": 0.0049,
+            "cache_total": 0.1535
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        }
+      },
+      "windows": {
+        "reference129": {
+          "host_elapsed_ms": {
+            "cache_append": 0.1226,
+            "cache_finish": 0.0215,
+            "workspace": 0.0049,
+            "cache_total": 0.149
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "before": {
+          "host_elapsed_ms": {
+            "cache_append": 0.11414285714285714,
+            "cache_finish": 0.022592857142857144,
+            "workspace": 0.006021428571428572,
+            "cache_total": 0.14275714285714286
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "cooling144": {
+          "host_elapsed_ms": {
+            "cache_append": 0.1941,
+            "cache_finish": 0.743,
+            "workspace": 0.0105,
+            "cache_total": 0.9476
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "first_cold145": {
+          "host_elapsed_ms": {
+            "cache_append": 0.1058,
+            "cache_finish": 0.0224,
+            "workspace": 0.1629,
+            "cache_total": 0.29109999999999997
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "after": {
+          "host_elapsed_ms": {
+            "cache_append": 0.12428571428571429,
+            "cache_finish": 0.022592857142857144,
+            "workspace": 0.005742857142857143,
+            "cache_total": 0.15262142857142857
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        }
+      }
+    },
+    {
+      "pair": 1,
+      "warmup": false,
+      "variant": "old",
+      "mode": "whole_decode",
+      "decode_keep_ratio": 0.8,
+      "arm": "PhaseKV_GQA_on",
+      "decode_steps": 255,
+      "ms_per_token": 2.153632941175887,
+      "tokens_per_s": 464.33167922013604,
+      "ttft_s": 0.01698839999971824,
+      "decode_chunks": [
+        {
+          "from_decode_step": 0,
+          "to_decode_step": 128,
+          "seconds": 0.2684463999999025,
+          "tokens": 128
+        },
+        {
+          "from_decode_step": 128,
+          "to_decode_step": 255,
+          "seconds": 0.28072999999994863,
+          "tokens": 127
+        }
+      ],
+      "final_trace": {
+        "prompt_tokens": 5734,
+        "hot_tokens": 143,
+        "cold_segments": 7,
+        "physical_tokens": 5968,
+        "cold_tokens": 91
+      },
+      "final_kv_bytes": 2139840,
+      "output_sha256": "0f31d8a2e3034455bc44939b1f483668342c33f8fb74d257c9f0249c25447401",
+      "peak_allocated_bytes": 378100224
+    },
+    {
+      "pair": 1,
+      "warmup": false,
+      "variant": "new",
+      "mode": "whole_decode",
+      "decode_keep_ratio": 0.8,
+      "arm": "PhaseKV_GQA_on",
+      "decode_steps": 255,
+      "ms_per_token": 2.172786274510216,
+      "tokens_per_s": 460.2385479563182,
+      "ttft_s": 0.018261100000017905,
+      "decode_chunks": [
+        {
+          "from_decode_step": 0,
+          "to_decode_step": 128,
+          "seconds": 0.2651365000001533,
+          "tokens": 128
+        },
+        {
+          "from_decode_step": 128,
+          "to_decode_step": 255,
+          "seconds": 0.2889239999999518,
+          "tokens": 127
+        }
+      ],
+      "final_trace": {
+        "prompt_tokens": 5734,
+        "hot_tokens": 143,
+        "cold_segments": 7,
+        "physical_tokens": 5968,
+        "cold_tokens": 91
+      },
+      "final_kv_bytes": 2139840,
+      "output_sha256": "0f31d8a2e3034455bc44939b1f483668342c33f8fb74d257c9f0249c25447401",
+      "peak_allocated_bytes": 378100224
+    },
+    {
+      "pair": 1,
+      "warmup": false,
+      "variant": "new100",
+      "mode": "whole_decode",
+      "decode_keep_ratio": 1.0,
+      "arm": "PhaseKV_GQA_on",
+      "decode_steps": 255,
+      "ms_per_token": 2.226546274510731,
+      "tokens_per_s": 449.12607990585934,
+      "ttft_s": 0.017402299999957904,
+      "decode_chunks": [
+        {
+          "from_decode_step": 0,
+          "to_decode_step": 128,
+          "seconds": 0.3013854999999239,
+          "tokens": 128
+        },
+        {
+          "from_decode_step": 128,
+          "to_decode_step": 255,
+          "seconds": 0.2663838000003125,
+          "tokens": 127
+        }
+      ],
+      "final_trace": {
+        "prompt_tokens": 5734,
+        "hot_tokens": 143,
+        "cold_segments": 7,
+        "physical_tokens": 5989,
+        "cold_tokens": 112
+      },
+      "final_kv_bytes": 2163392,
+      "output_sha256": "474021b7e516d1ec17fad34ffea316422143fc2c1d18727bb238742eb7c4af2a",
+      "peak_allocated_bytes": 378100224
+    },
+    {
+      "pair": 1,
+      "warmup": false,
+      "variant": "new100",
+      "mode": "host_timed",
+      "decode_keep_ratio": 1.0,
+      "arm": "host_timed",
+      "wall_ms": {
+        "reference129": 2.6683,
+        "before": 2.4631499999999997,
+        "cooling144": 2.7129,
+        "first_cold145": 2.3594,
+        "after": 2.5932285714285714
+      },
+      "output_sha256": "474021b7e516d1ec17fad34ffea316422143fc2c1d18727bb238742eb7c4af2a",
+      "cache_states": [
+        {
+          "end_step": 129,
+          "cold_segments": 0,
+          "hot_tokens": 129
+        },
+        {
+          "end_step": 143,
+          "cold_segments": 0,
+          "hot_tokens": 143
+        },
+        {
+          "end_step": 144,
+          "cold_segments": 1,
+          "hot_tokens": 128
+        },
+        {
+          "end_step": 145,
+          "cold_segments": 1,
+          "hot_tokens": 129
+        },
+        {
+          "end_step": 159,
+          "cold_segments": 1,
+          "hot_tokens": 143
+        }
+      ],
+      "steps": {
+        "129": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1185,
+            "cache_finish": 0.0285,
+            "workspace": 0.0067,
+            "cache_total": 0.1537
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "130": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1024,
+            "cache_finish": 0.0231,
+            "workspace": 0.0075,
+            "cache_total": 0.133
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "131": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.105,
+            "cache_finish": 0.0211,
+            "workspace": 0.0061,
+            "cache_total": 0.13219999999999998
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "132": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1028,
+            "cache_finish": 0.0225,
+            "workspace": 0.005,
+            "cache_total": 0.1303
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "133": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1005,
+            "cache_finish": 0.0222,
+            "workspace": 0.0052,
+            "cache_total": 0.1279
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "134": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1151,
+            "cache_finish": 0.0271,
+            "workspace": 0.0067,
+            "cache_total": 0.1489
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "135": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1146,
+            "cache_finish": 0.0221,
+            "workspace": 0.0061,
+            "cache_total": 0.14279999999999998
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "136": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1057,
+            "cache_finish": 0.0224,
+            "workspace": 0.0059,
+            "cache_total": 0.134
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "137": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1647,
+            "cache_finish": 0.023,
+            "workspace": 0.007,
+            "cache_total": 0.1947
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "138": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1688,
+            "cache_finish": 0.0233,
+            "workspace": 0.0068,
+            "cache_total": 0.1989
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "139": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1474,
+            "cache_finish": 0.0238,
+            "workspace": 0.0071,
+            "cache_total": 0.17830000000000001
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "140": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1073,
+            "cache_finish": 0.0219,
+            "workspace": 0.0062,
+            "cache_total": 0.1354
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "141": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1089,
+            "cache_finish": 0.0178,
+            "workspace": 0.0058,
+            "cache_total": 0.1325
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "142": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1102,
+            "cache_finish": 0.0207,
+            "workspace": 0.005,
+            "cache_total": 0.1359
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "143": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1048,
+            "cache_finish": 0.0187,
+            "workspace": 0.007,
+            "cache_total": 0.1305
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "144": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1039,
+            "cache_finish": 0.3717,
+            "workspace": 0.005,
+            "cache_total": 0.48059999999999997
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "145": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0999,
+            "cache_finish": 0.0204,
+            "workspace": 0.1288,
+            "cache_total": 0.2491
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "146": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.142,
+            "cache_finish": 0.0305,
+            "workspace": 0.0067,
+            "cache_total": 0.1792
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "147": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1315,
+            "cache_finish": 0.026,
+            "workspace": 0.0069,
+            "cache_total": 0.1644
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "148": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1093,
+            "cache_finish": 0.0227,
+            "workspace": 0.0055,
+            "cache_total": 0.13749999999999998
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "149": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1136,
+            "cache_finish": 0.0216,
+            "workspace": 0.0053,
+            "cache_total": 0.1405
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "150": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1114,
+            "cache_finish": 0.0189,
+            "workspace": 0.0053,
+            "cache_total": 0.1356
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "151": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0989,
+            "cache_finish": 0.0216,
+            "workspace": 0.0049,
+            "cache_total": 0.1254
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "152": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1034,
+            "cache_finish": 0.0217,
+            "workspace": 0.0056,
+            "cache_total": 0.1307
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "153": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1103,
+            "cache_finish": 0.0304,
+            "workspace": 0.0059,
+            "cache_total": 0.1466
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "154": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1103,
+            "cache_finish": 0.023,
+            "workspace": 0.007,
+            "cache_total": 0.1403
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "155": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1077,
+            "cache_finish": 0.0281,
+            "workspace": 0.0059,
+            "cache_total": 0.1417
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "156": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1542,
+            "cache_finish": 0.041,
+            "workspace": 0.0109,
+            "cache_total": 0.2061
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "157": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.2181,
+            "cache_finish": 0.0385,
+            "workspace": 0.0109,
+            "cache_total": 0.26749999999999996
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "158": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1822,
+            "cache_finish": 0.0373,
+            "workspace": 0.0111,
+            "cache_total": 0.2306
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "159": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1404,
+            "cache_finish": 0.026,
+            "workspace": 0.0069,
+            "cache_total": 0.1733
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        }
+      },
+      "windows": {
+        "reference129": {
+          "host_elapsed_ms": {
+            "cache_append": 0.1185,
+            "cache_finish": 0.0285,
+            "workspace": 0.0067,
+            "cache_total": 0.1537
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "before": {
+          "host_elapsed_ms": {
+            "cache_append": 0.11844285714285714,
+            "cache_finish": 0.022121428571428573,
+            "workspace": 0.006242857142857143,
+            "cache_total": 0.14680714285714286
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "cooling144": {
+          "host_elapsed_ms": {
+            "cache_append": 0.1039,
+            "cache_finish": 0.3717,
+            "workspace": 0.005,
+            "cache_total": 0.48059999999999997
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "first_cold145": {
+          "host_elapsed_ms": {
+            "cache_append": 0.0999,
+            "cache_finish": 0.0204,
+            "workspace": 0.1288,
+            "cache_total": 0.2491
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "after": {
+          "host_elapsed_ms": {
+            "cache_append": 0.13095,
+            "cache_finish": 0.027664285714285714,
+            "workspace": 0.007057142857142857,
+            "cache_total": 0.16567142857142858
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        }
+      }
+    },
+    {
+      "pair": 1,
+      "warmup": false,
+      "variant": "new",
+      "mode": "host_timed",
+      "decode_keep_ratio": 0.8,
+      "arm": "host_timed",
+      "wall_ms": {
+        "reference129": 2.3587,
+        "before": 2.0344142857142855,
+        "cooling144": 2.7258,
+        "first_cold145": 2.6152,
+        "after": 2.6508499999999997
+      },
+      "output_sha256": "0f31d8a2e3034455bc44939b1f483668342c33f8fb74d257c9f0249c25447401",
+      "cache_states": [
+        {
+          "end_step": 129,
+          "cold_segments": 0,
+          "hot_tokens": 129
+        },
+        {
+          "end_step": 143,
+          "cold_segments": 0,
+          "hot_tokens": 143
+        },
+        {
+          "end_step": 144,
+          "cold_segments": 1,
+          "hot_tokens": 128
+        },
+        {
+          "end_step": 145,
+          "cold_segments": 1,
+          "hot_tokens": 129
+        },
+        {
+          "end_step": 159,
+          "cold_segments": 1,
+          "hot_tokens": 143
+        }
+      ],
+      "steps": {
+        "129": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1133,
+            "cache_finish": 0.0237,
+            "workspace": 0.0064,
+            "cache_total": 0.1434
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "130": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1741,
+            "cache_finish": 0.0276,
+            "workspace": 0.0063,
+            "cache_total": 0.20800000000000002
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "131": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0983,
+            "cache_finish": 0.0203,
+            "workspace": 0.0054,
+            "cache_total": 0.124
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "132": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1062,
+            "cache_finish": 0.0192,
+            "workspace": 0.0053,
+            "cache_total": 0.1307
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "133": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0958,
+            "cache_finish": 0.0186,
+            "workspace": 0.005,
+            "cache_total": 0.11939999999999999
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "134": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1095,
+            "cache_finish": 0.0197,
+            "workspace": 0.0052,
+            "cache_total": 0.1344
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "135": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0963,
+            "cache_finish": 0.0186,
+            "workspace": 0.0052,
+            "cache_total": 0.1201
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "136": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0968,
+            "cache_finish": 0.0185,
+            "workspace": 0.0052,
+            "cache_total": 0.1205
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "137": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1231,
+            "cache_finish": 0.0177,
+            "workspace": 0.0048,
+            "cache_total": 0.1456
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "138": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0981,
+            "cache_finish": 0.0307,
+            "workspace": 0.0048,
+            "cache_total": 0.1336
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "139": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1436,
+            "cache_finish": 0.0256,
+            "workspace": 0.0071,
+            "cache_total": 0.1763
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "140": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1228,
+            "cache_finish": 0.0227,
+            "workspace": 0.0058,
+            "cache_total": 0.15130000000000002
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "141": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0977,
+            "cache_finish": 0.0181,
+            "workspace": 0.0047,
+            "cache_total": 0.1205
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "142": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0965,
+            "cache_finish": 0.0179,
+            "workspace": 0.0049,
+            "cache_total": 0.1193
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "143": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0927,
+            "cache_finish": 0.0167,
+            "workspace": 0.0047,
+            "cache_total": 0.11410000000000001
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "144": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.093,
+            "cache_finish": 0.4915,
+            "workspace": 0.0047,
+            "cache_total": 0.5892
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "145": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0991,
+            "cache_finish": 0.0225,
+            "workspace": 0.1181,
+            "cache_total": 0.2397
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "146": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.2254,
+            "cache_finish": 0.0242,
+            "workspace": 0.0091,
+            "cache_total": 0.2587
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "147": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1038,
+            "cache_finish": 0.0245,
+            "workspace": 0.0055,
+            "cache_total": 0.1338
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "148": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0985,
+            "cache_finish": 0.0223,
+            "workspace": 0.005,
+            "cache_total": 0.1258
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "149": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1334,
+            "cache_finish": 0.0208,
+            "workspace": 0.005,
+            "cache_total": 0.15919999999999998
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "150": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0958,
+            "cache_finish": 0.0195,
+            "workspace": 0.005,
+            "cache_total": 0.12029999999999999
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "151": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1004,
+            "cache_finish": 0.0193,
+            "workspace": 0.0048,
+            "cache_total": 0.1245
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "152": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0956,
+            "cache_finish": 0.0178,
+            "workspace": 0.005,
+            "cache_total": 0.1184
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "153": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1024,
+            "cache_finish": 0.0235,
+            "workspace": 0.0056,
+            "cache_total": 0.1315
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "154": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1563,
+            "cache_finish": 0.021,
+            "workspace": 0.0051,
+            "cache_total": 0.1824
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "155": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1571,
+            "cache_finish": 0.02,
+            "workspace": 0.0054,
+            "cache_total": 0.1825
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "156": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1638,
+            "cache_finish": 0.0201,
+            "workspace": 0.0053,
+            "cache_total": 0.1892
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "157": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1683,
+            "cache_finish": 0.1099,
+            "workspace": 0.0052,
+            "cache_total": 0.2834
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "158": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1615,
+            "cache_finish": 0.0328,
+            "workspace": 0.0055,
+            "cache_total": 0.1998
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "159": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1101,
+            "cache_finish": 0.0199,
+            "workspace": 0.0059,
+            "cache_total": 0.1359
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        }
+      },
+      "windows": {
+        "reference129": {
+          "host_elapsed_ms": {
+            "cache_append": 0.1133,
+            "cache_finish": 0.0237,
+            "workspace": 0.0064,
+            "cache_total": 0.1434
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "before": {
+          "host_elapsed_ms": {
+            "cache_append": 0.11082142857142857,
+            "cache_finish": 0.02085,
+            "workspace": 0.005314285714285714,
+            "cache_total": 0.1369857142857143
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "cooling144": {
+          "host_elapsed_ms": {
+            "cache_append": 0.093,
+            "cache_finish": 0.4915,
+            "workspace": 0.0047,
+            "cache_total": 0.5892
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "first_cold145": {
+          "host_elapsed_ms": {
+            "cache_append": 0.0991,
+            "cache_finish": 0.0225,
+            "workspace": 0.1181,
+            "cache_total": 0.2397
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "after": {
+          "host_elapsed_ms": {
+            "cache_append": 0.13374285714285714,
+            "cache_finish": 0.028257142857142856,
+            "workspace": 0.005528571428571429,
+            "cache_total": 0.16752857142857142
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        }
+      }
+    },
+    {
+      "pair": 1,
+      "warmup": false,
+      "variant": "old",
+      "mode": "host_timed",
+      "decode_keep_ratio": 0.8,
+      "arm": "host_timed",
+      "wall_ms": {
+        "reference129": 2.1251,
+        "before": 2.2391071428571427,
+        "cooling144": 3.7955,
+        "first_cold145": 2.7005,
+        "after": 1.8703357142857142
+      },
+      "output_sha256": "0f31d8a2e3034455bc44939b1f483668342c33f8fb74d257c9f0249c25447401",
+      "cache_states": [
+        {
+          "end_step": 129,
+          "cold_segments": 0,
+          "hot_tokens": 129
+        },
+        {
+          "end_step": 143,
+          "cold_segments": 0,
+          "hot_tokens": 143
+        },
+        {
+          "end_step": 144,
+          "cold_segments": 1,
+          "hot_tokens": 128
+        },
+        {
+          "end_step": 145,
+          "cold_segments": 1,
+          "hot_tokens": 129
+        },
+        {
+          "end_step": 159,
+          "cold_segments": 1,
+          "hot_tokens": 143
+        }
+      ],
+      "steps": {
+        "129": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1078,
+            "cache_finish": 0.0204,
+            "workspace": 0.0052,
+            "cache_total": 0.13340000000000002
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "130": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1077,
+            "cache_finish": 0.02,
+            "workspace": 0.0054,
+            "cache_total": 0.1331
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "131": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0989,
+            "cache_finish": 0.0192,
+            "workspace": 0.005,
+            "cache_total": 0.1231
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "132": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.2449,
+            "cache_finish": 0.0326,
+            "workspace": 0.0066,
+            "cache_total": 0.2841
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "133": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1338,
+            "cache_finish": 0.027,
+            "workspace": 0.0074,
+            "cache_total": 0.16820000000000002
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "134": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1022,
+            "cache_finish": 0.0197,
+            "workspace": 0.0055,
+            "cache_total": 0.12739999999999999
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "135": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0957,
+            "cache_finish": 0.0187,
+            "workspace": 0.0049,
+            "cache_total": 0.11929999999999999
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "136": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1154,
+            "cache_finish": 0.0261,
+            "workspace": 0.0065,
+            "cache_total": 0.148
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "137": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1074,
+            "cache_finish": 0.021,
+            "workspace": 0.0061,
+            "cache_total": 0.1345
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "138": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1055,
+            "cache_finish": 0.0219,
+            "workspace": 0.0057,
+            "cache_total": 0.1331
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "139": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0961,
+            "cache_finish": 0.0241,
+            "workspace": 0.0052,
+            "cache_total": 0.1254
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "140": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1161,
+            "cache_finish": 0.0236,
+            "workspace": 0.0073,
+            "cache_total": 0.147
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "141": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.097,
+            "cache_finish": 0.0215,
+            "workspace": 0.0054,
+            "cache_total": 0.1239
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "142": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1334,
+            "cache_finish": 0.0362,
+            "workspace": 0.0063,
+            "cache_total": 0.1759
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "143": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1547,
+            "cache_finish": 0.0288,
+            "workspace": 0.0085,
+            "cache_total": 0.192
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "144": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1142,
+            "cache_finish": 1.5936,
+            "workspace": 0.0063,
+            "cache_total": 1.7141
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "145": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1094,
+            "cache_finish": 0.0235,
+            "workspace": 0.1582,
+            "cache_total": 0.2911
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "146": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1052,
+            "cache_finish": 0.0218,
+            "workspace": 0.0059,
+            "cache_total": 0.1329
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "147": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0981,
+            "cache_finish": 0.0204,
+            "workspace": 0.005,
+            "cache_total": 0.12350000000000001
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "148": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0992,
+            "cache_finish": 0.0233,
+            "workspace": 0.0052,
+            "cache_total": 0.1277
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "149": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0968,
+            "cache_finish": 0.0195,
+            "workspace": 0.0048,
+            "cache_total": 0.1211
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "150": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0963,
+            "cache_finish": 0.0211,
+            "workspace": 0.0047,
+            "cache_total": 0.1221
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "151": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0952,
+            "cache_finish": 0.0188,
+            "workspace": 0.0049,
+            "cache_total": 0.1189
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "152": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0965,
+            "cache_finish": 0.0193,
+            "workspace": 0.0048,
+            "cache_total": 0.1206
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "153": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0918,
+            "cache_finish": 0.0218,
+            "workspace": 0.0051,
+            "cache_total": 0.1187
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "154": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0998,
+            "cache_finish": 0.0206,
+            "workspace": 0.0053,
+            "cache_total": 0.1257
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "155": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0919,
+            "cache_finish": 0.0196,
+            "workspace": 0.0053,
+            "cache_total": 0.1168
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "156": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0959,
+            "cache_finish": 0.0188,
+            "workspace": 0.0049,
+            "cache_total": 0.1196
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "157": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0955,
+            "cache_finish": 0.0195,
+            "workspace": 0.0049,
+            "cache_total": 0.1199
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "158": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0962,
+            "cache_finish": 0.0187,
+            "workspace": 0.0049,
+            "cache_total": 0.11979999999999999
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "159": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0954,
+            "cache_finish": 0.0203,
+            "workspace": 0.0047,
+            "cache_total": 0.1204
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        }
+      },
+      "windows": {
+        "reference129": {
+          "host_elapsed_ms": {
+            "cache_append": 0.1078,
+            "cache_finish": 0.0204,
+            "workspace": 0.0052,
+            "cache_total": 0.13340000000000002
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "before": {
+          "host_elapsed_ms": {
+            "cache_append": 0.12205714285714286,
+            "cache_finish": 0.024314285714285715,
+            "workspace": 0.0061285714285714285,
+            "cache_total": 0.1525
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "cooling144": {
+          "host_elapsed_ms": {
+            "cache_append": 0.1142,
+            "cache_finish": 1.5936,
+            "workspace": 0.0063,
+            "cache_total": 1.7141
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "first_cold145": {
+          "host_elapsed_ms": {
+            "cache_append": 0.1094,
+            "cache_finish": 0.0235,
+            "workspace": 0.1582,
+            "cache_total": 0.2911
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "after": {
+          "host_elapsed_ms": {
+            "cache_append": 0.0967,
+            "cache_finish": 0.02025,
+            "workspace": 0.005028571428571428,
+            "cache_total": 0.12197857142857144
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        }
+      }
+    },
+    {
+      "pair": 2,
+      "warmup": false,
+      "variant": "new100",
+      "mode": "whole_decode",
+      "decode_keep_ratio": 1.0,
+      "arm": "PhaseKV_GQA_on",
+      "decode_steps": 255,
+      "ms_per_token": 2.170156470588956,
+      "tokens_per_s": 460.7962667911273,
+      "ttft_s": 0.017151300000023184,
+      "decode_chunks": [
+        {
+          "from_decode_step": 0,
+          "to_decode_step": 128,
+          "seconds": 0.28765659999999116,
+          "tokens": 128
+        },
+        {
+          "from_decode_step": 128,
+          "to_decode_step": 255,
+          "seconds": 0.2657333000001927,
+          "tokens": 127
+        }
+      ],
+      "final_trace": {
+        "prompt_tokens": 5734,
+        "hot_tokens": 143,
+        "cold_segments": 7,
+        "physical_tokens": 5989,
+        "cold_tokens": 112
+      },
+      "final_kv_bytes": 2163392,
+      "output_sha256": "474021b7e516d1ec17fad34ffea316422143fc2c1d18727bb238742eb7c4af2a",
+      "peak_allocated_bytes": 378100224
+    },
+    {
+      "pair": 2,
+      "warmup": false,
+      "variant": "new",
+      "mode": "whole_decode",
+      "decode_keep_ratio": 0.8,
+      "arm": "PhaseKV_GQA_on",
+      "decode_steps": 255,
+      "ms_per_token": 2.2641984313725283,
+      "tokens_per_s": 441.6574034077979,
+      "ttft_s": 0.018098099999861006,
+      "decode_chunks": [
+        {
+          "from_decode_step": 0,
+          "to_decode_step": 128,
+          "seconds": 0.2814149999999245,
+          "tokens": 128
+        },
+        {
+          "from_decode_step": 128,
+          "to_decode_step": 255,
+          "seconds": 0.29595560000007026,
+          "tokens": 127
+        }
+      ],
+      "final_trace": {
+        "prompt_tokens": 5734,
+        "hot_tokens": 143,
+        "cold_segments": 7,
+        "physical_tokens": 5968,
+        "cold_tokens": 91
+      },
+      "final_kv_bytes": 2139840,
+      "output_sha256": "0f31d8a2e3034455bc44939b1f483668342c33f8fb74d257c9f0249c25447401",
+      "peak_allocated_bytes": 378100224
+    },
+    {
+      "pair": 2,
+      "warmup": false,
+      "variant": "old",
+      "mode": "whole_decode",
+      "decode_keep_ratio": 0.8,
+      "arm": "PhaseKV_GQA_on",
+      "decode_steps": 255,
+      "ms_per_token": 2.137776470588541,
+      "tokens_per_s": 467.7757538068022,
+      "ttft_s": 0.01763170000003811,
+      "decode_chunks": [
+        {
+          "from_decode_step": 0,
+          "to_decode_step": 128,
+          "seconds": 0.262610499999937,
+          "tokens": 128
+        },
+        {
+          "from_decode_step": 128,
+          "to_decode_step": 255,
+          "seconds": 0.282522500000141,
+          "tokens": 127
+        }
+      ],
+      "final_trace": {
+        "prompt_tokens": 5734,
+        "hot_tokens": 143,
+        "cold_segments": 7,
+        "physical_tokens": 5968,
+        "cold_tokens": 91
+      },
+      "final_kv_bytes": 2139840,
+      "output_sha256": "0f31d8a2e3034455bc44939b1f483668342c33f8fb74d257c9f0249c25447401",
+      "peak_allocated_bytes": 378100224
+    },
+    {
+      "pair": 2,
+      "warmup": false,
+      "variant": "old",
+      "mode": "host_timed",
+      "decode_keep_ratio": 0.8,
+      "arm": "host_timed",
+      "wall_ms": {
+        "reference129": 2.984,
+        "before": 2.0218785714285716,
+        "cooling144": 2.9784,
+        "first_cold145": 2.4383,
+        "after": 2.8771428571428572
+      },
+      "output_sha256": "0f31d8a2e3034455bc44939b1f483668342c33f8fb74d257c9f0249c25447401",
+      "cache_states": [
+        {
+          "end_step": 129,
+          "cold_segments": 0,
+          "hot_tokens": 129
+        },
+        {
+          "end_step": 143,
+          "cold_segments": 0,
+          "hot_tokens": 143
+        },
+        {
+          "end_step": 144,
+          "cold_segments": 1,
+          "hot_tokens": 128
+        },
+        {
+          "end_step": 145,
+          "cold_segments": 1,
+          "hot_tokens": 129
+        },
+        {
+          "end_step": 159,
+          "cold_segments": 1,
+          "hot_tokens": 143
+        }
+      ],
+      "steps": {
+        "129": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1406,
+            "cache_finish": 0.0302,
+            "workspace": 0.0092,
+            "cache_total": 0.18
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "130": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1422,
+            "cache_finish": 0.0297,
+            "workspace": 0.0085,
+            "cache_total": 0.1804
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "131": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1018,
+            "cache_finish": 0.0236,
+            "workspace": 0.006,
+            "cache_total": 0.1314
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "132": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1152,
+            "cache_finish": 0.0234,
+            "workspace": 0.0066,
+            "cache_total": 0.1452
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "133": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.123,
+            "cache_finish": 0.0227,
+            "workspace": 0.0065,
+            "cache_total": 0.1522
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "134": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1479,
+            "cache_finish": 0.0263,
+            "workspace": 0.0074,
+            "cache_total": 0.1816
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "135": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1019,
+            "cache_finish": 0.0223,
+            "workspace": 0.0058,
+            "cache_total": 0.13
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "136": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1029,
+            "cache_finish": 0.0236,
+            "workspace": 0.0063,
+            "cache_total": 0.1328
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "137": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0981,
+            "cache_finish": 0.0219,
+            "workspace": 0.0057,
+            "cache_total": 0.1257
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "138": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1026,
+            "cache_finish": 0.0244,
+            "workspace": 0.0055,
+            "cache_total": 0.1325
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "139": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1026,
+            "cache_finish": 0.0213,
+            "workspace": 0.009,
+            "cache_total": 0.1329
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "140": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1119,
+            "cache_finish": 0.0214,
+            "workspace": 0.0057,
+            "cache_total": 0.139
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "141": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1006,
+            "cache_finish": 0.022,
+            "workspace": 0.0058,
+            "cache_total": 0.1284
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "142": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0948,
+            "cache_finish": 0.0247,
+            "workspace": 0.0057,
+            "cache_total": 0.1252
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "143": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1074,
+            "cache_finish": 0.0222,
+            "workspace": 0.0064,
+            "cache_total": 0.136
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "144": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1224,
+            "cache_finish": 0.7076,
+            "workspace": 0.0061,
+            "cache_total": 0.8361
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "145": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0993,
+            "cache_finish": 0.0233,
+            "workspace": 0.1544,
+            "cache_total": 0.277
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "146": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.2944,
+            "cache_finish": 0.0491,
+            "workspace": 0.0137,
+            "cache_total": 0.3572
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "147": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.3338,
+            "cache_finish": 0.0461,
+            "workspace": 0.0144,
+            "cache_total": 0.3943
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "148": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1203,
+            "cache_finish": 0.0253,
+            "workspace": 0.0071,
+            "cache_total": 0.1527
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "149": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1101,
+            "cache_finish": 0.0294,
+            "workspace": 0.0066,
+            "cache_total": 0.1461
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "150": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1041,
+            "cache_finish": 0.0218,
+            "workspace": 0.0058,
+            "cache_total": 0.13169999999999998
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "151": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.103,
+            "cache_finish": 0.0322,
+            "workspace": 0.0058,
+            "cache_total": 0.141
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "152": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1099,
+            "cache_finish": 0.0327,
+            "workspace": 0.0062,
+            "cache_total": 0.1488
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "153": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1465,
+            "cache_finish": 0.031,
+            "workspace": 0.0079,
+            "cache_total": 0.18539999999999998
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "154": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1205,
+            "cache_finish": 0.0265,
+            "workspace": 0.0073,
+            "cache_total": 0.1543
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "155": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1135,
+            "cache_finish": 0.0283,
+            "workspace": 0.0068,
+            "cache_total": 0.1486
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "156": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.114,
+            "cache_finish": 0.027,
+            "workspace": 0.0062,
+            "cache_total": 0.1472
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "157": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1246,
+            "cache_finish": 0.0256,
+            "workspace": 0.0066,
+            "cache_total": 0.1568
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "158": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0991,
+            "cache_finish": 0.0214,
+            "workspace": 0.0055,
+            "cache_total": 0.126
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "159": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0997,
+            "cache_finish": 0.0261,
+            "workspace": 0.0065,
+            "cache_total": 0.1323
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        }
+      },
+      "windows": {
+        "reference129": {
+          "host_elapsed_ms": {
+            "cache_append": 0.1406,
+            "cache_finish": 0.0302,
+            "workspace": 0.0092,
+            "cache_total": 0.18
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "before": {
+          "host_elapsed_ms": {
+            "cache_append": 0.11092142857142857,
+            "cache_finish": 0.023535714285714285,
+            "workspace": 0.006492857142857143,
+            "cache_total": 0.14095
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "cooling144": {
+          "host_elapsed_ms": {
+            "cache_append": 0.1224,
+            "cache_finish": 0.7076,
+            "workspace": 0.0061,
+            "cache_total": 0.8361
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "first_cold145": {
+          "host_elapsed_ms": {
+            "cache_append": 0.0993,
+            "cache_finish": 0.0233,
+            "workspace": 0.1544,
+            "cache_total": 0.277
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "after": {
+          "host_elapsed_ms": {
+            "cache_append": 0.14239285714285715,
+            "cache_finish": 0.03017857142857143,
+            "workspace": 0.0076,
+            "cache_total": 0.18017142857142857
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        }
+      }
+    },
+    {
+      "pair": 2,
+      "warmup": false,
+      "variant": "new",
+      "mode": "host_timed",
+      "decode_keep_ratio": 0.8,
+      "arm": "host_timed",
+      "wall_ms": {
+        "reference129": 2.9916,
+        "before": 3.784885714285714,
+        "cooling144": 5.732,
+        "first_cold145": 4.2583,
+        "after": 3.540935714285714
+      },
+      "output_sha256": "0f31d8a2e3034455bc44939b1f483668342c33f8fb74d257c9f0249c25447401",
+      "cache_states": [
+        {
+          "end_step": 129,
+          "cold_segments": 0,
+          "hot_tokens": 129
+        },
+        {
+          "end_step": 143,
+          "cold_segments": 0,
+          "hot_tokens": 143
+        },
+        {
+          "end_step": 144,
+          "cold_segments": 1,
+          "hot_tokens": 128
+        },
+        {
+          "end_step": 145,
+          "cold_segments": 1,
+          "hot_tokens": 129
+        },
+        {
+          "end_step": 159,
+          "cold_segments": 1,
+          "hot_tokens": 143
+        }
+      ],
+      "steps": {
+        "129": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1012,
+            "cache_finish": 0.0542,
+            "workspace": 0.0095,
+            "cache_total": 0.1649
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "130": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1446,
+            "cache_finish": 0.0392,
+            "workspace": 0.0111,
+            "cache_total": 0.19490000000000002
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "131": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1764,
+            "cache_finish": 0.0332,
+            "workspace": 0.0077,
+            "cache_total": 0.2173
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "132": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1821,
+            "cache_finish": 0.0279,
+            "workspace": 0.0234,
+            "cache_total": 0.23340000000000002
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "133": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1233,
+            "cache_finish": 0.0344,
+            "workspace": 0.0063,
+            "cache_total": 0.164
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "134": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.2228,
+            "cache_finish": 0.0348,
+            "workspace": 0.0095,
+            "cache_total": 0.2671
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "135": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.2174,
+            "cache_finish": 0.0307,
+            "workspace": 0.0096,
+            "cache_total": 0.2577
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "136": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1359,
+            "cache_finish": 0.0358,
+            "workspace": 0.0085,
+            "cache_total": 0.1802
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "137": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.162,
+            "cache_finish": 0.0213,
+            "workspace": 0.0072,
+            "cache_total": 0.1905
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "138": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0972,
+            "cache_finish": 0.0196,
+            "workspace": 0.0048,
+            "cache_total": 0.1216
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "139": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1299,
+            "cache_finish": 0.0201,
+            "workspace": 0.0052,
+            "cache_total": 0.15519999999999998
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "140": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1319,
+            "cache_finish": 0.0261,
+            "workspace": 0.0069,
+            "cache_total": 0.1649
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "141": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.2384,
+            "cache_finish": 0.0467,
+            "workspace": 0.0112,
+            "cache_total": 0.2963
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "142": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.3391,
+            "cache_finish": 0.0348,
+            "workspace": 0.0129,
+            "cache_total": 0.38680000000000003
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "143": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1818,
+            "cache_finish": 0.0523,
+            "workspace": 0.0077,
+            "cache_total": 0.2418
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "144": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.2357,
+            "cache_finish": 0.9191,
+            "workspace": 0.0097,
+            "cache_total": 1.1645
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 15.625,
+            "workspace": 0.0,
+            "cache_total": 15.625
+          }
+        },
+        "145": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.2026,
+            "cache_finish": 0.0284,
+            "workspace": 0.1836,
+            "cache_total": 0.4146
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "146": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.2064,
+            "cache_finish": 0.0574,
+            "workspace": 0.0087,
+            "cache_total": 0.2725
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "147": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1211,
+            "cache_finish": 0.0246,
+            "workspace": 0.0074,
+            "cache_total": 0.1531
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "148": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.18,
+            "cache_finish": 0.0306,
+            "workspace": 0.0074,
+            "cache_total": 0.218
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "149": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1584,
+            "cache_finish": 0.0231,
+            "workspace": 0.0067,
+            "cache_total": 0.1882
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "150": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.2712,
+            "cache_finish": 0.0276,
+            "workspace": 0.0099,
+            "cache_total": 0.3087
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "151": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1437,
+            "cache_finish": 0.034,
+            "workspace": 0.0074,
+            "cache_total": 0.1851
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "152": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.2357,
+            "cache_finish": 0.0275,
+            "workspace": 0.0106,
+            "cache_total": 0.2738
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "153": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.188,
+            "cache_finish": 0.0261,
+            "workspace": 0.0081,
+            "cache_total": 0.2222
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "154": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1895,
+            "cache_finish": 0.031,
+            "workspace": 0.0074,
+            "cache_total": 0.2279
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "155": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1211,
+            "cache_finish": 0.0225,
+            "workspace": 0.0059,
+            "cache_total": 0.1495
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "156": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1035,
+            "cache_finish": 0.0285,
+            "workspace": 0.0054,
+            "cache_total": 0.1374
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "157": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1209,
+            "cache_finish": 0.0234,
+            "workspace": 0.006,
+            "cache_total": 0.1503
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "158": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1628,
+            "cache_finish": 0.0344,
+            "workspace": 0.0076,
+            "cache_total": 0.2048
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "159": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.2601,
+            "cache_finish": 0.0407,
+            "workspace": 0.0111,
+            "cache_total": 0.3119
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        }
+      },
+      "windows": {
+        "reference129": {
+          "host_elapsed_ms": {
+            "cache_append": 0.1012,
+            "cache_finish": 0.0542,
+            "workspace": 0.0095,
+            "cache_total": 0.1649
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "before": {
+          "host_elapsed_ms": {
+            "cache_append": 0.17734285714285714,
+            "cache_finish": 0.03263571428571428,
+            "workspace": 0.009428571428571429,
+            "cache_total": 0.21940714285714286
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "cooling144": {
+          "host_elapsed_ms": {
+            "cache_append": 0.2357,
+            "cache_finish": 0.9191,
+            "workspace": 0.0097,
+            "cache_total": 1.1645
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 15.625,
+            "workspace": 0.0,
+            "cache_total": 15.625
+          }
+        },
+        "first_cold145": {
+          "host_elapsed_ms": {
+            "cache_append": 0.2026,
+            "cache_finish": 0.0284,
+            "workspace": 0.1836,
+            "cache_total": 0.4146
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "after": {
+          "host_elapsed_ms": {
+            "cache_append": 0.17588571428571428,
+            "cache_finish": 0.030814285714285714,
+            "workspace": 0.00782857142857143,
+            "cache_total": 0.21452857142857143
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        }
+      }
+    },
+    {
+      "pair": 2,
+      "warmup": false,
+      "variant": "new100",
+      "mode": "host_timed",
+      "decode_keep_ratio": 1.0,
+      "arm": "host_timed",
+      "wall_ms": {
+        "reference129": 2.4975,
+        "before": 2.4482642857142856,
+        "cooling144": 2.4249,
+        "first_cold145": 2.2777,
+        "after": 2.55105
+      },
+      "output_sha256": "474021b7e516d1ec17fad34ffea316422143fc2c1d18727bb238742eb7c4af2a",
+      "cache_states": [
+        {
+          "end_step": 129,
+          "cold_segments": 0,
+          "hot_tokens": 129
+        },
+        {
+          "end_step": 143,
+          "cold_segments": 0,
+          "hot_tokens": 143
+        },
+        {
+          "end_step": 144,
+          "cold_segments": 1,
+          "hot_tokens": 128
+        },
+        {
+          "end_step": 145,
+          "cold_segments": 1,
+          "hot_tokens": 129
+        },
+        {
+          "end_step": 159,
+          "cold_segments": 1,
+          "hot_tokens": 143
+        }
+      ],
+      "steps": {
+        "129": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1053,
+            "cache_finish": 0.0206,
+            "workspace": 0.0059,
+            "cache_total": 0.1318
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "130": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.098,
+            "cache_finish": 0.02,
+            "workspace": 0.0049,
+            "cache_total": 0.12290000000000001
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "131": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1005,
+            "cache_finish": 0.0201,
+            "workspace": 0.0054,
+            "cache_total": 0.126
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "132": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1021,
+            "cache_finish": 0.0191,
+            "workspace": 0.0052,
+            "cache_total": 0.12639999999999998
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "133": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1051,
+            "cache_finish": 0.0229,
+            "workspace": 0.0054,
+            "cache_total": 0.1334
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "134": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1026,
+            "cache_finish": 0.0187,
+            "workspace": 0.005,
+            "cache_total": 0.1263
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "135": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0963,
+            "cache_finish": 0.0184,
+            "workspace": 0.0055,
+            "cache_total": 0.1202
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "136": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1178,
+            "cache_finish": 0.0253,
+            "workspace": 0.0056,
+            "cache_total": 0.1487
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "137": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.2087,
+            "cache_finish": 0.0226,
+            "workspace": 0.0098,
+            "cache_total": 0.24109999999999998
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "138": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.3093,
+            "cache_finish": 0.028,
+            "workspace": 0.0068,
+            "cache_total": 0.3441
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "139": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1172,
+            "cache_finish": 0.0274,
+            "workspace": 0.0051,
+            "cache_total": 0.1497
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "140": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1514,
+            "cache_finish": 0.0195,
+            "workspace": 0.007,
+            "cache_total": 0.1779
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "141": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1059,
+            "cache_finish": 0.0213,
+            "workspace": 0.0054,
+            "cache_total": 0.1326
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "142": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1179,
+            "cache_finish": 0.0209,
+            "workspace": 0.0057,
+            "cache_total": 0.14450000000000002
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "143": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0959,
+            "cache_finish": 0.0172,
+            "workspace": 0.0047,
+            "cache_total": 0.1178
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "144": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1069,
+            "cache_finish": 0.3032,
+            "workspace": 0.0084,
+            "cache_total": 0.41850000000000004
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "145": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0963,
+            "cache_finish": 0.0183,
+            "workspace": 0.118,
+            "cache_total": 0.2326
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "146": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1608,
+            "cache_finish": 0.0195,
+            "workspace": 0.0048,
+            "cache_total": 0.1851
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "147": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0958,
+            "cache_finish": 0.0183,
+            "workspace": 0.005,
+            "cache_total": 0.1191
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "148": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1288,
+            "cache_finish": 0.033,
+            "workspace": 0.006,
+            "cache_total": 0.1678
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "149": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1739,
+            "cache_finish": 0.0221,
+            "workspace": 0.007,
+            "cache_total": 0.203
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "150": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.2394,
+            "cache_finish": 0.0337,
+            "workspace": 0.0071,
+            "cache_total": 0.2802
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "151": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.205,
+            "cache_finish": 0.0284,
+            "workspace": 0.0086,
+            "cache_total": 0.242
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "152": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1959,
+            "cache_finish": 0.024,
+            "workspace": 0.007,
+            "cache_total": 0.2269
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "153": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0968,
+            "cache_finish": 0.0192,
+            "workspace": 0.0051,
+            "cache_total": 0.1211
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "154": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1055,
+            "cache_finish": 0.0187,
+            "workspace": 0.0049,
+            "cache_total": 0.1291
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "155": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.095,
+            "cache_finish": 0.0177,
+            "workspace": 0.0045,
+            "cache_total": 0.1172
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "156": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0979,
+            "cache_finish": 0.0185,
+            "workspace": 0.0045,
+            "cache_total": 0.1209
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "157": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.1002,
+            "cache_finish": 0.0186,
+            "workspace": 0.0052,
+            "cache_total": 0.124
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "158": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0955,
+            "cache_finish": 0.0175,
+            "workspace": 0.0049,
+            "cache_total": 0.1179
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "159": {
+          "counts": {
+            "cache_append": 2,
+            "cache_finish": 1,
+            "workspace": 2
+          },
+          "host_elapsed_ms": {
+            "cache_append": 0.0994,
+            "cache_finish": 0.0191,
+            "workspace": 0.0049,
+            "cache_total": 0.1234
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        }
+      },
+      "windows": {
+        "reference129": {
+          "host_elapsed_ms": {
+            "cache_append": 0.1053,
+            "cache_finish": 0.0206,
+            "workspace": 0.0059,
+            "cache_total": 0.1318
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "before": {
+          "host_elapsed_ms": {
+            "cache_append": 0.13062142857142858,
+            "cache_finish": 0.021528571428571428,
+            "workspace": 0.005821428571428571,
+            "cache_total": 0.15797142857142857
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "cooling144": {
+          "host_elapsed_ms": {
+            "cache_append": 0.1069,
+            "cache_finish": 0.3032,
+            "workspace": 0.0084,
+            "cache_total": 0.41850000000000004
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "first_cold145": {
+          "host_elapsed_ms": {
+            "cache_append": 0.0963,
+            "cache_finish": 0.0183,
+            "workspace": 0.118,
+            "cache_total": 0.2326
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        },
+        "after": {
+          "host_elapsed_ms": {
+            "cache_append": 0.13499285714285714,
+            "cache_finish": 0.02202142857142857,
+            "workspace": 0.005678571428571429,
+            "cache_total": 0.16269285714285714
+          },
+          "thread_cpu_ms": {
+            "cache_append": 0.0,
+            "cache_finish": 0.0,
+            "workspace": 0.0,
+            "cache_total": 0.0
+          }
+        }
+      }
+    }
+  ],
+  "paired_comparisons": {
+    "new80_minus_old80": [
+      {
+        "decode_ms_per_token": 0.019153333334329226,
+        "throughput_pct": -0.8815102322314972,
+        "peak_allocated_bytes": 0,
+        "final_kv_bytes": 0,
+        "cache_finish_host_elapsed_ms": -1.0986357142857142,
+        "cache_finish_thread_cpu_ms": 0.0,
+        "workspace_host_elapsed_ms": -0.0413,
+        "workspace_thread_cpu_ms": 0.0
+      },
+      {
+        "decode_ms_per_token": 0.12642196078398715,
+        "throughput_pct": -5.583519493357814,
+        "peak_allocated_bytes": 0,
+        "final_kv_bytes": 0,
+        "cache_finish_host_elapsed_ms": 0.20240000000000002,
+        "cache_finish_thread_cpu_ms": 15.625,
+        "workspace_host_elapsed_ms": 0.02890000000000001,
+        "workspace_thread_cpu_ms": 0.0
+      }
+    ],
+    "new80_minus_new100": [
+      {
+        "decode_ms_per_token": -0.05376000000051473,
+        "throughput_pct": 2.4742424338368707,
+        "peak_allocated_bytes": 0,
+        "final_kv_bytes": -23552,
+        "cache_finish_host_elapsed_ms": 0.12107142857142861,
+        "cache_finish_thread_cpu_ms": 0.0,
+        "workspace_host_elapsed_ms": -0.010400000000000006,
+        "workspace_thread_cpu_ms": 0.0
+      },
+      {
+        "decode_ms_per_token": 0.09404196078357208,
+        "throughput_pct": -4.15343282110504,
+        "peak_allocated_bytes": 0,
+        "final_kv_bytes": -23552,
+        "cache_finish_host_elapsed_ms": 0.6047928571428571,
+        "cache_finish_thread_cpu_ms": 15.625,
+        "workspace_host_elapsed_ms": 0.06200000000000001,
+        "workspace_thread_cpu_ms": 0.0
+      }
+    ]
+  },
+  "median_comparisons": {
+    "new80_minus_old80": {
+      "decode_ms_per_token": 0.07278764705915819,
+      "throughput_pct": -3.2325148627946554,
+      "peak_allocated_bytes": 0.0,
+      "final_kv_bytes": 0.0,
+      "cache_finish_host_elapsed_ms": -0.44811785714285707,
+      "cache_finish_thread_cpu_ms": 7.8125,
+      "workspace_host_elapsed_ms": -0.006199999999999997,
+      "workspace_thread_cpu_ms": 0.0
+    },
+    "new80_minus_new100": {
+      "decode_ms_per_token": 0.020140980391528673,
+      "throughput_pct": -0.8395951936340849,
+      "peak_allocated_bytes": 0.0,
+      "final_kv_bytes": -23552.0,
+      "cache_finish_host_elapsed_ms": 0.36293214285714287,
+      "cache_finish_thread_cpu_ms": 7.8125,
+      "workspace_host_elapsed_ms": 0.025800000000000003,
+      "workspace_thread_cpu_ms": 0.0
+    }
+  },
+  "paired_new_minus_old": [
+    {
+      "decode_ms_per_token": 0.019153333334329226,
+      "throughput_pct": -0.8815102322314972,
+      "peak_allocated_bytes": 0,
+      "final_kv_bytes": 0,
+      "cache_finish_host_elapsed_ms": -1.0986357142857142,
+      "cache_finish_thread_cpu_ms": 0.0,
+      "workspace_host_elapsed_ms": -0.0413,
+      "workspace_thread_cpu_ms": 0.0
+    },
+    {
+      "decode_ms_per_token": 0.12642196078398715,
+      "throughput_pct": -5.583519493357814,
+      "peak_allocated_bytes": 0,
+      "final_kv_bytes": 0,
+      "cache_finish_host_elapsed_ms": 0.20240000000000002,
+      "cache_finish_thread_cpu_ms": 15.625,
+      "workspace_host_elapsed_ms": 0.02890000000000001,
+      "workspace_thread_cpu_ms": 0.0
+    }
+  ],
+  "median_new_minus_old": {
+    "decode_ms_per_token": 0.07278764705915819,
+    "throughput_pct": -3.2325148627946554,
+    "peak_allocated_bytes": 0.0,
+    "final_kv_bytes": 0.0,
+    "cache_finish_host_elapsed_ms": -0.44811785714285707,
+    "cache_finish_thread_cpu_ms": 7.8125,
+    "workspace_host_elapsed_ms": -0.006199999999999997,
+    "workspace_thread_cpu_ms": 0.0
+  }
+}

@@ -1,0 +1,53 @@
+OK model-00001-of-00004.safetensors: 4.977 GB
+OK model-00002-of-00004.safetensors: 5.000 GB
+OK model-00003-of-00004.safetensors: 4.916 GB
+OK model-00004-of-00004.safetensors: 1.168 GB
+Checkpoint structure/length checks passed (not a cryptographic authenticity check).
+GPU-36667aa2-b1df-c859-f3dd-0848e1cd2efd, NVIDIA GeForce RTX 4090, 580.76.05 | performance/8192+256/0 | loading full Llama-3.1-8B once | results /data/phasekv-results/4090_full_vs_phasekv_li8K4ePQ
+You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:08<00:24,  8.16s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:17<00:18,  9.06s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:27<00:09,  9.37s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:29<00:00,  6.59s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:29<00:00,  7.48s/it]
+[full_fa2/performance/8192+256/0] 129/256 tokens
+[full_fa2/performance/8192+256/0] 256/256 tokens
+WARMUP Full_FA2: 43.699 token/s, 22.8836 ms/token
+[phasekv_triton/performance/8192+256/0] 129/256 tokens
+[phasekv_triton/performance/8192+256/0] 256/256 tokens
+WARMUP PhaseKV_80: 40.716 token/s, 24.5602 ms/token
+[phasekv_triton/performance/8192+256/0] 129/256 tokens
+[phasekv_triton/performance/8192+256/0] 256/256 tokens
+WARMUP PhaseKV_100: 46.272 token/s, 21.6111 ms/token
+[full_fa2/performance/8192+256/0] 129/256 tokens
+[full_fa2/performance/8192+256/0] 256/256 tokens
+ROUND 1/3 Full_FA2: 45.077 token/s, 22.1845 ms/token
+[phasekv_triton/performance/8192+256/0] 129/256 tokens
+[phasekv_triton/performance/8192+256/0] 256/256 tokens
+ROUND 1/3 PhaseKV_80: 46.988 token/s, 21.2818 ms/token
+[phasekv_triton/performance/8192+256/0] 129/256 tokens
+[phasekv_triton/performance/8192+256/0] 256/256 tokens
+ROUND 1/3 PhaseKV_100: 46.972 token/s, 21.2892 ms/token
+PAIRED 1/3 PhaseKV_80 vs Full_FA2: +4.241% throughput, -0.9027 ms/token
+PAIRED 1/3 PhaseKV_100 vs Full_FA2: +4.206% throughput, -0.8953 ms/token
+[phasekv_triton/performance/8192+256/0] 129/256 tokens
+[phasekv_triton/performance/8192+256/0] 256/256 tokens
+ROUND 2/3 PhaseKV_80: 46.973 token/s, 21.2889 ms/token
+[phasekv_triton/performance/8192+256/0] 129/256 tokens
+[phasekv_triton/performance/8192+256/0] 256/256 tokens
+ROUND 2/3 PhaseKV_100: 46.706 token/s, 21.4104 ms/token
+[full_fa2/performance/8192+256/0] 129/256 tokens
+[full_fa2/performance/8192+256/0] 256/256 tokens
+ROUND 2/3 Full_FA2: 44.794 token/s, 22.3244 ms/token
+PAIRED 2/3 PhaseKV_80 vs Full_FA2: +4.864% throughput, -1.0354 ms/token
+PAIRED 2/3 PhaseKV_100 vs Full_FA2: +4.269% throughput, -0.9140 ms/token
+[phasekv_triton/performance/8192+256/0] 129/256 tokens
+[phasekv_triton/performance/8192+256/0] 256/256 tokens
+ROUND 3/3 PhaseKV_100: 46.733 token/s, 21.3984 ms/token
+[full_fa2/performance/8192+256/0] 129/256 tokens
+[full_fa2/performance/8192+256/0] 256/256 tokens
+ROUND 3/3 Full_FA2: 44.531 token/s, 22.4563 ms/token
+[phasekv_triton/performance/8192+256/0] 129/256 tokens
+[phasekv_triton/performance/8192+256/0] 256/256 tokens
+ROUND 3/3 PhaseKV_80: 45.418 token/s, 22.0176 ms/token
+PAIRED 3/3 PhaseKV_80 vs Full_FA2: +1.992% throughput, -0.4387 ms/token
+PAIRED 3/3 PhaseKV_100 vs Full_FA2: +4.944% throughput, -1.0579 ms/token
+RESULT PhaseKV_80 vs Full_FA2: +4.241% throughput, -0.9027 ms/token, faster 3/3
+RESULT PhaseKV_100 vs Full_FA2: +4.269% throughput, -0.9140 ms/token, faster 3/3
+FINISHED /data/phasekv-results/4090_full_vs_phasekv_li8K4ePQ/summary.json

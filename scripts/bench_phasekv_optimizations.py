@@ -66,7 +66,7 @@ def measure(call, iterations=1):
             "temporary_peak_bytes": max(0, torch.cuda.max_memory_allocated() - allocated)}
 
 
-def cache_factory(inputs, config, frozen=False):
+def cache_factory(inputs, config, frozen=False, *, decode_keep_ratio=1.0):
     import torch
     from transformers.cache_utils import DynamicCache
     from PhaseKV import phasekv_cache as current
@@ -81,8 +81,9 @@ def cache_factory(inputs, config, frozen=False):
                          torch.arange(original - 32, original, device=k.device)))
     indices = indices.view(1, 1, -1).expand(1, k.shape[1], -1)
     options = {} if frozen else {"optimizations": config}
+    packing = dict(support.TARGET, decode_keep_ratio=decode_keep_ratio)
     cache = module.PhaseKVCache.from_dense_prefill(dense, prompt_len=original,
-        keep_indices=[indices], **support.TARGET, **options)
+        keep_indices=[indices], **packing, **options)
     layer = cache.layers[0]
     for ck, cv in cold:
         kwargs = {} if frozen else {"fast": config["fused_quantize"], "pool": layer.cold_pool,
@@ -99,13 +100,13 @@ def cache_factory(inputs, config, frozen=False):
     return cache
 
 
-def inputs_for(prompt, count, hot, heads, kvheads, seed, device):
+def inputs_for(prompt, count, hot, heads, kvheads, seed, device, *, cold_length=16):
     import torch
     generator = torch.Generator(device=device).manual_seed(seed)
     def random(length, dtype=torch.float16):
         return torch.randn(1, kvheads, length, 128, device=device, dtype=dtype, generator=generator)
     return (random(prompt, torch.bfloat16), random(prompt, torch.bfloat16),
-            [(random(16), random(16)) for _ in range(count)], random(hot), random(hot),
+            [(random(cold_length), random(cold_length)) for _ in range(count)], random(hot), random(hot),
             torch.randn(heads, 128, device=device, dtype=torch.float16, generator=generator), prompt)
 
 

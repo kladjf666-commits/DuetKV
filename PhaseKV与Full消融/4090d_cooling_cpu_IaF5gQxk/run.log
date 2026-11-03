@@ -1,0 +1,28 @@
+OK model-00001-of-00004.safetensors: 4.977 GB
+OK model-00002-of-00004.safetensors: 5.000 GB
+OK model-00003-of-00004.safetensors: 4.916 GB
+OK model-00004-of-00004.safetensors: 1.168 GB
+Checkpoint structure/length checks passed (not a cryptographic authenticity check).
+GPU-5d2edea4-cb83-cc0b-8b0b-f8574a7687a9, NVIDIA GeForce RTX 4090 D, 575.64.05 | frozen 8192+256 | loading all 32 Llama layers once
+Host timing only. No activity profiler. Pairs: 4
+You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:19<00:59, 19.76s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:40<00:40, 20.23s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [01:00<00:20, 20.18s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:04<00:00, 13.64s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:04<00:00, 16.02s/it]
+MODEL_READY
+WARMUP plain: original-output parity passed.
+WARMUP host_timed: original-output parity passed.
+PAIR 1/4: plain 25.705, host-timed 25.938 ms/token; paired delta +0.233 ms (+0.91%)
+PAIR 2/4: plain 25.739, host-timed 25.888 ms/token; paired delta +0.149 ms (+0.58%)
+PAIR 3/4: plain 25.769, host-timed 25.917 ms/token; paired delta +0.148 ms (+0.57%)
+PAIR 4/4: plain 25.614, host-timed 25.925 ms/token; paired delta +0.312 ms (+1.22%)
+PERTURBATION_CHECK within_budget
+host_elapsed_ms reference129 cache_append=1.7567 cache_finish=0.0686 workspace=0.1112 cache_total=1.9374
+host_elapsed_ms before cache_append=1.7448 cache_finish=0.0642 workspace=0.1115 cache_total=1.9213
+host_elapsed_ms cooling144 cache_append=1.7497 cache_finish=11.4779 workspace=0.1127 cache_total=13.3402
+host_elapsed_ms first_cold145 cache_append=1.7541 cache_finish=0.0720 workspace=2.4491 cache_total=4.2751
+host_elapsed_ms after cache_append=1.7430 cache_finish=0.0711 workspace=0.1117 cache_total=1.9260
+thread_cpu_ms reference129 cache_append=1.6977 cache_finish=0.0673 workspace=0.0860 cache_total=1.8519
+thread_cpu_ms before cache_append=1.6889 cache_finish=0.0627 workspace=0.0860 cache_total=1.8387
+thread_cpu_ms cooling144 cache_append=1.6945 cache_finish=11.4751 workspace=0.0867 cache_total=13.2563
+thread_cpu_ms first_cold145 cache_append=1.6989 cache_finish=0.0706 workspace=2.3748 cache_total=4.1514
+thread_cpu_ms after cache_append=1.6875 cache_finish=0.0690 workspace=0.0864 cache_total=1.8436
+FINISHED /data/phasekv-results/4090d_cooling_cpu_IaF5gQxk/cpu_summary.json
