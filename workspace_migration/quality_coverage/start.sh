@@ -32,6 +32,10 @@ if [[ -f "$here/quality_scan.py" ]]; then
     label=4090_prompt_quality_scan
     entry=quality_scan.py
 fi
+if [[ -f "$here/future_oracle.py" ]]; then
+    label=4090_future70_v1
+    entry=future_oracle.py
+fi
 out=${PHASEKV_OUT:-$volume/phasekv-results/$label}
 mkdir -p "$out"
 echo "Log and results: $out"
