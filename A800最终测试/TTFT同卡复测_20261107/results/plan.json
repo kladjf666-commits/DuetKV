@@ -1,0 +1,121 @@
+{
+  "package_manifest": "ea465877b64106b00c7700d41c2374b8ff1bf895419c07c017c4e7fc72dc30d8",
+  "profile": {
+    "id": "J_p90_w128_o32",
+    "prefill_keep_ratio": 0.9,
+    "decode_keep_ratio": 0.8,
+    "prompt_bits": 4,
+    "cold_bits": 4,
+    "recent_window": 128,
+    "obs_window": 32
+  },
+  "cases": [
+    [
+      8192,
+      256,
+      1
+    ],
+    [
+      32768,
+      256,
+      8
+    ]
+  ],
+  "rounds": 3,
+  "warmup": 1,
+  "source_config": {
+    "manifest": "9273fa97c5b8717d99178e3d2bc04d9abae0edadafed8f6a08f7b59e24629fdf",
+    "bench_manifest": "180f71ceff70ed6a046bd8ae7ad1f521181c8160d81d5d455194b04dfa539ef2",
+    "old_out": "/data/phasekv-results/a800_four_gpu_v1",
+    "kit": "/data/a800_four_gpu_v1",
+    "out": "/data/phasekv-results/a800_quality_fulltext_v1",
+    "bench": "/data/phasekv_a800_4gpu_v1",
+    "model": "/data/Llama-3.1-8B-Instruct/snapshots/master",
+    "envs": "/data/phasekv_a800_s1/.envs-offline",
+    "weights": {
+      "model-00001-of-00004.safetensors": [
+        4976698672,
+        1793179960000000000
+      ],
+      "model-00002-of-00004.safetensors": [
+        4999802720,
+        1793179965000000000
+      ],
+      "model-00003-of-00004.safetensors": [
+        4915916176,
+        1793179935000000000
+      ],
+      "model-00004-of-00004.safetensors": [
+        1168138808,
+        1793177756000000000
+      ]
+    },
+    "threads": 4,
+    "gpus": {
+      "0": "GPU-a27c1696-6220-782b-cd7e-3e233c3097a2",
+      "1": "GPU-2347a980-636a-b41a-6f67-544c3bcce0ae",
+      "2": "GPU-3d68f21e-bb96-d4f6-f517-dd7465632716",
+      "3": "GPU-894fe36c-c838-d2cb-263d-f64c0813b14c"
+    },
+    "speed_batches": [
+      1,
+      2,
+      4,
+      8
+    ],
+    "speed_shapes": [
+      "8192+256",
+      "8192+2048",
+      "32768+256",
+      "32768+2048"
+    ],
+    "quality_batch": 1
+  },
+  "source_protocol": {
+    "phasekv": "A800 SM80 MMA; quality95/speed100; four_gpu_v1",
+    "manifest": "180f71ceff70ed6a046bd8ae7ad1f521181c8160d81d5d455194b04dfa539ef2",
+    "gpu": {
+      "gpu": "NVIDIA A800-SXM4-80GB",
+      "uuid": "2347a980-636a-b41a-6f67-544c3bcce0ae",
+      "capacity": 85094825984
+    },
+    "weights": {
+      "model-00001-of-00004.safetensors": [
+        4976698672,
+        1793179960000000000
+      ],
+      "model-00002-of-00004.safetensors": [
+        4999802720,
+        1793179965000000000
+      ],
+      "model-00003-of-00004.safetensors": [
+        4915916176,
+        1793179935000000000
+      ],
+      "model-00004-of-00004.safetensors": [
+        1168138808,
+        1793177756000000000
+      ]
+    },
+    "model": "/data/Llama-3.1-8B-Instruct/snapshots/master",
+    "method": "phasekv",
+    "torch": "2.5.1+cu121",
+    "transformers": "4.46.3",
+    "flash": "2.7.4.post1",
+    "triton": "3.1.0",
+    "python": "3.10.16",
+    "speed_prompt_pct": 100,
+    "quality_prompt_pct": 95,
+    "execution": "four independent single-GPU workers",
+    "omp_threads": "4",
+    "kivi_fp16_reduced_precision_reduction": null
+  },
+  "quality": [],
+  "speed_bank_digest": "8ead04250f5a2ae25c2f765d09b515d61b16f041d908a03b2d272ee6bf8c0382",
+  "mode": "same_gpu_paired_ttft_two_cases",
+  "diagnostics": "one separate prefill-only pair per case",
+  "timing": "Unmodified native run with plain in-memory progress; no checkpoint I/O or instrumentation in formal timing",
+  "pairing": "Commit both arms atomically; resume recomputes an interrupted uncommitted pair",
+  "allocator": "Both arms retain the original release/empty_cache behavior between invocations",
+  "experiment": "a54b85737904856214b743e2ebef24f3e9c78b8b5e14f937b10964cd0b75713f"
+}

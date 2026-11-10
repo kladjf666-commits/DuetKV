@@ -1,0 +1,56 @@
+{
+  "id": "longbench_full/2wikimqa/a3c88e70534d79b432d32c0b53d0d181c957b353f658dc95",
+  "suite": "longbench",
+  "task": "2wikimqa",
+  "input_sha256": "d332819d2bce59925aa3a03fca3dd94afc7a07fd7fe6d220605315222d833bdf",
+  "input_tokens": 7514,
+  "max_new_tokens": 32,
+  "truncated_input": false,
+  "original_id": "a3c88e70534d79b432d32c0b53d0d181c957b353f658dc95",
+  "evaluation_split": "heldout",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "3d68f21e-bb96-d4f6-f517-dd7465632716",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 2,
+  "decode_steps": 1,
+  "decoded_tokens": 1,
+  "decode_s": 0.028708837926387787,
+  "aggregate_tokens_per_s": 34.832479202540206,
+  "per_sequence_tokens_per_s": 34.832479202540206,
+  "ttft_s": 2.1165285296738148,
+  "prefill_peak_bytes": 31940895744,
+  "decode_peak_bytes": 17160728064,
+  "peak_allocated_bytes": 31940895744,
+  "effective_options": {
+    "max_capacity_prompt": 2048,
+    "window_size": 8,
+    "kernel_size": 7,
+    "pooling": "maxpool",
+    "decoding_window_size": 512,
+    "decoding_recent_size": 256,
+    "decoding_metric": "None",
+    "delta": 1
+  },
+  "mode": "prefill_only_short_output_boundary",
+  "trace": {
+    "physical_tokens": 2049,
+    "stored_heads": 32
+  },
+  "final_kv_bytes": 1074266112,
+  "status": "ok",
+  "output_ids": [
+    33179,
+    128009
+  ],
+  "prediction": "German",
+  "answers": [
+    "Sweden"
+  ],
+  "score": 0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 2.1504082679748535
+}

@@ -1,0 +1,65 @@
+{
+  "id": "longbench_full/qasper/e7860b94e9aedb1f9b1e5a8839cb1424486c3f2dd69ee124",
+  "suite": "longbench",
+  "task": "qasper",
+  "input_sha256": "46b2057b27d18aafe4818df60d99055c35b0b509baaf9f2738d41d5d0c3cf54e",
+  "input_tokens": 4983,
+  "max_new_tokens": 128,
+  "truncated_input": false,
+  "original_id": "e7860b94e9aedb1f9b1e5a8839cb1424486c3f2dd69ee124",
+  "evaluation_split": "heldout",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "894fe36c-c838-d2cb-263d-f64c0813b14c",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 14,
+  "decode_steps": 13,
+  "decoded_tokens": 13,
+  "decode_s": 0.30059581995010376,
+  "aggregate_tokens_per_s": 43.24744103945918,
+  "per_sequence_tokens_per_s": 43.24744103945918,
+  "ttft_s": 0.4292844785377383,
+  "prefill_peak_bytes": 17738067456,
+  "decode_peak_bytes": 17167102464,
+  "peak_allocated_bytes": 17738067456,
+  "effective_options": {
+    "max_capacity_prompt": 2048,
+    "window_size": 32,
+    "kernel_size": 7,
+    "pooling": "maxpool"
+  },
+  "mode": "native",
+  "trace": {
+    "physical_tokens": 2061,
+    "stored_heads": 32
+  },
+  "final_kv_bytes": 1080557568,
+  "status": "ok",
+  "output_ids": [
+    791,
+    220,
+    679,
+    15,
+    602,
+    17,
+    65,
+    17,
+    14,
+    13114,
+    14830,
+    8554,
+    13,
+    128009
+  ],
+  "prediction": "The 2010 i2b2/VA clinical notes.",
+  "answers": [
+    "clinical notes from the CE task in 2010 i2b2/VA",
+    "clinical notes from the CE task in 2010 i2b2/VA "
+  ],
+  "score": 66.66666666666666,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 0.7348551750183105
+}

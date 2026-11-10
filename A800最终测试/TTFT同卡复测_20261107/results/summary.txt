@@ -1,0 +1,34 @@
+A800 TTFT paired retest: same GPU, same loaded model
+FORMAL: plain in-memory progress; no phase instrumentation or status/checkpoint writes in timed regions.
+Two cases; 3 A/B pairs each; 1 warmup per arm/case on each unfinished-session visit.
+Allocator release/empty_cache policy remains identical for both arms.
+
+8192+256_B1 : 3/3 formal pairs
+  baseline: TTFT=1.025087s [1.019845, 1.034055], decode=43.5702 tok/s; E2E=37.2501; peak=16.8212 GiB
+  optimized: TTFT=1.019907s [1.018778, 1.020308], decode=43.7594 tok/s; E2E=37.3874; peak=16.1681 GiB
+  median paired TTFT change=-0.47% (negative is faster)
+  SEPARATE DIAGNOSTIC CUDA-stream spans (ms), baseline -> optimized:
+    prefix_forward: 930.771 -> 960.198
+    observation_and_selection: 53.423 -> 59.081
+    selection: 14.722 -> 15.045
+    flatten: 0.003 -> 0.004
+    packing: 37.050 -> 39.768
+    first_token: 0.058 -> 0.060
+32768+256_B8 : 3/3 formal pairs
+  baseline: TTFT=48.427829s [47.661230, 48.647414], decode=81.9769 tok/s; E2E=27.9354; peak=73.5107 GiB
+  optimized: TTFT=48.222373s [48.057574, 48.456967], decode=81.9879 tok/s; E2E=28.0155; peak=53.4131 GiB
+  median paired TTFT change=+0.06% (negative is faster)
+  SEPARATE DIAGNOSTIC CUDA-stream spans (ms), baseline -> optimized:
+    prefix_forward: 46039.624 -> 45951.950
+    observation_and_selection: 1150.551 -> 864.280
+    selection: 106.871 -> 105.768
+    flatten: 0.003 -> 0.003
+    packing: 852.110 -> 851.802
+    first_token: 0.060 -> 0.059
+
+DIAGNOSTICS: one extra prefill-only pass per arm/case; excluded from formal medians and peaks.
+Selection is INCLUDED in observation_and_selection; do not add it twice.
+CUDA-stream spans can include CPU launch gaps; they are not pure summed kernel execution times.
+Checkpoint/status I/O durations and before/after GPU/host snapshots are collected outside timing.
+Process sessions: 1. Each committed pair always uses one process; a resumed campaign may span sessions.
+COMPLETE

@@ -1,0 +1,59 @@
+{
+  "id": "longbench_full/narrativeqa/d844057a13c2cc7018e8328dfe10767938b3e28689e359ff",
+  "suite": "longbench",
+  "task": "narrativeqa",
+  "input_sha256": "d7c392dc71f3a094491fcec749c874812594e9288e3c45f481b105c3435a48f0",
+  "input_tokens": 36268,
+  "max_new_tokens": 128,
+  "truncated_input": false,
+  "original_id": "d844057a13c2cc7018e8328dfe10767938b3e28689e359ff",
+  "evaluation_split": "historical_retest",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "894fe36c-c838-d2cb-263d-f64c0813b14c",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 9,
+  "decode_steps": 8,
+  "decoded_tokens": 8,
+  "decode_s": 0.19176203291863203,
+  "aggregate_tokens_per_s": 41.71837291375889,
+  "per_sequence_tokens_per_s": 41.71837291375889,
+  "ttft_s": 4.425392446108162,
+  "prefill_peak_bytes": 21471936000,
+  "decode_peak_bytes": 17164687872,
+  "peak_allocated_bytes": 21471936000,
+  "effective_options": {
+    "max_capacity_prompt": 2048,
+    "window_size": 32,
+    "kernel_size": 7,
+    "pooling": "maxpool"
+  },
+  "mode": "native",
+  "trace": {
+    "physical_tokens": 2056,
+    "stored_heads": 32
+  },
+  "final_kv_bytes": 1077936128,
+  "status": "ok",
+  "output_ids": [
+    791,
+    328,
+    1354,
+    826,
+    6,
+    3805,
+    5383,
+    13,
+    128009
+  ],
+  "prediction": "The Sinsings' airship.",
+  "answers": [
+    "The Han gang."
+  ],
+  "score": 0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 4.623469591140747
+}

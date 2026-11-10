@@ -1,0 +1,55 @@
+{
+  "id": "longbench_full/hotpotqa/afa4eccc7b711ace3270c9cbcd784c971a4f0f8d22629ebf",
+  "suite": "longbench",
+  "task": "hotpotqa",
+  "input_sha256": "c92dfcc5096c934c1652161dec9f6c62bc0836507c051d1e6e4f9d47213c8269",
+  "input_tokens": 8151,
+  "max_new_tokens": 32,
+  "truncated_input": false,
+  "original_id": "afa4eccc7b711ace3270c9cbcd784c971a4f0f8d22629ebf",
+  "evaluation_split": "heldout",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "894fe36c-c838-d2cb-263d-f64c0813b14c",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 5,
+  "decode_steps": 4,
+  "decoded_tokens": 4,
+  "decode_s": 0.09461114928126335,
+  "aggregate_tokens_per_s": 42.27831529779497,
+  "per_sequence_tokens_per_s": 42.27831529779497,
+  "ttft_s": 0.7252992456778884,
+  "prefill_peak_bytes": 18118357504,
+  "decode_peak_bytes": 17164256768,
+  "peak_allocated_bytes": 18118357504,
+  "effective_options": {
+    "max_capacity_prompt": 2048,
+    "window_size": 32,
+    "kernel_size": 7,
+    "pooling": "maxpool"
+  },
+  "mode": "native",
+  "trace": {
+    "physical_tokens": 2052,
+    "stored_heads": 32
+  },
+  "final_kv_bytes": 1075838976,
+  "status": "ok",
+  "output_ids": [
+    32,
+    424,
+    484,
+    5657,
+    128009
+  ],
+  "prediction": "Averill Park",
+  "answers": [
+    "1,693"
+  ],
+  "score": 0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 0.8240828514099121
+}

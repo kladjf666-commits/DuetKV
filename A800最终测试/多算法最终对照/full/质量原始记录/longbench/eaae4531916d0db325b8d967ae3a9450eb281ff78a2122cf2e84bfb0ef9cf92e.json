@@ -1,0 +1,47 @@
+{
+  "id": "longbench_full/hotpotqa/cf16ba255ad4b7b0fdae56093ac7d5fb58487dc24f2659e2",
+  "suite": "longbench",
+  "task": "hotpotqa",
+  "input_sha256": "7435f062ed34e24b8fb14bd746307db18d2c2de90a02e6935238ce9c33b61b6d",
+  "input_tokens": 12738,
+  "max_new_tokens": 32,
+  "truncated_input": false,
+  "original_id": "cf16ba255ad4b7b0fdae56093ac7d5fb58487dc24f2659e2",
+  "evaluation_split": "heldout",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "894fe36c-c838-d2cb-263d-f64c0813b14c",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 2,
+  "decode_steps": 1,
+  "decoded_tokens": 1,
+  "decode_s": 0.022805149666965008,
+  "aggregate_tokens_per_s": 43.84974510597385,
+  "per_sequence_tokens_per_s": 43.84974510597385,
+  "ttft_s": 1.6956974836066365,
+  "prefill_peak_bytes": 17794988544,
+  "decode_peak_bytes": 17765527040,
+  "peak_allocated_bytes": 17794988544,
+  "effective_options": {},
+  "mode": "native",
+  "trace": {
+    "physical_tokens": 12739,
+    "stored_heads": 8
+  },
+  "final_kv_bytes": 1669726208,
+  "status": "ok",
+  "output_ids": [
+    34648,
+    128009
+  ],
+  "prediction": "India",
+  "answers": [
+    "India"
+  ],
+  "score": 100.0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 1.8042480945587158
+}

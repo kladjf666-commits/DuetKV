@@ -1,0 +1,60 @@
+{
+  "id": "longbench_full/2wikimqa/d0b11838d26195f89d1568431f88a02b4f4d8c9cdf99e04a",
+  "suite": "longbench",
+  "task": "2wikimqa",
+  "input_sha256": "0ea2893c8d72bf9915345e68d0313a324de5faad9b482ef99c5861b516a89413",
+  "input_tokens": 6170,
+  "max_new_tokens": 32,
+  "truncated_input": false,
+  "original_id": "d0b11838d26195f89d1568431f88a02b4f4d8c9cdf99e04a",
+  "evaluation_split": "heldout",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "894fe36c-c838-d2cb-263d-f64c0813b14c",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 10,
+  "decode_steps": 9,
+  "decoded_tokens": 9,
+  "decode_s": 0.2200230471789837,
+  "aggregate_tokens_per_s": 40.90480572555068,
+  "per_sequence_tokens_per_s": 40.90480572555068,
+  "ttft_s": 0.5492532690986991,
+  "prefill_peak_bytes": 17880204800,
+  "decode_peak_bytes": 17164980224,
+  "peak_allocated_bytes": 17880204800,
+  "effective_options": {
+    "max_capacity_prompt": 2048,
+    "window_size": 32,
+    "kernel_size": 7,
+    "pooling": "maxpool"
+  },
+  "mode": "native",
+  "trace": {
+    "physical_tokens": 2057,
+    "stored_heads": 32
+  },
+  "final_kv_bytes": 1078460416,
+  "status": "ok",
+  "output_ids": [
+    3648,
+    403,
+    11,
+    3206,
+    33780,
+    15255,
+    11,
+    23782,
+    13,
+    128009
+  ],
+  "prediction": "Newport, Monmouthshire, Wales.",
+  "answers": [
+    "Newport, Wales"
+  ],
+  "score": 80.0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 0.7750070095062256
+}

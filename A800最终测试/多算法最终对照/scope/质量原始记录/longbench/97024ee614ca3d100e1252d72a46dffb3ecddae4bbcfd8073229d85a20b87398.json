@@ -1,0 +1,61 @@
+{
+  "id": "longbench_full/multifieldqa_en/ae5a3edc1bc76fee6fa1aa6557e83bc3cfea0c190763ecce",
+  "suite": "longbench",
+  "task": "multifieldqa_en",
+  "input_sha256": "7250a6994d875afab40e2173aa54e54024012a3b63f265558e6185ee8a2f2d35",
+  "input_tokens": 13139,
+  "max_new_tokens": 64,
+  "truncated_input": false,
+  "original_id": "ae5a3edc1bc76fee6fa1aa6557e83bc3cfea0c190763ecce",
+  "evaluation_split": "heldout",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "3d68f21e-bb96-d4f6-f517-dd7465632716",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 7,
+  "decode_steps": 6,
+  "decoded_tokens": 6,
+  "decode_s": 0.1700962781906128,
+  "aggregate_tokens_per_s": 35.27414040932923,
+  "per_sequence_tokens_per_s": 35.27414040932923,
+  "ttft_s": 5.801430237479508,
+  "prefill_peak_bytes": 61967425024,
+  "decode_peak_bytes": 17163438080,
+  "peak_allocated_bytes": 61967425024,
+  "effective_options": {
+    "max_capacity_prompt": 2048,
+    "window_size": 8,
+    "kernel_size": 7,
+    "pooling": "maxpool",
+    "decoding_window_size": 512,
+    "decoding_recent_size": 256,
+    "decoding_metric": "None",
+    "delta": 1
+  },
+  "mode": "prefill_only_short_output_boundary",
+  "trace": {
+    "physical_tokens": 2054,
+    "stored_heads": 32
+  },
+  "final_kv_bytes": 1076887552,
+  "status": "ok",
+  "output_ids": [
+    2181,
+    9221,
+    264,
+    2766,
+    11201,
+    13,
+    128009
+  ],
+  "prediction": "It becomes a bit worse.",
+  "answers": [
+    "It becomes a bit less so that what's off to the left or right can be better noted."
+  ],
+  "score": 30.0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 5.977152585983276
+}

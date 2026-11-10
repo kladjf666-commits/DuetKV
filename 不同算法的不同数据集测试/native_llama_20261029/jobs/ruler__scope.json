@@ -1,8 +1,0 @@
-{
-  "out": "/data/phasekv-results/native_llama_20261029",
-  "model": "/data/Llama-3.1-8B-Instruct/snapshots/master",
-  "suite": "ruler",
-  "method": "scope",
-  "retry_failed": false,
-  "protocol_hash": "7a7191ec4bdbc3c05cd640be19fb04aa1e277ab06ba2a8a4a73c0d4567cb9bb0"
-}

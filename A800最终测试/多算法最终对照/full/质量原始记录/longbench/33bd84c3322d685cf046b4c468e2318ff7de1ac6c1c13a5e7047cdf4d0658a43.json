@@ -1,0 +1,45 @@
+{
+  "batch": 1,
+  "input_tokens": 5311,
+  "output_tokens_per_row": 3,
+  "decode_steps": 2,
+  "decoded_tokens": 2,
+  "decode_s": 0.04333452694118023,
+  "aggregate_tokens_per_s": 46.152574890564374,
+  "per_sequence_tokens_per_s": 46.152574890564374,
+  "ttft_s": 0.5839124033227563,
+  "prefill_peak_bytes": 16801786880,
+  "decode_peak_bytes": 16776918528,
+  "peak_allocated_bytes": 16801786880,
+  "effective_options": {},
+  "mode": "native",
+  "trace": {
+    "physical_tokens": 5313,
+    "stored_heads": 8
+  },
+  "final_kv_bytes": 696385536,
+  "status": "ok",
+  "id": "longbench_full/2wikimqa/c997d53083dff6918a3f066cc76c824e43eb4ea21de33c51",
+  "suite": "longbench",
+  "task": "2wikimqa",
+  "input_sha256": "f2eda8e6be428245acfba7cda5ca75195e77b452e4f901e854fe82bb4d7c9af0",
+  "output_ids": [
+    96534,
+    40322,
+    128009
+  ],
+  "prediction": "Wolf Warrior",
+  "score": 100.0,
+  "metric": "qa_f1_score",
+  "truncated_input": false,
+  "max_new_tokens": 32,
+  "answers": [
+    "Wolf Warrior"
+  ],
+  "reused_from": {
+    "path": "/data/phasekv-results/a800_four_gpu_v1/results/full/quality/d75047f10f7a1fc09652e6750a226c1cfa83ecd2198530f2893a9ae5d25d36c3.json",
+    "id": "longbench/2wikimqa/139/8192",
+    "sha256": "2831aae7463251f916f76e224bcd2ae307d9a521f6360ab061c046c033a08e1b",
+    "protocol_sha256": "5c66868f8bc66a6a07720b146ca3f4dae59f55204254f247a923342a4c0531bc"
+  }
+}

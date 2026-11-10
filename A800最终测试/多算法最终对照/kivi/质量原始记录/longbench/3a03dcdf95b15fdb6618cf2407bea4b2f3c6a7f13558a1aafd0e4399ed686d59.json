@@ -1,0 +1,60 @@
+{
+  "id": "longbench_full/hotpotqa/d136a5063f8e7f5594182b51b05d626ca0671aea2ba22226",
+  "suite": "longbench",
+  "task": "hotpotqa",
+  "input_sha256": "c1d211119f17e7c5bfe3c07ffd202350efd86b457e9b2706ca1e4c615012e391",
+  "input_tokens": 9043,
+  "max_new_tokens": 32,
+  "truncated_input": false,
+  "original_id": "d136a5063f8e7f5594182b51b05d626ca0671aea2ba22226",
+  "evaluation_split": "heldout",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "3d68f21e-bb96-d4f6-f517-dd7465632716",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 8,
+  "decode_steps": 7,
+  "decoded_tokens": 7,
+  "decode_s": 0.29421604983508587,
+  "aggregate_tokens_per_s": 23.792039910547516,
+  "per_sequence_tokens_per_s": 23.792039910547516,
+  "ttft_s": 0.8998286863788962,
+  "prefill_peak_bytes": 17380869120,
+  "decode_peak_bytes": 16431209472,
+  "peak_allocated_bytes": 17380869120,
+  "effective_options": {
+    "k_bits": 2,
+    "v_bits": 2,
+    "group_size": 32,
+    "residual_length": 128,
+    "use_flash": true
+  },
+  "mode": "native",
+  "trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 9050
+  },
+  "final_kv_bytes": 234020864,
+  "status": "ok",
+  "output_ids": [
+    53,
+    1216,
+    321,
+    320,
+    1049,
+    21,
+    8,
+    128009
+  ],
+  "prediction": "Veyil (2006)",
+  "answers": [
+    "Veyyil"
+  ],
+  "score": 0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 1.2010853290557861
+}

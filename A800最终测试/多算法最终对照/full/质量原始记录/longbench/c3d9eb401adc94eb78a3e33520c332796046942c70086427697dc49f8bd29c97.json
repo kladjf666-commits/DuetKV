@@ -1,0 +1,54 @@
+{
+  "id": "longbench_full/narrativeqa/add987fbf4b13d64b945bf44fb0b7cc5a9284a6a5b75d71c",
+  "suite": "longbench",
+  "task": "narrativeqa",
+  "input_sha256": "e0d2f7ff06eed8a7229876f69843570d82287522bf058ed0f4e697fdec56f802",
+  "input_tokens": 16547,
+  "max_new_tokens": 128,
+  "truncated_input": false,
+  "original_id": "add987fbf4b13d64b945bf44fb0b7cc5a9284a6a5b75d71c",
+  "evaluation_split": "historical_retest",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "894fe36c-c838-d2cb-263d-f64c0813b14c",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 9,
+  "decode_steps": 8,
+  "decoded_tokens": 8,
+  "decode_s": 0.1899732407182455,
+  "aggregate_tokens_per_s": 42.11119402792637,
+  "per_sequence_tokens_per_s": 42.11119402792637,
+  "ttft_s": 2.2838769434019923,
+  "prefill_peak_bytes": 18279485952,
+  "decode_peak_bytes": 18273546752,
+  "peak_allocated_bytes": 18279485952,
+  "effective_options": {},
+  "mode": "native",
+  "trace": {
+    "physical_tokens": 16555,
+    "stored_heads": 8
+  },
+  "final_kv_bytes": 2169896960,
+  "status": "ok",
+  "output_ids": [
+    16366,
+    6996,
+    315,
+    18324,
+    439,
+    459,
+    10255,
+    13,
+    128009
+  ],
+  "prediction": "His lack of recognition as an artist.",
+  "answers": [
+    "the his works are not recognized"
+  ],
+  "score": 18.18181818181818,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 2.4785220623016357
+}

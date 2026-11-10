@@ -1,0 +1,58 @@
+{
+  "batch": 1,
+  "input_tokens": 8104,
+  "output_tokens_per_row": 4,
+  "decode_steps": 3,
+  "decoded_tokens": 3,
+  "decode_s": 0.07421711273491383,
+  "aggregate_tokens_per_s": 40.42194433937761,
+  "per_sequence_tokens_per_s": 40.42194433937761,
+  "ttft_s": 0.9117022389546037,
+  "prefill_peak_bytes": 17581062656,
+  "decode_peak_bytes": 16615503872,
+  "peak_allocated_bytes": 17581062656,
+  "effective_options": {
+    "quality_budget": 256,
+    "speed_budget": 1024,
+    "nlist": "floor(L/80)",
+    "niter": 20,
+    "sink": 16,
+    "window": 320,
+    "window_nlist": 4,
+    "offload": true
+  },
+  "mode": "native",
+  "trace": {
+    "physical_history": 8107,
+    "retrieval_budget": 256,
+    "initial_clusters": 101,
+    "clusters": 101,
+    "cpu_pinned_kv_bytes": 1004175360
+  },
+  "final_kv_bytes": 357924864,
+  "status": "ok",
+  "id": "longbench_full/multifieldqa_en/ddfed65e5495d0257b22a9537993c3453d8590cc94b8e0d6",
+  "suite": "longbench",
+  "task": "multifieldqa_en",
+  "input_sha256": "8b635e42fe90a836fdbcb2bf6be23b7afb24791be6a52081bba253ff1c8d13c1",
+  "output_ids": [
+    975,
+    11,
+    15830,
+    128009
+  ],
+  "prediction": "14,520",
+  "score": 9.09090909090909,
+  "metric": "qa_f1_score",
+  "truncated_input": false,
+  "max_new_tokens": 64,
+  "answers": [
+    "There are 14,520 attendees, including 7,152 chemical scientists, 5,059 students, 1,283 exhibitors, 119 precollege teachers, 573 exposition visitors, and 453 guests."
+  ],
+  "reused_from": {
+    "path": "/data/phasekv-results/a800_four_gpu_v1/results/clusterkv/quality/d4f67726a9d8f578a986b43265d0d166726ebbe33e6ef5969c37607671158866.json",
+    "id": "longbench/multifieldqa_en/44/8192",
+    "sha256": "192d414bbe685f878e1cbcd31ae1e294bfb7f4a21d3c5b03a93cc5dce5a23a5c",
+    "protocol_sha256": "dad80bcbc8440822bd90a7f7c1ad5fbb96c50187eaccd91d8d15a6f39e351ace"
+  }
+}

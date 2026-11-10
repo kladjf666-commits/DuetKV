@@ -1,0 +1,56 @@
+{
+  "id": "longbench_full/2wikimqa/1d554e7ae21ed7b5d142b57bcdab110cf6cea6f5256a58ee",
+  "suite": "longbench",
+  "task": "2wikimqa",
+  "input_sha256": "3a83842d6e609111d5a4661084bcfef584c6de7a020b6a83d3935b6c536168a3",
+  "input_tokens": 6340,
+  "max_new_tokens": 32,
+  "truncated_input": false,
+  "original_id": "1d554e7ae21ed7b5d142b57bcdab110cf6cea6f5256a58ee",
+  "evaluation_split": "heldout",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "894fe36c-c838-d2cb-263d-f64c0813b14c",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 6,
+  "decode_steps": 5,
+  "decoded_tokens": 5,
+  "decode_s": 0.11857013683766127,
+  "aggregate_tokens_per_s": 42.169134095254385,
+  "per_sequence_tokens_per_s": 42.169134095254385,
+  "ttft_s": 0.5561489202082157,
+  "prefill_peak_bytes": 17902694912,
+  "decode_peak_bytes": 17162849792,
+  "peak_allocated_bytes": 17902694912,
+  "effective_options": {
+    "max_capacity_prompt": 2048,
+    "window_size": 32,
+    "kernel_size": 7,
+    "pooling": "maxpool"
+  },
+  "mode": "native",
+  "trace": {
+    "physical_tokens": 2053,
+    "stored_heads": 32
+  },
+  "final_kv_bytes": 1076363264,
+  "status": "ok",
+  "output_ids": [
+    64706,
+    29973,
+    596,
+    8624,
+    13,
+    128009
+  ],
+  "prediction": "Parkinson's disease.",
+  "answers": [
+    "Parkinson"
+  ],
+  "score": 0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 0.6793415546417236
+}

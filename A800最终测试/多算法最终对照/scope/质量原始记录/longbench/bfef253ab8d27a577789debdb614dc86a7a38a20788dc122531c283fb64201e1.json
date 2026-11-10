@@ -1,0 +1,58 @@
+{
+  "id": "longbench_full/hotpotqa/75439ed8609c12817aaee0fa4f749aebb3e4a36dfa72390e",
+  "suite": "longbench",
+  "task": "hotpotqa",
+  "input_sha256": "72bb283f5438ae78f5e4b99b3ff238f551d657437700a4d9e9ac86331e3aa732",
+  "input_tokens": 13128,
+  "max_new_tokens": 32,
+  "truncated_input": false,
+  "original_id": "75439ed8609c12817aaee0fa4f749aebb3e4a36dfa72390e",
+  "evaluation_split": "heldout",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "3d68f21e-bb96-d4f6-f517-dd7465632716",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 4,
+  "decode_steps": 3,
+  "decoded_tokens": 3,
+  "decode_s": 0.08537096716463566,
+  "aggregate_tokens_per_s": 35.140752174150485,
+  "per_sequence_tokens_per_s": 35.140752174150485,
+  "ttft_s": 4.3340192614123225,
+  "prefill_peak_bytes": 61892644352,
+  "decode_peak_bytes": 17161839104,
+  "peak_allocated_bytes": 61892644352,
+  "effective_options": {
+    "max_capacity_prompt": 2048,
+    "window_size": 8,
+    "kernel_size": 7,
+    "pooling": "maxpool",
+    "decoding_window_size": 512,
+    "decoding_recent_size": 256,
+    "decoding_metric": "None",
+    "delta": 1
+  },
+  "mode": "prefill_only_short_output_boundary",
+  "trace": {
+    "physical_tokens": 2051,
+    "stored_heads": 32
+  },
+  "final_kv_bytes": 1075314688,
+  "status": "ok",
+  "output_ids": [
+    1951,
+    728,
+    3233,
+    128009
+  ],
+  "prediction": "Deftones",
+  "answers": [
+    "Deftones"
+  ],
+  "score": 100.0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 4.42533540725708
+}

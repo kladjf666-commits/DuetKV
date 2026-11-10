@@ -1,0 +1,63 @@
+{
+  "id": "longbench_full/narrativeqa/5c19d56ccc3fd2563e9d5ff9a5683a6ed8ee9ff506797a01",
+  "suite": "longbench",
+  "task": "narrativeqa",
+  "input_sha256": "a51565aba02b07999f028a9ac5797e59a6a6fb4570f268bcd4c4918b51c36b38",
+  "input_tokens": 12083,
+  "max_new_tokens": 128,
+  "truncated_input": false,
+  "original_id": "5c19d56ccc3fd2563e9d5ff9a5683a6ed8ee9ff506797a01",
+  "evaluation_split": "historical_retest",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "894fe36c-c838-d2cb-263d-f64c0813b14c",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 13,
+  "decode_steps": 12,
+  "decoded_tokens": 12,
+  "decode_s": 0.2806692589074373,
+  "aggregate_tokens_per_s": 42.75494953281475,
+  "per_sequence_tokens_per_s": 42.75494953281475,
+  "ttft_s": 1.137023739516735,
+  "prefill_peak_bytes": 18586136064,
+  "decode_peak_bytes": 17166626304,
+  "peak_allocated_bytes": 18586136064,
+  "effective_options": {
+    "max_capacity_prompt": 2048,
+    "window_size": 32,
+    "kernel_size": 7,
+    "pooling": "maxpool"
+  },
+  "mode": "native",
+  "trace": {
+    "physical_tokens": 2060,
+    "stored_heads": 32
+  },
+  "final_kv_bytes": 1080033280,
+  "status": "ok",
+  "output_ids": [
+    3947,
+    374,
+    912,
+    3752,
+    7086,
+    423,
+    23361,
+    261,
+    304,
+    279,
+    3446,
+    13,
+    128009
+  ],
+  "prediction": "There is no character named Dwyer in the story.",
+  "answers": [
+    "Hawaii"
+  ],
+  "score": 0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 1.422116994857788
+}

@@ -1,0 +1,58 @@
+{
+  "id": "longbench_full/2wikimqa/8daefc2a4f66b3614a6934857c8c8f9cfdeb3ca23d16e172",
+  "suite": "longbench",
+  "task": "2wikimqa",
+  "input_sha256": "d26393334c52469331999f66bc9ea238eccb07798ee7b4668981f28c7825a855",
+  "input_tokens": 4577,
+  "max_new_tokens": 32,
+  "truncated_input": false,
+  "original_id": "8daefc2a4f66b3614a6934857c8c8f9cfdeb3ca23d16e172",
+  "evaluation_split": "heldout",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "894fe36c-c838-d2cb-263d-f64c0813b14c",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 8,
+  "decode_steps": 7,
+  "decoded_tokens": 7,
+  "decode_s": 0.17065013013780117,
+  "aggregate_tokens_per_s": 41.01959954174926,
+  "per_sequence_tokens_per_s": 41.01959954174926,
+  "ttft_s": 0.39648042526096106,
+  "prefill_peak_bytes": 17693679104,
+  "decode_peak_bytes": 17163901440,
+  "peak_allocated_bytes": 17693679104,
+  "effective_options": {
+    "max_capacity_prompt": 2048,
+    "window_size": 32,
+    "kernel_size": 7,
+    "pooling": "maxpool"
+  },
+  "mode": "native",
+  "trace": {
+    "physical_tokens": 2055,
+    "stored_heads": 32
+  },
+  "final_kv_bytes": 1077411840,
+  "status": "ok",
+  "output_ids": [
+    59907,
+    13134,
+    552,
+    320,
+    7285,
+    17,
+    8,
+    128009
+  ],
+  "prediction": "Above Rubies (1932)",
+  "answers": [
+    "Above Rubies"
+  ],
+  "score": 80.0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 0.5725369453430176
+}

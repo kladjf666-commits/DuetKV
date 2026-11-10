@@ -1,0 +1,54 @@
+{
+  "id": "longbench_full/multifieldqa_en/45e06726b160cfb851e2179017f90e37f4f4dec62f346e33",
+  "suite": "longbench",
+  "task": "multifieldqa_en",
+  "input_sha256": "75a11d399663f62f996cd02173f3ea0ffac0d27def296836c5d30e51433f7bbc",
+  "input_tokens": 5314,
+  "max_new_tokens": 64,
+  "truncated_input": false,
+  "original_id": "45e06726b160cfb851e2179017f90e37f4f4dec62f346e33",
+  "evaluation_split": "heldout",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "894fe36c-c838-d2cb-263d-f64c0813b14c",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 9,
+  "decode_steps": 8,
+  "decoded_tokens": 8,
+  "decode_s": 0.171500856988132,
+  "aggregate_tokens_per_s": 46.64699722493869,
+  "per_sequence_tokens_per_s": 46.64699722493869,
+  "ttft_s": 0.5991837419569492,
+  "prefill_peak_bytes": 16801787392,
+  "decode_peak_bytes": 16778120192,
+  "peak_allocated_bytes": 16801787392,
+  "effective_options": {},
+  "mode": "native",
+  "trace": {
+    "physical_tokens": 5322,
+    "stored_heads": 8
+  },
+  "final_kv_bytes": 697565184,
+  "status": "ok",
+  "output_ids": [
+    79893,
+    14071,
+    7858,
+    5674,
+    389,
+    279,
+    4264,
+    13,
+    128009
+  ],
+  "prediction": "Permanent yellow spot damage on the screen.",
+  "answers": [
+    "Exposure to sunlight or strong light may cause permanent yellow spot damage on the screen."
+  ],
+  "score": 60.0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 0.7754356861114502
+}

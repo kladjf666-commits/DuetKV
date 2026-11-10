@@ -1,0 +1,56 @@
+{
+  "id": "longbench_full/narrativeqa/c89fd516348b68f96538948b052cb10d5b6f21bc441f5a55",
+  "suite": "longbench",
+  "task": "narrativeqa",
+  "input_sha256": "915fd5a27a5619cd71a658bec26e98a8063911a35751363149803f422a57d26e",
+  "input_tokens": 8091,
+  "max_new_tokens": 128,
+  "truncated_input": false,
+  "original_id": "c89fd516348b68f96538948b052cb10d5b6f21bc441f5a55",
+  "evaluation_split": "historical_retest",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "894fe36c-c838-d2cb-263d-f64c0813b14c",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 6,
+  "decode_steps": 5,
+  "decoded_tokens": 5,
+  "decode_s": 0.11739436164498329,
+  "aggregate_tokens_per_s": 42.59148335522866,
+  "per_sequence_tokens_per_s": 42.59148335522866,
+  "ttft_s": 0.727730548940599,
+  "prefill_peak_bytes": 18114463232,
+  "decode_peak_bytes": 17163338752,
+  "peak_allocated_bytes": 18114463232,
+  "effective_options": {
+    "max_capacity_prompt": 2048,
+    "window_size": 32,
+    "kernel_size": 7,
+    "pooling": "maxpool"
+  },
+  "mode": "native",
+  "trace": {
+    "physical_tokens": 2053,
+    "stored_heads": 32
+  },
+  "final_kv_bytes": 1076363264,
+  "status": "ok",
+  "output_ids": [
+    791,
+    21078,
+    274,
+    3191,
+    13,
+    128009
+  ],
+  "prediction": "The lying scribe.",
+  "answers": [
+    "The scribe."
+  ],
+  "score": 66.66666666666666,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 0.8504571914672852
+}

@@ -1,0 +1,66 @@
+{
+  "id": "longbench_full/narrativeqa/8317d375904e2fcba00401b32177f783d5f8d348a1ef503f",
+  "suite": "longbench",
+  "task": "narrativeqa",
+  "input_sha256": "35d68738bb104abb76eb38e914a0e4013e4f81e25a6e3e3f70bd3d8f31b85da7",
+  "input_tokens": 11413,
+  "max_new_tokens": 128,
+  "truncated_input": false,
+  "original_id": "8317d375904e2fcba00401b32177f783d5f8d348a1ef503f",
+  "evaluation_split": "historical_retest",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "3d68f21e-bb96-d4f6-f517-dd7465632716",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 12,
+  "decode_steps": 11,
+  "decoded_tokens": 11,
+  "decode_s": 0.3521316098049283,
+  "aggregate_tokens_per_s": 31.23832025785391,
+  "per_sequence_tokens_per_s": 31.23832025785391,
+  "ttft_s": 5.328414520248771,
+  "prefill_peak_bytes": 51030337536,
+  "decode_peak_bytes": 17166089216,
+  "peak_allocated_bytes": 51030337536,
+  "effective_options": {
+    "max_capacity_prompt": 2048,
+    "window_size": 8,
+    "kernel_size": 7,
+    "pooling": "maxpool",
+    "decoding_window_size": 512,
+    "decoding_recent_size": 256,
+    "decoding_metric": "None",
+    "delta": 1
+  },
+  "mode": "prefill_only_short_output_boundary",
+  "trace": {
+    "physical_tokens": 2059,
+    "stored_heads": 32
+  },
+  "final_kv_bytes": 1079508992,
+  "status": "ok",
+  "output_ids": [
+    16366,
+    1866,
+    25098,
+    4309,
+    488,
+    323,
+    6996,
+    315,
+    4113,
+    488,
+    13,
+    128009
+  ],
+  "prediction": "His own mediocrity and lack of originality.",
+  "answers": [
+    "He doesn't feel he is a true artist."
+  ],
+  "score": 0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 5.8823559284210205
+}

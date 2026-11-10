@@ -1,0 +1,59 @@
+{
+  "batch": 1,
+  "input_tokens": 5439,
+  "output_tokens_per_row": 5,
+  "decode_steps": 4,
+  "decoded_tokens": 4,
+  "decode_s": 0.09643901884555817,
+  "aggregate_tokens_per_s": 41.4769877159968,
+  "per_sequence_tokens_per_s": 41.4769877159968,
+  "ttft_s": 0.5844064047560096,
+  "prefill_peak_bytes": 17232784384,
+  "decode_peak_bytes": 16587968512,
+  "peak_allocated_bytes": 17232784384,
+  "effective_options": {
+    "quality_budget": 256,
+    "speed_budget": 1024,
+    "nlist": "floor(L/80)",
+    "niter": 20,
+    "sink": 16,
+    "window": 320,
+    "window_nlist": 4,
+    "offload": true
+  },
+  "mode": "native",
+  "trace": {
+    "physical_history": 5443,
+    "retrieval_budget": 256,
+    "initial_clusters": 67,
+    "clusters": 67,
+    "cpu_pinned_kv_bytes": 672768000
+  },
+  "final_kv_bytes": 335831040,
+  "status": "ok",
+  "id": "longbench_full/2wikimqa/b1034d8bbeeba5f9001f48311c182d2a20782462f0c2ed65",
+  "suite": "longbench",
+  "task": "2wikimqa",
+  "input_sha256": "8aaee1466fc3c1f94078be0026d712f8dd83d03322c36921fec7cbf1cdee1dfb",
+  "output_ids": [
+    47,
+    1466,
+    69057,
+    2933,
+    128009
+  ],
+  "prediction": "Prenzlau",
+  "score": 100.0,
+  "metric": "qa_f1_score",
+  "truncated_input": false,
+  "max_new_tokens": 32,
+  "answers": [
+    "Prenzlau"
+  ],
+  "reused_from": {
+    "path": "/data/phasekv-results/a800_four_gpu_v1/results/clusterkv/quality/94768879c72296adbd41f1ab19084a4003e791c9c5af6208ffbd4582d67ab85f.json",
+    "id": "longbench/2wikimqa/179/8192",
+    "sha256": "9dd5594df15c91a670d24bdce551bdac4e0ab42a0bdffac60027a8a5fe4d5317",
+    "protocol_sha256": "dad80bcbc8440822bd90a7f7c1ad5fbb96c50187eaccd91d8d15a6f39e351ace"
+  }
+}

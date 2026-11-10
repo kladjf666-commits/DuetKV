@@ -1,0 +1,65 @@
+{
+  "id": "longbench_full/narrativeqa/880269c856197f51942d2649c32e0c37955409d7fdb3f369",
+  "suite": "longbench",
+  "task": "narrativeqa",
+  "input_sha256": "118854c4c3a6e2335eaa04d810a39844e7ac2f848bdf74dc34944526d9695c9f",
+  "input_tokens": 64201,
+  "max_new_tokens": 128,
+  "truncated_input": false,
+  "original_id": "880269c856197f51942d2649c32e0c37955409d7fdb3f369",
+  "evaluation_split": "historical_retest",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "3d68f21e-bb96-d4f6-f517-dd7465632716",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 13,
+  "decode_steps": 12,
+  "decoded_tokens": 12,
+  "decode_s": 0.7732463972643018,
+  "aggregate_tokens_per_s": 15.518985982288779,
+  "per_sequence_tokens_per_s": 15.518985982288779,
+  "ttft_s": 9.707232896238565,
+  "prefill_peak_bytes": 25293518336,
+  "decode_peak_bytes": 18479896064,
+  "peak_allocated_bytes": 25293518336,
+  "effective_options": {
+    "k_bits": 2,
+    "v_bits": 2,
+    "group_size": 32,
+    "residual_length": 128,
+    "use_flash": true
+  },
+  "mode": "native",
+  "trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 64213
+  },
+  "final_kv_bytes": 1589440512,
+  "status": "ok",
+  "output_ids": [
+    5176,
+    69777,
+    44727,
+    1461,
+    304,
+    279,
+    20953,
+    449,
+    264,
+    662,
+    1987,
+    13,
+    128009
+  ],
+  "prediction": "Clarence shoots him in the balls with a.38.",
+  "answers": [
+    "he is shot"
+  ],
+  "score": 0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 10.48986554145813
+}

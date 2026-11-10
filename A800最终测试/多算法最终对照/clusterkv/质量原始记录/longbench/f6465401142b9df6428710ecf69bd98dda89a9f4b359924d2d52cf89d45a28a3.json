@@ -1,0 +1,59 @@
+{
+  "batch": 1,
+  "input_tokens": 5964,
+  "output_tokens_per_row": 5,
+  "decode_steps": 4,
+  "decoded_tokens": 4,
+  "decode_s": 0.0960819823667407,
+  "aggregate_tokens_per_s": 41.63111440324135,
+  "per_sequence_tokens_per_s": 41.63111440324135,
+  "ttft_s": 0.6527370056137443,
+  "prefill_peak_bytes": 17303413248,
+  "decode_peak_bytes": 16593331200,
+  "peak_allocated_bytes": 17303413248,
+  "effective_options": {
+    "quality_budget": 256,
+    "speed_budget": 1024,
+    "nlist": "floor(L/80)",
+    "niter": 20,
+    "sink": 16,
+    "window": 320,
+    "window_nlist": 4,
+    "offload": true
+  },
+  "mode": "native",
+  "trace": {
+    "physical_history": 5968,
+    "retrieval_budget": 256,
+    "initial_clusters": 74,
+    "clusters": 74,
+    "cpu_pinned_kv_bytes": 737280000
+  },
+  "final_kv_bytes": 340131840,
+  "status": "ok",
+  "id": "longbench_full/2wikimqa/c1d354f1d1855b21eb3c3cd204d5030080ef9e3c7e4b0195",
+  "suite": "longbench",
+  "task": "2wikimqa",
+  "input_sha256": "133710408e594ad860f15bc3946278c49865f73211c19c9bce614da5201b6a5f",
+  "output_ids": [
+    54133,
+    5281,
+    13345,
+    43136,
+    128009
+  ],
+  "prediction": "Durango Valley Raiders",
+  "score": 0,
+  "metric": "qa_f1_score",
+  "truncated_input": false,
+  "max_new_tokens": 32,
+  "answers": [
+    "From Corleone To Brooklyn"
+  ],
+  "reused_from": {
+    "path": "/data/phasekv-results/a800_four_gpu_v1/results/clusterkv/quality/18730dbc3224cd93f47ceeead5ea7dfb747a9637432e8f766c4128ea6af5665a.json",
+    "id": "longbench/2wikimqa/187/8192",
+    "sha256": "a892c11772fd44d5328fea40c12e1717528e475c3fdfceca52c180f59fe9d06d",
+    "protocol_sha256": "dad80bcbc8440822bd90a7f7c1ad5fbb96c50187eaccd91d8d15a6f39e351ace"
+  }
+}

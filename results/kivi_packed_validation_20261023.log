@@ -1,9 +1,0 @@
-test_cuda_kernel_against_independent_dense_attention (tests.test_kivi_packed.TestPackedKIVI.test_cuda_kernel_against_independent_dense_attention) ... KIVI GPU attention max absolute error: 0.00024414
-ok
-test_flush_boundaries_preserve_prefix_and_lengths (tests.test_kivi_packed.TestPackedKIVI.test_flush_boundaries_preserve_prefix_and_lengths) ... ok
-test_independent_residuals_and_actual_storage (tests.test_kivi_packed.TestPackedKIVI.test_independent_residuals_and_actual_storage) ... ok
-
-----------------------------------------------------------------------
-Ran 3 tests in 11.064s
-
-OK

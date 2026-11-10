@@ -1,0 +1,62 @@
+{
+  "id": "longbench_full/narrativeqa/ef34f858c45b105916d82027347c397ca58151b0a6bd37aa",
+  "suite": "longbench",
+  "task": "narrativeqa",
+  "input_sha256": "eca6b3f5bd0615f560639b38a00f2ab7325620487124ac402c501cd14554449a",
+  "input_tokens": 16551,
+  "max_new_tokens": 128,
+  "truncated_input": false,
+  "original_id": "ef34f858c45b105916d82027347c397ca58151b0a6bd37aa",
+  "evaluation_split": "historical_retest",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "2347a980-636a-b41a-6f67-544c3bcce0ae",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 5,
+  "decode_steps": 4,
+  "decoded_tokens": 4,
+  "decode_s": 0.10841831844300032,
+  "aggregate_tokens_per_s": 36.89413428878215,
+  "per_sequence_tokens_per_s": 36.89413428878215,
+  "ttft_s": 2.592867763713002,
+  "prefill_peak_bytes": 18612398592,
+  "decode_peak_bytes": 16644649472,
+  "peak_allocated_bytes": 18612398592,
+  "effective_options": {
+    "quality_budget": 256,
+    "speed_budget": 1024,
+    "nlist": "floor(L/80)",
+    "niter": 20,
+    "sink": 16,
+    "window": 320,
+    "window_nlist": 4,
+    "offload": true
+  },
+  "mode": "native",
+  "trace": {
+    "physical_history": 16555,
+    "retrieval_budget": 256,
+    "initial_clusters": 206,
+    "clusters": 206,
+    "cpu_pinned_kv_bytes": 2050007040
+  },
+  "final_kv_bytes": 427646976,
+  "status": "ok",
+  "output_ids": [
+    32,
+    7895,
+    1667,
+    13,
+    128009
+  ],
+  "prediction": "A hundred years.",
+  "answers": [
+    "100."
+  ],
+  "score": 0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 2.7764830589294434
+}

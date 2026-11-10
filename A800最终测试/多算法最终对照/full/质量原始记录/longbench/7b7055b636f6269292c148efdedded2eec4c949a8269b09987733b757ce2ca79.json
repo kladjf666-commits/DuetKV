@@ -1,0 +1,49 @@
+{
+  "id": "longbench_full/2wikimqa/57543e0892f90733bf97dc270cdb36eb9bf8e2230940bcb9",
+  "suite": "longbench",
+  "task": "2wikimqa",
+  "input_sha256": "6d1e69808c4e14ab6330e65f2d7ee99b52f118fb6c4619d212001d3a72e37de9",
+  "input_tokens": 3841,
+  "max_new_tokens": 32,
+  "truncated_input": false,
+  "original_id": "57543e0892f90733bf97dc270cdb36eb9bf8e2230940bcb9",
+  "evaluation_split": "heldout",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "894fe36c-c838-d2cb-263d-f64c0813b14c",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 4,
+  "decode_steps": 3,
+  "decoded_tokens": 3,
+  "decode_s": 0.06524311192333698,
+  "aggregate_tokens_per_s": 45.98186554199175,
+  "per_sequence_tokens_per_s": 45.98186554199175,
+  "ttft_s": 0.41649821773171425,
+  "prefill_peak_bytes": 16604749312,
+  "decode_peak_bytes": 16581354496,
+  "peak_allocated_bytes": 16604749312,
+  "effective_options": {},
+  "mode": "native",
+  "trace": {
+    "physical_tokens": 3844,
+    "stored_heads": 8
+  },
+  "final_kv_bytes": 503840768,
+  "status": "ok",
+  "output_ids": [
+    64463,
+    61261,
+    17368,
+    128009
+  ],
+  "prediction": "Henry Goes Arizona",
+  "answers": [
+    "Henry Goes Arizona"
+  ],
+  "score": 100.0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 0.4951033592224121
+}

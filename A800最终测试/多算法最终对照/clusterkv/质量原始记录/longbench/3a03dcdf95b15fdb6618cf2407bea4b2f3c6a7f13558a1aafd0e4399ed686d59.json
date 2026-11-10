@@ -1,0 +1,62 @@
+{
+  "batch": 1,
+  "input_tokens": 9043,
+  "output_tokens_per_row": 8,
+  "decode_steps": 7,
+  "decoded_tokens": 7,
+  "decode_s": 0.1678533898666501,
+  "aggregate_tokens_per_s": 41.70306006665161,
+  "per_sequence_tokens_per_s": 41.70306006665161,
+  "ttft_s": 1.0337348319590092,
+  "prefill_peak_bytes": 17700957184,
+  "decode_peak_bytes": 16625718272,
+  "peak_allocated_bytes": 17700957184,
+  "effective_options": {
+    "quality_budget": 256,
+    "speed_budget": 1024,
+    "nlist": "floor(L/80)",
+    "niter": 20,
+    "sink": 16,
+    "window": 320,
+    "window_nlist": 4,
+    "offload": true
+  },
+  "mode": "native",
+  "trace": {
+    "physical_history": 9050,
+    "retrieval_budget": 256,
+    "initial_clusters": 113,
+    "clusters": 113,
+    "cpu_pinned_kv_bytes": 1115627520
+  },
+  "final_kv_bytes": 365355008,
+  "status": "ok",
+  "id": "longbench_full/hotpotqa/d136a5063f8e7f5594182b51b05d626ca0671aea2ba22226",
+  "suite": "longbench",
+  "task": "hotpotqa",
+  "input_sha256": "c1d211119f17e7c5bfe3c07ffd202350efd86b457e9b2706ca1e4c615012e391",
+  "output_ids": [
+    53,
+    1216,
+    321,
+    320,
+    1049,
+    21,
+    8,
+    128009
+  ],
+  "prediction": "Veyil (2006)",
+  "score": 0,
+  "metric": "qa_f1_score",
+  "truncated_input": false,
+  "max_new_tokens": 32,
+  "answers": [
+    "Veyyil"
+  ],
+  "reused_from": {
+    "path": "/data/phasekv-results/a800_four_gpu_v1/results/clusterkv/quality/fd37d954c1732a8e819f55ef44bc430674a08db0adf4eacc384df7bb276ff08b.json",
+    "id": "longbench/hotpotqa/159/16384",
+    "sha256": "e97832f6a4120d4cce1be73b92fed5a26fa1b6b80e41c97abdb4bc369de00789",
+    "protocol_sha256": "dad80bcbc8440822bd90a7f7c1ad5fbb96c50187eaccd91d8d15a6f39e351ace"
+  }
+}

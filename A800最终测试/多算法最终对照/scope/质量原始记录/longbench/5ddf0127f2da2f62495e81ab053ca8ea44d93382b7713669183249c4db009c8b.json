@@ -1,0 +1,59 @@
+{
+  "id": "longbench_full/hotpotqa/f1ea70c4e2c13d2fda1feda75a72a345c0e91f083220e95a",
+  "suite": "longbench",
+  "task": "hotpotqa",
+  "input_sha256": "9a3b69db34532f0f97aae138f0662b32c608b4cf7e9c06b5c160b4120a1cc2b4",
+  "input_tokens": 14521,
+  "max_new_tokens": 32,
+  "truncated_input": false,
+  "original_id": "f1ea70c4e2c13d2fda1feda75a72a345c0e91f083220e95a",
+  "evaluation_split": "heldout",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "3d68f21e-bb96-d4f6-f517-dd7465632716",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 5,
+  "decode_steps": 4,
+  "decoded_tokens": 4,
+  "decode_s": 0.11236962210386992,
+  "aggregate_tokens_per_s": 35.59680921862105,
+  "per_sequence_tokens_per_s": 35.59680921862105,
+  "ttft_s": 8.459409410133958,
+  "prefill_peak_bytes": 71821267456,
+  "decode_peak_bytes": 17162382848,
+  "peak_allocated_bytes": 71821267456,
+  "effective_options": {
+    "max_capacity_prompt": 2048,
+    "window_size": 8,
+    "kernel_size": 7,
+    "pooling": "maxpool",
+    "decoding_window_size": 512,
+    "decoding_recent_size": 256,
+    "decoding_metric": "None",
+    "delta": 1
+  },
+  "mode": "prefill_only_short_output_boundary",
+  "trace": {
+    "physical_tokens": 2052,
+    "stored_heads": 32
+  },
+  "final_kv_bytes": 1075838976,
+  "status": "ok",
+  "output_ids": [
+    29184,
+    8105,
+    315,
+    9635,
+    128009
+  ],
+  "prediction": "James II of England",
+  "answers": [
+    "King James II of England"
+  ],
+  "score": 88.8888888888889,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 8.57848834991455
+}

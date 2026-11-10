@@ -1,0 +1,56 @@
+{
+  "id": "longbench_full/2wikimqa/a88430cef36a0222c3c30780328ff266b16325a7ec723a97",
+  "suite": "longbench",
+  "task": "2wikimqa",
+  "input_sha256": "28bcfa9c4e9aa2ea2ac2785b4599b8a15a1cf029f322636eac1d4a4eaff820c7",
+  "input_tokens": 6262,
+  "max_new_tokens": 32,
+  "truncated_input": false,
+  "original_id": "a88430cef36a0222c3c30780328ff266b16325a7ec723a97",
+  "evaluation_split": "heldout",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "3d68f21e-bb96-d4f6-f517-dd7465632716",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 4,
+  "decode_steps": 3,
+  "decoded_tokens": 3,
+  "decode_s": 0.12742033693939447,
+  "aggregate_tokens_per_s": 23.54412232818772,
+  "per_sequence_tokens_per_s": 23.54412232818772,
+  "ttft_s": 0.6101406449452043,
+  "prefill_peak_bytes": 17013950976,
+  "decode_peak_bytes": 16361875968,
+  "peak_allocated_bytes": 17013950976,
+  "effective_options": {
+    "k_bits": 2,
+    "v_bits": 2,
+    "group_size": 32,
+    "residual_length": 128,
+    "use_flash": true
+  },
+  "mode": "native",
+  "trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 6265
+  },
+  "final_kv_bytes": 167227392,
+  "status": "ok",
+  "output_ids": [
+    74294,
+    2192,
+    13,
+    128009
+  ],
+  "prediction": "Dubai.",
+  "answers": [
+    "Dubai"
+  ],
+  "score": 100.0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 0.7442057132720947
+}

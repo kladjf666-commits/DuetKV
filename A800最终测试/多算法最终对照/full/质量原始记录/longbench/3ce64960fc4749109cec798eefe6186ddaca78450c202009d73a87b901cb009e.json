@@ -1,0 +1,58 @@
+{
+  "id": "longbench_full/hotpotqa/ed6c85899d2a29f6dc8e02ba62bc8f1b1043a8c135fdd132",
+  "suite": "longbench",
+  "task": "hotpotqa",
+  "input_sha256": "71dc5fcfd3fa27a012963596c32148c0adee044a35a3d194db437d3cdc09d869",
+  "input_tokens": 16234,
+  "max_new_tokens": 32,
+  "truncated_input": false,
+  "original_id": "ed6c85899d2a29f6dc8e02ba62bc8f1b1043a8c135fdd132",
+  "evaluation_split": "heldout",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "894fe36c-c838-d2cb-263d-f64c0813b14c",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 13,
+  "decode_steps": 12,
+  "decoded_tokens": 12,
+  "decode_s": 0.2826238851994276,
+  "aggregate_tokens_per_s": 42.45925637718996,
+  "per_sequence_tokens_per_s": 42.45925637718996,
+  "ttft_s": 2.2148840529844165,
+  "prefill_peak_bytes": 18278269440,
+  "decode_peak_bytes": 18250784768,
+  "peak_allocated_bytes": 18278269440,
+  "effective_options": {},
+  "mode": "native",
+  "trace": {
+    "physical_tokens": 16246,
+    "stored_heads": 8
+  },
+  "final_kv_bytes": 2129395712,
+  "status": "ok",
+  "output_ids": [
+    35960,
+    278,
+    12707,
+    60874,
+    11,
+    6118,
+    2884,
+    304,
+    3009,
+    11633,
+    10571,
+    13,
+    128009
+  ],
+  "prediction": "Seasonal television specials, usually done in stop motion animation.",
+  "answers": [
+    "seasonal television specials, particularly its work in stop motion animation"
+  ],
+  "score": 73.68421052631578,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 2.5041651725769043
+}

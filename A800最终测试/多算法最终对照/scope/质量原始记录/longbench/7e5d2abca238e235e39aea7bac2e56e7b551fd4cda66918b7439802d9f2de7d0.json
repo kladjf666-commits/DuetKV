@@ -1,0 +1,67 @@
+{
+  "id": "longbench_full/multifieldqa_en/73debbba53d5848cdc1e726c047bb0b82c5730d747fa710c",
+  "suite": "longbench",
+  "task": "multifieldqa_en",
+  "input_sha256": "97ad55f0169c9dbdffae6349b0d7c047faaf07484494055a694515d35e44649b",
+  "input_tokens": 4751,
+  "max_new_tokens": 64,
+  "truncated_input": false,
+  "original_id": "73debbba53d5848cdc1e726c047bb0b82c5730d747fa710c",
+  "evaluation_split": "heldout",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "3d68f21e-bb96-d4f6-f517-dd7465632716",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 13,
+  "decode_steps": 12,
+  "decoded_tokens": 12,
+  "decode_s": 0.33457761630415916,
+  "aggregate_tokens_per_s": 35.86611720340249,
+  "per_sequence_tokens_per_s": 35.86611720340249,
+  "ttft_s": 1.1187104396522045,
+  "prefill_peak_bytes": 23131546112,
+  "decode_peak_bytes": 17166568960,
+  "peak_allocated_bytes": 23131546112,
+  "effective_options": {
+    "max_capacity_prompt": 2048,
+    "window_size": 8,
+    "kernel_size": 7,
+    "pooling": "maxpool",
+    "decoding_window_size": 512,
+    "decoding_recent_size": 256,
+    "decoding_metric": "None",
+    "delta": 1
+  },
+  "mode": "prefill_only_short_output_boundary",
+  "trace": {
+    "physical_tokens": 2060,
+    "stored_heads": 32
+  },
+  "final_kv_bytes": 1080033280,
+  "status": "ok",
+  "output_ids": [
+    1951,
+    17414,
+    12801,
+    9675,
+    315,
+    1561,
+    17340,
+    323,
+    9675,
+    315,
+    23261,
+    13,
+    128009
+  ],
+  "prediction": "Deputy Prime Minister of New Zealand and Minister of Finance.",
+  "answers": [
+    "He became deputy prime minister and minister of finance."
+  ],
+  "score": 73.68421052631578,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 1.4632134437561035
+}

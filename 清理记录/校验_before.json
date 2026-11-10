@@ -1,0 +1,17 @@
+{
+  "phase": "before",
+  "verified_kept_files": 4833,
+  "verified_source_copies": 4754,
+  "planned_removed_files": 35687,
+  "planned_removed_bytes": 30129886686,
+  "protected_files": 35117,
+  "p90_quality": 432,
+  "p90_speed_points": 16,
+  "p90_formal_rounds": 48,
+  "bettermemory_speed_points": 16,
+  "bettermemory_formal_rounds": 48,
+  "bettermemory_warmups": 16,
+  "baseline_methods": 8,
+  "baseline_quality_records": 3456,
+  "checks": "passed"
+}

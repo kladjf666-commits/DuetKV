@@ -1,0 +1,16 @@
+{
+  "status": "unsupported",
+  "id": "longbench_full/narrativeqa/3b93fd7360b75c5207a3de730296a6a1a968289c27ea1d6c",
+  "suite": "longbench",
+  "task": "narrativeqa",
+  "input_sha256": "4b67dde19f187aba2842f71505934b4a3598679bed6f22e03b5dfe7ce7a85283",
+  "input_tokens": 64204,
+  "truncated_input": false,
+  "reason": "Native validated ClusterKV profile requires at most 512 clusters",
+  "required_clusters": 802,
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "2347a980-636a-b41a-6f67-544c3bcce0ae",
+    "capacity": 85094825984
+  }
+}

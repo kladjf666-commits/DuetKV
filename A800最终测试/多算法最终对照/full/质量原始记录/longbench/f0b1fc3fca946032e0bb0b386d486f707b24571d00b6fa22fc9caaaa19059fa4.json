@@ -1,0 +1,50 @@
+{
+  "id": "longbench_full/narrativeqa/ef34f858c45b105916d82027347c397ca58151b0a6bd37aa",
+  "suite": "longbench",
+  "task": "narrativeqa",
+  "input_sha256": "eca6b3f5bd0615f560639b38a00f2ab7325620487124ac402c501cd14554449a",
+  "input_tokens": 16551,
+  "max_new_tokens": 128,
+  "truncated_input": false,
+  "original_id": "ef34f858c45b105916d82027347c397ca58151b0a6bd37aa",
+  "evaluation_split": "historical_retest",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "894fe36c-c838-d2cb-263d-f64c0813b14c",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 5,
+  "decode_steps": 4,
+  "decoded_tokens": 4,
+  "decode_s": 0.09658192656934261,
+  "aggregate_tokens_per_s": 41.41561617253652,
+  "per_sequence_tokens_per_s": 41.41561617253652,
+  "ttft_s": 2.299328327178955,
+  "prefill_peak_bytes": 18280036864,
+  "decode_peak_bytes": 18273544704,
+  "peak_allocated_bytes": 18280036864,
+  "effective_options": {},
+  "mode": "native",
+  "trace": {
+    "physical_tokens": 16555,
+    "stored_heads": 8
+  },
+  "final_kv_bytes": 2169896960,
+  "status": "ok",
+  "output_ids": [
+    32,
+    7895,
+    1667,
+    13,
+    128009
+  ],
+  "prediction": "A hundred years.",
+  "answers": [
+    "100."
+  ],
+  "score": 0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 2.40162992477417
+}

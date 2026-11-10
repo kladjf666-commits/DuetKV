@@ -1,0 +1,57 @@
+{
+  "batch": 1,
+  "input_tokens": 14521,
+  "output_tokens_per_row": 3,
+  "decode_steps": 2,
+  "decoded_tokens": 2,
+  "decode_s": 0.04990204982459545,
+  "aggregate_tokens_per_s": 40.078513949426,
+  "per_sequence_tokens_per_s": 40.078513949426,
+  "ttft_s": 1.766910145059228,
+  "prefill_peak_bytes": 18410345984,
+  "decode_peak_bytes": 16681372160,
+  "peak_allocated_bytes": 18410345984,
+  "effective_options": {
+    "quality_budget": 256,
+    "speed_budget": 1024,
+    "nlist": "floor(L/80)",
+    "niter": 20,
+    "sink": 16,
+    "window": 320,
+    "window_nlist": 4,
+    "offload": true
+  },
+  "mode": "native",
+  "trace": {
+    "physical_history": 14523,
+    "retrieval_budget": 256,
+    "initial_clusters": 181,
+    "clusters": 181,
+    "cpu_pinned_kv_bytes": 1788764160
+  },
+  "final_kv_bytes": 410230784,
+  "status": "ok",
+  "id": "longbench_full/hotpotqa/f1ea70c4e2c13d2fda1feda75a72a345c0e91f083220e95a",
+  "suite": "longbench",
+  "task": "hotpotqa",
+  "input_sha256": "9a3b69db34532f0f97aae138f0662b32c608b4cf7e9c06b5c160b4120a1cc2b4",
+  "output_ids": [
+    29184,
+    8105,
+    128009
+  ],
+  "prediction": "James II",
+  "score": 57.14285714285715,
+  "metric": "qa_f1_score",
+  "truncated_input": false,
+  "max_new_tokens": 32,
+  "answers": [
+    "King James II of England"
+  ],
+  "reused_from": {
+    "path": "/data/phasekv-results/a800_four_gpu_v1/results/clusterkv/quality/2fad4219e2a31814c1099cb4ee253cd92bd6a919691628f843f521458c990d5e.json",
+    "id": "longbench/hotpotqa/101/16384",
+    "sha256": "f34215b2144a80f3ea8c72c7b77a1e5c07e7e1dec27df18a3bb0f6e7eb665d58",
+    "protocol_sha256": "dad80bcbc8440822bd90a7f7c1ad5fbb96c50187eaccd91d8d15a6f39e351ace"
+  }
+}

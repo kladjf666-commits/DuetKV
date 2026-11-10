@@ -1,0 +1,57 @@
+{
+  "id": "longbench_full/narrativeqa/a8c929d6037b84d914b05d984865cbd3651b578544f0e3bf",
+  "suite": "longbench",
+  "task": "narrativeqa",
+  "input_sha256": "0a8c4084ed6a520a3238204f0816861db0be835444f36f09ee32e52d918bc20a",
+  "input_tokens": 19148,
+  "max_new_tokens": 128,
+  "truncated_input": false,
+  "original_id": "a8c929d6037b84d914b05d984865cbd3651b578544f0e3bf",
+  "evaluation_split": "historical_retest",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "894fe36c-c838-d2cb-263d-f64c0813b14c",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 12,
+  "decode_steps": 11,
+  "decoded_tokens": 11,
+  "decode_s": 0.2739613065496087,
+  "aggregate_tokens_per_s": 40.151655496679155,
+  "per_sequence_tokens_per_s": 40.151655496679155,
+  "ttft_s": 2.726533992215991,
+  "prefill_peak_bytes": 18680946176,
+  "decode_peak_bytes": 18659752448,
+  "peak_allocated_bytes": 18680946176,
+  "effective_options": {},
+  "mode": "native",
+  "trace": {
+    "physical_tokens": 19159,
+    "stored_heads": 8
+  },
+  "final_kv_bytes": 2511208448,
+  "status": "ok",
+  "output_ids": [
+    791,
+    6063,
+    46229,
+    11,
+    2999,
+    13,
+    48538,
+    8255,
+    800,
+    44606,
+    13,
+    128009
+  ],
+  "prediction": "The German gentleman, Dr. Rudolf Staub.",
+  "answers": [
+    "the German professor"
+  ],
+  "score": 28.571428571428577,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 3.199939489364624
+}

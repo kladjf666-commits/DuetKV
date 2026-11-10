@@ -1,0 +1,73 @@
+{
+  "id": "longbench_full/qasper/8f650cd8021e553a4106d292af9908f29595f88fc39385b2",
+  "suite": "longbench",
+  "task": "qasper",
+  "input_sha256": "b8f3011a42617635ad73e854ef7862f1e109ce2be7574aaf945b02680fd5677f",
+  "input_tokens": 5823,
+  "max_new_tokens": 128,
+  "truncated_input": false,
+  "original_id": "8f650cd8021e553a4106d292af9908f29595f88fc39385b2",
+  "evaluation_split": "heldout",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "3d68f21e-bb96-d4f6-f517-dd7465632716",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 21,
+  "decode_steps": 20,
+  "decoded_tokens": 20,
+  "decode_s": 0.8268284387886524,
+  "aggregate_tokens_per_s": 24.188814827536728,
+  "per_sequence_tokens_per_s": 24.188814827536728,
+  "ttft_s": 0.5676914909854531,
+  "prefill_peak_bytes": 16916726784,
+  "decode_peak_bytes": 16309669888,
+  "peak_allocated_bytes": 16916726784,
+  "effective_options": {
+    "k_bits": 2,
+    "v_bits": 2,
+    "group_size": 32,
+    "residual_length": 128,
+    "use_flash": true
+  },
+  "mode": "native",
+  "trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 5843
+  },
+  "final_kv_bytes": 154832896,
+  "status": "ok",
+  "output_ids": [
+    75392,
+    33307,
+    527,
+    5190,
+    4367,
+    11,
+    449,
+    264,
+    11493,
+    6811,
+    1990,
+    6335,
+    323,
+    13734,
+    4211,
+    389,
+    279,
+    5107,
+    743,
+    13,
+    128009
+  ],
+  "prediction": "Expert annotations are higher quality, with a bigger difference between expert and crowd models on the difficult set.",
+  "answers": [
+    "improvement when the difficult subset with expert annotations is mixed with the remaining crowd annotation is 3.5 F1 score, much larger than when a random set of expert annotations are added"
+  ],
+  "score": 36.36363636363637,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 1.4005165100097656
+}

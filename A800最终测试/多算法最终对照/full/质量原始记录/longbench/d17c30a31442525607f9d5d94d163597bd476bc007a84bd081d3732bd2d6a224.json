@@ -1,0 +1,51 @@
+{
+  "id": "longbench_full/narrativeqa/c549a937e1ff08308e3afe359c4db27ba066adcabb4b2425",
+  "suite": "longbench",
+  "task": "narrativeqa",
+  "input_sha256": "a078f1cfdaa3f7a1f630a6b77b3851d09efd56935bbf453c853f99d7373c26f8",
+  "input_tokens": 11415,
+  "max_new_tokens": 128,
+  "truncated_input": false,
+  "original_id": "c549a937e1ff08308e3afe359c4db27ba066adcabb4b2425",
+  "evaluation_split": "historical_retest",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "894fe36c-c838-d2cb-263d-f64c0813b14c",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 6,
+  "decode_steps": 5,
+  "decoded_tokens": 5,
+  "decode_s": 0.11182884126901627,
+  "aggregate_tokens_per_s": 44.71118490776421,
+  "per_sequence_tokens_per_s": 44.71118490776421,
+  "ttft_s": 1.4447929691523314,
+  "prefill_peak_bytes": 17607142400,
+  "decode_peak_bytes": 17589933056,
+  "peak_allocated_bytes": 17607142400,
+  "effective_options": {},
+  "mode": "native",
+  "trace": {
+    "physical_tokens": 11420,
+    "stored_heads": 8
+  },
+  "final_kv_bytes": 1496842240,
+  "status": "ok",
+  "output_ids": [
+    64797,
+    648,
+    650,
+    651,
+    6853,
+    128009
+  ],
+  "prediction": "Virginie Vervelle",
+  "answers": [
+    "Virginie."
+  ],
+  "score": 66.66666666666666,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 1.562720537185669
+}

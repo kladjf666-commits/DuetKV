@@ -1,0 +1,58 @@
+{
+  "batch": 1,
+  "input_tokens": 10590,
+  "output_tokens_per_row": 4,
+  "decode_steps": 3,
+  "decoded_tokens": 3,
+  "decode_s": 0.07444457337260246,
+  "aggregate_tokens_per_s": 40.29843767099991,
+  "per_sequence_tokens_per_s": 40.29843767099991,
+  "ttft_s": 1.2718029040843248,
+  "prefill_peak_bytes": 17899388928,
+  "decode_peak_bytes": 16641323008,
+  "peak_allocated_bytes": 17899388928,
+  "effective_options": {
+    "quality_budget": 256,
+    "speed_budget": 1024,
+    "nlist": "floor(L/80)",
+    "niter": 20,
+    "sink": 16,
+    "window": 320,
+    "window_nlist": 4,
+    "offload": true
+  },
+  "mode": "native",
+  "trace": {
+    "physical_history": 10593,
+    "retrieval_budget": 256,
+    "initial_clusters": 132,
+    "clusters": 132,
+    "cpu_pinned_kv_bytes": 1309655040
+  },
+  "final_kv_bytes": 378290176,
+  "status": "ok",
+  "id": "longbench_full/multifieldqa_en/80a04c9306d232e6327b14f03e260d28060fe12395d87e31",
+  "suite": "longbench",
+  "task": "multifieldqa_en",
+  "input_sha256": "216cc6f29bad6bd1b850b795014f3b3b5a0da0ac4166bdc1c0aaca5a28535c89",
+  "output_ids": [
+    37659,
+    9973,
+    1251,
+    128009
+  ],
+  "prediction": "Peter Denning",
+  "score": 100.0,
+  "metric": "qa_f1_score",
+  "truncated_input": false,
+  "max_new_tokens": 64,
+  "answers": [
+    "Peter Denning."
+  ],
+  "reused_from": {
+    "path": "/data/phasekv-results/a800_four_gpu_v1/results/clusterkv/quality/1994624315128cb15cde62d4c9097db6d9dcc7bf15c1709265a5fbcb2fbb0414.json",
+    "id": "longbench/multifieldqa_en/66/16384",
+    "sha256": "21db020cc6d11346640c9b52f986e516d1ad603de83556022125db64780f4263",
+    "protocol_sha256": "dad80bcbc8440822bd90a7f7c1ad5fbb96c50187eaccd91d8d15a6f39e351ace"
+  }
+}

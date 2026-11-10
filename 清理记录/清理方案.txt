@@ -1,0 +1,102 @@
+项目清理方案（已执行完成；BetterMemory速度与峰值均保留）
+
+扫描：70,864个文件，70.18 GiB；无读取错误或目录链接。
+最终保留文件：4,833份，80.28 MiB，已逐文件校验；临时副本已删除。
+最终项目体积约减少27.96 GiB；由70.18 GiB降至42.22 GiB，已包含清理记录。
+模型、Git及开发环境不计入删除，因此不是把磁盘压到只有几十MB。
+
+保留并整理：
+1. 优化前A800源码、BetterMemory源码；去掉BetterMemory内嵌的重复A800目录。
+2. 优化前Prompt90完整最终结果：432条质量、16点速度/显存、48正式轮、报告图表。
+3. BetterMemory本轮速度与峰值：16点、48正式轮、16预热、TTFT及各阶段峰值，模型/参数/GPU/来源哈希。
+4. Full、KIVI、SnapKV等八方法的最终A800对照：每方法432条质量处理记录与正式速度范围。OOM/unsupported/未安排保留。
+5. 实际适配源码、正式输入、评分器及必要词典资源，放入A800复现资料。
+6. 早期手写源码、未提交改动与设计说明收拢到参考源码与设计说明，不当作测试垃圾删除。
+7. .git（25.57GiB）、weights（14.97GiB）、.venv（1.58GiB）、config.txt、.gitignore原位保留。
+
+删除：
+- 历史4090/旧Qwen测试结果，参数扫描、六组选参、两阶段细化、快测、中途进度和重复下载结果。
+- 本轮BetterMemory原始整包及冗余报告；速度、TTFT和峰值已另存完整测量摘录与对比图，最终KV和生成文本不保留。
+- deliverables等目录中的服务器上传包、回传整包的重复归档、离线安装环境/修复包。
+- .cache中的临时构建、编译缓存、旧Qwen1.5B缓存权重、CUDA检查副本；必要基准源码已另存。
+- 已不需要的.venv-hf-download环境、旧的根目录导航和执行脚本入口（源码参考副本已收拢）。
+- __pycache__、重复源码快照及不再使用的历史运行目录。
+
+执行方式：先把已校验副本放到最终位置，再按精确路径删除剩余旧文件。绝不递归删除保留文件的新父目录。
+这是永久删除，历史安装包或测试原始记录不再作为本地副本保留；Git本身不清理，已有提交中可能仍有旧文件。
+保留的旧原始JSON内部历史/data路径不改写；迁移前后路径与哈希见保留来源清单。
+不把旧Prompt90速度或质量改名成BetterMemory的新成绩。
+
+最终顶层目录：
+  A800最终测试/
+  Code-Original-NoChanging - A800/
+  Code-Original-NoChanging - A800 - BetterMemory/
+  A800复现资料/
+  参考源码与设计说明/
+  weights/  .venv/  .git/
+  README.md  A800_HANDOFF.md  config.txt  .gitignore  清理记录/
+
+以下61项精确路径已删除（保留内容已先迁移并核验）：
+.cache
+.venv-hf-download
+Code-Original-NoChanging - 4090
+Env
+Figure
+KIVI
+PhaseKV
+PhaseKVA800测试
+PhaseKV与Full消融
+PyramidKV
+SCOPE
+SnapKV
+deliverables
+docs
+llama
+models
+official_llama
+opt
+qwen2
+reports
+results
+scripts
+src
+tests
+workspace_migration
+不同算法的不同数据集测试
+A800最终测试/分析报告
+A800最终测试/原始结果
+Code-Original-NoChanging - A800 - BetterMemory/Code-Original-NoChanging - A800
+Code-Original-NoChanging - A800 - BetterMemory/PhaseKV/__pycache__
+Code-Original-NoChanging - A800 - BetterMemory/benchmark/__pycache__
+Code-Original-NoChanging - A800 - BetterMemory/tests/__pycache__
+Code-Original-NoChanging - A800 - BetterMemory/PhaseKV/kernels/__pycache__
+analyze_native_results.py
+BENCHMARK_4090D.md
+BetterMem.md
+CHANGELOG.md
+Code-Original-NoChanging.zip
+plot_quality_detail.py
+PROJECT_GUIDE.txt
+PROJECT_OVERVIEW.md
+READMEV2.md
+requirements.txt
+run_4090d.sh
+run_phasekv_long_output.sh
+run_phasekv_optimizations.sh
+run_phasekv_prompt_retest.sh
+run_phasekv_same_round.sh
+run_phasekv_sweep.sh
+A800最终测试/a800_bettermemory_final_results_20261107_185155.tar.gz
+A800最终测试/a800_bettermemory_final_results_20261107_185155.tar.gz.sha256
+A800最终测试/a800_bettermemory_results_20261107_161509.tar.gz
+A800最终测试/a800_bettermemory_results_20261107_161509.tar.gz.sha256
+A800最终测试/a800_final_results_20261106.tar.gz
+A800最终测试/a800_phasekv_longgen_sweep_results_20261106_192522_976092.tar.gz
+A800最终测试/a800_phasekv_p90_final_results_20261107_123953_405161.tar.gz
+A800最终测试/a800_phasekv_p90_final_results_20261107_123953_405161.tar.gz.sha256
+A800最终测试/a800_phasekv_refine_results_20261107_094632_630407.tar.gz
+A800最终测试/a800_phasekv_refine_results_20261107_094632_630407.tar.gz.sha256
+A800最终测试/A800算法测试参数与当前进度报告.docx
+A800最终测试/归档清单.json
+
+最终授权：BetterMemory也要保留本轮的速度。其余的删除方案按照你的来。

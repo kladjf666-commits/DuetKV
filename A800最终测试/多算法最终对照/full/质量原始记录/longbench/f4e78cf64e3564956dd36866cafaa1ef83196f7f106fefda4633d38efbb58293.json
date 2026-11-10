@@ -1,0 +1,51 @@
+{
+  "id": "longbench_full/qasper/b80ef6cf65d0728f2a3a6c812d50121f97dc555c71d8871d",
+  "suite": "longbench",
+  "task": "qasper",
+  "input_sha256": "3d8ed85a1b60719187062a2fcc3d60fa53fbceafc009e437ec6aeb12a8ea5284",
+  "input_tokens": 5312,
+  "max_new_tokens": 128,
+  "truncated_input": false,
+  "original_id": "b80ef6cf65d0728f2a3a6c812d50121f97dc555c71d8871d",
+  "evaluation_split": "heldout",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "894fe36c-c838-d2cb-263d-f64c0813b14c",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 5,
+  "decode_steps": 4,
+  "decoded_tokens": 4,
+  "decode_s": 0.08869542740285397,
+  "aggregate_tokens_per_s": 45.098153502683175,
+  "per_sequence_tokens_per_s": 45.098153502683175,
+  "ttft_s": 0.6075399667024612,
+  "prefill_peak_bytes": 16801786880,
+  "decode_peak_bytes": 16777318912,
+  "peak_allocated_bytes": 16801786880,
+  "effective_options": {},
+  "mode": "native",
+  "trace": {
+    "physical_tokens": 5316,
+    "stored_heads": 8
+  },
+  "final_kv_bytes": 696778752,
+  "status": "ok",
+  "output_ids": [
+    21124,
+    323,
+    6405,
+    13,
+    128009
+  ],
+  "prediction": "Facebook and Twitter.",
+  "answers": [
+    "Facebook status update messages",
+    "Facebook status update messages"
+  ],
+  "score": 28.571428571428577,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 0.7008793354034424
+}

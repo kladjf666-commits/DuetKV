@@ -1,0 +1,63 @@
+{
+  "id": "longbench_full/qasper/4f6f6dfa672ed697a94d1d1ee528e50645f01f568707b0b5",
+  "suite": "longbench",
+  "task": "qasper",
+  "input_sha256": "4b6bdd836e4b1a8088bf8c9705244c44b73fdd795806cd21da216b3e6e0b4c5c",
+  "input_tokens": 5193,
+  "max_new_tokens": 128,
+  "truncated_input": false,
+  "original_id": "4f6f6dfa672ed697a94d1d1ee528e50645f01f568707b0b5",
+  "evaluation_split": "heldout",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "3d68f21e-bb96-d4f6-f517-dd7465632716",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 11,
+  "decode_steps": 10,
+  "decoded_tokens": 10,
+  "decode_s": 0.41801494266837835,
+  "aggregate_tokens_per_s": 23.922589791086125,
+  "per_sequence_tokens_per_s": 23.922589791086125,
+  "ttft_s": 0.690725433640182,
+  "prefill_peak_bytes": 16831096320,
+  "decode_peak_bytes": 16295821824,
+  "peak_allocated_bytes": 16831096320,
+  "effective_options": {
+    "k_bits": 2,
+    "v_bits": 2,
+    "group_size": 32,
+    "residual_length": 128,
+    "use_flash": true
+  },
+  "mode": "native",
+  "trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 5203
+  },
+  "final_kv_bytes": 139104256,
+  "status": "ok",
+  "output_ids": [
+    33,
+    3336,
+    6124,
+    972,
+    323,
+    1023,
+    3293,
+    30828,
+    4211,
+    13,
+    128009
+  ],
+  "prediction": "BIBREF18 and other recent neural models.",
+  "answers": [
+    "Baseline models are:\n- Chen et al., 2015a\n- Chen et al., 2015b\n- Liu et al., 2016\n- Cai and Zhao, 2016\n- Cai et al., 2017\n- Zhou et al., 2017\n- Ma et al., 2018\n- Wang et al., 2019"
+  ],
+  "score": 9.75609756097561,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 1.1146655082702637
+}

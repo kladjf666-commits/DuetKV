@@ -1,6 +1,0 @@
-PhaseKV optimization measurements
-Protocol: phasekv-optimizations-v1-fixed-query-bf16-fp16-w128-g16
-Status: not_run_no_cuda
-Raw evidence: results\phasekv_optimization_20261027\gpu_status.json
-
-No GPU speedup claim: this file does not contain completed official GPU timing.

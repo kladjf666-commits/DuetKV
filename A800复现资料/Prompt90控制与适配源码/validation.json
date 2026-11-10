@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-07",
+  "cpu_tests_passed": 9,
+  "gpu_executed": false,
+  "checks": [
+    "432 frozen input and historical reference identities; exact 48 J raw files",
+    "wrapper quality path preserved; requested speed prompt90 not old100",
+    "atomic records, immutable completed results, partial formal-round resume, OOM and error handling",
+    "real frozen CPU packed KV: B1/2/4/8 equals independent requests before/after cooling and hot-ring wrap",
+    "prepare idempotence, 48 byte-identical reuse copies, portable status and evidence tamper rejection",
+    "Transformers 4.46.3 small CPU Llama: full absolute positions, B4 chunked prefill vs independent full prefill; attention restoration on failure",
+    "actual retention/position/batch evidence rejection",
+    "simulated worker shutdown during formal round2: saved quality and round1 skipped after restart; full input/caps/EOS unchanged",
+    "isolated output, occupied GPU rejection, Python3.10 syntax"
+  ],
+  "gpu_checks_pending": [
+    "A800 quality gate",
+    "B1/2/4/8 independence and B8 cooling smoke",
+    "segmented attention against retained dequantized KV reference"
+  ],
+  "new_quality_cases": 384,
+  "reused_selection_cases": 48,
+  "speed_points": 16,
+  "warmup": 1,
+  "formal_rounds": 3,
+  "tests_source_sha256": "e0840f4449ee6cc811e768a0e31587ff472dbf328b52a322dd487c4dbf93ddf0"
+}

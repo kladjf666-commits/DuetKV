@@ -1,0 +1,56 @@
+{
+  "id": "longbench_full/2wikimqa/24e27e943be014d4549674d581cdc20fdae92fa3d9cd256c",
+  "suite": "longbench",
+  "task": "2wikimqa",
+  "input_sha256": "ea125e686d015d3ff8bc27491b65f878ce4d302937ec4fffca2de64ce2673cb8",
+  "input_tokens": 6679,
+  "max_new_tokens": 32,
+  "truncated_input": false,
+  "original_id": "24e27e943be014d4549674d581cdc20fdae92fa3d9cd256c",
+  "evaluation_split": "heldout",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "894fe36c-c838-d2cb-263d-f64c0813b14c",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 6,
+  "decode_steps": 5,
+  "decoded_tokens": 5,
+  "decode_s": 0.11875639297068119,
+  "aggregate_tokens_per_s": 42.10299652023289,
+  "per_sequence_tokens_per_s": 42.10299652023289,
+  "ttft_s": 0.5858994480222464,
+  "prefill_peak_bytes": 17940461056,
+  "decode_peak_bytes": 17162852352,
+  "peak_allocated_bytes": 17940461056,
+  "effective_options": {
+    "max_capacity_prompt": 2048,
+    "window_size": 32,
+    "kernel_size": 7,
+    "pooling": "maxpool"
+  },
+  "mode": "native",
+  "trace": {
+    "physical_tokens": 2053,
+    "stored_heads": 32
+  },
+  "final_kv_bytes": 1076363264,
+  "status": "ok",
+  "output_ids": [
+    69032,
+    17971,
+    315,
+    2394,
+    29578,
+    128009
+  ],
+  "prediction": "Prince Albert of Prussia",
+  "answers": [
+    "Prince Albert of Prussia"
+  ],
+  "score": 100.0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 0.709327220916748
+}

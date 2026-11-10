@@ -1,0 +1,60 @@
+{
+  "id": "longbench_full/hotpotqa/781060824875cb0343a110f5e6f83d46e638cbb89e2ad7c6",
+  "suite": "longbench",
+  "task": "hotpotqa",
+  "input_sha256": "e90e3c85cab1e874fde6f66cda1425cda22a03dcbff2000ff52d7ff7f3c77b2f",
+  "input_tokens": 11260,
+  "max_new_tokens": 32,
+  "truncated_input": false,
+  "original_id": "781060824875cb0343a110f5e6f83d46e638cbb89e2ad7c6",
+  "evaluation_split": "heldout",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "3d68f21e-bb96-d4f6-f517-dd7465632716",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 8,
+  "decode_steps": 7,
+  "decoded_tokens": 7,
+  "decode_s": 0.31622337084263563,
+  "aggregate_tokens_per_s": 22.136251287649,
+  "per_sequence_tokens_per_s": 22.136251287649,
+  "ttft_s": 1.0802059369161725,
+  "prefill_peak_bytes": 17698336768,
+  "decode_peak_bytes": 16648465920,
+  "peak_allocated_bytes": 17698336768,
+  "effective_options": {
+    "k_bits": 2,
+    "v_bits": 2,
+    "group_size": 32,
+    "residual_length": 128,
+    "use_flash": true
+  },
+  "mode": "native",
+  "trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 11267
+  },
+  "final_kv_bytes": 283873280,
+  "status": "ok",
+  "output_ids": [
+    60029,
+    11269,
+    5654,
+    315,
+    17355,
+    15704,
+    13,
+    128009
+  ],
+  "prediction": "Veneto region of Northern Italy.",
+  "answers": [
+    "the Veneto region of Northern Italy"
+  ],
+  "score": 100.0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 1.405552864074707
+}

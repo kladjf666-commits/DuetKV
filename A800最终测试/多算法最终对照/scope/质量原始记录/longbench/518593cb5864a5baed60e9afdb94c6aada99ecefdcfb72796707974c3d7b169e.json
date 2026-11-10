@@ -1,0 +1,59 @@
+{
+  "id": "longbench_full/2wikimqa/188123e1b35a7de33fc44a40b55ab9ff0b59d29dc30f9148",
+  "suite": "longbench",
+  "task": "2wikimqa",
+  "input_sha256": "9107151ae554c42c4a9f9b07c19b9e23d321494a56fa431de052e91f4afdcbb5",
+  "input_tokens": 5946,
+  "max_new_tokens": 32,
+  "truncated_input": false,
+  "original_id": "188123e1b35a7de33fc44a40b55ab9ff0b59d29dc30f9148",
+  "evaluation_split": "heldout",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "3d68f21e-bb96-d4f6-f517-dd7465632716",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 5,
+  "decode_steps": 4,
+  "decoded_tokens": 4,
+  "decode_s": 0.11123850103467703,
+  "aggregate_tokens_per_s": 35.95877293198203,
+  "per_sequence_tokens_per_s": 35.95877293198203,
+  "ttft_s": 1.4132695775479078,
+  "prefill_peak_bytes": 26459084800,
+  "decode_peak_bytes": 17162314240,
+  "peak_allocated_bytes": 26459084800,
+  "effective_options": {
+    "max_capacity_prompt": 2048,
+    "window_size": 8,
+    "kernel_size": 7,
+    "pooling": "maxpool",
+    "decoding_window_size": 512,
+    "decoding_recent_size": 256,
+    "decoding_metric": "None",
+    "delta": 1
+  },
+  "mode": "prefill_only_short_output_boundary",
+  "trace": {
+    "physical_tokens": 2052,
+    "stored_heads": 32
+  },
+  "final_kv_bytes": 1075838976,
+  "status": "ok",
+  "output_ids": [
+    33,
+    10529,
+    437,
+    65717,
+    128009
+  ],
+  "prediction": "Buenos Aires",
+  "answers": [
+    "Buenos Aires"
+  ],
+  "score": 100.0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 1.532658576965332
+}

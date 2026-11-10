@@ -1,0 +1,58 @@
+{
+  "id": "longbench_full/narrativeqa/cfed47773fbf92534a78d3d5ab856bdaac7cab28c348ab3f",
+  "suite": "longbench",
+  "task": "narrativeqa",
+  "input_sha256": "0c50636edb582d90ba1b11cba48b0dafff611e8fb414395e550a99466273f5b1",
+  "input_tokens": 11348,
+  "max_new_tokens": 128,
+  "truncated_input": false,
+  "original_id": "cfed47773fbf92534a78d3d5ab856bdaac7cab28c348ab3f",
+  "evaluation_split": "historical_retest",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "894fe36c-c838-d2cb-263d-f64c0813b14c",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 8,
+  "decode_steps": 7,
+  "decoded_tokens": 7,
+  "decode_s": 0.16334560699760914,
+  "aggregate_tokens_per_s": 42.85392260412891,
+  "per_sequence_tokens_per_s": 42.85392260412891,
+  "ttft_s": 1.051210643723607,
+  "prefill_peak_bytes": 18496754176,
+  "decode_peak_bytes": 17163955712,
+  "peak_allocated_bytes": 18496754176,
+  "effective_options": {
+    "max_capacity_prompt": 2048,
+    "window_size": 32,
+    "kernel_size": 7,
+    "pooling": "maxpool"
+  },
+  "mode": "native",
+  "trace": {
+    "physical_tokens": 2055,
+    "stored_heads": 32
+  },
+  "final_kv_bytes": 1077411840,
+  "status": "ok",
+  "output_ids": [
+    22586,
+    264,
+    17944,
+    520,
+    279,
+    5740,
+    13,
+    128009
+  ],
+  "prediction": "Leave a crack at the bottom.",
+  "answers": [
+    "Break a piece of the door that she may look on her lover one last time"
+  ],
+  "score": 0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 1.219071626663208
+}

@@ -1,0 +1,55 @@
+{
+  "id": "longbench_full/narrativeqa/5fdcf93eab07256e5d12a724f77d59505203dda0a1b89a0a",
+  "suite": "longbench",
+  "task": "narrativeqa",
+  "input_sha256": "3e45f9f006cb56193fcbca4de143ff85d0b8f4e58e30325e3ec7ffa1829591f2",
+  "input_tokens": 36271,
+  "max_new_tokens": 128,
+  "truncated_input": false,
+  "original_id": "5fdcf93eab07256e5d12a724f77d59505203dda0a1b89a0a",
+  "evaluation_split": "historical_retest",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "894fe36c-c838-d2cb-263d-f64c0813b14c",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 5,
+  "decode_steps": 4,
+  "decoded_tokens": 4,
+  "decode_s": 0.09353088773787022,
+  "aggregate_tokens_per_s": 42.76662070406522,
+  "per_sequence_tokens_per_s": 42.76662070406522,
+  "ttft_s": 4.4335579657927155,
+  "prefill_peak_bytes": 21472009728,
+  "decode_peak_bytes": 17162555904,
+  "peak_allocated_bytes": 21472009728,
+  "effective_options": {
+    "max_capacity_prompt": 2048,
+    "window_size": 32,
+    "kernel_size": 7,
+    "pooling": "maxpool"
+  },
+  "mode": "native",
+  "trace": {
+    "physical_tokens": 2052,
+    "stored_heads": 32
+  },
+  "final_kv_bytes": 1075838976,
+  "status": "ok",
+  "output_ids": [
+    791,
+    49832,
+    13345,
+    13,
+    128009
+  ],
+  "prediction": "The Wyoming Valley.",
+  "answers": [
+    "Wyoming Valley"
+  ],
+  "score": 100.0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 4.5336854457855225
+}

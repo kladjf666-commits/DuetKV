@@ -1,0 +1,70 @@
+{
+  "batch": 1,
+  "input_tokens": 2828,
+  "output_tokens_per_row": 22,
+  "decode_steps": 21,
+  "decoded_tokens": 21,
+  "decode_s": 0.503403895534575,
+  "aggregate_tokens_per_s": 41.71600614591921,
+  "per_sequence_tokens_per_s": 41.71600614591921,
+  "ttft_s": 0.24858356174081564,
+  "prefill_peak_bytes": 17482329600,
+  "decode_peak_bytes": 17171349504,
+  "peak_allocated_bytes": 17482329600,
+  "effective_options": {
+    "max_capacity_prompt": 2048,
+    "window_size": 32,
+    "kernel_size": 7,
+    "pooling": "maxpool"
+  },
+  "mode": "native",
+  "trace": {
+    "physical_tokens": 2069,
+    "stored_heads": 32
+  },
+  "final_kv_bytes": 1084751872,
+  "status": "ok",
+  "id": "longbench_full/qasper/1fc62062641bf85a160d7465aefb91870235e6c815b392cf",
+  "suite": "longbench",
+  "task": "qasper",
+  "input_sha256": "322a2eab38937d0920e0fd32791455e4c0244ddceba15f3e0eaf4725f8a98714",
+  "output_ids": [
+    791,
+    26954,
+    1511,
+    574,
+    279,
+    1493,
+    18468,
+    1887,
+    555,
+    84241,
+    679,
+    21,
+    11,
+    16572,
+    1701,
+    279,
+    1890,
+    435,
+    2152,
+    10550,
+    13,
+    128009
+  ],
+  "prediction": "The baseline used was the error detection system by Rei2016, trained using the same FCE dataset.",
+  "score": 55.55555555555556,
+  "metric": "qa_f1_score",
+  "truncated_input": false,
+  "max_new_tokens": 128,
+  "answers": [
+    "error detection system by Rei2016",
+    "error detection system by Rei2016"
+  ],
+  "reused_from": {
+    "path": "/data/phasekv-results/a800_four_gpu_v1/results/snapkv/quality/0be6bb68fce2d6c44a52a86e36a79c83a49998e3293a9e66799bb8d59a73efbc.json",
+    "id": "longbench/qasper/159/8192",
+    "sha256": "d31b589b0e017853ae51d3aaaf22434a60b2ee84e121d10c4015c6f9ad38733b",
+    "protocol_sha256": "48afd59c2cc5a4b72c0c52b607a0b0d43f20bbcd9c8d56650266f2835e3be5b2"
+  }
+}

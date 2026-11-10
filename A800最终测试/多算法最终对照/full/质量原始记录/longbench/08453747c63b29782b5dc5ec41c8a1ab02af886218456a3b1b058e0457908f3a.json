@@ -1,0 +1,49 @@
+{
+  "id": "longbench_full/hotpotqa/de202b6e76dc82831c7f14a6d4346d84b0c0e5e3783356cf",
+  "suite": "longbench",
+  "task": "hotpotqa",
+  "input_sha256": "a31b2a097b4f7b45ce265f6385091633f3c561602d5805f60fcfcc4e46c736f5",
+  "input_tokens": 16254,
+  "max_new_tokens": 32,
+  "truncated_input": false,
+  "original_id": "de202b6e76dc82831c7f14a6d4346d84b0c0e5e3783356cf",
+  "evaluation_split": "heldout",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "894fe36c-c838-d2cb-263d-f64c0813b14c",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 4,
+  "decode_steps": 3,
+  "decoded_tokens": 3,
+  "decode_s": 0.07132100779563189,
+  "aggregate_tokens_per_s": 42.063342803517386,
+  "per_sequence_tokens_per_s": 42.063342803517386,
+  "ttft_s": 2.238244293257594,
+  "prefill_peak_bytes": 18278269440,
+  "decode_peak_bytes": 18250780160,
+  "peak_allocated_bytes": 18278269440,
+  "effective_options": {},
+  "mode": "native",
+  "trace": {
+    "physical_tokens": 16257,
+    "stored_heads": 8
+  },
+  "final_kv_bytes": 2130837504,
+  "status": "ok",
+  "output_ids": [
+    23392,
+    12283,
+    13,
+    128009
+  ],
+  "prediction": "English authors.",
+  "answers": [
+    "writer"
+  ],
+  "score": 0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 2.3146321773529053
+}

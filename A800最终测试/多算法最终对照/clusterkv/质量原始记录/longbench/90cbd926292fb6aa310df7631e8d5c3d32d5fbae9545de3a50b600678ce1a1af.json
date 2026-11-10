@@ -1,0 +1,62 @@
+{
+  "batch": 1,
+  "input_tokens": 11017,
+  "output_tokens_per_row": 8,
+  "decode_steps": 7,
+  "decoded_tokens": 7,
+  "decode_s": 0.1681412048637867,
+  "aggregate_tokens_per_s": 41.631675029751264,
+  "per_sequence_tokens_per_s": 41.631675029751264,
+  "ttft_s": 1.297590358182788,
+  "prefill_peak_bytes": 17955614208,
+  "decode_peak_bytes": 16645806080,
+  "peak_allocated_bytes": 17955614208,
+  "effective_options": {
+    "quality_budget": 256,
+    "speed_budget": 1024,
+    "nlist": "floor(L/80)",
+    "niter": 20,
+    "sink": 16,
+    "window": 320,
+    "window_nlist": 4,
+    "offload": true
+  },
+  "mode": "native",
+  "trace": {
+    "physical_history": 11024,
+    "retrieval_budget": 256,
+    "initial_clusters": 137,
+    "clusters": 137,
+    "cpu_pinned_kv_bytes": 1358192640
+  },
+  "final_kv_bytes": 381526016,
+  "status": "ok",
+  "id": "longbench_full/2wikimqa/fefa6cc344f63fdceda9662af921fdcdf645abb8fe87ea73",
+  "suite": "longbench",
+  "task": "2wikimqa",
+  "input_sha256": "6b33264162c0f747a199a402c83975957de0598a83895f1178b6fe701d923975",
+  "output_ids": [
+    32559,
+    220,
+    868,
+    11,
+    220,
+    3753,
+    20,
+    128009
+  ],
+  "prediction": "August 15, 1985",
+  "score": 0,
+  "metric": "qa_f1_score",
+  "truncated_input": false,
+  "max_new_tokens": 32,
+  "answers": [
+    "Crenshaw"
+  ],
+  "reused_from": {
+    "path": "/data/phasekv-results/a800_four_gpu_v1/results/clusterkv/quality/28af4212727f0d367d689dbf41ceb8cdcfc9c91470ff10dde2d4f19b64aaf907.json",
+    "id": "longbench/2wikimqa/142/16384",
+    "sha256": "cd60a90ec2b4b0ba57f11ded628cdbac29be307666944e96698f837065c231a8",
+    "protocol_sha256": "dad80bcbc8440822bd90a7f7c1ad5fbb96c50187eaccd91d8d15a6f39e351ace"
+  }
+}

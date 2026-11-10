@@ -1,0 +1,56 @@
+{
+  "batch": 1,
+  "input_tokens": 12738,
+  "output_tokens_per_row": 2,
+  "decode_steps": 1,
+  "decoded_tokens": 1,
+  "decode_s": 0.026541451923549175,
+  "aggregate_tokens_per_s": 37.67691394127311,
+  "per_sequence_tokens_per_s": 37.67691394127311,
+  "ttft_s": 1.516397599130869,
+  "prefill_peak_bytes": 18176351232,
+  "decode_peak_bytes": 16662438912,
+  "peak_allocated_bytes": 18176351232,
+  "effective_options": {
+    "quality_budget": 256,
+    "speed_budget": 1024,
+    "nlist": "floor(L/80)",
+    "niter": 20,
+    "sink": 16,
+    "window": 320,
+    "window_nlist": 4,
+    "offload": true
+  },
+  "mode": "native",
+  "trace": {
+    "physical_history": 12739,
+    "retrieval_budget": 256,
+    "initial_clusters": 159,
+    "clusters": 159,
+    "cpu_pinned_kv_bytes": 1569669120
+  },
+  "final_kv_bytes": 395624448,
+  "status": "ok",
+  "id": "longbench_full/hotpotqa/cf16ba255ad4b7b0fdae56093ac7d5fb58487dc24f2659e2",
+  "suite": "longbench",
+  "task": "hotpotqa",
+  "input_sha256": "7435f062ed34e24b8fb14bd746307db18d2c2de90a02e6935238ce9c33b61b6d",
+  "output_ids": [
+    34648,
+    128009
+  ],
+  "prediction": "India",
+  "score": 100.0,
+  "metric": "qa_f1_score",
+  "truncated_input": false,
+  "max_new_tokens": 32,
+  "answers": [
+    "India"
+  ],
+  "reused_from": {
+    "path": "/data/phasekv-results/a800_four_gpu_v1/results/clusterkv/quality/d037172ec49421a78d65e3acc0862b9b858701de29bb0cf9f73dde028c9568f4.json",
+    "id": "longbench/hotpotqa/68/16384",
+    "sha256": "cb3b99feb5439b6929f8af0b9b9b1eaa2889c31c8f5cce5db11170b7c062e20e",
+    "protocol_sha256": "dad80bcbc8440822bd90a7f7c1ad5fbb96c50187eaccd91d8d15a6f39e351ace"
+  }
+}

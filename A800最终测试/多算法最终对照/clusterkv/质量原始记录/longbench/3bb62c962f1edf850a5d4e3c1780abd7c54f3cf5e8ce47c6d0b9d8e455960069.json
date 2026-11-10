@@ -1,0 +1,67 @@
+{
+  "batch": 1,
+  "input_tokens": 12083,
+  "output_tokens_per_row": 13,
+  "decode_steps": 12,
+  "decoded_tokens": 12,
+  "decode_s": 0.2890317579731345,
+  "aggregate_tokens_per_s": 41.517928978293796,
+  "per_sequence_tokens_per_s": 41.517928978293796,
+  "ttft_s": 1.479799959808588,
+  "prefill_peak_bytes": 18090876416,
+  "decode_peak_bytes": 16656810496,
+  "peak_allocated_bytes": 18090876416,
+  "effective_options": {
+    "quality_budget": 256,
+    "speed_budget": 1024,
+    "nlist": "floor(L/80)",
+    "niter": 20,
+    "sink": 16,
+    "window": 320,
+    "window_nlist": 4,
+    "offload": true
+  },
+  "mode": "native",
+  "trace": {
+    "physical_history": 12095,
+    "retrieval_budget": 256,
+    "initial_clusters": 151,
+    "clusters": 151,
+    "cpu_pinned_kv_bytes": 1500979200
+  },
+  "final_kv_bytes": 391045120,
+  "status": "ok",
+  "id": "longbench_full/narrativeqa/5c19d56ccc3fd2563e9d5ff9a5683a6ed8ee9ff506797a01",
+  "suite": "longbench",
+  "task": "narrativeqa",
+  "input_sha256": "a51565aba02b07999f028a9ac5797e59a6a6fb4570f268bcd4c4918b51c36b38",
+  "output_ids": [
+    3947,
+    374,
+    912,
+    3752,
+    7086,
+    423,
+    23361,
+    261,
+    304,
+    279,
+    3446,
+    13,
+    128009
+  ],
+  "prediction": "There is no character named Dwyer in the story.",
+  "score": 0,
+  "metric": "qa_f1_score",
+  "truncated_input": false,
+  "max_new_tokens": 128,
+  "answers": [
+    "Hawaii"
+  ],
+  "reused_from": {
+    "path": "/data/phasekv-results/a800_four_gpu_v1/results/clusterkv/quality/91b1df5df97715ac73cb23fdddb8ac6b3e17ff4cc0c69508800c96a5e8ff5c0f.json",
+    "id": "longbench/narrativeqa/135/16384",
+    "sha256": "405c373155724ae2295b68a81f877faee6a1665b4bcef3adbad5444d57ddbfe2",
+    "protocol_sha256": "dad80bcbc8440822bd90a7f7c1ad5fbb96c50187eaccd91d8d15a6f39e351ace"
+  }
+}

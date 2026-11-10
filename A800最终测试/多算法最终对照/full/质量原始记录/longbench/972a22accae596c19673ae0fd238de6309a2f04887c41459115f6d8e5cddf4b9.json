@@ -1,0 +1,50 @@
+{
+  "id": "longbench_full/multifieldqa_en/b16c38bf627891a3bf60ee57f9f3c2f5730f4ea3a0f44b0e",
+  "suite": "longbench",
+  "task": "multifieldqa_en",
+  "input_sha256": "45faed4e829c0098f3d32c738a7c495d28bddeefe098914a87576c4fcca3f7ee",
+  "input_tokens": 8800,
+  "max_new_tokens": 64,
+  "truncated_input": false,
+  "original_id": "b16c38bf627891a3bf60ee57f9f3c2f5730f4ea3a0f44b0e",
+  "evaluation_split": "heldout",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "894fe36c-c838-d2cb-263d-f64c0813b14c",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 5,
+  "decode_steps": 4,
+  "decoded_tokens": 4,
+  "decode_s": 0.08787427749484777,
+  "aggregate_tokens_per_s": 45.519577674303235,
+  "per_sequence_tokens_per_s": 45.519577674303235,
+  "ttft_s": 1.0667574955150485,
+  "prefill_peak_bytes": 17338685952,
+  "decode_peak_bytes": 17295673344,
+  "peak_allocated_bytes": 17338685952,
+  "effective_options": {},
+  "mode": "native",
+  "trace": {
+    "physical_tokens": 8804,
+    "stored_heads": 8
+  },
+  "final_kv_bytes": 1153957888,
+  "status": "ok",
+  "output_ids": [
+    15335,
+    31412,
+    5865,
+    13,
+    128009
+  ],
+  "prediction": "Power-law functions.",
+  "answers": [
+    "Power-law functions."
+  ],
+  "score": 100.0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 1.1601018905639648
+}

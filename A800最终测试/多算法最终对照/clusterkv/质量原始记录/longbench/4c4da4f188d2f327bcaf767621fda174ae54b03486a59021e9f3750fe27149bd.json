@@ -1,0 +1,59 @@
+{
+  "batch": 1,
+  "input_tokens": 15279,
+  "output_tokens_per_row": 5,
+  "decode_steps": 4,
+  "decoded_tokens": 4,
+  "decode_s": 0.09960679523646832,
+  "aggregate_tokens_per_s": 40.15790278669169,
+  "per_sequence_tokens_per_s": 40.15790278669169,
+  "ttft_s": 1.8210396794602275,
+  "prefill_peak_bytes": 18506239488,
+  "decode_peak_bytes": 16689180160,
+  "peak_allocated_bytes": 18506239488,
+  "effective_options": {
+    "quality_budget": 256,
+    "speed_budget": 1024,
+    "nlist": "floor(L/80)",
+    "niter": 20,
+    "sink": 16,
+    "window": 320,
+    "window_nlist": 4,
+    "offload": true
+  },
+  "mode": "native",
+  "trace": {
+    "physical_history": 15283,
+    "retrieval_budget": 256,
+    "initial_clusters": 190,
+    "clusters": 190,
+    "cpu_pinned_kv_bytes": 1881907200
+  },
+  "final_kv_bytes": 416440320,
+  "status": "ok",
+  "id": "longbench_full/hotpotqa/d3b2acfdec13f925424cd7d96b689557edfd08e6dd6177b7",
+  "suite": "longbench",
+  "task": "hotpotqa",
+  "input_sha256": "49a9de647b2f44e719e049a5ced344938c68e5348b4ef881596c1a28631083ea",
+  "output_ids": [
+    27368,
+    3058,
+    3489,
+    352,
+    128009
+  ],
+  "prediction": "Brothers Quay",
+  "score": 100.0,
+  "metric": "qa_f1_score",
+  "truncated_input": false,
+  "max_new_tokens": 32,
+  "answers": [
+    "Brothers Quay"
+  ],
+  "reused_from": {
+    "path": "/data/phasekv-results/a800_four_gpu_v1/results/clusterkv/quality/07d8cd9e71eb7ed1ac231c68bf4cdfb68d0b9945dac041c0726f31d0128e248a.json",
+    "id": "longbench/hotpotqa/186/16384",
+    "sha256": "bc624e768299a69452f84148daf9f53375cca51a91c9ee72846a5a5ab1fd8f32",
+    "protocol_sha256": "dad80bcbc8440822bd90a7f7c1ad5fbb96c50187eaccd91d8d15a6f39e351ace"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "id": "longbench_full/narrativeqa/a1d871fbe70ac6b9dcec5a8c89c6bf0cf26230b0b4f1968b",
+  "suite": "longbench",
+  "task": "narrativeqa",
+  "input_sha256": "d2de704f9767b8dbb51db9507601044f61123401fec46f85a953ac4d8621df0c",
+  "input_tokens": 11424,
+  "max_new_tokens": 128,
+  "truncated_input": false,
+  "original_id": "a1d871fbe70ac6b9dcec5a8c89c6bf0cf26230b0b4f1968b",
+  "evaluation_split": "historical_retest",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "a27c1696-6220-782b-cd7e-3e233c3097a2",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 10,
+  "decode_steps": 9,
+  "decoded_tokens": 9,
+  "decode_s": 0.4852513913065195,
+  "aggregate_tokens_per_s": 18.54708747102789,
+  "per_sequence_tokens_per_s": 18.54708747102789,
+  "ttft_s": 1.1995133515447378,
+  "prefill_peak_bytes": 17827502080,
+  "decode_peak_bytes": 16471020544,
+  "peak_allocated_bytes": 17827502080,
+  "effective_options": {
+    "M": 64,
+    "nbits": 8,
+    "bits_per_scalar": 4,
+    "quality_residual": 0,
+    "speed_residual": 128,
+    "codebooks": {
+      "model_config": "29e4c210b0d6ac178b16b2a255a568bdb23b581e50ca1ef6a6d071dd85704e6e",
+      "weights_index": "146776fce3f6db1103aa6f249e65ee5544c5923ce6f971b092eee79aa6e5d37b",
+      "calibration_sha256": "e83889baabc497075506f91975be5fac0d45c5290b6b20582c8cd1e853d0c9f7",
+      "seed": 42,
+      "M": 64,
+      "nbits": 8,
+      "recipe": "WikiText-2-raw-v1 train only; 16 seeded 4096-token windows; 128 vectors per layer per window; 65536 vectors per side; separate K/V dictionaries shared across layers; FAISS IndexPQ 25 iterations",
+      "blocks": [
+        6,
+        549,
+        30,
+        274,
+        100,
+        209,
+        466,
+        38,
+        442,
+        497,
+        308,
+        197,
+        488,
+        570,
+        525,
+        565
+      ],
+      "key": "fdf0b35e29433139bc0e166a7bde84cfd7591c1c13fb81f6dcea380d704f8ca3",
+      "vectors_per_codebook": 65536,
+      "value": "cbf802aa35666c350a54a881c931ea03ca533db305ccb036480f8a735b5bf365"
+    }
+  },
+  "mode": "native",
+  "trace": {
+    "pq_tokens": 11433,
+    "code_dtype": "torch.uint8"
+  },
+  "final_kv_bytes": 391413760,
+  "status": "ok",
+  "output_ids": [
+    1548,
+    2795,
+    41046,
+    283,
+    374,
+    264,
+    7060,
+    10255,
+    13,
+    128009
+  ],
+  "prediction": "He says Grassou is a fine artist.",
+  "answers": [
+    "A grand master."
+  ],
+  "score": 0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 1.6902000904083252
+}

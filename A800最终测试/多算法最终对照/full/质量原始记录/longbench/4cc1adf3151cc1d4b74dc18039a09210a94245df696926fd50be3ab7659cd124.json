@@ -1,0 +1,50 @@
+{
+  "id": "longbench_full/2wikimqa/43cf26663f3b4cec7a8ea68d56909201a2d1b1ad82512190",
+  "suite": "longbench",
+  "task": "2wikimqa",
+  "input_sha256": "79f69f1486efc2958a45b6a6dadd4bdd900195bbeed1e7fa2e62276e8edb00c2",
+  "input_tokens": 7647,
+  "max_new_tokens": 32,
+  "truncated_input": false,
+  "original_id": "43cf26663f3b4cec7a8ea68d56909201a2d1b1ad82512190",
+  "evaluation_split": "heldout",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "894fe36c-c838-d2cb-263d-f64c0813b14c",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 5,
+  "decode_steps": 4,
+  "decoded_tokens": 4,
+  "decode_s": 0.08622378017753363,
+  "aggregate_tokens_per_s": 46.390914336672004,
+  "per_sequence_tokens_per_s": 46.390914336672004,
+  "ttft_s": 0.8818844789639115,
+  "prefill_peak_bytes": 17133008384,
+  "decode_peak_bytes": 17088173056,
+  "peak_allocated_bytes": 17133008384,
+  "effective_options": {},
+  "mode": "native",
+  "trace": {
+    "physical_tokens": 7651,
+    "stored_heads": 8
+  },
+  "final_kv_bytes": 1002831872,
+  "status": "ok",
+  "output_ids": [
+    2149,
+    74,
+    2319,
+    337,
+    128009
+  ],
+  "prediction": "Alkohol",
+  "answers": [
+    "Alkohol"
+  ],
+  "score": 100.0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 0.9730391502380371
+}

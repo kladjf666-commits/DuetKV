@@ -1,0 +1,61 @@
+{
+  "batch": 1,
+  "input_tokens": 7202,
+  "output_tokens_per_row": 7,
+  "decode_steps": 6,
+  "decoded_tokens": 6,
+  "decode_s": 0.14351846743375063,
+  "aggregate_tokens_per_s": 41.806466493725985,
+  "per_sequence_tokens_per_s": 41.806466493725985,
+  "ttft_s": 0.7851716913282871,
+  "prefill_peak_bytes": 17460228608,
+  "decode_peak_bytes": 16605983232,
+  "peak_allocated_bytes": 17460228608,
+  "effective_options": {
+    "quality_budget": 256,
+    "speed_budget": 1024,
+    "nlist": "floor(L/80)",
+    "niter": 20,
+    "sink": 16,
+    "window": 320,
+    "window_nlist": 4,
+    "offload": true
+  },
+  "mode": "native",
+  "trace": {
+    "physical_history": 7208,
+    "retrieval_budget": 256,
+    "initial_clusters": 90,
+    "clusters": 90,
+    "cpu_pinned_kv_bytes": 889405440
+  },
+  "final_kv_bytes": 350273536,
+  "status": "ok",
+  "id": "longbench_full/2wikimqa/bbaa4eb6b32bad24fc2b8639d03be8c16d1140ec8454b16a",
+  "suite": "longbench",
+  "task": "2wikimqa",
+  "input_sha256": "d8fc4be46c19257d76e9f41c274a0ad830e2d47bb585071431cd08a37115aadc",
+  "output_ids": [
+    37,
+    978,
+    15401,
+    4997,
+    275,
+    52009,
+    128009
+  ],
+  "prediction": "Félix Robitaille",
+  "score": 50.0,
+  "metric": "qa_f1_score",
+  "truncated_input": false,
+  "max_new_tokens": 32,
+  "answers": [
+    "Félix Leclerc"
+  ],
+  "reused_from": {
+    "path": "/data/phasekv-results/a800_four_gpu_v1/results/clusterkv/quality/95b0462109a5d62348735c5db9adde06f6beed532875a2a6ce81b073efcd1037.json",
+    "id": "longbench/2wikimqa/155/8192",
+    "sha256": "bc4b88eb02a53e39a232fc92071ff28266e6e9fdcf20f7bbe85067044a72128f",
+    "protocol_sha256": "dad80bcbc8440822bd90a7f7c1ad5fbb96c50187eaccd91d8d15a6f39e351ace"
+  }
+}

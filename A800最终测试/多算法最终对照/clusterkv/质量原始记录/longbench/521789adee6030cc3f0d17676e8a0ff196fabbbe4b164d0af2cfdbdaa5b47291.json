@@ -1,0 +1,58 @@
+{
+  "batch": 1,
+  "input_tokens": 16063,
+  "output_tokens_per_row": 4,
+  "decode_steps": 3,
+  "decoded_tokens": 3,
+  "decode_s": 0.07544811256229877,
+  "aggregate_tokens_per_s": 39.76242609810616,
+  "per_sequence_tokens_per_s": 39.76242609810616,
+  "ttft_s": 1.88264378067106,
+  "prefill_peak_bytes": 18608155648,
+  "decode_peak_bytes": 16696717824,
+  "peak_allocated_bytes": 18608155648,
+  "effective_options": {
+    "quality_budget": 256,
+    "speed_budget": 1024,
+    "nlist": "floor(L/80)",
+    "niter": 20,
+    "sink": 16,
+    "window": 320,
+    "window_nlist": 4,
+    "offload": true
+  },
+  "mode": "native",
+  "trace": {
+    "physical_history": 16066,
+    "retrieval_budget": 256,
+    "initial_clusters": 200,
+    "clusters": 200,
+    "cpu_pinned_kv_bytes": 1978245120
+  },
+  "final_kv_bytes": 422862848,
+  "status": "ok",
+  "id": "longbench_full/hotpotqa/72a769d6d0fd1c5c90974e60ab97e88e6853b9115a7fb85e",
+  "suite": "longbench",
+  "task": "hotpotqa",
+  "input_sha256": "7e7faeb686a4f76f125547c2d8eff1ab6a22c0995dc0d5ee3a26dc5c1ff12c29",
+  "output_ids": [
+    55,
+    3757,
+    12634,
+    128009
+  ],
+  "prediction": "Xcel Energy",
+  "score": 80.0,
+  "metric": "qa_f1_score",
+  "truncated_input": false,
+  "max_new_tokens": 32,
+  "answers": [
+    "Xcel Energy Inc."
+  ],
+  "reused_from": {
+    "path": "/data/phasekv-results/a800_four_gpu_v1/results/clusterkv/quality/74061c19e0d9355a6cb96e38bd37f87a43f3ae442dd08ec9b7d67c78d562c844.json",
+    "id": "longbench/hotpotqa/38/16384",
+    "sha256": "5a30e69bea6dda5df3010641816defb786959003079a61ebf6a25ed01514d319",
+    "protocol_sha256": "dad80bcbc8440822bd90a7f7c1ad5fbb96c50187eaccd91d8d15a6f39e351ace"
+  }
+}

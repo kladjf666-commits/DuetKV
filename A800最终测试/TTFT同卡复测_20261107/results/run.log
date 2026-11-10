@@ -1,0 +1,11 @@
+You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [01:18<03:54, 78.19s/it]Loading checkpoint shards:  50%|█████     | 2/4 [01:38<01:28, 44.40s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [02:08<00:37, 37.72s/it]Loading checkpoint shards: 100%|██████████| 4/4 [02:59<00:00, 42.95s/it]Loading checkpoint shards: 100%|██████████| 4/4 [02:59<00:00, 44.92s/it]
+2026-11-07T13:39:54.243382+00:00 8192+256_B1 pair 1 TTFT baseline/optimized 1.0340547579107806 1.0187780359992757
+2026-11-07T13:40:08.477828+00:00 8192+256_B1 pair 2 TTFT baseline/optimized 1.0198453990742564 1.0199074109550565
+2026-11-07T13:40:22.893449+00:00 8192+256_B1 pair 3 TTFT baseline/optimized 1.0250870959134772 1.0203075809404254
+2026-11-07T13:45:17.478654+00:00 32768+256_B8 pair 1 TTFT baseline/optimized 48.427829053020105 48.45696736604441
+2026-11-07T13:47:43.983070+00:00 32768+256_B8 pair 2 TTFT baseline/optimized 47.66123033803888 48.22237343899906
+2026-11-07T13:50:11.428634+00:00 32768+256_B8 pair 3 TTFT baseline/optimized 48.64741352410056 48.05757361697033
+2026-11-07T13:50:14.945289+00:00 8192+256_B1 diagnostics complete
+2026-11-07T13:52:32.844921+00:00 32768+256_B8 diagnostics complete
+COMPLETE 2026-11-07T13:52:32.909142+00:00

@@ -1,0 +1,23 @@
+{
+  "id": "longbench_full/qmsum/cbbd3e6a889f75b2b93a57e125690b10a6ca00e754965b27",
+  "suite": "longbench",
+  "task": "qmsum",
+  "input_sha256": "8a6fa0d2b58923eab61d5e5970f3e3c382dff1c593f62057837be6817f4e40a0",
+  "input_tokens": 26179,
+  "max_new_tokens": 512,
+  "truncated_input": false,
+  "original_id": "cbbd3e6a889f75b2b93a57e125690b10a6ca00e754965b27",
+  "evaluation_split": "historical_retest",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "3d68f21e-bb96-d4f6-f517-dd7465632716",
+    "capacity": 85094825984
+  },
+  "status": "oom",
+  "message": "CUDA out of memory. Tried to allocate 40.85 GiB. GPU 0 has a total capacity of 79.25 GiB of which 21.76 GiB is free. Including non-PyTorch memory, this process has 57.48 GiB memory in use. Of the allocated memory 56.84 GiB is allocated by PyTorch, and 147.81 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)",
+  "at": {
+    "stage": "prefill"
+  },
+  "peak_allocated_bytes": 61031512576,
+  "wall_s": 0.8622009754180908
+}

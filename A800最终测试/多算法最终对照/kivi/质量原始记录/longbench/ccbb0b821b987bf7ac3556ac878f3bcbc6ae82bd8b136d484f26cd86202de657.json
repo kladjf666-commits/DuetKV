@@ -1,0 +1,58 @@
+{
+  "id": "longbench_full/2wikimqa/435fae9b23d8b22e85a57cfd8ceb8541dea5b0c551acc3a9",
+  "suite": "longbench",
+  "task": "2wikimqa",
+  "input_sha256": "a89185fbbc32ce7b7d516ba695e0d2adc447f4db1c5e284667b7f3b4c053d751",
+  "input_tokens": 10306,
+  "max_new_tokens": 32,
+  "truncated_input": false,
+  "original_id": "435fae9b23d8b22e85a57cfd8ceb8541dea5b0c551acc3a9",
+  "evaluation_split": "heldout",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "3d68f21e-bb96-d4f6-f517-dd7465632716",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 6,
+  "decode_steps": 5,
+  "decoded_tokens": 5,
+  "decode_s": 0.21174347586929798,
+  "aggregate_tokens_per_s": 23.613478429372385,
+  "per_sequence_tokens_per_s": 23.613478429372385,
+  "ttft_s": 1.189159620553255,
+  "prefill_peak_bytes": 17559367680,
+  "decode_peak_bytes": 16475350528,
+  "peak_allocated_bytes": 17559367680,
+  "effective_options": {
+    "k_bits": 2,
+    "v_bits": 2,
+    "group_size": 32,
+    "residual_length": 128,
+    "use_flash": true
+  },
+  "mode": "native",
+  "trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 10311
+  },
+  "final_kv_bytes": 263999488,
+  "status": "ok",
+  "output_ids": [
+    2822,
+    59984,
+    763,
+    578,
+    6825,
+    128009
+  ],
+  "prediction": "No Trees In The Street",
+  "answers": [
+    "No Trees In The Street"
+  ],
+  "score": 100.0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 1.4072637557983398
+}

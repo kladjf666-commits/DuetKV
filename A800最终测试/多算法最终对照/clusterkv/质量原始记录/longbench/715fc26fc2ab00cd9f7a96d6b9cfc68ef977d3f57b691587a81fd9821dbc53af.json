@@ -1,0 +1,62 @@
+{
+  "batch": 1,
+  "input_tokens": 5676,
+  "output_tokens_per_row": 7,
+  "decode_steps": 6,
+  "decoded_tokens": 6,
+  "decode_s": 0.14748678170144558,
+  "aggregate_tokens_per_s": 40.68161180807155,
+  "per_sequence_tokens_per_s": 40.68161180807155,
+  "ttft_s": 0.613803381100297,
+  "prefill_peak_bytes": 17266665472,
+  "decode_peak_bytes": 16591190016,
+  "peak_allocated_bytes": 17266665472,
+  "effective_options": {
+    "quality_budget": 256,
+    "speed_budget": 1024,
+    "nlist": "floor(L/80)",
+    "niter": 20,
+    "sink": 16,
+    "window": 320,
+    "window_nlist": 4,
+    "offload": true
+  },
+  "mode": "native",
+  "trace": {
+    "physical_history": 5682,
+    "retrieval_budget": 256,
+    "initial_clusters": 70,
+    "clusters": 70,
+    "cpu_pinned_kv_bytes": 713687040
+  },
+  "final_kv_bytes": 338558976,
+  "status": "ok",
+  "id": "longbench_full/qasper/5f7af98db66df4388108e26cde4781423ca2580bb48de4fa",
+  "suite": "longbench",
+  "task": "qasper",
+  "input_sha256": "2f18b2259ba10a5020d98512ee0cefde86d85ca54e4b18b6b9b660ff528cf91d",
+  "output_ids": [
+    791,
+    328,
+    2232,
+    1846,
+    10550,
+    13,
+    128009
+  ],
+  "prediction": "The SQuAD dataset.",
+  "score": 66.66666666666666,
+  "metric": "qa_f1_score",
+  "truncated_input": false,
+  "max_new_tokens": 128,
+  "answers": [
+    "SQuAD",
+    "SQuAD"
+  ],
+  "reused_from": {
+    "path": "/data/phasekv-results/a800_four_gpu_v1/results/clusterkv/quality/a6bf70d49e750ad27f96d60503f68b0322c533676cc509131969caad866c38a1.json",
+    "id": "longbench/qasper/90/8192",
+    "sha256": "e36fc3283469022d26d1ebc8623413b55938151d8fd093788c0c945176ced032",
+    "protocol_sha256": "dad80bcbc8440822bd90a7f7c1ad5fbb96c50187eaccd91d8d15a6f39e351ace"
+  }
+}

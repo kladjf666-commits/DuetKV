@@ -1,0 +1,58 @@
+{
+  "id": "longbench_full/narrativeqa/e3828e0aa23a133903295abea7fdf8d449ce1edf2f202593",
+  "suite": "longbench",
+  "task": "narrativeqa",
+  "input_sha256": "05ba40eee45cbb338674a11000fbb61a91e1a6fdc00be625a437eec777b75eed",
+  "input_tokens": 38218,
+  "max_new_tokens": 128,
+  "truncated_input": false,
+  "original_id": "e3828e0aa23a133903295abea7fdf8d449ce1edf2f202593",
+  "evaluation_split": "historical_retest",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "3d68f21e-bb96-d4f6-f517-dd7465632716",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 6,
+  "decode_steps": 5,
+  "decoded_tokens": 5,
+  "decode_s": 0.23411421664059162,
+  "aggregate_tokens_per_s": 21.35709685531793,
+  "per_sequence_tokens_per_s": 21.35709685531793,
+  "ttft_s": 4.773816876113415,
+  "prefill_peak_bytes": 21565423616,
+  "decode_peak_bytes": 17513360896,
+  "peak_allocated_bytes": 21565423616,
+  "effective_options": {
+    "k_bits": 2,
+    "v_bits": 2,
+    "group_size": 32,
+    "residual_length": 128,
+    "use_flash": true
+  },
+  "mode": "native",
+  "trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 38223
+  },
+  "final_kv_bytes": 950390784,
+  "status": "ok",
+  "output_ids": [
+    49,
+    952,
+    40715,
+    14724,
+    13,
+    128009
+  ],
+  "prediction": "Ruth Honeywill.",
+  "answers": [
+    "Ruth Honeywill"
+  ],
+  "score": 100.0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 5.015536069869995
+}

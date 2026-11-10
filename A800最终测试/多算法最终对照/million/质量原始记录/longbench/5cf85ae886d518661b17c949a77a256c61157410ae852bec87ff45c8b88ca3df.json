@@ -1,0 +1,85 @@
+{
+  "id": "longbench_full/qasper/6a78dbe4f8e30d35c13ea1f80e52df286f9e1f664f9c3d98",
+  "suite": "longbench",
+  "task": "qasper",
+  "input_sha256": "6000121337f792da4f1a56e9125ff60583a7e4d04ac7bb26f5ec7309d70f5ed5",
+  "input_tokens": 2150,
+  "max_new_tokens": 128,
+  "truncated_input": false,
+  "original_id": "6a78dbe4f8e30d35c13ea1f80e52df286f9e1f664f9c3d98",
+  "evaluation_split": "heldout",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "a27c1696-6220-782b-cd7e-3e233c3097a2",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 3,
+  "decode_steps": 2,
+  "decoded_tokens": 2,
+  "decode_s": 0.1054929718375206,
+  "aggregate_tokens_per_s": 18.958608949612145,
+  "per_sequence_tokens_per_s": 18.958608949612145,
+  "ttft_s": 0.22951896954327822,
+  "prefill_peak_bytes": 16431534592,
+  "decode_peak_bytes": 16180275200,
+  "peak_allocated_bytes": 16431534592,
+  "effective_options": {
+    "M": 64,
+    "nbits": 8,
+    "bits_per_scalar": 4,
+    "quality_residual": 0,
+    "speed_residual": 128,
+    "codebooks": {
+      "model_config": "29e4c210b0d6ac178b16b2a255a568bdb23b581e50ca1ef6a6d071dd85704e6e",
+      "weights_index": "146776fce3f6db1103aa6f249e65ee5544c5923ce6f971b092eee79aa6e5d37b",
+      "calibration_sha256": "e83889baabc497075506f91975be5fac0d45c5290b6b20582c8cd1e853d0c9f7",
+      "seed": 42,
+      "M": 64,
+      "nbits": 8,
+      "recipe": "WikiText-2-raw-v1 train only; 16 seeded 4096-token windows; 128 vectors per layer per window; 65536 vectors per side; separate K/V dictionaries shared across layers; FAISS IndexPQ 25 iterations",
+      "blocks": [
+        6,
+        549,
+        30,
+        274,
+        100,
+        209,
+        466,
+        38,
+        442,
+        497,
+        308,
+        197,
+        488,
+        570,
+        525,
+        565
+      ],
+      "key": "fdf0b35e29433139bc0e166a7bde84cfd7591c1c13fb81f6dcea380d704f8ca3",
+      "vectors_per_codebook": 65536,
+      "value": "cbf802aa35666c350a54a881c931ea03ca533db305ccb036480f8a735b5bf365"
+    }
+  },
+  "mode": "native",
+  "trace": {
+    "pq_tokens": 2152,
+    "code_dtype": "torch.uint8"
+  },
+  "final_kv_bytes": 87293952,
+  "status": "ok",
+  "output_ids": [
+    9642,
+    13,
+    128009
+  ],
+  "prediction": "Yes.",
+  "answers": [
+    "Yes",
+    "Yes"
+  ],
+  "score": 100.0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 0.3394594192504883
+}

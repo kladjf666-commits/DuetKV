@@ -1,0 +1,52 @@
+{
+  "id": "longbench_full/2wikimqa/b8ffb375e75ee2976b8825d05d48c34638c7ffeb6d67baff",
+  "suite": "longbench",
+  "task": "2wikimqa",
+  "input_sha256": "095952997fff9780d4a413e0b070a50cbcc6adba897aba50a4ea9dbd20a8d20a",
+  "input_tokens": 4998,
+  "max_new_tokens": 32,
+  "truncated_input": false,
+  "original_id": "b8ffb375e75ee2976b8825d05d48c34638c7ffeb6d67baff",
+  "evaluation_split": "heldout",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "894fe36c-c838-d2cb-263d-f64c0813b14c",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 7,
+  "decode_steps": 6,
+  "decoded_tokens": 6,
+  "decode_s": 0.13200676627457142,
+  "aggregate_tokens_per_s": 45.452215589616976,
+  "per_sequence_tokens_per_s": 45.452215589616976,
+  "ttft_s": 0.5576471854001284,
+  "prefill_peak_bytes": 16775237120,
+  "decode_peak_bytes": 16735784448,
+  "peak_allocated_bytes": 16775237120,
+  "effective_options": {},
+  "mode": "native",
+  "trace": {
+    "physical_tokens": 5004,
+    "stored_heads": 8
+  },
+  "final_kv_bytes": 655884288,
+  "status": "ok",
+  "output_ids": [
+    37,
+    944,
+    4988,
+    54297,
+    2483,
+    55506,
+    128009
+  ],
+  "prediction": "Fernando Flaínez",
+  "answers": [
+    "Flaín Muñoz"
+  ],
+  "score": 0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 0.694303035736084
+}

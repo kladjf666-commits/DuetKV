@@ -1,0 +1,58 @@
+{
+  "id": "longbench_full/hotpotqa/4c34b33d7a545c4eba3848d54fc4568fdf186e849897aa6e",
+  "suite": "longbench",
+  "task": "hotpotqa",
+  "input_sha256": "d4eb52fde0c675ce47720eaa9cdac002c29cc1755e2e071573f59b7fa52884f3",
+  "input_tokens": 12063,
+  "max_new_tokens": 32,
+  "truncated_input": false,
+  "original_id": "4c34b33d7a545c4eba3848d54fc4568fdf186e849897aa6e",
+  "evaluation_split": "heldout",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "3d68f21e-bb96-d4f6-f517-dd7465632716",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 4,
+  "decode_steps": 3,
+  "decoded_tokens": 3,
+  "decode_s": 0.08438379038125277,
+  "aggregate_tokens_per_s": 35.551851682008575,
+  "per_sequence_tokens_per_s": 35.551851682008575,
+  "ttft_s": 5.937307793647051,
+  "prefill_peak_bytes": 54968093696,
+  "decode_peak_bytes": 17161830400,
+  "peak_allocated_bytes": 54968093696,
+  "effective_options": {
+    "max_capacity_prompt": 2048,
+    "window_size": 8,
+    "kernel_size": 7,
+    "pooling": "maxpool",
+    "decoding_window_size": 512,
+    "decoding_recent_size": 256,
+    "decoding_metric": "None",
+    "delta": 1
+  },
+  "mode": "prefill_only_short_output_boundary",
+  "trace": {
+    "physical_tokens": 2051,
+    "stored_heads": 32
+  },
+  "final_kv_bytes": 1075314688,
+  "status": "ok",
+  "output_ids": [
+    36,
+    91794,
+    97084,
+    128009
+  ],
+  "prediction": "Eileen Atkins",
+  "answers": [
+    "Dame Eileen June Atkins"
+  ],
+  "score": 66.66666666666666,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 6.026981353759766
+}

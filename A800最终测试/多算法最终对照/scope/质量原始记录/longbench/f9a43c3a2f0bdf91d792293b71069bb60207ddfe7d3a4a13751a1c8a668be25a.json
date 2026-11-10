@@ -1,0 +1,73 @@
+{
+  "id": "longbench_full/qasper/03e03cd498cae30eb47667209de54bfe6545647ddfe4457d",
+  "suite": "longbench",
+  "task": "qasper",
+  "input_sha256": "fc28a35e41f25d0559a288c5edcf4fa8821dd49341fe799ede309c9800f98d57",
+  "input_tokens": 4290,
+  "max_new_tokens": 128,
+  "truncated_input": false,
+  "original_id": "03e03cd498cae30eb47667209de54bfe6545647ddfe4457d",
+  "evaluation_split": "heldout",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "3d68f21e-bb96-d4f6-f517-dd7465632716",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 18,
+  "decode_steps": 17,
+  "decoded_tokens": 17,
+  "decode_s": 0.4722523568198085,
+  "aggregate_tokens_per_s": 35.997702826682726,
+  "per_sequence_tokens_per_s": 35.997702826682726,
+  "ttft_s": 0.8602220620959997,
+  "prefill_peak_bytes": 22041468928,
+  "decode_peak_bytes": 17169230336,
+  "peak_allocated_bytes": 22041468928,
+  "effective_options": {
+    "max_capacity_prompt": 2048,
+    "window_size": 8,
+    "kernel_size": 7,
+    "pooling": "maxpool",
+    "decoding_window_size": 512,
+    "decoding_recent_size": 256,
+    "decoding_metric": "None",
+    "delta": 1
+  },
+  "mode": "prefill_only_short_output_boundary",
+  "trace": {
+    "physical_tokens": 2065,
+    "stored_heads": 32
+  },
+  "final_kv_bytes": 1082654720,
+  "status": "ok",
+  "output_ids": [
+    32,
+    1633,
+    4382,
+    72810,
+    31649,
+    34465,
+    449,
+    264,
+    3254,
+    4668,
+    25,
+    279,
+    3160,
+    315,
+    279,
+    11914,
+    13,
+    128009
+  ],
+  "prediction": "A very simple logistic regression classifier with a single feature: the length of the sentence.",
+  "answers": [
+    "The baseline system for the SLC task is a very simple logistic regression classifier with default parameters. The baseline for the FLC task generates spans and selects one of the 18 techniques randomly.",
+    "SLC task is a very simple logistic regression classifier, FLC task generates spans and selects one of the 18 techniques randomly"
+  ],
+  "score": 40.0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 1.342482089996338
+}

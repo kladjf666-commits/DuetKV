@@ -1,0 +1,58 @@
+{
+  "experiment": "f0978339d0a325437614fddfe0ff8a3a51443e541b5945f3df89bf87cdc759e5",
+  "arm": "optimized",
+  "role": "speed",
+  "case": [
+    8192,
+    2048,
+    2
+  ],
+  "formal_round": 1,
+  "input_tokens": 8192,
+  "output_tokens_per_row": 2048,
+  "batch": 2,
+  "decode_steps": 2047,
+  "decoded_tokens": 4094,
+  "decode_s": 51.57190353795886,
+  "aggregate_tokens_per_s": 79.38431043148644,
+  "per_sequence_tokens_per_s": 39.69215521574322,
+  "prefill_peak_bytes": 18651233280,
+  "decode_peak_bytes": 17032362496,
+  "peak_allocated_bytes": 18651233280,
+  "gpu_uuid": "GPU-ea44ae7b-86ae-e9a0-907c-8e8e655077d2",
+  "status": "ok",
+  "input_sha256": [
+    "91d7a9999c6c84ae4ea01ffde7954083f05e1043e63a755d9cfda6183a5e0046",
+    "74333fb5c25bdeb42235fab77b2f7aaca5a709be36655459ec3b908e548c579b"
+  ],
+  "output_sha256": "48d3e2b05f0d4ab063b4beb5bd42352778d30e639496574743b372409b79796a",
+  "bank_row_indices": [
+    0,
+    1
+  ],
+  "effective_options": {
+    "prefill_keep_ratio": 0.9,
+    "decode_keep_ratio": 0.8,
+    "prompt_bits": 4,
+    "cold_bits": 4,
+    "recent_window": 128,
+    "obs_window": 32,
+    "group_size": 32,
+    "lazy_g": 16,
+    "sink_tokens": 0,
+    "optimizations": {
+      "fused_quantize": true,
+      "reuse_workspace": true,
+      "paged_cold": true,
+      "page_slots": 32,
+      "cold_group": 8,
+      "specialized_4bit": true,
+      "gqa_reuse": true,
+      "hot_ring": true,
+      "channel_contiguous_k": true,
+      "a800_prompt_mma": true
+    }
+  },
+  "source_record_sha256": "10d23eaee0e79d986bff7960ac213dddf44875d8c53fe26fb0f6ca200a5c81c7",
+  "record_kind": "measurement_excerpt_without_final_KV_or_generated_text"
+}

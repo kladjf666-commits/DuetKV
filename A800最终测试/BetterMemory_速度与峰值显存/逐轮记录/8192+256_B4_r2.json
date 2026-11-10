@@ -1,0 +1,62 @@
+{
+  "experiment": "f0978339d0a325437614fddfe0ff8a3a51443e541b5945f3df89bf87cdc759e5",
+  "arm": "optimized",
+  "role": "speed",
+  "case": [
+    8192,
+    256,
+    4
+  ],
+  "formal_round": 2,
+  "input_tokens": 8192,
+  "output_tokens_per_row": 256,
+  "batch": 4,
+  "decode_steps": 255,
+  "decoded_tokens": 1020,
+  "decode_s": 7.0397123992443085,
+  "aggregate_tokens_per_s": 144.89228283097103,
+  "per_sequence_tokens_per_s": 36.22307070774276,
+  "prefill_peak_bytes": 21239978496,
+  "decode_peak_bytes": 17611525120,
+  "peak_allocated_bytes": 21239978496,
+  "gpu_uuid": "GPU-ea44ae7b-86ae-e9a0-907c-8e8e655077d2",
+  "status": "ok",
+  "input_sha256": [
+    "91d7a9999c6c84ae4ea01ffde7954083f05e1043e63a755d9cfda6183a5e0046",
+    "74333fb5c25bdeb42235fab77b2f7aaca5a709be36655459ec3b908e548c579b",
+    "74a7bc8cdbb35bb1c21f2a4387b7c2334ac1b26882a98d3359227362f3bfb56a",
+    "342dc8c836fcf6c70d2802a1b3ec6cc05c20abdd48bf5da3ec077657bb86751f"
+  ],
+  "output_sha256": "95b7f02d218f988a51e37e0eb422f29278cc30c1050fe6c9f5c96c77168e65af",
+  "bank_row_indices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "effective_options": {
+    "prefill_keep_ratio": 0.9,
+    "decode_keep_ratio": 0.8,
+    "prompt_bits": 4,
+    "cold_bits": 4,
+    "recent_window": 128,
+    "obs_window": 32,
+    "group_size": 32,
+    "lazy_g": 16,
+    "sink_tokens": 0,
+    "optimizations": {
+      "fused_quantize": true,
+      "reuse_workspace": true,
+      "paged_cold": true,
+      "page_slots": 32,
+      "cold_group": 8,
+      "specialized_4bit": true,
+      "gqa_reuse": true,
+      "hot_ring": true,
+      "channel_contiguous_k": true,
+      "a800_prompt_mma": true
+    }
+  },
+  "source_record_sha256": "532988e16e074092b079aec85848e2c9372ce585ea8df38798cd058637b4014c",
+  "record_kind": "measurement_excerpt_without_final_KV_or_generated_text"
+}

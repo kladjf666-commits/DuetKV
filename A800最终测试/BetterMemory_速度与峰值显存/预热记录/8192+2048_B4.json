@@ -1,0 +1,61 @@
+{
+  "experiment": "f0978339d0a325437614fddfe0ff8a3a51443e541b5945f3df89bf87cdc759e5",
+  "arm": "optimized",
+  "role": "warmup",
+  "case": [
+    8192,
+    2048,
+    4
+  ],
+  "input_tokens": 8192,
+  "output_tokens_per_row": 2048,
+  "batch": 4,
+  "decode_steps": 2047,
+  "decoded_tokens": 8188,
+  "decode_s": 62.88445509970188,
+  "aggregate_tokens_per_s": 130.20705971003662,
+  "per_sequence_tokens_per_s": 32.551764927509154,
+  "prefill_peak_bytes": 21239978496,
+  "decode_peak_bytes": 17856989184,
+  "peak_allocated_bytes": 21239978496,
+  "gpu_uuid": "GPU-ea44ae7b-86ae-e9a0-907c-8e8e655077d2",
+  "status": "ok",
+  "input_sha256": [
+    "91d7a9999c6c84ae4ea01ffde7954083f05e1043e63a755d9cfda6183a5e0046",
+    "74333fb5c25bdeb42235fab77b2f7aaca5a709be36655459ec3b908e548c579b",
+    "74a7bc8cdbb35bb1c21f2a4387b7c2334ac1b26882a98d3359227362f3bfb56a",
+    "342dc8c836fcf6c70d2802a1b3ec6cc05c20abdd48bf5da3ec077657bb86751f"
+  ],
+  "output_sha256": "0ddc86baf470aa1991e205aa949b57e943820e771b9499fec571d76e7d13bfe7",
+  "bank_row_indices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "effective_options": {
+    "prefill_keep_ratio": 0.9,
+    "decode_keep_ratio": 0.8,
+    "prompt_bits": 4,
+    "cold_bits": 4,
+    "recent_window": 128,
+    "obs_window": 32,
+    "group_size": 32,
+    "lazy_g": 16,
+    "sink_tokens": 0,
+    "optimizations": {
+      "fused_quantize": true,
+      "reuse_workspace": true,
+      "paged_cold": true,
+      "page_slots": 32,
+      "cold_group": 8,
+      "specialized_4bit": true,
+      "gqa_reuse": true,
+      "hot_ring": true,
+      "channel_contiguous_k": true,
+      "a800_prompt_mma": true
+    }
+  },
+  "source_record_sha256": "e5ae25a36c31e462477962da8fa88e647e3c0816cd94f3b4ca115f388fe7df59",
+  "record_kind": "warmup_excerpt_excluded_from_formal_statistics"
+}

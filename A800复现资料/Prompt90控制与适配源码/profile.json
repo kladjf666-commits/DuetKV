@@ -1,0 +1,9 @@
+{
+  "id": "J_p90_w128_o32",
+  "prefill_keep_ratio": 0.9,
+  "decode_keep_ratio": 0.8,
+  "prompt_bits": 4,
+  "cold_bits": 4,
+  "recent_window": 128,
+  "obs_window": 32
+}

@@ -1,0 +1,69 @@
+{
+  "experiment": "f0978339d0a325437614fddfe0ff8a3a51443e541b5945f3df89bf87cdc759e5",
+  "arm": "optimized",
+  "role": "warmup",
+  "case": [
+    32768,
+    2048,
+    8
+  ],
+  "input_tokens": 32768,
+  "output_tokens_per_row": 2048,
+  "batch": 8,
+  "decode_steps": 2047,
+  "decoded_tokens": 16376,
+  "decode_s": 206.61713851988316,
+  "aggregate_tokens_per_s": 79.25770397030306,
+  "per_sequence_tokens_per_s": 9.907212996287882,
+  "prefill_peak_bytes": 57351929344,
+  "decode_peak_bytes": 26713302528,
+  "peak_allocated_bytes": 57351929344,
+  "gpu_uuid": "GPU-ea44ae7b-86ae-e9a0-907c-8e8e655077d2",
+  "status": "ok",
+  "input_sha256": [
+    "ee31a8c509f8c80b4db99f306b96711de4d85709c09b4a8ffb08e44cadbbd920",
+    "5077b5d1cb5a04a32b72cbf14373b55b0c3db15c5b6ce5f0eb52c068ad0fc7bb",
+    "2816e8a9de0a1302e45a7c5d4d797c6783a1eb24888268a7d77f0ce23b58a349",
+    "1eca29d4f26e3bafbb188c985789fc301e94b6a9222eb618951b21ee9dbbe62b",
+    "b534ecaf8abfca68d4ad99cabfae0dbf0cf8e53faf8eead28a768a4c88f16637",
+    "fc7b36cca61c5222549625a4e0306e9b0e07b094139529f76666e1d9702b3a19",
+    "cc71cd74e304b6b20b4e88462dba61250d27091a816d84c4a8893ff85a5180b5",
+    "2249606889302050f642194158b2fcb62d7845028fd9740b63ee1e72611db3a2"
+  ],
+  "output_sha256": "38643a984458dfbf22b56733c28b6f63b96280d3bd1af59fae8cfeeffe9418e5",
+  "bank_row_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "effective_options": {
+    "prefill_keep_ratio": 0.9,
+    "decode_keep_ratio": 0.8,
+    "prompt_bits": 4,
+    "cold_bits": 4,
+    "recent_window": 128,
+    "obs_window": 32,
+    "group_size": 32,
+    "lazy_g": 16,
+    "sink_tokens": 0,
+    "optimizations": {
+      "fused_quantize": true,
+      "reuse_workspace": true,
+      "paged_cold": true,
+      "page_slots": 32,
+      "cold_group": 8,
+      "specialized_4bit": true,
+      "gqa_reuse": true,
+      "hot_ring": true,
+      "channel_contiguous_k": true,
+      "a800_prompt_mma": true
+    }
+  },
+  "source_record_sha256": "cf07fdf75fd2adebbbd43483af19a53dc362ac7cf8c0c546b8e5c54646731fbb",
+  "record_kind": "warmup_excerpt_excluded_from_formal_statistics"
+}

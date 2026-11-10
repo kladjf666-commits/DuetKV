@@ -1,0 +1,87 @@
+{
+  "id": "longbench_full/multifieldqa_en/46b15f1200c46251053ec3dfa806dbdf515eb34053a5e0d1",
+  "suite": "longbench",
+  "task": "multifieldqa_en",
+  "input_sha256": "bc0b1a7f96300c35062089a703131f4c9c30f3ff65ba9c3ae52818383ced1f73",
+  "input_tokens": 3892,
+  "max_new_tokens": 64,
+  "truncated_input": false,
+  "original_id": "46b15f1200c46251053ec3dfa806dbdf515eb34053a5e0d1",
+  "evaluation_split": "heldout",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "a27c1696-6220-782b-cd7e-3e233c3097a2",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 6,
+  "decode_steps": 5,
+  "decoded_tokens": 5,
+  "decode_s": 0.27190266363322735,
+  "aggregate_tokens_per_s": 18.38893349991068,
+  "per_sequence_tokens_per_s": 18.38893349991068,
+  "ttft_s": 0.3893441865220666,
+  "prefill_peak_bytes": 16684752384,
+  "decode_peak_bytes": 16224330752,
+  "peak_allocated_bytes": 16684752384,
+  "effective_options": {
+    "M": 64,
+    "nbits": 8,
+    "bits_per_scalar": 4,
+    "quality_residual": 0,
+    "speed_residual": 128,
+    "codebooks": {
+      "model_config": "29e4c210b0d6ac178b16b2a255a568bdb23b581e50ca1ef6a6d071dd85704e6e",
+      "weights_index": "146776fce3f6db1103aa6f249e65ee5544c5923ce6f971b092eee79aa6e5d37b",
+      "calibration_sha256": "e83889baabc497075506f91975be5fac0d45c5290b6b20582c8cd1e853d0c9f7",
+      "seed": 42,
+      "M": 64,
+      "nbits": 8,
+      "recipe": "WikiText-2-raw-v1 train only; 16 seeded 4096-token windows; 128 vectors per layer per window; 65536 vectors per side; separate K/V dictionaries shared across layers; FAISS IndexPQ 25 iterations",
+      "blocks": [
+        6,
+        549,
+        30,
+        274,
+        100,
+        209,
+        466,
+        38,
+        442,
+        497,
+        308,
+        197,
+        488,
+        570,
+        525,
+        565
+      ],
+      "key": "fdf0b35e29433139bc0e166a7bde84cfd7591c1c13fb81f6dcea380d704f8ca3",
+      "vectors_per_codebook": 65536,
+      "value": "cbf802aa35666c350a54a881c931ea03ca533db305ccb036480f8a735b5bf365"
+    }
+  },
+  "mode": "native",
+  "trace": {
+    "pq_tokens": 3897,
+    "code_dtype": "torch.uint8"
+  },
+  "final_kv_bytes": 144474112,
+  "status": "ok",
+  "output_ids": [
+    22,
+    5587,
+    220,
+    2366,
+    18,
+    128009
+  ],
+  "prediction": "7 March 2023",
+  "answers": [
+    "The paper was published on 7 March 2023."
+  ],
+  "score": 60.0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 0.6651825904846191
+}

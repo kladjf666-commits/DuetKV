@@ -1,0 +1,55 @@
+{
+  "id": "longbench_full/2wikimqa/bf2899717e8d7d3d83d865ca5ff59e26d7f647e6025e2d52",
+  "suite": "longbench",
+  "task": "2wikimqa",
+  "input_sha256": "fe483d4b0f5c2c1f2f958852805411084868bdbd1cc8a815442c088df544d117",
+  "input_tokens": 6965,
+  "max_new_tokens": 32,
+  "truncated_input": false,
+  "original_id": "bf2899717e8d7d3d83d865ca5ff59e26d7f647e6025e2d52",
+  "evaluation_split": "heldout",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "894fe36c-c838-d2cb-263d-f64c0813b14c",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 5,
+  "decode_steps": 4,
+  "decoded_tokens": 4,
+  "decode_s": 0.09445875510573387,
+  "aggregate_tokens_per_s": 42.34652463419127,
+  "per_sequence_tokens_per_s": 42.34652463419127,
+  "ttft_s": 0.620971916243434,
+  "prefill_peak_bytes": 17974437376,
+  "decode_peak_bytes": 17162321408,
+  "peak_allocated_bytes": 17974437376,
+  "effective_options": {
+    "max_capacity_prompt": 2048,
+    "window_size": 32,
+    "kernel_size": 7,
+    "pooling": "maxpool"
+  },
+  "mode": "native",
+  "trace": {
+    "physical_tokens": 2052,
+    "stored_heads": 32
+  },
+  "final_kv_bytes": 1075838976,
+  "status": "ok",
+  "output_ids": [
+    40,
+    655,
+    1122,
+    50714,
+    128009
+  ],
+  "prediction": "Iberian Peninsula",
+  "answers": [
+    "Morocco"
+  ],
+  "score": 0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 0.7205443382263184
+}

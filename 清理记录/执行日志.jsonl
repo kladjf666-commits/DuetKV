@@ -1,0 +1,126 @@
+{"keep_files":4833,"reviewed_files":35687,"at_utc":"2026-11-07T11:31:27.4065242Z","action":"preflight_passed"}
+{"verified":4833,"installed":4778,"at_utc":"2026-11-07T11:35:29.4621967Z","action":"kept_files_installed_and_verified"}
+{"action":"remove_started","bytes":14969869311,"relative":".cache","files":17298,"at_utc":"2026-11-07T11:35:42.8966491Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\.cache"}
+{"relative":".cache","files":17298,"bytes":14969869311,"at_utc":"2026-11-07T11:35:50.1891857Z","action":"removed"}
+{"action":"remove_started","bytes":42100130,"relative":".venv-hf-download","files":2103,"at_utc":"2026-11-07T11:35:52.2300826Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\.venv-hf-download"}
+{"relative":".venv-hf-download","files":2103,"bytes":42100130,"at_utc":"2026-11-07T11:35:53.1528758Z","action":"removed"}
+{"action":"remove_started","bytes":293533,"relative":"Code-Original-NoChanging - 4090","files":28,"at_utc":"2026-11-07T11:35:53.1802486Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\Code-Original-NoChanging - 4090"}
+{"relative":"Code-Original-NoChanging - 4090","files":28,"bytes":293533,"at_utc":"2026-11-07T11:35:53.1985569Z","action":"removed"}
+{"action":"remove_started","bytes":187797312,"relative":"Env","files":1,"at_utc":"2026-11-07T11:35:53.2054119Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\Env"}
+{"relative":"Env","files":1,"bytes":187797312,"at_utc":"2026-11-07T11:35:53.2127495Z","action":"removed"}
+{"action":"remove_started","bytes":18087,"relative":"Figure","files":1,"at_utc":"2026-11-07T11:35:53.2190789Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\Figure"}
+{"relative":"Figure","files":1,"bytes":18087,"at_utc":"2026-11-07T11:35:53.2259399Z","action":"removed"}
+{"action":"remove_started","bytes":73478,"relative":"KIVI","files":10,"at_utc":"2026-11-07T11:35:53.2401698Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\KIVI"}
+{"relative":"KIVI","files":10,"bytes":73478,"at_utc":"2026-11-07T11:35:53.2509739Z","action":"removed"}
+{"action":"remove_started","bytes":757518,"relative":"PhaseKV","files":102,"at_utc":"2026-11-07T11:35:53.3313772Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\PhaseKV"}
+{"relative":"PhaseKV","files":102,"bytes":757518,"at_utc":"2026-11-07T11:35:53.3822305Z","action":"removed"}
+{"action":"remove_started","bytes":4098190018,"relative":"PhaseKVA800测试","files":251,"at_utc":"2026-11-07T11:35:53.7259545Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\PhaseKVA800测试"}
+{"relative":"PhaseKVA800测试","files":251,"bytes":4098190018,"at_utc":"2026-11-07T11:35:53.8624148Z","action":"removed"}
+{"action":"remove_started","bytes":6328887985,"relative":"PhaseKV与Full消融","files":218,"at_utc":"2026-11-07T11:35:53.9953903Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\PhaseKV与Full消融"}
+{"relative":"PhaseKV与Full消融","files":218,"bytes":6328887985,"at_utc":"2026-11-07T11:35:54.1282501Z","action":"removed"}
+{"action":"remove_started","bytes":81709,"relative":"PyramidKV","files":5,"at_utc":"2026-11-07T11:35:54.1390327Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\PyramidKV"}
+{"relative":"PyramidKV","files":5,"bytes":81709,"at_utc":"2026-11-07T11:35:54.1477317Z","action":"removed"}
+{"action":"remove_started","bytes":7679,"relative":"SCOPE","files":4,"at_utc":"2026-11-07T11:35:54.1553464Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\SCOPE"}
+{"relative":"SCOPE","files":4,"bytes":7679,"at_utc":"2026-11-07T11:35:54.1635758Z","action":"removed"}
+{"action":"remove_started","bytes":8890,"relative":"SnapKV","files":5,"at_utc":"2026-11-07T11:35:54.1779567Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\SnapKV"}
+{"relative":"SnapKV","files":5,"bytes":8890,"at_utc":"2026-11-07T11:35:54.1863031Z","action":"removed"}
+{"action":"remove_started","bytes":37263702,"relative":"deliverables","files":359,"at_utc":"2026-11-07T11:35:54.7103824Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\deliverables"}
+{"relative":"deliverables","files":359,"bytes":37263702,"at_utc":"2026-11-07T11:35:54.8986832Z","action":"removed"}
+{"action":"remove_started","bytes":81615,"relative":"docs","files":7,"at_utc":"2026-11-07T11:35:54.9106678Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\docs"}
+{"relative":"docs","files":7,"bytes":81615,"at_utc":"2026-11-07T11:35:54.9192726Z","action":"removed"}
+{"action":"remove_started","bytes":3037,"relative":"llama","files":7,"at_utc":"2026-11-07T11:35:54.9301706Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\llama"}
+{"relative":"llama","files":7,"bytes":3037,"at_utc":"2026-11-07T11:35:54.9414418Z","action":"removed"}
+{"action":"remove_started","bytes":204039,"relative":"models","files":65,"at_utc":"2026-11-07T11:35:55.0027862Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\models"}
+{"relative":"models","files":65,"bytes":204039,"at_utc":"2026-11-07T11:35:55.0362631Z","action":"removed"}
+{"action":"remove_started","bytes":4254372831,"relative":"official_llama","files":1515,"at_utc":"2026-11-07T11:35:58.5165638Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\official_llama"}
+{"relative":"official_llama","files":1515,"bytes":4254372831,"at_utc":"2026-11-07T11:35:59.4521344Z","action":"removed"}
+{"action":"remove_started","bytes":2981,"relative":"opt","files":7,"at_utc":"2026-11-07T11:35:59.4635623Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\opt"}
+{"relative":"opt","files":7,"bytes":2981,"at_utc":"2026-11-07T11:35:59.4717410Z","action":"removed"}
+{"action":"remove_started","bytes":3835,"relative":"qwen2","files":8,"at_utc":"2026-11-07T11:35:59.4826925Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\qwen2"}
+{"relative":"qwen2","files":8,"bytes":3835,"at_utc":"2026-11-07T11:35:59.4914413Z","action":"removed"}
+{"action":"remove_started","bytes":131202,"relative":"reports","files":5,"at_utc":"2026-11-07T11:35:59.5061346Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\reports"}
+{"relative":"reports","files":5,"bytes":131202,"at_utc":"2026-11-07T11:35:59.5158312Z","action":"removed"}
+{"action":"remove_started","bytes":194366,"relative":"results","files":12,"at_utc":"2026-11-07T11:35:59.5472785Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\results"}
+{"relative":"results","files":12,"bytes":194366,"at_utc":"2026-11-07T11:35:59.5659128Z","action":"removed"}
+{"action":"remove_started","bytes":1118637,"relative":"scripts","files":64,"at_utc":"2026-11-07T11:35:59.5960403Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\scripts"}
+{"relative":"scripts","files":64,"bytes":1118637,"at_utc":"2026-11-07T11:35:59.6215033Z","action":"removed"}
+{"action":"remove_started","bytes":11533,"relative":"src","files":22,"at_utc":"2026-11-07T11:35:59.6524308Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\src"}
+{"relative":"src","files":22,"bytes":11533,"at_utc":"2026-11-07T11:35:59.6677699Z","action":"removed"}
+{"action":"remove_started","bytes":438291,"relative":"tests","files":47,"at_utc":"2026-11-07T11:35:59.6902668Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\tests"}
+{"relative":"tests","files":47,"bytes":438291,"at_utc":"2026-11-07T11:35:59.7125138Z","action":"removed"}
+{"action":"remove_started","bytes":548669,"relative":"workspace_migration","files":78,"at_utc":"2026-11-07T11:35:59.7836970Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\workspace_migration"}
+{"relative":"workspace_migration","files":78,"bytes":548669,"at_utc":"2026-11-07T11:35:59.8268874Z","action":"removed"}
+{"action":"remove_started","bytes":92070007,"relative":"不同算法的不同数据集测试","files":6053,"at_utc":"2026-11-07T11:36:02.3156893Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\不同算法的不同数据集测试"}
+{"relative":"不同算法的不同数据集测试","files":6053,"bytes":92070007,"at_utc":"2026-11-07T11:36:04.6372132Z","action":"removed"}
+{"action":"remove_started","bytes":18947388,"relative":"A800最终测试/分析报告","files":82,"at_utc":"2026-11-07T11:36:04.7204774Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\A800最终测试\\分析报告"}
+{"relative":"A800最终测试/分析报告","files":82,"bytes":18947388,"at_utc":"2026-11-07T11:36:04.7685869Z","action":"removed"}
+{"action":"remove_started","bytes":81464199,"relative":"A800最终测试/原始结果","files":7266,"at_utc":"2026-11-07T11:36:08.9733163Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\A800最终测试\\原始结果"}
+{"relative":"A800最终测试/原始结果","files":7266,"bytes":81464199,"at_utc":"2026-11-07T11:36:11.8585184Z","action":"removed"}
+{"action":"remove_started","bytes":207076,"relative":"Code-Original-NoChanging - A800 - BetterMemory/Code-Original-NoChanging - A800","files":20,"at_utc":"2026-11-07T11:36:11.8855828Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\Code-Original-NoChanging - A800 - BetterMemory\\Code-Original-NoChanging - A800"}
+{"relative":"Code-Original-NoChanging - A800 - BetterMemory/Code-Original-NoChanging - A800","files":20,"bytes":207076,"at_utc":"2026-11-07T11:36:11.9027100Z","action":"removed"}
+{"action":"remove_started","bytes":92436,"relative":"Code-Original-NoChanging - A800 - BetterMemory/PhaseKV/__pycache__","files":8,"at_utc":"2026-11-07T11:36:11.9179518Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\Code-Original-NoChanging - A800 - BetterMemory\\PhaseKV\\__pycache__"}
+{"relative":"Code-Original-NoChanging - A800 - BetterMemory/PhaseKV/__pycache__","files":8,"bytes":92436,"at_utc":"2026-11-07T11:36:11.9267889Z","action":"removed"}
+{"action":"remove_started","bytes":54611,"relative":"Code-Original-NoChanging - A800 - BetterMemory/benchmark/__pycache__","files":4,"at_utc":"2026-11-07T11:36:11.9388898Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\Code-Original-NoChanging - A800 - BetterMemory\\benchmark\\__pycache__"}
+{"relative":"Code-Original-NoChanging - A800 - BetterMemory/benchmark/__pycache__","files":4,"bytes":54611,"at_utc":"2026-11-07T11:36:11.9481806Z","action":"removed"}
+{"action":"remove_started","bytes":28525,"relative":"Code-Original-NoChanging - A800 - BetterMemory/tests/__pycache__","files":1,"at_utc":"2026-11-07T11:36:11.9611294Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\Code-Original-NoChanging - A800 - BetterMemory\\tests\\__pycache__"}
+{"relative":"Code-Original-NoChanging - A800 - BetterMemory/tests/__pycache__","files":1,"bytes":28525,"at_utc":"2026-11-07T11:36:11.9696115Z","action":"removed"}
+{"action":"remove_started","bytes":27362,"relative":"Code-Original-NoChanging - A800 - BetterMemory/PhaseKV/kernels/__pycache__","files":3,"at_utc":"2026-11-07T11:36:11.9870797Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\Code-Original-NoChanging - A800 - BetterMemory\\PhaseKV\\kernels\\__pycache__"}
+{"relative":"Code-Original-NoChanging - A800 - BetterMemory/PhaseKV/kernels/__pycache__","files":3,"bytes":27362,"at_utc":"2026-11-07T11:36:11.9974413Z","action":"removed"}
+{"action":"remove_started","bytes":21070,"relative":"analyze_native_results.py","files":1,"at_utc":"2026-11-07T11:36:11.9999252Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\analyze_native_results.py"}
+{"relative":"analyze_native_results.py","files":1,"bytes":21070,"at_utc":"2026-11-07T11:36:12.0042047Z","action":"removed"}
+{"action":"remove_started","bytes":12822,"relative":"BENCHMARK_4090D.md","files":1,"at_utc":"2026-11-07T11:36:12.0065444Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\BENCHMARK_4090D.md"}
+{"relative":"BENCHMARK_4090D.md","files":1,"bytes":12822,"at_utc":"2026-11-07T11:36:12.0106312Z","action":"removed"}
+{"action":"remove_started","bytes":22082,"relative":"BetterMem.md","files":1,"at_utc":"2026-11-07T11:36:12.0141165Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\BetterMem.md"}
+{"relative":"BetterMem.md","files":1,"bytes":22082,"at_utc":"2026-11-07T11:36:12.0169967Z","action":"removed"}
+{"action":"remove_started","bytes":1062,"relative":"CHANGELOG.md","files":1,"at_utc":"2026-11-07T11:36:12.0194563Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\CHANGELOG.md"}
+{"relative":"CHANGELOG.md","files":1,"bytes":1062,"at_utc":"2026-11-07T11:36:12.0245794Z","action":"removed"}
+{"action":"remove_started","bytes":51773,"relative":"Code-Original-NoChanging.zip","files":1,"at_utc":"2026-11-07T11:36:12.0273145Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\Code-Original-NoChanging.zip"}
+{"relative":"Code-Original-NoChanging.zip","files":1,"bytes":51773,"at_utc":"2026-11-07T11:36:12.0315458Z","action":"removed"}
+{"action":"remove_started","bytes":13776,"relative":"plot_quality_detail.py","files":1,"at_utc":"2026-11-07T11:36:12.0342839Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\plot_quality_detail.py"}
+{"relative":"plot_quality_detail.py","files":1,"bytes":13776,"at_utc":"2026-11-07T11:36:12.0378468Z","action":"removed"}
+{"action":"remove_started","bytes":4277,"relative":"PROJECT_GUIDE.txt","files":1,"at_utc":"2026-11-07T11:36:12.0401257Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\PROJECT_GUIDE.txt"}
+{"relative":"PROJECT_GUIDE.txt","files":1,"bytes":4277,"at_utc":"2026-11-07T11:36:12.0433956Z","action":"removed"}
+{"action":"remove_started","bytes":27764,"relative":"PROJECT_OVERVIEW.md","files":1,"at_utc":"2026-11-07T11:36:12.0459171Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\PROJECT_OVERVIEW.md"}
+{"relative":"PROJECT_OVERVIEW.md","files":1,"bytes":27764,"at_utc":"2026-11-07T11:36:12.0490893Z","action":"removed"}
+{"action":"remove_started","bytes":51464,"relative":"READMEV2.md","files":1,"at_utc":"2026-11-07T11:36:12.0512433Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\READMEV2.md"}
+{"relative":"READMEV2.md","files":1,"bytes":51464,"at_utc":"2026-11-07T11:36:12.0546625Z","action":"removed"}
+{"action":"remove_started","bytes":1204,"relative":"requirements.txt","files":1,"at_utc":"2026-11-07T11:36:12.0581319Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\requirements.txt"}
+{"relative":"requirements.txt","files":1,"bytes":1204,"at_utc":"2026-11-07T11:36:12.0615822Z","action":"removed"}
+{"action":"remove_started","bytes":1472,"relative":"run_4090d.sh","files":1,"at_utc":"2026-11-07T11:36:12.0637061Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\run_4090d.sh"}
+{"relative":"run_4090d.sh","files":1,"bytes":1472,"at_utc":"2026-11-07T11:36:12.0674823Z","action":"removed"}
+{"action":"remove_started","bytes":432,"relative":"run_phasekv_long_output.sh","files":1,"at_utc":"2026-11-07T11:36:12.0699989Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\run_phasekv_long_output.sh"}
+{"relative":"run_phasekv_long_output.sh","files":1,"bytes":432,"at_utc":"2026-11-07T11:36:12.0728540Z","action":"removed"}
+{"action":"remove_started","bytes":1213,"relative":"run_phasekv_optimizations.sh","files":1,"at_utc":"2026-11-07T11:36:12.0759641Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\run_phasekv_optimizations.sh"}
+{"relative":"run_phasekv_optimizations.sh","files":1,"bytes":1213,"at_utc":"2026-11-07T11:36:12.0788718Z","action":"removed"}
+{"action":"remove_started","bytes":428,"relative":"run_phasekv_prompt_retest.sh","files":1,"at_utc":"2026-11-07T11:36:12.0810248Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\run_phasekv_prompt_retest.sh"}
+{"relative":"run_phasekv_prompt_retest.sh","files":1,"bytes":428,"at_utc":"2026-11-07T11:36:12.0855525Z","action":"removed"}
+{"action":"remove_started","bytes":433,"relative":"run_phasekv_same_round.sh","files":1,"at_utc":"2026-11-07T11:36:12.0891816Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\run_phasekv_same_round.sh"}
+{"relative":"run_phasekv_same_round.sh","files":1,"bytes":433,"at_utc":"2026-11-07T11:36:12.0941697Z","action":"removed"}
+{"action":"remove_started","bytes":420,"relative":"run_phasekv_sweep.sh","files":1,"at_utc":"2026-11-07T11:36:12.0993588Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\run_phasekv_sweep.sh"}
+{"relative":"run_phasekv_sweep.sh","files":1,"bytes":420,"at_utc":"2026-11-07T11:36:12.1038891Z","action":"removed"}
+{"action":"remove_started","bytes":226543,"relative":"A800最终测试/a800_bettermemory_final_results_20261107_185155.tar.gz","files":1,"at_utc":"2026-11-07T11:36:12.1088299Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\A800最终测试\\a800_bettermemory_final_results_20261107_185155.tar.gz"}
+{"relative":"A800最终测试/a800_bettermemory_final_results_20261107_185155.tar.gz","files":1,"bytes":226543,"at_utc":"2026-11-07T11:36:12.1120079Z","action":"removed"}
+{"action":"remove_started","bytes":121,"relative":"A800最终测试/a800_bettermemory_final_results_20261107_185155.tar.gz.sha256","files":1,"at_utc":"2026-11-07T11:36:12.1165560Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\A800最终测试\\a800_bettermemory_final_results_20261107_185155.tar.gz.sha256"}
+{"relative":"A800最终测试/a800_bettermemory_final_results_20261107_185155.tar.gz.sha256","files":1,"bytes":121,"at_utc":"2026-11-07T11:36:12.1192385Z","action":"removed"}
+{"action":"remove_started","bytes":148402,"relative":"A800最终测试/a800_bettermemory_results_20261107_161509.tar.gz","files":1,"at_utc":"2026-11-07T11:36:12.1236175Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\A800最终测试\\a800_bettermemory_results_20261107_161509.tar.gz"}
+{"relative":"A800最终测试/a800_bettermemory_results_20261107_161509.tar.gz","files":1,"bytes":148402,"at_utc":"2026-11-07T11:36:12.1265789Z","action":"removed"}
+{"action":"remove_started","bytes":115,"relative":"A800最终测试/a800_bettermemory_results_20261107_161509.tar.gz.sha256","files":1,"at_utc":"2026-11-07T11:36:12.1324977Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\A800最终测试\\a800_bettermemory_results_20261107_161509.tar.gz.sha256"}
+{"relative":"A800最终测试/a800_bettermemory_results_20261107_161509.tar.gz.sha256","files":1,"bytes":115,"at_utc":"2026-11-07T11:36:12.1352643Z","action":"removed"}
+{"action":"remove_started","bytes":7027587,"relative":"A800最终测试/a800_final_results_20261106.tar.gz","files":1,"at_utc":"2026-11-07T11:36:12.1396138Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\A800最终测试\\a800_final_results_20261106.tar.gz"}
+{"relative":"A800最终测试/a800_final_results_20261106.tar.gz","files":1,"bytes":7027587,"at_utc":"2026-11-07T11:36:12.1429787Z","action":"removed"}
+{"action":"remove_started","bytes":2311803,"relative":"A800最终测试/a800_phasekv_longgen_sweep_results_20261106_192522_976092.tar.gz","files":1,"at_utc":"2026-11-07T11:36:12.1471888Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\A800最终测试\\a800_phasekv_longgen_sweep_results_20261106_192522_976092.tar.gz"}
+{"relative":"A800最终测试/a800_phasekv_longgen_sweep_results_20261106_192522_976092.tar.gz","files":1,"bytes":2311803,"at_utc":"2026-11-07T11:36:12.1502435Z","action":"removed"}
+{"action":"remove_started","bytes":1254442,"relative":"A800最终测试/a800_phasekv_p90_final_results_20261107_123953_405161.tar.gz","files":1,"at_utc":"2026-11-07T11:36:12.1546595Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\A800最终测试\\a800_phasekv_p90_final_results_20261107_123953_405161.tar.gz"}
+{"relative":"A800最终测试/a800_phasekv_p90_final_results_20261107_123953_405161.tar.gz","files":1,"bytes":1254442,"at_utc":"2026-11-07T11:36:12.1596311Z","action":"removed"}
+{"action":"remove_started","bytes":127,"relative":"A800最终测试/a800_phasekv_p90_final_results_20261107_123953_405161.tar.gz.sha256","files":1,"at_utc":"2026-11-07T11:36:12.1650820Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\A800最终测试\\a800_phasekv_p90_final_results_20261107_123953_405161.tar.gz.sha256"}
+{"relative":"A800最终测试/a800_phasekv_p90_final_results_20261107_123953_405161.tar.gz.sha256","files":1,"bytes":127,"at_utc":"2026-11-07T11:36:12.1683131Z","action":"removed"}
+{"action":"remove_started","bytes":2716691,"relative":"A800最终测试/a800_phasekv_refine_results_20261107_094632_630407.tar.gz","files":1,"at_utc":"2026-11-07T11:36:12.1744967Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\A800最终测试\\a800_phasekv_refine_results_20261107_094632_630407.tar.gz"}
+{"relative":"A800最终测试/a800_phasekv_refine_results_20261107_094632_630407.tar.gz","files":1,"bytes":2716691,"at_utc":"2026-11-07T11:36:12.1784338Z","action":"removed"}
+{"action":"remove_started","bytes":124,"relative":"A800最终测试/a800_phasekv_refine_results_20261107_094632_630407.tar.gz.sha256","files":1,"at_utc":"2026-11-07T11:36:12.1840142Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\A800最终测试\\a800_phasekv_refine_results_20261107_094632_630407.tar.gz.sha256"}
+{"relative":"A800最终测试/a800_phasekv_refine_results_20261107_094632_630407.tar.gz.sha256","files":1,"bytes":124,"at_utc":"2026-11-07T11:36:12.1868153Z","action":"removed"}
+{"action":"remove_started","bytes":48633,"relative":"A800最终测试/A800算法测试参数与当前进度报告.docx","files":1,"at_utc":"2026-11-07T11:36:12.1913048Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\A800最终测试\\A800算法测试参数与当前进度报告.docx"}
+{"relative":"A800最终测试/A800算法测试参数与当前进度报告.docx","files":1,"bytes":48633,"at_utc":"2026-11-07T11:36:12.1941744Z","action":"removed"}
+{"action":"remove_started","bytes":588414,"relative":"A800最终测试/归档清单.json","files":1,"at_utc":"2026-11-07T11:36:12.1987251Z","absolute":"C:\\Users\\kladjf\\Desktop\\PhaseKV\\A800最终测试\\归档清单.json"}
+{"relative":"A800最终测试/归档清单.json","files":1,"bytes":588414,"at_utc":"2026-11-07T11:36:12.2018304Z","action":"removed"}
+{"bytes":30129886686.0,"files":35687,"targets":61,"at_utc":"2026-11-07T11:36:24.3188855Z","action":"approved_removals_complete"}
+{"at_utc":"2026-11-07T11:37:02.4613814Z","action":"staging_removed_and_audit_ready"}

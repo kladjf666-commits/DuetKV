@@ -1,0 +1,62 @@
+{
+  "id": "longbench_full/narrativeqa/a8c929d6037b84d914b05d984865cbd3651b578544f0e3bf",
+  "suite": "longbench",
+  "task": "narrativeqa",
+  "input_sha256": "0a8c4084ed6a520a3238204f0816861db0be835444f36f09ee32e52d918bc20a",
+  "input_tokens": 19148,
+  "max_new_tokens": 128,
+  "truncated_input": false,
+  "original_id": "a8c929d6037b84d914b05d984865cbd3651b578544f0e3bf",
+  "evaluation_split": "historical_retest",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "2347a980-636a-b41a-6f67-544c3bcce0ae",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 5,
+  "decode_steps": 4,
+  "decoded_tokens": 4,
+  "decode_s": 1.9140134323388338,
+  "aggregate_tokens_per_s": 2.0898494923895017,
+  "per_sequence_tokens_per_s": 2.0898494923895017,
+  "ttft_s": 21.08603900950402,
+  "prefill_peak_bytes": 18878411264,
+  "decode_peak_bytes": 16602044416,
+  "peak_allocated_bytes": 18878411264,
+  "effective_options": {
+    "quality_budget": 256,
+    "speed_budget": 1024,
+    "nlist": "floor(L/80)",
+    "niter": 20,
+    "sink": 16,
+    "window": 320,
+    "window_nlist": 4,
+    "offload": true
+  },
+  "mode": "native",
+  "trace": {
+    "physical_history": 19152,
+    "retrieval_budget": 256,
+    "initial_clusters": 239,
+    "clusters": 239,
+    "cpu_pinned_kv_bytes": 2369126400
+  },
+  "final_kv_bytes": 448921600,
+  "status": "ok",
+  "output_ids": [
+    791,
+    6063,
+    10896,
+    13,
+    128009
+  ],
+  "prediction": "The German doctor.",
+  "answers": [
+    "the German professor"
+  ],
+  "score": 50.0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 27.317594289779663
+}

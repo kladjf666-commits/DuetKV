@@ -1,0 +1,60 @@
+{
+  "id": "longbench_full/2wikimqa/6e7d2d0700c8ec6fc15dc188c42d8104b89935219254fdaf",
+  "suite": "longbench",
+  "task": "2wikimqa",
+  "input_sha256": "12adf11cd9531bd7aa30a0f5bfa806c197264e06986a806b95cfb81836a1eb15",
+  "input_tokens": 4344,
+  "max_new_tokens": 32,
+  "truncated_input": false,
+  "original_id": "6e7d2d0700c8ec6fc15dc188c42d8104b89935219254fdaf",
+  "evaluation_split": "heldout",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "3d68f21e-bb96-d4f6-f517-dd7465632716",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 6,
+  "decode_steps": 5,
+  "decoded_tokens": 5,
+  "decode_s": 0.13841728027909994,
+  "aggregate_tokens_per_s": 36.12265744506877,
+  "per_sequence_tokens_per_s": 36.12265744506877,
+  "ttft_s": 0.6950006624683738,
+  "prefill_peak_bytes": 22161124864,
+  "decode_peak_bytes": 17162834432,
+  "peak_allocated_bytes": 22161124864,
+  "effective_options": {
+    "max_capacity_prompt": 2048,
+    "window_size": 8,
+    "kernel_size": 7,
+    "pooling": "maxpool",
+    "decoding_window_size": 512,
+    "decoding_recent_size": 256,
+    "decoding_metric": "None",
+    "delta": 1
+  },
+  "mode": "prefill_only_short_output_boundary",
+  "trace": {
+    "physical_tokens": 2053,
+    "stored_heads": 32
+  },
+  "final_kv_bytes": 1076363264,
+  "status": "ok",
+  "output_ids": [
+    3976,
+    339,
+    11,
+    11104,
+    8494,
+    128009
+  ],
+  "prediction": "Perth, Western Australia",
+  "answers": [
+    "Castlemaine, Victoria, Australia"
+  ],
+  "score": 33.33333333333333,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 0.8430187702178955
+}

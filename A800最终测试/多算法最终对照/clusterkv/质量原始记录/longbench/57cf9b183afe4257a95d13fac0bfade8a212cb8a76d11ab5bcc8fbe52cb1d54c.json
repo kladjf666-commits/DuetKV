@@ -1,0 +1,57 @@
+{
+  "batch": 1,
+  "input_tokens": 7646,
+  "output_tokens_per_row": 3,
+  "decode_steps": 2,
+  "decoded_tokens": 2,
+  "decode_s": 0.0484838280826807,
+  "aggregate_tokens_per_s": 41.25086815730287,
+  "per_sequence_tokens_per_s": 41.25086815730287,
+  "ttft_s": 0.8496245630085468,
+  "prefill_peak_bytes": 17521730560,
+  "decode_peak_bytes": 16610700800,
+  "peak_allocated_bytes": 17521730560,
+  "effective_options": {
+    "quality_budget": 256,
+    "speed_budget": 1024,
+    "nlist": "floor(L/80)",
+    "niter": 20,
+    "sink": 16,
+    "window": 320,
+    "window_nlist": 4,
+    "offload": true
+  },
+  "mode": "native",
+  "trace": {
+    "physical_history": 7648,
+    "retrieval_budget": 256,
+    "initial_clusters": 95,
+    "clusters": 95,
+    "cpu_pinned_kv_bytes": 943964160
+  },
+  "final_kv_bytes": 353910784,
+  "status": "ok",
+  "id": "longbench_full/hotpotqa/c5d6aa8cb0ad17a88eb66d578e86f783e3ac1f3684df9425",
+  "suite": "longbench",
+  "task": "hotpotqa",
+  "input_sha256": "abc311c1c0cf1cb0f62caef715399633d12faa53938d5fac77c23964efe00979",
+  "output_ids": [
+    5332,
+    7693,
+    128009
+  ],
+  "prediction": "72 feet",
+  "score": 0,
+  "metric": "qa_f1_score",
+  "truncated_input": false,
+  "max_new_tokens": 32,
+  "answers": [
+    "37.5"
+  ],
+  "reused_from": {
+    "path": "/data/phasekv-results/a800_four_gpu_v1/results/clusterkv/quality/a731531ae3da0ac50dc31f3e9014ac043338992eb4ba4ea131a00906fa3cc4fe.json",
+    "id": "longbench/hotpotqa/187/8192",
+    "sha256": "20a0dfa1a36924766cae6361627044512cbffe9e6a02a850c4ae65b4e05052d1",
+    "protocol_sha256": "dad80bcbc8440822bd90a7f7c1ad5fbb96c50187eaccd91d8d15a6f39e351ace"
+  }
+}

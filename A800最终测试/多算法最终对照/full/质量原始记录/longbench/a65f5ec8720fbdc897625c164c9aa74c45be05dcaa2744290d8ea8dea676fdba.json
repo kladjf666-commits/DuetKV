@@ -1,0 +1,49 @@
+{
+  "id": "longbench_full/multifieldqa_en/ddfed65e5495d0257b22a9537993c3453d8590cc94b8e0d6",
+  "suite": "longbench",
+  "task": "multifieldqa_en",
+  "input_sha256": "8b635e42fe90a836fdbcb2bf6be23b7afb24791be6a52081bba253ff1c8d13c1",
+  "input_tokens": 8104,
+  "max_new_tokens": 64,
+  "truncated_input": false,
+  "original_id": "ddfed65e5495d0257b22a9537993c3453d8590cc94b8e0d6",
+  "evaluation_split": "heldout",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "894fe36c-c838-d2cb-263d-f64c0813b14c",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 4,
+  "decode_steps": 3,
+  "decoded_tokens": 3,
+  "decode_s": 0.06691200286149979,
+  "aggregate_tokens_per_s": 44.835005256226715,
+  "per_sequence_tokens_per_s": 44.835005256226715,
+  "ttft_s": 0.9551264271140099,
+  "prefill_peak_bytes": 17203414016,
+  "decode_peak_bytes": 17160022016,
+  "peak_allocated_bytes": 17203414016,
+  "effective_options": {},
+  "mode": "native",
+  "trace": {
+    "physical_tokens": 8107,
+    "stored_heads": 8
+  },
+  "final_kv_bytes": 1062600704,
+  "status": "ok",
+  "output_ids": [
+    975,
+    11,
+    15830,
+    128009
+  ],
+  "prediction": "14,520",
+  "answers": [
+    "There are 14,520 attendees, including 7,152 chemical scientists, 5,059 students, 1,283 exhibitors, 119 precollege teachers, 573 exposition visitors, and 453 guests."
+  ],
+  "score": 9.09090909090909,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 1.0274059772491455
+}

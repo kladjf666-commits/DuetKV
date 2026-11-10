@@ -1,0 +1,54 @@
+{
+  "experiment": "f0978339d0a325437614fddfe0ff8a3a51443e541b5945f3df89bf87cdc759e5",
+  "status": "ok",
+  "checks": [
+    {
+      "quality": false,
+      "batch": 1,
+      "prompt_tokens": 2112,
+      "generated_tokens": 164,
+      "packed_prompt_identical": true,
+      "first_logits_identical": true,
+      "generated_tokens_identical": true
+    },
+    {
+      "quality": false,
+      "batch": 2,
+      "prompt_tokens": 2112,
+      "generated_tokens": 164,
+      "packed_prompt_identical": true,
+      "first_logits_identical": true,
+      "generated_tokens_identical": true
+    },
+    {
+      "quality": false,
+      "batch": 4,
+      "prompt_tokens": 2112,
+      "generated_tokens": 164,
+      "packed_prompt_identical": true,
+      "first_logits_identical": true,
+      "generated_tokens_identical": true
+    },
+    {
+      "quality": false,
+      "batch": 8,
+      "prompt_tokens": 2112,
+      "generated_tokens": 164,
+      "packed_prompt_identical": true,
+      "first_logits_identical": true,
+      "generated_tokens_identical": true
+    }
+  ],
+  "synthetic_b8": {
+    "max_absolute_attention_error": 3.5025179386138916e-05,
+    "batch": 8,
+    "append_steps": 163,
+    "cold_segments_per_layer": 2,
+    "retained_tokens_per_cold_block": 13,
+    "tested_bits": [
+      4,
+      4
+    ],
+    "reference": "PyTorch attention over dequantized retained KV, before and after cooling/ring wrap"
+  }
+}

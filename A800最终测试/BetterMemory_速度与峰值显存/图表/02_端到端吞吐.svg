@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="1512pt" height="504pt" viewBox="0 0 1512 504" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-11-07T19:00:10.078696</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 504 
+L 1512 504 
+L 1512 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 241.92 393.12 
+L 1481.76 393.12 
+L 1481.76 80.64 
+L 241.92 80.64 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g clip-path="url(#p3701774fd8)">
+    <image xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAACsMAAAK3CAYAAADa/KPQAAAmmElEQVR4nO3cy4pl5RmA4a7au3ad+6B0m+6mQwJqDK2EgGCCTjMI6CCXEQRxYAYOM8okI0G8ChFBCAoOcgIHIiQKPREHOQgijXa0urqq6+AtrC0Uv695niv4+Fgs1uHlX3nxzVun5yDi+oXF6BFgshce27YtgDPw4t9u2yspm2uro0eAyf7w1CXbAgAAAAAAIMdfWQAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIGv+7vv/GT0DTPaX3z1jW2TcHT0AwPfU3//50egRYCl/fulpGyPDMyzA2fjtG7eslozXfvPT0SMAAN8BL/3p49EjwGR//PXDtgUAOBkWAAAAAAAAAAAAgK7V0QMAAAAAAAAAAAAAwLclhgUAAAAAAAAAAAAgSwwLAAAAAAAAAAAAQJYYFgAAAAAAAAAAAIAsMSwAAAAAAAAAAAAAWWJYAAAAAAAAAAAAALLEsAAAAAAAAAAAAABkiWEBAAAAAAAAAAAAyBLDAgAAAAAAAAAAAJAlhgUAAAAAAAAAAAAgSwwLAAAAAAAAAAAAQJYYFgAAAAAAAAAAAIAsMSwAAAAAAAAAAAAAWWJYAAAAAAAAAAAAALLEsAAAAAAAAAAAAABkiWEBAAAAAAAAAAAAyBLDAgAAAAAAAAAAAJAlhgUAAAAAAAAAAAAgSwwLAAAAAAAAAAAAQJYYFgAAAAAAAAAAAIAsMSwAAAAAAAAAAAAAWWJYAAAAAAAAAAAAALLEsAAAAAAAAAAAAABkiWEBAAAAAAAAAAAAyBLDAgAAAAAAAAAAAJAlhgUAAAAAAAAAAAAgSwwLAAAAAAAAAAAAQJYYFgAAAAAAAAAAAIAsMSwAAAAAAAAAAAAAWWJYAAAAAAAAAAAAALLEsAAAAAAAAAAAAABkiWEBAAAAAAAAAAAAyBLDAgAAAAAAAAAAAJAlhgUAAAAAAAAAAAAgSwwLAAAAAAAAAAAAQJYYFgAAAAAAAAAAAIAsMSwAAAAAAAAAAAAAWWJYAAAAAAAAAAAAALLEsAAAAAAAAAAAAABkiWEBAAAAAAAAAAAAyBLDAgAAAAAAAAAAAJAlhgUAAAAAAAAAAAAgSwwLAAAAAAAAAAAAQJYYFgAAAAAAAAAAAIAsMSwAAAAAAAAAAAAAWWJYAAAAAAAAAAAAALLEsAAAAAAAAAAAAABkiWEBAAAAAAAAAAAAyBLDAgAAAAAAAAAAAJAlhgUAAAAAAAAAAAAgSwwLAAAAAAAAAAAAQJYYFgAAAAAAAAAAAIAsMSwAAAAAAAAAAAAAWWJYAAAAAAAAAAAAALLEsAAAAAAAAAAAAABkiWEBAAAAAAAAAAAAyBLDAgAAAAAAAAAAAJAlhgUAAAAAAAAAAAAgSwwLAAAAAAAAAAAAQJYYFgAAAAAAAAAAAIAsMSwAAAAAAAAAAAAAWWJYAAAAAAAAAAAAALLEsAAAAAAAAAAAAABkiWEBAAAAAAAAAAAAyBLDAgAAAAAAAAAAAJAlhgUAAAAAAAAAAAAgSwwLAAAAAAAAAAAAQNb8uV/+cPQMAAAw2bO/uGFbAACk3Ly2O3oEAABYyiOXN20MAIAUJ8MCAAAAAAAAAAAAkCWGBQAAAAAAAAAAACBLDAsAAAAAAAAAAABAlhgWAAAAAAAAAAAAgCwxLAAAAAAAAAAAAABZYlgAAAAAAAAAAAAAssSwAAAAAAAAAAAAAGSJYQEAAAAAAAAAAADIEsMCAAAAAAAAAAAAkCWGBQAAAAAAAAAAACBLDAsAAAAAAAAAAABAlhgWAAAAAAAAAAAAgCwxLAAAAAAAAAAAAABZYlgAAAAAAAAAAAAAssSwAAAAAAAAAAAAAGSJYQEAAAAAAAAAAADIEsMCAAAAAAAAAAAAkCWGBQAAAAAAAAAAACBLDAsAAAAAAAAAAABAlhgWAAAAAAAAAAAAgCwxLAAAAAAAAAAAAABZYlgAAAAAAAAAAAAAssSwAAAAAAAAAAAAAGSJYQEAAAAAAAAAAADIEsMCAAAAAAAAAAAAkCWGBQAAAAAAAAAAACBLDAsAAAAAAAAAAABAlhgWAAAAAAAAAAAAgCwxLAAAAAAAAAAAAABZYlgAAAAAAAAAAAAAssSwAAAAAAAAAAAAAGSJYQEAAAAAAAAAAADIEsMCAAAAAAAAAAAAkCWGBQAAAAAAAAAAACBLDAsAAAAAAAAAAABAlhgWAAAAAAAAAAAAgCwxLAAAAAAAAAAAAABZYlgAAAAAAAAAAAAAssSwAAAAAAAAAAAAAGSJYQEAAAAAAAAAAADIEsMCAAAAAAAAAAAAkCWGBQAAAAAAAAAAACBLDAsAAAAAAAAAAABAlhgWAAAAAAAAAAAAgCwxLAAAAAAAAAAAAABZYlgAAAAAAAAAAAAAssSwAAAAAAAAAAAAAGSJYQEAAAAAAAAAAADIEsMCAAAAAAAAAAAAkCWGBQAAAAAAAAAAACBLDAsAAAAAAAAAAABAlhgWAAAAAAAAAAAAgCwxLAAAAAAAAAAAAABZYlgAAAAAAAAAAAAAssSwAAAAAAAAAAAAAGSJYQEAAAAAAAAAAADIEsMCAAAAAAAAAAAAkCWGBQAAAAAAAAAAACBLDAsAAAAAAAAAAABAlhgWAAAAAAAAAAAAgCwxLAAAAAAAAAAAAABZYlgAAAAAAAAAAAAAssSwAAAAAAAAAAAAAGSJYQEAAAAAAAAAAADIEsMCAAAAAAAAAAAAkCWGBQAAAAAAAAAAACBLDAsAAAAAAAAAAABAlhgWAAAAAAAAAAAAgCwxLAAAAAAAAAAAAABZKz///buno4eAqY6OTiwLAP7Pra6ujB4BlnJy4pULAAAAOHfu/eefsAYynnz1w9EjAADfAZ5hKXEyLAAAAAAAAAAAAABZYlgAAAAAAAAAAAAAssSwAAAAAAAAAAAAAGSJYQEAAAAAAAAAAADIEsMCAAAAAAAAAAAAkCWGBQAAAAAAAAAAACBLDAsAAAAAAAAAAABAlhgWAAAAAAAAAAAAgCwxLAAAAAAAAAAAAABZYlgAAAAAAAAAAAAAssSwAAAAAAAAAAAAAGSJYQEAAAAAAAAAAADIEsMCAAAAAAAAAAAAkCWGBQAAAAAAAAAAACBLDAsAAAAAAAAAAABAlhgWAAAAAAAAAAAAgCwxLAAAAAAAAAAAAABZYlgAAAAAAAAAAAAAssSwAAAAAAAAAAAAAGSJYQEAAAAAAAAAAADIEsMCAAAAAAAAAAAAkCWGBQAAAAAAAAAAACBLDAsAAAAAAAAAAABAlhgWAAAAAAAAAAAAgCwxLAAAAAAAAAAAAABZYlgAAAAAAAAAAAAAssSwAAAAAAAAAAAAAGSJYQEAAAAAAAAAAADIEsMCAAAAAAAAAAAAkCWGBQAAAAAAAAAAACBLDAsAAAAAAAAAAABAlhgWAAAAAAAAAAAAgCwxLAAAAAAAAAAAAABZYlgAAAAAAAAAAAAAssSwAAAAAAAAAAAAAGSJYQEAAAAAAAAAAADIEsMCAAAAAAAAAAAAkCWGBQAAAAAAAAAAACBLDAsAAAAAAAAAAABAlhgWAAAAAAAAAAAAgCwxLAAAAAAAAAAAAABZYlgAAAAAAAAAAAAAssSwAAAAAAAAAAAAAGSJYQEAAAAAAAAAAADIEsMCAAAAAAAAAAAAkCWGBQAAAAAAAAAAACBLDAsAAAAAAAAAAABAlhgWAAAAAAAAAAAAgCwxLAAAAAAAAAAAAABZYlgAAAAAAAAAAAAAssSwAAAAAAAAAAAAAGSJYQEAAAAAAAAAAADIEsMCAAAAAAAAAAAAkCWGBQAAAAAAAAAAACBLDAsAAAAAAAAAAABAlhgWAAAAAAAAAAAAgCwxLAAAAAAAAAAAAABZYlgAAAAAAAAAAAAAssSwAAAAAAAAAAAAAGSJYQEAAAAAAAAAAADIEsMCAAAAAAAAAAAAkCWGBQAAAAAAAAAAACBLDAsAAAAAAAAAAABAlhgWAAAAAAAAAAAAgCwxLAAAAAAAAAAAAABZYlgAAAAAAAAAAAAAssSwAAAAAAAAAAAAAGSJYQEAAAAAAAAAAADImm9szEfPAJOtr7te6fjxQ7ujR4DJHr2yZVtkvPXBp6NHgKXcuLJjY2Q89aMLo0eAyW5e9s5Fx8uvfzR6BJhsPneGBi3b24vRI8BkT776oW2RsbW1NnoEmOyG/7KEPH7dNy1aPMNS4qsWAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQtfLKXz85HT0ETLV3eGJZZNy5dzR6BJhs/777Kx03H9oaPQIs5eDYPZYOlysla7OV0SPAZP+9c2hbZByf+GUAcFY++XzPcsn41WMPjh4BJttdn9sWGRcWa6NHgKW8/fFtGyPDybAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIGv+j0/3Rs8Ak/3v7qFtkXHt0uboEWCyq+cXtkXGO7dujx4BlnLv/rGNkXHt0tboEWCyn13fti0yrl/wzkXHzmI2egRYytbcNUvH4z/wDEvHe//6avQIMNkTV/2XpePiwjcCWh7cWhs9AkzmZFgAAAAAAAAAAAAAssSwAAAAAAAAAAAAAGSJYQEAAAAAAAAAAADIEsMCAAAAAAAAAAAAkCWGBQAAAAAAAAAAACBLDAsAAAAAAAAAAABAlhgWAAAAAAAAAAAAgCwxLAAAAAAAAAAAAABZYlgAAAAAAAAAAAAAssSwAAAAAAAAAAAAAGSJYQEAAAAAAAAAAADIEsMCAAAAAAAAAAAAkCWGBQAAAAAAAAAAACBLDAsAAAAAAAAAAABAlhgWAAAAAAAAAAAAgCwxLAAAAAAAAAAAAABZYlgAAAAAAAAAAAAAssSwAAAAAAAAAAAAAGSJYQEAAAAAAAAAAADIEsMCAAAAAAAAAAAAkCWGBQAAAAAAAAAAACBLDAsAAAAAAAAAAABAlhgWAAAAAAAAAAAAgCwxLAAAAAAAAAAAAABZYlgAAAAAAAAAAAAAssSwAAAAAAAAAAAAAGSJYQEAAAAAAAAAAADIEsMCAAAAAAAAAAAAkCWGBQAAAAAAAAAAACBLDAsAAAAAAAAAAABAlhgWAAAAAAAAAAAAgCwxLAAAAAAAAAAAAABZYlgAAAAAAAAAAAAAssSwAAAAAAAAAAAAAGSJYQEAAAAAAAAAAADIEsMCAAAAAAAAAAAAkCWGBQAAAAAAAAAAACBLDAsAAAAAAAAAAABAlhgWAAAAAAAAAAAAgCwxLAAAAAAAAAAAAABZYlgAAAAAAAAAAAAAssSwAAAAAAAAAAAAAGSJYQEAAAAAAAAAAADIEsMCAAAAAAAAAAAAkCWGBQAAAAAAAAAAACBLDAsAAAAAAAAAAABAlhgWAAAAAAAAAAAAgCwxLAAAAAAAAAAAAABZYlgAAAAAAAAAAAAAssSwAAAAAAAAAAAAAGSJYQEAAAAAAAAAAADIEsMCAAAAAAAAAAAAkCWGBQAAAAAAAAAAACBLDAsAAAAAAAAAAABAlhgWAAAAAAAAAAAAgCwxLAAAAAAAAAAAAABZYlgAAAAAAAAAAAAAssSwAAAAAAAAAAAAAGSJYQEAAAAAAAAAAADIEsMCAAAAAAAAAAAAkCWGBQAAAAAAAAAAACBLDAsAAAAAAAAAAABAlhgWAAAAAAAAAAAAgCwxLAAAAAAAAAAAAABZYlgAAAAAAAAAAAAAssSwAAAAAAAAAAAAAGSJYQEAAAAAAAAAAADIEsMCAAAAAAAAAAAAkDX/9+dfj54BJjs+PbUtMlyuAGfjzt1DqwU4I965KDk+8Y2Ajluf7Y8eASa7en5hW6Rc3JyNHgEm+3L/2LbI2Lt3f/QIMNnewbptkXG47XmAljv3jkaPAJM5GRYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMia7x8cjZ4BJltdXbEtgDNwcmqtdBwcHo8eAZYym3mGpWO24nqlw+VKycmply46XK/UeCagZOaYIkL8l6VkpiMgZL7igYCWncVs9AgwmTssAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMiaHx4ej54BJju/u25bZOxszEePAJNd3l6zLTK++GJ/9AiwlCtXtm2MjN2N2egRYLIHNj3D0rG9cH+l44Et37RoubqzMXoEmGxtdmBbZNze885Fh/9clFxcd3+l5SeXN0ePAJM5GRYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAAMgSwwIAAAAAAAAAAACQJYYFAAAAAAAAAAAAIEsMCwAAAAAAAAAAAECWGBYAAAAAAAAAAACALDEsAAAAAAAAAAAAAFliWAAAAAAAAAAAAACyxLAAAAAAAAAAAAAAZIlhAQAAAAAAAAAAADhX9Q0yaJn0TJBhEgAAAABJRU5ErkJggg==" id="imagee5d8cd7a8d" transform="scale(1 -1) translate(0 -312.75)" x="242.1" y="-80.55" width="1239.75" height="312.75"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 241.92 174.384 
+L 1481.76 174.384 
+L 1481.76 205.632 
+L 241.92 205.632 
+L 241.92 174.384 
+z
+" clip-path="url(#p3701774fd8)" style="fill: none; stroke: #d97706; stroke-width: 2.2; stroke-linejoin: miter"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1"/>
+     <g id="text_1">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="280.665" y="69.852402" transform="rotate(-0 280.665 69.852402)">B1</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2"/>
+     <g id="text_2">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="358.155" y="69.852402" transform="rotate(-0 358.155 69.852402)">B2</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3"/>
+     <g id="text_3">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="435.645" y="69.852402" transform="rotate(-0 435.645 69.852402)">B4</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4"/>
+     <g id="text_4">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="513.135" y="69.852402" transform="rotate(-0 513.135 69.852402)">B8</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5"/>
+     <g id="text_5">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="590.625" y="69.852402" transform="rotate(-0 590.625 69.852402)">B1</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6"/>
+     <g id="text_6">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="668.115" y="69.852402" transform="rotate(-0 668.115 69.852402)">B2</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_7"/>
+     <g id="text_7">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="745.605" y="69.852402" transform="rotate(-0 745.605 69.852402)">B4</text>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_8"/>
+     <g id="text_8">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="823.095" y="69.852402" transform="rotate(-0 823.095 69.852402)">B8</text>
+     </g>
+    </g>
+    <g id="xtick_9">
+     <g id="line2d_9"/>
+     <g id="text_9">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="900.585" y="69.852402" transform="rotate(-0 900.585 69.852402)">B1</text>
+     </g>
+    </g>
+    <g id="xtick_10">
+     <g id="line2d_10"/>
+     <g id="text_10">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="978.075" y="69.852402" transform="rotate(-0 978.075 69.852402)">B2</text>
+     </g>
+    </g>
+    <g id="xtick_11">
+     <g id="line2d_11"/>
+     <g id="text_11">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1055.565" y="69.852402" transform="rotate(-0 1055.565 69.852402)">B4</text>
+     </g>
+    </g>
+    <g id="xtick_12">
+     <g id="line2d_12"/>
+     <g id="text_12">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1133.055" y="69.852402" transform="rotate(-0 1133.055 69.852402)">B8</text>
+     </g>
+    </g>
+    <g id="xtick_13">
+     <g id="line2d_13"/>
+     <g id="text_13">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1210.545" y="69.852402" transform="rotate(-0 1210.545 69.852402)">B1</text>
+     </g>
+    </g>
+    <g id="xtick_14">
+     <g id="line2d_14"/>
+     <g id="text_14">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1288.035" y="69.852402" transform="rotate(-0 1288.035 69.852402)">B2</text>
+     </g>
+    </g>
+    <g id="xtick_15">
+     <g id="line2d_15"/>
+     <g id="text_15">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1365.525" y="69.852402" transform="rotate(-0 1365.525 69.852402)">B4</text>
+     </g>
+    </g>
+    <g id="xtick_16">
+     <g id="line2d_16"/>
+     <g id="text_16">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1443.015" y="69.852402" transform="rotate(-0 1443.015 69.852402)">B8</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_17"/>
+     <g id="text_17">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: end" x="233.92" y="100.730064" transform="rotate(-0 233.92 100.730064)">Full</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_18"/>
+     <g id="text_18">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: end" x="233.92" y="132.058953" transform="rotate(-0 233.92 132.058953)">旧PhaseKV（测速100%）</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_19"/>
+     <g id="text_19">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: end" x="233.92" y="163.365391" transform="rotate(-0 233.92 163.365391)">PhaseKV90%：优化前</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_20"/>
+     <g id="text_20">
+      <text style="font-weight: 700; font-size: 11px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: end; fill: #b45309" x="233.92" y="194.591906" transform="rotate(-0 233.92 194.591906)">PhaseKV90%：优化后</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_21"/>
+     <g id="text_21">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: end" x="233.92" y="225.722064" transform="rotate(-0 233.92 225.722064)">KIVI</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_22"/>
+     <g id="text_22">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: end" x="233.92" y="256.970064" transform="rotate(-0 233.92 256.970064)">SnapKV</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_23"/>
+     <g id="text_23">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: end" x="233.92" y="288.218064" transform="rotate(-0 233.92 288.218064)">PyramidKV</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_24"/>
+     <g id="text_24">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: end" x="233.92" y="319.466064" transform="rotate(-0 233.92 319.466064)">ClusterKV</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_25"/>
+     <g id="text_25">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: end" x="233.92" y="350.714064" transform="rotate(-0 233.92 350.714064)">MILLION</text>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_26"/>
+     <g id="text_26">
+      <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: end" x="233.92" y="381.962064" transform="rotate(-0 233.92 381.962064)">SCOPE</text>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_27">
+    <path d="M 551.88 393.12 
+L 551.88 80.64 
+" clip-path="url(#p3701774fd8)" style="fill: none; stroke: #ffffff; stroke-width: 3; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_28">
+    <path d="M 861.84 393.12 
+L 861.84 80.64 
+" clip-path="url(#p3701774fd8)" style="fill: none; stroke: #ffffff; stroke-width: 3; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_29">
+    <path d="M 1171.8 393.12 
+L 1171.8 80.64 
+" clip-path="url(#p3701774fd8)" style="fill: none; stroke: #ffffff; stroke-width: 3; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 241.92 393.12 
+L 241.92 80.64 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 1481.76 393.12 
+L 1481.76 80.64 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 241.92 393.12 
+L 1481.76 393.12 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 241.92 80.64 
+L 1481.76 80.64 
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="280.665" y="99.196617" transform="rotate(-0 280.665 99.196617)">41.30</text>
+   </g>
+   <g id="text_28">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="358.155" y="99.196617" transform="rotate(-0 358.155 99.196617)">65.53</text>
+   </g>
+   <g id="text_29">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="435.645" y="99.196617" transform="rotate(-0 435.645 99.196617)">91.76</text>
+   </g>
+   <g id="text_30">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="513.135" y="99.196617" transform="rotate(-0 513.135 99.196617)">112.08</text>
+   </g>
+   <g id="text_31">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="590.625" y="99.196617" transform="rotate(-0 590.625 99.196617)">48.12</text>
+   </g>
+   <g id="text_32">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="668.115" y="99.196617" transform="rotate(-0 668.115 99.196617)">79.00</text>
+   </g>
+   <g id="text_33">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="745.605" y="99.196617" transform="rotate(-0 745.605 99.196617)">114.66</text>
+   </g>
+   <g id="text_34">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="823.095" y="99.196617" transform="rotate(-0 823.095 99.196617)">146.64</text>
+   </g>
+   <g id="text_35">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="900.585" y="99.196617" transform="rotate(-0 900.585 99.196617)">18.45</text>
+   </g>
+   <g id="text_36">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="978.075" y="99.196617" transform="rotate(-0 978.075 99.196617)">21.09</text>
+   </g>
+   <g id="text_37">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1055.565" y="99.196617" transform="rotate(-0 1055.565 99.196617)">21.05</text>
+   </g>
+   <g id="text_38">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1133.055" y="99.196617" transform="rotate(-0 1133.055 99.196617)">23.79</text>
+   </g>
+   <g id="text_39">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1210.545" y="99.196617" transform="rotate(-0 1210.545 99.196617)">29.20</text>
+   </g>
+   <g id="text_40">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1288.035" y="99.196617" transform="rotate(-0 1288.035 99.196617)">37.23</text>
+   </g>
+   <g id="text_41">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1365.525" y="99.196617" transform="rotate(-0 1365.525 99.196617)">42.83</text>
+   </g>
+   <g id="text_42">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1443.015" y="99.196617" transform="rotate(-0 1443.015 99.196617)">44.99</text>
+   </g>
+   <g id="text_43">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="280.665" y="130.444617" transform="rotate(-0 280.665 130.444617)">39.62</text>
+   </g>
+   <g id="text_44">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="358.155" y="130.444617" transform="rotate(-0 358.155 130.444617)">67.78</text>
+   </g>
+   <g id="text_45">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="435.645" y="130.444617" transform="rotate(-0 435.645 130.444617)">98.89</text>
+   </g>
+   <g id="text_46">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="513.135" y="130.444617" transform="rotate(-0 513.135 130.444617)">126.14</text>
+   </g>
+   <g id="text_47">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="590.625" y="130.444617" transform="rotate(-0 590.625 130.444617)">43.59</text>
+   </g>
+   <g id="text_48">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="668.115" y="130.444617" transform="rotate(-0 668.115 130.444617)">80.03</text>
+   </g>
+   <g id="text_49">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="745.605" y="130.444617" transform="rotate(-0 745.605 130.444617)">124.43</text>
+   </g>
+   <g id="text_50">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="823.095" y="130.444617" transform="rotate(-0 823.095 130.444617)">169.55</text>
+   </g>
+   <g id="text_51">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="900.585" y="130.444617" transform="rotate(-0 900.585 130.444617)">19.66</text>
+   </g>
+   <g id="text_52">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="978.075" y="130.444617" transform="rotate(-0 978.075 130.444617)">23.82</text>
+   </g>
+   <g id="text_53">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1055.565" y="130.444617" transform="rotate(-0 1055.565 130.444617)">26.58</text>
+   </g>
+   <g id="text_54">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1133.055" y="130.444617" transform="rotate(-0 1133.055 130.444617)">27.00</text>
+   </g>
+   <g id="text_55">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1210.545" y="130.444617" transform="rotate(-0 1210.545 130.444617)">31.98</text>
+   </g>
+   <g id="text_56">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1288.035" y="130.444617" transform="rotate(-0 1288.035 130.444617)">43.98</text>
+   </g>
+   <g id="text_57">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1365.525" y="130.444617" transform="rotate(-0 1365.525 130.444617)">54.11</text>
+   </g>
+   <g id="text_58">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1443.015" y="130.444617" transform="rotate(-0 1443.015 130.444617)">60.44</text>
+   </g>
+   <g id="text_59">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="280.665" y="161.692617" transform="rotate(-0 280.665 161.692617)">37.52</text>
+   </g>
+   <g id="text_60">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="358.155" y="161.692617" transform="rotate(-0 358.155 161.692617)">66.15</text>
+   </g>
+   <g id="text_61">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="435.645" y="161.692617" transform="rotate(-0 435.645 161.692617)">98.81</text>
+   </g>
+   <g id="text_62">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="513.135" y="161.692617" transform="rotate(-0 513.135 161.692617)">125.67</text>
+   </g>
+   <g id="text_63">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="590.625" y="161.692617" transform="rotate(-0 590.625 161.692617)">41.98</text>
+   </g>
+   <g id="text_64">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="668.115" y="161.692617" transform="rotate(-0 668.115 161.692617)">78.84</text>
+   </g>
+   <g id="text_65">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="745.605" y="161.692617" transform="rotate(-0 745.605 161.692617)">126.41</text>
+   </g>
+   <g id="text_66">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="823.095" y="161.692617" transform="rotate(-0 823.095 161.692617)">171.84</text>
+   </g>
+   <g id="text_67">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="900.585" y="161.692617" transform="rotate(-0 900.585 161.692617)">19.58</text>
+   </g>
+   <g id="text_68">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="978.075" y="161.692617" transform="rotate(-0 978.075 161.692617)">23.53</text>
+   </g>
+   <g id="text_69">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1055.565" y="161.692617" transform="rotate(-0 1055.565 161.692617)">26.73</text>
+   </g>
+   <g id="text_70">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1133.055" y="161.692617" transform="rotate(-0 1133.055 161.692617)">27.66</text>
+   </g>
+   <g id="text_71">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1210.545" y="161.692617" transform="rotate(-0 1210.545 161.692617)">32.46</text>
+   </g>
+   <g id="text_72">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1288.035" y="161.692617" transform="rotate(-0 1288.035 161.692617)">44.78</text>
+   </g>
+   <g id="text_73">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1365.525" y="161.692617" transform="rotate(-0 1365.525 161.692617)">56.29</text>
+   </g>
+   <g id="text_74">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1443.015" y="161.692617" transform="rotate(-0 1443.015 161.692617)">64.19</text>
+   </g>
+   <g id="text_75">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="280.665" y="192.940617" transform="rotate(-0 280.665 192.940617)">31.44</text>
+   </g>
+   <g id="text_76">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="358.155" y="192.940617" transform="rotate(-0 358.155 192.940617)">59.88</text>
+   </g>
+   <g id="text_77">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="435.645" y="192.940617" transform="rotate(-0 435.645 192.940617)">83.80</text>
+   </g>
+   <g id="text_78">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="513.135" y="192.940617" transform="rotate(-0 513.135 192.940617)">107.29</text>
+   </g>
+   <g id="text_79">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="590.625" y="192.940617" transform="rotate(-0 590.625 192.940617)">38.51</text>
+   </g>
+   <g id="text_80">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="668.115" y="192.940617" transform="rotate(-0 668.115 192.940617)">75.58</text>
+   </g>
+   <g id="text_81">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="745.605" y="192.940617" transform="rotate(-0 745.605 192.940617)">124.33</text>
+   </g>
+   <g id="text_82">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="823.095" y="192.940617" transform="rotate(-0 823.095 192.940617)">167.74</text>
+   </g>
+   <g id="text_83">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="900.585" y="192.940617" transform="rotate(-0 900.585 192.940617)">14.91</text>
+   </g>
+   <g id="text_84">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="978.075" y="192.940617" transform="rotate(-0 978.075 192.940617)">18.80</text>
+   </g>
+   <g id="text_85">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1055.565" y="192.940617" transform="rotate(-0 1055.565 192.940617)">21.50</text>
+   </g>
+   <g id="text_86">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1133.055" y="192.940617" transform="rotate(-0 1133.055 192.940617)">21.74</text>
+   </g>
+   <g id="text_87">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1210.545" y="192.940617" transform="rotate(-0 1210.545 192.940617)">30.23</text>
+   </g>
+   <g id="text_88">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1288.035" y="192.940617" transform="rotate(-0 1288.035 192.940617)">41.34</text>
+   </g>
+   <g id="text_89">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1365.525" y="192.940617" transform="rotate(-0 1365.525 192.940617)">52.46</text>
+   </g>
+   <g id="text_90">
+    <text style="font-weight: 700; font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1443.015" y="192.940617" transform="rotate(-0 1443.015 192.940617)">59.04</text>
+   </g>
+   <g id="text_91">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="280.665" y="224.188617" transform="rotate(-0 280.665 224.188617)">23.76</text>
+   </g>
+   <g id="text_92">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="358.155" y="224.188617" transform="rotate(-0 358.155 224.188617)">44.30</text>
+   </g>
+   <g id="text_93">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="435.645" y="224.188617" transform="rotate(-0 435.645 224.188617)">79.12</text>
+   </g>
+   <g id="text_94">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="513.135" y="224.188617" transform="rotate(-0 513.135 224.188617)">125.46</text>
+   </g>
+   <g id="text_95">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="590.625" y="224.188617" transform="rotate(-0 590.625 224.188617)">24.67</text>
+   </g>
+   <g id="text_96">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="668.115" y="224.188617" transform="rotate(-0 668.115 224.188617)">48.80</text>
+   </g>
+   <g id="text_97">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="745.605" y="224.188617" transform="rotate(-0 745.605 224.188617)">95.43</text>
+   </g>
+   <g id="text_98">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="823.095" y="224.188617" transform="rotate(-0 823.095 224.188617)">168.58</text>
+   </g>
+   <g id="text_99">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="900.585" y="224.188617" transform="rotate(-0 900.585 224.188617)">17.72</text>
+   </g>
+   <g id="text_100">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="978.075" y="224.188617" transform="rotate(-0 978.075 224.188617)">25.10</text>
+   </g>
+   <g id="text_101">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1055.565" y="224.188617" transform="rotate(-0 1055.565 224.188617)">31.81</text>
+   </g>
+   <g id="text_102">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1133.055" y="224.188617" transform="rotate(-0 1133.055 224.188617)">36.15</text>
+   </g>
+   <g id="text_103">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1210.545" y="224.188617" transform="rotate(-0 1210.545 224.188617)">22.52</text>
+   </g>
+   <g id="text_104">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1288.035" y="224.188617" transform="rotate(-0 1288.035 224.188617)">36.33</text>
+   </g>
+   <g id="text_105">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1365.525" y="224.188617" transform="rotate(-0 1365.525 224.188617)">53.12</text>
+   </g>
+   <g id="text_106">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1443.015" y="224.188617" transform="rotate(-0 1443.015 224.188617)">66.20</text>
+   </g>
+   <g id="text_107">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="280.665" y="255.436617" transform="rotate(-0 280.665 255.436617)">40.60</text>
+   </g>
+   <g id="text_108">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="358.155" y="255.436617" transform="rotate(-0 358.155 255.436617)">67.30</text>
+   </g>
+   <g id="text_109">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="435.645" y="255.436617" transform="rotate(-0 435.645 255.436617)">91.32</text>
+   </g>
+   <g id="text_110">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="513.135" y="255.436617" transform="rotate(-0 513.135 255.436617)">108.40</text>
+   </g>
+   <g id="text_111">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="590.625" y="255.436617" transform="rotate(-0 590.625 255.436617)">44.56</text>
+   </g>
+   <g id="text_112">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="668.115" y="255.436617" transform="rotate(-0 668.115 255.436617)">70.44</text>
+   </g>
+   <g id="text_113">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="745.605" y="255.436617" transform="rotate(-0 745.605 255.436617)">97.35</text>
+   </g>
+   <g id="text_114">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="823.095" y="255.436617" transform="rotate(-0 823.095 255.436617)">115.52</text>
+   </g>
+   <g id="text_115">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="900.585" y="255.436617" transform="rotate(-0 900.585 255.436617)">26.86</text>
+   </g>
+   <g id="text_116">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="978.075" y="255.436617" transform="rotate(-0 978.075 255.436617)">36.87</text>
+   </g>
+   <g id="text_117">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1055.565" y="255.436617" transform="rotate(-0 1055.565 255.436617)">43.18</text>
+   </g>
+   <g id="text_118">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1133.055" y="255.436617" transform="rotate(-0 1133.055 255.436617)">45.70</text>
+   </g>
+   <g id="text_119">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1210.545" y="255.436617" transform="rotate(-0 1210.545 255.436617)">41.43</text>
+   </g>
+   <g id="text_120">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1288.035" y="255.436617" transform="rotate(-0 1288.035 255.436617)">63.56</text>
+   </g>
+   <g id="text_121">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1365.525" y="255.436617" transform="rotate(-0 1365.525 255.436617)">84.76</text>
+   </g>
+   <g id="text_122">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1443.015" y="255.436617" transform="rotate(-0 1443.015 255.436617)">97.75</text>
+   </g>
+   <g id="text_123">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="280.665" y="286.684617" transform="rotate(-0 280.665 286.684617)">42.47</text>
+   </g>
+   <g id="text_124">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="358.155" y="286.684617" transform="rotate(-0 358.155 286.684617)">75.48</text>
+   </g>
+   <g id="text_125">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="435.645" y="286.684617" transform="rotate(-0 435.645 286.684617)">123.86</text>
+   </g>
+   <g id="text_126">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="513.135" y="286.684617" transform="rotate(-0 513.135 286.684617)">185.40</text>
+   </g>
+   <g id="text_127">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="590.625" y="286.684617" transform="rotate(-0 590.625 286.684617)">47.72</text>
+   </g>
+   <g id="text_128">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="668.115" y="286.684617" transform="rotate(-0 668.115 286.684617)">90.45</text>
+   </g>
+   <g id="text_129">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="745.605" y="286.684617" transform="rotate(-0 745.605 286.684617)">173.88</text>
+   </g>
+   <g id="text_130">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="823.095" y="286.684617" transform="rotate(-0 823.095 286.684617)">315.79</text>
+   </g>
+   <g id="text_131">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="900.585" y="286.684617" transform="rotate(-0 900.585 286.684617)">27.84</text>
+   </g>
+   <g id="text_132">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="978.075" y="286.684617" transform="rotate(-0 978.075 286.684617)">38.81</text>
+   </g>
+   <g id="text_133">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1055.565" y="286.684617" transform="rotate(-0 1055.565 286.684617)">49.14</text>
+   </g>
+   <g id="text_134">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1133.055" y="286.684617" transform="rotate(-0 1133.055 286.684617)">OOM</text>
+   </g>
+   <g id="text_135">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1210.545" y="286.684617" transform="rotate(-0 1210.545 286.684617)">43.80</text>
+   </g>
+   <g id="text_136">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1288.035" y="286.684617" transform="rotate(-0 1288.035 286.684617)">79.77</text>
+   </g>
+   <g id="text_137">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1365.525" y="286.684617" transform="rotate(-0 1365.525 286.684617)">138.41</text>
+   </g>
+   <g id="text_138">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1443.015" y="286.684617" transform="rotate(-0 1443.015 286.684617)">OOM</text>
+   </g>
+   <g id="text_139">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="280.665" y="317.932617" transform="rotate(-0 280.665 317.932617)">27.55</text>
+   </g>
+   <g id="text_140">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="358.155" y="318.086118" transform="rotate(-0 358.155 318.086118)">未安排</text>
+   </g>
+   <g id="text_141">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="435.645" y="318.086118" transform="rotate(-0 435.645 318.086118)">未安排</text>
+   </g>
+   <g id="text_142">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="513.135" y="318.086118" transform="rotate(-0 513.135 318.086118)">未安排</text>
+   </g>
+   <g id="text_143">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="590.625" y="317.932617" transform="rotate(-0 590.625 317.932617)">30.48</text>
+   </g>
+   <g id="text_144">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="668.115" y="318.086118" transform="rotate(-0 668.115 318.086118)">未安排</text>
+   </g>
+   <g id="text_145">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="745.605" y="318.086118" transform="rotate(-0 745.605 318.086118)">未安排</text>
+   </g>
+   <g id="text_146">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="823.095" y="318.086118" transform="rotate(-0 823.095 318.086118)">未安排</text>
+   </g>
+   <g id="text_147">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="900.585" y="317.932617" transform="rotate(-0 900.585 317.932617)">16.67</text>
+   </g>
+   <g id="text_148">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="978.075" y="318.086118" transform="rotate(-0 978.075 318.086118)">未安排</text>
+   </g>
+   <g id="text_149">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1055.565" y="318.086118" transform="rotate(-0 1055.565 318.086118)">未安排</text>
+   </g>
+   <g id="text_150">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1133.055" y="318.086118" transform="rotate(-0 1133.055 318.086118)">未安排</text>
+   </g>
+   <g id="text_151">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1210.545" y="317.932617" transform="rotate(-0 1210.545 317.932617)">25.55</text>
+   </g>
+   <g id="text_152">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1288.035" y="318.086118" transform="rotate(-0 1288.035 318.086118)">未安排</text>
+   </g>
+   <g id="text_153">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1365.525" y="318.086118" transform="rotate(-0 1365.525 318.086118)">未安排</text>
+   </g>
+   <g id="text_154">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1443.015" y="318.086118" transform="rotate(-0 1443.015 318.086118)">未安排</text>
+   </g>
+   <g id="text_155">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="280.665" y="349.180617" transform="rotate(-0 280.665 349.180617)">43.52</text>
+   </g>
+   <g id="text_156">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="358.155" y="349.334118" transform="rotate(-0 358.155 349.334118)">未安排</text>
+   </g>
+   <g id="text_157">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="435.645" y="349.334118" transform="rotate(-0 435.645 349.334118)">未安排</text>
+   </g>
+   <g id="text_158">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="513.135" y="349.334118" transform="rotate(-0 513.135 349.334118)">未安排</text>
+   </g>
+   <g id="text_159">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="590.625" y="349.180617" transform="rotate(-0 590.625 349.180617)">47.94</text>
+   </g>
+   <g id="text_160">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="668.115" y="349.334118" transform="rotate(-0 668.115 349.334118)">未安排</text>
+   </g>
+   <g id="text_161">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="745.605" y="349.334118" transform="rotate(-0 745.605 349.334118)">未安排</text>
+   </g>
+   <g id="text_162">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="823.095" y="349.334118" transform="rotate(-0 823.095 349.334118)">未安排</text>
+   </g>
+   <g id="text_163">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="900.585" y="349.180617" transform="rotate(-0 900.585 349.180617)">21.69</text>
+   </g>
+   <g id="text_164">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="978.075" y="349.334118" transform="rotate(-0 978.075 349.334118)">未安排</text>
+   </g>
+   <g id="text_165">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1055.565" y="349.334118" transform="rotate(-0 1055.565 349.334118)">未安排</text>
+   </g>
+   <g id="text_166">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1133.055" y="349.334118" transform="rotate(-0 1133.055 349.334118)">未安排</text>
+   </g>
+   <g id="text_167">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1210.545" y="349.180617" transform="rotate(-0 1210.545 349.180617)">31.79</text>
+   </g>
+   <g id="text_168">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1288.035" y="349.334118" transform="rotate(-0 1288.035 349.334118)">未安排</text>
+   </g>
+   <g id="text_169">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1365.525" y="349.334118" transform="rotate(-0 1365.525 349.334118)">未安排</text>
+   </g>
+   <g id="text_170">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1443.015" y="349.334118" transform="rotate(-0 1443.015 349.334118)">未安排</text>
+   </g>
+   <g id="text_171">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="280.665" y="380.428617" transform="rotate(-0 280.665 380.428617)">29.18</text>
+   </g>
+   <g id="text_172">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="358.155" y="380.428617" transform="rotate(-0 358.155 380.428617)">43.17</text>
+   </g>
+   <g id="text_173">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="435.645" y="380.428617" transform="rotate(-0 435.645 380.428617)">OOM</text>
+   </g>
+   <g id="text_174">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="513.135" y="380.428617" transform="rotate(-0 513.135 380.428617)">OOM</text>
+   </g>
+   <g id="text_175">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="590.625" y="380.428617" transform="rotate(-0 590.625 380.428617)">33.87</text>
+   </g>
+   <g id="text_176">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="668.115" y="380.428617" transform="rotate(-0 668.115 380.428617)">60.20</text>
+   </g>
+   <g id="text_177">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="745.605" y="380.428617" transform="rotate(-0 745.605 380.428617)">OOM</text>
+   </g>
+   <g id="text_178">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="823.095" y="380.428617" transform="rotate(-0 823.095 380.428617)">OOM</text>
+   </g>
+   <g id="text_179">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="900.585" y="380.428617" transform="rotate(-0 900.585 380.428617)">OOM</text>
+   </g>
+   <g id="text_180">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="978.075" y="380.428617" transform="rotate(-0 978.075 380.428617)">OOM</text>
+   </g>
+   <g id="text_181">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1055.565" y="380.428617" transform="rotate(-0 1055.565 380.428617)">OOM</text>
+   </g>
+   <g id="text_182">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1133.055" y="380.428617" transform="rotate(-0 1133.055 380.428617)">OOM</text>
+   </g>
+   <g id="text_183">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1210.545" y="380.428617" transform="rotate(-0 1210.545 380.428617)">OOM</text>
+   </g>
+   <g id="text_184">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1288.035" y="380.428617" transform="rotate(-0 1288.035 380.428617)">OOM</text>
+   </g>
+   <g id="text_185">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1365.525" y="380.428617" transform="rotate(-0 1365.525 380.428617)">OOM</text>
+   </g>
+   <g id="text_186">
+    <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1443.015" y="380.428617" transform="rotate(-0 1443.015 380.428617)">OOM</text>
+   </g>
+   <g id="text_187">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="396.9" y="49.392" transform="rotate(-0 396.9 49.392)">8192+256 输入/输出</text>
+   </g>
+   <g id="text_188">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="706.86" y="49.392" transform="rotate(-0 706.86 49.392)">8192+2048 输入/输出</text>
+   </g>
+   <g id="text_189">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1016.82" y="49.392" transform="rotate(-0 1016.82 49.392)">32768+256 输入/输出</text>
+   </g>
+   <g id="text_190">
+    <text style="font-weight: 700; font-size: 12px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="1326.78" y="49.392" transform="rotate(-0 1326.78 49.392)">32768+2048 输入/输出</text>
+   </g>
+  </g>
+  <g id="text_191">
+   <text style="font-weight: 700; font-size: 18px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: middle" x="756" y="35.339063" transform="rotate(-0 756 35.339063)">端到端吞吐（包含首token等待）  |  token/s，越高越好</text>
+  </g>
+  <g id="text_192">
+   <text style="font-size: 11px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: start" x="241.92" y="443.52" transform="rotate(-0 241.92 443.52)">橙框为本次BetterMemory结果；每列颜色深浅表示该指标的相对表现，不代表综合质量。</text>
+  </g>
+  <g id="text_193">
+   <text style="font-size: 10.5px; font-family: 'Microsoft YaHei', 'SimHei', 'DejaVu Sans', sans-serif; text-anchor: start" x="241.92" y="466.2" transform="rotate(-0 241.92 466.2)">不同运行的GPU UUID/并发条件不同：这是历史观测比较，非同卡受控加速比。预热不计成绩；失败与未安排不填0。</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p3701774fd8">
+   <rect x="241.92" y="80.64" width="1239.84" height="312.48"/>
+  </clipPath>
+ </defs>
+</svg>

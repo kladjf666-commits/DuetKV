@@ -1,0 +1,72 @@
+{
+  "id": "longbench_full/multifieldqa_en/33bfe67a3d40e71a5e5351ea5db4ea55df61a018d071074b",
+  "suite": "longbench",
+  "task": "multifieldqa_en",
+  "input_sha256": "3bedcf88e6ca528e35cf136ce9fbb141fa83e3ff7a1f352dee240d99e0824689",
+  "input_tokens": 7731,
+  "max_new_tokens": 64,
+  "truncated_input": false,
+  "original_id": "33bfe67a3d40e71a5e5351ea5db4ea55df61a018d071074b",
+  "evaluation_split": "heldout",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "894fe36c-c838-d2cb-263d-f64c0813b14c",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 22,
+  "decode_steps": 21,
+  "decoded_tokens": 21,
+  "decode_s": 0.5116698425263166,
+  "aggregate_tokens_per_s": 41.04209053305679,
+  "per_sequence_tokens_per_s": 41.04209053305679,
+  "ttft_s": 0.6957610873505473,
+  "prefill_peak_bytes": 18067342848,
+  "decode_peak_bytes": 17171388416,
+  "peak_allocated_bytes": 18067342848,
+  "effective_options": {
+    "max_capacity_prompt": 2048,
+    "window_size": 32,
+    "kernel_size": 7,
+    "pooling": "maxpool"
+  },
+  "mode": "native",
+  "trace": {
+    "physical_tokens": 2069,
+    "stored_heads": 32
+  },
+  "final_kv_bytes": 1084751872,
+  "status": "ok",
+  "output_ids": [
+    791,
+    26954,
+    15407,
+    279,
+    5209,
+    1486,
+    315,
+    279,
+    50977,
+    369,
+    279,
+    8040,
+    320,
+    438,
+    837,
+    13167,
+    291,
+    8,
+    3185,
+    7090,
+    13,
+    128009
+  ],
+  "prediction": "The baseline references the mid point of the firewall for the developed (and true dimensioned) side panel.",
+  "answers": [
+    "The baseline is used as a reference for the mid point of the firewall for the developed side panel."
+  ],
+  "score": 66.66666666666666,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 1.2138895988464355
+}

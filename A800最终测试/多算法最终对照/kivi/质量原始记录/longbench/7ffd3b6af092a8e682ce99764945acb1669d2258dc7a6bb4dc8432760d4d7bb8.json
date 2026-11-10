@@ -1,0 +1,61 @@
+{
+  "id": "longbench_full/narrativeqa/cfc986e72c167c2a8f3bff0498f2f2234bfa038cc8ca9f7f",
+  "suite": "longbench",
+  "task": "narrativeqa",
+  "input_sha256": "7c1e0ae729b5585b2716b12ed26614d9b07bcf9bfc73e818a3c834f0c53f73ac",
+  "input_tokens": 13541,
+  "max_new_tokens": 128,
+  "truncated_input": false,
+  "original_id": "cfc986e72c167c2a8f3bff0498f2f2234bfa038cc8ca9f7f",
+  "evaluation_split": "historical_retest",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "3d68f21e-bb96-d4f6-f517-dd7465632716",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 9,
+  "decode_steps": 8,
+  "decoded_tokens": 8,
+  "decode_s": 0.3418082194402814,
+  "aggregate_tokens_per_s": 23.404937462007727,
+  "per_sequence_tokens_per_s": 23.404937462007727,
+  "ttft_s": 1.4751954730600119,
+  "prefill_peak_bytes": 18047975424,
+  "decode_peak_bytes": 16624410112,
+  "peak_allocated_bytes": 18047975424,
+  "effective_options": {
+    "k_bits": 2,
+    "v_bits": 2,
+    "group_size": 32,
+    "residual_length": 128,
+    "use_flash": true
+  },
+  "mode": "native",
+  "trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 13549
+  },
+  "final_kv_bytes": 345600000,
+  "status": "ok",
+  "output_ids": [
+    1548,
+    50157,
+    927,
+    279,
+    73841,
+    2320,
+    354,
+    13,
+    128009
+  ],
+  "prediction": "He stumbled over the watering-pot.",
+  "answers": [
+    "Sherlock had wet the floor by overturning a water-filled pot."
+  ],
+  "score": 0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 1.823434829711914
+}

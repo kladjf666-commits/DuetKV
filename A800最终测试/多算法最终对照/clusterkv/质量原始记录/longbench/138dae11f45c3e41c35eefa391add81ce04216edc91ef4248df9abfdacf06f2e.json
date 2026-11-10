@@ -1,0 +1,69 @@
+{
+  "batch": 1,
+  "input_tokens": 4983,
+  "output_tokens_per_row": 14,
+  "decode_steps": 13,
+  "decoded_tokens": 13,
+  "decode_s": 0.3091080393642187,
+  "aggregate_tokens_per_s": 42.0564926966595,
+  "per_sequence_tokens_per_s": 42.0564926966595,
+  "ttft_s": 0.5311424266546965,
+  "prefill_peak_bytes": 17174810624,
+  "decode_peak_bytes": 16584168448,
+  "peak_allocated_bytes": 17174810624,
+  "effective_options": {
+    "quality_budget": 256,
+    "speed_budget": 1024,
+    "nlist": "floor(L/80)",
+    "niter": 20,
+    "sink": 16,
+    "window": 320,
+    "window_nlist": 4,
+    "offload": true
+  },
+  "mode": "native",
+  "trace": {
+    "physical_history": 4996,
+    "retrieval_budget": 256,
+    "initial_clusters": 62,
+    "clusters": 62,
+    "cpu_pinned_kv_bytes": 628531200
+  },
+  "final_kv_bytes": 332881920,
+  "status": "ok",
+  "id": "longbench_full/qasper/e7860b94e9aedb1f9b1e5a8839cb1424486c3f2dd69ee124",
+  "suite": "longbench",
+  "task": "qasper",
+  "input_sha256": "46b2057b27d18aafe4818df60d99055c35b0b509baaf9f2738d41d5d0c3cf54e",
+  "output_ids": [
+    791,
+    220,
+    679,
+    15,
+    602,
+    17,
+    65,
+    17,
+    14,
+    13114,
+    27809,
+    3465,
+    13,
+    128009
+  ],
+  "prediction": "The 2010 i2b2/VA CE task.",
+  "score": 66.66666666666666,
+  "metric": "qa_f1_score",
+  "truncated_input": false,
+  "max_new_tokens": 128,
+  "answers": [
+    "clinical notes from the CE task in 2010 i2b2/VA",
+    "clinical notes from the CE task in 2010 i2b2/VA "
+  ],
+  "reused_from": {
+    "path": "/data/phasekv-results/a800_four_gpu_v1/results/clusterkv/quality/c9a0451d6b3a21d3aea3bb02588e8d22b26d6bf22365acc4e7fc1be0a81fb7fa.json",
+    "id": "longbench/qasper/160/8192",
+    "sha256": "442819980a057c9f8b3418535de3797d5ebca5538b1d105143d0235c0b7aaca3",
+    "protocol_sha256": "dad80bcbc8440822bd90a7f7c1ad5fbb96c50187eaccd91d8d15a6f39e351ace"
+  }
+}

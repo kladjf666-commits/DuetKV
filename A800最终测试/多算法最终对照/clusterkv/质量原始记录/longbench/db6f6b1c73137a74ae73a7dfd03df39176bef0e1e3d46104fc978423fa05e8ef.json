@@ -1,0 +1,59 @@
+{
+  "batch": 1,
+  "input_tokens": 11343,
+  "output_tokens_per_row": 5,
+  "decode_steps": 4,
+  "decoded_tokens": 4,
+  "decode_s": 0.09910548385232687,
+  "aggregate_tokens_per_s": 40.36103598424725,
+  "per_sequence_tokens_per_s": 40.36103598424725,
+  "ttft_s": 1.3187720030546188,
+  "prefill_peak_bytes": 17901444608,
+  "decode_peak_bytes": 16555280384,
+  "peak_allocated_bytes": 17901444608,
+  "effective_options": {
+    "quality_budget": 256,
+    "speed_budget": 1024,
+    "nlist": "floor(L/80)",
+    "niter": 20,
+    "sink": 16,
+    "window": 320,
+    "window_nlist": 4,
+    "offload": true
+  },
+  "mode": "native",
+  "trace": {
+    "physical_history": 11347,
+    "retrieval_budget": 256,
+    "initial_clusters": 141,
+    "clusters": 141,
+    "cpu_pinned_kv_bytes": 1410048000
+  },
+  "final_kv_bytes": 384983040,
+  "status": "ok",
+  "id": "longbench_full/narrativeqa/24c995f1a10e348519cdc6cd24685ab64bcf6454554de945",
+  "suite": "longbench",
+  "task": "narrativeqa",
+  "input_sha256": "41b709bd2c6f59adb0dbcb27edb2c9a632a1c46d37ddd2fde616dbc26ec67697",
+  "output_ids": [
+    37,
+    39724,
+    1667,
+    13,
+    128009
+  ],
+  "prediction": "Fifty years.",
+  "score": 50.0,
+  "metric": "qa_f1_score",
+  "truncated_input": false,
+  "max_new_tokens": 128,
+  "answers": [
+    "50 years"
+  ],
+  "reused_from": {
+    "path": "/data/phasekv-results/a800_four_gpu_v1/results/clusterkv/quality/4e33adb264ba5ad0b48ac5b09f3b59289df12b22f2d78a6933853f1ed3ff10e2.json",
+    "id": "longbench/narrativeqa/12/16384",
+    "sha256": "8ca47e906009e283d27754dca6f28c882bc7dbb8336abfcb77c73a495ce37cdb",
+    "protocol_sha256": "dad80bcbc8440822bd90a7f7c1ad5fbb96c50187eaccd91d8d15a6f39e351ace"
+  }
+}

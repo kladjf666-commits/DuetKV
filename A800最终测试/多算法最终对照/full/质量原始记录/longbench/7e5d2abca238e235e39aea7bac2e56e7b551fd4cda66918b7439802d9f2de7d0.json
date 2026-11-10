@@ -1,0 +1,55 @@
+{
+  "id": "longbench_full/multifieldqa_en/73debbba53d5848cdc1e726c047bb0b82c5730d747fa710c",
+  "suite": "longbench",
+  "task": "multifieldqa_en",
+  "input_sha256": "97ad55f0169c9dbdffae6349b0d7c047faaf07484494055a694515d35e44649b",
+  "input_tokens": 4751,
+  "max_new_tokens": 64,
+  "truncated_input": false,
+  "original_id": "73debbba53d5848cdc1e726c047bb0b82c5730d747fa710c",
+  "evaluation_split": "heldout",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "894fe36c-c838-d2cb-263d-f64c0813b14c",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 10,
+  "decode_steps": 9,
+  "decoded_tokens": 9,
+  "decode_s": 0.19628898799419403,
+  "aggregate_tokens_per_s": 45.850763672316695,
+  "per_sequence_tokens_per_s": 45.850763672316695,
+  "ttft_s": 0.5311586372554302,
+  "prefill_peak_bytes": 16734673920,
+  "decode_peak_bytes": 16703302656,
+  "peak_allocated_bytes": 16734673920,
+  "effective_options": {},
+  "mode": "native",
+  "trace": {
+    "physical_tokens": 4760,
+    "stored_heads": 8
+  },
+  "final_kv_bytes": 623902720,
+  "status": "ok",
+  "output_ids": [
+    1951,
+    17414,
+    12801,
+    9675,
+    323,
+    9675,
+    315,
+    23261,
+    13,
+    128009
+  ],
+  "prediction": "Deputy Prime Minister and Minister of Finance.",
+  "answers": [
+    "He became deputy prime minister and minister of finance."
+  ],
+  "score": 87.50000000000001,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 0.7322888374328613
+}

@@ -1,0 +1,85 @@
+{
+  "id": "longbench_full/2wikimqa/57543e0892f90733bf97dc270cdb36eb9bf8e2230940bcb9",
+  "suite": "longbench",
+  "task": "2wikimqa",
+  "input_sha256": "6d1e69808c4e14ab6330e65f2d7ee99b52f118fb6c4619d212001d3a72e37de9",
+  "input_tokens": 3841,
+  "max_new_tokens": 32,
+  "truncated_input": false,
+  "original_id": "57543e0892f90733bf97dc270cdb36eb9bf8e2230940bcb9",
+  "evaluation_split": "heldout",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "3d68f21e-bb96-d4f6-f517-dd7465632716",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 4,
+  "decode_steps": 3,
+  "decoded_tokens": 3,
+  "decode_s": 0.1613572221249342,
+  "aggregate_tokens_per_s": 18.59228834317182,
+  "per_sequence_tokens_per_s": 18.59228834317182,
+  "ttft_s": 0.38071537483483553,
+  "prefill_peak_bytes": 16681641472,
+  "decode_peak_bytes": 16224293888,
+  "peak_allocated_bytes": 16681641472,
+  "effective_options": {
+    "M": 64,
+    "nbits": 8,
+    "bits_per_scalar": 4,
+    "quality_residual": 0,
+    "speed_residual": 128,
+    "codebooks": {
+      "model_config": "29e4c210b0d6ac178b16b2a255a568bdb23b581e50ca1ef6a6d071dd85704e6e",
+      "weights_index": "146776fce3f6db1103aa6f249e65ee5544c5923ce6f971b092eee79aa6e5d37b",
+      "calibration_sha256": "e83889baabc497075506f91975be5fac0d45c5290b6b20582c8cd1e853d0c9f7",
+      "seed": 42,
+      "M": 64,
+      "nbits": 8,
+      "recipe": "WikiText-2-raw-v1 train only; 16 seeded 4096-token windows; 128 vectors per layer per window; 65536 vectors per side; separate K/V dictionaries shared across layers; FAISS IndexPQ 25 iterations",
+      "blocks": [
+        6,
+        549,
+        30,
+        274,
+        100,
+        209,
+        466,
+        38,
+        442,
+        497,
+        308,
+        197,
+        488,
+        570,
+        525,
+        565
+      ],
+      "key": "fdf0b35e29433139bc0e166a7bde84cfd7591c1c13fb81f6dcea380d704f8ca3",
+      "vectors_per_codebook": 65536,
+      "value": "cbf802aa35666c350a54a881c931ea03ca533db305ccb036480f8a735b5bf365"
+    }
+  },
+  "mode": "native",
+  "trace": {
+    "pq_tokens": 3844,
+    "code_dtype": "torch.uint8"
+  },
+  "final_kv_bytes": 142737408,
+  "status": "ok",
+  "output_ids": [
+    64463,
+    61261,
+    17368,
+    128009
+  ],
+  "prediction": "Henry Goes Arizona",
+  "answers": [
+    "Henry Goes Arizona"
+  ],
+  "score": 100.0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 0.5460011959075928
+}

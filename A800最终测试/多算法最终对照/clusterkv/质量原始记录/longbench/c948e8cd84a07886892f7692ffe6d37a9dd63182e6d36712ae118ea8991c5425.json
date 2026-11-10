@@ -1,0 +1,62 @@
+{
+  "id": "longbench_full/narrativeqa/e7d4896765966f6a5c728acac7feaacf20b9424a57be29ba",
+  "suite": "longbench",
+  "task": "narrativeqa",
+  "input_sha256": "9ebf6a6ff57d3f5058ae8a9b60e769710efbe73f44242ff87a6ebdd3498147eb",
+  "input_tokens": 23221,
+  "max_new_tokens": 128,
+  "truncated_input": false,
+  "original_id": "e7d4896765966f6a5c728acac7feaacf20b9424a57be29ba",
+  "evaluation_split": "historical_retest",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "2347a980-636a-b41a-6f67-544c3bcce0ae",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 5,
+  "decode_steps": 4,
+  "decoded_tokens": 4,
+  "decode_s": 0.11597871873527765,
+  "aggregate_tokens_per_s": 34.48908596007197,
+  "per_sequence_tokens_per_s": 34.48908596007197,
+  "ttft_s": 3.799759824760258,
+  "prefill_peak_bytes": 19445978624,
+  "decode_peak_bytes": 16686345728,
+  "peak_allocated_bytes": 19445978624,
+  "effective_options": {
+    "quality_budget": 256,
+    "speed_budget": 1024,
+    "nlist": "floor(L/80)",
+    "niter": 20,
+    "sink": 16,
+    "window": 320,
+    "window_nlist": 4,
+    "offload": true
+  },
+  "mode": "native",
+  "trace": {
+    "physical_history": 23225,
+    "retrieval_budget": 256,
+    "initial_clusters": 290,
+    "clusters": 290,
+    "cpu_pinned_kv_bytes": 2869616640
+  },
+  "final_kv_bytes": 482287616,
+  "status": "ok",
+  "output_ids": [
+    36,
+    24444,
+    8078,
+    13,
+    128009
+  ],
+  "prediction": "Eatonville.",
+  "answers": [
+    "Story did not mention"
+  ],
+  "score": 0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 3.922607898712158
+}

@@ -1,0 +1,56 @@
+{
+  "id": "longbench_full/hotpotqa/72a769d6d0fd1c5c90974e60ab97e88e6853b9115a7fb85e",
+  "suite": "longbench",
+  "task": "hotpotqa",
+  "input_sha256": "7e7faeb686a4f76f125547c2d8eff1ab6a22c0995dc0d5ee3a26dc5c1ff12c29",
+  "input_tokens": 16063,
+  "max_new_tokens": 32,
+  "truncated_input": false,
+  "original_id": "72a769d6d0fd1c5c90974e60ab97e88e6853b9115a7fb85e",
+  "evaluation_split": "heldout",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "3d68f21e-bb96-d4f6-f517-dd7465632716",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 4,
+  "decode_steps": 3,
+  "decoded_tokens": 3,
+  "decode_s": 0.1425107680261135,
+  "aggregate_tokens_per_s": 21.05104085503408,
+  "per_sequence_tokens_per_s": 21.05104085503408,
+  "ttft_s": 1.9208778161555529,
+  "prefill_peak_bytes": 18390997504,
+  "decode_peak_bytes": 16692922880,
+  "peak_allocated_bytes": 18390997504,
+  "effective_options": {
+    "k_bits": 2,
+    "v_bits": 2,
+    "group_size": 32,
+    "residual_length": 128,
+    "use_flash": true
+  },
+  "mode": "native",
+  "trace": {
+    "key_quantized": true,
+    "value_quantized": true,
+    "logical_tokens": 16066
+  },
+  "final_kv_bytes": 405168128,
+  "status": "ok",
+  "output_ids": [
+    55,
+    3757,
+    12634,
+    128009
+  ],
+  "prediction": "Xcel Energy",
+  "answers": [
+    "Xcel Energy Inc."
+  ],
+  "score": 80.0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 2.070347547531128
+}

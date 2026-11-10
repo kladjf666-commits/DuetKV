@@ -1,0 +1,62 @@
+{
+  "id": "longbench_full/narrativeqa/a3bfcf39ca219cf1af8a91c3f3e30bdcf3f16f7f8f0f1adb",
+  "suite": "longbench",
+  "task": "narrativeqa",
+  "input_sha256": "23d170b653889c705fd727b85e1bfa0ff234aa90ce8634a4c4015756b66c53ea",
+  "input_tokens": 31145,
+  "max_new_tokens": 128,
+  "truncated_input": false,
+  "original_id": "a3bfcf39ca219cf1af8a91c3f3e30bdcf3f16f7f8f0f1adb",
+  "evaluation_split": "historical_retest",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "2347a980-636a-b41a-6f67-544c3bcce0ae",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 5,
+  "decode_steps": 4,
+  "decoded_tokens": 4,
+  "decode_s": 0.11608212254941463,
+  "aggregate_tokens_per_s": 34.45836371829997,
+  "per_sequence_tokens_per_s": 34.45836371829997,
+  "ttft_s": 5.494908987544477,
+  "prefill_peak_bytes": 20442551808,
+  "decode_peak_bytes": 16740025856,
+  "peak_allocated_bytes": 20442551808,
+  "effective_options": {
+    "quality_budget": 256,
+    "speed_budget": 1024,
+    "nlist": "floor(L/80)",
+    "niter": 20,
+    "sink": 16,
+    "window": 320,
+    "window_nlist": 4,
+    "offload": true
+  },
+  "mode": "native",
+  "trace": {
+    "physical_history": 31149,
+    "retrieval_budget": 256,
+    "initial_clusters": 389,
+    "clusters": 389,
+    "cpu_pinned_kv_bytes": 3843317760
+  },
+  "final_kv_bytes": 547201024,
+  "status": "ok",
+  "output_ids": [
+    791,
+    32392,
+    4735,
+    13,
+    128009
+  ],
+  "prediction": "The KNIGHT.",
+  "answers": [
+    "Everyone except for Jof"
+  ],
+  "score": 0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 5.618335485458374
+}

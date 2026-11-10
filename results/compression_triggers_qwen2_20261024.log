@@ -1,8 +1,0 @@
-There was a problem when trying to write in your cache folder (/root/autodl-tmp/hf-cache/hub). You should set the environment variable TRANSFORMERS_CACHE to a writable directory.
-full output=80 status=baseline_no_compression prefill=0 decode=0
-kivi output=80 status=triggered prefill=1 decode=79
-snapkv output=80 status=triggered prefill=1 decode=0
-scope output=80 status=not_triggered prefill=0 decode=0
-pyramidkv output=80 status=triggered prefill=1 decode=0
-phasekv output=80 status=triggered prefill=1 decode=2
-scope output=258 status=triggered prefill=0 decode=1

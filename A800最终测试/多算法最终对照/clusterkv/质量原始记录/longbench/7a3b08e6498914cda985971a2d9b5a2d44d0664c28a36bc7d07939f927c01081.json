@@ -1,0 +1,59 @@
+{
+  "batch": 1,
+  "input_tokens": 6059,
+  "output_tokens_per_row": 5,
+  "decode_steps": 4,
+  "decoded_tokens": 4,
+  "decode_s": 0.0961677823215723,
+  "aggregate_tokens_per_s": 41.593971530138134,
+  "per_sequence_tokens_per_s": 41.593971530138134,
+  "ttft_s": 0.6662988252937794,
+  "prefill_peak_bytes": 17316557824,
+  "decode_peak_bytes": 16594285568,
+  "peak_allocated_bytes": 17316557824,
+  "effective_options": {
+    "quality_budget": 256,
+    "speed_budget": 1024,
+    "nlist": "floor(L/80)",
+    "niter": 20,
+    "sink": 16,
+    "window": 320,
+    "window_nlist": 4,
+    "offload": true
+  },
+  "mode": "native",
+  "trace": {
+    "physical_history": 6063,
+    "retrieval_budget": 256,
+    "initial_clusters": 75,
+    "clusters": 75,
+    "cpu_pinned_kv_bytes": 748953600
+  },
+  "final_kv_bytes": 340910080,
+  "status": "ok",
+  "id": "longbench_full/2wikimqa/60735709da9cbdd65bab0a11d1a0991ec842fe74d1ab583b",
+  "suite": "longbench",
+  "task": "2wikimqa",
+  "input_sha256": "1e5a946a32c202da84d8641479fd6a6deccc169ce029c31881a8bb36a64a7d76",
+  "output_ids": [
+    791,
+    53556,
+    505,
+    21181,
+    128009
+  ],
+  "prediction": "The Blonde from Singapore",
+  "score": 0,
+  "metric": "qa_f1_score",
+  "truncated_input": false,
+  "max_new_tokens": 32,
+  "answers": [
+    "The Piper'S Price"
+  ],
+  "reused_from": {
+    "path": "/data/phasekv-results/a800_four_gpu_v1/results/clusterkv/quality/53a3814f847c73163acc28643d3e52702ea440181002b00bdf051c35b8e10f8f.json",
+    "id": "longbench/2wikimqa/112/8192",
+    "sha256": "edf666145c146def3b038df089601d1b03612abc921d4fa5c15e1abbc7695bcd",
+    "protocol_sha256": "dad80bcbc8440822bd90a7f7c1ad5fbb96c50187eaccd91d8d15a6f39e351ace"
+  }
+}

@@ -1,16 +1,0 @@
-Loading same 32-layer Llama checkpoint on GPU-5d2edea4-cb83-cc0b-8b0b-f8574a7687a9, NVIDIA GeForce RTX 4090 D, 575.64.05
-You are attempting to use Flash Attention 2.0 with a model not initialized on GPU. Make sure to move the model to GPU after initializing it on CPU with `model.to('cuda')`.
-Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:22<01:06, 22.08s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:45<00:45, 22.59s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [01:08<00:22, 22.79s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:11<00:00, 15.09s/it]Loading checkpoint shards: 100%|██████████| 4/4 [01:11<00:00, 17.84s/it]
-MODEL_READY
-[full_fa2/performance/8192+256/0] 129/256 tokens
-[full_fa2/performance/8192+256/0] 256/256 tokens
-[phasekv_triton/performance/8192+256/0] 129/256 tokens
-[phasekv_triton/performance/8192+256/0] 256/256 tokens
-Warmup and original-output parity passed.
-Unprofiled paired repeat 1 complete.
-Unprofiled paired repeat 2 complete.
-Unprofiled paired repeat 3 complete.
-CUPTI repeat 1 complete, no dropped records.
-CUPTI repeat 2 complete, no dropped records.
-CUPTI repeat 3 complete, no dropped records.
-FINISHED /data/phasekv-results/4090d_first_cooling_kO5Rd3XM/cooling_summary.json

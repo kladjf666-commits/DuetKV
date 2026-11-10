@@ -1,0 +1,69 @@
+{
+  "batch": 1,
+  "input_tokens": 3422,
+  "output_tokens_per_row": 14,
+  "decode_steps": 13,
+  "decoded_tokens": 13,
+  "decode_s": 0.30736948642879725,
+  "aggregate_tokens_per_s": 42.2943739505238,
+  "per_sequence_tokens_per_s": 42.2943739505238,
+  "ttft_s": 0.37142214737832546,
+  "prefill_peak_bytes": 16974803456,
+  "decode_peak_bytes": 16568243712,
+  "peak_allocated_bytes": 16974803456,
+  "effective_options": {
+    "quality_budget": 256,
+    "speed_budget": 1024,
+    "nlist": "floor(L/80)",
+    "niter": 20,
+    "sink": 16,
+    "window": 320,
+    "window_nlist": 4,
+    "offload": true
+  },
+  "mode": "native",
+  "trace": {
+    "physical_history": 3435,
+    "retrieval_budget": 256,
+    "initial_clusters": 42,
+    "clusters": 42,
+    "cpu_pinned_kv_bytes": 436715520
+  },
+  "final_kv_bytes": 320094208,
+  "status": "ok",
+  "id": "longbench_full/qasper/aaaf5a6e22afc0f84ee63ab9e8dfe9484462ef105aa44ec6",
+  "suite": "longbench",
+  "task": "qasper",
+  "input_sha256": "be61ac5ecadd37c8ac1c451d2669b579e66e6d83bf7eba161ee2abcf6659a742",
+  "output_ids": [
+    44297,
+    11,
+    15155,
+    11,
+    15506,
+    11,
+    6063,
+    11,
+    323,
+    3892,
+    1023,
+    15823,
+    13,
+    128009
+  ],
+  "prediction": "French, Italian, Spanish, German, and several other languages.",
+  "score": 40.0,
+  "metric": "qa_f1_score",
+  "truncated_input": false,
+  "max_new_tokens": 128,
+  "answers": [
+    "English, French, German ",
+    "French, English, Spanish, Italian, Portuguese, Hebrew, Arabic"
+  ],
+  "reused_from": {
+    "path": "/data/phasekv-results/a800_four_gpu_v1/results/clusterkv/quality/cab6dc4807136930b9726bd5c2b063fa5130d49f7773630b689a9c90b8d5416e.json",
+    "id": "longbench/qasper/131/8192",
+    "sha256": "7002e28687f0f2832c8d659fb206219975936699d33ff4f025eb18c588cc82bc",
+    "protocol_sha256": "dad80bcbc8440822bd90a7f7c1ad5fbb96c50187eaccd91d8d15a6f39e351ace"
+  }
+}

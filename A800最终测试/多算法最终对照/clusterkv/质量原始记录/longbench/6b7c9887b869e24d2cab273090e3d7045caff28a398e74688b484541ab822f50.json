@@ -1,0 +1,60 @@
+{
+  "batch": 1,
+  "input_tokens": 8091,
+  "output_tokens_per_row": 6,
+  "decode_steps": 5,
+  "decoded_tokens": 5,
+  "decode_s": 0.12186342477798462,
+  "aggregate_tokens_per_s": 41.02953785443982,
+  "per_sequence_tokens_per_s": 41.02953785443982,
+  "ttft_s": 0.9023030269891024,
+  "prefill_peak_bytes": 17581915136,
+  "decode_peak_bytes": 16616357376,
+  "peak_allocated_bytes": 17581915136,
+  "effective_options": {
+    "quality_budget": 256,
+    "speed_budget": 1024,
+    "nlist": "floor(L/80)",
+    "niter": 20,
+    "sink": 16,
+    "window": 320,
+    "window_nlist": 4,
+    "offload": true
+  },
+  "mode": "native",
+  "trace": {
+    "physical_history": 8096,
+    "retrieval_budget": 256,
+    "initial_clusters": 101,
+    "clusters": 101,
+    "cpu_pinned_kv_bytes": 1010442240
+  },
+  "final_kv_bytes": 358342656,
+  "status": "ok",
+  "id": "longbench_full/narrativeqa/c89fd516348b68f96538948b052cb10d5b6f21bc441f5a55",
+  "suite": "longbench",
+  "task": "narrativeqa",
+  "input_sha256": "915fd5a27a5619cd71a658bec26e98a8063911a35751363149803f422a57d26e",
+  "output_ids": [
+    791,
+    21078,
+    274,
+    3191,
+    13,
+    128009
+  ],
+  "prediction": "The lying scribe.",
+  "score": 66.66666666666666,
+  "metric": "qa_f1_score",
+  "truncated_input": false,
+  "max_new_tokens": 128,
+  "answers": [
+    "The scribe."
+  ],
+  "reused_from": {
+    "path": "/data/phasekv-results/a800_four_gpu_v1/results/clusterkv/quality/706e77f9ecc49252f6c9e5738d470a08b869eefb3b25149b0e2ad5db2db25afa.json",
+    "id": "longbench/narrativeqa/9/8192",
+    "sha256": "93c45557f6f9ba0b126633cff938144421a6571d44055006a037d91c069c1c2e",
+    "protocol_sha256": "dad80bcbc8440822bd90a7f7c1ad5fbb96c50187eaccd91d8d15a6f39e351ace"
+  }
+}

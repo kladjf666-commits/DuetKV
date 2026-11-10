@@ -1,0 +1,65 @@
+{
+  "id": "longbench_full/qasper/806667777a33e5aede1bd3a62cbb5562f99b2223f68b98fe",
+  "suite": "longbench",
+  "task": "qasper",
+  "input_sha256": "559c7aabe3444140f2278509a28517bd40ec47ab8f55373718e9482e887da097",
+  "input_tokens": 6214,
+  "max_new_tokens": 128,
+  "truncated_input": false,
+  "original_id": "806667777a33e5aede1bd3a62cbb5562f99b2223f68b98fe",
+  "evaluation_split": "heldout",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "3d68f21e-bb96-d4f6-f517-dd7465632716",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 10,
+  "decode_steps": 9,
+  "decoded_tokens": 9,
+  "decode_s": 0.2520790081471205,
+  "aggregate_tokens_per_s": 35.703091924050035,
+  "per_sequence_tokens_per_s": 35.703091924050035,
+  "ttft_s": 1.5412862449884415,
+  "prefill_peak_bytes": 27314302464,
+  "decode_peak_bytes": 17168385536,
+  "peak_allocated_bytes": 27314302464,
+  "effective_options": {
+    "max_capacity_prompt": 2048,
+    "window_size": 8,
+    "kernel_size": 7,
+    "pooling": "maxpool",
+    "decoding_window_size": 512,
+    "decoding_recent_size": 256,
+    "decoding_metric": "None",
+    "delta": 1
+  },
+  "mode": "prefill_only_short_output_boundary",
+  "trace": {
+    "physical_tokens": 2057,
+    "stored_heads": 32
+  },
+  "final_kv_bytes": 1078460416,
+  "status": "ok",
+  "output_ids": [
+    4013,
+    40826,
+    9483,
+    24860,
+    323,
+    52699,
+    32564,
+    1111,
+    13,
+    128009
+  ],
+  "prediction": "NUBes-PHI and MEDDOCAN.",
+  "answers": [
+    "MEDDOCAN, NUBes-PHI",
+    "MEDDOCAN, NUBes "
+  ],
+  "score": 80.0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 1.798943281173706
+}

@@ -1,0 +1,4617 @@
+{
+  "source": "C:\\Users\\kladjf\\Desktop\\PhaseKV\\A800最终测试\\分析报告\\Prompt90完整评估_20261107\\analysis.json",
+  "source_sha256": "7f46273d3dcbaa529d55c7aeb58846b03d2b67e9c0f1851b62801e5b83f3ef85",
+  "cells": [
+    {
+      "metric": "tps",
+      "method": "full",
+      "case": "8192+256_B1",
+      "status": "ok",
+      "value": 48.52701607571391,
+      "label": "48.53"
+    },
+    {
+      "metric": "tps",
+      "method": "full",
+      "case": "8192+256_B2",
+      "status": "ok",
+      "value": 83.14492816097561,
+      "label": "83.14"
+    },
+    {
+      "metric": "tps",
+      "method": "full",
+      "case": "8192+256_B4",
+      "status": "ok",
+      "value": 126.67075271630878,
+      "label": "126.67"
+    },
+    {
+      "metric": "tps",
+      "method": "full",
+      "case": "8192+256_B8",
+      "status": "ok",
+      "value": 166.81733766639906,
+      "label": "166.82"
+    },
+    {
+      "metric": "tps",
+      "method": "full",
+      "case": "8192+2048_B1",
+      "status": "ok",
+      "value": 49.204536001308774,
+      "label": "49.20"
+    },
+    {
+      "metric": "tps",
+      "method": "full",
+      "case": "8192+2048_B2",
+      "status": "ok",
+      "value": 81.61910855737669,
+      "label": "81.62"
+    },
+    {
+      "metric": "tps",
+      "method": "full",
+      "case": "8192+2048_B4",
+      "status": "ok",
+      "value": 119.839919684093,
+      "label": "119.84"
+    },
+    {
+      "metric": "tps",
+      "method": "full",
+      "case": "8192+2048_B8",
+      "status": "ok",
+      "value": 154.99477120475257,
+      "label": "154.99"
+    },
+    {
+      "metric": "tps",
+      "method": "full",
+      "case": "32768+256_B1",
+      "status": "ok",
+      "value": 32.02084706281796,
+      "label": "32.02"
+    },
+    {
+      "metric": "tps",
+      "method": "full",
+      "case": "32768+256_B2",
+      "status": "ok",
+      "value": 41.70680428149419,
+      "label": "41.71"
+    },
+    {
+      "metric": "tps",
+      "method": "full",
+      "case": "32768+256_B4",
+      "status": "ok",
+      "value": 49.27186442471164,
+      "label": "49.27"
+    },
+    {
+      "metric": "tps",
+      "method": "full",
+      "case": "32768+256_B8",
+      "status": "ok",
+      "value": 52.83164176033018,
+      "label": "52.83"
+    },
+    {
+      "metric": "tps",
+      "method": "full",
+      "case": "32768+2048_B1",
+      "status": "ok",
+      "value": 31.888641294700136,
+      "label": "31.89"
+    },
+    {
+      "metric": "tps",
+      "method": "full",
+      "case": "32768+2048_B2",
+      "status": "ok",
+      "value": 41.55640511224295,
+      "label": "41.56"
+    },
+    {
+      "metric": "tps",
+      "method": "full",
+      "case": "32768+2048_B4",
+      "status": "ok",
+      "value": 48.5373232248871,
+      "label": "48.54"
+    },
+    {
+      "metric": "tps",
+      "method": "full",
+      "case": "32768+2048_B8",
+      "status": "ok",
+      "value": 51.65016921629562,
+      "label": "51.65"
+    },
+    {
+      "metric": "tps",
+      "method": "phasekv",
+      "case": "8192+256_B1",
+      "status": "ok",
+      "value": 46.385229139394596,
+      "label": "46.39"
+    },
+    {
+      "metric": "tps",
+      "method": "phasekv",
+      "case": "8192+256_B2",
+      "status": "ok",
+      "value": 87.34284874077699,
+      "label": "87.34"
+    },
+    {
+      "metric": "tps",
+      "method": "phasekv",
+      "case": "8192+256_B4",
+      "status": "ok",
+      "value": 142.25290535962657,
+      "label": "142.25"
+    },
+    {
+      "metric": "tps",
+      "method": "phasekv",
+      "case": "8192+256_B8",
+      "status": "ok",
+      "value": 202.75384462996007,
+      "label": "202.75"
+    },
+    {
+      "metric": "tps",
+      "method": "phasekv",
+      "case": "8192+2048_B1",
+      "status": "ok",
+      "value": 44.490074458809325,
+      "label": "44.49"
+    },
+    {
+      "metric": "tps",
+      "method": "phasekv",
+      "case": "8192+2048_B2",
+      "status": "ok",
+      "value": 82.78250017631571,
+      "label": "82.78"
+    },
+    {
+      "metric": "tps",
+      "method": "phasekv",
+      "case": "8192+2048_B4",
+      "status": "ok",
+      "value": 130.7104430597181,
+      "label": "130.71"
+    },
+    {
+      "metric": "tps",
+      "method": "phasekv",
+      "case": "8192+2048_B8",
+      "status": "ok",
+      "value": 181.020766408551,
+      "label": "181.02"
+    },
+    {
+      "metric": "tps",
+      "method": "phasekv",
+      "case": "32768+256_B1",
+      "status": "ok",
+      "value": 36.17526182881642,
+      "label": "36.18"
+    },
+    {
+      "metric": "tps",
+      "method": "phasekv",
+      "case": "32768+256_B2",
+      "status": "ok",
+      "value": 51.39995993210679,
+      "label": "51.40"
+    },
+    {
+      "metric": "tps",
+      "method": "phasekv",
+      "case": "32768+256_B4",
+      "status": "ok",
+      "value": 65.09635045847311,
+      "label": "65.10"
+    },
+    {
+      "metric": "tps",
+      "method": "phasekv",
+      "case": "32768+256_B8",
+      "status": "ok",
+      "value": 74.9356776730822,
+      "label": "74.94"
+    },
+    {
+      "metric": "tps",
+      "method": "phasekv",
+      "case": "32768+2048_B1",
+      "status": "ok",
+      "value": 35.26054526923439,
+      "label": "35.26"
+    },
+    {
+      "metric": "tps",
+      "method": "phasekv",
+      "case": "32768+2048_B2",
+      "status": "ok",
+      "value": 50.18485978559788,
+      "label": "50.18"
+    },
+    {
+      "metric": "tps",
+      "method": "phasekv",
+      "case": "32768+2048_B4",
+      "status": "ok",
+      "value": 63.67246163994037,
+      "label": "63.67"
+    },
+    {
+      "metric": "tps",
+      "method": "phasekv",
+      "case": "32768+2048_B8",
+      "status": "ok",
+      "value": 73.39131631398787,
+      "label": "73.39"
+    },
+    {
+      "metric": "tps",
+      "method": "phasekv90",
+      "case": "8192+256_B1",
+      "status": "ok",
+      "value": 44.099213487513175,
+      "label": "44.10"
+    },
+    {
+      "metric": "tps",
+      "method": "phasekv90",
+      "case": "8192+256_B2",
+      "status": "ok",
+      "value": 86.09650949275202,
+      "label": "86.10"
+    },
+    {
+      "metric": "tps",
+      "method": "phasekv90",
+      "case": "8192+256_B4",
+      "status": "ok",
+      "value": 145.45972688321265,
+      "label": "145.46"
+    },
+    {
+      "metric": "tps",
+      "method": "phasekv90",
+      "case": "8192+256_B8",
+      "status": "ok",
+      "value": 208.6049750357184,
+      "label": "208.60"
+    },
+    {
+      "metric": "tps",
+      "method": "phasekv90",
+      "case": "8192+2048_B1",
+      "status": "ok",
+      "value": 42.88243881304866,
+      "label": "42.88"
+    },
+    {
+      "metric": "tps",
+      "method": "phasekv90",
+      "case": "8192+2048_B2",
+      "status": "ok",
+      "value": 81.686384490285,
+      "label": "81.69"
+    },
+    {
+      "metric": "tps",
+      "method": "phasekv90",
+      "case": "8192+2048_B4",
+      "status": "ok",
+      "value": 133.22983834874233,
+      "label": "133.23"
+    },
+    {
+      "metric": "tps",
+      "method": "phasekv90",
+      "case": "8192+2048_B8",
+      "status": "ok",
+      "value": 184.28629336336792,
+      "label": "184.29"
+    },
+    {
+      "metric": "tps",
+      "method": "phasekv90",
+      "case": "32768+256_B1",
+      "status": "ok",
+      "value": 36.95732717618331,
+      "label": "36.96"
+    },
+    {
+      "metric": "tps",
+      "method": "phasekv90",
+      "case": "32768+256_B2",
+      "status": "ok",
+      "value": 52.87728693476294,
+      "label": "52.88"
+    },
+    {
+      "metric": "tps",
+      "method": "phasekv90",
+      "case": "32768+256_B4",
+      "status": "ok",
+      "value": 69.12149053435348,
+      "label": "69.12"
+    },
+    {
+      "metric": "tps",
+      "method": "phasekv90",
+      "case": "32768+256_B8",
+      "status": "ok",
+      "value": 81.82063467944218,
+      "label": "81.82"
+    },
+    {
+      "metric": "tps",
+      "method": "phasekv90",
+      "case": "32768+2048_B1",
+      "status": "ok",
+      "value": 35.970909251507344,
+      "label": "35.97"
+    },
+    {
+      "metric": "tps",
+      "method": "phasekv90",
+      "case": "32768+2048_B2",
+      "status": "ok",
+      "value": 51.53327197913952,
+      "label": "51.53"
+    },
+    {
+      "metric": "tps",
+      "method": "phasekv90",
+      "case": "32768+2048_B4",
+      "status": "ok",
+      "value": 67.26241879537774,
+      "label": "67.26"
+    },
+    {
+      "metric": "tps",
+      "method": "phasekv90",
+      "case": "32768+2048_B8",
+      "status": "ok",
+      "value": 79.68186247706942,
+      "label": "79.68"
+    },
+    {
+      "metric": "tps",
+      "method": "kivi",
+      "case": "8192+256_B1",
+      "status": "ok",
+      "value": 25.269532987623126,
+      "label": "25.27"
+    },
+    {
+      "metric": "tps",
+      "method": "kivi",
+      "case": "8192+256_B2",
+      "status": "ok",
+      "value": 49.973263363846925,
+      "label": "49.97"
+    },
+    {
+      "metric": "tps",
+      "method": "kivi",
+      "case": "8192+256_B4",
+      "status": "ok",
+      "value": 99.57795359064247,
+      "label": "99.58"
+    },
+    {
+      "metric": "tps",
+      "method": "kivi",
+      "case": "8192+256_B8",
+      "status": "ok",
+      "value": 187.01398536646005,
+      "label": "187.01"
+    },
+    {
+      "metric": "tps",
+      "method": "kivi",
+      "case": "8192+2048_B1",
+      "status": "ok",
+      "value": 24.86211729664332,
+      "label": "24.86"
+    },
+    {
+      "metric": "tps",
+      "method": "kivi",
+      "case": "8192+2048_B2",
+      "status": "ok",
+      "value": 49.57835632052038,
+      "label": "49.58"
+    },
+    {
+      "metric": "tps",
+      "method": "kivi",
+      "case": "8192+2048_B4",
+      "status": "ok",
+      "value": 98.49039955957778,
+      "label": "98.49"
+    },
+    {
+      "metric": "tps",
+      "method": "kivi",
+      "case": "8192+2048_B8",
+      "status": "ok",
+      "value": 178.4830696320901,
+      "label": "178.48"
+    },
+    {
+      "metric": "tps",
+      "method": "kivi",
+      "case": "32768+256_B1",
+      "status": "ok",
+      "value": 23.790921896770833,
+      "label": "23.79"
+    },
+    {
+      "metric": "tps",
+      "method": "kivi",
+      "case": "32768+256_B2",
+      "status": "ok",
+      "value": 39.44177677486135,
+      "label": "39.44"
+    },
+    {
+      "metric": "tps",
+      "method": "kivi",
+      "case": "32768+256_B4",
+      "status": "ok",
+      "value": 59.42984902599028,
+      "label": "59.43"
+    },
+    {
+      "metric": "tps",
+      "method": "kivi",
+      "case": "32768+256_B8",
+      "status": "ok",
+      "value": 76.94428408093458,
+      "label": "76.94"
+    },
+    {
+      "metric": "tps",
+      "method": "kivi",
+      "case": "32768+2048_B1",
+      "status": "ok",
+      "value": 23.4669186608053,
+      "label": "23.47"
+    },
+    {
+      "metric": "tps",
+      "method": "kivi",
+      "case": "32768+2048_B2",
+      "status": "ok",
+      "value": 38.868536818801424,
+      "label": "38.87"
+    },
+    {
+      "metric": "tps",
+      "method": "kivi",
+      "case": "32768+2048_B4",
+      "status": "ok",
+      "value": 58.76979606212499,
+      "label": "58.77"
+    },
+    {
+      "metric": "tps",
+      "method": "kivi",
+      "case": "32768+2048_B8",
+      "status": "ok",
+      "value": 75.4417212897302,
+      "label": "75.44"
+    },
+    {
+      "metric": "tps",
+      "method": "clusterkv",
+      "case": "8192+256_B1",
+      "status": "ok",
+      "value": 30.33224475779253,
+      "label": "30.33"
+    },
+    {
+      "metric": "tps",
+      "method": "clusterkv",
+      "case": "8192+256_B2",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "tps",
+      "method": "clusterkv",
+      "case": "8192+256_B4",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "tps",
+      "method": "clusterkv",
+      "case": "8192+256_B8",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "tps",
+      "method": "clusterkv",
+      "case": "8192+2048_B1",
+      "status": "ok",
+      "value": 30.879014822217346,
+      "label": "30.88"
+    },
+    {
+      "metric": "tps",
+      "method": "clusterkv",
+      "case": "8192+2048_B2",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "tps",
+      "method": "clusterkv",
+      "case": "8192+2048_B4",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "tps",
+      "method": "clusterkv",
+      "case": "8192+2048_B8",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "tps",
+      "method": "clusterkv",
+      "case": "32768+256_B1",
+      "status": "ok",
+      "value": 26.900496181575196,
+      "label": "26.90"
+    },
+    {
+      "metric": "tps",
+      "method": "clusterkv",
+      "case": "32768+256_B2",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "tps",
+      "method": "clusterkv",
+      "case": "32768+256_B4",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "tps",
+      "method": "clusterkv",
+      "case": "32768+256_B8",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "tps",
+      "method": "clusterkv",
+      "case": "32768+2048_B1",
+      "status": "ok",
+      "value": 27.54962055552517,
+      "label": "27.55"
+    },
+    {
+      "metric": "tps",
+      "method": "clusterkv",
+      "case": "32768+2048_B2",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "tps",
+      "method": "clusterkv",
+      "case": "32768+2048_B4",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "tps",
+      "method": "clusterkv",
+      "case": "32768+2048_B8",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "tps",
+      "method": "snapkv",
+      "case": "8192+256_B1",
+      "status": "ok",
+      "value": 45.604237509535885,
+      "label": "45.60"
+    },
+    {
+      "metric": "tps",
+      "method": "snapkv",
+      "case": "8192+256_B2",
+      "status": "ok",
+      "value": 82.38193829162344,
+      "label": "82.38"
+    },
+    {
+      "metric": "tps",
+      "method": "snapkv",
+      "case": "8192+256_B4",
+      "status": "ok",
+      "value": 121.96177940165363,
+      "label": "121.96"
+    },
+    {
+      "metric": "tps",
+      "method": "snapkv",
+      "case": "8192+256_B8",
+      "status": "ok",
+      "value": 154.4700878571409,
+      "label": "154.47"
+    },
+    {
+      "metric": "tps",
+      "method": "snapkv",
+      "case": "8192+2048_B1",
+      "status": "ok",
+      "value": 45.25119478528953,
+      "label": "45.25"
+    },
+    {
+      "metric": "tps",
+      "method": "snapkv",
+      "case": "8192+2048_B2",
+      "status": "ok",
+      "value": 72.17763994424315,
+      "label": "72.18"
+    },
+    {
+      "metric": "tps",
+      "method": "snapkv",
+      "case": "8192+2048_B4",
+      "status": "ok",
+      "value": 100.78373289891914,
+      "label": "100.78"
+    },
+    {
+      "metric": "tps",
+      "method": "snapkv",
+      "case": "8192+2048_B8",
+      "status": "ok",
+      "value": 120.31539747190216,
+      "label": "120.32"
+    },
+    {
+      "metric": "tps",
+      "method": "snapkv",
+      "case": "32768+256_B1",
+      "status": "ok",
+      "value": 45.09006296184603,
+      "label": "45.09"
+    },
+    {
+      "metric": "tps",
+      "method": "snapkv",
+      "case": "32768+256_B2",
+      "status": "ok",
+      "value": 82.37025815714686,
+      "label": "82.37"
+    },
+    {
+      "metric": "tps",
+      "method": "snapkv",
+      "case": "32768+256_B4",
+      "status": "ok",
+      "value": 121.96463863066688,
+      "label": "121.96"
+    },
+    {
+      "metric": "tps",
+      "method": "snapkv",
+      "case": "32768+256_B8",
+      "status": "ok",
+      "value": 154.6067415760791,
+      "label": "154.61"
+    },
+    {
+      "metric": "tps",
+      "method": "snapkv",
+      "case": "32768+2048_B1",
+      "status": "ok",
+      "value": 44.91735935115079,
+      "label": "44.92"
+    },
+    {
+      "metric": "tps",
+      "method": "snapkv",
+      "case": "32768+2048_B2",
+      "status": "ok",
+      "value": 72.13579252299847,
+      "label": "72.14"
+    },
+    {
+      "metric": "tps",
+      "method": "snapkv",
+      "case": "32768+2048_B4",
+      "status": "ok",
+      "value": 100.80508593406138,
+      "label": "100.81"
+    },
+    {
+      "metric": "tps",
+      "method": "snapkv",
+      "case": "32768+2048_B8",
+      "status": "ok",
+      "value": 120.30193328496568,
+      "label": "120.30"
+    },
+    {
+      "metric": "tps",
+      "method": "pyramidkv",
+      "case": "8192+256_B1",
+      "status": "ok",
+      "value": 48.191009259681486,
+      "label": "48.19"
+    },
+    {
+      "metric": "tps",
+      "method": "pyramidkv",
+      "case": "8192+256_B2",
+      "status": "ok",
+      "value": 95.30063369119291,
+      "label": "95.30"
+    },
+    {
+      "metric": "tps",
+      "method": "pyramidkv",
+      "case": "8192+256_B4",
+      "status": "ok",
+      "value": 187.7744429814135,
+      "label": "187.77"
+    },
+    {
+      "metric": "tps",
+      "method": "pyramidkv",
+      "case": "8192+256_B8",
+      "status": "ok",
+      "value": 377.7746715481883,
+      "label": "377.77"
+    },
+    {
+      "metric": "tps",
+      "method": "pyramidkv",
+      "case": "8192+2048_B1",
+      "status": "ok",
+      "value": 48.52792558551244,
+      "label": "48.53"
+    },
+    {
+      "metric": "tps",
+      "method": "pyramidkv",
+      "case": "8192+2048_B2",
+      "status": "ok",
+      "value": 93.3635389106614,
+      "label": "93.36"
+    },
+    {
+      "metric": "tps",
+      "method": "pyramidkv",
+      "case": "8192+2048_B4",
+      "status": "ok",
+      "value": 184.99043324401396,
+      "label": "184.99"
+    },
+    {
+      "metric": "tps",
+      "method": "pyramidkv",
+      "case": "8192+2048_B8",
+      "status": "ok",
+      "value": 354.17154350511686,
+      "label": "354.17"
+    },
+    {
+      "metric": "tps",
+      "method": "pyramidkv",
+      "case": "32768+256_B1",
+      "status": "ok",
+      "value": 47.43148302429426,
+      "label": "47.43"
+    },
+    {
+      "metric": "tps",
+      "method": "pyramidkv",
+      "case": "32768+256_B2",
+      "status": "ok",
+      "value": 92.06079098683506,
+      "label": "92.06"
+    },
+    {
+      "metric": "tps",
+      "method": "pyramidkv",
+      "case": "32768+256_B4",
+      "status": "ok",
+      "value": 185.8447911599783,
+      "label": "185.84"
+    },
+    {
+      "metric": "tps",
+      "method": "pyramidkv",
+      "case": "32768+256_B8",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "tps",
+      "method": "pyramidkv",
+      "case": "32768+2048_B1",
+      "status": "ok",
+      "value": 47.69232495995642,
+      "label": "47.69"
+    },
+    {
+      "metric": "tps",
+      "method": "pyramidkv",
+      "case": "32768+2048_B2",
+      "status": "ok",
+      "value": 93.52470548003839,
+      "label": "93.52"
+    },
+    {
+      "metric": "tps",
+      "method": "pyramidkv",
+      "case": "32768+2048_B4",
+      "status": "ok",
+      "value": 185.94551597463234,
+      "label": "185.95"
+    },
+    {
+      "metric": "tps",
+      "method": "pyramidkv",
+      "case": "32768+2048_B8",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "tps",
+      "method": "million",
+      "case": "8192+256_B1",
+      "status": "ok",
+      "value": 50.37272121314065,
+      "label": "50.37"
+    },
+    {
+      "metric": "tps",
+      "method": "million",
+      "case": "8192+256_B2",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "tps",
+      "method": "million",
+      "case": "8192+256_B4",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "tps",
+      "method": "million",
+      "case": "8192+256_B8",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "tps",
+      "method": "million",
+      "case": "8192+2048_B1",
+      "status": "ok",
+      "value": 48.860856746284625,
+      "label": "48.86"
+    },
+    {
+      "metric": "tps",
+      "method": "million",
+      "case": "8192+2048_B2",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "tps",
+      "method": "million",
+      "case": "8192+2048_B4",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "tps",
+      "method": "million",
+      "case": "8192+2048_B8",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "tps",
+      "method": "million",
+      "case": "32768+256_B1",
+      "status": "ok",
+      "value": 35.05138264423947,
+      "label": "35.05"
+    },
+    {
+      "metric": "tps",
+      "method": "million",
+      "case": "32768+256_B2",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "tps",
+      "method": "million",
+      "case": "32768+256_B4",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "tps",
+      "method": "million",
+      "case": "32768+256_B8",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "tps",
+      "method": "million",
+      "case": "32768+2048_B1",
+      "status": "ok",
+      "value": 34.042361325992125,
+      "label": "34.04"
+    },
+    {
+      "metric": "tps",
+      "method": "million",
+      "case": "32768+2048_B2",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "tps",
+      "method": "million",
+      "case": "32768+2048_B4",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "tps",
+      "method": "million",
+      "case": "32768+2048_B8",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "tps",
+      "method": "scope",
+      "case": "8192+256_B1",
+      "status": "ok",
+      "value": 36.636937570124005,
+      "label": "36.64"
+    },
+    {
+      "metric": "tps",
+      "method": "scope",
+      "case": "8192+256_B2",
+      "status": "ok",
+      "value": 72.30246726312947,
+      "label": "72.30"
+    },
+    {
+      "metric": "tps",
+      "method": "scope",
+      "case": "8192+256_B4",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "tps",
+      "method": "scope",
+      "case": "8192+256_B8",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "tps",
+      "method": "scope",
+      "case": "8192+2048_B1",
+      "status": "ok",
+      "value": 34.8653423939378,
+      "label": "34.87"
+    },
+    {
+      "metric": "tps",
+      "method": "scope",
+      "case": "8192+2048_B2",
+      "status": "ok",
+      "value": 64.75855958439239,
+      "label": "64.76"
+    },
+    {
+      "metric": "tps",
+      "method": "scope",
+      "case": "8192+2048_B4",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "tps",
+      "method": "scope",
+      "case": "8192+2048_B8",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "tps",
+      "method": "scope",
+      "case": "32768+256_B1",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "tps",
+      "method": "scope",
+      "case": "32768+256_B2",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "tps",
+      "method": "scope",
+      "case": "32768+256_B4",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "tps",
+      "method": "scope",
+      "case": "32768+256_B8",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "tps",
+      "method": "scope",
+      "case": "32768+2048_B1",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "tps",
+      "method": "scope",
+      "case": "32768+2048_B2",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "tps",
+      "method": "scope",
+      "case": "32768+2048_B4",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "tps",
+      "method": "scope",
+      "case": "32768+2048_B8",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "full",
+      "case": "8192+256_B1",
+      "status": "ok",
+      "value": 48.52701607571391,
+      "label": "48.53"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "full",
+      "case": "8192+256_B2",
+      "status": "ok",
+      "value": 41.572464080487805,
+      "label": "41.57"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "full",
+      "case": "8192+256_B4",
+      "status": "ok",
+      "value": 31.667688179077196,
+      "label": "31.67"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "full",
+      "case": "8192+256_B8",
+      "status": "ok",
+      "value": 20.852167208299882,
+      "label": "20.85"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "full",
+      "case": "8192+2048_B1",
+      "status": "ok",
+      "value": 49.204536001308774,
+      "label": "49.20"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "full",
+      "case": "8192+2048_B2",
+      "status": "ok",
+      "value": 40.809554278688346,
+      "label": "40.81"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "full",
+      "case": "8192+2048_B4",
+      "status": "ok",
+      "value": 29.95997992102325,
+      "label": "29.96"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "full",
+      "case": "8192+2048_B8",
+      "status": "ok",
+      "value": 19.37434640059407,
+      "label": "19.37"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "full",
+      "case": "32768+256_B1",
+      "status": "ok",
+      "value": 32.02084706281796,
+      "label": "32.02"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "full",
+      "case": "32768+256_B2",
+      "status": "ok",
+      "value": 20.853402140747097,
+      "label": "20.85"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "full",
+      "case": "32768+256_B4",
+      "status": "ok",
+      "value": 12.31796610617791,
+      "label": "12.32"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "full",
+      "case": "32768+256_B8",
+      "status": "ok",
+      "value": 6.603955220041272,
+      "label": "6.60"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "full",
+      "case": "32768+2048_B1",
+      "status": "ok",
+      "value": 31.888641294700136,
+      "label": "31.89"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "full",
+      "case": "32768+2048_B2",
+      "status": "ok",
+      "value": 20.778202556121474,
+      "label": "20.78"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "full",
+      "case": "32768+2048_B4",
+      "status": "ok",
+      "value": 12.134330806221776,
+      "label": "12.13"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "full",
+      "case": "32768+2048_B8",
+      "status": "ok",
+      "value": 6.456271152036953,
+      "label": "6.46"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "phasekv",
+      "case": "8192+256_B1",
+      "status": "ok",
+      "value": 46.385229139394596,
+      "label": "46.39"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "phasekv",
+      "case": "8192+256_B2",
+      "status": "ok",
+      "value": 43.67142437038849,
+      "label": "43.67"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "phasekv",
+      "case": "8192+256_B4",
+      "status": "ok",
+      "value": 35.56322633990664,
+      "label": "35.56"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "phasekv",
+      "case": "8192+256_B8",
+      "status": "ok",
+      "value": 25.34423057874501,
+      "label": "25.34"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "phasekv",
+      "case": "8192+2048_B1",
+      "status": "ok",
+      "value": 44.490074458809325,
+      "label": "44.49"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "phasekv",
+      "case": "8192+2048_B2",
+      "status": "ok",
+      "value": 41.391250088157854,
+      "label": "41.39"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "phasekv",
+      "case": "8192+2048_B4",
+      "status": "ok",
+      "value": 32.677610764929526,
+      "label": "32.68"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "phasekv",
+      "case": "8192+2048_B8",
+      "status": "ok",
+      "value": 22.627595801068875,
+      "label": "22.63"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "phasekv",
+      "case": "32768+256_B1",
+      "status": "ok",
+      "value": 36.17526182881642,
+      "label": "36.18"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "phasekv",
+      "case": "32768+256_B2",
+      "status": "ok",
+      "value": 25.699979966053395,
+      "label": "25.70"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "phasekv",
+      "case": "32768+256_B4",
+      "status": "ok",
+      "value": 16.274087614618278,
+      "label": "16.27"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "phasekv",
+      "case": "32768+256_B8",
+      "status": "ok",
+      "value": 9.366959709135275,
+      "label": "9.37"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "phasekv",
+      "case": "32768+2048_B1",
+      "status": "ok",
+      "value": 35.26054526923439,
+      "label": "35.26"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "phasekv",
+      "case": "32768+2048_B2",
+      "status": "ok",
+      "value": 25.09242989279894,
+      "label": "25.09"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "phasekv",
+      "case": "32768+2048_B4",
+      "status": "ok",
+      "value": 15.918115409985093,
+      "label": "15.92"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "phasekv",
+      "case": "32768+2048_B8",
+      "status": "ok",
+      "value": 9.173914539248484,
+      "label": "9.17"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "phasekv90",
+      "case": "8192+256_B1",
+      "status": "ok",
+      "value": 44.099213487513175,
+      "label": "44.10"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "phasekv90",
+      "case": "8192+256_B2",
+      "status": "ok",
+      "value": 43.04825474637601,
+      "label": "43.05"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "phasekv90",
+      "case": "8192+256_B4",
+      "status": "ok",
+      "value": 36.36493172080316,
+      "label": "36.36"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "phasekv90",
+      "case": "8192+256_B8",
+      "status": "ok",
+      "value": 26.0756218794648,
+      "label": "26.08"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "phasekv90",
+      "case": "8192+2048_B1",
+      "status": "ok",
+      "value": 42.88243881304866,
+      "label": "42.88"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "phasekv90",
+      "case": "8192+2048_B2",
+      "status": "ok",
+      "value": 40.8431922451425,
+      "label": "40.84"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "phasekv90",
+      "case": "8192+2048_B4",
+      "status": "ok",
+      "value": 33.30745958718558,
+      "label": "33.31"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "phasekv90",
+      "case": "8192+2048_B8",
+      "status": "ok",
+      "value": 23.03578667042099,
+      "label": "23.04"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "phasekv90",
+      "case": "32768+256_B1",
+      "status": "ok",
+      "value": 36.95732717618331,
+      "label": "36.96"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "phasekv90",
+      "case": "32768+256_B2",
+      "status": "ok",
+      "value": 26.43864346738147,
+      "label": "26.44"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "phasekv90",
+      "case": "32768+256_B4",
+      "status": "ok",
+      "value": 17.28037263358837,
+      "label": "17.28"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "phasekv90",
+      "case": "32768+256_B8",
+      "status": "ok",
+      "value": 10.227579334930272,
+      "label": "10.23"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "phasekv90",
+      "case": "32768+2048_B1",
+      "status": "ok",
+      "value": 35.970909251507344,
+      "label": "35.97"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "phasekv90",
+      "case": "32768+2048_B2",
+      "status": "ok",
+      "value": 25.76663598956976,
+      "label": "25.77"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "phasekv90",
+      "case": "32768+2048_B4",
+      "status": "ok",
+      "value": 16.815604698844435,
+      "label": "16.82"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "phasekv90",
+      "case": "32768+2048_B8",
+      "status": "ok",
+      "value": 9.960232809633677,
+      "label": "9.96"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "kivi",
+      "case": "8192+256_B1",
+      "status": "ok",
+      "value": 25.269532987623126,
+      "label": "25.27"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "kivi",
+      "case": "8192+256_B2",
+      "status": "ok",
+      "value": 24.986631681923463,
+      "label": "24.99"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "kivi",
+      "case": "8192+256_B4",
+      "status": "ok",
+      "value": 24.894488397660616,
+      "label": "24.89"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "kivi",
+      "case": "8192+256_B8",
+      "status": "ok",
+      "value": 23.376748170807506,
+      "label": "23.38"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "kivi",
+      "case": "8192+2048_B1",
+      "status": "ok",
+      "value": 24.86211729664332,
+      "label": "24.86"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "kivi",
+      "case": "8192+2048_B2",
+      "status": "ok",
+      "value": 24.78917816026019,
+      "label": "24.79"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "kivi",
+      "case": "8192+2048_B4",
+      "status": "ok",
+      "value": 24.622599889894445,
+      "label": "24.62"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "kivi",
+      "case": "8192+2048_B8",
+      "status": "ok",
+      "value": 22.31038370401126,
+      "label": "22.31"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "kivi",
+      "case": "32768+256_B1",
+      "status": "ok",
+      "value": 23.790921896770833,
+      "label": "23.79"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "kivi",
+      "case": "32768+256_B2",
+      "status": "ok",
+      "value": 19.720888387430676,
+      "label": "19.72"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "kivi",
+      "case": "32768+256_B4",
+      "status": "ok",
+      "value": 14.85746225649757,
+      "label": "14.86"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "kivi",
+      "case": "32768+256_B8",
+      "status": "ok",
+      "value": 9.618035510116822,
+      "label": "9.62"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "kivi",
+      "case": "32768+2048_B1",
+      "status": "ok",
+      "value": 23.4669186608053,
+      "label": "23.47"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "kivi",
+      "case": "32768+2048_B2",
+      "status": "ok",
+      "value": 19.434268409400712,
+      "label": "19.43"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "kivi",
+      "case": "32768+2048_B4",
+      "status": "ok",
+      "value": 14.692449015531247,
+      "label": "14.69"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "kivi",
+      "case": "32768+2048_B8",
+      "status": "ok",
+      "value": 9.430215161216275,
+      "label": "9.43"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "clusterkv",
+      "case": "8192+256_B1",
+      "status": "ok",
+      "value": 30.33224475779253,
+      "label": "30.33"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "clusterkv",
+      "case": "8192+256_B2",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "clusterkv",
+      "case": "8192+256_B4",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "clusterkv",
+      "case": "8192+256_B8",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "clusterkv",
+      "case": "8192+2048_B1",
+      "status": "ok",
+      "value": 30.879014822217346,
+      "label": "30.88"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "clusterkv",
+      "case": "8192+2048_B2",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "clusterkv",
+      "case": "8192+2048_B4",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "clusterkv",
+      "case": "8192+2048_B8",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "clusterkv",
+      "case": "32768+256_B1",
+      "status": "ok",
+      "value": 26.900496181575196,
+      "label": "26.90"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "clusterkv",
+      "case": "32768+256_B2",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "clusterkv",
+      "case": "32768+256_B4",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "clusterkv",
+      "case": "32768+256_B8",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "clusterkv",
+      "case": "32768+2048_B1",
+      "status": "ok",
+      "value": 27.54962055552517,
+      "label": "27.55"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "clusterkv",
+      "case": "32768+2048_B2",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "clusterkv",
+      "case": "32768+2048_B4",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "clusterkv",
+      "case": "32768+2048_B8",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "snapkv",
+      "case": "8192+256_B1",
+      "status": "ok",
+      "value": 45.604237509535885,
+      "label": "45.60"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "snapkv",
+      "case": "8192+256_B2",
+      "status": "ok",
+      "value": 41.19096914581172,
+      "label": "41.19"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "snapkv",
+      "case": "8192+256_B4",
+      "status": "ok",
+      "value": 30.490444850413407,
+      "label": "30.49"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "snapkv",
+      "case": "8192+256_B8",
+      "status": "ok",
+      "value": 19.308760982142612,
+      "label": "19.31"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "snapkv",
+      "case": "8192+2048_B1",
+      "status": "ok",
+      "value": 45.25119478528953,
+      "label": "45.25"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "snapkv",
+      "case": "8192+2048_B2",
+      "status": "ok",
+      "value": 36.08881997212158,
+      "label": "36.09"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "snapkv",
+      "case": "8192+2048_B4",
+      "status": "ok",
+      "value": 25.195933224729785,
+      "label": "25.20"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "snapkv",
+      "case": "8192+2048_B8",
+      "status": "ok",
+      "value": 15.03942468398777,
+      "label": "15.04"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "snapkv",
+      "case": "32768+256_B1",
+      "status": "ok",
+      "value": 45.09006296184603,
+      "label": "45.09"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "snapkv",
+      "case": "32768+256_B2",
+      "status": "ok",
+      "value": 41.18512907857343,
+      "label": "41.19"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "snapkv",
+      "case": "32768+256_B4",
+      "status": "ok",
+      "value": 30.49115965766672,
+      "label": "30.49"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "snapkv",
+      "case": "32768+256_B8",
+      "status": "ok",
+      "value": 19.325842697009886,
+      "label": "19.33"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "snapkv",
+      "case": "32768+2048_B1",
+      "status": "ok",
+      "value": 44.91735935115079,
+      "label": "44.92"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "snapkv",
+      "case": "32768+2048_B2",
+      "status": "ok",
+      "value": 36.067896261499236,
+      "label": "36.07"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "snapkv",
+      "case": "32768+2048_B4",
+      "status": "ok",
+      "value": 25.201271483515345,
+      "label": "25.20"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "snapkv",
+      "case": "32768+2048_B8",
+      "status": "ok",
+      "value": 15.03774166062071,
+      "label": "15.04"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "pyramidkv",
+      "case": "8192+256_B1",
+      "status": "ok",
+      "value": 48.191009259681486,
+      "label": "48.19"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "pyramidkv",
+      "case": "8192+256_B2",
+      "status": "ok",
+      "value": 47.65031684559646,
+      "label": "47.65"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "pyramidkv",
+      "case": "8192+256_B4",
+      "status": "ok",
+      "value": 46.943610745353375,
+      "label": "46.94"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "pyramidkv",
+      "case": "8192+256_B8",
+      "status": "ok",
+      "value": 47.221833943523535,
+      "label": "47.22"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "pyramidkv",
+      "case": "8192+2048_B1",
+      "status": "ok",
+      "value": 48.52792558551244,
+      "label": "48.53"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "pyramidkv",
+      "case": "8192+2048_B2",
+      "status": "ok",
+      "value": 46.6817694553307,
+      "label": "46.68"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "pyramidkv",
+      "case": "8192+2048_B4",
+      "status": "ok",
+      "value": 46.24760831100349,
+      "label": "46.25"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "pyramidkv",
+      "case": "8192+2048_B8",
+      "status": "ok",
+      "value": 44.27144293813961,
+      "label": "44.27"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "pyramidkv",
+      "case": "32768+256_B1",
+      "status": "ok",
+      "value": 47.43148302429426,
+      "label": "47.43"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "pyramidkv",
+      "case": "32768+256_B2",
+      "status": "ok",
+      "value": 46.03039549341753,
+      "label": "46.03"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "pyramidkv",
+      "case": "32768+256_B4",
+      "status": "ok",
+      "value": 46.46119778999458,
+      "label": "46.46"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "pyramidkv",
+      "case": "32768+256_B8",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "pyramidkv",
+      "case": "32768+2048_B1",
+      "status": "ok",
+      "value": 47.69232495995642,
+      "label": "47.69"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "pyramidkv",
+      "case": "32768+2048_B2",
+      "status": "ok",
+      "value": 46.762352740019196,
+      "label": "46.76"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "pyramidkv",
+      "case": "32768+2048_B4",
+      "status": "ok",
+      "value": 46.486378993658086,
+      "label": "46.49"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "pyramidkv",
+      "case": "32768+2048_B8",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "million",
+      "case": "8192+256_B1",
+      "status": "ok",
+      "value": 50.37272121314065,
+      "label": "50.37"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "million",
+      "case": "8192+256_B2",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "million",
+      "case": "8192+256_B4",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "million",
+      "case": "8192+256_B8",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "million",
+      "case": "8192+2048_B1",
+      "status": "ok",
+      "value": 48.860856746284625,
+      "label": "48.86"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "million",
+      "case": "8192+2048_B2",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "million",
+      "case": "8192+2048_B4",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "million",
+      "case": "8192+2048_B8",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "million",
+      "case": "32768+256_B1",
+      "status": "ok",
+      "value": 35.05138264423947,
+      "label": "35.05"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "million",
+      "case": "32768+256_B2",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "million",
+      "case": "32768+256_B4",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "million",
+      "case": "32768+256_B8",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "million",
+      "case": "32768+2048_B1",
+      "status": "ok",
+      "value": 34.042361325992125,
+      "label": "34.04"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "million",
+      "case": "32768+2048_B2",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "million",
+      "case": "32768+2048_B4",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "million",
+      "case": "32768+2048_B8",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "scope",
+      "case": "8192+256_B1",
+      "status": "ok",
+      "value": 36.636937570124005,
+      "label": "36.64"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "scope",
+      "case": "8192+256_B2",
+      "status": "ok",
+      "value": 36.151233631564736,
+      "label": "36.15"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "scope",
+      "case": "8192+256_B4",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "scope",
+      "case": "8192+256_B8",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "scope",
+      "case": "8192+2048_B1",
+      "status": "ok",
+      "value": 34.8653423939378,
+      "label": "34.87"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "scope",
+      "case": "8192+2048_B2",
+      "status": "ok",
+      "value": 32.37927979219619,
+      "label": "32.38"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "scope",
+      "case": "8192+2048_B4",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "scope",
+      "case": "8192+2048_B8",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "scope",
+      "case": "32768+256_B1",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "scope",
+      "case": "32768+256_B2",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "scope",
+      "case": "32768+256_B4",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "scope",
+      "case": "32768+256_B8",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "scope",
+      "case": "32768+2048_B1",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "scope",
+      "case": "32768+2048_B2",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "scope",
+      "case": "32768+2048_B4",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "sequence_tps",
+      "method": "scope",
+      "case": "32768+2048_B8",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "full",
+      "case": "8192+256_B1",
+      "status": "ok",
+      "value": 41.30093089322907,
+      "label": "41.30"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "full",
+      "case": "8192+256_B2",
+      "status": "ok",
+      "value": 65.52813028887621,
+      "label": "65.53"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "full",
+      "case": "8192+256_B4",
+      "status": "ok",
+      "value": 91.76220725223479,
+      "label": "91.76"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "full",
+      "case": "8192+256_B8",
+      "status": "ok",
+      "value": 112.08332156772047,
+      "label": "112.08"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "full",
+      "case": "8192+2048_B1",
+      "status": "ok",
+      "value": 48.124611877936225,
+      "label": "48.12"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "full",
+      "case": "8192+2048_B2",
+      "status": "ok",
+      "value": 78.99723115739783,
+      "label": "79.00"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "full",
+      "case": "8192+2048_B4",
+      "status": "ok",
+      "value": 114.65715122647853,
+      "label": "114.66"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "full",
+      "case": "8192+2048_B8",
+      "status": "ok",
+      "value": 146.6440773920957,
+      "label": "146.64"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "full",
+      "case": "32768+256_B1",
+      "status": "ok",
+      "value": 18.448477853881606,
+      "label": "18.45"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "full",
+      "case": "32768+256_B2",
+      "status": "ok",
+      "value": 21.088701552219668,
+      "label": "21.09"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "full",
+      "case": "32768+256_B4",
+      "status": "ok",
+      "value": 21.05052144123401,
+      "label": "21.05"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "full",
+      "case": "32768+256_B8",
+      "status": "ok",
+      "value": 23.793898030845202,
+      "label": "23.79"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "full",
+      "case": "32768+2048_B1",
+      "status": "ok",
+      "value": 29.196768156631528,
+      "label": "29.20"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "full",
+      "case": "32768+2048_B2",
+      "status": "ok",
+      "value": 37.231060068865766,
+      "label": "37.23"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "full",
+      "case": "32768+2048_B4",
+      "status": "ok",
+      "value": 42.827987014234914,
+      "label": "42.83"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "full",
+      "case": "32768+2048_B8",
+      "status": "ok",
+      "value": 44.98864038386996,
+      "label": "44.99"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "phasekv",
+      "case": "8192+256_B1",
+      "status": "ok",
+      "value": 39.62228756952837,
+      "label": "39.62"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "phasekv",
+      "case": "8192+256_B2",
+      "status": "ok",
+      "value": 67.77749247959962,
+      "label": "67.78"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "phasekv",
+      "case": "8192+256_B4",
+      "status": "ok",
+      "value": 98.88811254206207,
+      "label": "98.89"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "phasekv",
+      "case": "8192+256_B8",
+      "status": "ok",
+      "value": 126.13978510422372,
+      "label": "126.14"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "phasekv",
+      "case": "8192+2048_B1",
+      "status": "ok",
+      "value": 43.58995296346388,
+      "label": "43.59"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "phasekv",
+      "case": "8192+2048_B2",
+      "status": "ok",
+      "value": 80.03307531020248,
+      "label": "80.03"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "phasekv",
+      "case": "8192+2048_B4",
+      "status": "ok",
+      "value": 124.43138858890907,
+      "label": "124.43"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "phasekv",
+      "case": "8192+2048_B8",
+      "status": "ok",
+      "value": 169.5450294719329,
+      "label": "169.55"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "phasekv",
+      "case": "32768+256_B1",
+      "status": "ok",
+      "value": 19.6584232837528,
+      "label": "19.66"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "phasekv",
+      "case": "32768+256_B2",
+      "status": "ok",
+      "value": 23.81893854611041,
+      "label": "23.82"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "phasekv",
+      "case": "32768+256_B4",
+      "status": "ok",
+      "value": 26.5801204968694,
+      "label": "26.58"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "phasekv",
+      "case": "32768+256_B8",
+      "status": "ok",
+      "value": 27.00304937439826,
+      "label": "27.00"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "phasekv",
+      "case": "32768+2048_B1",
+      "status": "ok",
+      "value": 31.978787127918103,
+      "label": "31.98"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "phasekv",
+      "case": "32768+2048_B2",
+      "status": "ok",
+      "value": 43.98058526775817,
+      "label": "43.98"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "phasekv",
+      "case": "32768+2048_B4",
+      "status": "ok",
+      "value": 54.10528801269679,
+      "label": "54.11"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "phasekv",
+      "case": "32768+2048_B8",
+      "status": "ok",
+      "value": 60.44071645291073,
+      "label": "60.44"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "phasekv90",
+      "case": "8192+256_B1",
+      "status": "ok",
+      "value": 37.51854747147756,
+      "label": "37.52"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "phasekv90",
+      "case": "8192+256_B2",
+      "status": "ok",
+      "value": 66.15414291433753,
+      "label": "66.15"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "phasekv90",
+      "case": "8192+256_B4",
+      "status": "ok",
+      "value": 98.81078469017078,
+      "label": "98.81"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "phasekv90",
+      "case": "8192+256_B8",
+      "status": "ok",
+      "value": 125.6682738424641,
+      "label": "125.67"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "phasekv90",
+      "case": "8192+2048_B1",
+      "status": "ok",
+      "value": 41.98221562866711,
+      "label": "41.98"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "phasekv90",
+      "case": "8192+2048_B2",
+      "status": "ok",
+      "value": 78.83937914469833,
+      "label": "78.84"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "phasekv90",
+      "case": "8192+2048_B4",
+      "status": "ok",
+      "value": 126.40528677003249,
+      "label": "126.41"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "phasekv90",
+      "case": "8192+2048_B8",
+      "status": "ok",
+      "value": 171.83592139456422,
+      "label": "171.84"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "phasekv90",
+      "case": "32768+256_B1",
+      "status": "ok",
+      "value": 19.582421000261103,
+      "label": "19.58"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "phasekv90",
+      "case": "32768+256_B2",
+      "status": "ok",
+      "value": 23.53363892207344,
+      "label": "23.53"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "phasekv90",
+      "case": "32768+256_B4",
+      "status": "ok",
+      "value": 26.727007076736175,
+      "label": "26.73"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "phasekv90",
+      "case": "32768+256_B8",
+      "status": "ok",
+      "value": 27.65706942889273,
+      "label": "27.66"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "phasekv90",
+      "case": "32768+2048_B1",
+      "status": "ok",
+      "value": 32.46265364386978,
+      "label": "32.46"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "phasekv90",
+      "case": "32768+2048_B2",
+      "status": "ok",
+      "value": 44.78460152829686,
+      "label": "44.78"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "phasekv90",
+      "case": "32768+2048_B4",
+      "status": "ok",
+      "value": 56.2888739297932,
+      "label": "56.29"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "phasekv90",
+      "case": "32768+2048_B8",
+      "status": "ok",
+      "value": 64.1869756759125,
+      "label": "64.19"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "kivi",
+      "case": "8192+256_B1",
+      "status": "ok",
+      "value": 23.762462349220712,
+      "label": "23.76"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "kivi",
+      "case": "8192+256_B2",
+      "status": "ok",
+      "value": 44.29880998591272,
+      "label": "44.30"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "kivi",
+      "case": "8192+256_B4",
+      "status": "ok",
+      "value": 79.1236072376727,
+      "label": "79.12"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "kivi",
+      "case": "8192+256_B8",
+      "status": "ok",
+      "value": 125.45733349463168,
+      "label": "125.46"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "kivi",
+      "case": "8192+2048_B1",
+      "status": "ok",
+      "value": 24.669246774907535,
+      "label": "24.67"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "kivi",
+      "case": "8192+2048_B2",
+      "status": "ok",
+      "value": 48.8026904751291,
+      "label": "48.80"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "kivi",
+      "case": "8192+2048_B4",
+      "status": "ok",
+      "value": 95.42681385804845,
+      "label": "95.43"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "kivi",
+      "case": "8192+2048_B8",
+      "status": "ok",
+      "value": 168.58419226863361,
+      "label": "168.58"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "kivi",
+      "case": "32768+256_B1",
+      "status": "ok",
+      "value": 17.72060573061009,
+      "label": "17.72"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "kivi",
+      "case": "32768+256_B2",
+      "status": "ok",
+      "value": 25.09755641428909,
+      "label": "25.10"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "kivi",
+      "case": "32768+256_B4",
+      "status": "ok",
+      "value": 31.810687214278822,
+      "label": "31.81"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "kivi",
+      "case": "32768+256_B8",
+      "status": "ok",
+      "value": 36.153792411791336,
+      "label": "36.15"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "kivi",
+      "case": "32768+2048_B1",
+      "status": "ok",
+      "value": 22.520025537455684,
+      "label": "22.52"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "kivi",
+      "case": "32768+2048_B2",
+      "status": "ok",
+      "value": 36.3263870811543,
+      "label": "36.33"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "kivi",
+      "case": "32768+2048_B4",
+      "status": "ok",
+      "value": 53.11645514258742,
+      "label": "53.12"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "kivi",
+      "case": "32768+2048_B8",
+      "status": "ok",
+      "value": 66.20114887656428,
+      "label": "66.20"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "clusterkv",
+      "case": "8192+256_B1",
+      "status": "ok",
+      "value": 27.551210453802266,
+      "label": "27.55"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "clusterkv",
+      "case": "8192+256_B2",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "clusterkv",
+      "case": "8192+256_B4",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "clusterkv",
+      "case": "8192+256_B8",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "clusterkv",
+      "case": "8192+2048_B1",
+      "status": "ok",
+      "value": 30.481549439101837,
+      "label": "30.48"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "clusterkv",
+      "case": "8192+2048_B2",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "clusterkv",
+      "case": "8192+2048_B4",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "clusterkv",
+      "case": "8192+2048_B8",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "clusterkv",
+      "case": "32768+256_B1",
+      "status": "ok",
+      "value": 16.67287849509241,
+      "label": "16.67"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "clusterkv",
+      "case": "32768+256_B2",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "clusterkv",
+      "case": "32768+256_B4",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "clusterkv",
+      "case": "32768+256_B8",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "clusterkv",
+      "case": "32768+2048_B1",
+      "status": "ok",
+      "value": 25.54960789056916,
+      "label": "25.55"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "clusterkv",
+      "case": "32768+2048_B2",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "clusterkv",
+      "case": "32768+2048_B4",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "clusterkv",
+      "case": "32768+2048_B8",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "snapkv",
+      "case": "8192+256_B1",
+      "status": "ok",
+      "value": 40.59843333086146,
+      "label": "40.60"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "snapkv",
+      "case": "8192+256_B2",
+      "status": "ok",
+      "value": 67.29610156055965,
+      "label": "67.30"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "snapkv",
+      "case": "8192+256_B4",
+      "status": "ok",
+      "value": 91.32173334352096,
+      "label": "91.32"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "snapkv",
+      "case": "8192+256_B8",
+      "status": "ok",
+      "value": 108.39814417036374,
+      "label": "108.40"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "snapkv",
+      "case": "8192+2048_B1",
+      "status": "ok",
+      "value": 44.56179404342695,
+      "label": "44.56"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "snapkv",
+      "case": "8192+2048_B2",
+      "status": "ok",
+      "value": 70.43734223071245,
+      "label": "70.44"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "snapkv",
+      "case": "8192+2048_B4",
+      "status": "ok",
+      "value": 97.34957739459988,
+      "label": "97.35"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "snapkv",
+      "case": "8192+2048_B8",
+      "status": "ok",
+      "value": 115.52328902994927,
+      "label": "115.52"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "snapkv",
+      "case": "32768+256_B1",
+      "status": "ok",
+      "value": 26.85551242682783,
+      "label": "26.86"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "snapkv",
+      "case": "32768+256_B2",
+      "status": "ok",
+      "value": 36.86636612134252,
+      "label": "36.87"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "snapkv",
+      "case": "32768+256_B4",
+      "status": "ok",
+      "value": 43.17917939648033,
+      "label": "43.18"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "snapkv",
+      "case": "32768+256_B8",
+      "status": "ok",
+      "value": 45.69799037329661,
+      "label": "45.70"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "snapkv",
+      "case": "32768+2048_B1",
+      "status": "ok",
+      "value": 41.42919713485646,
+      "label": "41.43"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "snapkv",
+      "case": "32768+2048_B2",
+      "status": "ok",
+      "value": 63.56216935725224,
+      "label": "63.56"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "snapkv",
+      "case": "32768+2048_B4",
+      "status": "ok",
+      "value": 84.76341434081499,
+      "label": "84.76"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "snapkv",
+      "case": "32768+2048_B8",
+      "status": "ok",
+      "value": 97.75026025857134,
+      "label": "97.75"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "pyramidkv",
+      "case": "8192+256_B1",
+      "status": "ok",
+      "value": 42.46857204156999,
+      "label": "42.47"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "pyramidkv",
+      "case": "8192+256_B2",
+      "status": "ok",
+      "value": 75.47712875668547,
+      "label": "75.48"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "pyramidkv",
+      "case": "8192+256_B4",
+      "status": "ok",
+      "value": 123.85804242119698,
+      "label": "123.86"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "pyramidkv",
+      "case": "8192+256_B8",
+      "status": "ok",
+      "value": 185.3959748504287,
+      "label": "185.40"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "pyramidkv",
+      "case": "8192+2048_B1",
+      "status": "ok",
+      "value": 47.71671103041972,
+      "label": "47.72"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "pyramidkv",
+      "case": "8192+2048_B2",
+      "status": "ok",
+      "value": 90.45332811413304,
+      "label": "90.45"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "pyramidkv",
+      "case": "8192+2048_B4",
+      "status": "ok",
+      "value": 173.8829899611016,
+      "label": "173.88"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "pyramidkv",
+      "case": "8192+2048_B8",
+      "status": "ok",
+      "value": 315.7942833095889,
+      "label": "315.79"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "pyramidkv",
+      "case": "32768+256_B1",
+      "status": "ok",
+      "value": 27.837645842651515,
+      "label": "27.84"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "pyramidkv",
+      "case": "32768+256_B2",
+      "status": "ok",
+      "value": 38.809094477665326,
+      "label": "38.81"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "pyramidkv",
+      "case": "32768+256_B4",
+      "status": "ok",
+      "value": 49.13882998485893,
+      "label": "49.14"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "pyramidkv",
+      "case": "32768+256_B8",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "pyramidkv",
+      "case": "32768+2048_B1",
+      "status": "ok",
+      "value": 43.802408082148865,
+      "label": "43.80"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "pyramidkv",
+      "case": "32768+2048_B2",
+      "status": "ok",
+      "value": 79.76654979216984,
+      "label": "79.77"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "pyramidkv",
+      "case": "32768+2048_B4",
+      "status": "ok",
+      "value": 138.41397811841068,
+      "label": "138.41"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "pyramidkv",
+      "case": "32768+2048_B8",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "million",
+      "case": "8192+256_B1",
+      "status": "ok",
+      "value": 43.52302700407802,
+      "label": "43.52"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "million",
+      "case": "8192+256_B2",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "million",
+      "case": "8192+256_B4",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "million",
+      "case": "8192+256_B8",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "million",
+      "case": "8192+2048_B1",
+      "status": "ok",
+      "value": 47.943099454818004,
+      "label": "47.94"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "million",
+      "case": "8192+2048_B2",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "million",
+      "case": "8192+2048_B4",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "million",
+      "case": "8192+2048_B8",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "million",
+      "case": "32768+256_B1",
+      "status": "ok",
+      "value": 21.691332970066394,
+      "label": "21.69"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "million",
+      "case": "32768+256_B2",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "million",
+      "case": "32768+256_B4",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "million",
+      "case": "32768+256_B8",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "million",
+      "case": "32768+2048_B1",
+      "status": "ok",
+      "value": 31.785966493161467,
+      "label": "31.79"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "million",
+      "case": "32768+2048_B2",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "million",
+      "case": "32768+2048_B4",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "million",
+      "case": "32768+2048_B8",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "scope",
+      "case": "8192+256_B1",
+      "status": "ok",
+      "value": 29.18489862888399,
+      "label": "29.18"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "scope",
+      "case": "8192+256_B2",
+      "status": "ok",
+      "value": 43.17436288506984,
+      "label": "43.17"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "scope",
+      "case": "8192+256_B4",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "scope",
+      "case": "8192+256_B8",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "scope",
+      "case": "8192+2048_B1",
+      "status": "ok",
+      "value": 33.869160016466935,
+      "label": "33.87"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "scope",
+      "case": "8192+2048_B2",
+      "status": "ok",
+      "value": 60.19651847595887,
+      "label": "60.20"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "scope",
+      "case": "8192+2048_B4",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "scope",
+      "case": "8192+2048_B8",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "scope",
+      "case": "32768+256_B1",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "scope",
+      "case": "32768+256_B2",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "scope",
+      "case": "32768+256_B4",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "scope",
+      "case": "32768+256_B8",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "scope",
+      "case": "32768+2048_B1",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "scope",
+      "case": "32768+2048_B2",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "scope",
+      "case": "32768+2048_B4",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "e2e_tps",
+      "method": "scope",
+      "case": "32768+2048_B8",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "ttft",
+      "method": "full",
+      "case": "8192+256_B1",
+      "status": "ok",
+      "value": 0.9441090496256948,
+      "label": "0.94"
+    },
+    {
+      "metric": "ttft",
+      "method": "full",
+      "case": "8192+256_B2",
+      "status": "ok",
+      "value": 1.6786736138164997,
+      "label": "1.68"
+    },
+    {
+      "metric": "ttft",
+      "method": "full",
+      "case": "8192+256_B4",
+      "status": "ok",
+      "value": 3.1069063879549503,
+      "label": "3.11"
+    },
+    {
+      "metric": "ttft",
+      "method": "full",
+      "case": "8192+256_B8",
+      "status": "ok",
+      "value": 6.043176161125302,
+      "label": "6.04"
+    },
+    {
+      "metric": "ttft",
+      "method": "full",
+      "case": "8192+2048_B1",
+      "status": "ok",
+      "value": 0.9556498229503632,
+      "label": "0.96"
+    },
+    {
+      "metric": "ttft",
+      "method": "full",
+      "case": "8192+2048_B2",
+      "status": "ok",
+      "value": 1.6870083939284086,
+      "label": "1.69"
+    },
+    {
+      "metric": "ttft",
+      "method": "full",
+      "case": "8192+2048_B4",
+      "status": "ok",
+      "value": 3.125196392647922,
+      "label": "3.13"
+    },
+    {
+      "metric": "ttft",
+      "method": "full",
+      "case": "8192+2048_B8",
+      "status": "ok",
+      "value": 6.060787684284151,
+      "label": "6.06"
+    },
+    {
+      "metric": "ttft",
+      "method": "full",
+      "case": "32768+256_B1",
+      "status": "ok",
+      "value": 5.912453285418451,
+      "label": "5.91"
+    },
+    {
+      "metric": "ttft",
+      "method": "full",
+      "case": "32768+256_B2",
+      "status": "ok",
+      "value": 12.059998411685228,
+      "label": "12.06"
+    },
+    {
+      "metric": "ttft",
+      "method": "full",
+      "case": "32768+256_B4",
+      "status": "ok",
+      "value": 27.86136241722852,
+      "label": "27.86"
+    },
+    {
+      "metric": "ttft",
+      "method": "full",
+      "case": "32768+256_B8",
+      "status": "ok",
+      "value": 47.48129828739911,
+      "label": "47.48"
+    },
+    {
+      "metric": "ttft",
+      "method": "full",
+      "case": "32768+2048_B1",
+      "status": "ok",
+      "value": 5.95825020223856,
+      "label": "5.96"
+    },
+    {
+      "metric": "ttft",
+      "method": "full",
+      "case": "32768+2048_B2",
+      "status": "ok",
+      "value": 11.510392243042588,
+      "label": "11.51"
+    },
+    {
+      "metric": "ttft",
+      "method": "full",
+      "case": "32768+2048_B4",
+      "status": "ok",
+      "value": 22.622922337614,
+      "label": "22.62"
+    },
+    {
+      "metric": "ttft",
+      "method": "full",
+      "case": "32768+2048_B8",
+      "status": "ok",
+      "value": 47.03500873222947,
+      "label": "47.04"
+    },
+    {
+      "metric": "ttft",
+      "method": "kivi",
+      "case": "8192+256_B1",
+      "status": "ok",
+      "value": 0.6820907816290855,
+      "label": "0.68"
+    },
+    {
+      "metric": "ttft",
+      "method": "kivi",
+      "case": "8192+256_B2",
+      "status": "ok",
+      "value": 1.3524153595790267,
+      "label": "1.35"
+    },
+    {
+      "metric": "ttft",
+      "method": "kivi",
+      "case": "8192+256_B4",
+      "status": "ok",
+      "value": 2.6983091486617923,
+      "label": "2.70"
+    },
+    {
+      "metric": "ttft",
+      "method": "kivi",
+      "case": "8192+256_B8",
+      "status": "ok",
+      "value": 5.414029142819345,
+      "label": "5.41"
+    },
+    {
+      "metric": "ttft",
+      "method": "kivi",
+      "case": "8192+2048_B1",
+      "status": "ok",
+      "value": 0.6842454727739096,
+      "label": "0.68"
+    },
+    {
+      "metric": "ttft",
+      "method": "kivi",
+      "case": "8192+2048_B2",
+      "status": "ok",
+      "value": 1.356370280496776,
+      "label": "1.36"
+    },
+    {
+      "metric": "ttft",
+      "method": "kivi",
+      "case": "8192+2048_B4",
+      "status": "ok",
+      "value": 2.709360571578145,
+      "label": "2.71"
+    },
+    {
+      "metric": "ttft",
+      "method": "kivi",
+      "case": "8192+2048_B8",
+      "status": "ok",
+      "value": 5.450105647556484,
+      "label": "5.45"
+    },
+    {
+      "metric": "ttft",
+      "method": "kivi",
+      "case": "32768+256_B1",
+      "status": "ok",
+      "value": 3.724623452872038,
+      "label": "3.72"
+    },
+    {
+      "metric": "ttft",
+      "method": "kivi",
+      "case": "32768+256_B2",
+      "status": "ok",
+      "value": 7.466547063551843,
+      "label": "7.47"
+    },
+    {
+      "metric": "ttft",
+      "method": "kivi",
+      "case": "32768+256_B4",
+      "status": "ok",
+      "value": 15.02734686434269,
+      "label": "15.03"
+    },
+    {
+      "metric": "ttft",
+      "method": "kivi",
+      "case": "32768+256_B8",
+      "status": "ok",
+      "value": 30.133002187125385,
+      "label": "30.13"
+    },
+    {
+      "metric": "ttft",
+      "method": "kivi",
+      "case": "32768+2048_B1",
+      "status": "ok",
+      "value": 3.7121053729206324,
+      "label": "3.71"
+    },
+    {
+      "metric": "ttft",
+      "method": "kivi",
+      "case": "32768+2048_B2",
+      "status": "ok",
+      "value": 7.423625108785927,
+      "label": "7.42"
+    },
+    {
+      "metric": "ttft",
+      "method": "kivi",
+      "case": "32768+2048_B4",
+      "status": "ok",
+      "value": 14.899179640226066,
+      "label": "14.90"
+    },
+    {
+      "metric": "ttft",
+      "method": "kivi",
+      "case": "32768+2048_B8",
+      "status": "ok",
+      "value": 30.419934106990695,
+      "label": "30.42"
+    },
+    {
+      "metric": "ttft",
+      "method": "clusterkv",
+      "case": "8192+256_B1",
+      "status": "ok",
+      "value": 0.8848926518112421,
+      "label": "0.88"
+    },
+    {
+      "metric": "ttft",
+      "method": "clusterkv",
+      "case": "8192+256_B2",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "ttft",
+      "method": "clusterkv",
+      "case": "8192+256_B4",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "ttft",
+      "method": "clusterkv",
+      "case": "8192+256_B8",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "ttft",
+      "method": "clusterkv",
+      "case": "8192+2048_B1",
+      "status": "ok",
+      "value": 0.8915472468361259,
+      "label": "0.89"
+    },
+    {
+      "metric": "ttft",
+      "method": "clusterkv",
+      "case": "8192+2048_B2",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "ttft",
+      "method": "clusterkv",
+      "case": "8192+2048_B4",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "ttft",
+      "method": "clusterkv",
+      "case": "8192+2048_B8",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "ttft",
+      "method": "clusterkv",
+      "case": "32768+256_B1",
+      "status": "ok",
+      "value": 5.874898259527981,
+      "label": "5.87"
+    },
+    {
+      "metric": "ttft",
+      "method": "clusterkv",
+      "case": "32768+256_B2",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "ttft",
+      "method": "clusterkv",
+      "case": "32768+256_B4",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "ttft",
+      "method": "clusterkv",
+      "case": "32768+256_B8",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "ttft",
+      "method": "clusterkv",
+      "case": "32768+2048_B1",
+      "status": "ok",
+      "value": 5.860698738135397,
+      "label": "5.86"
+    },
+    {
+      "metric": "ttft",
+      "method": "clusterkv",
+      "case": "32768+2048_B2",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "ttft",
+      "method": "clusterkv",
+      "case": "32768+2048_B4",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "ttft",
+      "method": "clusterkv",
+      "case": "32768+2048_B8",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "ttft",
+      "method": "snapkv",
+      "case": "8192+256_B1",
+      "status": "ok",
+      "value": 0.7161542782559991,
+      "label": "0.72"
+    },
+    {
+      "metric": "ttft",
+      "method": "snapkv",
+      "case": "8192+256_B2",
+      "status": "ok",
+      "value": 1.4174899533390999,
+      "label": "1.42"
+    },
+    {
+      "metric": "ttft",
+      "method": "snapkv",
+      "case": "8192+256_B4",
+      "status": "ok",
+      "value": 2.849112154915929,
+      "label": "2.85"
+    },
+    {
+      "metric": "ttft",
+      "method": "snapkv",
+      "case": "8192+256_B8",
+      "status": "ok",
+      "value": 5.687345614656806,
+      "label": "5.69"
+    },
+    {
+      "metric": "ttft",
+      "method": "snapkv",
+      "case": "8192+2048_B1",
+      "status": "ok",
+      "value": 0.7222777027636766,
+      "label": "0.72"
+    },
+    {
+      "metric": "ttft",
+      "method": "snapkv",
+      "case": "8192+2048_B2",
+      "status": "ok",
+      "value": 1.4298057649284601,
+      "label": "1.43"
+    },
+    {
+      "metric": "ttft",
+      "method": "snapkv",
+      "case": "8192+2048_B4",
+      "status": "ok",
+      "value": 2.9070698572322726,
+      "label": "2.91"
+    },
+    {
+      "metric": "ttft",
+      "method": "snapkv",
+      "case": "8192+2048_B8",
+      "status": "ok",
+      "value": 5.727928206324577,
+      "label": "5.73"
+    },
+    {
+      "metric": "ttft",
+      "method": "snapkv",
+      "case": "32768+256_B1",
+      "status": "ok",
+      "value": 3.878066895529628,
+      "label": "3.88"
+    },
+    {
+      "metric": "ttft",
+      "method": "snapkv",
+      "case": "32768+256_B2",
+      "status": "ok",
+      "value": 7.696442288346589,
+      "label": "7.70"
+    },
+    {
+      "metric": "ttft",
+      "method": "snapkv",
+      "case": "32768+256_B4",
+      "status": "ok",
+      "value": 15.352053658105433,
+      "label": "15.35"
+    },
+    {
+      "metric": "ttft",
+      "method": "snapkv",
+      "case": "32768+256_B8",
+      "status": "ok",
+      "value": 31.622749705798924,
+      "label": "31.62"
+    },
+    {
+      "metric": "ttft",
+      "method": "snapkv",
+      "case": "32768+2048_B1",
+      "status": "ok",
+      "value": 3.864082287065685,
+      "label": "3.86"
+    },
+    {
+      "metric": "ttft",
+      "method": "snapkv",
+      "case": "32768+2048_B2",
+      "status": "ok",
+      "value": 7.686774001456797,
+      "label": "7.69"
+    },
+    {
+      "metric": "ttft",
+      "method": "snapkv",
+      "case": "32768+2048_B4",
+      "status": "ok",
+      "value": 15.422406048513949,
+      "label": "15.42"
+    },
+    {
+      "metric": "ttft",
+      "method": "snapkv",
+      "case": "32768+2048_B8",
+      "status": "ok",
+      "value": 31.48664373252541,
+      "label": "31.49"
+    },
+    {
+      "metric": "ttft",
+      "method": "pyramidkv",
+      "case": "8192+256_B1",
+      "status": "ok",
+      "value": 0.7347198156639934,
+      "label": "0.73"
+    },
+    {
+      "metric": "ttft",
+      "method": "pyramidkv",
+      "case": "8192+256_B2",
+      "status": "ok",
+      "value": 1.4320259587839246,
+      "label": "1.43"
+    },
+    {
+      "metric": "ttft",
+      "method": "pyramidkv",
+      "case": "8192+256_B4",
+      "status": "ok",
+      "value": 2.8365643164142966,
+      "label": "2.84"
+    },
+    {
+      "metric": "ttft",
+      "method": "pyramidkv",
+      "case": "8192+256_B8",
+      "status": "ok",
+      "value": 5.646581619977951,
+      "label": "5.65"
+    },
+    {
+      "metric": "ttft",
+      "method": "pyramidkv",
+      "case": "8192+2048_B1",
+      "status": "ok",
+      "value": 0.7370276432484388,
+      "label": "0.74"
+    },
+    {
+      "metric": "ttft",
+      "method": "pyramidkv",
+      "case": "8192+2048_B2",
+      "status": "ok",
+      "value": 1.432927024550736,
+      "label": "1.43"
+    },
+    {
+      "metric": "ttft",
+      "method": "pyramidkv",
+      "case": "8192+2048_B4",
+      "status": "ok",
+      "value": 2.8507017763331532,
+      "label": "2.85"
+    },
+    {
+      "metric": "ttft",
+      "method": "pyramidkv",
+      "case": "8192+2048_B8",
+      "status": "ok",
+      "value": 5.6443955190479755,
+      "label": "5.64"
+    },
+    {
+      "metric": "ttft",
+      "method": "pyramidkv",
+      "case": "32768+256_B1",
+      "status": "ok",
+      "value": 3.8200039444491267,
+      "label": "3.82"
+    },
+    {
+      "metric": "ttft",
+      "method": "pyramidkv",
+      "case": "32768+256_B2",
+      "status": "ok",
+      "value": 7.653123623691499,
+      "label": "7.65"
+    },
+    {
+      "metric": "ttft",
+      "method": "pyramidkv",
+      "case": "32768+256_B4",
+      "status": "ok",
+      "value": 15.350466170348227,
+      "label": "15.35"
+    },
+    {
+      "metric": "ttft",
+      "method": "pyramidkv",
+      "case": "32768+256_B8",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "ttft",
+      "method": "pyramidkv",
+      "case": "32768+2048_B1",
+      "status": "ok",
+      "value": 3.8131358241662383,
+      "label": "3.81"
+    },
+    {
+      "metric": "ttft",
+      "method": "pyramidkv",
+      "case": "32768+2048_B2",
+      "status": "ok",
+      "value": 7.58121186029166,
+      "label": "7.58"
+    },
+    {
+      "metric": "ttft",
+      "method": "pyramidkv",
+      "case": "32768+2048_B4",
+      "status": "ok",
+      "value": 15.175558713264763,
+      "label": "15.18"
+    },
+    {
+      "metric": "ttft",
+      "method": "pyramidkv",
+      "case": "32768+2048_B8",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "ttft",
+      "method": "million",
+      "case": "8192+256_B1",
+      "status": "ok",
+      "value": 0.8196800881996751,
+      "label": "0.82"
+    },
+    {
+      "metric": "ttft",
+      "method": "million",
+      "case": "8192+256_B2",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "ttft",
+      "method": "million",
+      "case": "8192+256_B4",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "ttft",
+      "method": "million",
+      "case": "8192+256_B8",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "ttft",
+      "method": "million",
+      "case": "8192+2048_B1",
+      "status": "ok",
+      "value": 0.8254831349477172,
+      "label": "0.83"
+    },
+    {
+      "metric": "ttft",
+      "method": "million",
+      "case": "8192+2048_B2",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "ttft",
+      "method": "million",
+      "case": "8192+2048_B4",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "ttft",
+      "method": "million",
+      "case": "8192+2048_B8",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "ttft",
+      "method": "million",
+      "case": "32768+256_B1",
+      "status": "ok",
+      "value": 4.524024115875363,
+      "label": "4.52"
+    },
+    {
+      "metric": "ttft",
+      "method": "million",
+      "case": "32768+256_B2",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "ttft",
+      "method": "million",
+      "case": "32768+256_B4",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "ttft",
+      "method": "million",
+      "case": "32768+256_B8",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "ttft",
+      "method": "million",
+      "case": "32768+2048_B1",
+      "status": "ok",
+      "value": 4.306325356476009,
+      "label": "4.31"
+    },
+    {
+      "metric": "ttft",
+      "method": "million",
+      "case": "32768+2048_B2",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "ttft",
+      "method": "million",
+      "case": "32768+2048_B4",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "ttft",
+      "method": "million",
+      "case": "32768+2048_B8",
+      "status": "not_tested",
+      "value": null,
+      "label": "未测"
+    },
+    {
+      "metric": "ttft",
+      "method": "scope",
+      "case": "8192+256_B1",
+      "status": "ok",
+      "value": 1.7579076429829001,
+      "label": "1.76"
+    },
+    {
+      "metric": "ttft",
+      "method": "scope",
+      "case": "8192+256_B2",
+      "status": "ok",
+      "value": 4.8051883317530155,
+      "label": "4.81"
+    },
+    {
+      "metric": "ttft",
+      "method": "scope",
+      "case": "8192+256_B4",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "ttft",
+      "method": "scope",
+      "case": "8192+256_B8",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "ttft",
+      "method": "scope",
+      "case": "8192+2048_B1",
+      "status": "ok",
+      "value": 1.7563901850953698,
+      "label": "1.76"
+    },
+    {
+      "metric": "ttft",
+      "method": "scope",
+      "case": "8192+2048_B2",
+      "status": "ok",
+      "value": 4.823488526046276,
+      "label": "4.82"
+    },
+    {
+      "metric": "ttft",
+      "method": "scope",
+      "case": "8192+2048_B4",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "ttft",
+      "method": "scope",
+      "case": "8192+2048_B8",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "ttft",
+      "method": "scope",
+      "case": "32768+256_B1",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "ttft",
+      "method": "scope",
+      "case": "32768+256_B2",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "ttft",
+      "method": "scope",
+      "case": "32768+256_B4",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "ttft",
+      "method": "scope",
+      "case": "32768+256_B8",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "ttft",
+      "method": "scope",
+      "case": "32768+2048_B1",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "ttft",
+      "method": "scope",
+      "case": "32768+2048_B2",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "ttft",
+      "method": "scope",
+      "case": "32768+2048_B4",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    },
+    {
+      "metric": "ttft",
+      "method": "scope",
+      "case": "32768+2048_B8",
+      "status": "oom",
+      "value": null,
+      "label": "OOM"
+    }
+  ],
+  "relative_changes": {
+    "8192+256_B1": {
+      "full": {
+        "tps": -9.124407281280778,
+        "e2e_tps": -9.158106948072685,
+        "kv_gib": -69.19875399550136,
+        "peak_gib": 4.982193718098138,
+        "decode_peak_gib": -4.047738235060539
+      },
+      "phasekv": {
+        "tps": -4.9283267417125405,
+        "e2e_tps": -5.309486723499257,
+        "kv_gib": -8.933102905145262,
+        "peak_gib": 3.222260511636632,
+        "decode_peak_gib": -0.12189365446605427
+      }
+    },
+    "8192+256_B2": {
+      "full": {
+        "tps": 3.5499234854853734,
+        "e2e_tps": 0.9553341789267922,
+        "kv_gib": -69.19875399550136,
+        "peak_gib": 9.193989212533848,
+        "decode_peak_gib": -7.734801379822098
+      },
+      "phasekv": {
+        "tps": -1.4269505357261125,
+        "e2e_tps": -2.3951159977638636,
+        "kv_gib": -8.933102905145262,
+        "peak_gib": 5.807742829315665,
+        "decode_peak_gib": -0.38476791942251287
+      }
+    },
+    "8192+256_B4": {
+      "full": {
+        "tps": 14.83292217342671,
+        "e2e_tps": 7.681351232714961,
+        "kv_gib": -69.19875399550136,
+        "peak_gib": 16.480094408878898,
+        "decode_peak_gib": -14.390715740490311
+      },
+      "phasekv": {
+        "tps": 2.2543100370983504,
+        "e2e_tps": -0.07819731806328889,
+        "kv_gib": -8.933102905145262,
+        "peak_gib": 10.042606567876323,
+        "decode_peak_gib": -0.8263056366350274
+      }
+    },
+    "8192+256_B8": {
+      "full": {
+        "tps": 25.049936627622117,
+        "e2e_tps": 12.12040478880314,
+        "kv_gib": -69.19875399550136,
+        "peak_gib": 26.90818522536851,
+        "decode_peak_gib": -24.260537824721993
+      },
+      "phasekv": {
+        "tps": 2.8858295715364024,
+        "e2e_tps": -0.37380059064634485,
+        "kv_gib": -8.933102905145262,
+        "peak_gib": 16.056377212362925,
+        "decode_peak_gib": -1.3461991540023588
+      }
+    },
+    "8192+2048_B1": {
+      "full": {
+        "tps": -12.848606453868317,
+        "e2e_tps": -12.763523713913273,
+        "kv_gib": -70.10663883191718,
+        "peak_gib": 3.6007483348351688,
+        "decode_peak_gib": -4.999575190203331
+      },
+      "phasekv": {
+        "tps": -3.6134703421300873,
+        "e2e_tps": -3.688320875556661,
+        "kv_gib": -7.6965847406513905,
+        "peak_gib": 3.222260511636632,
+        "decode_peak_gib": -0.12142347488197647
+      }
+    },
+    "8192+2048_B2": {
+      "full": {
+        "tps": 0.08242669406393066,
+        "e2e_tps": -0.19981967771123266,
+        "kv_gib": -70.10663883191718,
+        "peak_gib": 6.533292967408877,
+        "decode_peak_gib": -9.390938939457516
+      },
+      "phasekv": {
+        "tps": -1.3240910623575464,
+        "e2e_tps": -1.4915035575947422,
+        "kv_gib": -7.6965847406513905,
+        "peak_gib": 5.807742829315665,
+        "decode_peak_gib": -0.36758142224108115
+      }
+    },
+    "8192+2048_B4": {
+      "full": {
+        "tps": 11.17317059285934,
+        "e2e_tps": 10.246317318967968,
+        "kv_gib": -70.10663883191718,
+        "peak_gib": 11.52717287964462,
+        "decode_peak_gib": -17.04582760744534
+      },
+      "phasekv": {
+        "tps": 1.9274628943558803,
+        "e2e_tps": 1.5863346085807084,
+        "kv_gib": -7.6965847406513905,
+        "peak_gib": 10.042606567876323,
+        "decode_peak_gib": -0.8118706796339303
+      }
+    },
+    "8192+2048_B8": {
+      "full": {
+        "tps": 18.89839375285789,
+        "e2e_tps": 17.17890313095345,
+        "kv_gib": -70.10663883191718,
+        "peak_gib": 18.30131906029997,
+        "decode_peak_gib": -27.829813323508922
+      },
+      "phasekv": {
+        "tps": 1.8039515684332263,
+        "e2e_tps": 1.3511996958958772,
+        "kv_gib": -7.6965847406513905,
+        "peak_gib": 16.056377212362925,
+        "decode_peak_gib": -1.3151810109533368
+      }
+    },
+    "32768+256_B1": {
+      "full": {
+        "tps": 15.416456984042458,
+        "e2e_tps": 6.14654041032936,
+        "kv_gib": -71.19138554946552,
+        "peak_gib": 17.02787860144852,
+        "decode_peak_gib": -14.599231110251964
+      },
+      "phasekv": {
+        "tps": 2.1618788858189353,
+        "e2e_tps": -0.38661434029915176,
+        "kv_gib": -9.713687482205557,
+        "peak_gib": 10.24171177608193,
+        "decode_peak_gib": -0.6566752937674059
+      }
+    },
+    "32768+256_B2": {
+      "full": {
+        "tps": 26.7833578853828,
+        "e2e_tps": 11.593588935760879,
+        "kv_gib": -71.19138554946552,
+        "peak_gib": 27.8679380299073,
+        "decode_peak_gib": -24.740817404551542
+      },
+      "phasekv": {
+        "tps": 2.874179288481016,
+        "e2e_tps": -1.197784794165646,
+        "kv_gib": -9.713687482205557,
+        "peak_gib": 16.10133688076263,
+        "decode_peak_gib": -1.417709636413289
+      }
+    },
+    "32768+256_B4": {
+      "full": {
+        "tps": 40.285924515749684,
+        "e2e_tps": 26.96600961334381,
+        "kv_gib": -71.19138554946552,
+        "peak_gib": 41.13558291057808,
+        "decode_peak_gib": -36.90696256993324
+      },
+      "phasekv": {
+        "tps": 6.183357511644427,
+        "e2e_tps": 0.5526181865280533,
+        "kv_gib": -9.713687482205557,
+        "peak_gib": 22.710396904713527,
+        "decode_peak_gib": -2.442171225640166
+      }
+    },
+    "32768+256_B8": {
+      "full": {
+        "tps": 54.87051311147979,
+        "e2e_tps": 16.235975261554493,
+        "kv_gib": -71.19138554946552,
+        "peak_gib": 54.027764168909776,
+        "decode_peak_gib": -48.75945622330479
+      },
+      "phasekv": {
+        "tps": 9.187822436725824,
+        "e2e_tps": 2.4220229553575834,
+        "kv_gib": -9.713687482205557,
+        "peak_gib": 28.713381660801595,
+        "decode_peak_gib": -3.8114799687976597
+      }
+    },
+    "32768+2048_B1": {
+      "full": {
+        "tps": 12.801636542243266,
+        "e2e_tps": 11.185777376858287,
+        "kv_gib": -71.3558272296424,
+        "peak_gib": 15.673642159848121,
+        "decode_peak_gib": -15.28945472401464
+      },
+      "phasekv": {
+        "tps": 2.014614285879346,
+        "e2e_tps": 1.5130858903940503,
+        "kv_gib": -9.308214350672973,
+        "peak_gib": 10.24171177608193,
+        "decode_peak_gib": -0.6508421321177904
+      }
+    },
+    "32768+2048_B2": {
+      "full": {
+        "tps": 24.00801233877008,
+        "e2e_tps": 20.28827931694508,
+        "kv_gib": -71.3558272296424,
+        "peak_gib": 25.454552728092207,
+        "decode_peak_gib": -25.675092727113924
+      },
+      "phasekv": {
+        "tps": 2.6868904273169125,
+        "e2e_tps": 1.8281163282474644,
+        "kv_gib": -9.308214350672973,
+        "peak_gib": 16.10133688076263,
+        "decode_peak_gib": -1.4153650727291356
+      }
+    },
+    "32768+2048_B4": {
+      "full": {
+        "tps": 38.578756153758185,
+        "e2e_tps": 31.430118140000918,
+        "kv_gib": -71.3558272296424,
+        "peak_gib": 37.24096252053746,
+        "decode_peak_gib": -37.9421361085138
+      },
+      "phasekv": {
+        "tps": 5.6381629718325055,
+        "e2e_tps": 4.035808693198328,
+        "kv_gib": -9.308214350672973,
+        "peak_gib": 22.710396904713527,
+        "decode_peak_gib": -2.414101377100908
+      }
+    },
+    "32768+2048_B8": {
+      "full": {
+        "tps": 54.27221959987267,
+        "e2e_tps": 42.67373970013515,
+        "kv_gib": -71.3558272296424,
+        "peak_gib": 48.49502357873212,
+        "decode_peak_gib": -49.69025278356186
+      },
+      "phasekv": {
+        "tps": 8.571240412379154,
+        "e2e_tps": 6.198237616723956,
+        "kv_gib": -9.308214350672973,
+        "peak_gib": 28.713381660801595,
+        "decode_peak_gib": -3.745135780722919
+      }
+    }
+  },
+  "note": "Derived graphics only. No new benchmark execution; missing and OOM are never encoded as zero."
+}

@@ -1,0 +1,51 @@
+{
+  "id": "longbench_full/multifieldqa_en/46b15f1200c46251053ec3dfa806dbdf515eb34053a5e0d1",
+  "suite": "longbench",
+  "task": "multifieldqa_en",
+  "input_sha256": "bc0b1a7f96300c35062089a703131f4c9c30f3ff65ba9c3ae52818383ced1f73",
+  "input_tokens": 3892,
+  "max_new_tokens": 64,
+  "truncated_input": false,
+  "original_id": "46b15f1200c46251053ec3dfa806dbdf515eb34053a5e0d1",
+  "evaluation_split": "heldout",
+  "gpu": {
+    "gpu": "NVIDIA A800-SXM4-80GB",
+    "uuid": "894fe36c-c838-d2cb-263d-f64c0813b14c",
+    "capacity": 85094825984
+  },
+  "batch": 1,
+  "output_tokens_per_row": 6,
+  "decode_steps": 5,
+  "decoded_tokens": 5,
+  "decode_s": 0.10816864110529423,
+  "aggregate_tokens_per_s": 46.22411771941248,
+  "per_sequence_tokens_per_s": 46.22411771941248,
+  "ttft_s": 0.42248178739100695,
+  "prefill_peak_bytes": 16616481280,
+  "decode_peak_bytes": 16588410880,
+  "peak_allocated_bytes": 16616481280,
+  "effective_options": {},
+  "mode": "native",
+  "trace": {
+    "physical_tokens": 3897,
+    "stored_heads": 8
+  },
+  "final_kv_bytes": 510787584,
+  "status": "ok",
+  "output_ids": [
+    22,
+    5587,
+    220,
+    2366,
+    18,
+    128009
+  ],
+  "prediction": "7 March 2023",
+  "answers": [
+    "The paper was published on 7 March 2023."
+  ],
+  "score": 60.0,
+  "metric": "qa_f1_score",
+  "stopped_on_eos": true,
+  "wall_s": 0.5351929664611816
+}

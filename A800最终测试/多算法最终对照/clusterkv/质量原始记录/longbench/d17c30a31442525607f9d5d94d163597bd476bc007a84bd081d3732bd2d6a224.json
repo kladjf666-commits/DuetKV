@@ -1,0 +1,60 @@
+{
+  "batch": 1,
+  "input_tokens": 11415,
+  "output_tokens_per_row": 6,
+  "decode_steps": 5,
+  "decoded_tokens": 5,
+  "decode_s": 0.12216534838080406,
+  "aggregate_tokens_per_s": 40.92813605716082,
+  "per_sequence_tokens_per_s": 40.92813605716082,
+  "ttft_s": 1.294476866722107,
+  "prefill_peak_bytes": 18008827904,
+  "decode_peak_bytes": 16650670592,
+  "peak_allocated_bytes": 18008827904,
+  "effective_options": {
+    "quality_budget": 256,
+    "speed_budget": 1024,
+    "nlist": "floor(L/80)",
+    "niter": 20,
+    "sink": 16,
+    "window": 320,
+    "window_nlist": 4,
+    "offload": true
+  },
+  "mode": "native",
+  "trace": {
+    "physical_history": 11420,
+    "retrieval_budget": 256,
+    "initial_clusters": 142,
+    "clusters": 142,
+    "cpu_pinned_kv_bytes": 1418895360
+  },
+  "final_kv_bytes": 385572864,
+  "status": "ok",
+  "id": "longbench_full/narrativeqa/c549a937e1ff08308e3afe359c4db27ba066adcabb4b2425",
+  "suite": "longbench",
+  "task": "narrativeqa",
+  "input_sha256": "a078f1cfdaa3f7a1f630a6b77b3851d09efd56935bbf453c853f99d7373c26f8",
+  "output_ids": [
+    64797,
+    648,
+    650,
+    651,
+    6853,
+    128009
+  ],
+  "prediction": "Virginie Vervelle",
+  "score": 66.66666666666666,
+  "metric": "qa_f1_score",
+  "truncated_input": false,
+  "max_new_tokens": 128,
+  "answers": [
+    "Virginie."
+  ],
+  "reused_from": {
+    "path": "/data/phasekv-results/a800_four_gpu_v1/results/clusterkv/quality/355929d477a6dffb60f17b4bf8ae9a4a9bccbf41d2785f193046c52ce4870fc0.json",
+    "id": "longbench/narrativeqa/70/16384",
+    "sha256": "834a9b44d22468bc166fa8929c137dad3bdea76735f6a106b683593f8bbf1346",
+    "protocol_sha256": "dad80bcbc8440822bd90a7f7c1ad5fbb96c50187eaccd91d8d15a6f39e351ace"
+  }
+}

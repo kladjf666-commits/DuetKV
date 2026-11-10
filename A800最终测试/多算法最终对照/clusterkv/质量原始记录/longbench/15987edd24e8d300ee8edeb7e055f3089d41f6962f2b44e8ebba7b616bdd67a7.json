@@ -1,0 +1,57 @@
+{
+  "batch": 1,
+  "input_tokens": 10480,
+  "output_tokens_per_row": 3,
+  "decode_steps": 2,
+  "decoded_tokens": 2,
+  "decode_s": 0.04960188176482916,
+  "aggregate_tokens_per_s": 40.32105091259109,
+  "per_sequence_tokens_per_s": 40.32105091259109,
+  "ttft_s": 1.201578687876463,
+  "prefill_peak_bytes": 17884728320,
+  "decode_peak_bytes": 16640556544,
+  "peak_allocated_bytes": 17884728320,
+  "effective_options": {
+    "quality_budget": 256,
+    "speed_budget": 1024,
+    "nlist": "floor(L/80)",
+    "niter": 20,
+    "sink": 16,
+    "window": 320,
+    "window_nlist": 4,
+    "offload": true
+  },
+  "mode": "native",
+  "trace": {
+    "physical_history": 10482,
+    "retrieval_budget": 256,
+    "initial_clusters": 131,
+    "clusters": 131,
+    "cpu_pinned_kv_bytes": 1292206080
+  },
+  "final_kv_bytes": 377126912,
+  "status": "ok",
+  "id": "longbench_full/hotpotqa/f5ca9a0360773900f848072d3d7c63034922bdd0e6925e64",
+  "suite": "longbench",
+  "task": "hotpotqa",
+  "input_sha256": "bf35ae78830443a6f8c2188f254683603c78a5fb56229926640116a487cddc86",
+  "output_ids": [
+    7285,
+    22,
+    128009
+  ],
+  "prediction": "1937",
+  "score": 0,
+  "metric": "qa_f1_score",
+  "truncated_input": false,
+  "max_new_tokens": 32,
+  "answers": [
+    "1895"
+  ],
+  "reused_from": {
+    "path": "/data/phasekv-results/a800_four_gpu_v1/results/clusterkv/quality/f78ef24d41d18b442d4a7070753d3d7c0cbf74c287a8604c8e52e1927630e814.json",
+    "id": "longbench/hotpotqa/89/16384",
+    "sha256": "e178d3efef886b615155faa37441b6e6dd952eb2e2f9d5df23c225f06f14489d",
+    "protocol_sha256": "dad80bcbc8440822bd90a7f7c1ad5fbb96c50187eaccd91d8d15a6f39e351ace"
+  }
+}
