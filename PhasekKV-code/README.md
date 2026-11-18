@@ -1,4 +1,4 @@
-# BetterMemory：降低预填充峰值显存
+# PhasekKV-code 的预填充显存优化
 
 保留参数与解码内核不变，通过逐层释放观察窗口注意力、消费式打包旧KV和消除多余视图引用降低峰值。
 
@@ -61,7 +61,7 @@ PhaseKV 使用末尾 32 个查询位置的注意力，对 Prompt 位置进行投
 
 旧速度路径见 [benchmark/baseline_runtime.py](benchmark/baseline_runtime.py) 中的 `speed_prefill()` 和 `flatten_requests()`。
 
-## 3. BetterMemory 怎样改变张量的生命周期
+## 3. 逐层处理怎样缩短张量的生命周期
 
 ### 3.1 当前层算完，立即选取位置，然后释放注意力
 

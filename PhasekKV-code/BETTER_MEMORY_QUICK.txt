@@ -1,8 +1,7 @@
-BetterMemory：Prompt90 同卡峰值显存与速度快速对照 v1
+PhasekKV-code 的 Prompt90 同卡峰值显存与速度快速对照 v1
 2026-11-07
 
 本目录的有效源码是顶层 PhaseKV/。benchmark/ 中的独立入口明确加载它。
-目录内嵌套的 Code-Original-NoChanging - A800/ 是原有重复快照，不参与运行。
 
 本轮保持：Prompt90%、冷却块目标80%（16取13）、Prompt/冷KV均INT4、
 recent128、obs32、group32、sink0，以及原A800 MMA/GQA/热环等开关。

@@ -5,7 +5,7 @@ import ast, hashlib, importlib.metadata, json, os, subprocess, sys, tarfile
 HERE=Path(__file__).resolve().parent
 PACKAGE=HERE/'a800_ttft_ab_v1'
 PROJECT=HERE.parents[1]
-SOURCE=PROJECT/'Code-Original-NoChanging - A800 - BetterMemory'
+SOURCE=PROJECT/'PhasekKV-code'
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 
 def main():
