@@ -14,3 +14,14 @@ SCOPE/official/
 *.whl
 *.zip
 *.incomplete
+# Local experiment archives and reference sources
+/A800复现资料/
+/A800最终测试/
+/参考源码与设计说明-不要使用/
+/清理记录/
+/汇报材料/
+/output/
+/A800_HANDOFF.md
+/项目文件结构.md
+/config.txt
+.DS_Store

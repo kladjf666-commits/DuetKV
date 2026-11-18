@@ -1,7 +1,0 @@
-{
-  "repository": "https://github.com/jy-yuan/KIVI",
-  "snapshot": "reference_snapshots/llama_kivi_official.py",
-  "sha256": "67ca858604a460fcafae018d97c5e420841b1ea7dcce522daf554e2df3af68f1",
-  "git_commit": null,
-  "note": "Previously downloaded reference file, not a full pinned checkout."
-}

@@ -1,4 +1,0 @@
-Host eb-dev-1
-    Hostname ssh-cn-huabei1.ebcloud.com
-    User root
-    Port 38529

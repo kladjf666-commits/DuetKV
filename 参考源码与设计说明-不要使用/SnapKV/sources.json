@@ -1,7 +1,0 @@
-{
-  "repository": "https://github.com/FasterDecoding/SnapKV",
-  "snapshot": "reference_snapshots/snapkv_official.py",
-  "sha256": "d7eddeaf361d9d38be991be734752c831b09f9c95a6e777ac17e7262ca2b4cf5",
-  "git_commit": null,
-  "note": "Previously downloaded reference file, not a full pinned checkout."
-}

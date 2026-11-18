@@ -1,7 +1,0 @@
-{
-  "repository": "https://github.com/Zefan-Cai/KVCache-Factory",
-  "snapshot": "reference_snapshots/pyramidkv_official.py",
-  "sha256": "a8a1e8139a8c24a03df87ba0b8362296a613a7b7a38dd4a026087d7ac2b37ce4",
-  "git_commit": null,
-  "note": "Previously downloaded reference file, not a full pinned checkout."
-}

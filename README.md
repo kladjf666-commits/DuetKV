@@ -1,15 +1,19 @@
-# PhaseKV
+# DuetKV
 
-PhaseKV 按 token 的来源和生成时间管理 Llama 的 KV 缓存。预填充时，每个 KV 头根据注意力分数选择输入位置，量化后存入 Prompt 区。解码时，新生成的 token 先保存在 FP16 热区，超出窗口后再分批筛选、量化，移入冷区。预填充过程中，PhaseKV 逐层打包并释放旧 KV，降低长输入时的峰值显存。当前源码位于 [PhasekKV-code](PhasekKV-code/)，A800 实验归档中沿用当时的版本名 BetterMemory。
+![Lifecycles of prompt and generated KV: prompt selection, the FP16 hot window, and INT4 cold storage](docs/images/kv-lifecycles.svg)
 
-## 快速调用 PhaseKV
+**English** · [简体中文](README.zh-CN.md)
 
-以下命令均从仓库根目录开始。示例使用单条无填充输入和贪心解码。准备一张 CUDA 显卡，以及包含权重、配置和分词器的本地 `Llama-3.1-8B-Instruct` 模型目录。软件版本见下文的[正式实验配置](#a800-正式实验配置)。
+DuetKV manages Llama’s key–value (KV) cache differently for prompt tokens and generated tokens. During prefill, each KV head uses attention scores from the end of the prompt to select the positions it will keep. DuetKV packs the selected keys and values one layer at a time, releasing each layer’s dense KV to reduce peak memory on long inputs. During decoding, newly generated tokens stay in an FP16 window. As they age out, DuetKV selects and quantizes a batch at a time for cold storage. [Source code](DuetKV-code/)
+
+## Quick start
+
+Run the commands from the repository root. This example generates a greedy response to a single unpadded prompt. You need a CUDA GPU and a local copy of `Llama-3.1-8B-Instruct` with its weights, configuration, and tokenizer. [A800 experiment configuration](#a800-experiment-configuration)
 
 <details>
-<summary>在新的 Linux 环境中安装单模型示例所需的依赖</summary>
+<summary>Install the dependencies in a fresh Linux environment</summary>
 
-先准备 Python 3.10、支持 CUDA 12.1 的 NVIDIA 驱动，以及编译 FlashAttention 所需的 CUDA 工具链（含 `nvcc`）和 C++ 编译器。激活 Python 虚拟环境后，安装以下依赖。
+Use Python 3.10, an NVIDIA driver that supports CUDA 12.1, and a CUDA toolkit with `nvcc` and a C++ compiler to build FlashAttention. Activate your Python environment and install the following packages.
 
 ```bash
 python3 -m pip install 'setuptools<81' wheel packaging ninja psutil
@@ -20,15 +24,15 @@ python3 -m pip install 'flash-attn==2.7.4.post1' --no-build-isolation
 
 </details>
 
-将 `MODEL_DIR` 改成本机模型目录。`PYTHONPATH` 中的三个目录依次提供 PhaseKV 核心、实验配置和 Llama 适配器。
+Set `MODEL_DIR` to your local model directory. `PYTHONPATH` adds the DuetKV package and the benchmark configuration.
 
 ```bash
 export MODEL_DIR="/data/Llama-3.1-8B-Instruct/snapshots/master"
-core="$PWD/PhasekKV-code"
-export PYTHONPATH="$core:$core/benchmark:$PWD/A800复现资料/冻结基准源码/native"
+core="$PWD/DuetKV-code"
+export PYTHONPATH="$core:$core/benchmark"
 ```
 
-在同一终端运行以下示例。替换 `messages` 中的问题即可更换输入。
+Run the example in the same shell. Edit `messages` to change the prompt.
 
 ```bash
 python3 - <<'PY'
@@ -37,21 +41,21 @@ import os
 import torch
 from transformers import AutoTokenizer
 
-import native_runtime as rt
 from common import PROFILE, options
-from PhaseKV.memory_prefill import memory_prefill
+from DuetKV import runtime as rt
+from DuetKV.memory_prefill import memory_prefill
 
 model_dir = os.environ['MODEL_DIR']
-model, _, _ = rt.load_model(model_dir, 'phasekv')
+model, _, _ = rt.load_model(model_dir, 'duetkv')
 tokenizer = AutoTokenizer.from_pretrained(model_dir, local_files_only=True)
-messages = [{'role': 'user', 'content': '请用两句话解释什么是 KV 缓存。'}]
+messages = [{'role': 'user', 'content': 'Explain the KV cache in two sentences.'}]
 ids = tokenizer.apply_chat_template(
     messages, add_generation_prompt=True, return_tensors='pt'
 ).to('cuda')
 
-cfg = options(PROFILE)  # A800 实验使用的 Prompt90 配置
+cfg = options(PROFILE)  # Prompt90 profile used in the A800 experiments
 limit = 64
-rt.reset_sample(model, 'phasekv', cfg, limit)
+rt.reset_sample(model, 'duetkv', cfg, limit)
 eos = model.generation_config.eos_token_id
 stop_ids = {eos} if isinstance(eos, int) else set(eos or [])
 
@@ -63,55 +67,55 @@ with torch.inference_mode():
         output.append(token.item())
         if output[-1] in stop_ids or len(output) == limit:
             break
-        logits, cache, _ = rt.forward(model, token, cache, cache.true_seq_length, 'phasekv')
+        logits, cache, _ = rt.forward(model, token, cache, cache.true_seq_length, 'duetkv')
         cache.finish_decode_step()
 
 print(tokenizer.decode(output, skip_special_tokens=True))
 PY
 ```
 
-首个输出 token 由预填充得到。之后每次把刚生成的 token 送回模型，用 `cache.true_seq_length` 指定它在原序列中的绝对位置。每次单 token 前向结束后调用一次 `finish_decode_step()`，让缓存完成冷却并推进位置。
+Prefill produces the logits for the first output token. For each subsequent token, feed the previous token back at its absolute position, `cache.true_seq_length`. Call `finish_decode_step()` once after each decode forward pass to cool eligible entries and advance the cache position.
 
-## 快速复现 A800 的解码吞吐和峰值显存
+## Reproduce A800 decode throughput and peak memory
 
-### A800 正式实验配置
+### A800 experiment configuration
 
-16 个测点使用同一份 `J_p90_w128_o32` 配置，只改变输入长度、输出长度和批量大小。下表列出运行条件及生效参数。[实验记录](A800最终测试/BetterMemory_速度与峰值显存/实验身份.json) · [运行入口](A800复现资料/BetterMemory控制与适配源码/gpu_worker.py)
+All 16 workload configurations use the `J_p90_w128_o32` profile. The experiment varies three quantities: input length, output length, and batch size. [Profile definition](DuetKV-code/benchmark/common.py) · [Benchmark entry point](DuetKV-code/benchmark/engine.py)
 
-| 项目 | 本次取值 |
+| Setting | Value used in the experiment |
 |---|---|
-| 硬件与模型 | 单张 NVIDIA A800-SXM4-80GB（SM80），Llama-3.1-8B-Instruct，FP16。模型有 32 层，每层 32 个查询头、8 个 KV 头，每头 128 维。 |
-| 软件 | Python `3.10.16`，PyTorch `2.5.1+cu121`，Transformers `4.46.3`，FlashAttention `2.7.4.post1`，Triton `3.1.0`。 |
-| 运行环境 | 随机种子 `20261029`，矩阵乘法和 cuDNN 均关闭 TF32。CPU 线程设置为 `OMP_NUM_THREADS=4`、`MKL_NUM_THREADS=4`、`OPENBLAS_NUM_THREADS=1`。 |
-| 输入与并发 | 从固定的 8 条输入中取前 `batch` 条，每条截取前 `8192` 或 `32768` 个 token。`batch` 取 `1 / 2 / 4 / 8`，同一批请求一起前向计算。 |
-| 输出与计时 | 贪心解码，固定输出 `256` 或 `2048` 个 token。每个测点预热 1 轮、正式测量 3 轮，共 16 轮预热、48 轮正式测量。 |
-| Prompt 选择 | `prefill_keep_ratio=0.90`，`obs_window=32`，`sink_tokens=0`。候选位置用 `pool_kernel=7`、`pooling='maxpool'` 评分。 |
-| 预填充 | `prefix_chunk_size=512`，前缀用 FlashAttention 2 分块计算，末尾 32 个查询用 eager 注意力选位置。逐层打包时 `consume_dense_cache=True`。 |
-| 生成缓存与量化 | `recent_window=128`，`lazy_g=16`，`decode_keep_ratio=0.80`（每 16 个保留 13 个）。`prompt_bits=4`，`cold_bits=4`，`group_size=32`，热区为 FP16。 |
-| 存储优化 | `fused_quantize=True`，`reuse_workspace=True`，`paged_cold=True`，`page_slots=32`，`hot_ring=True`。 |
-| 注意力优化 | `cold_group=8`，`specialized_4bit=True`，`gqa_reuse=True`，`channel_contiguous_k=True`，`a800_prompt_mma=True`。 |
-| 解码内核调度 | `num_splits=None`，`block_n=None`，`num_warps=None`，由规划器选值。`fuse_packed_fma=False`。各批量下的 Prompt 分段数见下表。 |
+| Hardware and model | One NVIDIA A800-SXM4-80GB (SM80), running Llama-3.1-8B-Instruct in FP16. The model has 32 layers, 32 query heads and 8 KV heads per layer, and a head dimension of 128. |
+| Software | Python `3.10.16`, PyTorch `2.5.1+cu121`, Transformers `4.46.3`, FlashAttention `2.7.4.post1`, Triton `3.1.0`. |
+| Runtime | Random seed `20261029`. TF32 disabled for matrix multiplication and cuDNN. CPU threads: `OMP_NUM_THREADS=4`, `MKL_NUM_THREADS=4`, `OPENBLAS_NUM_THREADS=1`. |
+| Inputs and batching | Take the first `batch` prompts from a fixed bank of eight and truncate each to `8192` or `32768` tokens. Run `1`, `2`, `4`, or `8` requests together in one batched forward pass. |
+| Outputs and timing | Greedy decoding with a fixed output of `256` or `2048` tokens per request. Each workload has one warm-up and three measured runs, for 16 warm-ups and 48 measurements in total. |
+| Prompt selection | `prefill_keep_ratio=0.90`, `obs_window=32`, `sink_tokens=0`. Candidate scores use `pool_kernel=7` and `pooling='maxpool'`. |
+| Prefill | `prefix_chunk_size=512` for the FlashAttention 2 prefix. The final 32 queries use eager attention to select positions. Layer-by-layer packing uses `consume_dense_cache=True`. |
+| Generated KV and quantization | `recent_window=128`, `lazy_g=16`, `decode_keep_ratio=0.80` (keep 13 of every 16 entries eligible for cooling). `prompt_bits=4`, `cold_bits=4`, `group_size=32`. The hot window uses FP16. |
+| Storage optimizations | `fused_quantize=True`, `reuse_workspace=True`, `paged_cold=True`, `page_slots=32`, `hot_ring=True`. |
+| Attention optimizations | `cold_group=8`, `specialized_4bit=True`, `gqa_reuse=True`, `channel_contiguous_k=True`, `a800_prompt_mma=True`. |
+| Decode kernel scheduling | `num_splits=None`, `block_n=None`, `num_warps=None` enable automatic planning. `fuse_packed_fma=False`. The table below gives the resulting prompt split counts. |
 
-### 用 `num_splits` 控制解码并行度
+### Decode parallelism with `num_splits`
 
-`num_splits` 控制一个 KV 段沿 token 轴拆成多少份并行计算。每份独立计算局部注意力，再由归并内核合成每个查询头的输出。分段太少时，GPU 上同时工作的计算块可能太少。分段增多时，要写回和归并的中间结果也会增加。这一取舍直接影响解码吞吐。`batch` 控制一次处理多少条请求，`num_warps` 控制每个计算块使用多少个 warp。[分段解码内核](PhasekKV-code/PhaseKV/kernels/segmented_attention.py)
+`num_splits` controls how many parts of a KV segment the GPU processes in parallel along the token axis. Each part computes a partial attention result, and a second kernel merges the partial results for each query head. Too few splits can leave GPU compute units idle. More splits increase the amount of intermediate data the kernels write and merge. This trade-off affects decode throughput. Two related settings control different dimensions of parallelism: `batch` sets the number of simultaneous requests, and `num_warps` sets the number of warps per thread block. [Segmented decode kernel](DuetKV-code/DuetKV/kernels/segmented_attention.py)
 
-正式入口使用自动分段。下表按 A800 的 108 个 SM、头维 128、`32 × batch` 个查询头和 90% Prompt 保留率，用项目的规划器复算。表中每个数字表示**每个 KV 头的 Prompt 段**拆成几份，输出长度 256 和 2048 共用此表。[分段规划器](PhasekKV-code/PhaseKV/kernels/launch_config.py) · [缓存分段布局](PhasekKV-code/PhaseKV/kernels/segmented_plan.py)
+The A800 runs used automatic scheduling. The values below come from the planner with 108 streaming multiprocessors, head dimension 128, `32 × batch` query heads, and 90% prompt retention. Each entry is the number of splits for the **prompt segment of one KV head**. The same counts apply to both output lengths. [Launch planner](DuetKV-code/DuetKV/kernels/launch_config.py) · [Segment layout](DuetKV-code/DuetKV/kernels/segmented_plan.py)
 
-| 输入 token 数 | 每个 KV 头保留的位置 | 批量 1 | 批量 2 | 批量 4 | 批量 8 |
+| Input tokens | Positions kept per KV head | Batch 1 | Batch 2 | Batch 4 | Batch 8 |
 |---:|---:|---:|---:|---:|---:|
 | 8192 | 7373 | 62 | 62 | 32 | 16 |
 | 32768 | 29491 | 128 | 64 | 32 | 16 |
 
-以 8192 输入、批量 1 为例，规划器按每段最多 120 个位置切分，7373 个位置得到 62 段。8 个 KV 头合计有 496 个计算块负责 Prompt。生成过程中，冷区和热区的计算块另计。本次规划得到 `block_n=8`、`num_warps=4`。A800 的 Prompt 专用矩阵乘法内核在每个分段内按 64 个 token 迭代。
+For 8192 input tokens at batch 1, the planner assigns up to 120 positions to each split. The 7373 retained positions yield 62 splits per KV head, so eight heads launch 496 thread blocks for the prompt. The hot and cold segments add their own blocks as decoding progresses. The planner selects `block_n=8` and `num_warps=4`. Within each split, the A800 prompt matrix-multiply kernel iterates in tiles of 64 tokens.
 
-要手动指定分段数，可以在 Llama 适配器调用 `segmented_phasekv_decode(..., num_splits=32)` 时传入关键字参数。复现上表时沿用默认的 `None`。[Llama 解码调用位置](A800复现资料/冻结基准源码/native/ablation_attention.py)
+To set the split count explicitly, call `DuetKV.kernels.segmented_attention.segmented_duetkv_decode(..., num_splits=32)`. To use that setting in a full model run, pass the same keyword at the decode kernel call in the Llama adapter. Use the default `None` to reproduce the table. [Llama decode call site](DuetKV-code/DuetKV/batched_attention.py)
 
-### 从逐轮记录复算 16 个测点
+### Rebuild the results table from the recorded runs
 
-总解码吞吐取 3 轮正式测量的中位数，整轮峰值显存取 3 轮最大值。峰值按 PyTorch 实际分配的显存统计，包含模型权重、KV 和临时张量。
+For each workload, take the median aggregate decode throughput and the largest whole-run memory peak across its three measured runs. Memory is reported in GiB of GPU memory allocated by PyTorch, including model weights, KV tensors, and temporary tensors.
 
-在仓库根目录运行下面的命令，只需 Python 3。它从 48 份逐轮记录生成完整的 16 行结果表。举例来说，8192 输入、256 输出、批量 1 的解码吞吐为 **41.68 token/s**，峰值为 **16.17 GiB**。32768 输入、2048 输出、批量 8 的对应结果为 **78.95 token/s** 和 **53.41 GiB**。[完整汇总](A800最终测试/BetterMemory_速度与峰值显存/速度与峰值汇总.json)
+Run the following command at the repository root with Python 3. It reads the 48 measurements and prints all 16 rows. For 8192 input tokens, 256 output tokens, and batch 1, it yields **41.68 tokens/s** and **16.17 GiB**. For 32768 input tokens, 2048 output tokens, and batch 8, it yields **78.95 tokens/s** and **53.41 GiB**. [Recorded measurements](DuetKV-code/data/a800_decode.json)
 
 ```bash
 python3 - <<'PY'
@@ -121,12 +125,11 @@ from pathlib import Path
 from statistics import median
 
 runs = defaultdict(list)
-folder = Path('A800最终测试/BetterMemory_速度与峰值显存/逐轮记录')
-for path in folder.glob('*.json'):
-    row = json.loads(path.read_text(encoding='utf-8'))
+path = Path('DuetKV-code/data/a800_decode.json')
+for row in json.loads(path.read_text(encoding='utf-8')):
     runs[tuple(row['case'])].append(row)
 
-print('输入   输出   批量   总解码吞吐(token/s)   峰值(GiB)')
+print('Input  Output  Batch  Decode (tokens/s)   Peak (GiB)')
 for (n, t, batch), rows in sorted(runs.items()):
     speed = median(r['aggregate_tokens_per_s'] for r in rows)
     peak = max(r['peak_allocated_bytes'] for r in rows) / 2**30
@@ -134,15 +137,14 @@ for (n, t, batch), rows in sorted(runs.items()):
 PY
 ```
 
-### 在自己的 GPU 上运行一个测点
+### Run one workload on your GPU
 
-更换参数或硬件后，可以从 `8192 + 256，批量 1` 开始。沿用快速调用中的模型路径和环境，下面的示例读取实验保存的输入 token，调用 `memory_prefill()` 进行预填充，再使用基准程序执行固定长度解码。先预热一次，让 Triton 完成首次编译，再打印一次实测结果。
+To measure a different configuration or GPU, start with 8192 input tokens, 256 output tokens, and batch 1. Use the model directory and environment from the quick start. The example reads the original input token IDs, calls `memory_prefill()`, and runs the benchmark’s fixed-length decoder. One warm-up covers initial Triton compilation before the timed run.
 
 <details>
-<summary>展开单个测点的运行代码</summary>
+<summary>Run the single-workload benchmark</summary>
 
 ```bash
-export PHASEKV_BENCH_ROOT="$PWD/A800复现资料/冻结基准源码"
 OMP_NUM_THREADS=4 MKL_NUM_THREADS=4 OPENBLAS_NUM_THREADS=1 python3 - <<'PY'
 import gzip
 import json
@@ -150,17 +152,8 @@ import os
 from pathlib import Path
 
 import torch
-import native_runtime as rt
 from common import PROFILE, ROOT, options
-from engine import Engine, run
-from PhaseKV.memory_prefill import memory_prefill
-
-class PhaseKVEngine(Engine):
-    def start(self, ids, limit, quality, progress):
-        self.offset = ids.shape[1]
-        self.effective, self.mode = rt.reset_sample(self.model, 'phasekv', self.options, limit)
-        logits, self.cache = memory_prefill(self.model, ids, self.options, rt, progress)
-        return logits
+from engine import DuetKVEngine, run
 
 n, t, batch = 8192, 256, 1
 with gzip.open(ROOT / 'data/speed.json.gz', 'rt') as f:
@@ -169,76 +162,70 @@ with gzip.open(ROOT / 'data/speed.json.gz', 'rt') as f:
 torch.manual_seed(20261029)
 torch.backends.cuda.matmul.allow_tf32 = False
 torch.backends.cudnn.allow_tf32 = False
-engine = PhaseKVEngine('phasekv', Path(os.environ['MODEL_DIR']))
-engine.options = options(PROFILE)
+engine = DuetKVEngine(Path(os.environ['MODEL_DIR']), options(PROFILE))
 with torch.inference_mode():
-    run(engine, rows, t, stops=[], quality=False, progress={})  # 预热
+    run(engine, rows, t, stops=[], quality=False, progress={})  # Warm up
     engine.release()
     result = run(engine, rows, t, stops=[], quality=False, progress={})
-print(f"总解码吞吐 {result['aggregate_tokens_per_s']:.2f} token/s")
-print(f"整轮峰值显存 {result['peak_allocated_bytes'] / 2**30:.2f} GiB")
+print(f"Aggregate decode throughput: {result['aggregate_tokens_per_s']:.2f} token/s")
+print(f"Peak allocated memory: {result['peak_allocated_bytes'] / 2**30:.2f} GiB")
 PY
 ```
 
-`n` 是每条请求的输入 token 数，`t` 是固定输出 token 数，`batch` 是同时处理的请求数。首个输出 token 来自预填充，因此 `t=256` 对应 255 个解码步。总解码吞吐统计整个批次，除以 `batch` 即为单条请求的解码速度。[正式实验代码](A800复现资料/BetterMemory控制与适配源码/gpu_worker.py)
+`n` is the input length per request, `t` is the fixed output length per request, and `batch` is the number of concurrent requests. Prefill produces the first token, so `t=256` corresponds to 255 decode steps. Throughput counts decoded tokens across the entire batch. Divide it by `batch` for the per-request rate. [Benchmark code](DuetKV-code/benchmark/engine.py)
 
 </details>
 
-## PhaseKV 参数说明
+## DuetKV parameters
 
-`cfg = options(PROFILE)` 载入 A800 实验使用的 Prompt90 配置。要将首次输入的保留率改为 75%，在示例的 `rt.reset_sample()` 之前设置 `cfg['prefill_keep_ratio'] = 0.75`。`PROFILE['id']` 只标识实验配置。[配置来源](PhasekKV-code/benchmark/common.py)
+`cfg = options(PROFILE)` loads the Prompt90 configuration used on the A800. For example, to retain 75% of the initial prompt, set `cfg['prefill_keep_ratio'] = 0.75` before calling `rt.reset_sample()`. `PROFILE['id']` identifies the configuration in experiment records. [Profile definition](DuetKV-code/benchmark/common.py)
 
-### 保留哪些 token，怎样量化
+### Token retention and quantization
 
-| `cfg` 参数 | Prompt90 实验值 | 取值与作用 |
+| `cfg` parameter | Prompt90 value | Meaning |
 |---|---:|---|
-| `prefill_keep_ratio` | `0.90` | 首次输入中每层、每个 KV 头保留的位置比例，范围 `(0, 1]`。预算按 `round(输入长度 × 比例)` 计算，至少保留 1 个位置，并优先满足 `sink_tokens`。各头可以选择不同位置。 |
-| `sink_tokens` | `0` | 强制保留的开头 token 数，取非负整数。`0` 取消开头保护。开头位置优先于观察窗口占用预算。 |
-| `obs_window` | `32` | 输入末尾参与注意力投票的查询数，取正整数。算法先在剩余预算内保留最近的位置，再用投票分数选择中间位置。 |
-| `prompt_bits` | `4` | Prompt 区 K 和 V 的打包位宽，可取 `2`、`4`、`8`。位宽越低，每个量化值占用的位数越少。 |
-| `recent_window` | `128` | 用 FP16 保护的最近生成 token 数，取正整数。增大窗口会让更多近期 KV 保持原精度，也会增加热区占用。 |
-| `lazy_g` | `16` | 一次冷却积累的 token 数，取正整数。超出 `recent_window` 的 token 积满一批时触发冷却，热区常规容量为 `recent_window + lazy_g`。 |
-| `decode_keep_ratio` | `0.80` | 每批待冷却位置的保留比例，范围 `(0, 1]`。每个 KV 头按 V 向量的 L2 范数选择位置，保留 `max(1, round(批长 × 比例))` 个。设为 `1` 时整批进入冷区。 |
-| `cold_bits` | `4` | 冷区 K 和 V 的打包位宽，可取 `2`、`4`、`8`，可与 `prompt_bits` 分别设置。 |
-| `group_size` | `32` | 共享一组量化比例和最小值的元素数，取正整数。K 沿 token 轴分组，V 沿头维度分组。组越小，量化参数越细，存储的比例和最小值也越多。 |
+| `prefill_keep_ratio` | `0.90` | Fraction of initial prompt positions to keep per layer and KV head, in `(0, 1]`. The budget is `round(input_length × ratio)`, with at least one position retained and priority given to `sink_tokens`. Heads can select different positions. |
+| `sink_tokens` | `0` | Number of leading prompt tokens to protect. A nonnegative integer. These positions take priority over the observation window. Set to `0` to disable leading-token protection. |
+| `obs_window` | `32` | Number of queries at the end of the prompt that vote on earlier positions. A positive integer. After protecting the leading tokens, DuetKV keeps recent positions within the remaining budget and fills any remaining slots using the votes. |
+| `prompt_bits` | `4` | Packed bit width for both prompt keys and values. Supports `2`, `4`, or `8` bits per quantized element. |
+| `recent_window` | `128` | Number of recently generated tokens to retain in FP16. A larger window preserves more recent KV at full precision and uses more hot-cache memory. Must be positive. |
+| `lazy_g` | `16` | Number of older generated tokens to collect before cooling a batch. Must be positive. The hot cache normally has capacity for `recent_window + lazy_g` entries. |
+| `decode_keep_ratio` | `0.80` | Fraction of each cooling batch to retain, in `(0, 1]`. Each KV head ranks positions by the L2 norm of the value vector and keeps `max(1, round(batch_length × ratio))`. Set to `1` to move the whole batch into cold storage. |
+| `cold_bits` | `4` | Packed bit width for cold keys and values. Supports `2`, `4`, or `8` bits and can be set independently of `prompt_bits`. |
+| `group_size` | `32` | Number of elements that share a quantization scale and minimum. Keys are grouped along the token axis and values along the head dimension. Smaller groups give finer quantization and store more scale and minimum values. Must be positive. |
 
-例如，8192 个输入 token 在 `prefill_keep_ratio=0.9` 时，每个 KV 头保留 7373 个位置。解码时，热区积累到 144 个 token 就会触发第一次冷却。此时从最旧的 16 个中保留 13 个，量化后移入冷区，最近的 128 个继续以 FP16 保存。
+With 8192 input tokens and `prefill_keep_ratio=0.9`, each KV head retains 7373 prompt positions. The first cooling batch forms when the hot cache reaches 144 generated entries. DuetKV keeps 13 of the oldest 16, quantizes them into cold storage, and leaves the most recent 128 in FP16.
 
-### 存储与解码优化
+### Storage and decode optimizations
 
-下表的参数位于 `cfg['optimizations']`。例如 `cfg['optimizations']['hot_ring'] = False` 会关闭热区环形缓冲。直接创建底层 `OptimizationConfig()` 时，各布尔开关默认关闭，`page_slots=32`、`cold_group=1`。A800 的实际取值见下表。[优化开关定义](PhasekKV-code/PhaseKV/optimizations.py)
+These settings live in `cfg['optimizations']`. For example, `cfg['optimizations']['hot_ring'] = False` disables the hot ring buffer. When constructed directly, `OptimizationConfig()` starts with all Boolean switches off, `page_slots=32`, and `cold_group=1`. The table lists the values used on the A800. [Optimization definitions](DuetKV-code/DuetKV/optimizations.py)
 
-| 参数 | A800 实验值 | 作用 |
+| Parameter | A800 value | Meaning |
 |---|---:|---|
-| `fused_quantize` | `True` | 对支持的 CUDA 张量形状和 INT4 布局融合量化与打包，其余情况使用通用打包实现。 |
-| `reuse_workspace` | `True` | 解码时复用分段描述表和中间结果缓冲区，减少重复分配和重建。 |
-| `paged_cold` | `True` | 按页为冷段分配存储，让多个冷段共用一页。 |
-| `page_slots` | `32` | 每页可容纳的冷段槽位数，取正整数，在启用冷区分页时生效。页越大，单页预留的空间越多。 |
-| `cold_group` | `8` | 解码注意力调度时每组合并处理的冷段数，可取 `1`、`4`、`8`、`16`。冷段不足一组时逐段处理。 |
-| `specialized_4bit` | `True` | 描述表中的位宽、分组和布局兼容时，启用专用 INT4 注意力内核。 |
-| `gqa_reuse` | `True` | 在分组查询注意力（GQA）中，让共享同一个 KV 头的多个查询头复用同一批 K/V 读取。 |
-| `hot_ring` | `True` | 将热区作为环形缓冲区，冷却后移动起始下标，省去搬移剩余热 KV 的开销。 |
-| `channel_contiguous_k` | `True` | 将 INT4 K 按通道连续的方式存储，便于内核连续读取同一位置的多个通道。V 仍沿头维度分组。 |
-| `a800_prompt_mma` | `True` | 在 SM80 上使用 Tensor Core 加速 Prompt 段注意力。需要兼容的 INT4 分段、通道连续 K、GQA 复用、每个 KV 头对应 4 个查询头，且头维为 128。 |
+| `fused_quantize` | `True` | Fuse quantization and packing for supported CUDA tensor shapes and INT4 layouts. Other shapes and layouts use the general packing implementation. |
+| `reuse_workspace` | `True` | Reuse segment descriptors and scratch buffers across decode steps to reduce allocation and rebuilding. |
+| `paged_cold` | `True` | Allocate cold storage in pages so multiple cold segments can share a page. |
+| `page_slots` | `32` | Number of cold-segment slots per page when paging is enabled. Larger pages reserve more space per allocation. Must be positive. |
+| `cold_group` | `8` | Number of cold segments scheduled together for decode attention. Accepts `1`, `4`, `8`, or `16`. Leftover segments are processed individually. |
+| `specialized_4bit` | `True` | Use a specialized INT4 attention kernel when descriptor bit widths, grouping, and layout are compatible. |
+| `gqa_reuse` | `True` | In grouped-query attention, reuse K/V reads across query heads that share a KV head. |
+| `hot_ring` | `True` | Store hot KV in a ring buffer. After cooling, advance the start index to avoid copying the remaining hot entries. |
+| `channel_contiguous_k` | `True` | Lay out INT4 keys with contiguous channels so the kernel can read adjacent channels at a position. Values remain grouped along the head dimension. |
+| `a800_prompt_mma` | `True` | Use SM80 Tensor Cores for prompt attention. Requires compatible INT4 segments, channel-contiguous keys, GQA reuse, four query heads per KV head, and a head dimension of 128. |
 
-### 直接调用底层接口时的参数
+### Low-level parameters
 
-| 接口 | 参数 | 含义 |
+| Interface | Parameter | Meaning |
 |---|---|---|
-| `memory_prefill()` | `prefix_chunk_size` | 观察窗口之前的前缀每次处理多少个 token。默认 `512`，用于固定长度测速。`None` 表示一次处理整个前缀，原 B1 质量评估采用此设置。 |
-| `select_prompt_indices()` | `pool_kernel`、`pooling` | 对候选位置的投票分数做一维池化。`pool_kernel` 控制窗口宽度，`None` 或 `1` 跳过池化。`pooling` 可选 `maxpool`（取最大值）或 `avgpool`（取平均值）。`memory_prefill()` 固定传入 `7` 和 `maxpool`。 |
-| `PhaseKVCache.from_dense_prefill()` | `prompt_len`、`keep_indices` | `prompt_len` 是原始输入长度。`keep_indices` 是逐层的整数位置张量，形状为 `[批量, KV 头数, 保留数]`，同一头内位置唯一，各层保留数一致。省略下标会保留全部位置。 |
-| `PhaseKVCache.from_dense_prefill()` | `consume_dense_cache` | 默认 `False`。`memory_prefill()` 显式设为 `True`，每打包完一层就清空源缓存列表中该层的 K/V 引用。调用方需将源缓存交给该接口独占。 |
-| `segmented_phasekv_decode()` | `num_splits`、`block_n`、`num_warps` | 手动指定分段并行数（正整数）、每个计算块的 token 数（2 的幂）和每块 warp 数（`1/2/4/8/16/32`）。三者默认 `None`，由内核根据输入形状和 GPU 选择。 |
-| `segmented_phasekv_decode()` | `fuse_packed_fma` | 诊断开关，默认 `False`。在优化解码路径中允许编译器对第一个内核的浮点乘加做融合。 |
+| `memory_prefill()` | `prefix_chunk_size` | Number of prefix tokens processed per call before the observation window. Fixed-length speed runs use the default `512`. With `None`, the whole prefix runs in one call, as in the original batch-1 quality evaluation. |
+| `select_prompt_indices()` | `pool_kernel`, `pooling` | Apply 1-D pooling to candidate vote scores. `pool_kernel` controls the width. `None` or `1` skips pooling. `pooling` accepts `maxpool` or `avgpool`. `memory_prefill()` uses `7` and `maxpool`. |
+| `DuetKVCache.from_dense_prefill()` | `prompt_len`, `keep_indices` | `prompt_len` is the original input length. `keep_indices` contains one integer tensor per layer with shape `[batch, kv_heads, positions_kept]`. Positions are unique within a head, and all layers retain the same count. Omit the indices to keep every position. |
+| `DuetKVCache.from_dense_prefill()` | `consume_dense_cache` | Defaults to `False`. `memory_prefill()` takes exclusive ownership of the dense cache and sets this to `True`, clearing each layer’s source K/V references as soon as its packed representation is ready. |
+| `segmented_duetkv_decode()` | `num_splits`, `block_n`, `num_warps` | Override the parallel split count (positive integer), tokens per thread block (power of two), and warps per block (`1/2/4/8/16/32`). Each defaults to `None` for automatic selection based on tensor shape and GPU. |
+| `segmented_duetkv_decode()` | `fuse_packed_fma` | Diagnostic switch, default `False`. Allows the compiler to fuse floating-point multiply-adds in the first kernel of the optimized decode path. |
 
-直接调用 `from_dense_prefill()` 时，默认采用 `prompt_bits=2`、`recent_window=32` 和 `decode_keep_ratio=1.0`。Prompt90 将这三项分别设为 `4`、`128` 和 `0.8`。[缓存构造接口](PhasekKV-code/PhaseKV/phasekv_cache.py) · [分段解码接口](PhasekKV-code/PhaseKV/kernels/segmented_attention.py)
+When called directly, `from_dense_prefill()` defaults to `prompt_bits=2`, `recent_window=32`, and `decode_keep_ratio=1.0`. Prompt90 sets these to `4`, `128`, and `0.8`, respectively. [Cache constructor](DuetKV-code/DuetKV/duetkv_cache.py) · [Segmented decode interface](DuetKV-code/DuetKV/kernels/segmented_attention.py)
 
-## 实验结果索引
+## Other A800 measurements
 
-| 实验 | 内容 | 结果 |
-|---|---|---|
-| BetterMemory 速度与显存 | 16 个测点的解码吞吐、端到端吞吐、预填充峰值和解码峰值。 | [性能报告](A800最终测试/BetterMemory_速度与峰值显存/结果查验与分析.txt) |
-| Prompt90 质量评估 | 优化前版本的 320 条 LongBench、64 条 RULER 和 48 条 LongGenBench 记录。LongGenBench 沿用相同参数的选参结果。 | [逐题记录](A800最终测试/优化前_Prompt90/质量原始记录/) · [质量分析](A800最终测试/优化前_Prompt90/分析与图表/结果查验与分析.txt) |
-| 多算法对照 | Full、PhaseKV、KIVI 等 8 种方法在相同任务和负载上的结果及覆盖范围。 | [对照报告](A800最终测试/多算法最终对照/分析与图表/最终结果报告.txt) |
-| TTFT 快速复测 | 两个测点上优化前后的首 token 延迟。 | [同卡复测记录](A800最终测试/TTFT同卡复测_20261107/结果查验与分析.txt) |
+The Prompt90 quality evaluation covered 320 LongBench, 64 RULER, and 48 LongGenBench examples. It used the version before the prefill memory optimization. The LongGenBench results came from the parameter-selection run with the same settings. A separate same-GPU spot check measured time to first token (TTFT) before and after the optimization: 1.0251 → 1.0199 s at 8192 input tokens and batch 1, and 48.4278 → 48.2224 s at 32768 input tokens and batch 8. Both workloads generated 256 tokens per request.
